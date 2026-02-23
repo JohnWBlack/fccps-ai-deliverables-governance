@@ -44,6 +44,12 @@ git commit -m "Update deliverables: [description]"
 git push
 ```
 
+## Public Snapshot Access
+
+The public snapshot is available at:
+- **Repository path**: `public/public_snapshot.json`
+- **Raw URL**: https://raw.githubusercontent.com/JohnWBlack/fccps-ai-deliverables-governance/main/public/public_snapshot.json
+
 ## Governance Rules
 
 1. **Source of Truth First**: All edits must be made to YAML files in `sor/` directory
