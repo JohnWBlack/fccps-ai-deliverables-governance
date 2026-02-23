@@ -50,6 +50,18 @@ The public snapshot is available at:
 - **Repository path**: `public/public_snapshot.json`
 - **Raw URL**: https://raw.githubusercontent.com/JohnWBlack/fccps-ai-deliverables-governance/main/public/public_snapshot.json
 
+## Governance Documents
+
+Current governance documents are stored in `governance_docs/`:
+
+- `governance_docs/FCCPS_AIAC_Decision_Change_Log.md`
+- `governance_docs/FCCPS_AIAC_Deliverables_Index.md`
+- `governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md`
+- `governance_docs/FCCPS_AIAC_Workstreams_Registry.md`
+- `governance_docs/FCCPS-AI-Advisory-Committee_Workstream-Development-Summary-and-Assignments.md`
+- `governance_docs/Policy_Recommendations_Process_and_Timeline.md`
+- `governance_docs/Workstream_Assignments_FCCPS_AI_Advisory_Committee.md`
+
 ## Governance Rules
 
 1. **Source of Truth First**: All edits must be made to YAML files in `sor/` directory
