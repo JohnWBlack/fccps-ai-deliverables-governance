@@ -1,0 +1,24 @@
+# FCCPS AI Committee Workstreams
+# Source of Truth for workstream definitions and status
+
+# Metadata
+metadata:
+  version: "1.0.0"
+  last_updated: "2026-02-23"
+  description: "FCCPS AI Committee workstreams and their current status"
+
+# Workstreams array
+workstreams:
+  # Example workstream
+  - id: "ws-001"
+    name: "AI Policy Development"
+    description: "Develop comprehensive AI policies for FCCPS"
+    status: "active"  # active, completed, paused, cancelled
+    lead: "Committee Chair"
+    start_date: "2026-01-15"
+    target_completion: "2026-06-30"
+    priority: "high"  # high, medium, low
+    dependencies: []
+    tags: ["policy", "governance"]
+    
+  # Add additional workstreams here

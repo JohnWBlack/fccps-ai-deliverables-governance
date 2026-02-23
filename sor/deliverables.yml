@@ -1,0 +1,25 @@
+# FCCPS AI Committee Deliverables
+# Source of Truth for all committee deliverables
+
+# Metadata
+metadata:
+  version: "1.0.0"
+  last_updated: "2026-02-23"
+  description: "FCCPS AI Committee deliverables and their status"
+
+# Deliverables array
+deliverables:
+  # Example deliverable
+  - id: "del-001"
+    title: "AI Policy Framework Document"
+    description: "Comprehensive framework for AI policy implementation"
+    status: "in_progress"  # not_started, in_progress, completed, cancelled
+    workstream_id: "ws-001"
+    assigned_to: "Policy Subcommittee"
+    due_date: "2026-05-15"
+    priority: "high"  # high, medium, low
+    deliverable_type: "document"  # document, presentation, software, other
+    public_facing: true
+    internal_notes: "Draft version under review"
+    
+  # Add additional deliverables here
