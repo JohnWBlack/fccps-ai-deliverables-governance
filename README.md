@@ -44,6 +44,20 @@ git commit -m "Update deliverables: [description]"
 git push
 ```
 
+## Publish-on-Change Automation
+
+GitHub Actions automatically publishes the snapshot when relevant files change.
+
+- Workflow: `.github/workflows/validate_and_build.yml`
+- Triggers:
+  - Push to `main` when any of these paths change: `sor/**`, `scripts/**`, `requirements.txt`, `.github/workflows/**`
+  - Manual run via `workflow_dispatch`
+  - Daily safety rebuild at `03:00 UTC`
+- Pipeline behavior:
+  1. Validate SoR (`python scripts/validate_sor.py`)
+  2. Build snapshot (`python scripts/build_snapshot.py`)
+  3. If `public/public_snapshot.json` changed, commit and push it back to `main`
+
 ## Public Snapshot Access
 
 The public snapshot is available at:

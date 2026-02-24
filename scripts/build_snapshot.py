@@ -9,8 +9,13 @@ Strips internal-only fields and prepares data for public consumption.
 import yaml
 import json
 import os
-from datetime import datetime
-from typing import Dict, List, Any
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Dict, Any
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SOR_DIR = REPO_ROOT / "sor"
+OUTPUT_PATH = REPO_ROOT / "public" / "public_snapshot.json"
 
 def load_yaml_file(filepath: str) -> Dict[str, Any]:
     """Load and parse YAML file."""
@@ -48,17 +53,15 @@ def sanitize_deliverable(deliverable: Dict[str, Any]) -> Dict[str, Any]:
 
 def build_snapshot() -> Dict[str, Any]:
     """Build the public snapshot from source YAML files."""
-    sor_dir = "sor"
-    
     # Load source data
-    workstreams_data = load_yaml_file(os.path.join(sor_dir, "workstreams.yml"))
-    timeline_data = load_yaml_file(os.path.join(sor_dir, "timeline.yml"))
-    deliverables_data = load_yaml_file(os.path.join(sor_dir, "deliverables.yml"))
+    workstreams_data = load_yaml_file(str(SOR_DIR / "workstreams.yml"))
+    timeline_data = load_yaml_file(str(SOR_DIR / "timeline.yml"))
+    deliverables_data = load_yaml_file(str(SOR_DIR / "deliverables.yml"))
     
     # Build snapshot structure
     snapshot = {
         "metadata": {
-            "generated_at": datetime.now().isoformat(),
+            "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             "source_version": workstreams_data["metadata"]["version"],
             "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
         },
@@ -83,9 +86,9 @@ def build_snapshot() -> Dict[str, Any]:
     
     return snapshot
 
-def write_snapshot(snapshot: Dict[str, Any], output_path: str) -> None:
+def write_snapshot(snapshot: Dict[str, Any], output_path: Path) -> None:
     """Write snapshot to JSON file."""
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    os.makedirs(output_path.parent, exist_ok=True)
     
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(snapshot, f, indent=2, ensure_ascii=False)
@@ -100,8 +103,7 @@ def main():
     snapshot = build_snapshot()
     
     # Write to public directory
-    output_path = "public/public_snapshot.json"
-    write_snapshot(snapshot, output_path)
+    write_snapshot(snapshot, OUTPUT_PATH)
     
     # Print summary
     print(f"✅ Snapshot built successfully!")
