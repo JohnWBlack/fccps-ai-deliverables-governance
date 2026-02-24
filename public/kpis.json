@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-24T20:50:40.959180Z",
+    "generated_at": "2026-02-24T21:59:29.360354Z",
     "timezone": "America/New_York",
     "schema_version": "0.2"
   },
@@ -36,9 +36,9 @@
   "summary": {
     "overall_status": "red",
     "kpi_counts": {
-      "green": 7,
+      "green": 8,
       "yellow": 8,
-      "red": 4
+      "red": 3
     }
   },
   "kpis": [
@@ -320,16 +320,16 @@
       "id": "KPI-FRESH-03",
       "category": "freshness",
       "name": "Foundation docs recency",
-      "status": "red",
-      "score": 40,
+      "status": "green",
+      "score": 95,
       "description": "Recency profile for governance_docs and project_files updates.",
       "rules": [
         "If no foundation docs updated in >14 days => yellow; >30 days => red."
       ],
       "evidence": [],
       "details": {
-        "oldest_age_days": 33,
-        "sample_count": 193
+        "oldest_age_days": 1,
+        "sample_count": 205
       }
     },
     {
