@@ -5,6 +5,9 @@ This changelog tracks changes visible in the public snapshot. Internal changes t
 ## [Unreleased]
 
 ### Added
+- Health dashboard pipeline with deterministic KPI generation (`public/kpis.json`)
+- Public file inventory generation (`public/file_catalog.json`)
+- Expanded governance document corpus in `governance_docs/`
 - Initial repository setup with governance structure
 - Source of Truth YAML schema for workstreams, timeline, and deliverables
 - Public snapshot generation system
