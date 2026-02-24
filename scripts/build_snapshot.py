@@ -57,11 +57,16 @@ def build_snapshot() -> Dict[str, Any]:
     workstreams_data = load_yaml_file(str(SOR_DIR / "workstreams.yml"))
     timeline_data = load_yaml_file(str(SOR_DIR / "timeline.yml"))
     deliverables_data = load_yaml_file(str(SOR_DIR / "deliverables.yml"))
+    generated_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     
     # Build snapshot structure
     snapshot = {
+        "meta": {
+            "generated_at": generated_at,
+            "source_version": workstreams_data["metadata"]["version"]
+        },
         "metadata": {
-            "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "generated_at": generated_at,
             "source_version": workstreams_data["metadata"]["version"],
             "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
         },
