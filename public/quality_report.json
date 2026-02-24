@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "generated_at": "2026-02-24T20:50:40.801805Z",
+    "sources": [
+      "sor/workstreams.yml",
+      "sor/timeline.yml",
+      "sor/deliverables.yml",
+      "public/ref_index.json"
+    ]
+  },
+  "summary_counts": {
+    "error": 0,
+    "warning": 3,
+    "info": 1
+  },
+  "issues": [
+    {
+      "severity": "info",
+      "code": "PLACEHOLDER-MARKDOWN",
+      "message": "Markdown supporting docs include TBD/TODO/??? tokens.",
+      "evidence": [
+        {
+          "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md"
+        },
+        {
+          "doc_path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md"
+        },
+        {
+          "doc_path": "governance_docs/Workstreams/rsb/Shared Baseline v01.md"
+        },
+        {
+          "doc_path": "project_files/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md"
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "GATE-MAPPING-MISSING",
+      "message": "Some deliverables do not have checkpoint_id mappings.",
+      "evidence": [
+        {
+          "deliverable_id": "del-001"
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "INSTRUMENTATION-PRINCIPLES",
+      "message": "No deliverables currently include principle_refs.",
+      "evidence": [
+        {
+          "deliverable_count": 1
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "INSTRUMENTATION-RISKS",
+      "message": "No deliverables currently include risk_refs.",
+      "evidence": [
+        {
+          "deliverable_count": 1
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "deliverable_principle_refs_pct": 0.0,
+    "deliverable_risk_refs_pct": 0.0,
+    "docs_with_principles_pct": 2.898550724637681,
+    "docs_with_risks_pct": 2.898550724637681
+  }
+}

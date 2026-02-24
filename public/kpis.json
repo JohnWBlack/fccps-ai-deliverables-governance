@@ -1,33 +1,60 @@
 {
   "meta": {
-    "generated_at": "2026-02-24T17:31:42.089720Z",
+    "generated_at": "2026-02-24T20:50:40.959180Z",
     "timezone": "America/New_York",
-    "schema_version": "0.1"
+    "schema_version": "0.2"
+  },
+  "taxonomy": {
+    "categories": {
+      "schedule": "Timeline and readiness metrics for near-term execution.",
+      "convergence": "Internal consistency and linkage quality across SoR and docs.",
+      "freshness": "How recent SoR and supporting documents are.",
+      "publicability": "Publish-safe artifact hygiene checks."
+    },
+    "kpi_definitions": {
+      "KPI-SCHED-01": "Next gate readiness",
+      "KPI-SCHED-02": "Overdue deliverables",
+      "KPI-SCHED-03": "Blocked dependency rate",
+      "KPI-SCHED-04": "Pre-read readiness",
+      "KPI-CONV-01": "SoR reference integrity",
+      "KPI-CONV-02": "Ownership completeness",
+      "KPI-CONV-03": "Gate mapping completeness",
+      "KPI-CONV-04": "Definition-of-done completeness",
+      "KPI-CONV-05": "Principle linkage coverage",
+      "KPI-CONV-06": "Risk linkage coverage",
+      "KPI-CONV-07": "Cross-doc principle coverage",
+      "KPI-CONV-08": "Cross-doc risk coverage",
+      "KPI-CONV-09": "Risk-to-principle mapping readiness",
+      "KPI-CONV-10": "Milestone gating consistency",
+      "KPI-FRESH-01": "SoR recency",
+      "KPI-FRESH-02": "Public artifacts recency",
+      "KPI-FRESH-03": "Foundation docs recency",
+      "KPI-PUB-01": "Public link hygiene",
+      "KPI-PUB-02": "PII lint on public outputs"
+    }
   },
   "summary": {
     "overall_status": "red",
     "kpi_counts": {
-      "green": 4,
-      "yellow": 6,
-      "red": 1
+      "green": 7,
+      "yellow": 8,
+      "red": 4
     }
   },
   "kpis": [
     {
       "id": "KPI-SCHED-01",
       "category": "schedule",
-      "name": "Meeting gate readiness",
+      "name": "Next gate readiness",
       "status": "yellow",
       "score": 70,
-      "description": "Are next-meeting inputs on track by pre-read deadline?",
-      "evidence": [],
+      "description": "Share of deliverables due before next gate that are complete.",
       "rules": [
-        "If no upcoming meeting exists in timeline, report yellow pending schedule instrumentation."
+        "No upcoming timeline gate found; mark as not instrumented."
       ],
+      "evidence": [],
       "details": {
-        "next_meeting": null,
-        "ready_deliverables": 0,
-        "total_due_before_meeting": 0
+        "instrumented": false
       }
     },
     {
@@ -37,48 +64,58 @@
       "status": "green",
       "score": 100,
       "description": "Count and severity of overdue deliverables.",
-      "evidence": [],
       "rules": [
-        "Deliverables past due and not completed are overdue.",
-        "Score decays with overdue count and max overdue days."
+        "Penalty combines overdue count and max overdue days."
       ],
+      "evidence": [],
       "details": {
         "overdue_count": 0,
-        "max_days_overdue": 0,
-        "items": []
+        "max_days_overdue": 0
       }
     },
     {
       "id": "KPI-SCHED-03",
       "category": "schedule",
-      "name": "Blocked-by-dependency rate",
+      "name": "Blocked dependency rate",
       "status": "yellow",
       "score": 70,
-      "description": "Rate of deliverables blocked by unmet dependencies.",
-      "evidence": [],
+      "description": "Deliverables blocked by unmet dependencies.",
       "rules": [
-        "If no depends_on fields are present, KPI is yellow (not yet instrumented)."
+        "No depends_on relationships present in SoR."
       ],
+      "evidence": [],
       "details": {
-        "instrumented": false,
-        "blocked_count": 0,
-        "deliverables_with_dependencies": 0
+        "instrumented": false
+      }
+    },
+    {
+      "id": "KPI-SCHED-04",
+      "category": "schedule",
+      "name": "Pre-read readiness",
+      "status": "yellow",
+      "score": 70,
+      "description": "Readiness of pre-read deliverables for the next gate.",
+      "rules": [
+        "No explicit pre-read fields in timeline; KPI is not instrumented."
+      ],
+      "evidence": [],
+      "details": {
+        "instrumented": false
       }
     },
     {
       "id": "KPI-CONV-01",
       "category": "convergence",
-      "name": "ID integrity",
+      "name": "SoR reference integrity",
       "status": "green",
       "score": 100,
-      "description": "No dangling deliverable references across SoR files.",
-      "evidence": [],
+      "description": "No dangling IDs across SoR references.",
       "rules": [
-        "All referenced deliverable IDs must exist in sor/deliverables.yml."
+        "ID-* issues from quality report reduce score."
       ],
+      "evidence": [],
       "details": {
-        "dangling_references": [],
-        "dangling_count": 0
+        "id_issue_count": 0
       }
     },
     {
@@ -87,16 +124,13 @@
       "name": "Ownership completeness",
       "status": "green",
       "score": 100,
-      "description": "Deliverables and workstreams have explicit, non-placeholder ownership.",
-      "evidence": [],
+      "description": "Deliverables and workstreams have assigned owners/leads.",
       "rules": [
-        "Each deliverable needs at least one owner (owners[] or assigned_to).",
-        "Each workstream must have a lead (co-lead optional)."
+        "Owner-related quality issues reduce score."
       ],
+      "evidence": [],
       "details": {
-        "missing_deliverable_owners": [],
-        "missing_workstream_leads": [],
-        "unknown_owner_values": []
+        "owner_issue_count": 0
       }
     },
     {
@@ -104,102 +138,215 @@
       "category": "convergence",
       "name": "Gate mapping completeness",
       "status": "yellow",
-      "score": 70,
+      "score": 80,
       "description": "Deliverables map to valid timeline checkpoints.",
-      "evidence": [],
       "rules": [
-        "If checkpoint_id is absent, report yellow as not yet instrumented."
+        "Missing or invalid checkpoint mappings reduce score."
+      ],
+      "evidence": [
+        {
+          "type": "issue",
+          "id": "GATE-MAPPING-MISSING"
+        }
       ],
       "details": {
-        "instrumented": false,
-        "mapped": 0,
-        "total_deliverables": 1
+        "gate_issue_count": 1
       }
     },
     {
       "id": "KPI-CONV-04",
       "category": "convergence",
-      "name": "Definition-of-done completeness",
-      "status": "yellow",
-      "score": 70,
-      "description": "Deliverables include clear definition-of-done criteria.",
-      "evidence": [],
+      "name": "DoD completeness and placeholder-free",
+      "status": "green",
+      "score": 100,
+      "description": "Definition-of-done is sufficiently detailed and not placeholder text.",
       "rules": [
-        "If definition_of_done is absent, report yellow as not yet instrumented."
+        "Placeholder DoD bullets reduce score."
+      ],
+      "evidence": [
+        {
+          "type": "issue",
+          "id": "PLACEHOLDER-DOD"
+        }
       ],
       "details": {
-        "instrumented": false,
-        "complete": 0,
-        "total_deliverables": 1
+        "placeholder_dod_issues": 0
       }
     },
     {
       "id": "KPI-CONV-05",
       "category": "convergence",
-      "name": "Principle linkage readiness",
+      "name": "Principle linkage coverage",
       "status": "yellow",
       "score": 70,
-      "description": "Coverage of principle_refs across deliverables.",
-      "evidence": [],
+      "description": "Percent of deliverables with principle_refs.",
       "rules": [
-        "If principle_refs is absent from schema usage, report yellow not yet instrumented."
+        "Coverage = deliverables with principle_refs / total deliverables."
       ],
+      "evidence": [],
       "details": {
-        "instrumented": false,
         "coverage_pct": 0,
-        "notes": "not yet instrumented"
+        "authoritative_source": "derived from references"
       }
     },
     {
       "id": "KPI-CONV-06",
       "category": "convergence",
-      "name": "Risk register linkage readiness",
+      "name": "Risk linkage coverage",
       "status": "yellow",
       "score": 70,
-      "description": "Coverage of risk_refs across deliverables.",
-      "evidence": [],
+      "description": "Percent of deliverables with risk_refs.",
       "rules": [
-        "If risk_refs is absent from schema usage, report yellow not yet instrumented."
+        "Coverage = deliverables with risk_refs / total deliverables."
       ],
+      "evidence": [],
       "details": {
-        "instrumented": false,
         "coverage_pct": 0,
-        "notes": "not yet instrumented"
+        "authoritative_source": "derived from references"
       }
     },
     {
       "id": "KPI-CONV-07",
       "category": "convergence",
-      "name": "Freshness",
-      "status": "green",
-      "score": 100,
-      "description": "SoR and public changelog are updated within freshness threshold.",
-      "evidence": [],
+      "name": "Cross-doc principle coverage",
+      "status": "red",
+      "score": 2,
+      "description": "Percent of scanned docs that reference at least one principle ID.",
       "rules": [
-        "SoR files and changelog should be updated within 7 days."
+        "Green >=70, yellow >=40, red <40."
+      ],
+      "evidence": [
+        {
+          "type": "doc",
+          "id": "docs/CONVENTIONS.md"
+        },
+        {
+          "type": "doc",
+          "id": "docs/schema_notes.md"
+        }
       ],
       "details": {
-        "threshold_days": 7,
-        "stale_sor_files": [],
-        "changelog_stale": false,
-        "catalog_generated_at": "2026-02-24T17:31:42.025899Z"
+        "coverage_pct": 2,
+        "scanned_docs": 69
       }
     },
     {
       "id": "KPI-CONV-08",
       "category": "convergence",
-      "name": "Public artifact availability",
+      "name": "Cross-doc risk coverage",
+      "status": "red",
+      "score": 2,
+      "description": "Percent of scanned docs that reference at least one risk ID.",
+      "rules": [
+        "Green >=70, yellow >=40, red <40."
+      ],
+      "evidence": [
+        {
+          "type": "doc",
+          "id": "docs/CONVENTIONS.md"
+        },
+        {
+          "type": "doc",
+          "id": "docs/schema_notes.md"
+        }
+      ],
+      "details": {
+        "coverage_pct": 2,
+        "scanned_docs": 69
+      }
+    },
+    {
+      "id": "KPI-CONV-09",
+      "category": "convergence",
+      "name": "Risk→principle mapping readiness",
+      "status": "yellow",
+      "score": 70,
+      "description": "Coverage of risk IDs linked to principle IDs.",
+      "rules": [
+        "No risk register found; KPI not instrumented."
+      ],
+      "evidence": [],
+      "details": {
+        "instrumented": false
+      }
+    },
+    {
+      "id": "KPI-CONV-10",
+      "category": "convergence",
+      "name": "Milestone gating consistency",
+      "status": "yellow",
+      "score": 70,
+      "description": "Deliverables are checkpointed against milestone gates.",
+      "rules": [
+        "No ms_* milestones in timeline; not instrumented."
+      ],
+      "evidence": [],
+      "details": {
+        "instrumented": false
+      }
+    },
+    {
+      "id": "KPI-FRESH-01",
+      "category": "freshness",
+      "name": "SoR recency",
+      "status": "green",
+      "score": 100,
+      "description": "SoR files updated within freshness window.",
+      "rules": [
+        "Files older than 7 days are stale."
+      ],
+      "evidence": [],
+      "details": {
+        "stale_sor_files": [],
+        "threshold_days": 7
+      }
+    },
+    {
+      "id": "KPI-FRESH-02",
+      "category": "freshness",
+      "name": "Public artifacts recency",
+      "status": "green",
+      "score": 100,
+      "description": "Derived public artifacts are freshly generated.",
+      "rules": [
+        "Public artifacts should be updated within 7 days."
+      ],
+      "evidence": [],
+      "details": {
+        "stale_public_artifacts": []
+      }
+    },
+    {
+      "id": "KPI-FRESH-03",
+      "category": "freshness",
+      "name": "Foundation docs recency",
+      "status": "red",
+      "score": 40,
+      "description": "Recency profile for governance_docs and project_files updates.",
+      "rules": [
+        "If no foundation docs updated in >14 days => yellow; >30 days => red."
+      ],
+      "evidence": [],
+      "details": {
+        "oldest_age_days": 33,
+        "sample_count": 193
+      }
+    },
+    {
+      "id": "KPI-PUB-01",
+      "category": "publicability",
+      "name": "Public link hygiene",
       "status": "red",
       "score": 0,
-      "description": "Deliverables should have public_url or be explicitly committee_only.",
+      "description": "Deliverables must have public_url or committee_only=true.",
+      "rules": [
+        "Missing visibility metadata reduces score."
+      ],
       "evidence": [
         {
           "type": "deliverable",
           "id": "del-001"
         }
-      ],
-      "rules": [
-        "A deliverable is compliant when public_url exists or committee_only=true."
       ],
       "details": {
         "non_compliant": [
@@ -207,8 +354,22 @@
             "id": "del-001",
             "reason": "missing_public_url_or_committee_only"
           }
-        ],
-        "total_deliverables": 1
+        ]
+      }
+    },
+    {
+      "id": "KPI-PUB-02",
+      "category": "publicability",
+      "name": "PII lint",
+      "status": "green",
+      "score": 100,
+      "description": "Public outputs should not include email addresses.",
+      "rules": [
+        "Any email-like token in public/*.json is red."
+      ],
+      "evidence": [],
+      "details": {
+        "pii_files": []
       }
     }
   ]

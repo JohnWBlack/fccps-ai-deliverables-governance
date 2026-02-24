@@ -23,6 +23,21 @@ VALID_PRIORITY = ["high", "medium", "low"]
 VALID_TIMELINE_TYPE = ["milestone", "deadline", "meeting", "review"]
 VALID_DELIVERABLE_TYPE = ["document", "presentation", "software", "other"]
 
+
+def extract_id_set(data: Dict[str, Any], list_key: str) -> set:
+    """Extract an ID set from either list[dict{id}] or list[str] structures."""
+    result = set()
+    entries = data.get(list_key, [])
+    if not isinstance(entries, list):
+        return result
+
+    for entry in entries:
+        if isinstance(entry, dict) and entry.get("id"):
+            result.add(str(entry["id"]))
+        elif isinstance(entry, str):
+            result.add(entry)
+    return result
+
 def load_yaml_file(filepath: str) -> Dict[str, Any]:
     """Load and parse YAML file."""
     try:
@@ -172,7 +187,13 @@ def validate_timeline(data: Dict[str, Any], workstream_ids: set, deliverable_ids
             print(f"❌ Timeline event {event_id} has invalid date format. Expected YYYY-MM-DD")
             sys.exit(1)
 
-def validate_deliverables(data: Dict[str, Any], workstream_ids: set, timeline_event_ids: set) -> None:
+def validate_deliverables(
+    data: Dict[str, Any],
+    workstream_ids: set,
+    timeline_event_ids: set,
+    principle_ids: set,
+    risk_ids: set,
+) -> None:
     """Validate deliverables.yml structure and content."""
     validate_metadata(data["metadata"], "deliverables.yml")
     
@@ -236,6 +257,18 @@ def validate_deliverables(data: Dict[str, Any], workstream_ids: set, timeline_ev
                 print(f"❌ Deliverable {del_id} optional field '{field}' must be a list when present")
                 sys.exit(1)
 
+        if principle_ids:
+            for pref in deliverable.get("principle_refs", []) or []:
+                if pref not in principle_ids:
+                    print(f"❌ Deliverable {del_id} principle_refs contains unknown principle '{pref}'")
+                    sys.exit(1)
+
+        if risk_ids:
+            for rref in deliverable.get("risk_refs", []) or []:
+                if rref not in risk_ids:
+                    print(f"❌ Deliverable {del_id} risk_refs contains unknown risk '{rref}'")
+                    sys.exit(1)
+
         # Validate visibility/public artifact fields
         if "public_url" in deliverable and not isinstance(deliverable.get("public_url"), str):
             print(f"❌ Deliverable {del_id} optional field 'public_url' must be a string when present")
@@ -267,10 +300,20 @@ def main():
     workstreams_file = os.path.join(sor_dir, "workstreams.yml")
     timeline_file = os.path.join(sor_dir, "timeline.yml")
     deliverables_file = os.path.join(sor_dir, "deliverables.yml")
+    principles_file = os.path.join(sor_dir, "principles.yml")
+    risks_file = os.path.join(sor_dir, "risks.yml")
     
     workstreams_data = load_yaml_file(workstreams_file)
     timeline_data = load_yaml_file(timeline_file)
     deliverables_data = load_yaml_file(deliverables_file)
+
+    principle_ids = set()
+    if os.path.exists(principles_file):
+        principle_ids = extract_id_set(load_yaml_file(principles_file), "principles")
+
+    risk_ids = set()
+    if os.path.exists(risks_file):
+        risk_ids = extract_id_set(load_yaml_file(risks_file), "risks")
 
     # Precompute IDs for cross-reference checks
     deliverable_ids = {d["id"] for d in deliverables_data.get("deliverables", []) if d.get("id")}
@@ -282,7 +325,13 @@ def main():
     
     # Validate timeline and deliverables with workstream references
     validate_timeline(timeline_data, workstream_ids, deliverable_ids)
-    validate_deliverables(deliverables_data, workstream_ids, timeline_event_ids)
+    validate_deliverables(
+        deliverables_data,
+        workstream_ids,
+        timeline_event_ids,
+        principle_ids,
+        risk_ids,
+    )
     
     print("✅ All validations passed!")
     print(f"📊 Validated {len(workstreams_data.get('workstreams', []))} workstreams")

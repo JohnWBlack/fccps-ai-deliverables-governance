@@ -7,6 +7,7 @@ on:
     paths:
       - sor/**
       - governance_docs/**
+      - project_files/**
       - scripts/**
       - CHANGELOG_PUBLIC.md
       - requirements.txt
@@ -31,7 +32,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -47,13 +48,19 @@ jobs:
       - name: Build public file catalog
         run: python scripts/build_catalog.py
 
+      - name: Extract reference index
+        run: python scripts/extract_refs.py
+
+      - name: Build quality report
+        run: python scripts/quality_checks.py
+
       - name: Build public KPIs
         run: python scripts/build_kpis.py
 
       - name: Detect generated changes
         id: public_changes
         run: |
-          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/kpis.json; then
+          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -64,6 +71,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/public_snapshot.json public/file_catalog.json public/kpis.json
+          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json
           git commit -m "chore(public): update derived artifacts [skip ci]"
-          git push
+          git push || {
+            echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
+            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_catalog.py && python scripts/extract_refs.py && python scripts/quality_checks.py && python scripts/build_kpis.py";
+            exit 1;
+          }
