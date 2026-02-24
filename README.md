@@ -12,19 +12,28 @@ This repository serves as the single source-of-truth (SoR) for FCCPS AI Committe
 /
 ├── README.md
 ├── LICENSE
+├── CHECKLIST.md
 ├── sor/                    # Source of Truth (YAML files)
 │   ├── workstreams.yml
 │   ├── timeline.yml
 │   └── deliverables.yml
+├── governance_docs/         # Foundation docs and committee history (md/docx/pdf)
 ├── public/
-│   └── public_snapshot.json  # Generated public snapshot
+│   ├── public_snapshot.json  # Main public data contract
+│   ├── file_catalog.json     # Repository file inventory
+│   └── kpis.json             # Deterministic health dashboard KPIs
 ├── scripts/
 │   ├── validate_sor.py       # YAML validation
-│   └── build_snapshot.py     # JSON generation
+│   ├── build_snapshot.py     # Snapshot generation
+│   ├── build_catalog.py      # File inventory generation
+│   └── build_kpis.py         # KPI generation
 ├── docs/
 │   ├── schema_notes.md       # Schema documentation
 │   └── governance_rule.md    # Governance rules
-└── CHANGELOG_PUBLIC.md       # Public changelog
+├── CHANGELOG_PUBLIC.md       # Public changelog
+├── requirements.txt
+└── .github/workflows/
+    └── validate_build_publish.yml
 ```
 
 ## Publishing Workflow
@@ -38,8 +47,12 @@ python scripts/validate_sor.py
 # 2. Build public snapshot
 python scripts/build_snapshot.py
 
-# 3. Commit changes
-git add sor/ public/public_snapshot.json CHANGELOG_PUBLIC.md
+# 3. Build additional public artifacts
+python scripts/build_catalog.py
+python scripts/build_kpis.py
+
+# 4. Commit changes
+git add sor/ public/public_snapshot.json public/file_catalog.json public/kpis.json CHANGELOG_PUBLIC.md
 git commit -m "Update deliverables: [description]"
 git push
 ```
@@ -48,15 +61,35 @@ git push
 
 GitHub Actions automatically publishes the snapshot when relevant files change.
 
-- Workflow: `.github/workflows/validate_and_build.yml`
+- Workflow: `.github/workflows/validate_build_publish.yml`
 - Triggers:
-  - Push to `main` when any of these paths change: `sor/**`, `scripts/**`, `requirements.txt`, `.github/workflows/**`
+  - Push to `main` when any of these paths change: `sor/**`, `governance_docs/**`, `scripts/**`, `CHANGELOG_PUBLIC.md`, `requirements.txt`, `.github/workflows/**`
   - Manual run via `workflow_dispatch`
   - Daily safety rebuild at `03:00 UTC`
 - Pipeline behavior:
   1. Validate SoR (`python scripts/validate_sor.py`)
   2. Build snapshot (`python scripts/build_snapshot.py`)
-  3. If `public/public_snapshot.json` changed, commit and push it back to `main`
+  3. Build file catalog (`python scripts/build_catalog.py`)
+  4. Build KPIs (`python scripts/build_kpis.py`)
+  5. If public artifacts changed, commit and push them back to `main`
+
+## Public Data Products
+
+The repository publishes these derived JSON artifacts:
+
+- `public/public_snapshot.json` (primary public data contract)
+- `public/file_catalog.json` (file inventory)
+- `public/kpis.json` (deterministic alignment/convergence indicators)
+
+Raw URL format:
+
+- `https://raw.githubusercontent.com/JohnWBlack/fccps-ai-deliverables-governance/main/public/public_snapshot.json`
+- `https://raw.githubusercontent.com/JohnWBlack/fccps-ai-deliverables-governance/main/public/file_catalog.json`
+- `https://raw.githubusercontent.com/JohnWBlack/fccps-ai-deliverables-governance/main/public/kpis.json`
+
+## PII Safety
+
+Do not commit email addresses, phone numbers, student data, API tokens, or private/internal links into files that feed public artifacts.
 
 ## Public Snapshot Access
 
@@ -79,9 +112,11 @@ Current governance documents are stored in `governance_docs/`:
 ## Governance Rules
 
 1. **Source of Truth First**: All edits must be made to YAML files in `sor/` directory
-2. **Derived Content**: Public JSON is generated from source, never edited directly
-3. **Chair-Managed Workflow**: Changes are tracked via commits with clear traceability
-4. **Public Safety**: Generated snapshots exclude internal-only fields
+2. **Supporting Docs Second**: `governance_docs/` captures background/history, not SoR
+3. **Derived Content**: `/public` JSON files are generated from source, never edited directly
+4. **Public Contract Priority**: `public/public_snapshot.json` remains the primary contract for public consumers
+5. **Chair-Managed Workflow**: Changes are tracked via commits with clear traceability
+6. **Public Safety**: Generated snapshots exclude internal-only fields
 
 ## Schema Documentation
 

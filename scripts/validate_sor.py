@@ -93,7 +93,19 @@ def validate_workstreams(data: Dict[str, Any]) -> None:
                 print(f"❌ Workstream {ws_id} has invalid date format for '{date_field}'. Expected YYYY-MM-DD")
                 sys.exit(1)
 
-def validate_timeline(data: Dict[str, Any], workstream_ids: set) -> None:
+    # Validate workstream dependencies reference known workstreams
+    for ws in workstreams:
+        ws_id = ws["id"]
+        dependencies = ws.get("dependencies", [])
+        if dependencies and not isinstance(dependencies, list):
+            print(f"❌ Workstream {ws_id} field 'dependencies' must be a list")
+            sys.exit(1)
+        for dep in dependencies:
+            if dep not in workstream_ids:
+                print(f"❌ Workstream {ws_id} dependency references non-existent workstream '{dep}'")
+                sys.exit(1)
+
+def validate_timeline(data: Dict[str, Any], workstream_ids: set, deliverable_ids: set) -> None:
     """Validate timeline.yml structure and content."""
     validate_metadata(data["metadata"], "timeline.yml")
     
@@ -136,6 +148,22 @@ def validate_timeline(data: Dict[str, Any], workstream_ids: set) -> None:
         if ws_id and ws_id not in workstream_ids:
             print(f"❌ Timeline event {event_id} references non-existent workstream '{ws_id}'")
             sys.exit(1)
+
+        # Validate optional deliverable references
+        del_id = event.get("deliverable_id")
+        if del_id and del_id not in deliverable_ids:
+            print(f"❌ Timeline event {event_id} references non-existent deliverable '{del_id}'")
+            sys.exit(1)
+
+        del_ids = event.get("deliverable_ids")
+        if del_ids is not None:
+            if not isinstance(del_ids, list):
+                print(f"❌ Timeline event {event_id} field 'deliverable_ids' must be a list")
+                sys.exit(1)
+            for did in del_ids:
+                if did not in deliverable_ids:
+                    print(f"❌ Timeline event {event_id} references non-existent deliverable '{did}'")
+                    sys.exit(1)
         
         # Validate date format
         try:
@@ -144,7 +172,7 @@ def validate_timeline(data: Dict[str, Any], workstream_ids: set) -> None:
             print(f"❌ Timeline event {event_id} has invalid date format. Expected YYYY-MM-DD")
             sys.exit(1)
 
-def validate_deliverables(data: Dict[str, Any], workstream_ids: set) -> None:
+def validate_deliverables(data: Dict[str, Any], workstream_ids: set, timeline_event_ids: set) -> None:
     """Validate deliverables.yml structure and content."""
     validate_metadata(data["metadata"], "deliverables.yml")
     
@@ -195,6 +223,37 @@ def validate_deliverables(data: Dict[str, Any], workstream_ids: set) -> None:
             print(f"❌ Deliverable {del_id} has invalid due_date format. Expected YYYY-MM-DD")
             sys.exit(1)
 
+        # Validate optional checkpoint mapping
+        checkpoint_id = deliverable.get("checkpoint_id")
+        if checkpoint_id and checkpoint_id not in timeline_event_ids:
+            print(f"❌ Deliverable {del_id} checkpoint_id references non-existent timeline event '{checkpoint_id}'")
+            sys.exit(1)
+
+        # Validate optional linkage fields
+        for field in ["principle_refs", "risk_refs", "depends_on"]:
+            value = deliverable.get(field)
+            if value is not None and not isinstance(value, list):
+                print(f"❌ Deliverable {del_id} optional field '{field}' must be a list when present")
+                sys.exit(1)
+
+        # Validate visibility/public artifact fields
+        if "public_url" in deliverable and not isinstance(deliverable.get("public_url"), str):
+            print(f"❌ Deliverable {del_id} optional field 'public_url' must be a string when present")
+            sys.exit(1)
+        if "committee_only" in deliverable and not isinstance(deliverable.get("committee_only"), bool):
+            print(f"❌ Deliverable {del_id} optional field 'committee_only' must be a boolean when present")
+            sys.exit(1)
+
+    deliverable_ids = {d["id"] for d in deliverables}
+
+    # Validate deliverable dependency references after IDs are known
+    for deliverable in deliverables:
+        del_id = deliverable["id"]
+        for dep in deliverable.get("depends_on", []) or []:
+            if dep not in deliverable_ids:
+                print(f"❌ Deliverable {del_id} depends_on references non-existent deliverable '{dep}'")
+                sys.exit(1)
+
 def main():
     """Main validation function."""
     print("🔍 Validating FCCPS AI Committee Source of Truth...")
@@ -212,14 +271,18 @@ def main():
     workstreams_data = load_yaml_file(workstreams_file)
     timeline_data = load_yaml_file(timeline_file)
     deliverables_data = load_yaml_file(deliverables_file)
+
+    # Precompute IDs for cross-reference checks
+    deliverable_ids = {d["id"] for d in deliverables_data.get("deliverables", []) if d.get("id")}
+    timeline_event_ids = {e["id"] for e in timeline_data.get("timeline_events", []) if e.get("id")}
     
     # Validate workstreams first to get workstream IDs
     validate_workstreams(workstreams_data)
     workstream_ids = {ws["id"] for ws in workstreams_data.get("workstreams", [])}
     
     # Validate timeline and deliverables with workstream references
-    validate_timeline(timeline_data, workstream_ids)
-    validate_deliverables(deliverables_data, workstream_ids)
+    validate_timeline(timeline_data, workstream_ids, deliverable_ids)
+    validate_deliverables(deliverables_data, workstream_ids, timeline_event_ids)
     
     print("✅ All validations passed!")
     print(f"📊 Validated {len(workstreams_data.get('workstreams', []))} workstreams")

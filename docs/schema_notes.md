@@ -94,6 +94,13 @@ deliverables:
     deliverable_type: "document|presentation|software|other"
     public_facing: true|false
     internal_notes: "Internal notes (not in public snapshot)"
+    checkpoint_id: "te-001"              # Optional: maps deliverable to timeline gate/checkpoint
+    definition_of_done: ["bullet 1", "bullet 2"]  # Optional: used for KPI quality checks
+    depends_on: ["del-002"]              # Optional: deliverable dependencies
+    public_url: "https://..."            # Optional: public artifact URL
+    committee_only: true|false            # Optional: true when no public URL should exist
+    principle_refs: ["P-001", "P-002"] # Optional: linkage to principle IDs
+    risk_refs: ["R-001"]                 # Optional: linkage to risk IDs
 ```
 
 ### Field Descriptions
@@ -108,6 +115,13 @@ deliverables:
 - **deliverable_type**: Type of deliverable
 - **public_facing**: Whether this appears in public snapshots
 - **internal_notes**: Internal notes (stripped from public snapshots)
+- **checkpoint_id**: Optional timeline event ID this deliverable supports
+- **definition_of_done**: Optional list of completion criteria for quality KPI checks
+- **depends_on**: Optional list of upstream deliverable IDs
+- **public_url**: Optional public artifact link
+- **committee_only**: Optional visibility marker when no public URL should exist
+- **principle_refs**: Optional list of principle IDs (convergence KPI instrumentation)
+- **risk_refs**: Optional list of risk IDs (convergence KPI instrumentation)
 
 ## Validation Rules
 
@@ -127,6 +141,23 @@ deliverables:
 ### Cross-References
 - `deliverable.workstream_id` must reference valid workstream ID
 - `timeline.workstream_id` (if present) must reference valid workstream ID
+- `deliverable.checkpoint_id` (if present) must reference valid timeline event ID
+- `deliverable.depends_on` (if present) must reference valid deliverable IDs
+
+## Adding `principle_refs` and `risk_refs` Later
+
+To instrument KPI-CONV-05 and KPI-CONV-06 without breaking current schema:
+
+1. Add optional arrays to each applicable deliverable:
+   - `principle_refs: ["P-001", "P-002"]`
+   - `risk_refs: ["R-001"]`
+2. Keep IDs stable and use your committee's canonical principle/risk register IDs.
+3. Validate with `python scripts/validate_sor.py`.
+4. Regenerate public artifacts:
+   - `python scripts/build_snapshot.py`
+   - `python scripts/build_catalog.py`
+   - `python scripts/build_kpis.py`
+5. Commit SoR first, generated public files second.
 
 ## Public Snapshot Generation
 
