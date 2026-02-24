@@ -1,1 +1,45 @@
-{"metadata": {"generated_at": "2026-02-23T17:20:00", "source_version": "1.0.0", "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"}, "workstreams": [], "timeline_events": [], "deliverables": []}
+{
+  "metadata": {
+    "generated_at": "2026-02-24T02:15:58.136443Z",
+    "source_version": "1.0.0",
+    "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
+  },
+  "workstreams": [
+    {
+      "id": "ws-001",
+      "name": "AI Policy Development",
+      "description": "Develop comprehensive AI policies for FCCPS",
+      "status": "active",
+      "start_date": "2026-01-15",
+      "target_completion": "2026-06-30",
+      "priority": "high",
+      "tags": [
+        "policy",
+        "governance"
+      ]
+    }
+  ],
+  "timeline_events": [
+    {
+      "id": "te-001",
+      "title": "AI Committee Formation",
+      "description": "Official formation of FCCPS AI Committee",
+      "date": "2026-01-01",
+      "type": "milestone",
+      "status": "completed",
+      "importance": "high"
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "del-001",
+      "title": "AI Policy Framework Document",
+      "description": "Comprehensive framework for AI policy implementation",
+      "status": "in_progress",
+      "due_date": "2026-05-15",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    }
+  ]
+}
