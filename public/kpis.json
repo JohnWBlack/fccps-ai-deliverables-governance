@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "generated_at": "2026-02-24T17:31:42.089720Z",
+    "timezone": "America/New_York",
+    "schema_version": "0.1"
+  },
+  "summary": {
+    "overall_status": "red",
+    "kpi_counts": {
+      "green": 4,
+      "yellow": 6,
+      "red": 1
+    }
+  },
+  "kpis": [
+    {
+      "id": "KPI-SCHED-01",
+      "category": "schedule",
+      "name": "Meeting gate readiness",
+      "status": "yellow",
+      "score": 70,
+      "description": "Are next-meeting inputs on track by pre-read deadline?",
+      "evidence": [],
+      "rules": [
+        "If no upcoming meeting exists in timeline, report yellow pending schedule instrumentation."
+      ],
+      "details": {
+        "next_meeting": null,
+        "ready_deliverables": 0,
+        "total_due_before_meeting": 0
+      }
+    },
+    {
+      "id": "KPI-SCHED-02",
+      "category": "schedule",
+      "name": "Overdue deliverables",
+      "status": "green",
+      "score": 100,
+      "description": "Count and severity of overdue deliverables.",
+      "evidence": [],
+      "rules": [
+        "Deliverables past due and not completed are overdue.",
+        "Score decays with overdue count and max overdue days."
+      ],
+      "details": {
+        "overdue_count": 0,
+        "max_days_overdue": 0,
+        "items": []
+      }
+    },
+    {
+      "id": "KPI-SCHED-03",
+      "category": "schedule",
+      "name": "Blocked-by-dependency rate",
+      "status": "yellow",
+      "score": 70,
+      "description": "Rate of deliverables blocked by unmet dependencies.",
+      "evidence": [],
+      "rules": [
+        "If no depends_on fields are present, KPI is yellow (not yet instrumented)."
+      ],
+      "details": {
+        "instrumented": false,
+        "blocked_count": 0,
+        "deliverables_with_dependencies": 0
+      }
+    },
+    {
+      "id": "KPI-CONV-01",
+      "category": "convergence",
+      "name": "ID integrity",
+      "status": "green",
+      "score": 100,
+      "description": "No dangling deliverable references across SoR files.",
+      "evidence": [],
+      "rules": [
+        "All referenced deliverable IDs must exist in sor/deliverables.yml."
+      ],
+      "details": {
+        "dangling_references": [],
+        "dangling_count": 0
+      }
+    },
+    {
+      "id": "KPI-CONV-02",
+      "category": "convergence",
+      "name": "Ownership completeness",
+      "status": "green",
+      "score": 100,
+      "description": "Deliverables and workstreams have explicit, non-placeholder ownership.",
+      "evidence": [],
+      "rules": [
+        "Each deliverable needs at least one owner (owners[] or assigned_to).",
+        "Each workstream must have a lead (co-lead optional)."
+      ],
+      "details": {
+        "missing_deliverable_owners": [],
+        "missing_workstream_leads": [],
+        "unknown_owner_values": []
+      }
+    },
+    {
+      "id": "KPI-CONV-03",
+      "category": "convergence",
+      "name": "Gate mapping completeness",
+      "status": "yellow",
+      "score": 70,
+      "description": "Deliverables map to valid timeline checkpoints.",
+      "evidence": [],
+      "rules": [
+        "If checkpoint_id is absent, report yellow as not yet instrumented."
+      ],
+      "details": {
+        "instrumented": false,
+        "mapped": 0,
+        "total_deliverables": 1
+      }
+    },
+    {
+      "id": "KPI-CONV-04",
+      "category": "convergence",
+      "name": "Definition-of-done completeness",
+      "status": "yellow",
+      "score": 70,
+      "description": "Deliverables include clear definition-of-done criteria.",
+      "evidence": [],
+      "rules": [
+        "If definition_of_done is absent, report yellow as not yet instrumented."
+      ],
+      "details": {
+        "instrumented": false,
+        "complete": 0,
+        "total_deliverables": 1
+      }
+    },
+    {
+      "id": "KPI-CONV-05",
+      "category": "convergence",
+      "name": "Principle linkage readiness",
+      "status": "yellow",
+      "score": 70,
+      "description": "Coverage of principle_refs across deliverables.",
+      "evidence": [],
+      "rules": [
+        "If principle_refs is absent from schema usage, report yellow not yet instrumented."
+      ],
+      "details": {
+        "instrumented": false,
+        "coverage_pct": 0,
+        "notes": "not yet instrumented"
+      }
+    },
+    {
+      "id": "KPI-CONV-06",
+      "category": "convergence",
+      "name": "Risk register linkage readiness",
+      "status": "yellow",
+      "score": 70,
+      "description": "Coverage of risk_refs across deliverables.",
+      "evidence": [],
+      "rules": [
+        "If risk_refs is absent from schema usage, report yellow not yet instrumented."
+      ],
+      "details": {
+        "instrumented": false,
+        "coverage_pct": 0,
+        "notes": "not yet instrumented"
+      }
+    },
+    {
+      "id": "KPI-CONV-07",
+      "category": "convergence",
+      "name": "Freshness",
+      "status": "green",
+      "score": 100,
+      "description": "SoR and public changelog are updated within freshness threshold.",
+      "evidence": [],
+      "rules": [
+        "SoR files and changelog should be updated within 7 days."
+      ],
+      "details": {
+        "threshold_days": 7,
+        "stale_sor_files": [],
+        "changelog_stale": false,
+        "catalog_generated_at": "2026-02-24T17:31:42.025899Z"
+      }
+    },
+    {
+      "id": "KPI-CONV-08",
+      "category": "convergence",
+      "name": "Public artifact availability",
+      "status": "red",
+      "score": 0,
+      "description": "Deliverables should have public_url or be explicitly committee_only.",
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "del-001"
+        }
+      ],
+      "rules": [
+        "A deliverable is compliant when public_url exists or committee_only=true."
+      ],
+      "details": {
+        "non_compliant": [
+          {
+            "id": "del-001",
+            "reason": "missing_public_url_or_committee_only"
+          }
+        ],
+        "total_deliverables": 1
+      }
+    }
+  ]
+}
