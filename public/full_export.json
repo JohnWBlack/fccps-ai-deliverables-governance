@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "generated_at": "2026-02-25T03:47:49Z",
+    "generated_at": "2026-02-25T16:53:36Z",
     "files": [
       "public_snapshot.json",
       "file_catalog.json",
@@ -10,25 +10,25 @@
       "kpi_evidence.json"
     ],
     "sha256": {
-      "public_snapshot.json": "98c9e733191733d9587b26f5f108395f06f2946610d6c6e534303e99c5411633",
-      "file_catalog.json": "43ef472110a4ec64245c80736c0e13ac1ec25fadbe0bd58dc6179c0ac496f725",
+      "public_snapshot.json": "ccbcdadc069dfbd1d27a1e4e13803d267376a23c629ea556b595350d7822b0a5",
+      "file_catalog.json": "50cb5121716867a8bbc3ffb2b9a28501b7f67b1ee968772761a38a5fdbfaa6db",
       "ref_index.json": "c12abc32204af8327c073eeadba6192e942e766a17f93e7e4283c2814cae70c2",
-      "quality_report.json": "34c3fe504ca6aa3ca5791ea1fc6f31475faa750e87effd8acafddc853b403627",
-      "kpis.json": "a5d3d265d4f4c80ad31b737b4933905ade38f1c13694faa813fcae8753b13996",
-      "kpi_evidence.json": "de0fa1994f0cbdbe8beeb1d06d56824117319a1f588b38d76d334f7ce9b24d2d"
+      "quality_report.json": "ffe4a4d3a28a83acb0a71ddb6d64c15d293d5b2639c446bd293ffb2bf48c1418",
+      "kpis.json": "0b93e86b3b53e5cb1008bed69994496b62cd523e7fa8c1872c32371cf03068c7",
+      "kpi_evidence.json": "48e2dc44ebdd35cc107889007c95c4421b39e1c9ea3c0e4291eb8ec21bdb69b7"
     }
   },
   "artifacts": {
     "public_snapshot.json": {
       "meta": {
-        "generated_at": "2026-02-25T03:47:19.906795Z",
+        "generated_at": "2026-02-25T16:49:57.826221Z",
         "source_version": "1.1.0",
-        "version_key": "e3b25c532b9598137d6357705554ae9c49427580"
+        "version_key": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a"
       },
       "metadata": {
-        "generated_at": "2026-02-25T03:47:19.906795Z",
+        "generated_at": "2026-02-25T16:49:57.826221Z",
         "source_version": "1.1.0",
-        "version_key": "e3b25c532b9598137d6357705554ae9c49427580",
+        "version_key": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
         "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
       },
       "workstreams": [
@@ -440,7 +440,7 @@
     },
     "file_catalog.json": {
       "meta": {
-        "generated_at": "2026-02-25T03:47:37.442797Z",
+        "generated_at": "2026-02-25T16:50:15.143870Z",
         "repo_owner": "JohnWBlack",
         "repo_name": "fccps-ai-deliverables-governance",
         "repo_root_name": "fccps-ai-deliverables-governance",
@@ -485,7 +485,7 @@
           "filename": ".gitignore",
           "extension": "",
           "type": "none",
-          "size_bytes": 127,
+          "size_bytes": 139,
           "last_modified_iso": "2026-02-24T17:01:19-05:00",
           "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
           "tags": [
@@ -591,7 +591,7 @@
           "filename": "WINDOWS_TASKS.md",
           "extension": "md",
           "type": "md",
-          "size_bytes": 2207,
+          "size_bytes": 1422,
           "last_modified_iso": "2026-02-24T17:01:19-05:00",
           "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
           "tags": [
@@ -1995,8 +1995,8 @@
           "filename": "health-dashboard-task.log",
           "extension": "log",
           "type": "log",
-          "size_bytes": 11774,
-          "last_modified_iso": "2026-02-25T03:46:02.529396Z",
+          "size_bytes": 15170,
+          "last_modified_iso": "2026-02-25T07:30:03.351278Z",
           "last_commit_sha": null,
           "tags": [
             "logs",
@@ -3827,17 +3827,73 @@
           ]
         },
         {
+          "path": "public/dashboard_bundle.json",
+          "filename": "dashboard_bundle.json",
+          "extension": "json",
+          "type": "json",
+          "size_bytes": 49411,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "tags": [
+            "public",
+            "category:public",
+            "ext:json"
+          ]
+        },
+        {
+          "path": "public/dashboard_bundle.zip",
+          "filename": "dashboard_bundle.zip",
+          "extension": "zip",
+          "type": "zip",
+          "size_bytes": 13179,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "tags": [
+            "public",
+            "category:public",
+            "ext:zip"
+          ]
+        },
+        {
           "path": "public/file_catalog.json",
           "filename": "file_catalog.json",
           "extension": "json",
           "type": "json",
           "size_bytes": 124916,
-          "last_modified_iso": "2026-02-24T17:02:43-05:00",
-          "last_commit_sha": "e3b25c532b9598137d6357705554ae9c49427580",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "public",
             "category:public",
             "ext:json"
+          ]
+        },
+        {
+          "path": "public/full_export.json",
+          "filename": "full_export.json",
+          "extension": "json",
+          "type": "json",
+          "size_bytes": 231930,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "tags": [
+            "public",
+            "category:public",
+            "ext:json"
+          ]
+        },
+        {
+          "path": "public/full_export.zip",
+          "filename": "full_export.zip",
+          "extension": "zip",
+          "type": "zip",
+          "size_bytes": 37711,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "tags": [
+            "public",
+            "category:public",
+            "ext:zip"
           ]
         },
         {
@@ -3846,8 +3902,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 13444,
-          "last_modified_iso": "2026-02-24T17:02:43-05:00",
-          "last_commit_sha": "e3b25c532b9598137d6357705554ae9c49427580",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "public",
             "category:public",
@@ -3860,8 +3916,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 16539,
-          "last_modified_iso": "2026-02-24T17:02:43-05:00",
-          "last_commit_sha": "e3b25c532b9598137d6357705554ae9c49427580",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "public",
             "category:public",
@@ -3874,8 +3930,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 13405,
-          "last_modified_iso": "2026-02-24T17:02:43-05:00",
-          "last_commit_sha": "e3b25c532b9598137d6357705554ae9c49427580",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "public",
             "category:public",
@@ -3888,8 +3944,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 2474,
-          "last_modified_iso": "2026-02-24T17:02:43-05:00",
-          "last_commit_sha": "e3b25c532b9598137d6357705554ae9c49427580",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "public",
             "category:public",
@@ -3902,8 +3958,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 34158,
-          "last_modified_iso": "2026-02-24T17:02:43-05:00",
-          "last_commit_sha": "e3b25c532b9598137d6357705554ae9c49427580",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "public",
             "category:public",
@@ -3953,9 +4009,9 @@
           "filename": "build_kpis.py",
           "extension": "py",
           "type": "py",
-          "size_bytes": 26699,
-          "last_modified_iso": "2026-02-24T15:51:29-05:00",
-          "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+          "size_bytes": 27404,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "scripts",
             "category:scripts",
@@ -3968,8 +4024,8 @@
           "extension": "py",
           "type": "py",
           "size_bytes": 5292,
-          "last_modified_iso": "2026-02-23T21:38:34-05:00",
-          "last_commit_sha": "733eb418ebacd8d3783e2a57ae29bfb4b8b9c8cf",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "scripts",
             "category:scripts",
@@ -3995,9 +4051,9 @@
           "filename": "quality_checks.py",
           "extension": "py",
           "type": "py",
-          "size_bytes": 9748,
-          "last_modified_iso": "2026-02-24T15:51:29-05:00",
-          "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+          "size_bytes": 10035,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "scripts",
             "category:scripts",
@@ -4009,9 +4065,9 @@
           "filename": "validate_sor.py",
           "extension": "py",
           "type": "py",
-          "size_bytes": 14733,
-          "last_modified_iso": "2026-02-24T15:51:29-05:00",
-          "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+          "size_bytes": 15092,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "scripts",
             "category:scripts",
@@ -4023,7 +4079,7 @@
           "filename": "Publish-HealthDashboard.ps1",
           "extension": "ps1",
           "type": "ps1",
-          "size_bytes": 6379,
+          "size_bytes": 4778,
           "last_modified_iso": "2026-02-24T17:01:19-05:00",
           "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
           "tags": [
@@ -4038,7 +4094,7 @@
           "filename": "Register-HealthDashboardTasks.ps1",
           "extension": "ps1",
           "type": "ps1",
-          "size_bytes": 2329,
+          "size_bytes": 2264,
           "last_modified_iso": "2026-02-24T17:01:19-05:00",
           "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
           "tags": [
@@ -4053,9 +4109,9 @@
           "filename": "deliverables.yml",
           "extension": "yml",
           "type": "yml",
-          "size_bytes": 9802,
-          "last_modified_iso": "2026-02-23T16:35:34-05:00",
-          "last_commit_sha": "417004d2c8ae527a2b8f46d9261c0929534f9709",
+          "size_bytes": 10116,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "sor",
             "category:sor",
@@ -4067,9 +4123,9 @@
           "filename": "timeline.yml",
           "extension": "yml",
           "type": "yml",
-          "size_bytes": 3857,
-          "last_modified_iso": "2026-02-23T16:35:34-05:00",
-          "last_commit_sha": "417004d2c8ae527a2b8f46d9261c0929534f9709",
+          "size_bytes": 3997,
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "sor",
             "category:sor",
@@ -4082,8 +4138,8 @@
           "extension": "yml",
           "type": "yml",
           "size_bytes": 3710,
-          "last_modified_iso": "2026-02-24T09:03:22-05:00",
-          "last_commit_sha": "26777f06cfa919baeb79f6eeb564562a205657ab",
+          "last_modified_iso": "2026-02-24T23:20:00-05:00",
+          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
             "sor",
             "category:sor",
@@ -5264,7 +5320,7 @@
     },
     "quality_report.json": {
       "meta": {
-        "generated_at": "2026-02-25T03:47:37.986085Z",
+        "generated_at": "2026-02-25T16:49:58.230544Z",
         "sources": [
           "sor/workstreams.yml",
           "sor/timeline.yml",
@@ -5358,7 +5414,7 @@
     },
     "kpis.json": {
       "meta": {
-        "generated_at": "2026-02-25T03:47:38.102884Z",
+        "generated_at": "2026-02-25T16:49:58.011788Z",
         "timezone": "America/New_York",
         "schema_version": "0.2"
       },
@@ -5974,7 +6030,7 @@
     },
     "kpi_evidence.json": {
       "meta": {
-        "generated_at": "2026-02-25T03:47:38.102902Z",
+        "generated_at": "2026-02-25T16:49:58.011809Z",
         "description": "Expanded evidence payload keyed by KPI id."
       },
       "evidence": {
