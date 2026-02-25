@@ -77,7 +77,7 @@
   },
   "meta": {
     "description": "Historical WHAT/HOW glidepath points with gate corridor targets.",
-    "generated_at": "2026-02-25T22:19:17.189995Z",
+    "generated_at": "2026-02-25T23:16:38.654585Z",
     "schema_version": "1.0.0"
   },
   "points": [
@@ -145,6 +145,39 @@
       "next_gate_date": "2026-03-06",
       "next_gate_id": "m4",
       "version_key": "08bc18cd5c4728cfa9f03f56e4a5d4dd279f6044",
+      "what_score": 4.89
+    },
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-02-25T23:16:36.932953Z",
+      "how_score": 7.8,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "version_key": "3973a15f793830116a2353ba43d100562c3811ca",
       "what_score": 4.89
     }
   ],
