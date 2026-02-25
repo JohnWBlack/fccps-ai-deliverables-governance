@@ -57,10 +57,16 @@ jobs:
       - name: Build public KPIs
         run: python scripts/build_kpis.py
 
+      - name: Build glidepath history
+        run: python scripts/build_glidepath_history.py
+
+      - name: Validate public artifacts
+        run: python scripts/validate_public.py
+
       - name: Detect generated changes
         id: public_changes
         run: |
-          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json; then
+          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -71,10 +77,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json
+          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json
           git commit -m "chore(public): update derived artifacts [skip ci]"
           git push || {
             echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
-            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_catalog.py && python scripts/extract_refs.py && python scripts/quality_checks.py && python scripts/build_kpis.py";
+            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_catalog.py && python scripts/extract_refs.py && python scripts/quality_checks.py && python scripts/build_kpis.py && python scripts/build_glidepath_history.py && python scripts/validate_public.py";
             exit 1;
           }

@@ -16,7 +16,8 @@ $PublicFiles = @(
     "public/ref_index.json",
     "public/quality_report.json",
     "public/kpis.json",
-    "public/kpi_evidence.json"
+    "public/kpi_evidence.json",
+    "public/glidepath_history.json"
 )
 $WatchPathspec = @("sor", "governance_docs", "project_files", "scripts", "requirements.txt", "CHANGELOG_PUBLIC.md")
 $LockFile = Join-Path $RepoRoot ".task_publish.lock"
@@ -105,6 +106,10 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "quality_checks.py failed" }
     & $PythonExe "scripts/build_kpis.py"
     if ($LASTEXITCODE -ne 0) { throw "build_kpis.py failed" }
+    & $PythonExe "scripts/build_glidepath_history.py"
+    if ($LASTEXITCODE -ne 0) { throw "build_glidepath_history.py failed" }
+    & $PythonExe "scripts/validate_public.py"
+    if ($LASTEXITCODE -ne 0) { throw "validate_public.py failed" }
 
     $publicDiffArgs = @("diff", "--name-only", "--") + $PublicFiles
     $changedPublic = @(Get-GitOutput -GitArgs $publicDiffArgs)

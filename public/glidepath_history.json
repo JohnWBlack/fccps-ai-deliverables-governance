@@ -1,0 +1,143 @@
+{
+  "corridor": {
+    "gates": [
+      {
+        "board_ready_deadline": false,
+        "date": "2026-01-23",
+        "gate_id": "m1",
+        "how_max": 2.0,
+        "how_min": 1.0,
+        "what_max": 2.0,
+        "what_min": 1.0
+      },
+      {
+        "board_ready_deadline": false,
+        "date": "2026-02-06",
+        "gate_id": "m2",
+        "how_max": 3.0,
+        "how_min": 2.0,
+        "what_max": 3.0,
+        "what_min": 2.0
+      },
+      {
+        "board_ready_deadline": false,
+        "date": "2026-02-20",
+        "gate_id": "m3",
+        "how_max": 4.5,
+        "how_min": 3.0,
+        "what_max": 4.5,
+        "what_min": 3.0
+      },
+      {
+        "board_ready_deadline": false,
+        "date": "2026-03-06",
+        "gate_id": "m4",
+        "how_max": 5.5,
+        "how_min": 4.0,
+        "what_max": 5.5,
+        "what_min": 4.0
+      },
+      {
+        "board_ready_deadline": false,
+        "date": "2026-03-20",
+        "gate_id": "m5",
+        "how_max": 6.5,
+        "how_min": 5.0,
+        "what_max": 6.5,
+        "what_min": 5.0
+      },
+      {
+        "board_ready_deadline": false,
+        "date": "2026-04-10",
+        "gate_id": "m6",
+        "how_max": 7.5,
+        "how_min": 6.0,
+        "what_max": 7.5,
+        "what_min": 6.0
+      },
+      {
+        "board_ready_deadline": true,
+        "date": "2026-04-24",
+        "gate_id": "m7",
+        "how_max": 9.0,
+        "how_min": 7.5,
+        "what_max": 9.0,
+        "what_min": 7.5
+      },
+      {
+        "board_ready_deadline": false,
+        "date": "2026-05-15",
+        "gate_id": "m8",
+        "how_max": 10.0,
+        "how_min": 8.5,
+        "what_max": 10.0,
+        "what_min": 8.5
+      }
+    ]
+  },
+  "meta": {
+    "description": "Historical WHAT/HOW glidepath points with gate corridor targets.",
+    "generated_at": "2026-02-25T21:27:04.301565Z",
+    "schema_version": "1.0.0"
+  },
+  "points": [
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-02-25T21:26:42.457712Z",
+      "how_score": 7.8,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "version_key": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
+      "what_score": 4.89
+    }
+  ],
+  "weights": {
+    "how": {
+      "KPI-CONV-01": 1.5,
+      "KPI-CONV-02": 1.0,
+      "KPI-CONV-03": 1.0,
+      "KPI-CONV-04": 0.75,
+      "KPI-CONV-05": 0.75,
+      "KPI-CONV-06": 0.75,
+      "KPI-CONV-07": 0.5,
+      "KPI-CONV-08": 0.5,
+      "KPI-CONV-09": 0.75,
+      "KPI-CONV-10": 0.5,
+      "KPI-FRESH-01": 1.0,
+      "KPI-FRESH-02": 1.0,
+      "KPI-FRESH-03": 1.0
+    },
+    "what": {
+      "KPI-PUB-01": 2.0,
+      "KPI-PUB-02": 1.0,
+      "KPI-SCHED-01": 3.0,
+      "KPI-SCHED-02": 2.0,
+      "KPI-SCHED-03": 1.5,
+      "KPI-SCHED-04": 0.5
+    }
+  }
+}
