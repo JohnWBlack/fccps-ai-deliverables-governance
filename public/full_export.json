@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "generated_at": "2026-02-25T16:53:36Z",
+    "generated_at": "2026-02-25T20:57:45Z",
     "files": [
       "public_snapshot.json",
       "file_catalog.json",
@@ -10,139 +10,83 @@
       "kpi_evidence.json"
     ],
     "sha256": {
-      "public_snapshot.json": "ccbcdadc069dfbd1d27a1e4e13803d267376a23c629ea556b595350d7822b0a5",
-      "file_catalog.json": "50cb5121716867a8bbc3ffb2b9a28501b7f67b1ee968772761a38a5fdbfaa6db",
-      "ref_index.json": "c12abc32204af8327c073eeadba6192e942e766a17f93e7e4283c2814cae70c2",
-      "quality_report.json": "ffe4a4d3a28a83acb0a71ddb6d64c15d293d5b2639c446bd293ffb2bf48c1418",
-      "kpis.json": "0b93e86b3b53e5cb1008bed69994496b62cd523e7fa8c1872c32371cf03068c7",
-      "kpi_evidence.json": "48e2dc44ebdd35cc107889007c95c4421b39e1c9ea3c0e4291eb8ec21bdb69b7"
+      "public_snapshot.json": "9af9e83a065be09cd98617cbb7ba8f7d0116970977e9a92d62ff195434faf60a",
+      "file_catalog.json": "9a1af978b33d5c0993b00f586f4209fa099c5058e4d2edcae886b8f4561c5c23",
+      "ref_index.json": "633d69815e5ba7f9bcd9556e1a576ed1057b7495302ece8d9167ab10d52e76cd",
+      "quality_report.json": "2fa5d2a16dcee10f84650b23d63e54503db6efa7166ed062af951133e0acfaf0",
+      "kpis.json": "102127d7361f15a82b2f2591a57b0e39fa66eadb904289ec8d6929969c77f647",
+      "kpi_evidence.json": "b1d22af7644d2db2aab23947674daca0bf370c1b12877afcf5f4be5fd094e09d"
     }
   },
   "artifacts": {
     "public_snapshot.json": {
       "meta": {
-        "generated_at": "2026-02-25T16:49:57.826221Z",
+        "generated_at": "2026-02-25T20:57:03.124609Z",
         "source_version": "1.1.0",
-        "version_key": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a"
+        "version_key": "67e9393c9d9efe24c31d40ad65a33bc379b22633"
       },
       "metadata": {
-        "generated_at": "2026-02-25T16:49:57.826221Z",
+        "generated_at": "2026-02-25T20:57:03.124609Z",
         "source_version": "1.1.0",
-        "version_key": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+        "version_key": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
         "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
       },
       "workstreams": [
         {
           "id": "WS-RSB",
           "name": "Research & Shared Baseline",
-          "description": "Shared baseline on capabilities, limits, misconceptions, and district-facing context.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-05-15",
-          "priority": "high",
-          "tags": [
-            "baseline",
-            "research",
-            "definitions"
-          ]
+          "lead": "Tom Colvin",
+          "co_lead": "Elizabeth Chua"
         },
         {
           "id": "WS-POL",
           "name": "Policy/Recommendation Drafting",
-          "description": "Integrates workstream outputs into policy recommendations and board-ready artifacts.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-05-15",
-          "priority": "high",
-          "tags": [
-            "policy",
-            "integration",
-            "board"
-          ]
+          "lead": "David N. Berol",
+          "co_lead": "John Black"
         },
         {
           "id": "WS-CPX",
           "name": "Classroom Practice & Examples",
-          "description": "Develops grade-banded classroom scenarios and teacher-facing implementation examples.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-04-10",
-          "priority": "high",
-          "tags": [
-            "classroom",
-            "examples",
-            "guidance"
-          ]
+          "lead": "Anubav Vasudevan",
+          "co_lead": "Susan Nelson"
         },
         {
           "id": "WS-AIN",
           "name": "Assessment & Integrity",
-          "description": "Defines attribution expectations and academic integrity guardrails by grade and assessment type.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-04-10",
-          "priority": "high",
-          "tags": [
-            "assessment",
-            "integrity",
-            "attribution"
-          ]
+          "lead": "David N. Berol",
+          "co_lead": "Unassigned"
         },
         {
           "id": "WS-DPS",
           "name": "Data Privacy & Security",
-          "description": "Produces privacy/security requirements and AI tool review governance criteria.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-04-10",
-          "priority": "high",
-          "tags": [
-            "privacy",
-            "security",
-            "procurement"
-          ]
+          "lead": "Jillian Marie Burkley",
+          "co_lead": "John Black"
         },
         {
           "id": "WS-EQA",
           "name": "Equity & Access",
-          "description": "Applies an equity and accessibility lens to policy, tools, and implementation pathways.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-04-10",
-          "priority": "high",
-          "tags": [
-            "equity",
-            "access",
-            "accessibility"
-          ]
+          "lead": "Tom Sabo",
+          "co_lead": "Elizabeth Chua"
         },
         {
           "id": "WS-CCI",
           "name": "Communications & Community Input",
-          "description": "Creates stakeholder communications, FAQ artifacts, and community feedback intake plans.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-05-15",
-          "priority": "medium",
-          "tags": [
-            "communications",
-            "community",
-            "faq"
-          ]
+          "lead": "Tina Beaty",
+          "co_lead": "Adriana Palacios"
         },
         {
           "id": "WS-IPC",
           "name": "Implementation/PD & Change Adoption",
-          "description": "Defines rollout, professional development, and continuous-improvement operating model.",
           "status": "active",
-          "start_date": "2026-01-23",
-          "target_completion": "2026-05-15",
-          "priority": "medium",
-          "tags": [
-            "implementation",
-            "professional-development",
-            "adoption"
-          ]
+          "lead": "Jillian Marie Burkley",
+          "co_lead": "Adriana Palacios"
         }
       ],
       "timeline_events": [
@@ -259,188 +203,330 @@
         {
           "id": "charter_v0",
           "title": "Team Charter v0",
-          "description": "Committee charter and operating scope baseline approved in Meeting 1.",
           "status": "completed",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "John Black",
+            "role": "Chair"
+          },
           "due_date": "2026-01-23",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m1",
+          "depends_on": [],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "working_agreements",
           "title": "Working agreements and collaboration operating rules",
-          "description": "Working agreements, timeline/objectives draft, and collaboration rules.",
           "status": "completed",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "John Black",
+            "role": "Chair"
+          },
           "due_date": "2026-02-06",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m2",
+          "depends_on": [
+            "charter_v0"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "pre_m3_defs",
           "title": "Definitions and assumptions pre-read",
-          "description": "Definitions, assumptions, misconceptions, and draft grade-band framing.",
           "status": "completed",
+          "scope": "committee",
+          "workstream_id": "WS-RSB",
+          "owner": {
+            "name": "Tom Colvin",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-02-20",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m3",
+          "depends_on": [
+            "working_agreements"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "pre_m3_risks_ops",
           "title": "Meeting 3 risks/opportunities synthesis",
-          "description": "Collected member submissions of top risks and opportunities for Meeting 3.",
           "status": "completed",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "John Black",
+            "role": "Chair"
+          },
           "due_date": "2026-02-20",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m3",
+          "depends_on": [
+            "working_agreements"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "policy_principles",
           "title": "Policy principles set",
-          "description": "Board-ready policy principles with tradeoff framing.",
           "status": "in_progress",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "David N. Berol",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-02-20",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "ms_policy_principles",
+          "depends_on": [
+            "pre_m3_defs",
+            "pre_m3_risks_ops"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "D-RSB-1",
           "title": "Shared Baseline Brief v1",
-          "description": "Capabilities, misconceptions, and shared definitions baseline.",
           "status": "completed",
+          "scope": "workstream",
+          "workstream_id": "WS-RSB",
+          "owner": {
+            "name": "Tom Colvin",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-02-20",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m3",
+          "depends_on": [],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "rec_outline_risk_register",
           "title": "Recommendations outline and first-pass risk register",
-          "description": "Integrated recommendations structure and initial top-risk mitigation register.",
           "status": "in_progress",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "David N. Berol",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-03-06",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m4",
+          "depends_on": [
+            "policy_principles"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "D-POL-1",
           "title": "Policy Skeleton v0",
-          "description": "Policy draft scaffold with sections, decisions, and version log.",
           "status": "in_progress",
+          "scope": "workstream",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "David N. Berol",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-03-06",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m4",
+          "depends_on": [
+            "D-RSB-1"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "D-CPX-1",
           "title": "Scenario Bank v1",
-          "description": "Grade-banded classroom scenarios with implementation exemplars.",
           "status": "in_progress",
+          "scope": "workstream",
+          "workstream_id": "WS-CPX",
+          "owner": {
+            "name": "Anubav Vasudevan",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-03-06",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m4",
+          "depends_on": [
+            "D-RSB-1"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "D-AIN-1",
           "title": "Attribution & Integrity Matrix v1",
-          "description": "Grade-band and assessment-type matrix for attribution and integrity practices.",
           "status": "in_progress",
+          "scope": "workstream",
+          "workstream_id": "WS-AIN",
+          "owner": {
+            "name": "David N. Berol",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-03-06",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m4",
+          "depends_on": [
+            "D-CPX-1"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "D-DPS-1",
           "title": "AI Tool Review Checklist v1 + Risk Tiers",
-          "description": "Privacy/security checklist and risk-tiering model for tool governance.",
           "status": "in_progress",
+          "scope": "workstream",
+          "workstream_id": "WS-DPS",
+          "owner": {
+            "name": "Jillian Marie Burkley",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-03-06",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m4",
+          "depends_on": [],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "D-EQA-1",
           "title": "Equity Impact Checklist v1",
-          "description": "Equity and accessibility lens checklist for policy and implementation decisions.",
           "status": "in_progress",
+          "scope": "workstream",
+          "workstream_id": "WS-EQA",
+          "owner": {
+            "name": "Tom Sabo",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-03-06",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m4",
+          "depends_on": [
+            "D-CPX-1"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "m5_draft_sections",
           "title": "Draft sections for priority recommendation domains",
-          "description": "Drafted recommendation sections for selected domains and governance direction.",
           "status": "not_started",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "David N. Berol",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-03-20",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m5",
+          "depends_on": [
+            "rec_outline_risk_register"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "near_final_package",
           "title": "Near-final recommendation package",
-          "description": "Integrated recommendation package, slide narrative, and gap-owner list.",
           "status": "not_started",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "John Black",
+            "role": "Chair"
+          },
           "due_date": "2026-04-10",
-          "priority": "high",
-          "deliverable_type": "presentation",
-          "public_facing": true
+          "checkpoint_id": "m6",
+          "depends_on": [
+            "m5_draft_sections"
+          ],
+          "committee_only": true,
+          "public_url": null
         },
         {
           "id": "D-CCI-1",
           "title": "Comms Pack v1",
-          "description": "Stakeholder messaging, FAQ draft, and community input plan.",
           "status": "not_started",
+          "scope": "workstream",
+          "workstream_id": "WS-CCI",
+          "owner": {
+            "name": "Tina Beaty",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-04-10",
-          "priority": "medium",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m6",
+          "depends_on": [
+            "D-POL-1"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "D-IPC-1",
           "title": "Implementation Roadmap v1",
-          "description": "Implementation and PD roadmap with milestones, cadence, and success measures.",
           "status": "not_started",
+          "scope": "workstream",
+          "workstream_id": "WS-IPC",
+          "owner": {
+            "name": "Jillian Marie Burkley",
+            "role": "Workstream Lead"
+          },
           "due_date": "2026-04-10",
-          "priority": "medium",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m6",
+          "depends_on": [
+            "D-POL-1",
+            "D-DPS-1",
+            "D-EQA-1"
+          ],
+          "committee_only": false,
+          "public_url": null
         },
         {
           "id": "final_talk_track",
           "title": "Final talk track and Q&A prep",
-          "description": "Final presentation talk track and supporting Q&A sheet for review cycle.",
           "status": "not_started",
+          "scope": "committee",
+          "workstream_id": null,
+          "owner": {
+            "name": "John Black",
+            "role": "Chair"
+          },
           "due_date": "2026-04-24",
-          "priority": "medium",
-          "deliverable_type": "presentation",
-          "public_facing": true
+          "checkpoint_id": "m7",
+          "depends_on": [
+            "near_final_package",
+            "D-CCI-1"
+          ],
+          "committee_only": true,
+          "public_url": null
         },
         {
           "id": "committee_response",
           "title": "Formal committee response package",
-          "description": "Formal response to proposed policy with guardrails and governance recommendations.",
           "status": "not_started",
+          "scope": "committee",
+          "workstream_id": "WS-POL",
+          "owner": {
+            "name": "John Black",
+            "role": "Chair"
+          },
           "due_date": "2026-05-15",
-          "priority": "high",
-          "deliverable_type": "document",
-          "public_facing": true
+          "checkpoint_id": "m8",
+          "depends_on": [
+            "final_talk_track"
+          ],
+          "committee_only": true,
+          "public_url": null
         }
       ]
     },
     "file_catalog.json": {
       "meta": {
-        "generated_at": "2026-02-25T16:50:15.143870Z",
+        "generated_at": "2026-02-25T20:57:21.549511Z",
         "repo_owner": "JohnWBlack",
         "repo_name": "fccps-ai-deliverables-governance",
         "repo_root_name": "fccps-ai-deliverables-governance",
@@ -3832,8 +3918,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 49411,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "last_modified_iso": "2026-02-25T11:56:28-05:00",
+          "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
           "tags": [
             "public",
             "category:public",
@@ -3845,9 +3931,9 @@
           "filename": "dashboard_bundle.zip",
           "extension": "zip",
           "type": "zip",
-          "size_bytes": 13179,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "size_bytes": 13172,
+          "last_modified_iso": "2026-02-25T11:56:28-05:00",
+          "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
           "tags": [
             "public",
             "category:public",
@@ -3859,9 +3945,9 @@
           "filename": "file_catalog.json",
           "extension": "json",
           "type": "json",
-          "size_bytes": 124916,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "size_bytes": 126165,
+          "last_modified_iso": "2026-02-25T04:28:41Z",
+          "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
           "tags": [
             "public",
             "category:public",
@@ -3873,9 +3959,9 @@
           "filename": "full_export.json",
           "extension": "json",
           "type": "json",
-          "size_bytes": 231930,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "size_bytes": 233747,
+          "last_modified_iso": "2026-02-25T11:56:28-05:00",
+          "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
           "tags": [
             "public",
             "category:public",
@@ -3887,9 +3973,9 @@
           "filename": "full_export.zip",
           "extension": "zip",
           "type": "zip",
-          "size_bytes": 37711,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "size_bytes": 37702,
+          "last_modified_iso": "2026-02-25T11:56:28-05:00",
+          "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
           "tags": [
             "public",
             "category:public",
@@ -3902,8 +3988,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 13444,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "last_modified_iso": "2026-02-25T04:28:41Z",
+          "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
           "tags": [
             "public",
             "category:public",
@@ -3916,8 +4002,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 16539,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "last_modified_iso": "2026-02-25T04:28:41Z",
+          "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
           "tags": [
             "public",
             "category:public",
@@ -3929,9 +4015,9 @@
           "filename": "public_snapshot.json",
           "extension": "json",
           "type": "json",
-          "size_bytes": 13405,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "size_bytes": 13453,
+          "last_modified_iso": "2026-02-25T04:28:41Z",
+          "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
           "tags": [
             "public",
             "category:public",
@@ -3944,8 +4030,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 2474,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "last_modified_iso": "2026-02-25T04:28:41Z",
+          "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
           "tags": [
             "public",
             "category:public",
@@ -3958,8 +4044,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 34158,
-          "last_modified_iso": "2026-02-24T23:20:00-05:00",
-          "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+          "last_modified_iso": "2026-02-25T04:28:41Z",
+          "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
           "tags": [
             "public",
             "category:public",
@@ -4009,7 +4095,7 @@
           "filename": "build_kpis.py",
           "extension": "py",
           "type": "py",
-          "size_bytes": 27404,
+          "size_bytes": 27526,
           "last_modified_iso": "2026-02-24T23:20:00-05:00",
           "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
@@ -4023,7 +4109,7 @@
           "filename": "build_snapshot.py",
           "extension": "py",
           "type": "py",
-          "size_bytes": 5292,
+          "size_bytes": 5666,
           "last_modified_iso": "2026-02-24T23:20:00-05:00",
           "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
@@ -4051,7 +4137,7 @@
           "filename": "quality_checks.py",
           "extension": "py",
           "type": "py",
-          "size_bytes": 10035,
+          "size_bytes": 10245,
           "last_modified_iso": "2026-02-24T23:20:00-05:00",
           "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
@@ -4065,7 +4151,7 @@
           "filename": "validate_sor.py",
           "extension": "py",
           "type": "py",
-          "size_bytes": 15092,
+          "size_bytes": 17476,
           "last_modified_iso": "2026-02-24T23:20:00-05:00",
           "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
@@ -4109,7 +4195,7 @@
           "filename": "deliverables.yml",
           "extension": "yml",
           "type": "yml",
-          "size_bytes": 10116,
+          "size_bytes": 11150,
           "last_modified_iso": "2026-02-24T23:20:00-05:00",
           "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
           "tags": [
@@ -4150,7 +4236,7 @@
     },
     "ref_index.json": {
       "meta": {
-        "generated_at": "2026-02-25T03:47:37.817434Z",
+        "generated_at": "2026-02-25T20:57:21.944025Z",
         "scanned_files_count": 75,
         "skipped_files_count": 47,
         "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only"
@@ -5320,7 +5406,7 @@
     },
     "quality_report.json": {
       "meta": {
-        "generated_at": "2026-02-25T16:49:58.230544Z",
+        "generated_at": "2026-02-25T20:57:22.118205Z",
         "sources": [
           "sor/workstreams.yml",
           "sor/timeline.yml",
@@ -5329,11 +5415,21 @@
         ]
       },
       "summary_counts": {
-        "error": 0,
+        "error": 1,
         "warning": 3,
         "info": 1
       },
       "issues": [
+        {
+          "severity": "error",
+          "code": "ID-DANGLING-WORKSTREAM",
+          "message": "Some deliverables reference unknown workstream IDs.",
+          "evidence": [
+            {
+              "deliverable_id": "final_talk_track"
+            }
+          ]
+        },
         {
           "severity": "info",
           "code": "PLACEHOLDER-MARKDOWN",
@@ -5414,7 +5510,7 @@
     },
     "kpis.json": {
       "meta": {
-        "generated_at": "2026-02-25T16:49:58.011788Z",
+        "generated_at": "2026-02-25T20:57:22.261806Z",
         "timezone": "America/New_York",
         "schema_version": "0.2"
       },
@@ -5450,8 +5546,8 @@
       "summary": {
         "overall_status": "red",
         "kpi_counts": {
-          "green": 8,
-          "yellow": 3,
+          "green": 7,
+          "yellow": 4,
           "red": 6,
           "gray": 2
         }
@@ -5618,15 +5714,20 @@
           "id": "KPI-CONV-01",
           "category": "convergence",
           "name": "SoR reference integrity",
-          "status": "green",
-          "score": 100,
+          "status": "yellow",
+          "score": 80,
           "description": "No dangling IDs across SoR references.",
           "rules": [
             "ID-* issues from quality report reduce score."
           ],
-          "evidence": [],
+          "evidence": [
+            {
+              "type": "issue",
+              "id": "ID-DANGLING-WORKSTREAM"
+            }
+          ],
           "details": {
-            "id_issue_count": 0
+            "id_issue_count": 1
           }
         },
         {
@@ -5855,7 +5956,7 @@
           "category": "publicability",
           "name": "Public link hygiene",
           "status": "red",
-          "score": 0,
+          "score": 16,
           "description": "Deliverables must have public_url or committee_only=true.",
           "rules": [
             "Missing visibility metadata reduces score."
@@ -5915,23 +6016,11 @@
             },
             {
               "type": "deliverable",
-              "id": "near_final_package"
-            },
-            {
-              "type": "deliverable",
               "id": "D-CCI-1"
             },
             {
               "type": "deliverable",
               "id": "D-IPC-1"
-            },
-            {
-              "type": "deliverable",
-              "id": "final_talk_track"
-            },
-            {
-              "type": "deliverable",
-              "id": "committee_response"
             }
           ],
           "details": {
@@ -5989,23 +6078,11 @@
                 "reason": "missing_public_url_or_committee_only"
               },
               {
-                "id": "near_final_package",
-                "reason": "missing_public_url_or_committee_only"
-              },
-              {
                 "id": "D-CCI-1",
                 "reason": "missing_public_url_or_committee_only"
               },
               {
                 "id": "D-IPC-1",
-                "reason": "missing_public_url_or_committee_only"
-              },
-              {
-                "id": "final_talk_track",
-                "reason": "missing_public_url_or_committee_only"
-              },
-              {
-                "id": "committee_response",
                 "reason": "missing_public_url_or_committee_only"
               }
             ]
@@ -6030,7 +6107,7 @@
     },
     "kpi_evidence.json": {
       "meta": {
-        "generated_at": "2026-02-25T16:49:58.011809Z",
+        "generated_at": "2026-02-25T20:57:22.261827Z",
         "description": "Expanded evidence payload keyed by KPI id."
       },
       "evidence": {
@@ -6151,7 +6228,13 @@
           }
         ],
         "KPI-SCHED-04": [],
-        "KPI-CONV-01": [],
+        "KPI-CONV-01": [
+          {
+            "type": "issue",
+            "id": "ID-DANGLING-WORKSTREAM",
+            "doc_path": "public/quality_report.json"
+          }
+        ],
         "KPI-CONV-02": [],
         "KPI-CONV-03": [],
         "KPI-CONV-04": [
@@ -6266,27 +6349,12 @@
           },
           {
             "type": "deliverable",
-            "id": "near_final_package",
-            "doc_path": "sor/deliverables.yml"
-          },
-          {
-            "type": "deliverable",
             "id": "D-CCI-1",
             "doc_path": "sor/deliverables.yml"
           },
           {
             "type": "deliverable",
             "id": "D-IPC-1",
-            "doc_path": "sor/deliverables.yml"
-          },
-          {
-            "type": "deliverable",
-            "id": "final_talk_track",
-            "doc_path": "sor/deliverables.yml"
-          },
-          {
-            "type": "deliverable",
-            "id": "committee_response",
             "doc_path": "sor/deliverables.yml"
           }
         ],
@@ -6525,22 +6593,7 @@
           },
           {
             "type": "deliverable",
-            "id": "committee_response",
-            "doc_path": "sor/deliverables.yml"
-          },
-          {
-            "type": "deliverable",
-            "id": "final_talk_track",
-            "doc_path": "sor/deliverables.yml"
-          },
-          {
-            "type": "deliverable",
             "id": "m5_draft_sections",
-            "doc_path": "sor/deliverables.yml"
-          },
-          {
-            "type": "deliverable",
-            "id": "near_final_package",
             "doc_path": "sor/deliverables.yml"
           },
           {

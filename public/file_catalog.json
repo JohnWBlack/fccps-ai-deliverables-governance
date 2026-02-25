@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-25T04:28:40.541815Z",
+    "generated_at": "2026-02-25T20:57:21.549511Z",
     "repo_owner": "JohnWBlack",
     "repo_name": "fccps-ai-deliverables-governance",
     "repo_root_name": "fccps-ai-deliverables-governance",
@@ -45,7 +45,7 @@
       "filename": ".gitignore",
       "extension": "",
       "type": "none",
-      "size_bytes": 127,
+      "size_bytes": 139,
       "last_modified_iso": "2026-02-24T17:01:19-05:00",
       "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
       "tags": [
@@ -57,7 +57,7 @@
       "filename": "CHANGELOG_PUBLIC.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1665,
+      "size_bytes": 1713,
       "last_modified_iso": "2026-02-24T12:32:44-05:00",
       "last_commit_sha": "3a9aab0006ea10e65e723233f4ddaef39942183e",
       "tags": [
@@ -77,24 +77,16 @@
       ]
     },
     {
-      "path": "LICENSE",
-      "filename": "LICENSE",
-      "extension": "",
-      "type": "none",
-      "size_bytes": 1075,
-      "last_modified_iso": "2026-02-23T16:35:34-05:00",
-      "last_commit_sha": "417004d2c8ae527a2b8f46d9261c0929534f9709",
-      "tags": []
-    },
-    {
-      "path": "README.md",
-      "filename": "README.md",
+      "path": "docs/admin_editing.md",
+      "filename": "admin_editing.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 6573,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "size_bytes": 1389,
+      "last_modified_iso": "2026-02-23T21:38:34-05:00",
+      "last_commit_sha": "733eb418ebacd8d3783e2a57ae29bfb4b8b9c8cf",
       "tags": [
+        "docs",
+        "category:docs",
         "ext:md"
       ]
     },
@@ -103,51 +95,9 @@
       "filename": "CONVENTIONS.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1125,
+      "size_bytes": 1160,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "docs",
-        "category:docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "docs/KPI_TAXONOMY.md",
-      "filename": "KPI_TAXONOMY.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 1231,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "docs",
-        "category:docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "docs/WINDOWS_TASKS.md",
-      "filename": "WINDOWS_TASKS.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 1384,
-      "last_modified_iso": "2026-02-24T17:01:19-05:00",
-      "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
-      "tags": [
-        "docs",
-        "category:docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "docs/admin_editing.md",
-      "filename": "admin_editing.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 1350,
-      "last_modified_iso": "2026-02-23T21:38:34-05:00",
-      "last_commit_sha": "733eb418ebacd8d3783e2a57ae29bfb4b8b9c8cf",
       "tags": [
         "docs",
         "category:docs",
@@ -169,6 +119,20 @@
       ]
     },
     {
+      "path": "docs/KPI_TAXONOMY.md",
+      "filename": "KPI_TAXONOMY.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1275,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "docs",
+        "category:docs",
+        "ext:md"
+      ]
+    },
+    {
       "path": "docs/schema_notes.md",
       "filename": "schema_notes.md",
       "extension": "md",
@@ -176,6 +140,20 @@
       "size_bytes": 6725,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
+      "tags": [
+        "docs",
+        "category:docs",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "docs/WINDOWS_TASKS.md",
+      "filename": "WINDOWS_TASKS.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1422,
+      "last_modified_iso": "2026-02-24T17:01:19-05:00",
+      "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
       "tags": [
         "docs",
         "category:docs",
@@ -262,7 +240,7 @@
       "filename": "20250812_Policy-BCF_Advisory-Committees-to-the-School-Board.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 21132,
+      "size_bytes": 21282,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -292,7 +270,7 @@
       "filename": "FCCPS-Advisory-Board-Agenda-&-Meeting-Minutes-Template.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1594,
+      "size_bytes": 1634,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -352,7 +330,7 @@
       "filename": "School-Board-Advisory-_Committee-Training.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 5650,
+      "size_bytes": 5813,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -381,7 +359,7 @@
       "filename": "FCCPS-AI-Advisory-Committee_Workstream-Development-Summary-and-Assignments.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 8536,
+      "size_bytes": 8680,
       "last_modified_iso": "2026-02-23T18:27:06-05:00",
       "last_commit_sha": "6ce7c235da6bf1eb24616e36698cc31aa2fc2c32",
       "tags": [
@@ -451,7 +429,7 @@
       "filename": "20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 93263,
+      "size_bytes": 94056,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -499,7 +477,7 @@
       "filename": "20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 9771,
+      "size_bytes": 9826,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -531,7 +509,7 @@
       "filename": "01 Updated 60-minute agenda (with Team Charter vote).md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 6832,
+      "size_bytes": 7049,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -547,7 +525,7 @@
       "filename": "06-FEB-26_Run-of-Show.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3649,
+      "size_bytes": 3740,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -579,7 +557,7 @@
       "filename": "20260205_One-page-Team-Charter v0.9 (update to v1.0 for Feb 6 review + in-person vote).md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3834,
+      "size_bytes": 3887,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -643,7 +621,7 @@
       "filename": "20260206_FCCPS_AI_Advisory_Committee_Minutes.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 17033,
+      "size_bytes": 17153,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -691,7 +669,7 @@
       "filename": "FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 63090,
+      "size_bytes": 63720,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -739,7 +717,7 @@
       "filename": "20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 62619,
+      "size_bytes": 63379,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -819,7 +797,7 @@
       "filename": "20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1274,
+      "size_bytes": 1309,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -847,22 +825,6 @@
       ]
     },
     {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
-      "filename": "FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 212748,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
       "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/Facilitator (25 Minute Focus Block Values & Principles).docx",
       "filename": "Facilitator (25 Minute Focus Block Values & Principles).docx",
       "extension": "docx",
@@ -876,6 +838,22 @@
         "03 - Meeting 20-FEB-26",
         "category:governance_docs",
         "ext:docx"
+      ]
+    },
+    {
+      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
+      "filename": "FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
+      "extension": "pdf",
+      "type": "pdf",
+      "size_bytes": 212748,
+      "last_modified_iso": "2026-02-24T12:30:47-05:00",
+      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
+      "tags": [
+        "governance_docs",
+        "Meetings",
+        "03 - Meeting 20-FEB-26",
+        "category:governance_docs",
+        "ext:pdf"
       ]
     },
     {
@@ -946,7 +924,7 @@
       "filename": "20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 11363,
+      "size_bytes": 11477,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -961,7 +939,7 @@
       "filename": "FCCPS Sample Advisory Board Agenda & Minutes.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1590,
+      "size_bytes": 1630,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1052,11 +1030,11 @@
       ]
     },
     {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_The Greece case study_Jillians Corner.pdf",
-      "filename": "Burkley_The Greece case study_Jillians Corner.pdf",
+      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_The four program components.pdf",
+      "filename": "Burkley_The four program components.pdf",
       "extension": "pdf",
       "type": "pdf",
-      "size_bytes": 14084461,
+      "size_bytes": 6627942,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1068,11 +1046,11 @@
       ]
     },
     {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_The four program components.pdf",
-      "filename": "Burkley_The four program components.pdf",
+      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_The Greece case study_Jillians Corner.pdf",
+      "filename": "Burkley_The Greece case study_Jillians Corner.pdf",
       "extension": "pdf",
       "type": "pdf",
-      "size_bytes": 6627942,
+      "size_bytes": 14084461,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1120,7 +1098,7 @@
       "filename": "Jillians-Corner_concat.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 17543,
+      "size_bytes": 17744,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1168,7 +1146,7 @@
       "filename": "001_Cognitive-Pipeline-Table.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 4620,
+      "size_bytes": 4653,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1183,7 +1161,7 @@
       "filename": "002_Stateoftheart-AI-reasoning-systems-partially-mirror-human-cognitive-science.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3973,
+      "size_bytes": 4014,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1198,7 +1176,7 @@
       "filename": "003_Human-Machine-Teaming.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3704,
+      "size_bytes": 3746,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1213,7 +1191,7 @@
       "filename": "004_Cognitive-Pipeline-Applied-as-a-K12-HumanAI-Teaming-Scaffold.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 7574,
+      "size_bytes": 7626,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1228,7 +1206,7 @@
       "filename": "005_AI-Integrated-Ecosystem-Project-for-Grade-7.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 8657,
+      "size_bytes": 8760,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1243,7 +1221,7 @@
       "filename": "006_Approach-to-Policy-Development.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 4306,
+      "size_bytes": 4359,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1258,7 +1236,7 @@
       "filename": "Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 64125,
+      "size_bytes": 64500,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1302,7 +1280,7 @@
       "filename": "A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 864771,
+      "size_bytes": 869595,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1332,7 +1310,7 @@
       "filename": "Artificial-Intelligence and-APS.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 16226,
+      "size_bytes": 16395,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1376,7 +1354,7 @@
       "filename": "20260207_Tom-Colvin_RSB-workstream.txt",
       "extension": "txt",
       "type": "txt",
-      "size_bytes": 2588,
+      "size_bytes": 2623,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1391,7 +1369,7 @@
       "filename": "20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 31693,
+      "size_bytes": 32090,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1519,7 +1497,7 @@
       "filename": "Re Research  Shared Baseline (WS-RSB) guidance and deliverable for 20 Feb.txt",
       "extension": "txt",
       "type": "txt",
-      "size_bytes": 16443,
+      "size_bytes": 16773,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1551,7 +1529,7 @@
       "filename": "Shared Baseline v01.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 42624,
+      "size_bytes": 43126,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1560,6 +1538,29 @@
         "rsb",
         "category:governance_docs",
         "ext:md"
+      ]
+    },
+    {
+      "path": "LICENSE",
+      "filename": "LICENSE",
+      "extension": "",
+      "type": "none",
+      "size_bytes": 1075,
+      "last_modified_iso": "2026-02-23T16:35:34-05:00",
+      "last_commit_sha": "417004d2c8ae527a2b8f46d9261c0929534f9709",
+      "tags": []
+    },
+    {
+      "path": "logs/health-dashboard-task.log",
+      "filename": "health-dashboard-task.log",
+      "extension": "log",
+      "type": "log",
+      "size_bytes": 15170,
+      "last_modified_iso": "2026-02-25T07:30:03.351278Z",
+      "last_commit_sha": null,
+      "tags": [
+        "logs",
+        "ext:log"
       ]
     },
     {
@@ -1657,7 +1658,7 @@
       "filename": "20250812_Policy-BCF_Advisory-Committees-to-the-School-Board.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 21132,
+      "size_bytes": 21282,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1687,7 +1688,7 @@
       "filename": "FCCPS-Advisory-Board-Agenda-&-Meeting-Minutes-Template.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1594,
+      "size_bytes": 1634,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1747,7 +1748,7 @@
       "filename": "School-Board-Advisory-_Committee-Training.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 5650,
+      "size_bytes": 5813,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1758,11 +1759,191 @@
       ]
     },
     {
+      "path": "project_files/media/491d0d62e00f085bee7b77e440e0f99c.jpeg",
+      "filename": "491d0d62e00f085bee7b77e440e0f99c.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 214675,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/5d383bc13e3aa58bd642bd21d85364e8.jpeg",
+      "filename": "5d383bc13e3aa58bd642bd21d85364e8.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 76079,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/626ce15a02f120fc6c1564e1a3b7a5e4.jpeg",
+      "filename": "626ce15a02f120fc6c1564e1a3b7a5e4.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 22158,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/781d6c13d2eae1f932048baf039cc7b8.jpeg",
+      "filename": "781d6c13d2eae1f932048baf039cc7b8.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 55683,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/ae0363a2f04cf71d9cd94cddaad8e1b2.jpeg",
+      "filename": "ae0363a2f04cf71d9cd94cddaad8e1b2.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 73150,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/b3b1064a5af99d97c9802357560a8638.jpeg",
+      "filename": "b3b1064a5af99d97c9802357560a8638.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 24664,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/c2dc441ca35f57240c2f09d78d180c1d.jpeg",
+      "filename": "c2dc441ca35f57240c2f09d78d180c1d.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 571766,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/ccca69348b6085f4ae50ca3e5e1abe32.jpg",
+      "filename": "ccca69348b6085f4ae50ca3e5e1abe32.jpg",
+      "extension": "jpg",
+      "type": "jpg",
+      "size_bytes": 76300,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpg"
+      ]
+    },
+    {
+      "path": "project_files/media/cf0d17d8c81b52ea45f95b2b3953d55a.jpeg",
+      "filename": "cf0d17d8c81b52ea45f95b2b3953d55a.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 74181,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/db497ed0bcb2b063a2367503cf9f2ec9.jpeg",
+      "filename": "db497ed0bcb2b063a2367503cf9f2ec9.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 94955,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/dde13bca054c80218a76308828105190.jpeg",
+      "filename": "dde13bca054c80218a76308828105190.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 58245,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
+      "path": "project_files/media/e530db8dacdefbb2372691c8ce002038.jpeg",
+      "filename": "e530db8dacdefbb2372691c8ce002038.jpeg",
+      "extension": "jpeg",
+      "type": "jpeg",
+      "size_bytes": 34276,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "media",
+        "category:project_files",
+        "ext:jpeg"
+      ]
+    },
+    {
       "path": "project_files/Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md",
       "filename": "20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 93263,
+      "size_bytes": 94056,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1810,7 +1991,7 @@
       "filename": "20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 9771,
+      "size_bytes": 9826,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1842,7 +2023,7 @@
       "filename": "01 Updated 60-minute agenda (with Team Charter vote).md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 6832,
+      "size_bytes": 7049,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1858,7 +2039,7 @@
       "filename": "06-FEB-26_Run-of-Show.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3649,
+      "size_bytes": 3740,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1890,7 +2071,7 @@
       "filename": "20260205_One-page-Team-Charter v0.9 (update to v1.0 for Feb 6 review + in-person vote).md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3834,
+      "size_bytes": 3887,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1906,7 +2087,7 @@
       "filename": "20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 4978,
+      "size_bytes": 5025,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1954,7 +2135,7 @@
       "filename": "20260206_FCCPS_AI_Advisory_Committee_Minutes.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 17033,
+      "size_bytes": 17153,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2002,7 +2183,7 @@
       "filename": "FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 63090,
+      "size_bytes": 63720,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2018,7 +2199,7 @@
       "filename": "FCCPS_AI_Team_Charter_v1_0_one_page.pdf",
       "extension": "pdf",
       "type": "pdf",
-      "size_bytes": 5484,
+      "size_bytes": 5558,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2066,7 +2247,7 @@
       "filename": "20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 62619,
+      "size_bytes": 63379,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2146,7 +2327,7 @@
       "filename": "20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1274,
+      "size_bytes": 1309,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2190,6 +2371,22 @@
       ]
     },
     {
+      "path": "project_files/Meetings/03 - Meeting 20-FEB-26/Facilitator (25 Minute Focus Block Values & Principles).docx",
+      "filename": "Facilitator (25 Minute Focus Block Values & Principles).docx",
+      "extension": "docx",
+      "type": "docx",
+      "size_bytes": 27450,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "Meetings",
+        "03 - Meeting 20-FEB-26",
+        "category:project_files",
+        "ext:docx"
+      ]
+    },
+    {
       "path": "project_files/Meetings/03 - Meeting 20-FEB-26/FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
       "filename": "FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
       "extension": "pdf",
@@ -2206,19 +2403,20 @@
       ]
     },
     {
-      "path": "project_files/Meetings/03 - Meeting 20-FEB-26/Facilitator (25 Minute Focus Block Values & Principles).docx",
-      "filename": "Facilitator (25 Minute Focus Block Values & Principles).docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 27450,
+      "path": "project_files/Meetings/03 - Meeting 20-FEB-26/media/263b27b483b7dd2bd56574fceefef15a.png",
+      "filename": "263b27b483b7dd2bd56574fceefef15a.png",
+      "extension": "png",
+      "type": "png",
+      "size_bytes": 842622,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
         "project_files",
         "Meetings",
         "03 - Meeting 20-FEB-26",
+        "media",
         "category:project_files",
-        "ext:docx"
+        "ext:png"
       ]
     },
     {
@@ -2286,23 +2484,6 @@
       ]
     },
     {
-      "path": "project_files/Meetings/03 - Meeting 20-FEB-26/media/263b27b483b7dd2bd56574fceefef15a.png",
-      "filename": "263b27b483b7dd2bd56574fceefef15a.png",
-      "extension": "png",
-      "type": "png",
-      "size_bytes": 842622,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "media",
-        "category:project_files",
-        "ext:png"
-      ]
-    },
-    {
       "path": "project_files/Meetings/20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.docx",
       "filename": "20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.docx",
       "extension": "docx",
@@ -2322,7 +2503,7 @@
       "filename": "20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 11363,
+      "size_bytes": 11477,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2337,7 +2518,7 @@
       "filename": "FCCPS Sample Advisory Board Agenda & Minutes.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1590,
+      "size_bytes": 1630,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2460,11 +2641,11 @@
       ]
     },
     {
-      "path": "project_files/Members' Corners/Jillian Burkley/Burkley_The Greece case study_Jillians Corner.pdf",
-      "filename": "Burkley_The Greece case study_Jillians Corner.pdf",
+      "path": "project_files/Members' Corners/Jillian Burkley/Burkley_The four program components.pdf",
+      "filename": "Burkley_The four program components.pdf",
       "extension": "pdf",
       "type": "pdf",
-      "size_bytes": 14084461,
+      "size_bytes": 6627942,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2476,11 +2657,11 @@
       ]
     },
     {
-      "path": "project_files/Members' Corners/Jillian Burkley/Burkley_The four program components.pdf",
-      "filename": "Burkley_The four program components.pdf",
+      "path": "project_files/Members' Corners/Jillian Burkley/Burkley_The Greece case study_Jillians Corner.pdf",
+      "filename": "Burkley_The Greece case study_Jillians Corner.pdf",
       "extension": "pdf",
       "type": "pdf",
-      "size_bytes": 6627942,
+      "size_bytes": 14084461,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2528,7 +2709,7 @@
       "filename": "Jillians-Corner_concat.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 17543,
+      "size_bytes": 17744,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2544,7 +2725,7 @@
       "filename": "Jillians_Corner_AIEIP_Reformatted.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 7678,
+      "size_bytes": 7860,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2560,7 +2741,7 @@
       "filename": "001_Cognitive-Pipeline-Table.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 4620,
+      "size_bytes": 4653,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2576,7 +2757,7 @@
       "filename": "002_Stateoftheart-AI-reasoning-systems-partially-mirror-human-cognitive-science.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3973,
+      "size_bytes": 4014,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2592,7 +2773,7 @@
       "filename": "003_Human-Machine-Teaming.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 3704,
+      "size_bytes": 3746,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2608,7 +2789,7 @@
       "filename": "004_Cognitive-Pipeline-Applied-as-a-K12-HumanAI-Teaming-Scaffold.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 7574,
+      "size_bytes": 7626,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2624,7 +2805,7 @@
       "filename": "005_AI-Integrated-Ecosystem-Project-for-Grade-7.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 8657,
+      "size_bytes": 8760,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2640,23 +2821,7 @@
       "filename": "006_Approach-to-Policy-Development.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 4306,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "Members' Corners",
-        "John Black",
-        "category:project_files",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "project_files/Members' Corners/John Black/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md",
-      "filename": "Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 64125,
+      "size_bytes": 4359,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2682,6 +2847,22 @@
         "media",
         "category:project_files",
         "ext:gif"
+      ]
+    },
+    {
+      "path": "project_files/Members' Corners/John Black/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md",
+      "filename": "Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 64500,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "Members' Corners",
+        "John Black",
+        "category:project_files",
+        "ext:md"
       ]
     },
     {
@@ -2720,7 +2901,7 @@
       "filename": "A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 864771,
+      "size_bytes": 869595,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2750,7 +2931,7 @@
       "filename": "Artificial-Intelligence and-APS.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 16226,
+      "size_bytes": 16395,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -2758,21 +2939,6 @@
         "Pre-Read Resources",
         "category:project_files",
         "ext:md"
-      ]
-    },
-    {
-      "path": "project_files/Pre-Read Resources/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx",
-      "filename": "Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 70836,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "Pre-Read Resources",
-        "category:project_files",
-        "ext:docx"
       ]
     },
     {
@@ -3016,6 +3182,21 @@
       ]
     },
     {
+      "path": "project_files/Pre-Read Resources/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx",
+      "filename": "Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx",
+      "extension": "docx",
+      "type": "docx",
+      "size_bytes": 70836,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "project_files",
+        "Pre-Read Resources",
+        "category:project_files",
+        "ext:docx"
+      ]
+    },
+    {
       "path": "project_files/README.md",
       "filename": "README.md",
       "extension": "md",
@@ -3030,191 +3211,11 @@
       ]
     },
     {
-      "path": "project_files/media/491d0d62e00f085bee7b77e440e0f99c.jpeg",
-      "filename": "491d0d62e00f085bee7b77e440e0f99c.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 214675,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/5d383bc13e3aa58bd642bd21d85364e8.jpeg",
-      "filename": "5d383bc13e3aa58bd642bd21d85364e8.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 76079,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/626ce15a02f120fc6c1564e1a3b7a5e4.jpeg",
-      "filename": "626ce15a02f120fc6c1564e1a3b7a5e4.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 22158,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/781d6c13d2eae1f932048baf039cc7b8.jpeg",
-      "filename": "781d6c13d2eae1f932048baf039cc7b8.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 55683,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/ae0363a2f04cf71d9cd94cddaad8e1b2.jpeg",
-      "filename": "ae0363a2f04cf71d9cd94cddaad8e1b2.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 73150,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/b3b1064a5af99d97c9802357560a8638.jpeg",
-      "filename": "b3b1064a5af99d97c9802357560a8638.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 24664,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/c2dc441ca35f57240c2f09d78d180c1d.jpeg",
-      "filename": "c2dc441ca35f57240c2f09d78d180c1d.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 571766,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/ccca69348b6085f4ae50ca3e5e1abe32.jpg",
-      "filename": "ccca69348b6085f4ae50ca3e5e1abe32.jpg",
-      "extension": "jpg",
-      "type": "jpg",
-      "size_bytes": 76300,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpg"
-      ]
-    },
-    {
-      "path": "project_files/media/cf0d17d8c81b52ea45f95b2b3953d55a.jpeg",
-      "filename": "cf0d17d8c81b52ea45f95b2b3953d55a.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 74181,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/db497ed0bcb2b063a2367503cf9f2ec9.jpeg",
-      "filename": "db497ed0bcb2b063a2367503cf9f2ec9.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 94955,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/dde13bca054c80218a76308828105190.jpeg",
-      "filename": "dde13bca054c80218a76308828105190.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 58245,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
-      "path": "project_files/media/e530db8dacdefbb2372691c8ce002038.jpeg",
-      "filename": "e530db8dacdefbb2372691c8ce002038.jpeg",
-      "extension": "jpeg",
-      "type": "jpeg",
-      "size_bytes": 34276,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "project_files",
-        "media",
-        "category:project_files",
-        "ext:jpeg"
-      ]
-    },
-    {
       "path": "project_files/workstreams/dps/20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md",
       "filename": "20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 31693,
+      "size_bytes": 32090,
       "last_modified_iso": "2026-02-24T16:30:54-05:00",
       "last_commit_sha": "93e9aa55ec143320f18fce5d62a63ed852692cc4",
       "tags": [
@@ -3342,7 +3343,7 @@
       "filename": "Re Research  Shared Baseline (WS-RSB) guidance and deliverable for 20 Feb.txt",
       "extension": "txt",
       "type": "txt",
-      "size_bytes": 16443,
+      "size_bytes": 16773,
       "last_modified_iso": "2026-02-24T16:30:54-05:00",
       "last_commit_sha": "93e9aa55ec143320f18fce5d62a63ed852692cc4",
       "tags": [
@@ -3374,7 +3375,7 @@
       "filename": "Shared Baseline v01.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 42624,
+      "size_bytes": 43126,
       "last_modified_iso": "2026-02-24T16:30:54-05:00",
       "last_commit_sha": "93e9aa55ec143320f18fce5d62a63ed852692cc4",
       "tags": [
@@ -3390,9 +3391,9 @@
       "filename": "dashboard_bundle.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 47734,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 49411,
+      "last_modified_iso": "2026-02-25T11:56:28-05:00",
+      "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
       "tags": [
         "public",
         "category:public",
@@ -3404,9 +3405,9 @@
       "filename": "dashboard_bundle.zip",
       "extension": "zip",
       "type": "zip",
-      "size_bytes": 13179,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 13172,
+      "last_modified_iso": "2026-02-25T11:56:28-05:00",
+      "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
       "tags": [
         "public",
         "category:public",
@@ -3418,9 +3419,9 @@
       "filename": "file_catalog.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 121263,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 126165,
+      "last_modified_iso": "2026-02-25T04:28:41Z",
+      "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
       "tags": [
         "public",
         "category:public",
@@ -3432,9 +3433,9 @@
       "filename": "full_export.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 225412,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 233747,
+      "last_modified_iso": "2026-02-25T11:56:28-05:00",
+      "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
       "tags": [
         "public",
         "category:public",
@@ -3446,9 +3447,9 @@
       "filename": "full_export.zip",
       "extension": "zip",
       "type": "zip",
-      "size_bytes": 37711,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 37702,
+      "last_modified_iso": "2026-02-25T11:56:28-05:00",
+      "last_commit_sha": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
       "tags": [
         "public",
         "category:public",
@@ -3460,9 +3461,9 @@
       "filename": "kpi_evidence.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 12902,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 13444,
+      "last_modified_iso": "2026-02-25T04:28:41Z",
+      "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
       "tags": [
         "public",
         "category:public",
@@ -3474,9 +3475,9 @@
       "filename": "kpis.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 15924,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 16539,
+      "last_modified_iso": "2026-02-25T04:28:41Z",
+      "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
       "tags": [
         "public",
         "category:public",
@@ -3488,9 +3489,9 @@
       "filename": "public_snapshot.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 12987,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 13453,
+      "last_modified_iso": "2026-02-25T04:28:41Z",
+      "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
       "tags": [
         "public",
         "category:public",
@@ -3502,9 +3503,9 @@
       "filename": "quality_report.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 2381,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 2474,
+      "last_modified_iso": "2026-02-25T04:28:41Z",
+      "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
       "tags": [
         "public",
         "category:public",
@@ -3516,13 +3517,25 @@
       "filename": "ref_index.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 32989,
-      "last_modified_iso": "2026-02-24T23:20:00-05:00",
-      "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
+      "size_bytes": 34158,
+      "last_modified_iso": "2026-02-25T04:28:41Z",
+      "last_commit_sha": "daef6fd95d8eaf16f607cc0784049204e18702c7",
       "tags": [
         "public",
         "category:public",
         "ext:json"
+      ]
+    },
+    {
+      "path": "README.md",
+      "filename": "README.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 6573,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "ext:md"
       ]
     },
     {
@@ -3542,7 +3555,7 @@
       "filename": "build_catalog.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 7341,
+      "size_bytes": 7583,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -3556,7 +3569,7 @@
       "filename": "build_kpis.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 26699,
+      "size_bytes": 27526,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -3570,7 +3583,7 @@
       "filename": "build_snapshot.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 5147,
+      "size_bytes": 5666,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -3598,7 +3611,7 @@
       "filename": "quality_checks.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 9748,
+      "size_bytes": 10245,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -3612,7 +3625,7 @@
       "filename": "validate_sor.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 14733,
+      "size_bytes": 17476,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -3626,7 +3639,7 @@
       "filename": "Publish-HealthDashboard.ps1",
       "extension": "ps1",
       "type": "ps1",
-      "size_bytes": 4643,
+      "size_bytes": 4778,
       "last_modified_iso": "2026-02-24T17:01:19-05:00",
       "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
       "tags": [
@@ -3641,7 +3654,7 @@
       "filename": "Register-HealthDashboardTasks.ps1",
       "extension": "ps1",
       "type": "ps1",
-      "size_bytes": 2225,
+      "size_bytes": 2264,
       "last_modified_iso": "2026-02-24T17:01:19-05:00",
       "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
       "tags": [
@@ -3656,7 +3669,7 @@
       "filename": "deliverables.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 9802,
+      "size_bytes": 11150,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -3670,7 +3683,7 @@
       "filename": "timeline.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 3857,
+      "size_bytes": 3997,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -3684,7 +3697,7 @@
       "filename": "workstreams.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 3606,
+      "size_bytes": 3710,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [

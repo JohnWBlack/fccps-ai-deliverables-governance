@@ -46,8 +46,7 @@ def load_yaml_file(filepath: str) -> Dict[str, Any]:
 def sanitize_workstream(workstream: Dict[str, Any]) -> Dict[str, Any]:
     """Remove internal-only fields from workstream data."""
     public_fields = [
-        "id", "name", "description", "status", "start_date", 
-        "target_completion", "priority", "tags"
+        "id", "name", "status", "lead", "co_lead"
     ]
     return {k: v for k, v in workstream.items() if k in public_fields}
 
@@ -61,10 +60,26 @@ def sanitize_timeline_event(event: Dict[str, Any]) -> Dict[str, Any]:
 def sanitize_deliverable(deliverable: Dict[str, Any]) -> Dict[str, Any]:
     """Remove internal-only fields from deliverable data."""
     public_fields = [
-        "id", "title", "description", "status", "due_date", 
-        "priority", "deliverable_type", "public_facing"
+        "id",
+        "title",
+        "status",
+        "due_date",
+        "checkpoint_id",
+        "depends_on",
+        "scope",
+        "workstream_id",
+        "owner",
+        "committee_only",
+        "public_url",
     ]
     sanitized = {k: v for k, v in deliverable.items() if k in public_fields}
+
+    if "depends_on" not in sanitized or sanitized["depends_on"] is None:
+        sanitized["depends_on"] = []
+    if "committee_only" not in sanitized or sanitized["committee_only"] is None:
+        sanitized["committee_only"] = False
+    if "public_url" not in sanitized:
+        sanitized["public_url"] = None
     
     # Only include deliverables marked as public-facing
     if not deliverable.get("public_facing", False):

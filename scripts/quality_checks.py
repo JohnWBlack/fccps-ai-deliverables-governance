@@ -140,7 +140,13 @@ def build_quality_report() -> dict[str, Any]:
     missing_deliverable_owners = [
         d.get("id")
         for d in deliverables
-        if not d.get("assigned_to") and not (isinstance(d.get("owners"), list) and d.get("owners"))
+        if not d.get("assigned_to")
+        and not (isinstance(d.get("owners"), list) and d.get("owners"))
+        and not (
+            isinstance(d.get("owner"), dict)
+            and isinstance(d.get("owner", {}).get("name"), str)
+            and d.get("owner", {}).get("name", "").strip()
+        )
     ]
     if missing_deliverable_owners:
         add_issue(

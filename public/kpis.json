@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-25T04:28:41.261476Z",
+    "generated_at": "2026-02-25T20:57:22.261806Z",
     "timezone": "America/New_York",
     "schema_version": "0.2"
   },
@@ -36,8 +36,8 @@
   "summary": {
     "overall_status": "red",
     "kpi_counts": {
-      "green": 8,
-      "yellow": 3,
+      "green": 7,
+      "yellow": 4,
       "red": 6,
       "gray": 2
     }
@@ -204,15 +204,20 @@
       "id": "KPI-CONV-01",
       "category": "convergence",
       "name": "SoR reference integrity",
-      "status": "green",
-      "score": 100,
+      "status": "yellow",
+      "score": 80,
       "description": "No dangling IDs across SoR references.",
       "rules": [
         "ID-* issues from quality report reduce score."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "issue",
+          "id": "ID-DANGLING-WORKSTREAM"
+        }
+      ],
       "details": {
-        "id_issue_count": 0
+        "id_issue_count": 1
       }
     },
     {
@@ -441,7 +446,7 @@
       "category": "publicability",
       "name": "Public link hygiene",
       "status": "red",
-      "score": 0,
+      "score": 16,
       "description": "Deliverables must have public_url or committee_only=true.",
       "rules": [
         "Missing visibility metadata reduces score."
@@ -501,23 +506,11 @@
         },
         {
           "type": "deliverable",
-          "id": "near_final_package"
-        },
-        {
-          "type": "deliverable",
           "id": "D-CCI-1"
         },
         {
           "type": "deliverable",
           "id": "D-IPC-1"
-        },
-        {
-          "type": "deliverable",
-          "id": "final_talk_track"
-        },
-        {
-          "type": "deliverable",
-          "id": "committee_response"
         }
       ],
       "details": {
@@ -575,23 +568,11 @@
             "reason": "missing_public_url_or_committee_only"
           },
           {
-            "id": "near_final_package",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
             "id": "D-CCI-1",
             "reason": "missing_public_url_or_committee_only"
           },
           {
             "id": "D-IPC-1",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "final_talk_track",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "committee_response",
             "reason": "missing_public_url_or_committee_only"
           }
         ]

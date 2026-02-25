@@ -641,7 +641,10 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
     )
     evidence_store["KPI-READY-02"] = offender_evidence_ids(
         deliverables,
-        lambda d: not d.get("assigned_to") and not d.get("owner") and not d.get("owners"),
+        lambda d: not d.get("assigned_to")
+        and not (isinstance(d.get("owner"), dict) and str(d.get("owner", {}).get("name", "")).strip())
+        and not d.get("owner")
+        and not d.get("owners"),
     )
     evidence_store["KPI-READY-03"] = offender_evidence_ids(
         deliverables,

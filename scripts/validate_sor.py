@@ -23,6 +23,8 @@ VALID_TIMELINE_STATUS = ["completed", "upcoming", "cancelled"]
 VALID_PRIORITY = ["high", "medium", "low"]
 VALID_TIMELINE_TYPE = ["milestone", "deadline", "meeting", "review"]
 VALID_DELIVERABLE_TYPE = ["document", "presentation", "software", "other"]
+VALID_DELIVERABLE_SCOPE = ["workstream", "committee"]
+VALID_OWNER_ROLE = ["Chair", "Workstream Lead", "Co-lead", "Committee"]
 LEGACY_WORKSTREAM_ID_PATTERN = re.compile(r"^ws-\d+$", re.IGNORECASE)
 LEGACY_DELIVERABLE_ID_PATTERN = re.compile(r"^del-\d+$", re.IGNORECASE)
 
@@ -210,6 +212,8 @@ def validate_deliverables(
     deliverables = data.get("deliverables", [])
     deliverable_ids = set()
     
+    compatibility_warnings: List[str] = []
+
     for i, deliverable in enumerate(deliverables):
         del_id = deliverable.get("id")
         if not del_id:
@@ -229,11 +233,18 @@ def validate_deliverables(
             sys.exit(1)
         
         # Validate required fields
-        required_fields = ["title", "description", "status", "workstream_id", "assigned_to", "due_date", "priority", "deliverable_type", "public_facing"]
+        required_fields = ["title", "description", "status", "scope", "workstream_id", "owner", "due_date", "priority", "deliverable_type"]
         for field in required_fields:
             if field not in deliverable:
                 print(f"❌ Deliverable {del_id} missing required field '{field}'")
                 sys.exit(1)
+
+        # Backwards compatibility warnings for legacy fields that may still exist
+        for legacy_field in ["workstream", "assigned_to", "owners", "public_facing"]:
+            if legacy_field in deliverable:
+                compatibility_warnings.append(
+                    f"⚠️  Deliverable {del_id} includes legacy field '{legacy_field}' (retained for compatibility)."
+                )
         
         # Validate enums
         if deliverable["status"] not in VALID_DELIVERABLE_STATUS:
@@ -247,11 +258,40 @@ def validate_deliverables(
         if deliverable["deliverable_type"] not in VALID_DELIVERABLE_TYPE:
             print(f"❌ Deliverable {del_id} has invalid type '{deliverable['deliverable_type']}'. Valid: {VALID_DELIVERABLE_TYPE}")
             sys.exit(1)
-        
-        # Validate workstream reference
-        ws_id = deliverable["workstream_id"]
-        if ws_id not in workstream_ids:
-            print(f"❌ Deliverable {del_id} references non-existent workstream '{ws_id}'")
+
+        scope = deliverable.get("scope")
+        if scope not in VALID_DELIVERABLE_SCOPE:
+            print(f"❌ Deliverable {del_id} has invalid scope '{scope}'. Valid: {VALID_DELIVERABLE_SCOPE}")
+            sys.exit(1)
+
+        owner = deliverable.get("owner")
+        if not isinstance(owner, dict):
+            print(f"❌ Deliverable {del_id} field 'owner' must be an object with name and role")
+            sys.exit(1)
+        owner_name = owner.get("name")
+        owner_role = owner.get("role")
+        if not isinstance(owner_name, str) or not owner_name.strip():
+            print(f"❌ Deliverable {del_id} owner.name must be a non-empty string")
+            sys.exit(1)
+        if owner_role not in VALID_OWNER_ROLE:
+            print(f"❌ Deliverable {del_id} owner.role must be one of {VALID_OWNER_ROLE}")
+            sys.exit(1)
+
+        # Validate workstream reference based on scope rules
+        ws_id = deliverable.get("workstream_id")
+        if ws_id is not None and not isinstance(ws_id, str):
+            print(f"❌ Deliverable {del_id} field 'workstream_id' must be string or null")
+            sys.exit(1)
+
+        if scope == "workstream":
+            if not ws_id:
+                print(f"❌ Deliverable {del_id} with scope=workstream must set workstream_id")
+                sys.exit(1)
+            if ws_id not in workstream_ids:
+                print(f"❌ Deliverable {del_id} references non-existent workstream '{ws_id}'")
+                sys.exit(1)
+        elif scope == "committee" and ws_id and ws_id not in workstream_ids:
+            print(f"❌ Deliverable {del_id} committee scope coordination workstream_id '{ws_id}' does not exist")
             sys.exit(1)
         
         # Validate date format
@@ -287,11 +327,16 @@ def validate_deliverables(
                     sys.exit(1)
 
         # Validate visibility/public artifact fields
-        if "public_url" in deliverable and not isinstance(deliverable.get("public_url"), str):
-            print(f"❌ Deliverable {del_id} optional field 'public_url' must be a string when present")
+        public_url = deliverable.get("public_url")
+        if public_url is not None and not isinstance(public_url, str):
+            print(f"❌ Deliverable {del_id} optional field 'public_url' must be a string or null")
             sys.exit(1)
         if "committee_only" in deliverable and not isinstance(deliverable.get("committee_only"), bool):
             print(f"❌ Deliverable {del_id} optional field 'committee_only' must be a boolean when present")
+            sys.exit(1)
+
+        if "depends_on" in deliverable and not isinstance(deliverable.get("depends_on"), list):
+            print(f"❌ Deliverable {del_id} optional field 'depends_on' must be a list when present")
             sys.exit(1)
 
     deliverable_ids = {d["id"] for d in deliverables}
@@ -303,6 +348,9 @@ def validate_deliverables(
             if dep not in deliverable_ids:
                 print(f"❌ Deliverable {del_id} depends_on references non-existent deliverable '{dep}'")
                 sys.exit(1)
+
+    for warning in sorted(set(compatibility_warnings)):
+        print(warning)
 
 def main():
     """Main validation function."""
