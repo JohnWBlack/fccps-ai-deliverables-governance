@@ -9,6 +9,8 @@ Strips internal-only fields and prepares data for public consumption.
 import yaml
 import json
 import os
+import hashlib
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, Any
@@ -16,6 +18,25 @@ from typing import Dict, Any
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SOR_DIR = REPO_ROOT / "sor"
 OUTPUT_PATH = REPO_ROOT / "public" / "public_snapshot.json"
+
+
+def resolve_version_key() -> str:
+    """Resolve stable version key from git HEAD SHA, fallback to SoR content hash."""
+    try:
+        sha = subprocess.check_output(
+            ["git", "-C", str(REPO_ROOT), "rev-parse", "HEAD"],
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+        if sha:
+            return sha
+    except Exception:
+        pass
+
+    digest = hashlib.sha256()
+    for path in sorted((SOR_DIR / name) for name in ["workstreams.yml", "deliverables.yml", "timeline.yml"]):
+        digest.update(path.read_bytes())
+    return f"sor-{digest.hexdigest()[:16]}"
 
 def load_yaml_file(filepath: str) -> Dict[str, Any]:
     """Load and parse YAML file."""
@@ -58,16 +79,19 @@ def build_snapshot() -> Dict[str, Any]:
     timeline_data = load_yaml_file(str(SOR_DIR / "timeline.yml"))
     deliverables_data = load_yaml_file(str(SOR_DIR / "deliverables.yml"))
     generated_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    version_key = resolve_version_key()
     
     # Build snapshot structure
     snapshot = {
         "meta": {
             "generated_at": generated_at,
-            "source_version": workstreams_data["metadata"]["version"]
+            "source_version": workstreams_data["metadata"]["version"],
+            "version_key": version_key,
         },
         "metadata": {
             "generated_at": generated_at,
             "source_version": workstreams_data["metadata"]["version"],
+            "version_key": version_key,
             "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
         },
         "workstreams": [],

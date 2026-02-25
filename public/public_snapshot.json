@@ -1,45 +1,415 @@
 {
   "meta": {
-    "generated_at": "2026-02-25T03:53:40.294223Z",
-    "source_version": "1.0.0"
+    "generated_at": "2026-02-25T03:47:19.906795Z",
+    "source_version": "1.1.0",
+    "version_key": "e3b25c532b9598137d6357705554ae9c49427580"
   },
   "metadata": {
-    "generated_at": "2026-02-25T03:53:40.294223Z",
-    "source_version": "1.0.0",
+    "generated_at": "2026-02-25T03:47:19.906795Z",
+    "source_version": "1.1.0",
+    "version_key": "e3b25c532b9598137d6357705554ae9c49427580",
     "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
   },
   "workstreams": [
     {
-      "id": "ws-001",
-      "name": "AI Policy Development",
-      "description": "Develop comprehensive AI policies for FCCPS",
+      "id": "WS-RSB",
+      "name": "Research & Shared Baseline",
+      "description": "Shared baseline on capabilities, limits, misconceptions, and district-facing context.",
       "status": "active",
-      "start_date": "2026-01-15",
-      "target_completion": "2026-06-30",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-05-15",
+      "priority": "high",
+      "tags": [
+        "baseline",
+        "research",
+        "definitions"
+      ]
+    },
+    {
+      "id": "WS-POL",
+      "name": "Policy/Recommendation Drafting",
+      "description": "Integrates workstream outputs into policy recommendations and board-ready artifacts.",
+      "status": "active",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-05-15",
       "priority": "high",
       "tags": [
         "policy",
-        "governance"
+        "integration",
+        "board"
+      ]
+    },
+    {
+      "id": "WS-CPX",
+      "name": "Classroom Practice & Examples",
+      "description": "Develops grade-banded classroom scenarios and teacher-facing implementation examples.",
+      "status": "active",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-04-10",
+      "priority": "high",
+      "tags": [
+        "classroom",
+        "examples",
+        "guidance"
+      ]
+    },
+    {
+      "id": "WS-AIN",
+      "name": "Assessment & Integrity",
+      "description": "Defines attribution expectations and academic integrity guardrails by grade and assessment type.",
+      "status": "active",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-04-10",
+      "priority": "high",
+      "tags": [
+        "assessment",
+        "integrity",
+        "attribution"
+      ]
+    },
+    {
+      "id": "WS-DPS",
+      "name": "Data Privacy & Security",
+      "description": "Produces privacy/security requirements and AI tool review governance criteria.",
+      "status": "active",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-04-10",
+      "priority": "high",
+      "tags": [
+        "privacy",
+        "security",
+        "procurement"
+      ]
+    },
+    {
+      "id": "WS-EQA",
+      "name": "Equity & Access",
+      "description": "Applies an equity and accessibility lens to policy, tools, and implementation pathways.",
+      "status": "active",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-04-10",
+      "priority": "high",
+      "tags": [
+        "equity",
+        "access",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "WS-CCI",
+      "name": "Communications & Community Input",
+      "description": "Creates stakeholder communications, FAQ artifacts, and community feedback intake plans.",
+      "status": "active",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-05-15",
+      "priority": "medium",
+      "tags": [
+        "communications",
+        "community",
+        "faq"
+      ]
+    },
+    {
+      "id": "WS-IPC",
+      "name": "Implementation/PD & Change Adoption",
+      "description": "Defines rollout, professional development, and continuous-improvement operating model.",
+      "status": "active",
+      "start_date": "2026-01-23",
+      "target_completion": "2026-05-15",
+      "priority": "medium",
+      "tags": [
+        "implementation",
+        "professional-development",
+        "adoption"
       ]
     }
   ],
   "timeline_events": [
     {
-      "id": "te-001",
-      "title": "AI Committee Formation",
-      "description": "Official formation of FCCPS AI Committee",
-      "date": "2026-01-01",
+      "id": "m1",
+      "title": "Meeting 1",
+      "description": "Committee formation and charter baseline.",
+      "date": "2026-01-23",
+      "type": "meeting",
+      "status": "completed",
+      "importance": "high"
+    },
+    {
+      "id": "m2",
+      "title": "Meeting 2",
+      "description": "Shared baseline alignment and working agreements confirmation.",
+      "date": "2026-02-06",
+      "type": "meeting",
+      "status": "completed",
+      "importance": "high"
+    },
+    {
+      "id": "m3",
+      "title": "Meeting 3",
+      "description": "Values/principles checkpoint and pre-read integration.",
+      "date": "2026-02-20",
+      "type": "meeting",
+      "status": "completed",
+      "importance": "high"
+    },
+    {
+      "id": "ms_policy_principles",
+      "title": "Policy principles delivered",
+      "description": "Formal policy principles package completed.",
+      "date": "2026-02-20",
       "type": "milestone",
       "status": "completed",
+      "importance": "high"
+    },
+    {
+      "id": "m4",
+      "title": "Meeting 4",
+      "description": "Recommendations outline and risk register checkpoint.",
+      "date": "2026-03-06",
+      "type": "meeting",
+      "status": "upcoming",
+      "importance": "high"
+    },
+    {
+      "id": "m5",
+      "title": "Meeting 5",
+      "description": "Draft recommendations workshop and integration sequencing.",
+      "date": "2026-03-20",
+      "type": "meeting",
+      "status": "upcoming",
+      "importance": "high"
+    },
+    {
+      "id": "ms_draft_sections_complete",
+      "title": "Draft sections complete",
+      "description": "Initial domain draft package is complete for integration.",
+      "date": "2026-03-20",
+      "type": "milestone",
+      "status": "upcoming",
+      "importance": "high"
+    },
+    {
+      "id": "m6",
+      "title": "Meeting 6",
+      "description": "Near-final package integration and comms/implementation alignment.",
+      "date": "2026-04-10",
+      "type": "meeting",
+      "status": "upcoming",
+      "importance": "high"
+    },
+    {
+      "id": "ms_board_ready",
+      "title": "Board-ready package",
+      "description": "Board-ready recommendation package is assembled for final review.",
+      "date": "2026-04-10",
+      "type": "milestone",
+      "status": "upcoming",
+      "importance": "high"
+    },
+    {
+      "id": "m7",
+      "title": "Meeting 7",
+      "description": "Presentation prep and final review feedback assimilation.",
+      "date": "2026-04-24",
+      "type": "meeting",
+      "status": "upcoming",
+      "importance": "medium"
+    },
+    {
+      "id": "m8",
+      "title": "Meeting 8",
+      "description": "Formal committee response approval checkpoint.",
+      "date": "2026-05-15",
+      "type": "meeting",
+      "status": "upcoming",
+      "importance": "high"
+    },
+    {
+      "id": "ms_final_recs",
+      "title": "Final recommendations delivered",
+      "description": "Committee final recommendation package delivered.",
+      "date": "2026-05-15",
+      "type": "milestone",
+      "status": "upcoming",
       "importance": "high"
     }
   ],
   "deliverables": [
     {
-      "id": "del-001",
-      "title": "AI Policy Framework Document",
-      "description": "Comprehensive framework for AI policy implementation",
+      "id": "charter_v0",
+      "title": "Team Charter v0",
+      "description": "Committee charter and operating scope baseline approved in Meeting 1.",
+      "status": "completed",
+      "due_date": "2026-01-23",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "working_agreements",
+      "title": "Working agreements and collaboration operating rules",
+      "description": "Working agreements, timeline/objectives draft, and collaboration rules.",
+      "status": "completed",
+      "due_date": "2026-02-06",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "pre_m3_defs",
+      "title": "Definitions and assumptions pre-read",
+      "description": "Definitions, assumptions, misconceptions, and draft grade-band framing.",
+      "status": "completed",
+      "due_date": "2026-02-20",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "pre_m3_risks_ops",
+      "title": "Meeting 3 risks/opportunities synthesis",
+      "description": "Collected member submissions of top risks and opportunities for Meeting 3.",
+      "status": "completed",
+      "due_date": "2026-02-20",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "policy_principles",
+      "title": "Policy principles set",
+      "description": "Board-ready policy principles with tradeoff framing.",
       "status": "in_progress",
+      "due_date": "2026-02-20",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "D-RSB-1",
+      "title": "Shared Baseline Brief v1",
+      "description": "Capabilities, misconceptions, and shared definitions baseline.",
+      "status": "completed",
+      "due_date": "2026-02-20",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "rec_outline_risk_register",
+      "title": "Recommendations outline and first-pass risk register",
+      "description": "Integrated recommendations structure and initial top-risk mitigation register.",
+      "status": "in_progress",
+      "due_date": "2026-03-06",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "D-POL-1",
+      "title": "Policy Skeleton v0",
+      "description": "Policy draft scaffold with sections, decisions, and version log.",
+      "status": "in_progress",
+      "due_date": "2026-03-06",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "D-CPX-1",
+      "title": "Scenario Bank v1",
+      "description": "Grade-banded classroom scenarios with implementation exemplars.",
+      "status": "in_progress",
+      "due_date": "2026-03-06",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "D-AIN-1",
+      "title": "Attribution & Integrity Matrix v1",
+      "description": "Grade-band and assessment-type matrix for attribution and integrity practices.",
+      "status": "in_progress",
+      "due_date": "2026-03-06",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "D-DPS-1",
+      "title": "AI Tool Review Checklist v1 + Risk Tiers",
+      "description": "Privacy/security checklist and risk-tiering model for tool governance.",
+      "status": "in_progress",
+      "due_date": "2026-03-06",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "D-EQA-1",
+      "title": "Equity Impact Checklist v1",
+      "description": "Equity and accessibility lens checklist for policy and implementation decisions.",
+      "status": "in_progress",
+      "due_date": "2026-03-06",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "m5_draft_sections",
+      "title": "Draft sections for priority recommendation domains",
+      "description": "Drafted recommendation sections for selected domains and governance direction.",
+      "status": "not_started",
+      "due_date": "2026-03-20",
+      "priority": "high",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "near_final_package",
+      "title": "Near-final recommendation package",
+      "description": "Integrated recommendation package, slide narrative, and gap-owner list.",
+      "status": "not_started",
+      "due_date": "2026-04-10",
+      "priority": "high",
+      "deliverable_type": "presentation",
+      "public_facing": true
+    },
+    {
+      "id": "D-CCI-1",
+      "title": "Comms Pack v1",
+      "description": "Stakeholder messaging, FAQ draft, and community input plan.",
+      "status": "not_started",
+      "due_date": "2026-04-10",
+      "priority": "medium",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "D-IPC-1",
+      "title": "Implementation Roadmap v1",
+      "description": "Implementation and PD roadmap with milestones, cadence, and success measures.",
+      "status": "not_started",
+      "due_date": "2026-04-10",
+      "priority": "medium",
+      "deliverable_type": "document",
+      "public_facing": true
+    },
+    {
+      "id": "final_talk_track",
+      "title": "Final talk track and Q&A prep",
+      "description": "Final presentation talk track and supporting Q&A sheet for review cycle.",
+      "status": "not_started",
+      "due_date": "2026-04-24",
+      "priority": "medium",
+      "deliverable_type": "presentation",
+      "public_facing": true
+    },
+    {
+      "id": "committee_response",
+      "title": "Formal committee response package",
+      "description": "Formal response to proposed policy with guardrails and governance recommendations.",
+      "status": "not_started",
       "due_date": "2026-05-15",
       "priority": "high",
       "deliverable_type": "document",

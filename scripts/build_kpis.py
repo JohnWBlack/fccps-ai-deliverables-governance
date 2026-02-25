@@ -95,15 +95,15 @@ def add_kpi(
     kpi_id: str,
     category: str,
     name: str,
-    score: int,
+    score: int | None,
     description: str,
     evidence: list[dict[str, Any]],
     rules: list[str],
     details: dict[str, Any],
     forced_status: str | None = None,
 ) -> None:
-    status = forced_status or status_from_score(score)
-    safe_score = max(0, min(100, score))
+    status = forced_status or (status_from_score(score) if isinstance(score, int) else "gray")
+    safe_score = max(0, min(100, score)) if isinstance(score, int) else None
     kpis.append(
         {
             "id": kpi_id,
@@ -118,6 +118,15 @@ def add_kpi(
         }
     )
     evidence_store[kpi_id] = evidence
+
+
+def offender_evidence_ids(deliverables: list[dict[str, Any]], predicate: Any) -> list[dict[str, Any]]:
+    offenders = [
+        {"type": "deliverable", "id": d.get("id"), "doc_path": "sor/deliverables.yml"}
+        for d in deliverables
+        if d.get("id") and predicate(d)
+    ]
+    return sorted(offenders, key=lambda item: str(item.get("id", "")))
 
 
 def build_taxonomy() -> dict[str, Any]:
@@ -208,6 +217,7 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             [{"type": "deliverable", "id": d.get("id"), "doc_path": "sor/deliverables.yml"} for d in due_before_gate],
             ["Score = completed_due_before_gate / due_before_gate * 100."],
             {
+                "instrumented": True,
                 "next_gate_id": next_gate.get("id"),
                 "next_gate_date": next_gate.get("date"),
                 "due_before_gate": len(due_before_gate),
@@ -221,12 +231,12 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             "KPI-SCHED-01",
             "schedule",
             "Next gate readiness",
-            70,
+            None,
             "Share of deliverables due before next gate that are complete.",
             [],
             ["No upcoming timeline gate found; mark as not instrumented."],
             {"instrumented": False},
-            forced_status="yellow",
+            forced_status="gray",
         )
 
     overdue = []
@@ -276,12 +286,12 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             "KPI-SCHED-03",
             "schedule",
             "Blocked dependency rate",
-            70,
+            None,
             "Deliverables blocked by unmet dependencies.",
             [],
             ["No depends_on relationships present in SoR."],
             {"instrumented": False},
-            forced_status="yellow",
+            forced_status="gray",
         )
 
     pre_read_instrumented = any("pre_read" in key for event in timeline_events for key in event.keys())
@@ -292,12 +302,12 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             "KPI-SCHED-04",
             "schedule",
             "Pre-read readiness",
-            70,
+            None,
             "Readiness of pre-read deliverables for the next gate.",
             [],
             ["No explicit pre-read fields in timeline; KPI is not instrumented."],
             {"instrumented": False},
-            forced_status="yellow",
+            forced_status="gray",
         )
     else:
         add_kpi(
@@ -454,12 +464,12 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             "KPI-CONV-09",
             "convergence",
             "Risk→principle mapping readiness",
-            70,
+            None,
             "Coverage of risk IDs linked to principle IDs.",
             [],
             ["No risk register found; KPI not instrumented."],
             {"instrumented": False},
-            forced_status="yellow",
+            forced_status="gray",
         )
     else:
         mapped = 0
@@ -493,12 +503,12 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             "KPI-CONV-10",
             "convergence",
             "Milestone gating consistency",
-            70,
+            None,
             "Deliverables are checkpointed against milestone gates.",
             [],
             ["No ms_* milestones in timeline; not instrumented."],
             {"instrumented": False},
-            forced_status="yellow",
+            forced_status="gray",
         )
     else:
         mapped = [d for d in deliverables if d.get("checkpoint_id") in milestone_ids]
@@ -625,10 +635,31 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
         forced_status="red" if pii_hits else "green",
     )
 
+    evidence_store["KPI-READY-01"] = offender_evidence_ids(
+        deliverables,
+        lambda d: not d.get("checkpoint_id"),
+    )
+    evidence_store["KPI-READY-02"] = offender_evidence_ids(
+        deliverables,
+        lambda d: not d.get("assigned_to") and not d.get("owner") and not d.get("owners"),
+    )
+    evidence_store["KPI-READY-03"] = offender_evidence_ids(
+        deliverables,
+        lambda d: not (isinstance(d.get("principle_refs"), list) and d.get("principle_refs")),
+    )
+    evidence_store["KPI-READY-04"] = offender_evidence_ids(
+        deliverables,
+        lambda d: not (isinstance(d.get("risk_refs"), list) and d.get("risk_refs")),
+    )
+    evidence_store["KPI-READY-05"] = offender_evidence_ids(
+        deliverables,
+        lambda d: not d.get("public_url") and d.get("committee_only") is not True,
+    )
+
     # Summary
-    status_counts = {"green": 0, "yellow": 0, "red": 0}
+    status_counts = {"green": 0, "yellow": 0, "red": 0, "gray": 0}
     for item in kpis:
-        status_counts[item["status"]] += 1
+        status_counts[item["status"]] = status_counts.get(item["status"], 0) + 1
 
     overall_status = "green"
     if status_counts["red"] > 0:

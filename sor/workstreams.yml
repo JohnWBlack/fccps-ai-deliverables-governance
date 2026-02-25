@@ -1,25 +1,104 @@
 # FCCPS AI Committee Workstreams
-# Reviewed 2026-02-24
-# Source of Truth for workstream definitions and status
+# Canonical source aligned to governance_docs/FCCPS_AIAC_Workstreams_Registry.md
 
-# Metadata
 metadata:
-  version: "1.0.0"
-  last_updated: "2026-02-23"
-  description: "FCCPS AI Committee workstreams and their current status"
+  version: "1.1.0"
+  last_updated: "2026-02-24"
+  description: "FCCPS AI Committee workstreams and current ownership/status"
 
-# Workstreams array
 workstreams:
-  # Example workstream
-  - id: "ws-001"
-    name: "AI Policy Development"
-    description: "Develop comprehensive AI policies for FCCPS"
-    status: "active"  # active, completed, paused, cancelled
-    lead: "Committee Chair"
-    start_date: "2026-01-15"
-    target_completion: "2026-06-30"
-    priority: "high"  # high, medium, low
+  - id: "WS-RSB"
+    name: "Research & Shared Baseline"
+    description: "Shared baseline on capabilities, limits, misconceptions, and district-facing context."
+    status: "active"
+    lead: "Tom Colvin"
+    co_lead: "Elizabeth Chua"
+    start_date: "2026-01-23"
+    target_completion: "2026-05-15"
+    priority: "high"
     dependencies: []
-    tags: ["policy", "governance"]
-    
-  # Add additional workstreams here
+    tags: ["baseline", "research", "definitions"]
+
+  - id: "WS-POL"
+    name: "Policy/Recommendation Drafting"
+    description: "Integrates workstream outputs into policy recommendations and board-ready artifacts."
+    status: "active"
+    lead: "David N. Berol"
+    co_lead: "John Black"
+    start_date: "2026-01-23"
+    target_completion: "2026-05-15"
+    priority: "high"
+    dependencies: ["WS-RSB", "WS-CPX", "WS-AIN", "WS-DPS", "WS-EQA", "WS-CCI", "WS-IPC"]
+    tags: ["policy", "integration", "board"]
+
+  - id: "WS-CPX"
+    name: "Classroom Practice & Examples"
+    description: "Develops grade-banded classroom scenarios and teacher-facing implementation examples."
+    status: "active"
+    lead: "Anubav Vasudevan"
+    co_lead: "Susan Nelson"
+    start_date: "2026-01-23"
+    target_completion: "2026-04-10"
+    priority: "high"
+    dependencies: ["WS-RSB"]
+    tags: ["classroom", "examples", "guidance"]
+
+  - id: "WS-AIN"
+    name: "Assessment & Integrity"
+    description: "Defines attribution expectations and academic integrity guardrails by grade and assessment type."
+    status: "active"
+    lead: "David N. Berol"
+    co_lead: "Unassigned"
+    start_date: "2026-01-23"
+    target_completion: "2026-04-10"
+    priority: "high"
+    dependencies: ["WS-CPX", "WS-RSB"]
+    tags: ["assessment", "integrity", "attribution"]
+
+  - id: "WS-DPS"
+    name: "Data Privacy & Security"
+    description: "Produces privacy/security requirements and AI tool review governance criteria."
+    status: "active"
+    lead: "Jillian Marie Burkley"
+    co_lead: "John Black"
+    start_date: "2026-01-23"
+    target_completion: "2026-04-10"
+    priority: "high"
+    dependencies: []
+    tags: ["privacy", "security", "procurement"]
+
+  - id: "WS-EQA"
+    name: "Equity & Access"
+    description: "Applies an equity and accessibility lens to policy, tools, and implementation pathways."
+    status: "active"
+    lead: "Tom Sabo"
+    co_lead: "Elizabeth Chua"
+    start_date: "2026-01-23"
+    target_completion: "2026-04-10"
+    priority: "high"
+    dependencies: ["WS-RSB", "WS-CPX"]
+    tags: ["equity", "access", "accessibility"]
+
+  - id: "WS-CCI"
+    name: "Communications & Community Input"
+    description: "Creates stakeholder communications, FAQ artifacts, and community feedback intake plans."
+    status: "active"
+    lead: "Tina Beaty"
+    co_lead: "Adriana Palacios"
+    start_date: "2026-01-23"
+    target_completion: "2026-05-15"
+    priority: "medium"
+    dependencies: ["WS-POL"]
+    tags: ["communications", "community", "faq"]
+
+  - id: "WS-IPC"
+    name: "Implementation/PD & Change Adoption"
+    description: "Defines rollout, professional development, and continuous-improvement operating model."
+    status: "active"
+    lead: "Jillian Marie Burkley"
+    co_lead: "Adriana Palacios"
+    start_date: "2026-01-23"
+    target_completion: "2026-05-15"
+    priority: "medium"
+    dependencies: ["WS-POL", "WS-DPS", "WS-EQA"]
+    tags: ["implementation", "professional-development", "adoption"]

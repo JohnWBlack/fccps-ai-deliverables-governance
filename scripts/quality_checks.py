@@ -180,6 +180,31 @@ def build_quality_report() -> dict[str, Any]:
     docs_with_pr = sum(1 for d in docs if d.get("extracted", {}).get("principle_ids"))
     docs_with_rr = sum(1 for d in docs if d.get("extracted", {}).get("risk_ids"))
 
+    ws_pattern = re.compile(r"^WS-[A-Z0-9-]+$")
+    docs_workstream_ids = {
+        str(ws).upper()
+        for doc in docs
+        for ws in (doc.get("extracted", {}).get("workstream_ids") or [])
+        if isinstance(ws, str) and ws_pattern.match(str(ws).upper())
+    }
+    sor_workstream_ids = {str(ws).upper() for ws in workstream_ids if isinstance(ws, str)}
+    drift_docs_not_in_sor = sorted(docs_workstream_ids - sor_workstream_ids)
+    drift_sor_not_in_docs = sorted(sor_workstream_ids - docs_workstream_ids)
+
+    if drift_docs_not_in_sor or drift_sor_not_in_docs:
+        add_issue(
+            issues,
+            "warning",
+            "DRIFT-WORKSTREAM-IDS",
+            "SoR workstream IDs and doc-extracted WS-* IDs are not fully aligned.",
+            [
+                {
+                    "docs_not_in_sor": drift_docs_not_in_sor,
+                    "sor_not_in_docs": drift_sor_not_in_docs,
+                }
+            ],
+        )
+
     if deliverables and principle_cov == 0:
         add_issue(
             issues,
@@ -239,6 +264,13 @@ def build_quality_report() -> dict[str, Any]:
             "deliverable_risk_refs_pct": (risk_cov / len(deliverables) * 100) if deliverables else 0,
             "docs_with_principles_pct": (docs_with_pr / len(docs) * 100) if docs else 0,
             "docs_with_risks_pct": (docs_with_rr / len(docs) * 100) if docs else 0,
+            "sor_vs_docs_workstream_drift": {
+                "sor_count": len(sor_workstream_ids),
+                "docs_count": len(docs_workstream_ids),
+                "docs_not_in_sor": drift_docs_not_in_sor,
+                "sor_not_in_docs": drift_sor_not_in_docs,
+                "mismatch_count": len(drift_docs_not_in_sor) + len(drift_sor_not_in_docs),
+            },
         },
     }
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-25T03:53:41.683039Z",
+    "generated_at": "2026-02-25T03:47:37.986085Z",
     "sources": [
       "sor/workstreams.yml",
       "sor/timeline.yml",
@@ -38,11 +38,17 @@
     },
     {
       "severity": "warning",
-      "code": "GATE-MAPPING-MISSING",
-      "message": "Some deliverables do not have checkpoint_id mappings.",
+      "code": "DRIFT-WORKSTREAM-IDS",
+      "message": "SoR workstream IDs and doc-extracted WS-* IDs are not fully aligned.",
       "evidence": [
         {
-          "deliverable_id": "del-001"
+          "docs_not_in_sor": [
+            "WS-001",
+            "WS-002",
+            "WS-003",
+            "WS-XXX"
+          ],
+          "sor_not_in_docs": []
         }
       ]
     },
@@ -52,7 +58,7 @@
       "message": "No deliverables currently include principle_refs.",
       "evidence": [
         {
-          "deliverable_count": 1
+          "deliverable_count": 18
         }
       ]
     },
@@ -62,7 +68,7 @@
       "message": "No deliverables currently include risk_refs.",
       "evidence": [
         {
-          "deliverable_count": 1
+          "deliverable_count": 18
         }
       ]
     }
@@ -71,6 +77,18 @@
     "deliverable_principle_refs_pct": 0.0,
     "deliverable_risk_refs_pct": 0.0,
     "docs_with_principles_pct": 2.666666666666667,
-    "docs_with_risks_pct": 2.666666666666667
+    "docs_with_risks_pct": 2.666666666666667,
+    "sor_vs_docs_workstream_drift": {
+      "sor_count": 8,
+      "docs_count": 12,
+      "docs_not_in_sor": [
+        "WS-001",
+        "WS-002",
+        "WS-003",
+        "WS-XXX"
+      ],
+      "sor_not_in_docs": [],
+      "mismatch_count": 4
+    }
   }
 }

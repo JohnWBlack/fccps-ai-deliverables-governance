@@ -1,0 +1,1678 @@
+{
+  "meta": {
+    "generated_at": "2026-02-25T03:47:49Z",
+    "snapshot_version_key": "e3b25c532b9598137d6357705554ae9c49427580"
+  },
+  "snapshot": {
+    "meta": {
+      "generated_at": "2026-02-25T03:47:19.906795Z",
+      "source_version": "1.1.0",
+      "version_key": "e3b25c532b9598137d6357705554ae9c49427580"
+    },
+    "metadata": {
+      "generated_at": "2026-02-25T03:47:19.906795Z",
+      "source_version": "1.1.0",
+      "version_key": "e3b25c532b9598137d6357705554ae9c49427580",
+      "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
+    },
+    "workstreams": [
+      {
+        "id": "WS-RSB",
+        "name": "Research & Shared Baseline",
+        "description": "Shared baseline on capabilities, limits, misconceptions, and district-facing context.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-05-15",
+        "priority": "high",
+        "tags": [
+          "baseline",
+          "research",
+          "definitions"
+        ]
+      },
+      {
+        "id": "WS-POL",
+        "name": "Policy/Recommendation Drafting",
+        "description": "Integrates workstream outputs into policy recommendations and board-ready artifacts.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-05-15",
+        "priority": "high",
+        "tags": [
+          "policy",
+          "integration",
+          "board"
+        ]
+      },
+      {
+        "id": "WS-CPX",
+        "name": "Classroom Practice & Examples",
+        "description": "Develops grade-banded classroom scenarios and teacher-facing implementation examples.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-04-10",
+        "priority": "high",
+        "tags": [
+          "classroom",
+          "examples",
+          "guidance"
+        ]
+      },
+      {
+        "id": "WS-AIN",
+        "name": "Assessment & Integrity",
+        "description": "Defines attribution expectations and academic integrity guardrails by grade and assessment type.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-04-10",
+        "priority": "high",
+        "tags": [
+          "assessment",
+          "integrity",
+          "attribution"
+        ]
+      },
+      {
+        "id": "WS-DPS",
+        "name": "Data Privacy & Security",
+        "description": "Produces privacy/security requirements and AI tool review governance criteria.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-04-10",
+        "priority": "high",
+        "tags": [
+          "privacy",
+          "security",
+          "procurement"
+        ]
+      },
+      {
+        "id": "WS-EQA",
+        "name": "Equity & Access",
+        "description": "Applies an equity and accessibility lens to policy, tools, and implementation pathways.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-04-10",
+        "priority": "high",
+        "tags": [
+          "equity",
+          "access",
+          "accessibility"
+        ]
+      },
+      {
+        "id": "WS-CCI",
+        "name": "Communications & Community Input",
+        "description": "Creates stakeholder communications, FAQ artifacts, and community feedback intake plans.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-05-15",
+        "priority": "medium",
+        "tags": [
+          "communications",
+          "community",
+          "faq"
+        ]
+      },
+      {
+        "id": "WS-IPC",
+        "name": "Implementation/PD & Change Adoption",
+        "description": "Defines rollout, professional development, and continuous-improvement operating model.",
+        "status": "active",
+        "start_date": "2026-01-23",
+        "target_completion": "2026-05-15",
+        "priority": "medium",
+        "tags": [
+          "implementation",
+          "professional-development",
+          "adoption"
+        ]
+      }
+    ],
+    "timeline_events": [
+      {
+        "id": "m1",
+        "title": "Meeting 1",
+        "description": "Committee formation and charter baseline.",
+        "date": "2026-01-23",
+        "type": "meeting",
+        "status": "completed",
+        "importance": "high"
+      },
+      {
+        "id": "m2",
+        "title": "Meeting 2",
+        "description": "Shared baseline alignment and working agreements confirmation.",
+        "date": "2026-02-06",
+        "type": "meeting",
+        "status": "completed",
+        "importance": "high"
+      },
+      {
+        "id": "m3",
+        "title": "Meeting 3",
+        "description": "Values/principles checkpoint and pre-read integration.",
+        "date": "2026-02-20",
+        "type": "meeting",
+        "status": "completed",
+        "importance": "high"
+      },
+      {
+        "id": "ms_policy_principles",
+        "title": "Policy principles delivered",
+        "description": "Formal policy principles package completed.",
+        "date": "2026-02-20",
+        "type": "milestone",
+        "status": "completed",
+        "importance": "high"
+      },
+      {
+        "id": "m4",
+        "title": "Meeting 4",
+        "description": "Recommendations outline and risk register checkpoint.",
+        "date": "2026-03-06",
+        "type": "meeting",
+        "status": "upcoming",
+        "importance": "high"
+      },
+      {
+        "id": "m5",
+        "title": "Meeting 5",
+        "description": "Draft recommendations workshop and integration sequencing.",
+        "date": "2026-03-20",
+        "type": "meeting",
+        "status": "upcoming",
+        "importance": "high"
+      },
+      {
+        "id": "ms_draft_sections_complete",
+        "title": "Draft sections complete",
+        "description": "Initial domain draft package is complete for integration.",
+        "date": "2026-03-20",
+        "type": "milestone",
+        "status": "upcoming",
+        "importance": "high"
+      },
+      {
+        "id": "m6",
+        "title": "Meeting 6",
+        "description": "Near-final package integration and comms/implementation alignment.",
+        "date": "2026-04-10",
+        "type": "meeting",
+        "status": "upcoming",
+        "importance": "high"
+      },
+      {
+        "id": "ms_board_ready",
+        "title": "Board-ready package",
+        "description": "Board-ready recommendation package is assembled for final review.",
+        "date": "2026-04-10",
+        "type": "milestone",
+        "status": "upcoming",
+        "importance": "high"
+      },
+      {
+        "id": "m7",
+        "title": "Meeting 7",
+        "description": "Presentation prep and final review feedback assimilation.",
+        "date": "2026-04-24",
+        "type": "meeting",
+        "status": "upcoming",
+        "importance": "medium"
+      },
+      {
+        "id": "m8",
+        "title": "Meeting 8",
+        "description": "Formal committee response approval checkpoint.",
+        "date": "2026-05-15",
+        "type": "meeting",
+        "status": "upcoming",
+        "importance": "high"
+      },
+      {
+        "id": "ms_final_recs",
+        "title": "Final recommendations delivered",
+        "description": "Committee final recommendation package delivered.",
+        "date": "2026-05-15",
+        "type": "milestone",
+        "status": "upcoming",
+        "importance": "high"
+      }
+    ],
+    "deliverables": [
+      {
+        "id": "charter_v0",
+        "title": "Team Charter v0",
+        "description": "Committee charter and operating scope baseline approved in Meeting 1.",
+        "status": "completed",
+        "due_date": "2026-01-23",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "working_agreements",
+        "title": "Working agreements and collaboration operating rules",
+        "description": "Working agreements, timeline/objectives draft, and collaboration rules.",
+        "status": "completed",
+        "due_date": "2026-02-06",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "pre_m3_defs",
+        "title": "Definitions and assumptions pre-read",
+        "description": "Definitions, assumptions, misconceptions, and draft grade-band framing.",
+        "status": "completed",
+        "due_date": "2026-02-20",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "pre_m3_risks_ops",
+        "title": "Meeting 3 risks/opportunities synthesis",
+        "description": "Collected member submissions of top risks and opportunities for Meeting 3.",
+        "status": "completed",
+        "due_date": "2026-02-20",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "policy_principles",
+        "title": "Policy principles set",
+        "description": "Board-ready policy principles with tradeoff framing.",
+        "status": "in_progress",
+        "due_date": "2026-02-20",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "D-RSB-1",
+        "title": "Shared Baseline Brief v1",
+        "description": "Capabilities, misconceptions, and shared definitions baseline.",
+        "status": "completed",
+        "due_date": "2026-02-20",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "rec_outline_risk_register",
+        "title": "Recommendations outline and first-pass risk register",
+        "description": "Integrated recommendations structure and initial top-risk mitigation register.",
+        "status": "in_progress",
+        "due_date": "2026-03-06",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "D-POL-1",
+        "title": "Policy Skeleton v0",
+        "description": "Policy draft scaffold with sections, decisions, and version log.",
+        "status": "in_progress",
+        "due_date": "2026-03-06",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "D-CPX-1",
+        "title": "Scenario Bank v1",
+        "description": "Grade-banded classroom scenarios with implementation exemplars.",
+        "status": "in_progress",
+        "due_date": "2026-03-06",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "D-AIN-1",
+        "title": "Attribution & Integrity Matrix v1",
+        "description": "Grade-band and assessment-type matrix for attribution and integrity practices.",
+        "status": "in_progress",
+        "due_date": "2026-03-06",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "D-DPS-1",
+        "title": "AI Tool Review Checklist v1 + Risk Tiers",
+        "description": "Privacy/security checklist and risk-tiering model for tool governance.",
+        "status": "in_progress",
+        "due_date": "2026-03-06",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "D-EQA-1",
+        "title": "Equity Impact Checklist v1",
+        "description": "Equity and accessibility lens checklist for policy and implementation decisions.",
+        "status": "in_progress",
+        "due_date": "2026-03-06",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "m5_draft_sections",
+        "title": "Draft sections for priority recommendation domains",
+        "description": "Drafted recommendation sections for selected domains and governance direction.",
+        "status": "not_started",
+        "due_date": "2026-03-20",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "near_final_package",
+        "title": "Near-final recommendation package",
+        "description": "Integrated recommendation package, slide narrative, and gap-owner list.",
+        "status": "not_started",
+        "due_date": "2026-04-10",
+        "priority": "high",
+        "deliverable_type": "presentation",
+        "public_facing": true
+      },
+      {
+        "id": "D-CCI-1",
+        "title": "Comms Pack v1",
+        "description": "Stakeholder messaging, FAQ draft, and community input plan.",
+        "status": "not_started",
+        "due_date": "2026-04-10",
+        "priority": "medium",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "D-IPC-1",
+        "title": "Implementation Roadmap v1",
+        "description": "Implementation and PD roadmap with milestones, cadence, and success measures.",
+        "status": "not_started",
+        "due_date": "2026-04-10",
+        "priority": "medium",
+        "deliverable_type": "document",
+        "public_facing": true
+      },
+      {
+        "id": "final_talk_track",
+        "title": "Final talk track and Q&A prep",
+        "description": "Final presentation talk track and supporting Q&A sheet for review cycle.",
+        "status": "not_started",
+        "due_date": "2026-04-24",
+        "priority": "medium",
+        "deliverable_type": "presentation",
+        "public_facing": true
+      },
+      {
+        "id": "committee_response",
+        "title": "Formal committee response package",
+        "description": "Formal response to proposed policy with guardrails and governance recommendations.",
+        "status": "not_started",
+        "due_date": "2026-05-15",
+        "priority": "high",
+        "deliverable_type": "document",
+        "public_facing": true
+      }
+    ]
+  },
+  "kpis": {
+    "meta": {
+      "generated_at": "2026-02-25T03:47:38.102884Z",
+      "timezone": "America/New_York",
+      "schema_version": "0.2"
+    },
+    "taxonomy": {
+      "categories": {
+        "schedule": "Timeline and readiness metrics for near-term execution.",
+        "convergence": "Internal consistency and linkage quality across SoR and docs.",
+        "freshness": "How recent SoR and supporting documents are.",
+        "publicability": "Publish-safe artifact hygiene checks."
+      },
+      "kpi_definitions": {
+        "KPI-SCHED-01": "Next gate readiness",
+        "KPI-SCHED-02": "Overdue deliverables",
+        "KPI-SCHED-03": "Blocked dependency rate",
+        "KPI-SCHED-04": "Pre-read readiness",
+        "KPI-CONV-01": "SoR reference integrity",
+        "KPI-CONV-02": "Ownership completeness",
+        "KPI-CONV-03": "Gate mapping completeness",
+        "KPI-CONV-04": "Definition-of-done completeness",
+        "KPI-CONV-05": "Principle linkage coverage",
+        "KPI-CONV-06": "Risk linkage coverage",
+        "KPI-CONV-07": "Cross-doc principle coverage",
+        "KPI-CONV-08": "Cross-doc risk coverage",
+        "KPI-CONV-09": "Risk-to-principle mapping readiness",
+        "KPI-CONV-10": "Milestone gating consistency",
+        "KPI-FRESH-01": "SoR recency",
+        "KPI-FRESH-02": "Public artifacts recency",
+        "KPI-FRESH-03": "Foundation docs recency",
+        "KPI-PUB-01": "Public link hygiene",
+        "KPI-PUB-02": "PII lint on public outputs"
+      }
+    },
+    "summary": {
+      "overall_status": "red",
+      "kpi_counts": {
+        "green": 8,
+        "yellow": 3,
+        "red": 6,
+        "gray": 2
+      }
+    },
+    "kpis": [
+      {
+        "id": "KPI-SCHED-01",
+        "category": "schedule",
+        "name": "Next gate readiness",
+        "status": "red",
+        "score": 41,
+        "description": "Share of deliverables due before next gate that are complete.",
+        "rules": [
+          "Score = completed_due_before_gate / due_before_gate * 100."
+        ],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "charter_v0"
+          },
+          {
+            "type": "deliverable",
+            "id": "working_agreements"
+          },
+          {
+            "type": "deliverable",
+            "id": "pre_m3_defs"
+          },
+          {
+            "type": "deliverable",
+            "id": "pre_m3_risks_ops"
+          },
+          {
+            "type": "deliverable",
+            "id": "policy_principles"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-RSB-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "rec_outline_risk_register"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-POL-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-CPX-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-AIN-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-DPS-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-EQA-1"
+          }
+        ],
+        "details": {
+          "instrumented": true,
+          "next_gate_id": "m4",
+          "next_gate_date": "2026-03-06",
+          "due_before_gate": 12,
+          "ready_count": 5
+        }
+      },
+      {
+        "id": "KPI-SCHED-02",
+        "category": "schedule",
+        "name": "Overdue deliverables",
+        "status": "yellow",
+        "score": 75,
+        "description": "Count and severity of overdue deliverables.",
+        "rules": [
+          "Penalty combines overdue count and max overdue days."
+        ],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "policy_principles"
+          }
+        ],
+        "details": {
+          "overdue_count": 1,
+          "max_days_overdue": 5
+        }
+      },
+      {
+        "id": "KPI-SCHED-03",
+        "category": "schedule",
+        "name": "Blocked dependency rate",
+        "status": "red",
+        "score": 40,
+        "description": "Deliverables blocked by unmet dependencies.",
+        "rules": [
+          "Score = (1 - blocked_rate) * 100."
+        ],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "rec_outline_risk_register"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-AIN-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-EQA-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "m5_draft_sections"
+          },
+          {
+            "type": "deliverable",
+            "id": "near_final_package"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-CCI-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-IPC-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "final_talk_track"
+          },
+          {
+            "type": "deliverable",
+            "id": "committee_response"
+          }
+        ],
+        "details": {
+          "deliverables_with_dependencies": 15,
+          "blocked_count": 9
+        }
+      },
+      {
+        "id": "KPI-SCHED-04",
+        "category": "schedule",
+        "name": "Pre-read readiness",
+        "status": "gray",
+        "score": null,
+        "description": "Readiness of pre-read deliverables for the next gate.",
+        "rules": [
+          "No explicit pre-read fields in timeline; KPI is not instrumented."
+        ],
+        "evidence": [],
+        "details": {
+          "instrumented": false
+        }
+      },
+      {
+        "id": "KPI-CONV-01",
+        "category": "convergence",
+        "name": "SoR reference integrity",
+        "status": "green",
+        "score": 100,
+        "description": "No dangling IDs across SoR references.",
+        "rules": [
+          "ID-* issues from quality report reduce score."
+        ],
+        "evidence": [],
+        "details": {
+          "id_issue_count": 0
+        }
+      },
+      {
+        "id": "KPI-CONV-02",
+        "category": "convergence",
+        "name": "Ownership completeness",
+        "status": "green",
+        "score": 100,
+        "description": "Deliverables and workstreams have assigned owners/leads.",
+        "rules": [
+          "Owner-related quality issues reduce score."
+        ],
+        "evidence": [],
+        "details": {
+          "owner_issue_count": 0
+        }
+      },
+      {
+        "id": "KPI-CONV-03",
+        "category": "convergence",
+        "name": "Gate mapping completeness",
+        "status": "green",
+        "score": 100,
+        "description": "Deliverables map to valid timeline checkpoints.",
+        "rules": [
+          "Missing or invalid checkpoint mappings reduce score."
+        ],
+        "evidence": [],
+        "details": {
+          "gate_issue_count": 0
+        }
+      },
+      {
+        "id": "KPI-CONV-04",
+        "category": "convergence",
+        "name": "DoD completeness and placeholder-free",
+        "status": "green",
+        "score": 100,
+        "description": "Definition-of-done is sufficiently detailed and not placeholder text.",
+        "rules": [
+          "Placeholder DoD bullets reduce score."
+        ],
+        "evidence": [
+          {
+            "type": "issue",
+            "id": "PLACEHOLDER-DOD"
+          }
+        ],
+        "details": {
+          "placeholder_dod_issues": 0
+        }
+      },
+      {
+        "id": "KPI-CONV-05",
+        "category": "convergence",
+        "name": "Principle linkage coverage",
+        "status": "yellow",
+        "score": 70,
+        "description": "Percent of deliverables with principle_refs.",
+        "rules": [
+          "Coverage = deliverables with principle_refs / total deliverables."
+        ],
+        "evidence": [],
+        "details": {
+          "coverage_pct": 0,
+          "authoritative_source": "derived from references"
+        }
+      },
+      {
+        "id": "KPI-CONV-06",
+        "category": "convergence",
+        "name": "Risk linkage coverage",
+        "status": "yellow",
+        "score": 70,
+        "description": "Percent of deliverables with risk_refs.",
+        "rules": [
+          "Coverage = deliverables with risk_refs / total deliverables."
+        ],
+        "evidence": [],
+        "details": {
+          "coverage_pct": 0,
+          "authoritative_source": "derived from references"
+        }
+      },
+      {
+        "id": "KPI-CONV-07",
+        "category": "convergence",
+        "name": "Cross-doc principle coverage",
+        "status": "red",
+        "score": 2,
+        "description": "Percent of scanned docs that reference at least one principle ID.",
+        "rules": [
+          "Green >=70, yellow >=40, red <40."
+        ],
+        "evidence": [
+          {
+            "type": "doc",
+            "id": "docs/CONVENTIONS.md"
+          },
+          {
+            "type": "doc",
+            "id": "docs/schema_notes.md"
+          }
+        ],
+        "details": {
+          "coverage_pct": 2,
+          "scanned_docs": 75
+        }
+      },
+      {
+        "id": "KPI-CONV-08",
+        "category": "convergence",
+        "name": "Cross-doc risk coverage",
+        "status": "red",
+        "score": 2,
+        "description": "Percent of scanned docs that reference at least one risk ID.",
+        "rules": [
+          "Green >=70, yellow >=40, red <40."
+        ],
+        "evidence": [
+          {
+            "type": "doc",
+            "id": "docs/CONVENTIONS.md"
+          },
+          {
+            "type": "doc",
+            "id": "docs/schema_notes.md"
+          }
+        ],
+        "details": {
+          "coverage_pct": 2,
+          "scanned_docs": 75
+        }
+      },
+      {
+        "id": "KPI-CONV-09",
+        "category": "convergence",
+        "name": "Risk→principle mapping readiness",
+        "status": "gray",
+        "score": null,
+        "description": "Coverage of risk IDs linked to principle IDs.",
+        "rules": [
+          "No risk register found; KPI not instrumented."
+        ],
+        "evidence": [],
+        "details": {
+          "instrumented": false
+        }
+      },
+      {
+        "id": "KPI-CONV-10",
+        "category": "convergence",
+        "name": "Milestone gating consistency",
+        "status": "red",
+        "score": 5,
+        "description": "Deliverables are checkpointed against milestone gates.",
+        "rules": [
+          "Deliverables should be mapped to ms_* checkpoint IDs when applicable."
+        ],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "policy_principles"
+          }
+        ],
+        "details": {
+          "milestones": [
+            "ms_board_ready",
+            "ms_draft_sections_complete",
+            "ms_final_recs",
+            "ms_policy_principles"
+          ],
+          "mapped_deliverables": 1,
+          "total_deliverables": 18
+        }
+      },
+      {
+        "id": "KPI-FRESH-01",
+        "category": "freshness",
+        "name": "SoR recency",
+        "status": "green",
+        "score": 100,
+        "description": "SoR files updated within freshness window.",
+        "rules": [
+          "Files older than 7 days are stale."
+        ],
+        "evidence": [],
+        "details": {
+          "stale_sor_files": [],
+          "threshold_days": 7
+        }
+      },
+      {
+        "id": "KPI-FRESH-02",
+        "category": "freshness",
+        "name": "Public artifacts recency",
+        "status": "green",
+        "score": 100,
+        "description": "Derived public artifacts are freshly generated.",
+        "rules": [
+          "Public artifacts should be updated within 7 days."
+        ],
+        "evidence": [],
+        "details": {
+          "stale_public_artifacts": []
+        }
+      },
+      {
+        "id": "KPI-FRESH-03",
+        "category": "freshness",
+        "name": "Foundation docs recency",
+        "status": "green",
+        "score": 95,
+        "description": "Recency profile for governance_docs and project_files updates.",
+        "rules": [
+          "If no foundation docs updated in >14 days => yellow; >30 days => red."
+        ],
+        "evidence": [],
+        "details": {
+          "oldest_age_days": 2,
+          "sample_count": 205
+        }
+      },
+      {
+        "id": "KPI-PUB-01",
+        "category": "publicability",
+        "name": "Public link hygiene",
+        "status": "red",
+        "score": 0,
+        "description": "Deliverables must have public_url or committee_only=true.",
+        "rules": [
+          "Missing visibility metadata reduces score."
+        ],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "charter_v0"
+          },
+          {
+            "type": "deliverable",
+            "id": "working_agreements"
+          },
+          {
+            "type": "deliverable",
+            "id": "pre_m3_defs"
+          },
+          {
+            "type": "deliverable",
+            "id": "pre_m3_risks_ops"
+          },
+          {
+            "type": "deliverable",
+            "id": "policy_principles"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-RSB-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "rec_outline_risk_register"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-POL-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-CPX-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-AIN-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-DPS-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-EQA-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "m5_draft_sections"
+          },
+          {
+            "type": "deliverable",
+            "id": "near_final_package"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-CCI-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-IPC-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "final_talk_track"
+          },
+          {
+            "type": "deliverable",
+            "id": "committee_response"
+          }
+        ],
+        "details": {
+          "non_compliant": [
+            {
+              "id": "charter_v0",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "working_agreements",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "pre_m3_defs",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "pre_m3_risks_ops",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "policy_principles",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-RSB-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "rec_outline_risk_register",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-POL-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-CPX-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-AIN-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-DPS-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-EQA-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "m5_draft_sections",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "near_final_package",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-CCI-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "D-IPC-1",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "final_talk_track",
+              "reason": "missing_public_url_or_committee_only"
+            },
+            {
+              "id": "committee_response",
+              "reason": "missing_public_url_or_committee_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "KPI-PUB-02",
+        "category": "publicability",
+        "name": "PII lint",
+        "status": "green",
+        "score": 100,
+        "description": "Public outputs should not include email addresses.",
+        "rules": [
+          "Any email-like token in public/*.json is red."
+        ],
+        "evidence": [],
+        "details": {
+          "pii_files": []
+        }
+      }
+    ]
+  },
+  "kpi_evidence": {
+    "meta": {
+      "generated_at": "2026-02-25T03:47:38.102902Z",
+      "description": "Expanded evidence payload keyed by KPI id."
+    },
+    "evidence": {
+      "KPI-SCHED-01": [
+        {
+          "type": "deliverable",
+          "id": "charter_v0",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "working_agreements",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_defs",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_risks_ops",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "policy_principles",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-RSB-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ],
+      "KPI-SCHED-02": [
+        {
+          "type": "deliverable",
+          "id": "policy_principles",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ],
+      "KPI-SCHED-03": [
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "m5_draft_sections",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "near_final_package",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CCI-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-IPC-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "final_talk_track",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "committee_response",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ],
+      "KPI-SCHED-04": [],
+      "KPI-CONV-01": [],
+      "KPI-CONV-02": [],
+      "KPI-CONV-03": [],
+      "KPI-CONV-04": [
+        {
+          "type": "issue",
+          "id": "PLACEHOLDER-DOD",
+          "doc_path": "public/quality_report.json"
+        }
+      ],
+      "KPI-CONV-05": [],
+      "KPI-CONV-06": [],
+      "KPI-CONV-07": [
+        {
+          "type": "doc",
+          "id": "docs/CONVENTIONS.md",
+          "doc_path": "docs/CONVENTIONS.md"
+        },
+        {
+          "type": "doc",
+          "id": "docs/schema_notes.md",
+          "doc_path": "docs/schema_notes.md"
+        }
+      ],
+      "KPI-CONV-08": [
+        {
+          "type": "doc",
+          "id": "docs/CONVENTIONS.md",
+          "doc_path": "docs/CONVENTIONS.md"
+        },
+        {
+          "type": "doc",
+          "id": "docs/schema_notes.md",
+          "doc_path": "docs/schema_notes.md"
+        }
+      ],
+      "KPI-CONV-09": [],
+      "KPI-CONV-10": [
+        {
+          "type": "deliverable",
+          "id": "policy_principles",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ],
+      "KPI-FRESH-01": [],
+      "KPI-FRESH-02": [],
+      "KPI-FRESH-03": [],
+      "KPI-PUB-01": [
+        {
+          "type": "deliverable",
+          "id": "charter_v0",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "working_agreements",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_defs",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_risks_ops",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "policy_principles",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-RSB-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "m5_draft_sections",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "near_final_package",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CCI-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-IPC-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "final_talk_track",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "committee_response",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ],
+      "KPI-PUB-02": [],
+      "KPI-READY-01": [],
+      "KPI-READY-02": [],
+      "KPI-READY-03": [
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CCI-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-IPC-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-RSB-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "charter_v0",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "committee_response",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "final_talk_track",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "m5_draft_sections",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "near_final_package",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "policy_principles",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_defs",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_risks_ops",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "working_agreements",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ],
+      "KPI-READY-04": [
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CCI-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-IPC-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-RSB-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "charter_v0",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "committee_response",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "final_talk_track",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "m5_draft_sections",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "near_final_package",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "policy_principles",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_defs",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_risks_ops",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "working_agreements",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ],
+      "KPI-READY-05": [
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CCI-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-IPC-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-RSB-1",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "charter_v0",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "committee_response",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "final_talk_track",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "m5_draft_sections",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "near_final_package",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "policy_principles",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_defs",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_risks_ops",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register",
+          "doc_path": "sor/deliverables.yml"
+        },
+        {
+          "type": "deliverable",
+          "id": "working_agreements",
+          "doc_path": "sor/deliverables.yml"
+        }
+      ]
+    }
+  },
+  "quality_report": {
+    "meta": {
+      "generated_at": "2026-02-25T03:47:37.986085Z",
+      "sources": [
+        "sor/workstreams.yml",
+        "sor/timeline.yml",
+        "sor/deliverables.yml",
+        "public/ref_index.json"
+      ]
+    },
+    "summary_counts": {
+      "error": 0,
+      "warning": 3,
+      "info": 1
+    },
+    "issues": [
+      {
+        "severity": "info",
+        "code": "PLACEHOLDER-MARKDOWN",
+        "message": "Markdown supporting docs include TBD/TODO/??? tokens.",
+        "evidence": [
+          {
+            "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md"
+          },
+          {
+            "doc_path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md"
+          },
+          {
+            "doc_path": "governance_docs/Workstreams/rsb/Shared Baseline v01.md"
+          },
+          {
+            "doc_path": "project_files/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md"
+          },
+          {
+            "doc_path": "project_files/workstreams/rsb/Shared Baseline v01.md"
+          }
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "DRIFT-WORKSTREAM-IDS",
+        "message": "SoR workstream IDs and doc-extracted WS-* IDs are not fully aligned.",
+        "evidence": [
+          {
+            "docs_not_in_sor": [
+              "WS-001",
+              "WS-002",
+              "WS-003",
+              "WS-XXX"
+            ],
+            "sor_not_in_docs": []
+          }
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "INSTRUMENTATION-PRINCIPLES",
+        "message": "No deliverables currently include principle_refs.",
+        "evidence": [
+          {
+            "deliverable_count": 18
+          }
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "INSTRUMENTATION-RISKS",
+        "message": "No deliverables currently include risk_refs.",
+        "evidence": [
+          {
+            "deliverable_count": 18
+          }
+        ]
+      }
+    ],
+    "metrics": {
+      "deliverable_principle_refs_pct": 0.0,
+      "deliverable_risk_refs_pct": 0.0,
+      "docs_with_principles_pct": 2.666666666666667,
+      "docs_with_risks_pct": 2.666666666666667,
+      "sor_vs_docs_workstream_drift": {
+        "sor_count": 8,
+        "docs_count": 12,
+        "docs_not_in_sor": [
+          "WS-001",
+          "WS-002",
+          "WS-003",
+          "WS-XXX"
+        ],
+        "sor_not_in_docs": [],
+        "mismatch_count": 4
+      }
+    }
+  }
+}

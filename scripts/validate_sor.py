@@ -12,6 +12,7 @@ Validates YAML files in the sor/ directory for:
 import yaml
 import sys
 import os
+import re
 from datetime import datetime
 from typing import Dict, List, Any
 
@@ -22,6 +23,8 @@ VALID_TIMELINE_STATUS = ["completed", "upcoming", "cancelled"]
 VALID_PRIORITY = ["high", "medium", "low"]
 VALID_TIMELINE_TYPE = ["milestone", "deadline", "meeting", "review"]
 VALID_DELIVERABLE_TYPE = ["document", "presentation", "software", "other"]
+LEGACY_WORKSTREAM_ID_PATTERN = re.compile(r"^ws-\d+$", re.IGNORECASE)
+LEGACY_DELIVERABLE_ID_PATTERN = re.compile(r"^del-\d+$", re.IGNORECASE)
 
 
 def extract_id_set(data: Dict[str, Any], list_key: str) -> set:
@@ -83,6 +86,13 @@ def validate_workstreams(data: Dict[str, Any]) -> None:
             print(f"❌ Duplicate workstream ID: {ws_id}")
             sys.exit(1)
         workstream_ids.add(ws_id)
+
+        if LEGACY_WORKSTREAM_ID_PATTERN.match(str(ws_id)):
+            print(
+                f"❌ Workstream {ws_id} uses deprecated ID format. "
+                "Use canonical WS-* IDs (for example, WS-RSB) or provide an explicit mapping table."
+            )
+            sys.exit(1)
         
         # Validate required fields
         required_fields = ["name", "description", "status", "lead", "start_date", "target_completion", "priority"]
@@ -210,6 +220,13 @@ def validate_deliverables(
             print(f"❌ Duplicate deliverable ID: {del_id}")
             sys.exit(1)
         deliverable_ids.add(del_id)
+
+        if LEGACY_DELIVERABLE_ID_PATTERN.match(str(del_id)):
+            print(
+                f"❌ Deliverable {del_id} uses deprecated ID format. "
+                "Use canonical D-* or committee artifact IDs consistently, or provide an explicit mapping table."
+            )
+            sys.exit(1)
         
         # Validate required fields
         required_fields = ["title", "description", "status", "workstream_id", "assigned_to", "due_date", "priority", "deliverable_type", "public_facing"]

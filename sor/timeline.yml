@@ -1,22 +1,140 @@
 # FCCPS AI Committee Timeline
-# Source of Truth for key milestones and timeline events
+# Canonical checkpoints and gates aligned to governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md
 
-# Metadata
 metadata:
-  version: "1.0.0"
-  last_updated: "2026-02-23"
-  description: "FCCPS AI Committee timeline and key milestones"
+  version: "1.1.0"
+  last_updated: "2026-02-24"
+  description: "FCCPS AI Committee meeting timeline, checkpoints, and governance gates"
 
-# Timeline events array
 timeline_events:
-  # Example timeline event
-  - id: "te-001"
-    title: "AI Committee Formation"
-    description: "Official formation of FCCPS AI Committee"
-    date: "2026-01-01"
-    type: "milestone"  # milestone, deadline, meeting, review
-    status: "completed"  # completed, upcoming, cancelled
-    workstream_id: "ws-001"
-    importance: "high"  # high, medium, low
-    
-  # Add additional timeline events here
+  - id: "m1"
+    title: "Meeting 1"
+    description: "Committee formation and charter baseline."
+    date: "2026-01-23"
+    type: "meeting"
+    status: "completed"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "charter_baseline"
+
+  - id: "m2"
+    title: "Meeting 2"
+    description: "Shared baseline alignment and working agreements confirmation."
+    date: "2026-02-06"
+    type: "meeting"
+    status: "completed"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "workstream_alignment"
+
+  - id: "m3"
+    title: "Meeting 3"
+    description: "Values/principles checkpoint and pre-read integration."
+    date: "2026-02-20"
+    type: "meeting"
+    status: "completed"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "principles_decision"
+
+  - id: "ms_policy_principles"
+    title: "Policy principles delivered"
+    description: "Formal policy principles package completed."
+    date: "2026-02-20"
+    type: "milestone"
+    status: "completed"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "principles_package"
+
+  - id: "m4"
+    title: "Meeting 4"
+    description: "Recommendations outline and risk register checkpoint."
+    date: "2026-03-06"
+    type: "meeting"
+    status: "upcoming"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "outline_and_risk_register"
+
+  - id: "m5"
+    title: "Meeting 5"
+    description: "Draft recommendations workshop and integration sequencing."
+    date: "2026-03-20"
+    type: "meeting"
+    status: "upcoming"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "draft_sections_workshop"
+
+  - id: "ms_draft_sections_complete"
+    title: "Draft sections complete"
+    description: "Initial domain draft package is complete for integration."
+    date: "2026-03-20"
+    type: "milestone"
+    status: "upcoming"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "draft_package_ready"
+
+  - id: "m6"
+    title: "Meeting 6"
+    description: "Near-final package integration and comms/implementation alignment."
+    date: "2026-04-10"
+    type: "meeting"
+    status: "upcoming"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "near_final_integration"
+
+  - id: "ms_board_ready"
+    title: "Board-ready package"
+    description: "Board-ready recommendation package is assembled for final review."
+    date: "2026-04-10"
+    type: "milestone"
+    status: "upcoming"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "board_ready"
+
+  - id: "m7"
+    title: "Meeting 7"
+    description: "Presentation prep and final review feedback assimilation."
+    date: "2026-04-24"
+    type: "meeting"
+    status: "upcoming"
+    workstream_id: "WS-CCI"
+    importance: "medium"
+    is_gate: true
+    gate_label: "talk_track_finalize"
+
+  - id: "m8"
+    title: "Meeting 8"
+    description: "Formal committee response approval checkpoint."
+    date: "2026-05-15"
+    type: "meeting"
+    status: "upcoming"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "final_response"
+
+  - id: "ms_final_recs"
+    title: "Final recommendations delivered"
+    description: "Committee final recommendation package delivered."
+    date: "2026-05-15"
+    type: "milestone"
+    status: "upcoming"
+    workstream_id: "WS-POL"
+    importance: "high"
+    is_gate: true
+    gate_label: "final_recommendations"

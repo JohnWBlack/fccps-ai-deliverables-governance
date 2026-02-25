@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-25T03:53:41.772060Z",
+    "generated_at": "2026-02-25T03:47:38.102884Z",
     "timezone": "America/New_York",
     "schema_version": "0.2"
   },
@@ -37,8 +37,9 @@
     "overall_status": "red",
     "kpi_counts": {
       "green": 8,
-      "yellow": 8,
-      "red": 3
+      "yellow": 3,
+      "red": 6,
+      "gray": 2
     }
   },
   "kpis": [
@@ -46,54 +47,150 @@
       "id": "KPI-SCHED-01",
       "category": "schedule",
       "name": "Next gate readiness",
-      "status": "yellow",
-      "score": 70,
+      "status": "red",
+      "score": 41,
       "description": "Share of deliverables due before next gate that are complete.",
       "rules": [
-        "No upcoming timeline gate found; mark as not instrumented."
+        "Score = completed_due_before_gate / due_before_gate * 100."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "charter_v0"
+        },
+        {
+          "type": "deliverable",
+          "id": "working_agreements"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_defs"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_risks_ops"
+        },
+        {
+          "type": "deliverable",
+          "id": "policy_principles"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-RSB-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1"
+        }
+      ],
       "details": {
-        "instrumented": false
+        "instrumented": true,
+        "next_gate_id": "m4",
+        "next_gate_date": "2026-03-06",
+        "due_before_gate": 12,
+        "ready_count": 5
       }
     },
     {
       "id": "KPI-SCHED-02",
       "category": "schedule",
       "name": "Overdue deliverables",
-      "status": "green",
-      "score": 100,
+      "status": "yellow",
+      "score": 75,
       "description": "Count and severity of overdue deliverables.",
       "rules": [
         "Penalty combines overdue count and max overdue days."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "policy_principles"
+        }
+      ],
       "details": {
-        "overdue_count": 0,
-        "max_days_overdue": 0
+        "overdue_count": 1,
+        "max_days_overdue": 5
       }
     },
     {
       "id": "KPI-SCHED-03",
       "category": "schedule",
       "name": "Blocked dependency rate",
-      "status": "yellow",
-      "score": 70,
+      "status": "red",
+      "score": 40,
       "description": "Deliverables blocked by unmet dependencies.",
       "rules": [
-        "No depends_on relationships present in SoR."
+        "Score = (1 - blocked_rate) * 100."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "m5_draft_sections"
+        },
+        {
+          "type": "deliverable",
+          "id": "near_final_package"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CCI-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-IPC-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "final_talk_track"
+        },
+        {
+          "type": "deliverable",
+          "id": "committee_response"
+        }
+      ],
       "details": {
-        "instrumented": false
+        "deliverables_with_dependencies": 15,
+        "blocked_count": 9
       }
     },
     {
       "id": "KPI-SCHED-04",
       "category": "schedule",
       "name": "Pre-read readiness",
-      "status": "yellow",
-      "score": 70,
+      "status": "gray",
+      "score": null,
       "description": "Readiness of pre-read deliverables for the next gate.",
       "rules": [
         "No explicit pre-read fields in timeline; KPI is not instrumented."
@@ -137,20 +234,15 @@
       "id": "KPI-CONV-03",
       "category": "convergence",
       "name": "Gate mapping completeness",
-      "status": "yellow",
-      "score": 80,
+      "status": "green",
+      "score": 100,
       "description": "Deliverables map to valid timeline checkpoints.",
       "rules": [
         "Missing or invalid checkpoint mappings reduce score."
       ],
-      "evidence": [
-        {
-          "type": "issue",
-          "id": "GATE-MAPPING-MISSING"
-        }
-      ],
+      "evidence": [],
       "details": {
-        "gate_issue_count": 1
+        "gate_issue_count": 0
       }
     },
     {
@@ -259,8 +351,8 @@
       "id": "KPI-CONV-09",
       "category": "convergence",
       "name": "Risk→principle mapping readiness",
-      "status": "yellow",
-      "score": 70,
+      "status": "gray",
+      "score": null,
       "description": "Coverage of risk IDs linked to principle IDs.",
       "rules": [
         "No risk register found; KPI not instrumented."
@@ -274,15 +366,27 @@
       "id": "KPI-CONV-10",
       "category": "convergence",
       "name": "Milestone gating consistency",
-      "status": "yellow",
-      "score": 70,
+      "status": "red",
+      "score": 5,
       "description": "Deliverables are checkpointed against milestone gates.",
       "rules": [
-        "No ms_* milestones in timeline; not instrumented."
+        "Deliverables should be mapped to ms_* checkpoint IDs when applicable."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "policy_principles"
+        }
+      ],
       "details": {
-        "instrumented": false
+        "milestones": [
+          "ms_board_ready",
+          "ms_draft_sections_complete",
+          "ms_final_recs",
+          "ms_policy_principles"
+        ],
+        "mapped_deliverables": 1,
+        "total_deliverables": 18
       }
     },
     {
@@ -345,13 +449,149 @@
       "evidence": [
         {
           "type": "deliverable",
-          "id": "del-001"
+          "id": "charter_v0"
+        },
+        {
+          "type": "deliverable",
+          "id": "working_agreements"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_defs"
+        },
+        {
+          "type": "deliverable",
+          "id": "pre_m3_risks_ops"
+        },
+        {
+          "type": "deliverable",
+          "id": "policy_principles"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-RSB-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "m5_draft_sections"
+        },
+        {
+          "type": "deliverable",
+          "id": "near_final_package"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CCI-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-IPC-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "final_talk_track"
+        },
+        {
+          "type": "deliverable",
+          "id": "committee_response"
         }
       ],
       "details": {
         "non_compliant": [
           {
-            "id": "del-001",
+            "id": "charter_v0",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "working_agreements",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "pre_m3_defs",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "pre_m3_risks_ops",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "policy_principles",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-RSB-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "rec_outline_risk_register",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-POL-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-CPX-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-AIN-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-DPS-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-EQA-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "m5_draft_sections",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "near_final_package",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-CCI-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "D-IPC-1",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "final_talk_track",
+            "reason": "missing_public_url_or_committee_only"
+          },
+          {
+            "id": "committee_response",
             "reason": "missing_public_url_or_committee_only"
           }
         ]

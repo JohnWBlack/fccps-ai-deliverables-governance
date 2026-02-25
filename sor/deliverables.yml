@@ -1,25 +1,314 @@
 # FCCPS AI Committee Deliverables
-# Source of Truth for all committee deliverables
+# Canonical deliverables list aligned to governance_docs/FCCPS_AIAC_Deliverables_Index.md
 
-# Metadata
 metadata:
-  version: "1.0.0"
-  last_updated: "2026-02-23"
-  description: "FCCPS AI Committee deliverables and their status"
+  version: "1.1.0"
+  last_updated: "2026-02-24"
+  description: "FCCPS AI Committee deliverables and committee artifacts"
 
-# Deliverables array
 deliverables:
-  # Example deliverable
-  - id: "del-001"
-    title: "AI Policy Framework Document"
-    description: "Comprehensive framework for AI policy implementation"
-    status: "in_progress"  # not_started, in_progress, completed, cancelled
-    workstream_id: "ws-001"
-    assigned_to: "Policy Subcommittee"
-    due_date: "2026-05-15"
-    priority: "high"  # high, medium, low
-    deliverable_type: "document"  # document, presentation, software, other
+  - id: "charter_v0"
+    title: "Team Charter v0"
+    description: "Committee charter and operating scope baseline approved in Meeting 1."
+    status: "completed"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE"
+    assigned_to: "John Black (Chair) + committee"
+    owner: "John Black (Chair) + committee"
+    due_date: "2026-01-23"
+    checkpoint_id: "m1"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: []
     public_facing: true
-    internal_notes: "Draft version under review"
-    
-  # Add additional deliverables here
+    committee_only: false
+    public_url: ""
+
+  - id: "working_agreements"
+    title: "Working agreements and collaboration operating rules"
+    description: "Working agreements, timeline/objectives draft, and collaboration rules."
+    status: "completed"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE"
+    assigned_to: "John Black (Chair)"
+    owner: "John Black (Chair)"
+    due_date: "2026-02-06"
+    checkpoint_id: "m2"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["charter_v0"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "pre_m3_defs"
+    title: "Definitions and assumptions pre-read"
+    description: "Definitions, assumptions, misconceptions, and draft grade-band framing."
+    status: "completed"
+    workstream_id: "WS-RSB"
+    workstream: "COMMITTEE/WS-RSB"
+    assigned_to: "Tom Colvin (WS-RSB) + John Black (integration)"
+    owner: "Tom Colvin (WS-RSB) + John Black (integration)"
+    due_date: "2026-02-20"
+    checkpoint_id: "m3"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["working_agreements"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "pre_m3_risks_ops"
+    title: "Meeting 3 risks/opportunities synthesis"
+    description: "Collected member submissions of top risks and opportunities for Meeting 3."
+    status: "completed"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE"
+    assigned_to: "All members + John Black (synthesis)"
+    owner: "All members + John Black (synthesis)"
+    due_date: "2026-02-20"
+    checkpoint_id: "m3"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["working_agreements"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "policy_principles"
+    title: "Policy principles set"
+    description: "Board-ready policy principles with tradeoff framing."
+    status: "in_progress"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE"
+    assigned_to: "Committee (facilitated by John Black)"
+    owner: "Committee (facilitated by John Black)"
+    due_date: "2026-02-20"
+    checkpoint_id: "ms_policy_principles"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["pre_m3_defs", "pre_m3_risks_ops"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-RSB-1"
+    title: "Shared Baseline Brief v1"
+    description: "Capabilities, misconceptions, and shared definitions baseline."
+    status: "completed"
+    workstream_id: "WS-RSB"
+    workstream: "WS-RSB"
+    assigned_to: "Tom Colvin"
+    owner: "Tom Colvin"
+    due_date: "2026-02-20"
+    checkpoint_id: "m3"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: []
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "rec_outline_risk_register"
+    title: "Recommendations outline and first-pass risk register"
+    description: "Integrated recommendations structure and initial top-risk mitigation register."
+    status: "in_progress"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE/WS-POL"
+    assigned_to: "WS-POL + domain leads"
+    owner: "WS-POL + domain leads"
+    due_date: "2026-03-06"
+    checkpoint_id: "m4"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["policy_principles"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-POL-1"
+    title: "Policy Skeleton v0"
+    description: "Policy draft scaffold with sections, decisions, and version log."
+    status: "in_progress"
+    workstream_id: "WS-POL"
+    workstream: "WS-POL"
+    assigned_to: "David N. Berol"
+    owner: "David N. Berol"
+    due_date: "2026-03-06"
+    checkpoint_id: "m4"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["D-RSB-1"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-CPX-1"
+    title: "Scenario Bank v1"
+    description: "Grade-banded classroom scenarios with implementation exemplars."
+    status: "in_progress"
+    workstream_id: "WS-CPX"
+    workstream: "WS-CPX"
+    assigned_to: "Anubav Vasudevan"
+    owner: "Anubav Vasudevan"
+    due_date: "2026-03-06"
+    checkpoint_id: "m4"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["D-RSB-1"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-AIN-1"
+    title: "Attribution & Integrity Matrix v1"
+    description: "Grade-band and assessment-type matrix for attribution and integrity practices."
+    status: "in_progress"
+    workstream_id: "WS-AIN"
+    workstream: "WS-AIN"
+    assigned_to: "David N. Berol"
+    owner: "David N. Berol"
+    due_date: "2026-03-06"
+    checkpoint_id: "m4"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["D-CPX-1"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-DPS-1"
+    title: "AI Tool Review Checklist v1 + Risk Tiers"
+    description: "Privacy/security checklist and risk-tiering model for tool governance."
+    status: "in_progress"
+    workstream_id: "WS-DPS"
+    workstream: "WS-DPS"
+    assigned_to: "Jillian Marie Burkley"
+    owner: "Jillian Marie Burkley"
+    due_date: "2026-03-06"
+    checkpoint_id: "m4"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: []
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-EQA-1"
+    title: "Equity Impact Checklist v1"
+    description: "Equity and accessibility lens checklist for policy and implementation decisions."
+    status: "in_progress"
+    workstream_id: "WS-EQA"
+    workstream: "WS-EQA"
+    assigned_to: "Tom Sabo"
+    owner: "Tom Sabo"
+    due_date: "2026-03-06"
+    checkpoint_id: "m4"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["D-CPX-1"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "m5_draft_sections"
+    title: "Draft sections for priority recommendation domains"
+    description: "Drafted recommendation sections for selected domains and governance direction."
+    status: "not_started"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE/WS-POL"
+    assigned_to: "WS-POL + domain leads"
+    owner: "WS-POL + domain leads"
+    due_date: "2026-03-20"
+    checkpoint_id: "m5"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["rec_outline_risk_register"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "near_final_package"
+    title: "Near-final recommendation package"
+    description: "Integrated recommendation package, slide narrative, and gap-owner list."
+    status: "not_started"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE/WS-POL"
+    assigned_to: "WS-POL + workstream leads"
+    owner: "WS-POL + workstream leads"
+    due_date: "2026-04-10"
+    checkpoint_id: "m6"
+    priority: "high"
+    deliverable_type: "presentation"
+    depends_on: ["m5_draft_sections"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-CCI-1"
+    title: "Comms Pack v1"
+    description: "Stakeholder messaging, FAQ draft, and community input plan."
+    status: "not_started"
+    workstream_id: "WS-CCI"
+    workstream: "WS-CCI"
+    assigned_to: "Tina Beaty"
+    owner: "Tina Beaty"
+    due_date: "2026-04-10"
+    checkpoint_id: "m6"
+    priority: "medium"
+    deliverable_type: "document"
+    depends_on: ["D-POL-1"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "D-IPC-1"
+    title: "Implementation Roadmap v1"
+    description: "Implementation and PD roadmap with milestones, cadence, and success measures."
+    status: "not_started"
+    workstream_id: "WS-IPC"
+    workstream: "WS-IPC"
+    assigned_to: "Jillian Marie Burkley"
+    owner: "Jillian Marie Burkley"
+    due_date: "2026-04-10"
+    checkpoint_id: "m6"
+    priority: "medium"
+    deliverable_type: "document"
+    depends_on: ["D-POL-1", "D-DPS-1", "D-EQA-1"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "final_talk_track"
+    title: "Final talk track and Q&A prep"
+    description: "Final presentation talk track and supporting Q&A sheet for review cycle."
+    status: "not_started"
+    workstream_id: "WS-CCI"
+    workstream: "COMMITTEE/WS-CCI"
+    assigned_to: "John Black (Chair) + WS-CCI"
+    owner: "John Black (Chair) + WS-CCI"
+    due_date: "2026-04-24"
+    checkpoint_id: "m7"
+    priority: "medium"
+    deliverable_type: "presentation"
+    depends_on: ["near_final_package", "D-CCI-1"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
+
+  - id: "committee_response"
+    title: "Formal committee response package"
+    description: "Formal response to proposed policy with guardrails and governance recommendations."
+    status: "not_started"
+    workstream_id: "WS-POL"
+    workstream: "COMMITTEE"
+    assigned_to: "Committee + WS-POL"
+    owner: "Committee + WS-POL"
+    due_date: "2026-05-15"
+    checkpoint_id: "m8"
+    priority: "high"
+    deliverable_type: "document"
+    depends_on: ["final_talk_track"]
+    public_facing: true
+    committee_only: false
+    public_url: ""
