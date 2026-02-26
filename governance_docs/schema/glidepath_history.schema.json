@@ -83,6 +83,15 @@
               },
               "board_ready_deadline": {
                 "type": "boolean"
+              },
+              "label": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "hard_stop": {
+                "type": "boolean"
               }
             }
           }
@@ -113,6 +122,53 @@
         }
       }
     },
+    "current_eval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current_point_id",
+        "current_gate_id",
+        "what_in_range",
+        "how_in_range",
+        "what_delta",
+        "how_delta",
+        "status"
+      ],
+      "properties": {
+        "current_point_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "current_gate_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "what_in_range": {
+          "type": "boolean"
+        },
+        "how_in_range": {
+          "type": "boolean"
+        },
+        "what_delta": {
+          "type": "number"
+        },
+        "how_delta": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "in_range",
+            "one_axis_out",
+            "out_of_range"
+          ]
+        }
+      }
+    },
     "points": {
       "type": "array",
       "items": {
@@ -132,6 +188,12 @@
             "type": "string"
           },
           "version_key": {
+            "type": "string"
+          },
+          "version_key_short": {
+            "type": "string"
+          },
+          "point_id": {
             "type": "string"
           },
           "next_gate_id": {

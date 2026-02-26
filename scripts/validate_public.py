@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -33,6 +34,29 @@ def load_json(path: Path) -> dict[str, Any]:
 def fail(message: str) -> None:
     print(f"❌ {message}")
     sys.exit(1)
+
+
+def parse_iso_datetime(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    candidate = str(value).strip()
+    if candidate.endswith("Z"):
+        candidate = candidate[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(candidate)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed
+
+
+def signed_delta(value: float, min_val: float, max_val: float) -> tuple[bool, float]:
+    if value < min_val:
+        return False, round(value - min_val, 2)
+    if value > max_val:
+        return False, round(value - max_val, 2)
+    return True, 0.0
 
 
 def validate_glidepath_history(payload: dict[str, Any]) -> None:
@@ -64,6 +88,12 @@ def validate_glidepath_history(payload: dict[str, Any]) -> None:
     for gate in gates:
         if not isinstance(gate, dict):
             fail("glidepath_history.json corridor gate entries must be objects")
+        if not isinstance(gate.get("label"), str):
+            fail(f"glidepath_history.json gate {gate.get('gate_id')} label must be a string")
+        if not isinstance(gate.get("description"), str):
+            fail(f"glidepath_history.json gate {gate.get('gate_id')} description must be a string")
+        if gate.get("hard_stop") is not gate.get("board_ready_deadline"):
+            fail(f"glidepath_history.json gate {gate.get('gate_id')} hard_stop must equal board_ready_deadline")
         for field in ("what_min", "what_max", "how_min", "how_max"):
             value = gate.get(field)
             if not isinstance(value, (int, float)):
@@ -76,6 +106,7 @@ def validate_glidepath_history(payload: dict[str, Any]) -> None:
         fail("glidepath_history.json points must be a list")
 
     seen_version_keys: set[str] = set()
+    previous_generated_at: datetime | None = None
     for idx, point in enumerate(points):
         if not isinstance(point, dict):
             fail(f"glidepath_history.json points[{idx}] must be an object")
@@ -86,9 +117,26 @@ def validate_glidepath_history(payload: dict[str, Any]) -> None:
         version_key = str(point.get("version_key", ""))
         if not version_key:
             fail(f"glidepath_history.json points[{idx}] version_key must be non-empty")
+        version_key_short = point.get("version_key_short")
+        if version_key_short is not None:
+            expected_short = version_key[:12]
+            if not isinstance(version_key_short, str) or version_key_short != expected_short:
+                fail(f"glidepath_history.json points[{idx}] version_key_short must equal first 12 chars of version_key")
+        point_id = point.get("point_id")
+        if point_id is not None:
+            expected_id = f"{point.get('generated_at')}::{version_key[:12]}"
+            if not isinstance(point_id, str) or point_id != expected_id:
+                fail(f"glidepath_history.json points[{idx}] point_id must match generated_at::version_key_short")
         if version_key in seen_version_keys:
             fail(f"glidepath_history.json duplicate version_key in points: {version_key}")
         seen_version_keys.add(version_key)
+
+        parsed_generated_at = parse_iso_datetime(point.get("generated_at"))
+        if parsed_generated_at is None:
+            fail(f"glidepath_history.json points[{idx}] generated_at must be an ISO datetime")
+        if previous_generated_at and parsed_generated_at < previous_generated_at:
+            fail("glidepath_history.json points must be sorted by generated_at ascending")
+        previous_generated_at = parsed_generated_at
 
         for field in ("what_score", "how_score"):
             value = point.get(field)
@@ -107,6 +155,51 @@ def validate_glidepath_history(payload: dict[str, Any]) -> None:
             axis_items = included.get(axis)
             if not isinstance(axis_items, list):
                 fail(f"glidepath_history.json points[{idx}] included_kpis.{axis} must be a list")
+
+    current_eval = payload.get("current_eval")
+    if not isinstance(current_eval, dict):
+        fail("glidepath_history.json current_eval must be an object")
+
+    if points:
+        latest_point = points[-1]
+        latest_gate = next((g for g in gates if g.get("gate_id") == latest_point.get("next_gate_id")), None)
+        if not isinstance(latest_gate, dict):
+            fail("glidepath_history.json current_eval requires latest point next_gate_id to exist in corridor.gates")
+
+        what_in_range, what_delta = signed_delta(
+            float(latest_point.get("what_score", 0.0)),
+            float(latest_gate.get("what_min", 0.0)),
+            float(latest_gate.get("what_max", 10.0)),
+        )
+        how_in_range, how_delta = signed_delta(
+            float(latest_point.get("how_score", 0.0)),
+            float(latest_gate.get("how_min", 0.0)),
+            float(latest_gate.get("how_max", 10.0)),
+        )
+        if what_in_range and how_in_range:
+            expected_status = "in_range"
+        elif what_in_range or how_in_range:
+            expected_status = "one_axis_out"
+        else:
+            expected_status = "out_of_range"
+
+        expected_current_point_id = latest_point.get("point_id")
+        expected_current_gate_id = latest_point.get("next_gate_id")
+
+        if current_eval.get("current_point_id") != expected_current_point_id:
+            fail("glidepath_history.json current_eval.current_point_id does not match latest point point_id")
+        if current_eval.get("current_gate_id") != expected_current_gate_id:
+            fail("glidepath_history.json current_eval.current_gate_id does not match latest point next_gate_id")
+        if current_eval.get("what_in_range") is not what_in_range:
+            fail("glidepath_history.json current_eval.what_in_range mismatch")
+        if current_eval.get("how_in_range") is not how_in_range:
+            fail("glidepath_history.json current_eval.how_in_range mismatch")
+        if current_eval.get("what_delta") != what_delta:
+            fail("glidepath_history.json current_eval.what_delta mismatch")
+        if current_eval.get("how_delta") != how_delta:
+            fail("glidepath_history.json current_eval.how_delta mismatch")
+        if current_eval.get("status") != expected_status:
+            fail("glidepath_history.json current_eval.status mismatch")
 
 
 def main() -> None:

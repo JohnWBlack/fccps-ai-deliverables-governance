@@ -70,6 +70,21 @@ def parse_date(value: str | None) -> datetime | None:
         return None
 
 
+def parse_iso_datetime(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    candidate = str(value).strip()
+    if candidate.endswith("Z"):
+        candidate = candidate[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(candidate)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed
+
+
 def to_0_10(score_0_100: float) -> float:
     return round(max(0.0, min(100.0, score_0_100)) / 10.0, 2)
 
@@ -157,8 +172,127 @@ def base_document() -> dict[str, Any]:
             "what": WHAT_WEIGHTS,
             "how": HOW_WEIGHTS,
         },
+        "current_eval": {
+            "current_point_id": None,
+            "current_gate_id": None,
+            "what_in_range": False,
+            "how_in_range": False,
+            "what_delta": 0.0,
+            "how_delta": 0.0,
+            "status": "out_of_range",
+        },
         "points": [],
     }
+
+
+def point_metadata(generated_at: str | None, version_key: str | None) -> tuple[str, str]:
+    version = str(version_key or "")
+    short = version[:12]
+    point_id = f"{generated_at}::{short}"
+    return short, point_id
+
+
+def normalize_point(point: dict[str, Any]) -> dict[str, Any]:
+    generated_at = str(point.get("generated_at") or "")
+    version_key = str(point.get("version_key") or "")
+    version_key_short, point_id = point_metadata(generated_at, version_key)
+    normalized = dict(point)
+    normalized["version_key_short"] = version_key_short
+    normalized["point_id"] = point_id
+    return normalized
+
+
+def enrich_corridor_gates(timeline_events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    by_id = {
+        str(event.get("id")): event
+        for event in timeline_events
+        if isinstance(event, dict) and event.get("id")
+    }
+    enriched: list[dict[str, Any]] = []
+    for gate in CORRIDOR_GATES:
+        gate_id = str(gate.get("gate_id", ""))
+        event = by_id.get(gate_id, {})
+        label = event.get("title") or gate_id.upper()
+        description = event.get("description") or ""
+        gate_copy = dict(gate)
+        gate_copy["label"] = str(label)
+        gate_copy["description"] = str(description)
+        gate_copy["hard_stop"] = bool(gate_copy.get("board_ready_deadline"))
+        enriched.append(gate_copy)
+    return enriched
+
+
+def signed_delta(value: float, min_val: float, max_val: float) -> tuple[bool, float]:
+    if value < min_val:
+        return False, round(value - min_val, 2)
+    if value > max_val:
+        return False, round(value - max_val, 2)
+    return True, 0.0
+
+
+def compute_current_eval(points: list[dict[str, Any]], gates: list[dict[str, Any]]) -> dict[str, Any]:
+    if not points:
+        return {
+            "current_point_id": None,
+            "current_gate_id": None,
+            "what_in_range": False,
+            "how_in_range": False,
+            "what_delta": 0.0,
+            "how_delta": 0.0,
+            "status": "out_of_range",
+        }
+
+    latest_point = points[-1]
+    gate_id = latest_point.get("next_gate_id")
+    gate = next((g for g in gates if g.get("gate_id") == gate_id), None)
+    if not isinstance(gate, dict):
+        return {
+            "current_point_id": latest_point.get("point_id"),
+            "current_gate_id": gate_id,
+            "what_in_range": False,
+            "how_in_range": False,
+            "what_delta": 0.0,
+            "how_delta": 0.0,
+            "status": "out_of_range",
+        }
+
+    what_in_range, what_delta = signed_delta(
+        float(latest_point.get("what_score", 0.0)),
+        float(gate.get("what_min", 0.0)),
+        float(gate.get("what_max", 10.0)),
+    )
+    how_in_range, how_delta = signed_delta(
+        float(latest_point.get("how_score", 0.0)),
+        float(gate.get("how_min", 0.0)),
+        float(gate.get("how_max", 10.0)),
+    )
+
+    if what_in_range and how_in_range:
+        status = "in_range"
+    elif what_in_range or how_in_range:
+        status = "one_axis_out"
+    else:
+        status = "out_of_range"
+
+    return {
+        "current_point_id": latest_point.get("point_id"),
+        "current_gate_id": gate_id,
+        "what_in_range": what_in_range,
+        "how_in_range": how_in_range,
+        "what_delta": what_delta,
+        "how_delta": how_delta,
+        "status": status,
+    }
+
+
+def sort_points_by_generated_at(points: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        points,
+        key=lambda point: (
+            parse_iso_datetime(point.get("generated_at")) or datetime.min.replace(tzinfo=timezone.utc),
+            str(point.get("version_key") or ""),
+        ),
+    )
 
 
 def build_current_point(snapshot: dict[str, Any], kpis_payload: dict[str, Any]) -> dict[str, Any]:
@@ -172,10 +306,13 @@ def build_current_point(snapshot: dict[str, Any], kpis_payload: dict[str, Any]) 
     what_score, coverage_what, included_what = axis_score(kpis_by_id, WHAT_WEIGHTS)
     how_score, coverage_how, included_how = axis_score(kpis_by_id, HOW_WEIGHTS)
     next_gate_id, next_gate_date = resolve_next_gate(kpis_by_id, timeline_events)
+    version_key_short, point_id = point_metadata(generated_at, version_key)
 
     return {
         "generated_at": generated_at,
         "version_key": version_key,
+        "version_key_short": version_key_short,
+        "point_id": point_id,
         "next_gate_id": next_gate_id,
         "next_gate_date": next_gate_date,
         "what_score": what_score,
@@ -204,9 +341,11 @@ def main() -> None:
     if OUTPUT_PATH.exists():
         existing = load_json(OUTPUT_PATH)
         if isinstance(existing, dict):
-            history.update({k: v for k, v in existing.items() if k in {"meta", "corridor", "weights", "points"}})
+            history.update({k: v for k, v in existing.items() if k in {"meta", "corridor", "weights", "points", "current_eval"}})
 
     history["meta"]["generated_at"] = utc_now_iso()
+    timeline_events = snapshot.get("timeline_events", [])
+    history["corridor"] = {"gates": enrich_corridor_gates(timeline_events)}
     current_point = build_current_point(snapshot, kpis_payload)
 
     points = history.get("points") if isinstance(history.get("points"), list) else []
@@ -215,7 +354,9 @@ def main() -> None:
         return
 
     points.append(current_point)
-    history["points"] = points
+    normalized_points = [normalize_point(point) for point in points if isinstance(point, dict)]
+    history["points"] = sort_points_by_generated_at(normalized_points)
+    history["current_eval"] = compute_current_eval(history["points"], history["corridor"]["gates"])
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     write_json(OUTPUT_PATH, history)
