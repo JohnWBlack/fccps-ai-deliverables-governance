@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-26T03:52:30.439914Z",
+    "generated_at": "2026-02-27T03:51:13.729966Z",
     "timezone": "America/New_York",
     "schema_version": "0.2"
   },
@@ -116,7 +116,7 @@
       "category": "schedule",
       "name": "Overdue deliverables",
       "status": "yellow",
-      "score": 74,
+      "score": 73,
       "description": "Count and severity of overdue deliverables.",
       "rules": [
         "Penalty combines overdue count and max overdue days."
@@ -129,7 +129,7 @@
       ],
       "details": {
         "overdue_count": 1,
-        "max_days_overdue": 6
+        "max_days_overdue": 7
       }
     },
     {
@@ -437,7 +437,7 @@
       ],
       "evidence": [],
       "details": {
-        "oldest_age_days": 3,
+        "oldest_age_days": 4,
         "sample_count": 206
       }
     },
