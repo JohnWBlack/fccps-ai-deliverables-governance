@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-27T03:51:13.729966Z",
+    "generated_at": "2026-02-28T01:12:22.756315Z",
     "timezone": "America/New_York",
     "schema_version": "0.2"
   },
@@ -116,7 +116,7 @@
       "category": "schedule",
       "name": "Overdue deliverables",
       "status": "yellow",
-      "score": 73,
+      "score": 72,
       "description": "Count and severity of overdue deliverables.",
       "rules": [
         "Penalty combines overdue count and max overdue days."
@@ -129,7 +129,7 @@
       ],
       "details": {
         "overdue_count": 1,
-        "max_days_overdue": 7
+        "max_days_overdue": 8
       }
     },
     {
@@ -307,7 +307,7 @@
       "category": "convergence",
       "name": "Cross-doc principle coverage",
       "status": "red",
-      "score": 2,
+      "score": 4,
       "description": "Percent of scanned docs that reference at least one principle ID.",
       "rules": [
         "Green >=70, yellow >=40, red <40."
@@ -323,8 +323,8 @@
         }
       ],
       "details": {
-        "coverage_pct": 2,
-        "scanned_docs": 75
+        "coverage_pct": 4,
+        "scanned_docs": 44
       }
     },
     {
@@ -332,7 +332,7 @@
       "category": "convergence",
       "name": "Cross-doc risk coverage",
       "status": "red",
-      "score": 2,
+      "score": 4,
       "description": "Percent of scanned docs that reference at least one risk ID.",
       "rules": [
         "Green >=70, yellow >=40, red <40."
@@ -348,8 +348,8 @@
         }
       ],
       "details": {
-        "coverage_pct": 2,
-        "scanned_docs": 75
+        "coverage_pct": 4,
+        "scanned_docs": 44
       }
     },
     {
@@ -437,8 +437,8 @@
       ],
       "evidence": [],
       "details": {
-        "oldest_age_days": 4,
-        "sample_count": 206
+        "oldest_age_days": 5,
+        "sample_count": 90
       }
     },
     {
