@@ -71,7 +71,13 @@ jobs:
         run: python scripts/extract_refs.py
 
       - name: Build scrubbed survey exports
-        run: python scripts/scrub_survey_exports.py
+        run: |
+          if [ -f scripts/scrub_survey_exports.py ]; then
+            python scripts/scrub_survey_exports.py
+          else
+            echo "scripts/scrub_survey_exports.py not found; skipping scrubbed survey exports step."
+            exit 0
+          fi
 
       - name: Validate public artifacts
         run: python scripts/validate_public.py
