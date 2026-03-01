@@ -63,13 +63,15 @@ jobs:
         run: python scripts/build_glidepath_diagnostics.py
 
       - name: Publish scrubbed project ingest JSON
-        if: ${{ runner.environment == 'self-hosted' && runner.os == 'Windows' && env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        if: ${{ runner.os == 'Windows' && vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        shell: pwsh
         run: |
-          python -c "import os, subprocess, sys; root=os.environ.get('PROJECT_FILES_ROOT','').strip(); ok=bool(root) and os.path.isdir(root); print(f'PROJECT_FILES_ROOT={root}' if ok else 'SKIPPED: ingest requires self-hosted + PROJECT_FILES_ROOT (existing path)'); sys.exit(subprocess.call([sys.executable, 'scripts/pii_scan.py']) if ok else 0)"
-
-      - name: Skip project ingest publish
-        if: ${{ !(runner.environment == 'self-hosted' && runner.os == 'Windows' && env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '') }}
-        run: 'echo "SKIPPED: ingest requires self-hosted + PROJECT_FILES_ROOT"'
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/pii_scan.py
 
       - name: Extract reference index
         run: python scripts/extract_refs.py
