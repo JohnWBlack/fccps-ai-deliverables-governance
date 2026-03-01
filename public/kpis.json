@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-03-01T15:12:55.033073Z",
+    "generated_at": "2026-03-01T17:05:15.380927Z",
     "timezone": "America/New_York",
     "schema_version": "0.2"
   },
@@ -36,9 +36,9 @@
   "summary": {
     "overall_status": "red",
     "kpi_counts": {
-      "green": 7,
+      "green": 6,
       "yellow": 4,
-      "red": 6,
+      "red": 7,
       "gray": 2
     }
   },
@@ -307,7 +307,7 @@
       "category": "convergence",
       "name": "Cross-doc principle coverage",
       "status": "red",
-      "score": 4,
+      "score": 8,
       "description": "Percent of scanned docs that reference at least one principle ID.",
       "rules": [
         "Green >=70, yellow >=40, red <40."
@@ -323,8 +323,8 @@
         }
       ],
       "details": {
-        "coverage_pct": 4,
-        "scanned_docs": 44
+        "coverage_pct": 8,
+        "scanned_docs": 23
       }
     },
     {
@@ -332,7 +332,7 @@
       "category": "convergence",
       "name": "Cross-doc risk coverage",
       "status": "red",
-      "score": 4,
+      "score": 8,
       "description": "Percent of scanned docs that reference at least one risk ID.",
       "rules": [
         "Green >=70, yellow >=40, red <40."
@@ -348,8 +348,8 @@
         }
       ],
       "details": {
-        "coverage_pct": 4,
-        "scanned_docs": 44
+        "coverage_pct": 8,
+        "scanned_docs": 23
       }
     },
     {
@@ -429,16 +429,16 @@
       "id": "KPI-FRESH-03",
       "category": "freshness",
       "name": "Foundation docs recency",
-      "status": "green",
-      "score": 95,
+      "status": "red",
+      "score": 40,
       "description": "Recency profile for governance_docs and project_files updates.",
       "rules": [
         "If no foundation docs updated in >14 days => yellow; >30 days => red."
       ],
       "evidence": [],
       "details": {
-        "oldest_age_days": 6,
-        "sample_count": 90
+        "oldest_age_days": 37,
+        "sample_count": 89
       }
     },
     {
