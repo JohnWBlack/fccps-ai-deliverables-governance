@@ -4,80 +4,113 @@
       {
         "board_ready_deadline": false,
         "date": "2026-01-23",
+        "description": "Committee formation and charter baseline.",
         "gate_id": "m1",
+        "hard_stop": false,
         "how_max": 2.0,
         "how_min": 1.0,
+        "label": "Meeting 1",
         "what_max": 2.0,
         "what_min": 1.0
       },
       {
         "board_ready_deadline": false,
         "date": "2026-02-06",
+        "description": "Shared baseline alignment and working agreements confirmation.",
         "gate_id": "m2",
+        "hard_stop": false,
         "how_max": 3.0,
         "how_min": 2.0,
+        "label": "Meeting 2",
         "what_max": 3.0,
         "what_min": 2.0
       },
       {
         "board_ready_deadline": false,
         "date": "2026-02-20",
+        "description": "Values/principles checkpoint and pre-read integration.",
         "gate_id": "m3",
+        "hard_stop": false,
         "how_max": 4.5,
         "how_min": 3.0,
+        "label": "Meeting 3",
         "what_max": 4.5,
         "what_min": 3.0
       },
       {
         "board_ready_deadline": false,
         "date": "2026-03-06",
+        "description": "Recommendations outline and risk register checkpoint.",
         "gate_id": "m4",
+        "hard_stop": false,
         "how_max": 5.5,
         "how_min": 4.0,
+        "label": "Meeting 4",
         "what_max": 5.5,
         "what_min": 4.0
       },
       {
         "board_ready_deadline": false,
         "date": "2026-03-20",
+        "description": "Draft recommendations workshop and integration sequencing.",
         "gate_id": "m5",
+        "hard_stop": false,
         "how_max": 6.5,
         "how_min": 5.0,
+        "label": "Meeting 5",
         "what_max": 6.5,
         "what_min": 5.0
       },
       {
         "board_ready_deadline": false,
         "date": "2026-04-10",
+        "description": "Near-final package integration and comms/implementation alignment.",
         "gate_id": "m6",
+        "hard_stop": false,
         "how_max": 7.5,
         "how_min": 6.0,
+        "label": "Meeting 6",
         "what_max": 7.5,
         "what_min": 6.0
       },
       {
         "board_ready_deadline": true,
         "date": "2026-04-24",
+        "description": "Presentation prep and final review feedback assimilation.",
         "gate_id": "m7",
+        "hard_stop": true,
         "how_max": 9.0,
         "how_min": 7.5,
+        "label": "Meeting 7",
         "what_max": 9.0,
         "what_min": 7.5
       },
       {
         "board_ready_deadline": false,
         "date": "2026-05-15",
+        "description": "Formal committee response approval checkpoint.",
         "gate_id": "m8",
+        "hard_stop": false,
         "how_max": 10.0,
         "how_min": 8.5,
+        "label": "Meeting 8",
         "what_max": 10.0,
         "what_min": 8.5
       }
     ]
   },
+  "current_eval": {
+    "current_gate_id": "m4",
+    "current_point_id": "2026-03-01T03:56:54.056027Z::0dc32cc9ef63",
+    "how_delta": 2.32,
+    "how_in_range": false,
+    "status": "one_axis_out",
+    "what_delta": 0.0,
+    "what_in_range": true
+  },
   "meta": {
     "description": "Historical WHAT/HOW glidepath points with gate corridor targets.",
-    "generated_at": "2026-02-25T23:16:38.654585Z",
+    "generated_at": "2026-03-01T03:56:55.184512Z",
     "schema_version": "1.0.0"
   },
   "points": [
@@ -111,7 +144,9 @@
       },
       "next_gate_date": "2026-03-06",
       "next_gate_id": "m4",
+      "point_id": "2026-02-25T21:26:42.457712Z::079dc9ae2225",
       "version_key": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
+      "version_key_short": "079dc9ae2225",
       "what_score": 4.89
     },
     {
@@ -144,7 +179,9 @@
       },
       "next_gate_date": "2026-03-06",
       "next_gate_id": "m4",
+      "point_id": "2026-02-25T22:18:56.199851Z::08bc18cd5c47",
       "version_key": "08bc18cd5c4728cfa9f03f56e4a5d4dd279f6044",
+      "version_key_short": "08bc18cd5c47",
       "what_score": 4.89
     },
     {
@@ -177,8 +214,220 @@
       },
       "next_gate_date": "2026-03-06",
       "next_gate_id": "m4",
+      "point_id": "2026-02-25T23:16:36.932953Z::3973a15f7938",
       "version_key": "3973a15f793830116a2353ba43d100562c3811ca",
+      "version_key_short": "3973a15f7938",
       "what_score": 4.89
+    },
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-02-26T01:23:37.439731Z",
+      "how_score": 7.8,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "point_id": "2026-02-26T01:23:37.439731Z::1a20d662d88a",
+      "version_key": "1a20d662d88ac00612b2df2412570ff66d45e01c",
+      "version_key_short": "1a20d662d88a",
+      "what_score": 4.87
+    },
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-02-26T03:52:28.701036Z",
+      "how_score": 7.8,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "point_id": "2026-02-26T03:52:28.701036Z::aab7f4f3b4cc",
+      "version_key": "aab7f4f3b4ccc6781bbd612115c1a749eb897a2e",
+      "version_key_short": "aab7f4f3b4cc",
+      "what_score": 4.87
+    },
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-02-27T03:51:12.041754Z",
+      "how_score": 7.8,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "point_id": "2026-02-27T03:51:12.041754Z::ba607ce08a83",
+      "version_key": "ba607ce08a8373814e30d5131119acff587fe298",
+      "version_key_short": "ba607ce08a83",
+      "what_score": 4.85
+    },
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-02-28T01:12:21.696914Z",
+      "how_score": 7.82,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "point_id": "2026-02-28T01:12:21.696914Z::5e6847ca294d",
+      "version_key": "5e6847ca294ddcc379651c18cecabec672103aac",
+      "version_key_short": "5e6847ca294d",
+      "what_score": 4.83
+    },
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-02-28T03:41:49.551039Z",
+      "how_score": 7.82,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "point_id": "2026-02-28T03:41:49.551039Z::dd98bb1e6614",
+      "version_key": "dd98bb1e6614d31af953be35d2d3f42fb74ef29f",
+      "version_key_short": "dd98bb1e6614",
+      "what_score": 4.83
+    },
+    {
+      "coverage_how": 0.9318,
+      "coverage_what": 0.95,
+      "generated_at": "2026-03-01T03:56:54.056027Z",
+      "how_score": 7.82,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03"
+        ]
+      },
+      "next_gate_date": "2026-03-06",
+      "next_gate_id": "m4",
+      "point_id": "2026-03-01T03:56:54.056027Z::0dc32cc9ef63",
+      "version_key": "0dc32cc9ef635044d12e0cb2d163eb4c65b5a266",
+      "version_key_short": "0dc32cc9ef63",
+      "what_score": 4.81
     }
   ],
   "weights": {
