@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-03-01T03:07:01.477420Z",
+    "generated_at": "2026-03-01T15:12:56.049775Z",
     "repo_owner": "JohnWBlack",
     "repo_name": "fccps-ai-deliverables-governance",
     "repo_root_name": "fccps-ai-deliverables-governance",
@@ -31,9 +31,9 @@
       "filename": "miro_autopilot.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 6537,
-      "last_modified_iso": "2026-02-27T20:04:17.669115Z",
-      "last_commit_sha": null,
+      "size_bytes": 7077,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
       "tags": [
         ".github",
         "workflows",
@@ -45,9 +45,9 @@
       "filename": "validate_build_publish.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 3514,
-      "last_modified_iso": "2026-02-25T16:58:49-05:00",
-      "last_commit_sha": "08bc18cd5c4728cfa9f03f56e4a5d4dd279f6044",
+      "size_bytes": 3953,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         ".github",
         "workflows",
@@ -59,9 +59,9 @@
       "filename": ".gitignore",
       "extension": "",
       "type": "none",
-      "size_bytes": 506,
-      "last_modified_iso": "2026-02-24T17:01:19-05:00",
-      "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
+      "size_bytes": 524,
+      "last_modified_iso": "2026-02-28T22:59:08-05:00",
+      "last_commit_sha": "3c5b82bc2f3ae97388c1f3adc4fee8def9d9374b",
       "tags": [
         "ext:gitignore"
       ]
@@ -71,7 +71,7 @@
       "filename": "CHANGELOG_PUBLIC.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1713,
+      "size_bytes": 1665,
       "last_modified_iso": "2026-02-24T12:32:44-05:00",
       "last_commit_sha": "3a9aab0006ea10e65e723233f4ddaef39942183e",
       "tags": [
@@ -91,16 +91,24 @@
       ]
     },
     {
-      "path": "docs/admin_editing.md",
-      "filename": "admin_editing.md",
+      "path": "LICENSE",
+      "filename": "LICENSE",
+      "extension": "",
+      "type": "none",
+      "size_bytes": 1075,
+      "last_modified_iso": "2026-02-23T16:35:34-05:00",
+      "last_commit_sha": "417004d2c8ae527a2b8f46d9261c0929534f9709",
+      "tags": []
+    },
+    {
+      "path": "README.md",
+      "filename": "README.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1389,
-      "last_modified_iso": "2026-02-23T21:38:34-05:00",
-      "last_commit_sha": "733eb418ebacd8d3783e2a57ae29bfb4b8b9c8cf",
+      "size_bytes": 6573,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
-        "docs",
-        "category:docs",
         "ext:md"
       ]
     },
@@ -109,9 +117,51 @@
       "filename": "CONVENTIONS.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1160,
+      "size_bytes": 1125,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "docs",
+        "category:docs",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "docs/KPI_TAXONOMY.md",
+      "filename": "KPI_TAXONOMY.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1231,
+      "last_modified_iso": "2026-02-24T15:51:29-05:00",
+      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "tags": [
+        "docs",
+        "category:docs",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "docs/WINDOWS_TASKS.md",
+      "filename": "WINDOWS_TASKS.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1384,
+      "last_modified_iso": "2026-02-24T17:01:19-05:00",
+      "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
+      "tags": [
+        "docs",
+        "category:docs",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "docs/admin_editing.md",
+      "filename": "admin_editing.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1350,
+      "last_modified_iso": "2026-02-23T21:38:34-05:00",
+      "last_commit_sha": "733eb418ebacd8d3783e2a57ae29bfb4b8b9c8cf",
       "tags": [
         "docs",
         "category:docs",
@@ -133,20 +183,6 @@
       ]
     },
     {
-      "path": "docs/KPI_TAXONOMY.md",
-      "filename": "KPI_TAXONOMY.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 1275,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
-      "tags": [
-        "docs",
-        "category:docs",
-        "ext:md"
-      ]
-    },
-    {
       "path": "docs/schema_notes.md",
       "filename": "schema_notes.md",
       "extension": "md",
@@ -158,80 +194,6 @@
         "docs",
         "category:docs",
         "ext:md"
-      ]
-    },
-    {
-      "path": "docs/WINDOWS_TASKS.md",
-      "filename": "WINDOWS_TASKS.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 1422,
-      "last_modified_iso": "2026-02-24T17:01:19-05:00",
-      "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
-      "tags": [
-        "docs",
-        "category:docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/01 Member Questionnaire/20260205_AI-Advisory-Committee-Member-Questionnaire_Resp-Summary.pdf",
-      "filename": "20260205_AI-Advisory-Committee-Member-Questionnaire_Resp-Summary.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 4450642,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "01 Member Questionnaire",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/03 - Values & Principles/FCCPS_AI_Values_and_Principles_Guidance_Packet.docx",
-      "filename": "FCCPS_AI_Values_and_Principles_Guidance_Packet.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 965469,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "03 - Values & Principles",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/03 - Values & Principles/FCCPS_AI_Values_and_Principles_Guidance_Packet.pdf",
-      "filename": "FCCPS_AI_Values_and_Principles_Guidance_Packet.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 385104,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "03 - Values & Principles",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Data Calls/Committee_Member_Questionaire.docx",
-      "filename": "Committee_Member_Questionaire.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 22302,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Data Calls",
-        "category:governance_docs",
-        "ext:docx"
       ]
     },
     {
@@ -254,7 +216,7 @@
       "filename": "20250812_Policy-BCF_Advisory-Committees-to-the-School-Board.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 21282,
+      "size_bytes": 21132,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -284,7 +246,7 @@
       "filename": "FCCPS-Advisory-Board-Agenda-&-Meeting-Minutes-Template.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 1634,
+      "size_bytes": 1594,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -344,7 +306,7 @@
       "filename": "School-Board-Advisory-_Committee-Training.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 5813,
+      "size_bytes": 5650,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -373,7 +335,7 @@
       "filename": "FCCPS-AI-Advisory-Committee_Workstream-Development-Summary-and-Assignments.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 8680,
+      "size_bytes": 8536,
       "last_modified_iso": "2026-02-23T18:27:06-05:00",
       "last_commit_sha": "6ce7c235da6bf1eb24616e36698cc31aa2fc2c32",
       "tags": [
@@ -439,828 +401,6 @@
       ]
     },
     {
-      "path": "governance_docs/Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md",
-      "filename": "20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 94056,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "01 - Meeting 23-JAN-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee_otter_ai.docx",
-      "filename": "20260123 FCCPS AI Advisory Committee_otter_ai.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 93792,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "01 - Meeting 23-JAN-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/01 - Meeting 23-JAN-26/20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.docx",
-      "filename": "20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 915236,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "01 - Meeting 23-JAN-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/01 - Meeting 23-JAN-26/20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.md",
-      "filename": "20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 9826,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "01 - Meeting 23-JAN-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/01 - Meeting 23-JAN-26/20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.pdf",
-      "filename": "20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 181810,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "01 - Meeting 23-JAN-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/01 Updated 60-minute agenda (with Team Charter vote).md",
-      "filename": "01 Updated 60-minute agenda (with Team Charter vote).md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 7049,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/06-FEB-26_Run-of-Show.md",
-      "filename": "06-FEB-26_Run-of-Show.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 3740,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260205 Proposed Agenda FCCPS AI Advisory Committee.pdf",
-      "filename": "20260205 Proposed Agenda FCCPS AI Advisory Committee.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 96951,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v0.9 (update to v1.0 for Feb 6 review + in-person vote).md",
-      "filename": "20260205_One-page-Team-Charter v0.9 (update to v1.0 for Feb 6 review + in-person vote).md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 3887,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md",
-      "filename": "20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 4978,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS-AI-Advisory-Committee_Focus-Block-Worksheet.docx",
-      "filename": "20260206_FCCPS-AI-Advisory-Committee_Focus-Block-Worksheet.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 22587,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS_AI_Advisory_Committee_Minutes.docx",
-      "filename": "20260206_FCCPS_AI_Advisory_Committee_Minutes.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 908868,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS_AI_Advisory_Committee_Minutes.md",
-      "filename": "20260206_FCCPS_AI_Advisory_Committee_Minutes.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 17153,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS_AI_Advisory_Committee_Minutes.pdf",
-      "filename": "20260206_FCCPS_AI_Advisory_Committee_Minutes.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 284779,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.docx",
-      "filename": "FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 77765,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md",
-      "filename": "FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 63720,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/FCCPS_AI_Team_Charter_v1_0_one_page.pdf",
-      "filename": "FCCPS_AI_Team_Charter_v1_0_one_page.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 5484,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "02 - Meeting 06-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx",
-      "filename": "20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 74568,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md",
-      "filename": "20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 63379,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Minutes_Mtg-3.pdf",
-      "filename": "20260220_FCCPS_AI_Advisory_Committee_Minutes_Mtg-3.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 569065,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda+Minutes.docx",
-      "filename": "20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda+Minutes.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 904093,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda+Minutes.pdf",
-      "filename": "20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda+Minutes.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 790264,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.docx",
-      "filename": "20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 904141,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.md",
-      "filename": "20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 1309,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.pdf",
-      "filename": "20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 212535,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/Facilitator (25 Minute Focus Block Values & Principles).docx",
-      "filename": "Facilitator (25 Minute Focus Block Values & Principles).docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 27450,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
-      "filename": "FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 212748,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/Meeting 3 (20 FEB) Focus Block .docx",
-      "filename": "Meeting 3 (20 FEB) Focus Block .docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 36915,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/Shared_Baseline_OnePager_v0.1a.docx",
-      "filename": "Shared_Baseline_OnePager_v0.1a.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 40353,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/03 - Meeting 20-FEB-26/Shared_Baseline_OnePager_v0.1a.pdf",
-      "filename": "Shared_Baseline_OnePager_v0.1a.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 42902,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "03 - Meeting 20-FEB-26",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.docx",
-      "filename": "20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 47606,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.md",
-      "filename": "20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 11477,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Meetings/FCCPS Sample Advisory Board Agenda & Minutes.md",
-      "filename": "FCCPS Sample Advisory Board Agenda & Minutes.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 1630,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Meetings",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_AI systems can harm students.pdf",
-      "filename": "Burkley_AI systems can harm students.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 10024816,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_Current Regulatory and Ethical Gaps.pdf",
-      "filename": "Burkley_Current Regulatory and Ethical Gaps.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 12073923,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_Equity, Transparency, Accountability.pdf",
-      "filename": "Burkley_Equity, Transparency, Accountability.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 4214293,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_Program Services overview.pdf",
-      "filename": "Burkley_Program Services overview.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 14680202,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_The DEIPAR framework Jillians Corner.pdf",
-      "filename": "Burkley_The DEIPAR framework Jillians Corner.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 11219519,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_The four program components.pdf",
-      "filename": "Burkley_The four program components.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 6627942,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Burkley_The Greece case study_Jillians Corner.pdf",
-      "filename": "Burkley_The Greece case study_Jillians Corner.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 14084461,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Jillians-Corner.docx",
-      "filename": "Jillians-Corner.docx",
-      "extension": "docx",
-      "type": "docx",
-      "size_bytes": 17156104,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:docx"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Jillians-Corner.pdf",
-      "filename": "Jillians-Corner.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 72926062,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Jillians-Corner_concat.md",
-      "filename": "Jillians-Corner_concat.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 17744,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Jillian Burkley/Jillians_Corner_AIEIP_Reformatted.md",
-      "filename": "Jillians_Corner_AIEIP_Reformatted.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 7678,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Jillian Burkley",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Members' Corners/Tina Beaty/CIFAR-Responsible-AI-and-Children-EN_Final.pdf",
-      "filename": "CIFAR-Responsible-AI-and-Children-EN_Final.pdf",
-      "extension": "pdf",
-      "type": "pdf",
-      "size_bytes": 9206485,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Members' Corners",
-        "Tina Beaty",
-        "category:governance_docs",
-        "ext:pdf"
-      ]
-    },
-    {
-      "path": "governance_docs/Plans/001_Cognitive-Pipeline-Table.md",
-      "filename": "001_Cognitive-Pipeline-Table.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 4653,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Plans",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Plans/002_Stateoftheart-AI-reasoning-systems-partially-mirror-human-cognitive-science.md",
-      "filename": "002_Stateoftheart-AI-reasoning-systems-partially-mirror-human-cognitive-science.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 4014,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Plans",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Plans/003_Human-Machine-Teaming.md",
-      "filename": "003_Human-Machine-Teaming.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 3746,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Plans",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Plans/004_Cognitive-Pipeline-Applied-as-a-K12-HumanAI-Teaming-Scaffold.md",
-      "filename": "004_Cognitive-Pipeline-Applied-as-a-K12-HumanAI-Teaming-Scaffold.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 7626,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Plans",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Plans/005_AI-Integrated-Ecosystem-Project-for-Grade-7.md",
-      "filename": "005_AI-Integrated-Ecosystem-Project-for-Grade-7.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 8760,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Plans",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Plans/006_Approach-to-Policy-Development.md",
-      "filename": "006_Approach-to-Policy-Development.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 4359,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Plans",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
-      "path": "governance_docs/Plans/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md",
-      "filename": "Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 64500,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Plans",
-        "category:governance_docs",
-        "ext:md"
-      ]
-    },
-    {
       "path": "governance_docs/Policy_Recommendations_Process_and_Timeline.md",
       "filename": "Policy_Recommendations_Process_and_Timeline.md",
       "extension": "md",
@@ -1294,7 +434,7 @@
       "filename": "A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 869595,
+      "size_bytes": 864771,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1324,7 +464,7 @@
       "filename": "Artificial-Intelligence and-APS.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 16395,
+      "size_bytes": 16226,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1350,21 +490,6 @@
       ]
     },
     {
-      "path": "governance_docs/schema/glidepath_history.schema.json",
-      "filename": "glidepath_history.schema.json",
-      "extension": "json",
-      "type": "json",
-      "size_bytes": 6141,
-      "last_modified_iso": "2026-02-25T20:06:05-05:00",
-      "last_commit_sha": "1a20d662d88ac00612b2df2412570ff66d45e01c",
-      "tags": [
-        "governance_docs",
-        "schema",
-        "category:governance_docs",
-        "ext:json"
-      ]
-    },
-    {
       "path": "governance_docs/Workstream_Assignments_FCCPS_AI_Advisory_Committee.md",
       "filename": "Workstream_Assignments_FCCPS_AI_Advisory_Committee.md",
       "extension": "md",
@@ -1379,26 +504,11 @@
       ]
     },
     {
-      "path": "governance_docs/Workstreams/20260207_Tom-Colvin_RSB-workstream.txt",
-      "filename": "20260207_Tom-Colvin_RSB-workstream.txt",
-      "extension": "txt",
-      "type": "txt",
-      "size_bytes": 2596,
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
-      "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
-      "tags": [
-        "governance_docs",
-        "Workstreams",
-        "category:governance_docs",
-        "ext:txt"
-      ]
-    },
-    {
       "path": "governance_docs/Workstreams/dps/20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md",
       "filename": "20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 32090,
+      "size_bytes": 31693,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1526,7 +636,7 @@
       "filename": "Re Research  Shared Baseline (WS-RSB) guidance and deliverable for 20 Feb.txt",
       "extension": "txt",
       "type": "txt",
-      "size_bytes": 16918,
+      "size_bytes": 16443,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1558,7 +668,7 @@
       "filename": "Shared Baseline v01.md",
       "extension": "md",
       "type": "md",
-      "size_bytes": 43126,
+      "size_bytes": 42624,
       "last_modified_iso": "2026-02-24T12:30:47-05:00",
       "last_commit_sha": "810b9c92521fc3d08a19aafc4aeac99e671fcf30",
       "tags": [
@@ -1570,26 +680,18 @@
       ]
     },
     {
-      "path": "LICENSE",
-      "filename": "LICENSE",
-      "extension": "",
-      "type": "none",
-      "size_bytes": 1075,
-      "last_modified_iso": "2026-02-23T16:35:34-05:00",
-      "last_commit_sha": "417004d2c8ae527a2b8f46d9261c0929534f9709",
-      "tags": []
-    },
-    {
-      "path": "logs/health-dashboard-task.log",
-      "filename": "health-dashboard-task.log",
-      "extension": "log",
-      "type": "log",
-      "size_bytes": 16454,
-      "last_modified_iso": "2026-02-28T11:05:23.397241Z",
-      "last_commit_sha": null,
+      "path": "governance_docs/schema/glidepath_history.schema.json",
+      "filename": "glidepath_history.schema.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 5883,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
-        "logs",
-        "ext:log"
+        "governance_docs",
+        "schema",
+        "category:governance_docs",
+        "ext:json"
       ]
     },
     {
@@ -1597,9 +699,9 @@
       "filename": "autopilot_report.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 1286,
-      "last_modified_iso": "2026-02-27T16:11:37.125341Z",
-      "last_commit_sha": null,
+      "size_bytes": 393,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "category:public",
@@ -1611,7 +713,7 @@
       "filename": "dashboard_bundle.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 48605,
+      "size_bytes": 46875,
       "last_modified_iso": "2026-02-25T15:58:03-05:00",
       "last_commit_sha": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
       "tags": [
@@ -1639,9 +741,9 @@
       "filename": "file_catalog.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 73735,
-      "last_modified_iso": "2026-02-25T23:16:39Z",
-      "last_commit_sha": "d7682f7104a4b7daf2135f8f1d4064e707f39ec2",
+      "size_bytes": 71479,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "category:public",
@@ -1653,7 +755,7 @@
       "filename": "full_export.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 233017,
+      "size_bytes": 226390,
       "last_modified_iso": "2026-02-25T15:58:03-05:00",
       "last_commit_sha": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
       "tags": [
@@ -1681,9 +783,9 @@
       "filename": "glidepath_history.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 7835,
-      "last_modified_iso": "2026-02-25T23:16:39Z",
-      "last_commit_sha": "d7682f7104a4b7daf2135f8f1d4064e707f39ec2",
+      "size_bytes": 8482,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "category:public",
@@ -1695,9 +797,9 @@
       "filename": "kpi_evidence.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 12797,
-      "last_modified_iso": "2026-02-25T23:16:39Z",
-      "last_commit_sha": "d7682f7104a4b7daf2135f8f1d4064e707f39ec2",
+      "size_bytes": 12279,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "category:public",
@@ -1709,11 +811,1082 @@
       "filename": "kpis.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 15968,
-      "last_modified_iso": "2026-02-25T23:16:39Z",
-      "last_commit_sha": "d7682f7104a4b7daf2135f8f1d4064e707f39ec2",
+      "size_bytes": 15372,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/001_cognitive_pipeline_table__8b209b5865e0.json",
+      "filename": "001_cognitive_pipeline_table__8b209b5865e0.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 5824,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/002_stateoftheart_ai_reasoning_systems_partially_mirror_huma__faccac3e659a.json",
+      "filename": "002_stateoftheart_ai_reasoning_systems_partially_mirror_huma__faccac3e659a.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 5290,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/003_human_machine_teaming__3a41667507c7.json",
+      "filename": "003_human_machine_teaming__3a41667507c7.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 4978,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/004_cognitive_pipeline_applied_as_a_k12_humanai_teaming_scaf__f8f66b7294e5.json",
+      "filename": "004_cognitive_pipeline_applied_as_a_k12_humanai_teaming_scaf__f8f66b7294e5.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 9306,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/005_ai_integrated_ecosystem_project_for_grade_7__a34696fe2f74.json",
+      "filename": "005_ai_integrated_ecosystem_project_for_grade_7__a34696fe2f74.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 11308,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/006_approach_to_policy_development__a8a4f5ce97bb.json",
+      "filename": "006_approach_to_policy_development__a8a4f5ce97bb.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 5807,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/01_updated_60_minute_agenda_with_team_charter_vote__6bd38a275029.json",
+      "filename": "01_updated_60_minute_agenda_with_team_charter_vote__6bd38a275029.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 11682,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/06_feb_26_run_of_show__427bf973e75c.json",
+      "filename": "06_feb_26_run_of_show__427bf973e75c.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 6047,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20250812_policy_bcf_advisory_committees_to_the_school_board__17398ec6ff30.json",
+      "filename": "20250812_policy_bcf_advisory_committees_to_the_school_board__17398ec6ff30.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 25634,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20250812_policy_bcf_advisory_committees_to_the_school_board__73476fba625c.json",
+      "filename": "20250812_policy_bcf_advisory_committees_to_the_school_board__73476fba625c.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 28080,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20251007_fccps_school_board_announces_comprehensive_ai_polic__7db57f0272a6.json",
+      "filename": "20251007_fccps_school_board_announces_comprehensive_ai_polic__7db57f0272a6.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 14498,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20251007_fccps_school_board_announces_comprehensive_ai_polic__cdb9a0fafb47.json",
+      "filename": "20251007_fccps_school_board_announces_comprehensive_ai_polic__cdb9a0fafb47.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 18638,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260123_fccps_ai_advisory_committee_agenda_and_minutes__d5fd65dbbe4f.json",
+      "filename": "20260123_fccps_ai_advisory_committee_agenda_and_minutes__d5fd65dbbe4f.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 9822,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260123_fccps_ai_advisory_committee_agenda_and_minutes__dbc928bebe87.json",
+      "filename": "20260123_fccps_ai_advisory_committee_agenda_and_minutes__dbc928bebe87.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 8749,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260205_one_page_team_charter_v0_9_update_to_v1_0_for_feb_6__8ed2f64246e5.json",
+      "filename": "20260205_one_page_team_charter_v0_9_update_to_v1_0_for_feb_6__8ed2f64246e5.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 5223,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260205_one_page_team_charter_v1_0_for_feb_6_review_vote__da08a7051c89.json",
+      "filename": "20260205_one_page_team_charter_v1_0_for_feb_6_review_vote__da08a7051c89.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 6668,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260206_fccps_ai_advisory_committee_focus_block_worksheet__3c768d10a217.json",
+      "filename": "20260206_fccps_ai_advisory_committee_focus_block_worksheet__3c768d10a217.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 7313,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260206_fccps_ai_advisory_committee_minutes__5dc077b4804c.json",
+      "filename": "20260206_fccps_ai_advisory_committee_minutes__5dc077b4804c.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 27471,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260206_fccps_ai_advisory_committee_minutes__7d1c1110fd09.json",
+      "filename": "20260206_fccps_ai_advisory_committee_minutes__7d1c1110fd09.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 15652,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260220_fccps_ai_advisory_committee_mtg_3_agenda__514acf655f4c.json",
+      "filename": "20260220_fccps_ai_advisory_committee_mtg_3_agenda__514acf655f4c.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 3939,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260220_fccps_ai_advisory_committee_mtg_3_agenda__d8e175f8bbf9.json",
+      "filename": "20260220_fccps_ai_advisory_committee_mtg_3_agenda__d8e175f8bbf9.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 2066,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260220_fccps_ai_advisory_committee_mtg_3_agenda_minutes__11d06f14a36e.json",
+      "filename": "20260220_fccps_ai_advisory_committee_mtg_3_agenda_minutes__11d06f14a36e.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 3955,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/20260226_ws_eqa__e97241f984a0.json",
+      "filename": "20260226_ws_eqa__e97241f984a0.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 57149,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/a_new_direction_for_students_in_an_ai_world_full_report__ffa5adfa3216.json",
+      "filename": "a_new_direction_for_students_in_an_ai_world_full_report__ffa5adfa3216.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 1058389,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/artificial_intelligence_and_aps__fbc030038eff.json",
+      "filename": "artificial_intelligence_and_aps__fbc030038eff.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 20804,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/draft_ws_dps_colead_briefing__376abff1fd17.json",
+      "filename": "draft_ws_dps_colead_briefing__376abff1fd17.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 24685,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/draft_ws_dps_colead_briefing_johnedits_revised__53ee1d48715f.json",
+      "filename": "draft_ws_dps_colead_briefing_johnedits_revised__53ee1d48715f.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 22947,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f1_inputs_top_risks_top_opportunities_synthesized_themes__2034cd4958e8.json",
+      "filename": "f1_inputs_top_risks_top_opportunities_synthesized_themes__2034cd4958e8.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 17106,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f1_inputs_top_risks_top_opportunities_synthesized_themes_man__ba67723c8755.json",
+      "filename": "f1_inputs_top_risks_top_opportunities_synthesized_themes_man__ba67723c8755.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 1126,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f2_pass__b8d91a5d74f2.json",
+      "filename": "f2_pass__b8d91a5d74f2.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 12061,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f2_pass_manifest__e4c96925eb4d.json",
+      "filename": "f2_pass_manifest__e4c96925eb4d.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 1016,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f2_principle_candidates_ai_seed_drafts__028eb3e3dd78.json",
+      "filename": "f2_principle_candidates_ai_seed_drafts__028eb3e3dd78.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 19264,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f2_principle_candidates_ai_seed_drafts_manifest__927a44eef076.json",
+      "filename": "f2_principle_candidates_ai_seed_drafts_manifest__927a44eef076.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 1082,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f2_revise__0cc7ec1118c5.json",
+      "filename": "f2_revise__0cc7ec1118c5.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 16681,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f2_revise_manifest__e8b8c2f67cfe.json",
+      "filename": "f2_revise_manifest__e8b8c2f67cfe.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 1020,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f3_park__12abcadfa0ba.json",
+      "filename": "f3_park__12abcadfa0ba.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 4381,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f3_park_manifest__52dc02fc9063.json",
+      "filename": "f3_park_manifest__52dc02fc9063.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 1014,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f3_quality_filter__e349835ff556.json",
+      "filename": "f3_quality_filter__e349835ff556.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 24140,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/f3_quality_filter_manifest__3bfb44e3ea75.json",
+      "filename": "f3_quality_filter_manifest__3bfb44e3ea75.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 1036,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/facilitator_25_minute_focus_block_values_principles__02c6cc74fbf0.json",
+      "filename": "facilitator_25_minute_focus_block_values_principles__02c6cc74fbf0.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 15687,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/fccps_advisory_board_agenda_meeting_minutes_template__8a3222305f87.json",
+      "filename": "fccps_advisory_board_agenda_meeting_minutes_template__8a3222305f87.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 2388,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/fccps_ai_advisory_committeerisks_and_opportunities_assessmen__7ff423b1d0c3.json",
+      "filename": "fccps_ai_advisory_committeerisks_and_opportunities_assessmen__7ff423b1d0c3.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 771,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/fccps_ai_survey_analysis_workbook_results_imported__3e81ff36aeff.json",
+      "filename": "fccps_ai_survey_analysis_workbook_results_imported__3e81ff36aeff.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 24349,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/fccps_ai_values_and_principles_guidance_packet__d8d350819075.json",
+      "filename": "fccps_ai_values_and_principles_guidance_packet__d8d350819075.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 27767,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/fccps_sample_advisory_board_agenda_minutes__57e95e61f760.json",
+      "filename": "fccps_sample_advisory_board_agenda_minutes__57e95e61f760.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 2354,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/jillians_corner__a3efdd8f2fba.json",
+      "filename": "jillians_corner__a3efdd8f2fba.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 32623,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/jillians_corner_aieip_reformatted__37f405369521.json",
+      "filename": "jillians_corner_aieip_reformatted__37f405369521.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 11014,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/jillians_corner_concat__660961ea49e8.json",
+      "filename": "jillians_corner_concat__660961ea49e8.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 21075,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/meeting_3_20_feb_focus_block__3cfbb3ab6bc9.json",
+      "filename": "meeting_3_20_feb_focus_block__3cfbb3ab6bc9.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 39302,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/policyoutline__964ddc89ef24.json",
+      "filename": "policyoutline__964ddc89ef24.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 16003,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/principles_candidates__13707a447452.json",
+      "filename": "principles_candidates__13707a447452.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 13080,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/re_research_shared_baseline_ws_rsb_guidance_and_deliverable___494b83a9ac71.json",
+      "filename": "re_research_shared_baseline_ws_rsb_guidance_and_deliverable___494b83a9ac71.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 19221,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/readme__b33563055168.json",
+      "filename": "readme__b33563055168.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 680,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/school_board_advisory_committee_training__7c57371ccfb0.json",
+      "filename": "school_board_advisory_committee_training__7c57371ccfb0.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 17143,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/school_board_advisory_committee_training__867ef0f3a8d3.json",
+      "filename": "school_board_advisory_committee_training__867ef0f3a8d3.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 6799,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/shared_baseline_onepager_v0_1a__41d0b1c57792.json",
+      "filename": "shared_baseline_onepager_v0_1a__41d0b1c57792.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 3306,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/shared_baseline_v01__2c78c109ba58.json",
+      "filename": "shared_baseline_v01__2c78c109ba58.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 51560,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/values_principles_rollup__1de8e0ce0063.json",
+      "filename": "values_principles_rollup__1de8e0ce0063.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 25078,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/values_principles_survey_part_1_results_v_20260227_1035__6e1aec7b87a0.json",
+      "filename": "values_principles_survey_part_1_results_v_20260227_1035__6e1aec7b87a0.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 756,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/vp_part1_telemetry_complete__b8e8f923d4fa.json",
+      "filename": "vp_part1_telemetry_complete__b8e8f923d4fa.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 22348,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/vp_part1_telemetry_onepager__9ef68e69b119.json",
+      "filename": "vp_part1_telemetry_onepager__9ef68e69b119.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 16749,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/vp_part1_telemetry_onepager_committee_share_internal__5bd7a4b486f6.json",
+      "filename": "vp_part1_telemetry_onepager_committee_share_internal__5bd7a4b486f6.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 16793,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/vp_part2_question_set_first_pass__4b38aedaf99c.json",
+      "filename": "vp_part2_question_set_first_pass__4b38aedaf99c.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 11101,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/vp_part2_question_set_first_pass__c9d800ea3e7d.json",
+      "filename": "vp_part2_question_set_first_pass__c9d800ea3e7d.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 13902,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/ws_dps_co_lead_sync_pre_brief_john_to_jillian__67b2876c5cf9.json",
+      "filename": "ws_dps_co_lead_sync_pre_brief_john_to_jillian__67b2876c5cf9.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 8297,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/artifacts/ws_dps_johnedits_changelog__200b0658a22b.json",
+      "filename": "ws_dps_johnedits_changelog__200b0658a22b.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 2706,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "artifacts",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/discovery_report.json",
+      "filename": "discovery_report.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 36497,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
         "category:public",
         "ext:json"
       ]
@@ -1723,9 +1896,9 @@
       "filename": "index.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 3730,
-      "last_modified_iso": "2026-02-28T00:13:49.029957Z",
-      "last_commit_sha": null,
+      "size_bytes": 61534,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "project_ingest",
@@ -1734,16 +1907,640 @@
       ]
     },
     {
+      "path": "public/project_ingest/markdown/20250812_policy_bcf_advisory_committees_to_the_school_board__73476fba625c.md",
+      "filename": "20250812_policy_bcf_advisory_committees_to_the_school_board__73476fba625c.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 20539,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/20251007_fccps_school_board_announces_comprehensive_ai_polic__cdb9a0fafb47.md",
+      "filename": "20251007_fccps_school_board_announces_comprehensive_ai_polic__cdb9a0fafb47.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 11351,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/20260123_fccps_ai_advisory_committee_agenda_and_minutes__dbc928bebe87.md",
+      "filename": "20260123_fccps_ai_advisory_committee_agenda_and_minutes__dbc928bebe87.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 5751,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/20260206_fccps_ai_advisory_committee_focus_block_worksheet__3c768d10a217.md",
+      "filename": "20260206_fccps_ai_advisory_committee_focus_block_worksheet__3c768d10a217.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 2205,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/20260206_fccps_ai_advisory_committee_minutes__5dc077b4804c.md",
+      "filename": "20260206_fccps_ai_advisory_committee_minutes__5dc077b4804c.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 10599,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/20260220_fccps_ai_advisory_committee_mtg_3_agenda__514acf655f4c.md",
+      "filename": "20260220_fccps_ai_advisory_committee_mtg_3_agenda__514acf655f4c.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1224,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/20260220_fccps_ai_advisory_committee_mtg_3_agenda_minutes__11d06f14a36e.md",
+      "filename": "20260220_fccps_ai_advisory_committee_mtg_3_agenda_minutes__11d06f14a36e.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1224,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/20260226_ws_eqa__e97241f984a0.md",
+      "filename": "20260226_ws_eqa__e97241f984a0.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 23543,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/draft_ws_dps_colead_briefing__376abff1fd17.md",
+      "filename": "draft_ws_dps_colead_briefing__376abff1fd17.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 17288,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/draft_ws_dps_colead_briefing_johnedits_revised__53ee1d48715f.md",
+      "filename": "draft_ws_dps_colead_briefing_johnedits_revised__53ee1d48715f.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 15780,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/facilitator_25_minute_focus_block_values_principles__02c6cc74fbf0.md",
+      "filename": "facilitator_25_minute_focus_block_values_principles__02c6cc74fbf0.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 6498,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/fccps_ai_values_and_principles_guidance_packet__d8d350819075.md",
+      "filename": "fccps_ai_values_and_principles_guidance_packet__d8d350819075.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 11094,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/jillians_corner__a3efdd8f2fba.md",
+      "filename": "jillians_corner__a3efdd8f2fba.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 19246,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/meeting_3_20_feb_focus_block__3cfbb3ab6bc9.md",
+      "filename": "meeting_3_20_feb_focus_block__3cfbb3ab6bc9.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 13894,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/policyoutline__964ddc89ef24.md",
+      "filename": "policyoutline__964ddc89ef24.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 7687,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/school_board_advisory_committee_training__7c57371ccfb0.md",
+      "filename": "school_board_advisory_committee_training__7c57371ccfb0.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 4667,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/shared_baseline_onepager_v0_1a__41d0b1c57792.md",
+      "filename": "shared_baseline_onepager_v0_1a__41d0b1c57792.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1914,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/markdown/shared_baseline_v01__2c78c109ba58.md",
+      "filename": "shared_baseline_v01__2c78c109ba58.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 26955,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "markdown",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20250812_policy_bcf_advisory_committees_to_the_school_board_73476fba625cc05b92f964e2.md",
+      "filename": "20250812_policy_bcf_advisory_committees_to_the_school_board_73476fba625cc05b92f964e2.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 20416,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20251007_fccps_school_board_announces_comprehensive_ai_polic_cdb9a0fafb47c0e8bd499984.md",
+      "filename": "20251007_fccps_school_board_announces_comprehensive_ai_polic_cdb9a0fafb47c0e8bd499984.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 11242,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20260123_fccps_ai_advisory_committee_agenda_and_minutes_dbc928bebe8732f745335fec.md",
+      "filename": "20260123_fccps_ai_advisory_committee_agenda_and_minutes_dbc928bebe8732f745335fec.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 5594,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20260206_fccps_ai_advisory_committee_focus_block_worksheet_3c768d10a217c2e01e673cab.md",
+      "filename": "20260206_fccps_ai_advisory_committee_focus_block_worksheet_3c768d10a217c2e01e673cab.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 2096,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20260206_fccps_ai_advisory_committee_minutes_5dc077b4804c5ab63e02ad34.md",
+      "filename": "20260206_fccps_ai_advisory_committee_minutes_5dc077b4804c5ab63e02ad34.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 10476,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20260220_fccps_ai_advisory_committee_mtg_3_agenda_514acf655f4cca2a1aba9def.md",
+      "filename": "20260220_fccps_ai_advisory_committee_mtg_3_agenda_514acf655f4cca2a1aba9def.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1115,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20260220_fccps_ai_advisory_committee_mtg_3_agenda_minutes_11d06f14a36e7daf18ba895f.md",
+      "filename": "20260220_fccps_ai_advisory_committee_mtg_3_agenda_minutes_11d06f14a36e7daf18ba895f.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1115,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/20260226_ws_eqa_e97241f984a0be845dcfc31b.md",
+      "filename": "20260226_ws_eqa_e97241f984a0be845dcfc31b.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 23434,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/draft_ws_dps_colead_briefing_376abff1fd1791a36628b16a.md",
+      "filename": "draft_ws_dps_colead_briefing_376abff1fd1791a36628b16a.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 16977,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/draft_ws_dps_colead_briefing_johnedits_revised_53ee1d48715f61bc9ccae534.md",
+      "filename": "draft_ws_dps_colead_briefing_johnedits_revised_53ee1d48715f61bc9ccae534.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 15469,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/facilitator_25_minute_focus_block_values_principles_02c6cc74fbf031e77ef9f1a7.md",
+      "filename": "facilitator_25_minute_focus_block_values_principles_02c6cc74fbf031e77ef9f1a7.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 6389,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/fccps_ai_values_and_principles_guidance_packet_d8d3508190754da1a63c5da2.md",
+      "filename": "fccps_ai_values_and_principles_guidance_packet_d8d3508190754da1a63c5da2.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 10801,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/jillians_corner_a3efdd8f2fbac55b2bb62c10.md",
+      "filename": "jillians_corner_a3efdd8f2fbac55b2bb62c10.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 19137,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/meeting_3_20_feb_focus_block_3cfbb3ab6bc93a7300d5464e.md",
+      "filename": "meeting_3_20_feb_focus_block_3cfbb3ab6bc93a7300d5464e.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 13785,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/policyoutline_964ddc89ef244fb09f026386.md",
+      "filename": "policyoutline_964ddc89ef244fb09f026386.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 7578,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/school_board_advisory_committee_training_7c57371ccfb0d9b7cbedaf80.md",
+      "filename": "school_board_advisory_committee_training_7c57371ccfb0d9b7cbedaf80.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 4558,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/shared_baseline_onepager_v0_1a_41d0b1c57792423200164cee.md",
+      "filename": "shared_baseline_onepager_v0_1a_41d0b1c57792423200164cee.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 1783,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
+      "path": "public/project_ingest/md/shared_baseline_v01_2c78c109ba58a0067c5b9ce2.md",
+      "filename": "shared_baseline_v01_2c78c109ba58a0067c5b9ce2.md",
+      "extension": "md",
+      "type": "md",
+      "size_bytes": 26566,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "md",
+        "category:public",
+        "ext:md"
+      ]
+    },
+    {
       "path": "public/project_ingest/pii_report.json",
       "filename": "pii_report.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 154,
-      "last_modified_iso": "2026-02-28T00:13:49.027238Z",
-      "last_commit_sha": null,
+      "size_bytes": 16293,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "project_ingest",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/spreadsheets/fccps_ai_advisory_committeerisks_and_opportunities_assessmen__7ff423b1d0c3.json",
+      "filename": "fccps_ai_advisory_committeerisks_and_opportunities_assessmen__7ff423b1d0c3.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 472,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "spreadsheets",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/spreadsheets/principles_candidates__13707a447452.json",
+      "filename": "principles_candidates__13707a447452.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 15569,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "spreadsheets",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/spreadsheets/values_principles_survey_part_1_results_v_20260227_1035__6e1aec7b87a0.json",
+      "filename": "values_principles_survey_part_1_results_v_20260227_1035__6e1aec7b87a0.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 472,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": [
+        "public",
+        "project_ingest",
+        "spreadsheets",
         "category:public",
         "ext:json"
       ]
@@ -1753,9 +2550,9 @@
       "filename": "f1_inputs_top_risks_top_opportunities_synthesized_themes.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 14537,
-      "last_modified_iso": "2026-02-28T00:13:48.901526Z",
-      "last_commit_sha": null,
+      "size_bytes": 14270,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "project_ingest",
@@ -1769,9 +2566,9 @@
       "filename": "f2_pass.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 9867,
-      "last_modified_iso": "2026-02-28T00:13:48.907234Z",
-      "last_commit_sha": null,
+      "size_bytes": 9590,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "project_ingest",
@@ -1785,9 +2582,9 @@
       "filename": "f2_principle_candidates_ai_seed_drafts.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 16222,
-      "last_modified_iso": "2026-02-28T00:13:48.920966Z",
-      "last_commit_sha": null,
+      "size_bytes": 15829,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "project_ingest",
@@ -1801,9 +2598,9 @@
       "filename": "f2_revise.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 13813,
-      "last_modified_iso": "2026-02-28T00:13:48.930029Z",
-      "last_commit_sha": null,
+      "size_bytes": 13394,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "project_ingest",
@@ -1817,9 +2614,9 @@
       "filename": "f3_park.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 3283,
-      "last_modified_iso": "2026-02-28T00:13:48.935198Z",
-      "last_commit_sha": null,
+      "size_bytes": 3178,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "project_ingest",
@@ -1833,9 +2630,9 @@
       "filename": "f3_quality_filter.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 106418,
-      "last_modified_iso": "2026-02-28T00:13:48.972827Z",
-      "last_commit_sha": null,
+      "size_bytes": 104103,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "project_ingest",
@@ -1849,9 +2646,9 @@
       "filename": "values_principles_rollup.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 194234,
-      "last_modified_iso": "2026-02-28T00:13:49.025183Z",
-      "last_commit_sha": null,
+      "size_bytes": 189746,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "public",
         "project_ingest",
@@ -1861,13 +2658,61 @@
       ]
     },
     {
+      "path": "public/project_ingest/xlsx/fccps_ai_advisory_committeerisks_and_opportunities_assessmen_7ff423b1d0c36194c4bd7db8.json",
+      "filename": "fccps_ai_advisory_committeerisks_and_opportunities_assessmen_7ff423b1d0c36194c4bd7db8.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 278,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "xlsx",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/xlsx/principles_candidates_13707a447452374c9f96643e.json",
+      "filename": "principles_candidates_13707a447452374c9f96643e.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 20230,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "xlsx",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
+      "path": "public/project_ingest/xlsx/values_principles_survey_part_1_results_v_20260227_1035_6e1aec7b87a01ddce1715d83.json",
+      "filename": "values_principles_survey_part_1_results_v_20260227_1035_6e1aec7b87a01ddce1715d83.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 278,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
+      "tags": [
+        "public",
+        "project_ingest",
+        "xlsx",
+        "category:public",
+        "ext:json"
+      ]
+    },
+    {
       "path": "public/public_snapshot.json",
       "filename": "public_snapshot.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 13453,
-      "last_modified_iso": "2026-02-25T23:16:39Z",
-      "last_commit_sha": "d7682f7104a4b7daf2135f8f1d4064e707f39ec2",
+      "size_bytes": 12949,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "category:public",
@@ -1879,9 +2724,9 @@
       "filename": "quality_report.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 2471,
-      "last_modified_iso": "2026-02-25T23:16:39Z",
-      "last_commit_sha": "d7682f7104a4b7daf2135f8f1d4064e707f39ec2",
+      "size_bytes": 2216,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "category:public",
@@ -1893,9 +2738,9 @@
       "filename": "ref_index.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 34158,
-      "last_modified_iso": "2026-02-25T23:16:39Z",
-      "last_commit_sha": "d7682f7104a4b7daf2135f8f1d4064e707f39ec2",
+      "size_bytes": 20291,
+      "last_modified_iso": "2026-03-01T03:56:55Z",
+      "last_commit_sha": "56d0dbe529f5ff9f91e892ec77389f46638e184c",
       "tags": [
         "public",
         "category:public",
@@ -1907,24 +2752,9 @@
       "filename": "FCCPS_AI_Survey_Analysis_Workbook_results-imported.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 1146381,
-      "last_modified_iso": "2026-02-27T20:04:33.561395Z",
-      "last_commit_sha": null,
-      "tags": [
-        "public",
-        "survey_exports",
-        "category:public",
-        "ext:json"
-      ]
-    },
-    {
-      "path": "public/survey_exports/sanitization_report.json",
-      "filename": "sanitization_report.json",
-      "extension": "json",
-      "type": "json",
-      "size_bytes": 1224,
-      "last_modified_iso": "2026-02-27T20:04:33.579521Z",
-      "last_commit_sha": null,
+      "size_bytes": 1079827,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "survey_exports",
@@ -1937,9 +2767,9 @@
       "filename": "Values_Principles_Survey_Part1_Results_v20260227-0737.json",
       "extension": "json",
       "type": "json",
-      "size_bytes": 120331,
-      "last_modified_iso": "2026-02-27T20:04:33.578499Z",
-      "last_commit_sha": null,
+      "size_bytes": 119009,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "public",
         "survey_exports",
@@ -1948,15 +2778,18 @@
       ]
     },
     {
-      "path": "README.md",
-      "filename": "README.md",
-      "extension": "md",
-      "type": "md",
-      "size_bytes": 6573,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "path": "public/survey_exports/sanitization_report.json",
+      "filename": "sanitization_report.json",
+      "extension": "json",
+      "type": "json",
+      "size_bytes": 375,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
-        "ext:md"
+        "public",
+        "survey_exports",
+        "category:public",
+        "ext:json"
       ]
     },
     {
@@ -1964,9 +2797,9 @@
       "filename": "requirements.txt",
       "extension": "txt",
       "type": "txt",
-      "size_bytes": 83,
-      "last_modified_iso": "2026-02-24T15:51:29-05:00",
-      "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
+      "size_bytes": 118,
+      "last_modified_iso": "2026-02-28T23:41:41-05:00",
+      "last_commit_sha": "637f0b18d011e1c892bc6bae9d0464d91d167e9f",
       "tags": [
         "ext:txt"
       ]
@@ -1976,7 +2809,7 @@
       "filename": "build_catalog.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 7583,
+      "size_bytes": 7341,
       "last_modified_iso": "2026-02-24T15:51:29-05:00",
       "last_commit_sha": "1573e4e76119a21de4e6a4c6c2ccab48ebf95ac0",
       "tags": [
@@ -1990,9 +2823,9 @@
       "filename": "build_glidepath_history.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 13482,
-      "last_modified_iso": "2026-02-25T20:06:05-05:00",
-      "last_commit_sha": "1a20d662d88ac00612b2df2412570ff66d45e01c",
+      "size_bytes": 13114,
+      "last_modified_iso": "2026-02-28T23:24:12-05:00",
+      "last_commit_sha": "ca8ef3ae0512235c69b0c3d4d3230ccf7e4443ce",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2004,7 +2837,7 @@
       "filename": "build_kpis.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 27526,
+      "size_bytes": 26818,
       "last_modified_iso": "2026-02-25T15:58:03-05:00",
       "last_commit_sha": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
       "tags": [
@@ -2019,8 +2852,8 @@
       "extension": "py",
       "type": "py",
       "size_bytes": 5904,
-      "last_modified_iso": "2026-02-26T02:25:55.764501Z",
-      "last_commit_sha": null,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2033,8 +2866,8 @@
       "extension": "py",
       "type": "py",
       "size_bytes": 19121,
-      "last_modified_iso": "2026-02-28T00:12:46.284556Z",
-      "last_commit_sha": null,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2046,7 +2879,7 @@
       "filename": "build_snapshot.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 5666,
+      "size_bytes": 5506,
       "last_modified_iso": "2026-02-25T15:58:03-05:00",
       "last_commit_sha": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
       "tags": [
@@ -2061,8 +2894,8 @@
       "extension": "py",
       "type": "py",
       "size_bytes": 6875,
-      "last_modified_iso": "2026-02-27T16:05:52.706728Z",
-      "last_commit_sha": null,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2088,9 +2921,9 @@
       "filename": "pii_scan.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 11159,
-      "last_modified_iso": "2026-02-28T02:16:24.310128Z",
-      "last_commit_sha": null,
+      "size_bytes": 36434,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2102,7 +2935,7 @@
       "filename": "quality_checks.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 10245,
+      "size_bytes": 9952,
       "last_modified_iso": "2026-02-25T15:58:03-05:00",
       "last_commit_sha": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
       "tags": [
@@ -2117,8 +2950,8 @@
       "extension": "py",
       "type": "py",
       "size_bytes": 8676,
-      "last_modified_iso": "2026-02-27T20:03:18.237372Z",
-      "last_commit_sha": null,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2131,8 +2964,8 @@
       "extension": "py",
       "type": "py",
       "size_bytes": 6316,
-      "last_modified_iso": "2026-02-27T16:10:12.031091Z",
-      "last_commit_sha": null,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2145,8 +2978,8 @@
       "extension": "py",
       "type": "py",
       "size_bytes": 2459,
-      "last_modified_iso": "2026-02-27T19:51:08.758618Z",
-      "last_commit_sha": null,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2158,9 +2991,9 @@
       "filename": "validate_public.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 16575,
-      "last_modified_iso": "2026-02-25T20:06:05-05:00",
-      "last_commit_sha": "1a20d662d88ac00612b2df2412570ff66d45e01c",
+      "size_bytes": 28385,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
       "tags": [
         "scripts",
         "category:scripts",
@@ -2172,7 +3005,7 @@
       "filename": "validate_sor.py",
       "extension": "py",
       "type": "py",
-      "size_bytes": 17476,
+      "size_bytes": 17069,
       "last_modified_iso": "2026-02-25T15:58:03-05:00",
       "last_commit_sha": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
       "tags": [
@@ -2186,7 +3019,7 @@
       "filename": "Publish-HealthDashboard.ps1",
       "extension": "ps1",
       "type": "ps1",
-      "size_bytes": 5062,
+      "size_bytes": 4922,
       "last_modified_iso": "2026-02-25T16:58:49-05:00",
       "last_commit_sha": "08bc18cd5c4728cfa9f03f56e4a5d4dd279f6044",
       "tags": [
@@ -2201,7 +3034,7 @@
       "filename": "Register-HealthDashboardTasks.ps1",
       "extension": "ps1",
       "type": "ps1",
-      "size_bytes": 2264,
+      "size_bytes": 2225,
       "last_modified_iso": "2026-02-24T17:01:19-05:00",
       "last_commit_sha": "bfcc87601eb2cc37300233fd167c085145f04da6",
       "tags": [
@@ -2212,11 +3045,25 @@
       ]
     },
     {
+      "path": "scripts/write_autopilot_report.py",
+      "filename": "write_autopilot_report.py",
+      "extension": "py",
+      "type": "py",
+      "size_bytes": 4254,
+      "last_modified_iso": "2026-02-28T23:33:43-05:00",
+      "last_commit_sha": "ff0afecf3771dd220d66497befa780ad8c566d0a",
+      "tags": [
+        "scripts",
+        "category:scripts",
+        "ext:py"
+      ]
+    },
+    {
       "path": "sor/deliverables.yml",
       "filename": "deliverables.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 11150,
+      "size_bytes": 10782,
       "last_modified_iso": "2026-02-25T15:58:03-05:00",
       "last_commit_sha": "079dc9ae2225a2a0e081eeff251956827bb4ad47",
       "tags": [
@@ -2230,7 +3077,7 @@
       "filename": "timeline.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 3997,
+      "size_bytes": 3857,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -2244,7 +3091,7 @@
       "filename": "workstreams.yml",
       "extension": "yml",
       "type": "yml",
-      "size_bytes": 3710,
+      "size_bytes": 3606,
       "last_modified_iso": "2026-02-24T23:20:00-05:00",
       "last_commit_sha": "cf599b6f2e07aac763d2b35cf4ec1fc14c8bb93a",
       "tags": [
@@ -2252,6 +3099,16 @@
         "category:sor",
         "ext:yml"
       ]
+    },
+    {
+      "path": "t with PII gating + validated outputs\uf022",
+      "filename": "t with PII gating + validated outputs\uf022",
+      "extension": "",
+      "type": "none",
+      "size_bytes": 7308,
+      "last_modified_iso": "2026-03-01T10:12:17-05:00",
+      "last_commit_sha": "c7f47d0f4d97b6ad128f421579d39cc4fa871683",
+      "tags": []
     }
   ]
 }
