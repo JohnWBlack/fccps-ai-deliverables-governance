@@ -1,0 +1,141 @@
+{
+  "artifact_id": "5bd7a4b486f6e9c7f78d13f0",
+  "doc_type": "md",
+  "extracted_at_utc": "2026-03-01T14:39:34.387789Z",
+  "file_mtime_utc": "2026-02-28T12:43:42.138959Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [],
+      "section_id": "sec_0001",
+      "text": "<!--\nDOCUMENT MARKING: INTERNAL WORKING PAPER (committee-safe pseudonymous attribution)\nPII: Names replaced with Respondent_1..N (assigned in order of submission timestamp). Key not included.\nDATA PROVENANCE:\n- Source: MS Forms export \"Values & Principles Survey Part 1 Results v.20260227-1035.xlsx\"\n- Mappings: \"FCCPS_AI_Survey_Analysis_Workbook_results-imported.xlsx\" (Map_F3 / Map_TR)\n- Generated (UTC): 2026-02-28T12:35:41.093745+00:00\nAI USE DISCLOSURE:\n- Descriptive statistics computed via scripted parsing of the Excel exports.\n- Narrative/formatting drafted with AI assistance from computed aggregates.\n- No AI was used to alter raw responses; respondent text is not quoted.\n-->"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot"
+      ],
+      "section_id": "sec_0002",
+      "text": "**Purpose.** Summarize Part 1 telemetry (participation + friction signals) and identify decision-critical patterns to shape Part 2 (targeted definition locks + red-zone rewrites)."
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "Response-set telemetry (metadata)"
+      ],
+      "section_id": "sec_0003",
+      "text": "|   Respondents | Window start (ET)   | Window end (ET)   | Submissions by date                                        | Additional insights (long-form)   |\n|--------------:|:--------------------|:------------------|:-----------------------------------------------------------|:----------------------------------|\n|            10 | 2026-02-23 22:40    | 2026-02-27 10:35  | 2026-02-24: 3, 2026-02-25: 4, 2026-02-26: 2, 2026-02-27: 1 | 5/10                              |"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "Response-set telemetry (metadata)",
+        "Time-to-complete (minutes)"
+      ],
+      "section_id": "sec_0004",
+      "text": "> Treat as a *survey-friction* signal (start→submit can include breaks), not pure effort.\n\n|   Min |   P25 |   Median |   P75 |   Max |   Mean |   Trimmed mean (excl. top outlier) |\n|------:|------:|---------:|------:|------:|-------:|-----------------------------------:|\n|  27.8 |  64.4 |     88.5 | 120.2 |   500 |  128.9 |                               87.7 |"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "Overall"
+      ],
+      "section_id": "sec_0005",
+      "text": "- **Total F3 items:** 23\n- **Overall approval rate (all items × all respondents):** 69.6%\n- **Zones:** {'Green': 9, 'Yellow': 8, 'Red': 6}  \n  - **Green (≥80% approve):** safe to merge w/ light edits  \n  - **Yellow (60–79% approve):** converging; needs tightening/definitions  \n  - **Red (<60% approve):** must be rewritten into decision-ready alternatives for Meeting 4"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "“Do not approve” density by respondent (23 items)"
+      ],
+      "section_id": "sec_0006",
+      "text": "> Concentration matters: top two respondents account for **52.9%** of all “Do not approve” selections.\n\n```text\n| Respondent    | Approve | Do not approve | Duration (min) | Do-not-approve bar (23) |\n|:--------------|---------:|----------------:|----------------:|:------------------------|\n| Respondent_6  |       4 |             19 |          180.8 | ███████████████████░░░░ |\n| Respondent_1  |       5 |             18 |          110.3 | ██████████████████░░░░░ |\n| Respondent_2  |      13 |             10 |           80.5 | ██████████░░░░░░░░░░░░░ |\n| Respondent_5  |      14 |              9 |          123.6 | █████████░░░░░░░░░░░░░░ |\n| Respondent_10 |      16 |              7 |           96.5 | ███████░░░░░░░░░░░░░░░░ |\n| Respondent_9  |      18 |              5 |          500.0 | █████░░░░░░░░░░░░░░░░░░ |\n| Respondent_8  |      22 |              1 |           80.2 | █░░░░░░░░░░░░░░░░░░░░░░ |\n| Respondent_7  |      22 |              1 |           30.1 | █░░░░░░░░░░░░░░░░░░░░░░ |\n| Respondent_4  |      23 |              0 |           59.2 | ░░░░░░░░░░░░░░░░░░░░░░░ |\n| Respondent_3  |      23 |              0 |           27.8 | ░░░░░░░░░░░░░░░░░░░░░░░ |\n```"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "F3 item approval summary"
+      ],
+      "section_id": "sec_0007.1",
+      "text": "| Candidate   | Short name                         | Domain   |   Approve |   Do not approve | Approval rate   | Zone   | Approval bar         |\n|:------------|:-----------------------------------|:---------|----------:|-----------------:|:----------------|:-------|:---------------------|\n| F3-03       | accountable ownership              | P-TPC    |         8 |                2 | 80%             | Green  | ████████████████░░░░ |\n| F3-11       | UDL augmentation with checks       | P-EAI    |         8 |                2 | 80%             | Green  | ████████████████░░░░ |\n| F3-13       | use transparency                   | P-GGA    |         8 |                2 | 80%             | Green  | ████████████████░░░░ |\n| F3-21       | visible thinking                   | P-LSD    |         8 |                2 | 80%             | Green  | ████████████████░░░░ |\n| F3-14       | pilot plus off-ramps               | P-GGA    |         9 |                1 | 90%             | Green  | ██████████████████░░ |\n| F3-17       | risk-based restrictions            | P-GGA    |         9 |                1 | 90%             | Green  | ██████████████████░░ |\n| F3-19       | learning-evidence thresh"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "F3 item approval summary"
+      ],
+      "section_id": "sec_0008.2",
+      "text": "old        | P-GGA    |         9 |                1 | 90%             | Green  | ██████████████████░░ |\n| F3-23       | educator voice in governance       | P-TPW    |         9 |                1 | 90%             | Green  | ██████████████████░░ |\n| F3-01       | feedback channels                  | P-TPC    |        10 |                0 | 100%            | Green  | ████████████████████ |\n| F3-05       | design before bans                 | P-AAI    |         4 |                6 | 40%             | Red    | ████████░░░░░░░░░░░░ |\n| F3-20       | human-centered learning            | P-LSD    |         4 |                6 | 40%             | Red    | ████████░░░░░░░░░░░░ |\n| F3-04       | common use-case language           | P-AAI    |         5 |                5 | 50%             | Red    | ██████████░░░░░░░░░░ |\n| F3-06       | detectors are advisory             | P-AAI    |         5 |                5 | 50%             | Red    | ██████████░░░░░░░░░░ |\n| F3-15       | notice plus consent where feasible | P-GGA    |         5 |                5 | 50%             | Red    | ██████████░░░░░░░░░░ |\n| F3-22       | teacher-owned feedback             | P-TPW    |         5 |"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "F3 item approval summary"
+      ],
+      "section_id": "sec_0009.3",
+      "text": "5 | 50%             | Red    | ██████████░░░░░░░░░░ |\n| F3-10       | access plus supports               | P-EAI    |         6 |                4 | 60%             | Yellow | ████████████░░░░░░░░ |\n| F3-16       | prevent cognitive offloading       | P-LSD    |         6 |                4 | 60%             | Yellow | ████████████░░░░░░░░ |\n| F3-02       | pilot with monitoring              | P-TPC    |         7 |                3 | 70%             | Yellow | ██████████████░░░░░░ |\n| F3-07       | student disclosure                 | P-AAI    |         7 |                3 | 70%             | Yellow | ██████████████░░░░░░ |\n| F3-08       | non-AI path                        | P-EAI    |         7 |                3 | 70%             | Yellow | ██████████████░░░░░░ |\n| F3-09       | IEP/504 decisions stay human       | P-EAI    |         7 |                3 | 70%             | Yellow | ██████████████░░░░░░ |\n| F3-12       | evaluate before scaling            | P-GGA    |         7 |                3 | 70%             | Yellow | ██████████████░░░░░░ |\n| F3-18       | AI literacy                        | P-LSD    |         7 |                3 | 70%             | Yellow"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "F3 item approval summary"
+      ],
+      "section_id": "sec_0010.4",
+      "text": "| ██████████████░░░░░░ |"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "Red-zone detail (who is blocking + why, at a glance)"
+      ],
+      "section_id": "sec_0011.1",
+      "text": "| Candidate   | Short name                         |   Do not approve | Primary lenses among disapprovers (top 4)   | Disapprovers                                                                      |\n|:------------|:-----------------------------------|-----------------:|:--------------------------------------------|:----------------------------------------------------------------------------------|\n| F3-04       | common use-case language           |                5 | TR1 (4), TR6 (2), TR5 (2), TR2 (1)          | Respondent_1, Respondent_2, Respondent_5, Respondent_6, Respondent_10             |\n| F3-05       | design before bans                 |                6 | TR1 (5), TR2 (4), TR7 (3), TR5 (2)          | Respondent_1, Respondent_2, Respondent_5, Respondent_6, Respondent_9, Respondent_10 |\n| F3-06       | detectors are advisory             |                5 | TR2 (3), TR3 (3), TR6 (2), TR8 (1)          | Respondent_1, Respondent_2, Respondent_5, Respondent_6, Respondent_9             |\n| F3-15       | notice plus consent where feasible |                5 | TR6 (3), TR5 (2), TR7 (1), TR4 (1)          | Respondent_1, Respondent_2, Respondent_5, Respondent_6, Respondent_10"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "F3 approvals: convergence vs blockers",
+        "Red-zone detail (who is blocking + why, at a glance)"
+      ],
+      "section_id": "sec_0012.2",
+      "text": "|\n| F3-20       | human-centered learning            |                6 | TR1 (5), TR7 (1), TR6 (1), TR5 (1)          | Respondent_1, Respondent_2, Respondent_5, Respondent_6, Respondent_9, Respondent_10 |\n| F3-22       | teacher-owned feedback             |                5 | TR6 (3), TR7 (2), TR1 (1), TR2 (1)          | Respondent_1, Respondent_2, Respondent_5, Respondent_6, Respondent_9             |"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "Tradeoffs (T1–T7): where the committee is split"
+      ],
+      "section_id": "sec_0013",
+      "text": "| Tradeoff   |   A |   B |   C |   Need more info | Lead           |\n|:-----------|----:|----:|----:|-----------------:|:---------------|\n| T1         |   0 |   3 |   4 |                3 | C              |\n| T2         |   2 |   0 |   8 |                0 | C              |\n| T3         |   4 |   1 |   4 |                1 | A              |\n| T4         |   1 |   0 |   4 |                5 | Need more info |\n| T5         |   1 |   1 |   7 |                1 | C              |\n| T6         |   1 |   0 |   7 |                2 | C              |\n| T7         |   2 |   0 |   7 |                1 | C              |\n\n**Interpretation cues**\n- **T4 (Notice/consent/opt-out)** is the biggest ambiguity signal (highest “Need more info”). This is a *definitions/scoping* problem more than a values problem.\n- **T1 (Assessment validity posture)** shows mixed preference between “design/process evidence” vs “hybrid w/ restrictions when needed,” again driven by definition ambiguity (“high-stakes,” “process evidence,” feasibility).\n- **T2, T5, T6, T7** show strong directional convergence toward “Option C” style guardrailed middle paths."
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "TR lenses (what people are optimizing for)"
+      ],
+      "section_id": "sec_0014",
+      "text": "Top lenses selected across **F3 + tradeoffs**:\n\n| TR   | Lens                                           |   Selections | Share   |\n|:-----|:-----------------------------------------------|-------------:|:--------|\n| TR7  | Feasibility, workload & sustainability         |          114 | 19%     |\n| TR1  | Learning impact & deep skills                  |          108 | 18%     |\n| TR6  | Transparency, accountability & community trust |           86 | 15%     |\n| TR2  | Assessment validity & academic integrity       |           82 | 14%     |\n| TR3  | Equity, accessibility & inclusion              |           65 | 11%     |\n| TR5  | Student safety & developmental appropriateness |           56 | 10%     |\n| TR8  | Evidence, monitoring & reversibility           |           43 | 7%      |\n| TR4  | Privacy, security & data minimization          |           33 | 6%      |\n\n**Reading this:** Feasibility/workload (TR7) and learning impact/deep skills (TR1) dominate. Trust/transparency (TR6) and integrity (TR2) are close behind. Part 2 should make the “feasible + protects learning” path explicit.\n\n---"
+    },
+    {
+      "heading_path": [
+        "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot",
+        "Output artifacts for GitHub"
+      ],
+      "section_id": "sec_0015",
+      "text": "- **Telemetry JSON (AI-friendly / machine-readable):** `vp_part1_telemetry_complete.json`  \n  - Includes response-set metadata, per-item approval stats, red-zone disapprovers + top lenses, tradeoff counts, and lens distributions."
+    }
+  ],
+  "source_hash_sha256": "e219ca617e34ce99ddf0535811b73b6a0d72d798b4183689d8957a4d7a455006",
+  "source_rel_path": "03 - Values & Principles/vp_part1_telemetry_onepager_committee_share-internal.md",
+  "title": "Values & Principles Survey — Part 1 (Complete) — Telemetry & Triage Snapshot"
+}

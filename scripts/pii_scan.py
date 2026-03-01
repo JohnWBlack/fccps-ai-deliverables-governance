@@ -27,8 +27,8 @@ except ModuleNotFoundError:
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_INGEST_DIR = REPO_ROOT / "public" / "project_ingest"
 PUBLIC_ARTIFACTS_DIR = PUBLIC_INGEST_DIR / "artifacts"
-PUBLIC_MD_DIR = PUBLIC_INGEST_DIR / "md"
-PUBLIC_XLSX_DIR = PUBLIC_INGEST_DIR / "xlsx"
+PUBLIC_MARKDOWN_DIR = PUBLIC_INGEST_DIR / "markdown"
+PUBLIC_SPREADSHEETS_DIR = PUBLIC_INGEST_DIR / "spreadsheets"
 DISCOVERY_REPORT_PATH = PUBLIC_INGEST_DIR / "discovery_report.json"
 PII_REPORT_PATH = PUBLIC_INGEST_DIR / "pii_report.json"
 INDEX_PATH = PUBLIC_INGEST_DIR / "index.json"
@@ -39,8 +39,8 @@ EXTRACTOR_VERSION = "2.0.0"
 
 MAX_SECTION_CHARS = 1200
 MAX_JSON_EXCERPT_BYTES = 20_000
-MAX_XLSX_ROWS = 200
-MAX_XLSX_COLS = 50
+MAX_XLSX_ROWS = 5000
+MAX_XLSX_COLS = 100
 
 ALLOWED_EXTENSIONS = {".md", ".txt", ".json", ".docx", ".xlsx"}
 EXCLUDED_SEGMENT_EXACT = {"media"}
@@ -60,6 +60,7 @@ STUDENT_NAME_RE = re.compile(
 
 REDACTION_TOKEN = "[REDACTED]"
 TRANSFORM_VERSION = "2.0.0"
+DOCX_NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
 
 
 def utc_now_iso() -> str:
@@ -253,7 +254,7 @@ def extract_md_or_txt_sections(path: Path, doc_type: str) -> list[dict[str, Any]
 
 def convert_excel_value(value: Any) -> Any:
     if value is None:
-        return ""
+        return None
     if isinstance(value, bool):
         return value
     if isinstance(value, (int, float)):
@@ -265,6 +266,36 @@ def convert_excel_value(value: Any) -> Any:
     if isinstance(value, time):
         return value.isoformat()
     return str(value)
+
+
+def _trim_trailing_empty_rows_and_cols(rows: list[list[Any]]) -> list[list[Any]]:
+    while rows and all(cell in (None, "") for cell in rows[-1]):
+        rows.pop()
+    if not rows:
+        return []
+
+    max_col = 0
+    for row in rows:
+        for idx, cell in enumerate(row):
+            if cell not in (None, ""):
+                max_col = max(max_col, idx + 1)
+    if max_col == 0:
+        return []
+
+    return [list(row[:max_col]) for row in rows]
+
+
+def _detect_header_row(rows: list[list[Any]]) -> tuple[list[str] | None, list[list[Any]]]:
+    if not rows:
+        return None, rows
+
+    first = rows[0]
+    non_empty = [cell for cell in first if cell not in (None, "")]
+    string_like = [cell for cell in non_empty if isinstance(cell, str) and cell.strip()]
+    if len(string_like) >= 2 and len(string_like) == len(non_empty):
+        header = ["" if cell is None else str(cell) for cell in first]
+        return header, rows[1:]
+    return None, rows
 
 
 def extract_xlsx_payload(path: Path) -> dict[str, Any]:
@@ -286,10 +317,16 @@ def extract_xlsx_payload(path: Path) -> dict[str, Any]:
                 for row in worksheet.iter_rows(min_row=1, max_row=row_limit, min_col=1, max_col=col_limit, values_only=True):
                     rows.append([convert_excel_value(cell) for cell in row])
 
+            rows = _trim_trailing_empty_rows_and_cols(rows)
+            header, data_rows = _detect_header_row(rows)
+
             sheets.append(
                 {
                     "sheet_name": str(sheet_name),
-                    "rows": rows,
+                    "header": header,
+                    "rows": data_rows,
+                    "row_count": len(data_rows),
+                    "col_count": len(header) if isinstance(header, list) else (len(data_rows[0]) if data_rows else 0),
                     "truncated": bool(max_row > MAX_XLSX_ROWS or max_col > MAX_XLSX_COLS),
                     "row_count_original": max_row,
                     "col_count_original": max_col,
@@ -320,6 +357,21 @@ def redact_xlsx_payload(
     for sheet_idx, sheet in enumerate(sheets):
         if not isinstance(sheet, dict):
             continue
+        header = sheet.get("header")
+        redacted_header: list[str] | None = None
+        if isinstance(header, list):
+            redacted_header = []
+            for col_idx, value in enumerate(header):
+                redacted_header.append(
+                    redact_text(
+                        str(value),
+                        artifact_id=artifact_id,
+                        source_rel_path=source_rel_path,
+                        section_id=f"sheet_{sheet_idx + 1:03d}",
+                        field_path=f"$.sheets[{sheet_idx}].header[{col_idx}]",
+                        findings=findings,
+                    )
+                )
         rows = sheet.get("rows")
         if not isinstance(rows, list):
             rows = []
@@ -344,6 +396,7 @@ def redact_xlsx_payload(
             redacted_rows.append(redacted_row)
 
         redacted_sheet = dict(sheet)
+        redacted_sheet["header"] = redacted_header
         redacted_sheet["rows"] = redacted_rows
         redacted_sheets.append(redacted_sheet)
 
@@ -362,11 +415,14 @@ def xlsx_payload_to_sections(payload: dict[str, Any]) -> list[dict[str, Any]]:
         if not isinstance(sheet, dict):
             continue
         sheet_name = str(sheet.get("sheet_name") or f"Sheet {sheet_idx}")
+        header = sheet.get("header")
         rows = sheet.get("rows")
         if not isinstance(rows, list):
             rows = []
 
         lines: list[str] = [f"sheet: {sheet_name}"]
+        if isinstance(header, list):
+            lines.append("header: " + " | ".join(str(cell) for cell in header))
         lines.append(
             "row_count_original: "
             + str(int(sheet.get("row_count_original") or 0))
@@ -442,9 +498,19 @@ def extract_json_sections(path: Path) -> list[dict[str, Any]]:
 
 def table_to_text(table: Any) -> str:
     lines: list[str] = []
+    rendered_rows: list[list[str]] = []
     for row in table.rows:
         cells = [cell.text.strip().replace("\n", " ") for cell in row.cells]
-        lines.append("| " + " | ".join(cells) + " |")
+        if cells:
+            rendered_rows.append(cells)
+    if not rendered_rows:
+        return ""
+
+    header = rendered_rows[0]
+    lines.append("| " + " | ".join(header) + " |")
+    lines.append("| " + " | ".join("---" for _ in header) + " |")
+    for row in rendered_rows[1:]:
+        lines.append("| " + " | ".join(row) + " |")
     return "\n".join(lines).strip()
 
 
@@ -472,7 +538,13 @@ def extract_docx_sections(path: Path) -> list[dict[str, Any]]:
             current_heading_path = [item[1] for item in heading_stack]
             continue
 
-        for chunk in chunk_text(text):
+        list_prefix = ""
+        if "list bullet" in style_name:
+            list_prefix = "- "
+        elif "list number" in style_name:
+            list_prefix = "1. "
+
+        for chunk in chunk_text(f"{list_prefix}{text}"):
             section_id = f"sec_{len(sections) + 1:04d}"
             sections.append(new_section(section_id, list(current_heading_path), chunk))
 
@@ -568,7 +640,7 @@ def artifact_output_name(rel_path: str, artifact_id: str) -> str:
 def artifact_output_stem(rel_path: str, artifact_id: str) -> str:
     base = stable_slug(Path(rel_path).stem)
     short_base = base[:60] if len(base) > 60 else base
-    return f"{short_base}_{artifact_id}"
+    return f"{short_base}__{artifact_id[:12]}"
 
 
 def clean_output_dir(output_dir: Path, expected: set[str], glob_pattern: str) -> None:
@@ -597,6 +669,8 @@ def should_include(path: Path) -> tuple[bool, str]:
     ext = path.suffix.lower()
     if ext == ".pdf":
         return False, "skipped_unsupported:pdf_not_ingested"
+    if ext == ".pptx":
+        return False, "skipped_unsupported:pptx_not_ingested"
     if ext not in ALLOWED_EXTENSIONS:
         return False, "skipped_unsupported:extension_not_allowlisted"
     return True, ""
@@ -635,6 +709,12 @@ def extract_sections(path: Path) -> tuple[str, list[dict[str, Any]]]:
 def build_version_key(source_path: str, source_hash: str) -> str:
     payload = json.dumps({"source_hash": source_hash, "source_path": source_path}, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def markdown_with_provenance(markdown_body: str, provenance: dict[str, Any]) -> str:
+    provenance_json = json.dumps(provenance, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    body = markdown_body.strip()
+    return f"<!-- provenance:{provenance_json} -->\n\n{body}\n"
 
 
 def resolve_project_files_root() -> Path:
@@ -774,21 +854,53 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
 
         if doc_type == "docx":
             md_name = f"{output_stem}.md"
-            md_path = PUBLIC_MD_DIR / md_name
-            write_text_if_changed(md_path, sections_to_markdown(redacted_sections))
+            md_path = PUBLIC_MARKDOWN_DIR / md_name
+            markdown_body = sections_to_markdown(redacted_sections)
+            write_text_if_changed(md_path, markdown_with_provenance(markdown_body, artifact_payload["provenance"]))
             expected_md_filenames.add(md_name)
             md_rel = md_path.relative_to(REPO_ROOT).as_posix()
             associated_outputs["md_path"] = md_rel
             output_paths.append(md_rel)
+            index_entries.append(
+                {
+                    "category": "markdown",
+                    "source_path": rel_path,
+                    "source_hash": rel_hash,
+                    "generated_at": generated_at,
+                    "version_key": build_version_key(rel_path + "::markdown", rel_hash),
+                    "records_count": sections_count,
+                    "pii_findings_count": pii_count,
+                    "output_path": md_rel,
+                }
+            )
 
         if doc_type == "xlsx" and xlsx_sidecar_payload is not None:
             xlsx_json_name = f"{output_stem}.json"
-            xlsx_json_path = PUBLIC_XLSX_DIR / xlsx_json_name
+            xlsx_json_path = PUBLIC_SPREADSHEETS_DIR / xlsx_json_name
+            xlsx_sidecar_payload["provenance"] = artifact_payload["provenance"]
             write_json_if_changed(xlsx_json_path, xlsx_sidecar_payload)
             expected_xlsx_filenames.add(xlsx_json_name)
             xlsx_rel = xlsx_json_path.relative_to(REPO_ROOT).as_posix()
             associated_outputs["xlsx_json_path"] = xlsx_rel
             output_paths.append(xlsx_rel)
+            records_count = 0
+            for sheet in xlsx_sidecar_payload.get("sheets", []):
+                if isinstance(sheet, dict):
+                    rows = sheet.get("rows")
+                    if isinstance(rows, list):
+                        records_count += len(rows)
+            index_entries.append(
+                {
+                    "category": "spreadsheets",
+                    "source_path": rel_path,
+                    "source_hash": rel_hash,
+                    "generated_at": generated_at,
+                    "version_key": build_version_key(rel_path + "::spreadsheets", rel_hash),
+                    "records_count": records_count,
+                    "pii_findings_count": pii_count,
+                    "output_path": xlsx_rel,
+                }
+            )
 
         type_counts[doc_type] += 1
         total_sections += sections_count
@@ -813,8 +925,8 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
         index_entries.append(index_entry)
 
     clean_output_dir(PUBLIC_ARTIFACTS_DIR, expected_output_filenames, "*.json")
-    clean_output_dir(PUBLIC_MD_DIR, expected_md_filenames, "*.md")
-    clean_output_dir(PUBLIC_XLSX_DIR, expected_xlsx_filenames, "*.json")
+    clean_output_dir(PUBLIC_MARKDOWN_DIR, expected_md_filenames, "*.md")
+    clean_output_dir(PUBLIC_SPREADSHEETS_DIR, expected_xlsx_filenames, "*.json")
 
     discovery_payload = {
         "generated_at": generated_at,

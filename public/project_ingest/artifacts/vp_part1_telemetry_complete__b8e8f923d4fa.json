@@ -1,0 +1,128 @@
+{
+  "artifact_id": "b8e8f923d4fac90e6c27f3e8",
+  "doc_type": "json",
+  "extracted_at_utc": "2026-03-01T14:39:34.387789Z",
+  "file_mtime_utc": "2026-02-28T02:16:52.287436Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0001",
+      "text": "json_excerpt\ntop_level_keys: f3_overview, generated_at, qualitative, respondent_signal, response_set, source, time_to_complete_minutes, tr_lenses, tradeoffs"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0002",
+      "text": "{\n  \"f3_overview\": {\n    \"by_item\": [\n      {\n        \"approval_rate\": 1.0,\n        \"approve\": 10,\n        \"candidate_id\": \"F3-01\",\n        \"do_not_approve\": 0,\n        \"domain\": \"P-TPC\",\n        \"merge_target\": \"Plain-language transparency (P-TPC)\",\n        \"short_name\": \"feedback channels\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.7,\n        \"approve\": 7,\n        \"candidate_id\": \"F3-02\",\n        \"do_not_approve\": 3,\n        \"domain\": \"P-TPC\",\n        \"merge_target\": \"Evidence-driven updates (P-GGA) / Tiered permissioning (P-GGA)\",\n        \"short_name\": \"pilot with monitoring\",\n        \"zone\": \"Yellow\"\n      },\n      {\n        \"approval_rate\": 0.8,\n        \"approve\": 8,\n        \"candidate_id\": \"F3-03\",\n        \"do_not_approve\": 2,\n        \"domain\": \"P-TPC\",\n        \"merge_target\": \"Data minimization (P-TPC)\",\n        \"short_name\": \"accountable ownership\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.5,\n        \"approve\": 5,\n        \"candidate_id\": \"F3-04\",\n        \"do_not_approve\": 5,\n        \"domain\": \"P-AAI\",\n        \"merge_target\": \"Tiered permissioning (P-GGA) + Plain-language transparency (P-TPC)\",\n        \"short_name\": \"commo"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0003",
+      "text": "n use-case language\",\n        \"zone\": \"Red\"\n      },\n      {\n        \"approval_rate\": 0.4,\n        \"approve\": 4,\n        \"candidate_id\": \"F3-05\",\n        \"do_not_approve\": 6,\n        \"domain\": \"P-AAI\",\n        \"merge_target\": \"Process evidence (P-AAI)\",\n        \"short_name\": \"design before bans\",\n        \"zone\": \"Red\"\n      },\n      {\n        \"approval_rate\": 0.5,\n        \"approve\": 5,\n        \"candidate_id\": \"F3-06\",\n        \"do_not_approve\": 5,\n        \"domain\": \"P-AAI\",\n        \"merge_target\": \"No detector-only decisions (P-AAI)\",\n        \"short_name\": \"detectors are advisory\",\n        \"zone\": \"Red\"\n      },\n      {\n        \"approval_rate\": 0.7,\n        \"approve\": 7,\n        \"candidate_id\": \"F3-07\",\n        \"do_not_approve\": 3,\n        \"domain\": \"P-AAI\",\n        \"merge_target\": \"Process evidence (P-AAI) / transparency\",\n        \"short_name\": \"student disclosure\",\n        \"zone\": \"Yellow\"\n      },\n      {\n        \"approval_rate\": 0.7,\n        \"approve\": 7,\n        \"candidate_id\": \"F3-08\",\n        \"do_not_approve\": 3,\n        \"domain\": \"P-EAI\",\n        \"merge_target\": \"Equity by design (P-EAI)\",\n        \"short_name\": \"non-AI path\",\n        \"zone\": \"Yellow\"\n      },\n      {"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0004",
+      "text": "\"approval_rate\": 0.7,\n        \"approve\": 7,\n        \"candidate_id\": \"F3-09\",\n        \"do_not_approve\": 3,\n        \"domain\": \"P-EAI\",\n        \"merge_target\": \"Human review for high-stakes (P-EAI)\",\n        \"short_name\": \"IEP/504 decisions stay human\",\n        \"zone\": \"Yellow\"\n      },\n      {\n        \"approval_rate\": 0.6,\n        \"approve\": 6,\n        \"candidate_id\": \"F3-10\",\n        \"do_not_approve\": 4,\n        \"domain\": \"P-EAI\",\n        \"merge_target\": \"Equity by design (P-EAI)\",\n        \"short_name\": \"access plus supports\",\n        \"zone\": \"Yellow\"\n      },\n      {\n        \"approval_rate\": 0.8,\n        \"approve\": 8,\n        \"candidate_id\": \"F3-11\",\n        \"do_not_approve\": 2,\n        \"domain\": \"P-EAI\",\n        \"merge_target\": \"Equity by design (P-EAI)\",\n        \"short_name\": \"UDL augmentation with checks\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.7,\n        \"approve\": 7,\n        \"candidate_id\": \"F3-12\",\n        \"do_not_approve\": 3,\n        \"domain\": \"P-GGA\",\n        \"merge_target\": \"Evidence-driven updates (P-GGA)\",\n        \"short_name\": \"evaluate before scaling\",\n        \"zone\": \"Yellow\"\n      },\n      {\n        \"approval_rate\": 0.8,\n        \"approve"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0005",
+      "text": "\": 8,\n        \"candidate_id\": \"F3-13\",\n        \"do_not_approve\": 2,\n        \"domain\": \"P-GGA\",\n        \"merge_target\": \"Student disclosure (P-AAI) + Teacher judgment leads (P-TPW)\",\n        \"short_name\": \"use transparency\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.9,\n        \"approve\": 9,\n        \"candidate_id\": \"F3-14\",\n        \"do_not_approve\": 1,\n        \"domain\": \"P-GGA\",\n        \"merge_target\": \"Evidence-driven updates (P-GGA)\",\n        \"short_name\": \"pilot plus off-ramps\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.5,\n        \"approve\": 5,\n        \"candidate_id\": \"F3-15\",\n        \"do_not_approve\": 5,\n        \"domain\": \"P-GGA\",\n        \"merge_target\": \"Plain-language transparency (P-TPC) + Tiered permissioning (P-GGA)\",\n        \"short_name\": \"notice plus consent where feasible\",\n        \"zone\": \"Red\"\n      },\n      {\n        \"approval_rate\": 0.6,\n        \"approve\": 6,\n        \"candidate_id\": \"F3-16\",\n        \"do_not_approve\": 4,\n        \"domain\": \"P-LSD\",\n        \"merge_target\": \"Deep skills first (P-LSD)\",\n        \"short_name\": \"prevent cognitive offloading\",\n        \"zone\": \"Yellow\"\n      },\n      {\n        \"approval_rate\":"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0006",
+      "text": "0.9,\n        \"approve\": 9,\n        \"candidate_id\": \"F3-17\",\n        \"do_not_approve\": 1,\n        \"domain\": \"P-GGA\",\n        \"merge_target\": \"Tiered permissioning (P-GGA)\",\n        \"short_name\": \"risk-based restrictions\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.7,\n        \"approve\": 7,\n        \"candidate_id\": \"F3-18\",\n        \"do_not_approve\": 3,\n        \"domain\": \"P-LSD\",\n        \"merge_target\": \"(Potential standalone pillar)\",\n        \"short_name\": \"AI literacy\",\n        \"zone\": \"Yellow\"\n      },\n      {\n        \"approval_rate\": 0.9,\n        \"approve\": 9,\n        \"candidate_id\": \"F3-19\",\n        \"do_not_approve\": 1,\n        \"domain\": \"P-GGA\",\n        \"merge_target\": \"Evidence-driven updates (P-GGA)\",\n        \"short_name\": \"learning-evidence threshold\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.4,\n        \"approve\": 4,\n        \"candidate_id\": \"F3-20\",\n        \"do_not_approve\": 6,\n        \"domain\": \"P-LSD\",\n        \"merge_target\": \"(Optional merge into Deep skills first)\",\n        \"short_name\": \"human-centered learning\",\n        \"zone\": \"Red\"\n      },\n      {\n        \"approval_rate\": 0.8,\n        \"approve\": 8,\n        \"candidate"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0007",
+      "text": "_id\": \"F3-21\",\n        \"do_not_approve\": 2,\n        \"domain\": \"P-LSD\",\n        \"merge_target\": \"Deep skills first (P-LSD)\",\n        \"short_name\": \"visible thinking\",\n        \"zone\": \"Green\"\n      },\n      {\n        \"approval_rate\": 0.5,\n        \"approve\": 5,\n        \"candidate_id\": \"F3-22\",\n        \"do_not_approve\": 5,\n        \"domain\": \"P-TPW\",\n        \"merge_target\": \"Teacher judgment leads (P-TPW)\",\n        \"short_name\": \"teacher-owned feedback\",\n        \"zone\": \"Red\"\n      },\n      {\n        \"approval_rate\": 0.9,\n        \"approve\": 9,\n        \"candidate_id\": \"F3-23\",\n        \"do_not_approve\": 1,\n        \"domain\": \"P-TPW\",\n        \"merge_target\": \"Evidence-driven updates (P-GGA)\",\n        \"short_name\": \"educator voice in governance\",\n        \"zone\": \"Green\"\n      }\n    ],\n    \"items\": 23,\n    \"overall_approval_rate\": 0.6956521739130435,\n    \"red_zone_detail\": [\n      {\n        \"candidate_id\": \"F3-04\",\n        \"disapprovers\": [\n          \"David Berol\",\n          \"Elizabeth Chua\",\n          \"Anubav Vasudevan\",\n          \"Tom Colvin\",\n          \"Tina Beaty\"\n        ],\n        \"do_not_approve\": 5,\n        \"short_name\": \"common use-case language\",\n        \"top_tr_among_disapprovers\":"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0008",
+      "text": "[\n          {\n            \"count\": 4,\n            \"lens\": \"Learning impact & deep skills\",\n            \"tr\": \"TR1\"\n          },\n          {\n            \"count\": 2,\n            \"lens\": \"Transparency, accountability & community trust\",\n            \"tr\": \"TR6\"\n          },\n          {\n            \"count\": 2,\n            \"lens\": \"Student safety & developmental appropriateness\",\n            \"tr\": \"TR5\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Assessment validity & academic integrity\",\n            \"tr\": \"TR2\"\n          }\n        ]\n      },\n      {\n        \"candidate_id\": \"F3-05\",\n        \"disapprovers\": [\n          \"David Berol\",\n          \"Elizabeth Chua\",\n          \"Anubav Vasudevan\",\n          \"Tom Colvin\",\n          \"John Black\",\n          \"Tina Beaty\"\n        ],\n        \"do_not_approve\": 6,\n        \"short_name\": \"design before bans\",\n        \"top_tr_among_disapprovers\": [\n          {\n            \"count\": 5,\n            \"lens\": \"Learning impact & deep skills\",\n            \"tr\": \"TR1\"\n          },\n          {\n            \"count\": 4,\n            \"lens\": \"Assessment validity & academic integrity\",\n            \"tr\": \"TR2\"\n          },\n          {"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0009",
+      "text": "\"count\": 3,\n            \"lens\": \"Feasibility, workload & sustainability\",\n            \"tr\": \"TR7\"\n          },\n          {\n            \"count\": 2,\n            \"lens\": \"Student safety & developmental appropriateness\",\n            \"tr\": \"TR5\"\n          }\n        ]\n      },\n      {\n        \"candidate_id\": \"F3-06\",\n        \"disapprovers\": [\n          \"David Berol\",\n          \"Elizabeth Chua\",\n          \"Anubav Vasudevan\",\n          \"Tom Colvin\",\n          \"John Black\"\n        ],\n        \"do_not_approve\": 5,\n        \"short_name\": \"detectors are advisory\",\n        \"top_tr_among_disapprovers\": [\n          {\n            \"count\": 3,\n            \"lens\": \"Assessment validity & academic integrity\",\n            \"tr\": \"TR2\"\n          },\n          {\n            \"count\": 3,\n            \"lens\": \"Equity, accessibility & inclusion\",\n            \"tr\": \"TR3\"\n          },\n          {\n            \"count\": 2,\n            \"lens\": \"Transparency, accountability & community trust\",\n            \"tr\": \"TR6\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Evidence, monitoring & reversibility\",\n            \"tr\": \"TR8\"\n          }\n        ]\n      },\n      {\n        \"candidate_id\": \"F3-15\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0010",
+      "text": "\"disapprovers\": [\n          \"David Berol\",\n          \"Elizabeth Chua\",\n          \"Anubav Vasudevan\",\n          \"Tom Colvin\",\n          \"Tina Beaty\"\n        ],\n        \"do_not_approve\": 5,\n        \"short_name\": \"notice plus consent where feasible\",\n        \"top_tr_among_disapprovers\": [\n          {\n            \"count\": 3,\n            \"lens\": \"Transparency, accountability & community trust\",\n            \"tr\": \"TR6\"\n          },\n          {\n            \"count\": 2,\n            \"lens\": \"Student safety & developmental appropriateness\",\n            \"tr\": \"TR5\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Feasibility, workload & sustainability\",\n            \"tr\": \"TR7\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Privacy, security & data minimization\",\n            \"tr\": \"TR4\"\n          }\n        ]\n      },\n      {\n        \"candidate_id\": \"F3-20\",\n        \"disapprovers\": [\n          \"David Berol\",\n          \"Elizabeth Chua\",\n          \"Anubav Vasudevan\",\n          \"Tom Colvin\",\n          \"John Black\",\n          \"Tina Beaty\"\n        ],\n        \"do_not_approve\": 6,\n        \"short_name\": \"human-centered learning\",\n        \"top_tr_among_d"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0011",
+      "text": "isapprovers\": [\n          {\n            \"count\": 5,\n            \"lens\": \"Learning impact & deep skills\",\n            \"tr\": \"TR1\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Feasibility, workload & sustainability\",\n            \"tr\": \"TR7\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Transparency, accountability & community trust\",\n            \"tr\": \"TR6\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Student safety & developmental appropriateness\",\n            \"tr\": \"TR5\"\n          }\n        ]\n      },\n      {\n        \"candidate_id\": \"F3-22\",\n        \"disapprovers\": [\n          \"David Berol\",\n          \"Elizabeth Chua\",\n          \"Anubav Vasudevan\",\n          \"Tom Colvin\",\n          \"John Black\"\n        ],\n        \"do_not_approve\": 5,\n        \"short_name\": \"teacher-owned feedback\",\n        \"top_tr_among_disapprovers\": [\n          {\n            \"count\": 3,\n            \"lens\": \"Transparency, accountability & community trust\",\n            \"tr\": \"TR6\"\n          },\n          {\n            \"count\": 2,\n            \"lens\": \"Feasibility, workload & sustainability\",\n            \"tr\": \"TR7\"\n          },\n          {"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0012",
+      "text": "\"count\": 1,\n            \"lens\": \"Learning impact & deep skills\",\n            \"tr\": \"TR1\"\n          },\n          {\n            \"count\": 1,\n            \"lens\": \"Assessment validity & academic integrity\",\n            \"tr\": \"TR2\"\n          }\n        ]\n      }\n    ],\n    \"zone_counts\": {\n      \"Green\": 9,\n      \"Red\": 6,\n      \"Yellow\": 8\n    }\n  },\n  \"generated_at\": \"2026-02-28T01:57:13.589018+00:00\",\n  \"qualitative\": {\n    \"additional_insights_count\": 5,\n    \"additional_insights_respondents\": [\n      \"Elizabeth Chua\",\n      \"Adriana Palacios\",\n      \"Tom Colvin\",\n      \"John Black\",\n      \"Tina Beaty\"\n    ]\n  },\n  \"respondent_signal\": {\n    \"do_not_approve_counts\": [\n      {\n        \"ApproveCount\": 4,\n        \"DoNotApproveCount\": 19,\n        \"duration_min\": 180.8,\n        \"respondent\": \"Tom Colvin\"\n      },\n      {\n        \"ApproveCount\": 5,\n        \"DoNotApproveCount\": 18,\n        \"duration_min\": 110.31666666666666,\n        \"respondent\": \"David Berol\"\n      },\n      {\n        \"ApproveCount\": 13,\n        \"DoNotApproveCount\": 10,\n        \"duration_min\": 80.5,\n        \"respondent\": \"Elizabeth Chua\"\n      },\n      {\n        \"ApproveCount\": 14,\n        \"DoNotApproveCount\": 9,"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0013",
+      "text": "\"duration_min\": 123.55,\n        \"respondent\": \"Anubav Vasudevan\"\n      },\n      {\n        \"ApproveCount\": 16,\n        \"DoNotApproveCount\": 7,\n        \"duration_min\": 96.51666666666667,\n        \"respondent\": \"Tina Beaty\"\n      },\n      {\n        \"ApproveCount\": 18,\n        \"DoNotApproveCount\": 5,\n        \"duration_min\": 499.96666666666664,\n        \"respondent\": \"John Black\"\n      },\n      {\n        \"ApproveCount\": 22,\n        \"DoNotApproveCount\": 1,\n        \"duration_min\": 30.133333333333333,\n        \"respondent\": \"Susan\"\n      },\n      {\n        \"ApproveCount\": 22,\n        \"DoNotApproveCount\": 1,\n        \"duration_min\": 80.18333333333334,\n        \"respondent\": \"Jillian Burkley\"\n      },\n      {\n        \"ApproveCount\": 23,\n        \"DoNotApproveCount\": 0,\n        \"duration_min\": 27.8,\n        \"respondent\": \"Adriana Palacios\"\n      },\n      {\n        \"ApproveCount\": 23,\n        \"DoNotApproveCount\": 0,\n        \"duration_min\": 59.15,\n        \"respondent\": \"Tom Sabo\"\n      }\n    ],\n    \"share_of_all_do_not_approves_top2\": 0.5285714285714286,\n    \"total_do_not_approves\": 70\n  },\n  \"response_set\": {\n    \"respondents\": 10,\n    \"submissions_by_date\": {\n      \"2026-02-24\": 3,\n      \"2026-0"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0014",
+      "text": "2-25\": 4,\n      \"2026-02-26\": 2,\n      \"2026-02-27\": 1\n    },\n    \"window\": {\n      \"end\": \"2026-02-27T10:35:39\",\n      \"start\": \"2026-02-23T22:40:56\"\n    }\n  },\n  \"source\": {\n    \"analysis_workbook_xlsx\": \"FCCPS_AI_Survey_Analysis_Workbook_results-imported.xlsx\",\n    \"raw_results_xlsx\": \"Values & Principles Survey Part 1 Results v.20260227-1035.xlsx\"\n  },\n  \"time_to_complete_minutes\": {\n    \"max\": 499.96666666666664,\n    \"mean\": 128.89166666666668,\n    \"median\": 88.50833333333333,\n    \"min\": 27.8,\n    \"notes\": \"Durations reflect start→submit and may include breaks; treat as survey-friction signal, not pure effort.\",\n    \"p25\": 64.40833333333333,\n    \"p75\": 120.24166666666666,\n    \"trimmed_mean_excluding_top_outlier\": 87.66111111111111\n  },\n  \"tr_lenses\": {\n    \"combined_lens_counts\": [\n      {\n        \"count\": 114,\n        \"lens\": \"Feasibility, workload & sustainability\",\n        \"pct\": 0.19420783645655879,\n        \"tr\": \"TR7\"\n      },\n      {\n        \"count\": 108,\n        \"lens\": \"Learning impact & deep skills\",\n        \"pct\": 0.1839863713798978,\n        \"tr\": \"TR1\"\n      },\n      {\n        \"count\": 86,\n        \"lens\": \"Transparency, accountability & community trust\",\n        \"pc"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0015",
+      "text": "t\": 0.1465076660988075,\n        \"tr\": \"TR6\"\n      },\n      {\n        \"count\": 82,\n        \"lens\": \"Assessment validity & academic integrity\",\n        \"pct\": 0.13969335604770017,\n        \"tr\": \"TR2\"\n      },\n      {\n        \"count\": 65,\n        \"lens\": \"Equity, accessibility & inclusion\",\n        \"pct\": 0.11073253833049404,\n        \"tr\": \"TR3\"\n      },\n      {\n        \"count\": 56,\n        \"lens\": \"Student safety & developmental appropriateness\",\n        \"pct\": 0.09540034071550256,\n        \"tr\": \"TR5\"\n      },\n      {\n        \"count\": 43,\n        \"lens\": \"Evidence, monitoring & reversibility\",\n        \"pct\": 0.07325383304940375,\n        \"tr\": \"TR8\"\n      },\n      {\n        \"count\": 33,\n        \"lens\": \"Privacy, security & data minimization\",\n        \"pct\": 0.056218057921635436,\n        \"tr\": \"TR4\"\n      }\n    ],\n    \"notes\": \"Counts represent how often each TR lens was selected across all F3 items + all tradeoffs.\"\n  },\n  \"tradeoffs\": {\n    \"need_more_info_respondents\": {\n      \"T1\": [\n        \"David Berol\",\n        \"Tom Sabo\",\n        \"Tom Colvin\"\n      ],\n      \"T2\": [],\n      \"T3\": [\n        \"David Berol\"\n      ],\n      \"T4\": [\n        \"David Berol\",\n        \"Tom Sabo\",\n        \"A"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0016",
+      "text": "nubav Vasudevan\",\n        \"Tom Colvin\",\n        \"Susan\"\n      ],\n      \"T5\": [\n        \"Tom Colvin\"\n      ],\n      \"T6\": [\n        \"David Berol\",\n        \"Tom Colvin\"\n      ],\n      \"T7\": [\n        \"Tom Colvin\"\n      ]\n    },\n    \"posture_counts\": {\n      \"T1\": {\n        \"A\": 0,\n        \"B\": 3,\n        \"C\": 4,\n        \"Need more info\": 3\n      },\n      \"T2\": {\n        \"A\": 2,\n        \"B\": 0,\n        \"C\": 8,\n        \"Need more info\": 0\n      },\n      \"T3\": {\n        \"A\": 4,\n        \"B\": 1,\n        \"C\": 4,\n        \"Need more info\": 1\n      },\n      \"T4\": {\n        \"A\": 1,\n        \"B\": 0,\n        \"C\": 4,\n        \"Need more info\": 5\n      },\n      \"T5\": {\n        \"A\": 1,\n        \"B\": 1,\n        \"C\": 7,\n        \"Need more info\": 1\n      },\n      \"T6\": {\n        \"A\": 1,\n        \"B\": 0,\n        \"C\": 7,\n        \"Need more info\": 2\n      },\n      \"T7\": {\n        \"A\": 2,\n        \"B\": 0,\n        \"C\": 7,\n        \"Need more info\": 1\n      }\n    }\n  }\n}"
+    }
+  ],
+  "source_hash_sha256": "018fc1141f3f84c9f21b96b7ada5e3b2b5a931274d3a1f1f134c7640014ab7f7",
+  "source_rel_path": "03 - Values & Principles/vp_part1_telemetry_complete.json",
+  "title": "json_excerpt"
+}

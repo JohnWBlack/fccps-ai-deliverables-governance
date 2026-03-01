@@ -60,11 +60,11 @@ jobs:
         run: python scripts/build_glidepath_history.py
 
       - name: Publish scrubbed project ingest JSON
-        if: env.PROJECT_FILES_ROOT != ''
+        if: ${{ env.PROJECT_FILES_ROOT != '' }}
         run: python scripts/pii_scan.py
 
       - name: Skip project ingest publish (PROJECT_FILES_ROOT not set)
-        if: env.PROJECT_FILES_ROOT == ''
+        if: ${{ env.PROJECT_FILES_ROOT == '' }}
         run: echo "PROJECT_FILES_ROOT not set; skipping project ingest publish and validating committed public/project_ingest artifacts."
 
       - name: Extract reference index

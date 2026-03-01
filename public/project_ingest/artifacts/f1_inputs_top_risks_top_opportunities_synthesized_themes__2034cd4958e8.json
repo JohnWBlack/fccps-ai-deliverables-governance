@@ -1,0 +1,100 @@
+{
+  "artifact_id": "2034cd4958e81994467d7ef3",
+  "doc_type": "json",
+  "extracted_at_utc": "2026-03-01T14:39:34.387789Z",
+  "file_mtime_utc": "2026-02-27T16:11:26.447159Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0001",
+      "text": "json_excerpt\n[\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0001\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 1,\n    \"text\": \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0002\",\n    \"inferred_type\": \"prompt\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Read-only themes. Add missing risk/opportunity only if it changes principles.\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 2,\n    \"text\": \"Read-only themes. Add missing risk/opportunity only if it changes principles.\"\n  },\n  {\n    \"confidence\": \"med\""
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0002",
+      "text": ",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0003\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0001\",\n    \"raw_fields\": [\n      \"If the theme is ‘nice to have’ but doesn’t change principles, it stays out for now.\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 3,\n    \"text\": \"If the theme is ‘nice to have’ but doesn’t change principles, it stays out for now.\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0004\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Assessment & Academic Integrity\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 4,\n    \"text\": \"Assessment & Academic I"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0003",
+      "text": "ntegrity\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0005\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Learning Design & Skill Development\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 5,\n    \"text\": \"Learning Design & Skill Development\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0006\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Teacher Practice & Workload\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 6,\n    \"text\": \"Teache"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0004",
+      "text": "r Practice & Workload\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0007\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0006\",\n    \"raw_fields\": [\n      \"Protect deep skills: Guard deep literacy, reasoning, and “productive struggle” from cognitive offloading/skill atrophy.  Personalize learning: Use AI for tutoring, feedback, and targeted supports (when accurate and appropriate).  Keep learning human: Rebalance toward hands-on work, discussion, and authentic thinking—not screen-mediated compliance.\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 7,\n    \"text\": \"Protect deep skills: Guard deep literacy, reasoning, and “productive struggle” from cognitive offloading/skill atrophy.  Personalize learning: Use AI for tutoring, feedback,"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0005",
+      "text": "and targeted supports (when accurate and appropriate).  Keep learning human: Rebalance toward hands-on work, discussion, and authentic thinking—not screen-mediated compliance.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0008\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0006\",\n    \"raw_fields\": [\n      \"Clarify boundaries: Define fair use vs cheating, plus consistent student attribution expectations.  Design for evidence: Redesign assessments for “process evidence” (drafts, oral defense, in-class performance, authentic products).  Avoid detector traps: Don’t rely on “AI detectors”; use instruction + assessment design that makes integrity visible.\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 8,\n    \"text\": \"Clarify boundaries:"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0006",
+      "text": "Define fair use vs cheating, plus consistent student attribution expectations.  Design for evidence: Redesign assessments for “process evidence” (drafts, oral defense, in-class performance, authentic products).  Avoid detector traps: Don’t rely on “AI detectors”; use instruction + assessment design that makes integrity visible.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0009\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0006\",\n    \"raw_fields\": [\n      \"Reduce busywork: Use AI to lower admin load while preserving teacher professional judgment and agency.  Support consistency: Provide PD, exemplars, and staff playbooks to prevent uneven practice and high-stakes misuse.  Protect the profession: Don’t assume AI time-savings for staffing; guard against deprofessionalization.\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0007",
+      "text": "1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 9,\n    \"text\": \"Reduce busywork: Use AI to lower admin load while preserving teacher professional judgment and agency.  Support consistency: Provide PD, exemplars, and staff playbooks to prevent uneven practice and high-stakes misuse.  Protect the profession: Don’t assume AI time-savings for staffing; guard against deprofessionalization.\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0010\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Equity, Accessibility & Bias Protection\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 10,\n    \"text\": \"Equity, Accessibility & Bias Protection\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0008",
+      "text": "+ Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\",\n      \"Equity, Accessibility & Bias Protection\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0011\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 11,\n    \"text\": \"Safe Tooling, Privacy & Community Trust\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0012\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Governance, Guardrails & Adaptati"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0009",
+      "text": "on\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 12,\n    \"text\": \"Governance, Guardrails & Adaptation\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\",\n      \"Governance, Guardrails & Adaptation\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0013\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0012\",\n    \"raw_fields\": [\n      \"Close access gaps: Ensure equitable access to vetted tools and supports so adoption doesn’t widen gaps.  Design for inclusion: Build accessibility/UDL requirements in from day one (SPED/504/ELL, accommodations, families).  Require human review: Treat AI outputs as assistive—not authoritative—especially for disability-related/high-stakes decisions.\"\n    ],\n    \""
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0010",
+      "text": "source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 13,\n    \"text\": \"Close access gaps: Ensure equitable access to vetted tools and supports so adoption doesn’t widen gaps.  Design for inclusion: Build accessibility/UDL requirements in from day one (SPED/504/ELL, accommodations, families).  Require human review: Treat AI outputs as assistive—not authoritative—especially for disability-related/high-stakes decisions.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\",\n      \"Governance, Guardrails & Adaptation\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0014\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0012\",\n    \"raw_fields\": [\n      \"Minimize exposure: Reduce student data risk; verify vendor terms"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0011",
+      "text": "and FERPA/IDEA-aligned protections before use.  Stop shadow adoption: Clarify what’s allowed, what requires approval, and what’s prohibited.  Build trust openly: Address safety + transparency (content risks, plain-language communication, ethical concerns).\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 14,\n    \"text\": \"Minimize exposure: Reduce student data risk; verify vendor terms and FERPA/IDEA-aligned protections before use.  Stop shadow adoption: Clarify what’s allowed, what requires approval, and what’s prohibited.  Build trust openly: Address safety + transparency (content risks, plain-language communication, ethical concerns).\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F1 — Inputs: Top Risks + Top Opportunities (Synthesized Themes)\",\n      \"Assessment & Academic Integrity\",\n      \"Learning Design & Skill Development\",\n      \"Teacher Practice & Workload\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\",\n      \"Governance, Guardrails & Adaptation\"\n    ],\n    \"id\": \"f1_inputs_top_risks_top_oppor"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0012",
+      "text": "tunities_synthesized_themes::0015\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0012\",\n    \"raw_fields\": [\n      \"Keep policy agile: Make guidance usable and revisable, with an explicit review cadence as AI evolves.  Tier tool use: Use a tiered tool/use-case pathway that enables safe experimentation without overregulation.  Demand evidence: Collect qualitative/quantitative feedback to avoid policy “based on vibes.”\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).csv\",\n    \"source_row_index\": 15,\n    \"text\": \"Keep policy agile: Make guidance usable and revisable, with an explicit review cadence as AI evolves.  Tier tool use: Use a tiered tool/use-case pathway that enables safe experimentation without overregulation.  Demand evidence: Collect qualitative/quantitative feedback to avoid policy “based on vibes.”\"\n  }\n]"
+    }
+  ],
+  "source_hash_sha256": "73cb0d35f5eab0cbfbe55fa85c9ef8ad598f5d157eaaf08d210ca1c2d18f655f",
+  "source_rel_path": "03 - Values & Principles/derived_json/F1  Inputs- Top Risks + Top Opportunities (Synthesized Themes).json",
+  "title": "json_excerpt"
+}

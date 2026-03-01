@@ -15,8 +15,8 @@ SCHEMA_PATH = REPO_ROOT / "governance_docs" / "schema" / "glidepath_history.sche
 GLIDEPATH_PATH = PUBLIC_DIR / "glidepath_history.json"
 PROJECT_INGEST_DIR = PUBLIC_DIR / "project_ingest"
 PROJECT_INGEST_ARTIFACTS_DIR = PROJECT_INGEST_DIR / "artifacts"
-PROJECT_INGEST_MD_DIR = PROJECT_INGEST_DIR / "md"
-PROJECT_INGEST_XLSX_DIR = PROJECT_INGEST_DIR / "xlsx"
+PROJECT_INGEST_MARKDOWN_DIR = PROJECT_INGEST_DIR / "markdown"
+PROJECT_INGEST_SPREADSHEETS_DIR = PROJECT_INGEST_DIR / "spreadsheets"
 PROJECT_INGEST_INDEX_PATH = PROJECT_INGEST_DIR / "index.json"
 PROJECT_INGEST_DISCOVERY_REPORT_PATH = PROJECT_INGEST_DIR / "discovery_report.json"
 PROJECT_INGEST_PII_REPORT_PATH = PROJECT_INGEST_DIR / "pii_report.json"
@@ -66,6 +66,7 @@ REQUIRED_ARTIFACT_FIELDS = {
 }
 REQUIRED_SECTION_FIELDS = {"section_id", "heading_path", "text"}
 REQUIRED_PROVENANCE_FIELDS = {"project", "pipeline_version", "extractor_version"}
+ALLOWED_INDEX_CATEGORIES = {"artifacts", "values_principles", "markdown", "spreadsheets"}
 REQUIRED_PII_FINDING_FIELDS = {
     "artifact_id",
     "source_rel_path",
@@ -265,8 +266,11 @@ def validate_project_ingest_index(payload: dict[str, Any]) -> None:
         if not REQUIRED_INDEX_ENTRY_FIELDS.issubset(set(entry.keys())):
             missing = sorted(REQUIRED_INDEX_ENTRY_FIELDS - set(entry.keys()))
             fail(f"public/project_ingest/index.json entries[{idx}] missing fields: {missing}")
-        if entry.get("category") != "artifacts":
-            fail(f"public/project_ingest/index.json entries[{idx}] category must be 'artifacts'")
+        if entry.get("category") not in ALLOWED_INDEX_CATEGORIES:
+            fail(
+                f"public/project_ingest/index.json entries[{idx}] category must be one of: "
+                + ", ".join(sorted(ALLOWED_INDEX_CATEGORIES))
+            )
         if not isinstance(entry.get("source_path"), str) or not str(entry.get("source_path")).strip():
             fail(f"public/project_ingest/index.json entries[{idx}] source_path must be a non-empty string")
         if not isinstance(entry.get("source_hash"), str) or len(str(entry.get("source_hash"))) < 32:
@@ -282,8 +286,8 @@ def validate_project_ingest_index(payload: dict[str, Any]) -> None:
         output_path = entry.get("output_path")
         if not isinstance(output_path, str) or not output_path.strip():
             fail(f"public/project_ingest/index.json entries[{idx}] output_path must be a non-empty string")
-        if not output_path.startswith("public/project_ingest/artifacts/"):
-            fail(f"public/project_ingest/index.json entries[{idx}] output_path must point to artifacts/")
+        if not output_path.startswith("public/project_ingest/"):
+            fail(f"public/project_ingest/index.json entries[{idx}] output_path must point to public/project_ingest/")
 
         output_paths = entry.get("output_paths")
         if output_paths is not None:
@@ -300,13 +304,17 @@ def validate_project_ingest_index(payload: dict[str, Any]) -> None:
 
             md_path = associated_outputs.get("md_path")
             if md_path is not None:
-                if not isinstance(md_path, str) or not md_path.startswith("public/project_ingest/md/"):
-                    fail(f"public/project_ingest/index.json entries[{idx}] associated_outputs.md_path must point to md/")
+                if not isinstance(md_path, str) or not md_path.startswith("public/project_ingest/markdown/"):
+                    fail(
+                        f"public/project_ingest/index.json entries[{idx}] associated_outputs.md_path must point to markdown/"
+                    )
 
             xlsx_json_path = associated_outputs.get("xlsx_json_path")
             if xlsx_json_path is not None:
-                if not isinstance(xlsx_json_path, str) or not xlsx_json_path.startswith("public/project_ingest/xlsx/"):
-                    fail(f"public/project_ingest/index.json entries[{idx}] associated_outputs.xlsx_json_path must point to xlsx/")
+                if not isinstance(xlsx_json_path, str) or not xlsx_json_path.startswith("public/project_ingest/spreadsheets/"):
+                    fail(
+                        f"public/project_ingest/index.json entries[{idx}] associated_outputs.xlsx_json_path must point to spreadsheets/"
+                    )
 
 
 def validate_project_ingest_discovery_report(payload: dict[str, Any]) -> None:
@@ -434,6 +442,45 @@ def validate_project_ingest_artifact(path: Path, payload: Any) -> None:
             fail(f"{rel} provenance.{key} must be a non-empty string")
 
 
+def validate_markdown_output(path: Path) -> None:
+    rel = path.relative_to(REPO_ROOT).as_posix()
+    try:
+        text = path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        fail(f"{rel} must be valid UTF-8")
+    if not text.strip():
+        fail(f"{rel} must not be empty")
+    if path.stat().st_size > 2_000_000:
+        fail(f"{rel} exceeds max size limit (2MB)")
+
+
+def validate_spreadsheet_output(path: Path, payload: Any) -> None:
+    rel = path.relative_to(REPO_ROOT).as_posix()
+    if not isinstance(payload, dict):
+        fail(f"{rel} must be a JSON object")
+    if "sheets" not in payload or not isinstance(payload.get("sheets"), list):
+        fail(f"{rel} must include sheets[]")
+    provenance = payload.get("provenance")
+    if not isinstance(provenance, dict):
+        fail(f"{rel} must include provenance object")
+    if not REQUIRED_PROVENANCE_FIELDS.issubset(set(provenance.keys())):
+        missing = sorted(REQUIRED_PROVENANCE_FIELDS - set(provenance.keys()))
+        fail(f"{rel} provenance missing fields: {missing}")
+
+    for sheet_idx, sheet in enumerate(payload.get("sheets", [])):
+        if not isinstance(sheet, dict):
+            fail(f"{rel} sheets[{sheet_idx}] must be an object")
+        if not isinstance(sheet.get("sheet_name"), str) or not str(sheet.get("sheet_name")).strip():
+            fail(f"{rel} sheets[{sheet_idx}].sheet_name must be a non-empty string")
+        header = sheet.get("header")
+        if header is not None:
+            if not isinstance(header, list) or any(not isinstance(item, str) for item in header):
+                fail(f"{rel} sheets[{sheet_idx}].header must be null or list[str]")
+        rows = sheet.get("rows")
+        if not isinstance(rows, list):
+            fail(f"{rel} sheets[{sheet_idx}].rows must be a list")
+
+
 def validate_project_ingest() -> None:
     if not PROJECT_INGEST_DIR.exists():
         fail(f"Required folder not found: {PROJECT_INGEST_DIR}")
@@ -489,21 +536,27 @@ def validate_project_ingest() -> None:
         if rel not in indexed_outputs:
             fail(f"public/project_ingest/index.json missing artifact output_path: {rel}")
 
-    md_paths = sorted(PROJECT_INGEST_MD_DIR.glob("*.md"), key=lambda item: item.name.lower()) if PROJECT_INGEST_MD_DIR.exists() else []
+    md_paths = (
+        sorted(PROJECT_INGEST_MARKDOWN_DIR.glob("*.md"), key=lambda item: item.name.lower())
+        if PROJECT_INGEST_MARKDOWN_DIR.exists()
+        else []
+    )
     for path in md_paths:
         rel = path.relative_to(REPO_ROOT).as_posix()
         if rel not in associated_outputs:
             fail(f"public/project_ingest/index.json missing associated_outputs.md_path: {rel}")
+        validate_markdown_output(path)
 
-    xlsx_json_paths = (
-        sorted(PROJECT_INGEST_XLSX_DIR.glob("*.json"), key=lambda item: item.name.lower())
-        if PROJECT_INGEST_XLSX_DIR.exists()
+    spreadsheet_json_paths = (
+        sorted(PROJECT_INGEST_SPREADSHEETS_DIR.glob("*.json"), key=lambda item: item.name.lower())
+        if PROJECT_INGEST_SPREADSHEETS_DIR.exists()
         else []
     )
-    for path in xlsx_json_paths:
+    for path in spreadsheet_json_paths:
         rel = path.relative_to(REPO_ROOT).as_posix()
         if rel not in associated_outputs:
             fail(f"public/project_ingest/index.json missing associated_outputs.xlsx_json_path: {rel}")
+        validate_spreadsheet_output(path, load_json(path))
 
 
 def main() -> None:

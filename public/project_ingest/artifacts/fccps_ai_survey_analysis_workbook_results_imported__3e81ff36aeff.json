@@ -1,0 +1,142 @@
+{
+  "artifact_id": "3e81ff36aeffe82c3cd0d84c",
+  "doc_type": "json",
+  "extracted_at_utc": "2026-03-01T14:39:34.387789Z",
+  "file_mtime_utc": "2026-02-28T01:21:03.324956Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0001",
+      "text": "json_excerpt\ntop_level_keys: generated_at, sheets, workbook"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0002",
+      "text": "{\n  \"generated_at\": \"2026-02-28T01:20:41.359137+00:00\",\n  \"sheets\": {\n    \"Dashboard\": {\n      \"columns\": [\n        \"Dashboard (uses formulas directly on tblResponses — no Power Query required)\",\n        \"COL_2\",\n        \"COL_3\",\n        \"COL_4\",\n        \"COL_5\",\n        \"COL_6\",\n        \"COL_7\",\n        \"COL_8\",\n        \"COL_9\",\n        \"COL_10\",\n        \"COL_11\",\n        \"COL_12\",\n        \"COL_13\",\n        \"COL_14\",\n        \"COL_15\",\n        \"COL_16\",\n        \"COL_17\",\n        \"COL_18\",\n        \"COL_19\",\n        \"COL_20\",\n        \"COL_21\",\n        \"COL_22\",\n        \"COL_23\"\n      ],\n      \"rows\": [\n        [\n          \"Paste real Microsoft Forms export rows into the tblResponses table on Responses_Raw (keep headers).\",\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ],\n        [\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0003",
+      "text": "null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ],\n        [\n          \"CandidateID\",\n          \"Domain\",\n          \"ShortName\",\n          \"MergeTarget\",\n          \"Approve\",\n          \"Do not approve\",\n          \"Total\",\n          \"Approve rate\",\n          \"RAG\",\n          \"Comments\",\n          \"Comment factor\",\n          \"TR selections\",\n          \"Top TR\",\n          \"Top TR share\",\n          \"Priority index\",\n          \"TR1\",\n          \"TR2\",\n          \"TR3\",\n          \"TR4\",\n          \"TR5\",\n          \"TR6\",\n          \"TR7\",\n          \"TR8\"\n        ],\n        [\n          \"F3-01\",\n          \"P-TPC\",\n          \"feedback channels\",\n          \"Plain-language transparency (P-TPC)\",\n          \"=COUNTIF(tblResponses[F3-01 approval — feedback channels],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 approval — feedback channels],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 approval — feedback channels],\\\"<>\\\")\",\n          \"=IF(G5=0,0,E5/G"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0004",
+      "text": "5)\",\n          \"=IF(H5>=0.8,\\\"Green\\\",IF(H5>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-01 comment (optional) — feedback channels],\\\"<>\\\")\",\n          \"=IF(J5>=10,0.2,IF(J5>=5,0.1,0))\",\n          \"=SUM(P5:W5)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P5:W5),P5:W5,0))\",\n          \"=IF(L5=0,0,MAX(P5:W5)/L5)\",\n          \"=IF(G5=0,0,(F5/G5)*2 + N5 + K5)\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-01 TR codes (select up to 3) — feedback channels],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-02"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0005",
+      "text": "\",\n          \"P-TPC\",\n          \"pilot with monitoring\",\n          \"Evidence-driven updates (P-GGA) / Tiered permissioning (P-GGA)\",\n          \"=COUNTIF(tblResponses[F3-02 approval — pilot with monitoring],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 approval — pilot with monitoring],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 approval — pilot with monitoring],\\\"<>\\\")\",\n          \"=IF(G6=0,0,E6/G6)\",\n          \"=IF(H6>=0.8,\\\"Green\\\",IF(H6>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-02 comment (optional) — pilot with monitoring],\\\"<>\\\")\",\n          \"=IF(J6>=10,0.2,IF(J6>=5,0.1,0))\",\n          \"=SUM(P6:W6)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P6:W6),P6:W6,0))\",\n          \"=IF(L6=0,0,MAX(P6:W6)/L6)\",\n          \"=IF(G6=0,0,(F6/G6)*2 + N6 + K6)\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0006",
+      "text": "\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-02 TR codes (select up to 3) — pilot with monitoring],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-03\",\n          \"P-TPC\",\n          \"accountable ownership\",\n          \"Data minimization (P-TPC)\",\n          \"=COUNTIF(tblResponses[F3-03 approval — accountable ownership],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 approval — accountable ownership],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 approval — accountable ownership],\\\"<>\\\")\",\n          \"=IF(G7=0,0,E7/G7)\",\n          \"=IF(H7>=0.8,\\\"Green\\\",IF(H7>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-03 comment (optional) — accountable ownership],\\\"<>\\\")\",\n          \"=IF(J7>=10,0.2,IF(J7>=5,0.1,0))\",\n          \"=SUM(P7:W7)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P7:W7),P7:W7,0))\",\n          \"=IF(L7=0,0,MAX(P7:W7)/L7)\",\n          \"=IF(G7=0,"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0007",
+      "text": "0,(F7/G7)*2 + N7 + K7)\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-03 TR codes (select up to 3) — accountable ownership],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-04\",\n          \"P-AAI\",\n          \"common use-case language\",\n          \"Tiered permissioning (P-GGA) + Plain-language transparency (P-TPC)\",\n          \"=COUNTIF(tblResponses[F3-04 approval — common use-case language],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 approval — common use-case language],\\\"Do not"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0008",
+      "text": "approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 approval — common use-case language],\\\"<>\\\")\",\n          \"=IF(G8=0,0,E8/G8)\",\n          \"=IF(H8>=0.8,\\\"Green\\\",IF(H8>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-04 comment (optional) — common use-case language],\\\"<>\\\")\",\n          \"=IF(J8>=10,0.2,IF(J8>=5,0.1,0))\",\n          \"=SUM(P8:W8)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P8:W8),P8:W8,0))\",\n          \"=IF(L8=0,0,MAX(P8:W8)/L8)\",\n          \"=IF(G8=0,0,(F8/G8)*2 + N8 + K8)\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up to 3) — common use-case language],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up to 3) — common use-case language],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up to 3) — common use-case language],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up to 3) — common use-case language],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up to 3) — common use-case language],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up to 3) — common use-case language],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0009",
+      "text": "to 3) — common use-case language],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-04 TR codes (select up to 3) — common use-case language],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-05\",\n          \"P-AAI\",\n          \"design before bans\",\n          \"Process evidence (P-AAI)\",\n          \"=COUNTIF(tblResponses[F3-05 approval — design before bans],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 approval — design before bans],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 approval — design before bans],\\\"<>\\\")\",\n          \"=IF(G9=0,0,E9/G9)\",\n          \"=IF(H9>=0.8,\\\"Green\\\",IF(H9>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-05 comment (optional) — design before bans],\\\"<>\\\")\",\n          \"=IF(J9>=10,0.2,IF(J9>=5,0.1,0))\",\n          \"=SUM(P9:W9)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P9:W9),P9:W9,0))\",\n          \"=IF(L9=0,0,MAX(P9:W9)/L9)\",\n          \"=IF(G9=0,0,(F9/G9)*2 + N9 + K9)\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3) — design before bans],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3) — design before bans],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0010",
+      "text": ") — design before bans],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3) — design before bans],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3) — design before bans],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3) — design before bans],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3) — design before bans],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-05 TR codes (select up to 3) — design before bans],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-06\",\n          \"P-AAI\",\n          \"detectors are advisory\",\n          \"No detector-only decisions (P-AAI)\",\n          \"=COUNTIF(tblResponses[F3-06 approval — detectors are advisory],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 approval — detectors are advisory],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 approval — detectors are advisory],\\\"<>\\\")\",\n          \"=IF(G10=0,0,E10/G10)\",\n          \"=IF(H10>=0.8,\\\"Green\\\",IF(H10>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-06 comment (optional) — detectors are advisory],\\\"<>\\\")\",\n          \"=IF(J10>=10,0.2,IF(J10>=5,0.1,0))\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0011",
+      "text": "\"=SUM(P10:W10)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P10:W10),P10:W10,0))\",\n          \"=IF(L10=0,0,MAX(P10:W10)/L10)\",\n          \"=IF(G10=0,0,(F10/G10)*2 + N10 + K10)\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-06 TR codes (select up to 3) — detectors are advisory],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-07\",\n          \"P-AAI\",\n          \"student disclosure\",\n          \"Process evidence (P-AAI) / transparency\",\n          \"=COUNTIF(tblResponses[F3-07 approval — st"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0012",
+      "text": "udent disclosure],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 approval — student disclosure],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 approval — student disclosure],\\\"<>\\\")\",\n          \"=IF(G11=0,0,E11/G11)\",\n          \"=IF(H11>=0.8,\\\"Green\\\",IF(H11>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-07 comment (optional) — student disclosure],\\\"<>\\\")\",\n          \"=IF(J11>=10,0.2,IF(J11>=5,0.1,0))\",\n          \"=SUM(P11:W11)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P11:W11),P11:W11,0))\",\n          \"=IF(L11=0,0,MAX(P11:W11)/L11)\",\n          \"=IF(G11=0,0,(F11/G11)*2 + N11 + K11)\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student disclosure],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student disclosure],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student disclosure],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student disclosure],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student disclosure],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0013",
+      "text": "disclosure],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student disclosure],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-07 TR codes (select up to 3) — student disclosure],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-08\",\n          \"P-EAI\",\n          \"non-AI path\",\n          \"Equity by design (P-EAI)\",\n          \"=COUNTIF(tblResponses[F3-08 approval — non-AI path],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 approval — non-AI path],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 approval — non-AI path],\\\"<>\\\")\",\n          \"=IF(G12=0,0,E12/G12)\",\n          \"=IF(H12>=0.8,\\\"Green\\\",IF(H12>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-08 comment (optional) — non-AI path],\\\"<>\\\")\",\n          \"=IF(J12>=10,0.2,IF(J12>=5,0.1,0))\",\n          \"=SUM(P12:W12)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P12:W12),P12:W12,0))\",\n          \"=IF(L12=0,0,MAX(P12:W12)/L12)\",\n          \"=IF(G12=0,0,(F12/G12)*2 + N12 + K12)\",\n          \"=COUNTIF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR2*\\\")\",\n          \"=COUNT"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0014",
+      "text": "IF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-08 TR codes (select up to 3) — non-AI path],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-09\",\n          \"P-EAI\",\n          \"IEP/504 decisions stay human\",\n          \"Human review for high-stakes (P-EAI)\",\n          \"=COUNTIF(tblResponses[F3-09 approval — IEP/504 decisions stay human],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 approval — IEP/504 decisions stay human],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 approval — IEP/504 decisions stay human],\\\"<>\\\")\",\n          \"=IF(G13=0,0,E13/G13)\",\n          \"=IF(H13>=0.8,\\\"Green\\\",IF(H13>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-09 comment (optional) — IEP/504 decisions stay human],\\\"<>\\\")\",\n          \"=IF(J13>"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0015",
+      "text": "=10,0.2,IF(J13>=5,0.1,0))\",\n          \"=SUM(P13:W13)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P13:W13),P13:W13,0))\",\n          \"=IF(L13=0,0,MAX(P13:W13)/L13)\",\n          \"=IF(G13=0,0,(F13/G13)*2 + N13 + K13)\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-09 TR codes (select up to 3) — IEP/504 decisions stay human],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-10\",\n          \"P-EAI\",\n          \"access plus supports\",\n          \"Equity b"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0016",
+      "text": "y design (P-EAI)\",\n          \"=COUNTIF(tblResponses[F3-10 approval — access plus supports],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 approval — access plus supports],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 approval — access plus supports],\\\"<>\\\")\",\n          \"=IF(G14=0,0,E14/G14)\",\n          \"=IF(H14>=0.8,\\\"Green\\\",IF(H14>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-10 comment (optional) — access plus supports],\\\"<>\\\")\",\n          \"=IF(J14>=10,0.2,IF(J14>=5,0.1,0))\",\n          \"=SUM(P14:W14)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P14:W14),P14:W14,0))\",\n          \"=IF(L14=0,0,MAX(P14:W14)/L14)\",\n          \"=IF(G14=0,0,(F14/G14)*2 + N14 + K14)\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0017",
+      "text": "],\\\"*TR5*\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports],\\\"*TR6*\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports],\\\"*TR7*\\\")\",\n          \"=COUNTIF(tblResponses[F3-10 TR codes (select up to 3) — access plus supports],\\\"*TR8*\\\")\"\n        ],\n        [\n          \"F3-11\",\n          \"P-EAI\",\n          \"UDL augmentation with checks\",\n          \"Equity by design (P-EAI)\",\n          \"=COUNTIF(tblResponses[F3-11 approval — UDL augmentation with checks],\\\"Approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-11 approval — UDL augmentation with checks],\\\"Do not approve\\\")\",\n          \"=COUNTIF(tblResponses[F3-11 approval — UDL augmentation with checks],\\\"<>\\\")\",\n          \"=IF(G15=0,0,E15/G15)\",\n          \"=IF(H15>=0.8,\\\"Green\\\",IF(H15>=0.6,\\\"Yellow\\\",\\\"Red\\\"))\",\n          \"=COUNTIF(tblResponses[F3-11 comment (optional) — UDL augmentation with checks],\\\"<>\\\")\",\n          \"=IF(J15>=10,0.2,IF(J15>=5,0.1,0))\",\n          \"=SUM(P15:W15)\",\n          \"=INDEX($P$4:$W$4,MATCH(MAX(P15:W15),P15:W15,0))\",\n          \"=IF(L15=0,0,MAX(P15:W15)/L15)\",\n          \"=IF(G15=0,0,(F15/G15)*2 + N15 + K15)\",\n          \"=COUNTIF(tbl"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0018",
+      "text": "Responses[F3-11 TR codes (select up to 3) — UDL augmentation with checks],\\\"*TR1*\\\")\",\n          \"=COUNTIF(tblResponses[F3-11 TR codes (select up to 3) — UDL augmentation with checks],\\\"*TR2*\\\")\",\n          \"=COUNTIF(tblResponses[F3-11 TR codes (select up to 3) — UDL augmentation with checks],\\\"*TR3*\\\")\",\n          \"=COUNTIF(tblResponses[F3-11 TR codes (select up to 3) — UDL augmentation with checks],\\\"*TR4*\\\")\",\n          \"=COUNTIF(tblResponses[F3-11 TR codes (select up to 3) — UDL augmentation with checks],\\\"*TR5*\\\")\",\n          \"=C\n... [TRUNCATED]"
+    }
+  ],
+  "source_hash_sha256": "a4a14565503dc9af2d886ded6bc7fbb200388daf99c6ee8edc7a555f81fcdd9c",
+  "source_rel_path": "03 - Values & Principles/FCCPS_AI_Survey_Analysis_Workbook_results-imported.json",
+  "title": "json_excerpt"
+}
