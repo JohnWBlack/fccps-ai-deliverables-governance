@@ -846,9 +846,6 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
             discovery.append(entry)
             continue
 
-        write_json_if_changed(output_path, artifact_payload)
-        expected_output_filenames.add(output_name)
-
         associated_outputs: dict[str, str] = {}
         output_paths = [output_rel]
 
@@ -901,6 +898,12 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
                     "output_path": xlsx_rel,
                 }
             )
+
+        if associated_outputs:
+            artifact_payload["associated_outputs"] = associated_outputs
+
+        write_json_if_changed(output_path, artifact_payload)
+        expected_output_filenames.add(output_name)
 
         type_counts[doc_type] += 1
         total_sections += sections_count
@@ -958,7 +961,14 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
     index_payload = {
         "generated_at": generated_at,
         "transform_version": TRANSFORM_VERSION,
-        "entries": sorted(index_entries, key=lambda item: str(item["source_path"]).lower()),
+        "entries": sorted(
+            index_entries,
+            key=lambda item: (
+                str(item.get("category", "")).lower(),
+                str(item.get("source_path", "")).lower(),
+                str(item.get("output_path", "")).lower(),
+            ),
+        ),
     }
     write_json_if_changed(INDEX_PATH, index_payload)
 
