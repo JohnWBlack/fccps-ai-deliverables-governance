@@ -1,1 +1,0 @@
-Mirror of FCCPS AI Committee OneDrive folder for transparency + KPI generation; see governance rule; SoR remains authoritative.

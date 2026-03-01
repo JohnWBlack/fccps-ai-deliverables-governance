@@ -11,3 +11,13 @@ secrets/
 **/.DS_Store
 logs/
 .task_publish.lock
+
+# Raw survey exports (PII-bearing); keep only sanitized derivatives in repo
+project_files/03 - Values & Principles/*Survey*Results*.json
+project_files/03 - Values & Principles/*Survey*Results*.xlsx
+project_files/03 - Values & Principles/FCCPS_AI_Survey_Analysis_Workbook_results-imported.*
+project_files/**/*.csv
+project_files/**/*.xlsx
+project_files/**/~$*
+project_files/**
+scripts/__pycache__/
