@@ -2,22 +2,22 @@
   "balance_required_delta": {
     "axis": "what",
     "current": 4.81,
-    "delta": 1.94,
-    "target_midpoint": 6.75
+    "delta": 3.44,
+    "target_midpoint": 8.25
   },
   "balance_target_gate": {
     "corridor": {
-      "how_max": 7.5,
-      "how_min": 6.0,
-      "what_max": 7.5,
-      "what_min": 6.0
+      "how_max": 9.0,
+      "how_min": 7.5,
+      "what_max": 9.0,
+      "what_min": 7.5
     },
-    "id": "m6",
+    "id": "m7",
     "lagging_axis": "what",
     "leading_axis": "how",
     "midpoint": {
-      "how": 6.75,
-      "what": 6.75
+      "how": 8.25,
+      "what": 8.25
     }
   },
   "deliverables_due_next_gate": [
@@ -82,7 +82,7 @@
       "workstream": "WS-POL"
     }
   ],
-  "generated_at": "2026-03-01T19:02:03.101772Z",
+  "generated_at": "2026-03-01T19:15:18.242807Z",
   "how_drivers_top": [
     {
       "evidence_count": 1,
@@ -122,6 +122,13 @@
       "weight": 1.0
     },
     {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-FRESH-03",
+      "score": 95.0,
+      "weight": 1.0
+    },
+    {
       "evidence_count": 1,
       "evidence_paths": [
         "public/quality_report.json"
@@ -143,13 +150,6 @@
       "kpi_id": "KPI-CONV-06",
       "score": 70.0,
       "weight": 0.75
-    },
-    {
-      "evidence_count": 0,
-      "evidence_paths": [],
-      "kpi_id": "KPI-FRESH-03",
-      "score": 40.0,
-      "weight": 1.0
     },
     {
       "evidence_count": 2,
@@ -197,10 +197,10 @@
   "now": {
     "corridor_matches": [
       "WHAT~M4",
-      "HOW~M6"
+      "HOW~M7"
     ],
-    "how": 7.32,
-    "how_corridor_id": "m6",
+    "how": 7.86,
+    "how_corridor_id": "m7",
     "what": 4.81,
     "what_corridor_id": "m4"
   },
@@ -208,7 +208,7 @@
     "axes_out": [
       "how"
     ],
-    "how_out": 1.82,
+    "how_out": 2.36,
     "what_out": 0.0
   },
   "project_ingest": {
@@ -258,7 +258,7 @@
       }
     ]
   },
-  "version_key": "3d56338df34662bf371b552c09761c26726d20c2",
+  "version_key": "4767d419da248e920377b9cc194ca93e7985734e",
   "what_blockers_top": [
     {
       "evidence_count": 12,
