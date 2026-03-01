@@ -15,6 +15,8 @@ SCHEMA_PATH = REPO_ROOT / "governance_docs" / "schema" / "glidepath_history.sche
 GLIDEPATH_PATH = PUBLIC_DIR / "glidepath_history.json"
 PROJECT_INGEST_DIR = PUBLIC_DIR / "project_ingest"
 PROJECT_INGEST_ARTIFACTS_DIR = PROJECT_INGEST_DIR / "artifacts"
+PROJECT_INGEST_MD_DIR = PROJECT_INGEST_DIR / "md"
+PROJECT_INGEST_XLSX_DIR = PROJECT_INGEST_DIR / "xlsx"
 PROJECT_INGEST_INDEX_PATH = PROJECT_INGEST_DIR / "index.json"
 PROJECT_INGEST_DISCOVERY_REPORT_PATH = PROJECT_INGEST_DIR / "discovery_report.json"
 PROJECT_INGEST_PII_REPORT_PATH = PROJECT_INGEST_DIR / "pii_report.json"
@@ -283,6 +285,29 @@ def validate_project_ingest_index(payload: dict[str, Any]) -> None:
         if not output_path.startswith("public/project_ingest/artifacts/"):
             fail(f"public/project_ingest/index.json entries[{idx}] output_path must point to artifacts/")
 
+        output_paths = entry.get("output_paths")
+        if output_paths is not None:
+            if not isinstance(output_paths, list) or any(not isinstance(path, str) or not path.strip() for path in output_paths):
+                fail(f"public/project_ingest/index.json entries[{idx}] output_paths must be a list of non-empty strings")
+
+        associated_outputs = entry.get("associated_outputs")
+        if associated_outputs is not None:
+            if not isinstance(associated_outputs, dict):
+                fail(f"public/project_ingest/index.json entries[{idx}] associated_outputs must be an object when present")
+            for key in associated_outputs.keys():
+                if key not in {"md_path", "xlsx_json_path"}:
+                    fail(f"public/project_ingest/index.json entries[{idx}] associated_outputs contains unsupported key: {key}")
+
+            md_path = associated_outputs.get("md_path")
+            if md_path is not None:
+                if not isinstance(md_path, str) or not md_path.startswith("public/project_ingest/md/"):
+                    fail(f"public/project_ingest/index.json entries[{idx}] associated_outputs.md_path must point to md/")
+
+            xlsx_json_path = associated_outputs.get("xlsx_json_path")
+            if xlsx_json_path is not None:
+                if not isinstance(xlsx_json_path, str) or not xlsx_json_path.startswith("public/project_ingest/xlsx/"):
+                    fail(f"public/project_ingest/index.json entries[{idx}] associated_outputs.xlsx_json_path must point to xlsx/")
+
 
 def validate_project_ingest_discovery_report(payload: dict[str, Any]) -> None:
     if not isinstance(payload, dict):
@@ -373,8 +398,8 @@ def validate_project_ingest_artifact(path: Path, payload: Any) -> None:
     if parse_iso_datetime(payload.get("extracted_at_utc")) is None:
         fail(f"{rel} extracted_at_utc must be an ISO datetime")
 
-    if payload.get("doc_type") not in {"md", "txt", "json", "docx"}:
-        fail(f"{rel} doc_type must be md|txt|json|docx")
+    if payload.get("doc_type") not in {"md", "txt", "json", "docx", "xlsx"}:
+        fail(f"{rel} doc_type must be md|txt|json|docx|xlsx")
     if not isinstance(payload.get("title"), str):
         fail(f"{rel} title must be a string")
 
@@ -441,10 +466,44 @@ def validate_project_ingest() -> None:
         for entry in index_entries
         if isinstance(entry, dict)
     }
+
+    associated_outputs: set[str] = set()
+    for idx, entry in enumerate(index_entries):
+        if not isinstance(entry, dict):
+            continue
+        assoc = entry.get("associated_outputs")
+        if not isinstance(assoc, dict):
+            continue
+        for key in ("md_path", "xlsx_json_path"):
+            value = assoc.get(key)
+            if value is None:
+                continue
+            rel = str(value)
+            associated_outputs.add(rel)
+            target_path = REPO_ROOT / rel
+            if not target_path.exists() or not target_path.is_file():
+                fail(f"public/project_ingest/index.json entries[{idx}] {key} target does not exist: {rel}")
+
     for path in artifact_paths:
         rel = path.relative_to(REPO_ROOT).as_posix()
         if rel not in indexed_outputs:
             fail(f"public/project_ingest/index.json missing artifact output_path: {rel}")
+
+    md_paths = sorted(PROJECT_INGEST_MD_DIR.glob("*.md"), key=lambda item: item.name.lower()) if PROJECT_INGEST_MD_DIR.exists() else []
+    for path in md_paths:
+        rel = path.relative_to(REPO_ROOT).as_posix()
+        if rel not in associated_outputs:
+            fail(f"public/project_ingest/index.json missing associated_outputs.md_path: {rel}")
+
+    xlsx_json_paths = (
+        sorted(PROJECT_INGEST_XLSX_DIR.glob("*.json"), key=lambda item: item.name.lower())
+        if PROJECT_INGEST_XLSX_DIR.exists()
+        else []
+    )
+    for path in xlsx_json_paths:
+        rel = path.relative_to(REPO_ROOT).as_posix()
+        if rel not in associated_outputs:
+            fail(f"public/project_ingest/index.json missing associated_outputs.xlsx_json_path: {rel}")
 
 
 def main() -> None:

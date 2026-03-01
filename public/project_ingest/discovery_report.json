@@ -1,11 +1,11 @@
 {
   "entries": [
     {
-      "category_guess": "other",
-      "decision": "skipped",
+      "category_guess": "spreadsheet",
+      "decision": "ingested",
       "ext": ".xlsx",
       "mtime_utc": "2026-02-24T21:33:48.263069Z",
-      "reason_if_skipped": "skipped_unsupported:extension_not_allowlisted",
+      "reason_if_skipped": "",
       "size_bytes": 25664,
       "source_rel_path": "02 Risks & Opportunities/FCCPS AI Advisory CommitteeRisks and Opportunities Assessment Form(1-10).xlsx"
     },
@@ -190,11 +190,11 @@
       "source_rel_path": "03 - Values & Principles/FCCPS_AI_Survey_Analysis_Workbook_results-imported.json"
     },
     {
-      "category_guess": "other",
+      "category_guess": "spreadsheet",
       "decision": "skipped",
       "ext": ".xlsx",
       "mtime_utc": "2026-02-28T01:16:54Z",
-      "reason_if_skipped": "skipped_unsupported:extension_not_allowlisted",
+      "reason_if_skipped": "skipped_pii_findings",
       "size_bytes": 478247,
       "source_rel_path": "03 - Values & Principles/FCCPS_AI_Survey_Analysis_Workbook_results-imported.xlsx"
     },
@@ -208,20 +208,20 @@
       "source_rel_path": "03 - Values & Principles/FCCPS_AI_Values_and_Principles_Guidance_Packet.docx"
     },
     {
-      "category_guess": "other",
-      "decision": "skipped",
+      "category_guess": "spreadsheet",
+      "decision": "ingested",
       "ext": ".xlsx",
       "mtime_utc": "2026-02-24T21:33:48.285923Z",
-      "reason_if_skipped": "skipped_unsupported:extension_not_allowlisted",
+      "reason_if_skipped": "",
       "size_bytes": 69351,
       "source_rel_path": "03 - Values & Principles/principles_candidates.xlsx"
     },
     {
-      "category_guess": "other",
-      "decision": "skipped",
+      "category_guess": "spreadsheet",
+      "decision": "ingested",
       "ext": ".xlsx",
       "mtime_utc": "2026-02-28T01:13:18.110593Z",
-      "reason_if_skipped": "skipped_unsupported:extension_not_allowlisted",
+      "reason_if_skipped": "",
       "size_bytes": 45348,
       "source_rel_path": "03 - Values & Principles/Values & Principles Survey Part 1 Results v.20260227-1035.xlsx"
     },
@@ -1018,6 +1018,6 @@
       "source_rel_path": "workstreams/rsb/Shared Baseline v01.md"
     }
   ],
-  "generated_at": "2026-03-01T04:19:51.095626Z",
+  "generated_at": "2026-03-01T04:41:17.369910Z",
   "project_files_root": "C:/Users/JohnBlack/OneDrive - OFFSET3/FCCPS AI Committee/project_files"
 }

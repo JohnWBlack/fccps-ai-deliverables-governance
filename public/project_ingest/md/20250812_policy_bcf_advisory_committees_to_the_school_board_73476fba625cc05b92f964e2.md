@@ -1,0 +1,149 @@
+POLICY BCF
+
+Former FCCPS Policy 5.12
+
+ADVISORY COMMITTEES TO THE SCHOOL BOARD
+
+# Purpose of Advisory Committees
+
+Pursuant to the State of Virginia Board of Education regulations, the School
+
+Board may establish Advisory Committees of citizens to provide input to the School Board on select issues or topics, select policy recommendations, efficacy of select policy implementation, and/or the budget.  Advisory Committees also may serve as an additional channel to facilitate communication between parents, the community, and the School Board on selected topics.
+
+The School Board’s Advisory Committees, and each Advisory Committee’s specific focus, are detailed in School Board Policy BCF-E – School Board Advisory Standing Committees.  Pursuant to the State of Virginia Board of Education regulations, the School Board shall always maintain Advisory Committees for the following programs: special education, and career and technical education (which is encompassed in the Business and Education Partnership Council).  The School Board may sunset or establish other Advisory Committees by amending Policy BCF-E.  As needed, the School Board also may sunset or establish ad hoc committees pursuant to Policy BCE – School Board Ad Hoc Committees.
+
+# Powers of Advisory Committees
+
+FCCPS Advisory Committees operate as an extension of the School Board, but do not have any of the powers and duties vested by law in the School Board.  Advisory Committees shall have no role or authority except to advise the School Board.  Unless otherwise provided by law, Advisory Committees cannot exercise functions legally within the jurisdiction of the Board or the administration, and do not have the power to direct or implement recommendations.  In neither their statements nor actions shall Advisory Committees create the impression that they can exercise functions legally within the jurisdiction of the Board.
+
+Advisory Committees shall have their meeting minutes published on the division website.  Advisory Committees may make recommendations about other information to place on the site and other recommendations about disseminating information about their work to the public, consistent with rules governing confidentiality.  Control and responsibility for posting Advisory Committee content on the division website is at the sole discretion of the school division.  As Advisory Committees are extensions of the School Board, all committee materials and information must be reviewed by the School Board liaison prior to publication and may only be published on the division website.
+
+Advisory Committees cannot exercise supervision over any employee of the Board and may not place significant demands on staff (including staff members serving on Advisory Committees) to perform work.  Any requests for work to be done by staff members must be brought to the School Board liaison by the Advisory Committee Chair and must be reviewed by the Superintendent.  Work which does not place a significant demand for additional time, such as distributing information already available, is not included in this restriction.  Further, Advisory Committees have no authority or jurisdiction to investigate issues related to school personnel or students.  If an Advisory Committee or any member of thereof receives a complaint about school personnel, the Advisory Committee or its member will refer individuals raising such personnel matters to Former FCCPS Policy 8.12, Complaints about Employees (Future Policy GBLA, Third-Party Complaints Against Employees) and Former FCCPS Policy 5.4 Complaints from the Public (Future Policy KL, Public Complaints).
+
+# School Board Liaisons to Advisory Committees
+
+Each permanent Advisory Committee identified in Policy BCF-E shall have a School Board member liaison.  The School Board liaison will serve as a link between that committee and the Board.  The School Board liaison is not a voting member of the Advisory Committee and can make no commitment to the Advisory Committee on behalf of the School Board except as directed by an action of the School Board.
+
+At the beginning of each school year, the School Board liaison shall work closely with the Advisory Committee Chair to establish the committee’s strategic focus for the year and identify key areas of the School Board’s Comprehensive Plan applicable to the Committee.  Committee members may suggest additional topics to the Advisory Committee Chair and School Board liaison for consideration.  From time to time during the school year, the School Board liaison may bring additional topics to the Advisory Committee for discussion or review.
+
+The School Board liaison will make good faith efforts to attend the regularly scheduled meeting of the advisory committee.  The School Board liaison may provide their own perspective and feedback to advance the work of the Advisory Committee, and may express their opinion concerning the content of Committee minutes, reports, plans, or other work products.  If the School Board liaison is unable to attend or find another School Board member to serve as a substitute liaison, the School Board liaison should notify the Advisory Committee Chair or staff liaison prior to the meeting and should follow-up after the meeting concerning the business transacted.  The liaison will make periodic updates to the School Board to report on the critical work of the Advisory Committee.
+
+# Advisory Committee Operations
+
+## Public Meetings
+
+Advisory Committees operate as public bodies in accordance with the Virginia Freedom of Information Act.  Committee members will act in accordance with the Virginia Freedom of Information Act.  Committee business will only be conducted during properly noticed, and open, meetings.  Advisory committees are not authorized to conduct closed meetings.  In the event an Advisory Committee Chair identifies subject matter that is appropriate for discussion in a closed meeting, the Chair shall notify the School Board liaison and staff liaison at least five (5) days prior to the meeting.  Closed meetings can be authorized by the School Board liaison only, in consultation with Board counsel.
+
+As Advisory Committees are extensions of the School Board, each Advisory Committee acts as a public body.  The public should be welcomed and heard at committee meetings in an open, consistent, and equitable fashion.  Space shall be set aside for members of the public to sit that is separate from the committee members.  In order to promote public engagement, each Advisory Committee shall designate a public comment section immediately after adoption of the agenda.  Rules and procedures for public comment shall be the same as those for the School Board, including a 3-minute limit on each speaker, with time not able to be shared among or yielded to other speakers.  However, those needing a reasonable accommodation, or who need interpretation, may have extended time.  Speakers shall identify themselves and their address.  If an advisory committee receives public comment in writing, such comments shall be sent to all members of the committee and the School Board liaison.
+
+As public meetings, Advisory Committee meetings may be recorded by members of the public.  Each Advisory Committee may adopt rules, as part of their by-laws, governing the placement and use of equipment necessary for broadcasting, photographing, filming, or recording a meeting to prevent interference with the proceedings, but shall not prohibit or otherwise prevent any person from photographing, filming, recording, or otherwise reproducing any portion of a meeting required to be open.  No public body shall conduct a meeting required to be open in any building or facility where such recording devices are prohibited.
+
+## Quorum
+
+Each Advisory Committee meeting must have a quorum – a simple majority of members currently appointed – present to take official action on business.  Committees can meet and discuss matters in the absence of a quorum, but may not take official action.  Advisory Committee reports, if any, should be prepared by the non-staff members of the committee and approved by official action of the committee.
+
+## Bylaws
+
+Advisory Committees will conduct all business in accordance with School Board policies and may adopt committee by-laws.  Committee by-laws may be amended only by two-thirds vote of currently appointed members of the committee and, if adopted, must be posted on the School Board website.  Bylaws shall be in accordance with School Board guidance and instructions related to advisory committee conduct of business.  Bylaws must be consistent with School Board policy at all times.
+
+Meeting Schedule
+
+Advisory Committees may set their own meeting schedules, provided that they follow public meeting notice requirements in accordance with the Virginia Freedom of Information Act.  Unless specified otherwise in Policy BCF-E, Advisory Committees shall meet at least 5 times per school year.
+
+# Membership of Advisory Committees
+
+## Criteria for selection
+
+Committee members should be interested in the welfare of the schools generally, should have particular knowledge or expertise or be particularly interested in the committee’s area of concentration, and be willing to give the time and effort required by committee membership.  When selecting among candidates for committee membership, the School Board will look to create a committee membership as a whole that is as representative as possible of the community served by the Board.  In addition, the Board will look to create a strong base of expertise in the area of focus for each committee.  Committee members are expected to focus on their areas of interest by looking at how the programs affect the student population as a whole, not by focusing on the particular impact of such programs on individual children.
+
+## Residency
+
+There is a preference to appoint City of Falls Church residents to positions on advisory committees.  However, the School Board may consider filling a position with a non-resident if: (1) there are no applicants who are City of Falls Church residents, or (2) there are applicants who have particular abilities/expertise or connections to the Falls Church community which would be valuable to the committee's work or needed to ensure membership qualifications required for the committee, even though they are not Falls Church City residents.
+
+## Student Representatives
+
+As Advisory Committees are intended to get the input from the full range of stakeholders, including students, it is the policy of the School Board that, to the greatest extent possible, each Advisory Committee shall have one student representative from Meridian High School.  This student representative shall enjoy all the rights and responsibilities of a regular advisory committee member, including the right to vote as a member of the advisory committee, except as otherwise directed by the School Board.
+
+Student representatives shall be selected through an application process directed by the Meridian High School administration.  Applicants may apply to serve for
+
+the duration of their junior or senior year.  All student representatives shall be appointed to Advisory Committees for one (1) year terms, beginning at the start of each academic year.
+
+Although participation as a student representative to an Advisory Committee or the School Board is an important civic function, the School Board stresses that no such service should come at the cost of academic progress and that each representative should keep their academic work as a priority when balancing their advisory committee assignments.
+
+## Attendance
+
+All Advisory Committee members are expected to attend the meetings of their committee.  If a member misses two consecutive meetings without advance explanation, the Advisory Committee Chair may determine how to manage the impact of absences on the committee’s work.  It is within the Advisory Committee Chair’s discretion whether to report the absences to the School Board and request the School Board to declare the seat vacant and appoint a replacement.  The Advisory Committee Chair may also consider absences as a factor in considering a recommendation for reappointment of a member.
+
+# Applications, Appointments, and Resignations
+
+## Applications
+
+The Vice Chair of the School Board will coordinate the recruitment effort for Advisory Committee members in conjunction with the School Board liaisons and with the administrative support of the Clerk of the School Board.  The Clerk of the School Board will publicize such vacancies and information about the application process promptly through the FCCPS Office of Communications.  Interested persons also may contact the Clerk of the School Board to obtain an application, information about Advisory Committees, and information about vacancies.
+
+Completed applications should be returned to the Clerk of the School Board.  The School Board encourages staff to suggest individuals whose expertise would contribute to the membership of Advisory Committees, and who possess particular skills or background in those areas of need identified by the Advisory Committee.
+
+## Appointments
+
+All applicants for non-staff positions on Advisory Committees will be contacted via phone or e-mail by the current School Board liaison to that committee or the Clerk of the School Board.  To the greatest extent possible, Advisory Committee positions will be filled using a standard selection protocol in order to evaluate comparable information for all applicants.
+
+Appointments of new members for each Advisory Committee shall be made in June each year, except that appointments to fill a mid-term vacancy shall be made as soon as practicable.  Regular appointments of new members shall be for a two-year term running July 1 - June 30, with staggered terms among members of each Advisory Committee.  Appointments to fill mid-term vacancies shall be for the remainder of the term of the vacating member.
+
+The School Board liaison will provide their appointment recommendation(s) to the Clerk of the School Board for inclusion in the School Board agenda for the meeting at which appointments are scheduled to be made.  The School Board will review the recommendations and will vote on the appointment.  After the School Board action, all applicants, appointed and not appointed, will be notified in writing by the Clerk of the School Board.  Notification of appointment will be copied to the relevant Advisory Committee Chair, its staff liaison, and its School Board liaison.  Applications will be kept on file for one (1) calendar year and applicants who were not appointed may be considered if new vacancies occur.
+
+## Vacancies & Resignations
+
+Members serve at the will of the School Board, and any School Board member may call for a restructuring of any committee at the end of a school year.  Such restructuring, which must be approved by the School Board, may include the appointment of new membership for the Advisory Committee.
+
+Voluntary resignations by Advisory Committee members must be made in writing to the School Board or Clerk of the School Board.
+
+Advisory Committee members shall notify their Advisory Committee Chair if they move out of the City of Falls Church.  If a Falls Church City-resident Advisory Committee member moves from the City, their committee membership automatically terminates.
+
+The Clerk of the School Board will timely notify the School Board of Advisory Committee member terms that are expiring in the spring.  No later than early April, the
+
+School Board liaison for each committee will consult with the Advisory Committee Chair and then will contact those members whose terms are expiring to determine their interest in continuing to serve on the committee.  The School Board liaison will report any vacancies to the Clerk of the School Board.
+
+Vacancies occurring for any reason during the school year will be filled as soon as practicable after candidates are identified and applications received.  End-of-year vacancies will be advertised in April or May for June appointments.
+
+# Appointment and Duties of the Advisory Committee Chair
+
+By the end of May of each year, an annual election of the Advisory Committee Chair will be held.  The Chair will be selected from among the non-staff members of the committee by a majority vote of the committee members.
+
+The School Board member assigned as School Board liaison will preside over the election.  The Chair’s term will begin on July 1 and end on the following June 30.  If the Advisory Committee Chair resigns, the School Board liaison will serve as the Advisory Committee Chair until a successor is elected.  The election of the successor will be held at the next meeting of the Advisory Committee.
+
+Advisory Committee Chairs will attend an annual training and orientation session scheduled by the School Board.  Advisory Committee Chairs will ensure that newly appointed Advisory Committee members are provided an orientation and given the descriptions of the duties of the committee, the names of other committee members, and copies of any applicable School Board or State policies and regulations.
+
+Advisory Committee Chairs will prepare agendas for regular committee meetings in consultation with the committee’s staff liaison(s) and School Board liaison.
+
+Advisory Committee Chairs will ensure committee meetings are conducted in accordance with law, Board guidance, committee by-laws, and Robert’s Rules of Order.
+
+Advisory Committee Chairs will notify their School Board liaison of the scheduled meetings, keep them informed of the status of the committee's work, and consult with them concerning any questions or concerns about the functioning of the committee.
+
+The Advisory Committee shall present, annually, an executive summary of committee actions no longer than five (5) pages, including recommendations, and an oral report of up to five (5) minutes in length to the School Board according to a schedule established by the Superintendent.  This schedule will be distributed annually to Advisory Committee Chairs and School Board liaisons.  A template is provided by the School Board so that uniform reports will be provided to the Clerk of the School Board.
+
+# Administrative Support for Advisory Committees:
+
+The School Board will provide administrative support, by way of a staff liaison, for each Advisory Committee.  That staff liaison shall be responsible for taking and maintaining minutes of committee actions, for compliance with the committee’s public meeting notice requirements, and for posting of approved information, including agendas, minutes, and reports, for the Advisory Committee on the school division website.
+
+The staff liaison also shall help the Advisory Committee obtain information necessary to evaluate programs or issues under consideration, support activities required to fulfill the committee's assigned responsibilities, and assist in the preparation of a report during each year of the committee's operation.  Each staff liaison shall provide an advisory and support role to the advisory committee.  Committee members will not direct, or overly burden, the staff liaison, and committee requests for staff assistance beyond that detailed herein must be coordinated by the Advisory Committee Chair, and School Board liaison, and Superintendent.
+
+Adopted:  August 12, 2025
+
+## Legal Refs.:
+
+Code of Virginia, 1950, as amended, §§ 22.1-16, 22.1-18.1, 22.1-86,  22.1-227, 22.1-275.1; 8 VAC 20-81-230, and 8 VAC 20-120-50.
+
+## Cross References:
+
+| Future Policy AF | Comprehensive Plan |
+| Future Policy BDDH/KD | Public Participation at School Board Meetings |
+| Future Policy BDDL (Optional) | Electronic Participation in Committee Meetings from Remote Locations |
+| Future Policy BCE | School Board Ad Hoc Committees |
+| Future Policy BCF-E | School Board Advisory Standing Committees |
+| Future Policy BDD | Electronic Participation in School Board Meetings From Remote Locations |
+| Future Policy EB | School Crisis, Emergency Management, and Medical |
+|  | Emergency Response Plan |
+| Future Policy EBB | Threat Assessment Teams |
+| Future Policy IC | School Year |
+| Future Policy IGBB | Programs for Gifted Students |
+| Future Policy KC | Community Involvement in Decision Making |
+| Former FCCPS Policy 5.13 | Community Involvement in Decision-Making |

@@ -14,14 +14,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ingest_and_autopilot:
+  autopilot_self_hosted:
     if: >-
       github.repository_owner == 'JohnWBlack'
       && (
         github.event_name == 'workflow_dispatch'
         || (github.event_name == 'schedule' && vars.ENABLE_MIRO_AUTOPILOT == 'true')
       )
-    runs-on: ${{ vars.MIRO_AUTOPILOT_RUNNER == 'self-hosted' && fromJSON('["self-hosted", "Windows"]') || 'windows-latest' }}
+      && vars.MIRO_AUTOPILOT_RUNNER == 'self-hosted'
+    runs-on: [self-hosted, Windows]
     env:
       PROJECT_FILES_ROOT: ${{ vars.PROJECT_FILES_ROOT }}
       ALLOW_PII: ${{ vars.ALLOW_PII }}
@@ -51,17 +52,12 @@ jobs:
           py -m pip install --upgrade pip
           py -m pip install -r requirements.txt
 
-      - name: Decide run mode and guardrails
+      - name: Validate self-hosted environment and PROJECT_FILES_ROOT
         id: guard
         shell: pwsh
         run: |
           $shouldRun = "true"
           $reason = ""
-
-          if ($shouldRun -eq "true" -and $env:RUNNER_ENVIRONMENT -ne "self-hosted") {
-            $shouldRun = "false"
-            $reason = "Runner is github-hosted; autopilot requires self-hosted Windows access to PROJECT_FILES_ROOT."
-          }
 
           if ($shouldRun -eq "true" -and [string]::IsNullOrWhiteSpace($env:PROJECT_FILES_ROOT)) {
             $shouldRun = "false"
@@ -184,3 +180,20 @@ jobs:
           elseif ("${{ steps.changes.outputs.changed }}" -ne "true") {
             Write-Host "Workflow ran fully; no commit/push needed because no output changes were detected."
           }
+
+  autopilot_skip_hosted:
+    if: >-
+      github.repository_owner == 'JohnWBlack'
+      && (
+        github.event_name == 'workflow_dispatch'
+        || (github.event_name == 'schedule' && vars.ENABLE_MIRO_AUTOPILOT == 'true')
+      )
+      && vars.MIRO_AUTOPILOT_RUNNER != 'self-hosted'
+    runs-on: windows-latest
+    steps:
+      - name: Skip on GitHub-hosted runner
+        shell: pwsh
+        run: |
+          Write-Host "⏭️ Skipping autopilot run. vars.MIRO_AUTOPILOT_RUNNER is not 'self-hosted'."
+          Write-Host "This workflow requires self-hosted Windows access to PROJECT_FILES_ROOT for ingest mode."
+          exit 0
