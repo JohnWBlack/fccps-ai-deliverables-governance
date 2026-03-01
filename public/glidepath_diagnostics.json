@@ -1,0 +1,248 @@
+{
+  "deliverables_due_next_gate": [
+    {
+      "id": "charter_v0",
+      "status": "completed",
+      "workstream": "WS-POL"
+    },
+    {
+      "id": "working_agreements",
+      "status": "completed",
+      "workstream": "WS-POL"
+    },
+    {
+      "id": "D-RSB-1",
+      "status": "completed",
+      "workstream": "WS-RSB"
+    },
+    {
+      "id": "policy_principles",
+      "status": "in_progress",
+      "workstream": "WS-POL"
+    },
+    {
+      "id": "pre_m3_defs",
+      "status": "completed",
+      "workstream": "WS-RSB"
+    },
+    {
+      "id": "pre_m3_risks_ops",
+      "status": "completed",
+      "workstream": "WS-POL"
+    },
+    {
+      "id": "D-AIN-1",
+      "status": "in_progress",
+      "workstream": "WS-AIN"
+    },
+    {
+      "id": "D-CPX-1",
+      "status": "in_progress",
+      "workstream": "WS-CPX"
+    },
+    {
+      "id": "D-DPS-1",
+      "status": "in_progress",
+      "workstream": "WS-DPS"
+    },
+    {
+      "id": "D-EQA-1",
+      "status": "in_progress",
+      "workstream": "WS-EQA"
+    },
+    {
+      "id": "D-POL-1",
+      "status": "in_progress",
+      "workstream": "WS-POL"
+    },
+    {
+      "id": "rec_outline_risk_register",
+      "status": "in_progress",
+      "workstream": "WS-POL"
+    }
+  ],
+  "generated_at": "2026-03-01T17:45:37.654703Z",
+  "how_drivers_top": [
+    {
+      "evidence_count": 1,
+      "evidence_paths": [
+        "public/quality_report.json"
+      ],
+      "kpi_id": "KPI-CONV-01",
+      "score": 80.0,
+      "weight": 1.5
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-CONV-02",
+      "score": 100.0,
+      "weight": 1.0
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-CONV-03",
+      "score": 100.0,
+      "weight": 1.0
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-FRESH-01",
+      "score": 100.0,
+      "weight": 1.0
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-FRESH-02",
+      "score": 100.0,
+      "weight": 1.0
+    },
+    {
+      "evidence_count": 1,
+      "evidence_paths": [
+        "public/quality_report.json"
+      ],
+      "kpi_id": "KPI-CONV-04",
+      "score": 100.0,
+      "weight": 0.75
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-CONV-05",
+      "score": 70.0,
+      "weight": 0.75
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-CONV-06",
+      "score": 70.0,
+      "weight": 0.75
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-FRESH-03",
+      "score": 40.0,
+      "weight": 1.0
+    },
+    {
+      "evidence_count": 2,
+      "evidence_paths": [
+        "docs/CONVENTIONS.md",
+        "docs/schema_notes.md"
+      ],
+      "kpi_id": "KPI-CONV-07",
+      "score": 8.0,
+      "weight": 0.5
+    },
+    {
+      "evidence_count": 2,
+      "evidence_paths": [
+        "docs/CONVENTIONS.md",
+        "docs/schema_notes.md"
+      ],
+      "kpi_id": "KPI-CONV-08",
+      "score": 8.0,
+      "weight": 0.5
+    },
+    {
+      "evidence_count": 1,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-CONV-10",
+      "score": 5.0,
+      "weight": 0.5
+    }
+  ],
+  "next_gate": {
+    "corridor": {
+      "how_max": 5.5,
+      "how_min": 4.0,
+      "what_max": 5.5,
+      "what_min": 4.0
+    },
+    "id": "m4",
+    "midpoint": {
+      "how": 4.75,
+      "what": 4.75
+    }
+  },
+  "now": {
+    "corridor_matches": [
+      "WHAT~M4",
+      "HOW~M6"
+    ],
+    "how": 7.32,
+    "how_corridor_id": "m6",
+    "what": 4.81,
+    "what_corridor_id": "m4"
+  },
+  "outside_corridor": {
+    "axes_out": [
+      "how"
+    ],
+    "how_out": 1.82,
+    "what_out": 0.0
+  },
+  "project_ingest": {
+    "categories": [
+      "artifacts",
+      "markdown",
+      "spreadsheets"
+    ],
+    "entries_count": 87,
+    "present": true
+  },
+  "version_key": "98cfee4e8d7dfc1c0341f4de5afa8802ab37820d",
+  "what_blockers_top": [
+    {
+      "evidence_count": 12,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-SCHED-01",
+      "score": 41.0,
+      "weight": 3.0
+    },
+    {
+      "evidence_count": 15,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-PUB-01",
+      "score": 16.0,
+      "weight": 2.0
+    },
+    {
+      "evidence_count": 9,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-SCHED-03",
+      "score": 40.0,
+      "weight": 1.5
+    },
+    {
+      "evidence_count": 1,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-SCHED-02",
+      "score": 71.0,
+      "weight": 2.0
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-PUB-02",
+      "score": 100.0,
+      "weight": 1.0
+    }
+  ]
+}

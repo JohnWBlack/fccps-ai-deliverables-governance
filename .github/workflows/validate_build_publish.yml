@@ -59,18 +59,17 @@ jobs:
       - name: Build glidepath history
         run: python scripts/build_glidepath_history.py
 
-      - name: Publish scrubbed project ingest JSON
-        if: ${{ runner.environment == 'self-hosted' && env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
-        run: |
-          if [ -d "$PROJECT_FILES_ROOT" ]; then
-            python scripts/pii_scan.py
-          else
-            echo "PROJECT_FILES_ROOT path not found on this runner; skipping project ingest publish."
-          fi
+      - name: Build glidepath diagnostics
+        run: python scripts/build_glidepath_diagnostics.py
 
-      - name: Skip project ingest publish (hosted runner, unset root, or missing script)
-        if: ${{ runner.environment != 'self-hosted' || env.PROJECT_FILES_ROOT == '' || hashFiles('scripts/pii_scan.py') == '' }}
-        run: echo "Skipping project ingest publish (requires self-hosted runner + PROJECT_FILES_ROOT + scripts/pii_scan.py)."
+      - name: Publish scrubbed project ingest JSON
+        if: ${{ contains(runner.labels, 'self-hosted') && runner.os == 'Windows' && env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        run: |
+          python -c "import os, subprocess, sys; root=os.environ.get('PROJECT_FILES_ROOT','').strip(); ok=bool(root) and os.path.isdir(root); print(f'PROJECT_FILES_ROOT={root}' if ok else 'SKIPPED: ingest requires self-hosted + PROJECT_FILES_ROOT (existing path)'); sys.exit(subprocess.call([sys.executable, 'scripts/pii_scan.py']) if ok else 0)"
+
+      - name: Skip project ingest publish
+        if: ${{ !(contains(runner.labels, 'self-hosted') && runner.os == 'Windows' && env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '') }}
+        run: echo "SKIPPED: ingest requires self-hosted + PROJECT_FILES_ROOT"
 
       - name: Extract reference index
         run: python scripts/extract_refs.py
@@ -97,7 +96,7 @@ jobs:
       - name: Detect generated changes
         id: public_changes
         run: |
-          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/project_ingest public/survey_exports; then
+          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/project_ingest public/survey_exports; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -108,10 +107,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/project_ingest public/survey_exports
+          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/project_ingest public/survey_exports
           git commit -m "chore(public): update derived artifacts [skip ci]"
           git push || {
             echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
-            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_kpis.py && python scripts/quality_checks.py && python scripts/build_catalog.py && python scripts/build_glidepath_history.py && python scripts/pii_scan.py && python scripts/extract_refs.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
+            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_kpis.py && python scripts/quality_checks.py && python scripts/build_catalog.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/pii_scan.py && python scripts/extract_refs.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
             exit 1;
           }

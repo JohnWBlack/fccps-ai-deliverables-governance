@@ -13,6 +13,10 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_DIR = REPO_ROOT / "public"
 SCHEMA_PATH = REPO_ROOT / "governance_docs" / "schema" / "glidepath_history.schema.json"
 GLIDEPATH_PATH = PUBLIC_DIR / "glidepath_history.json"
+GLIDEPATH_DIAGNOSTICS_PATH = PUBLIC_DIR / "glidepath_diagnostics.json"
+KPIS_PATH = PUBLIC_DIR / "kpis.json"
+KPI_EVIDENCE_PATH = PUBLIC_DIR / "kpi_evidence.json"
+SNAPSHOT_PATH = PUBLIC_DIR / "public_snapshot.json"
 PROJECT_INGEST_DIR = PUBLIC_DIR / "project_ingest"
 PROJECT_INGEST_ARTIFACTS_DIR = PROJECT_INGEST_DIR / "artifacts"
 PROJECT_INGEST_MARKDOWN_DIR = PROJECT_INGEST_DIR / "markdown"
@@ -32,6 +36,16 @@ REQUIRED_POINT_FIELDS = {
     "included_kpis",
 }
 REQUIRED_GATE_IDS = {f"m{i}" for i in range(1, 9)}
+REQUIRED_DIAGNOSTICS_FIELDS = {
+    "generated_at",
+    "version_key",
+    "now",
+    "next_gate",
+    "outside_corridor",
+    "what_blockers_top",
+    "how_drivers_top",
+    "deliverables_due_next_gate",
+}
 REQUIRED_INDEX_ENTRY_FIELDS = {
     "category",
     "source_path",
@@ -99,6 +113,15 @@ def parse_iso_datetime(value: str | None) -> datetime | None:
     if parsed.tzinfo is None:
         return parsed.replace(tzinfo=timezone.utc)
     return parsed
+
+
+def parse_date(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.strptime(str(value), "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
 
 
 def signed_delta(value: float, min_val: float, max_val: float) -> tuple[bool, float]:
@@ -250,6 +273,194 @@ def validate_glidepath_history(payload: dict[str, Any]) -> None:
             fail("glidepath_history.json current_eval.how_delta mismatch")
         if current_eval.get("status") != expected_status:
             fail("glidepath_history.json current_eval.status mismatch")
+
+
+def validate_ranked_kpis(items: Any, label: str) -> None:
+    if not isinstance(items, list):
+        fail(f"glidepath_diagnostics.json {label} must be a list")
+    previous_rank: float | None = None
+    for idx, item in enumerate(items):
+        if not isinstance(item, dict):
+            fail(f"glidepath_diagnostics.json {label}[{idx}] must be an object")
+        for field in ("kpi_id", "weight", "score", "evidence_count", "evidence_paths"):
+            if field not in item:
+                fail(f"glidepath_diagnostics.json {label}[{idx}] missing field: {field}")
+        if not isinstance(item.get("kpi_id"), str) or not str(item.get("kpi_id")).strip():
+            fail(f"glidepath_diagnostics.json {label}[{idx}].kpi_id must be a non-empty string")
+        if not isinstance(item.get("weight"), (int, float)) or float(item.get("weight")) < 0:
+            fail(f"glidepath_diagnostics.json {label}[{idx}].weight must be >= 0")
+        if not isinstance(item.get("score"), (int, float)):
+            fail(f"glidepath_diagnostics.json {label}[{idx}].score must be numeric")
+        if not isinstance(item.get("evidence_count"), int) or int(item.get("evidence_count")) < 0:
+            fail(f"glidepath_diagnostics.json {label}[{idx}].evidence_count must be >= 0")
+        evidence_paths = item.get("evidence_paths")
+        if not isinstance(evidence_paths, list) or any(not isinstance(path, str) for path in evidence_paths):
+            fail(f"glidepath_diagnostics.json {label}[{idx}].evidence_paths must be list[str]")
+
+        weight = float(item.get("weight"))
+        score = float(item.get("score"))
+        rank_value = (100.0 - score) * weight if label == "what_blockers_top" else score * weight
+        if previous_rank is not None and rank_value > previous_rank + 1e-9:
+            fail(f"glidepath_diagnostics.json {label} must be sorted by weighted rank descending")
+        previous_rank = rank_value
+
+
+def validate_glidepath_diagnostics(
+    diagnostics: dict[str, Any],
+    glidepath: dict[str, Any],
+    snapshot: dict[str, Any],
+    kpis_payload: dict[str, Any],
+    evidence_payload: dict[str, Any],
+) -> None:
+    if not isinstance(diagnostics, dict):
+        fail("glidepath_diagnostics.json must be an object")
+    if not REQUIRED_DIAGNOSTICS_FIELDS.issubset(set(diagnostics.keys())):
+        missing = sorted(REQUIRED_DIAGNOSTICS_FIELDS - set(diagnostics.keys()))
+        fail(f"glidepath_diagnostics.json missing fields: {missing}")
+    if parse_iso_datetime(diagnostics.get("generated_at")) is None:
+        fail("glidepath_diagnostics.json generated_at must be an ISO datetime")
+
+    snapshot_version = str(snapshot.get("meta", {}).get("version_key") or "")
+    if diagnostics.get("version_key") != snapshot_version:
+        fail("glidepath_diagnostics.json version_key must equal public_snapshot.json meta.version_key")
+
+    points = glidepath.get("points", [])
+    gates = glidepath.get("corridor", {}).get("gates", [])
+    if not isinstance(points, list) or not points:
+        fail("glidepath_diagnostics.json validation requires glidepath_history points")
+    if not isinstance(gates, list):
+        fail("glidepath_diagnostics.json validation requires glidepath_history corridor.gates")
+
+    latest_point = points[-1] if isinstance(points[-1], dict) else {}
+    next_gate_id = str(latest_point.get("next_gate_id") or "")
+    gate = next((item for item in gates if isinstance(item, dict) and str(item.get("gate_id")) == next_gate_id), None)
+    if not isinstance(gate, dict):
+        fail("glidepath_diagnostics.json next_gate.id must reference a gate in glidepath_history")
+
+    next_gate = diagnostics.get("next_gate")
+    if not isinstance(next_gate, dict):
+        fail("glidepath_diagnostics.json next_gate must be an object")
+    if next_gate.get("id") != next_gate_id:
+        fail("glidepath_diagnostics.json next_gate.id must match latest glidepath point next_gate_id")
+
+    corridor = next_gate.get("corridor")
+    if not isinstance(corridor, dict):
+        fail("glidepath_diagnostics.json next_gate.corridor must be an object")
+    for field in ("what_min", "what_max", "how_min", "how_max"):
+        if corridor.get(field) != gate.get(field):
+            fail(f"glidepath_diagnostics.json next_gate.corridor.{field} must match glidepath_history")
+
+    midpoint = next_gate.get("midpoint")
+    if not isinstance(midpoint, dict):
+        fail("glidepath_diagnostics.json next_gate.midpoint must be an object")
+
+    now = diagnostics.get("now")
+    if not isinstance(now, dict):
+        fail("glidepath_diagnostics.json now must be an object")
+    expected_what = round(float(latest_point.get("what_score", 0.0)), 2)
+    expected_how = round(float(latest_point.get("how_score", 0.0)), 2)
+    if now.get("what") != expected_what:
+        fail("glidepath_diagnostics.json now.what must match latest glidepath what_score")
+    if now.get("how") != expected_how:
+        fail("glidepath_diagnostics.json now.how must match latest glidepath how_score")
+    matches = now.get("corridor_matches")
+    if not isinstance(matches, list) or len(matches) != 2 or any(not isinstance(item, str) for item in matches):
+        fail("glidepath_diagnostics.json now.corridor_matches must be two strings")
+
+    outside = diagnostics.get("outside_corridor")
+    if not isinstance(outside, dict):
+        fail("glidepath_diagnostics.json outside_corridor must be an object")
+    for field in ("what_out", "how_out"):
+        if not isinstance(outside.get(field), (int, float)):
+            fail(f"glidepath_diagnostics.json outside_corridor.{field} must be numeric")
+    axes_out = outside.get("axes_out")
+    if not isinstance(axes_out, list) or any(axis not in {"what", "how"} for axis in axes_out):
+        fail("glidepath_diagnostics.json outside_corridor.axes_out must contain only 'what'/'how'")
+
+    expected_what_out = signed_delta(expected_what, float(gate.get("what_min", 0.0)), float(gate.get("what_max", 10.0)))[1]
+    expected_how_out = signed_delta(expected_how, float(gate.get("how_min", 0.0)), float(gate.get("how_max", 10.0)))[1]
+    if outside.get("what_out") != expected_what_out:
+        fail("glidepath_diagnostics.json outside_corridor.what_out mismatch")
+    if outside.get("how_out") != expected_how_out:
+        fail("glidepath_diagnostics.json outside_corridor.how_out mismatch")
+
+    expected_axes = [axis for axis, value in (("what", expected_what_out), ("how", expected_how_out)) if value != 0]
+    if axes_out != expected_axes:
+        fail("glidepath_diagnostics.json outside_corridor.axes_out mismatch")
+
+    validate_ranked_kpis(diagnostics.get("what_blockers_top"), "what_blockers_top")
+    validate_ranked_kpis(diagnostics.get("how_drivers_top"), "how_drivers_top")
+
+    known_kpi_ids = {
+        str(item.get("id"))
+        for item in (kpis_payload.get("kpis", []) if isinstance(kpis_payload.get("kpis"), list) else [])
+        if isinstance(item, dict) and item.get("id")
+    }
+    for list_name in ("what_blockers_top", "how_drivers_top"):
+        for idx, item in enumerate(diagnostics.get(list_name, [])):
+            kpi_id = str(item.get("kpi_id"))
+            if kpi_id not in known_kpi_ids:
+                fail(f"glidepath_diagnostics.json {list_name}[{idx}] kpi_id not found in kpis.json: {kpi_id}")
+
+    evidence_by_kpi = evidence_payload.get("evidence", {})
+    if isinstance(evidence_by_kpi, dict):
+        for list_name in ("what_blockers_top", "how_drivers_top"):
+            for idx, item in enumerate(diagnostics.get(list_name, [])):
+                kpi_id = str(item.get("kpi_id"))
+                evidence_entries = evidence_by_kpi.get(kpi_id, [])
+                expected_count = len(evidence_entries) if isinstance(evidence_entries, list) else 0
+                if item.get("evidence_count") != expected_count:
+                    fail(f"glidepath_diagnostics.json {list_name}[{idx}] evidence_count mismatch for {kpi_id}")
+
+    due = diagnostics.get("deliverables_due_next_gate")
+    if not isinstance(due, list):
+        fail("glidepath_diagnostics.json deliverables_due_next_gate must be a list")
+    expected_due_raw: list[tuple[str, str, str, str]] = []
+    gate_date = parse_date(latest_point.get("next_gate_date"))
+    deliverables = snapshot.get("deliverables", []) if isinstance(snapshot.get("deliverables"), list) else []
+    for entry in deliverables:
+        if not isinstance(entry, dict):
+            continue
+        due_date = parse_date(entry.get("due_date"))
+        if gate_date is None or due_date is None or due_date > gate_date:
+            continue
+        deliverable_id = str(entry.get("id") or "")
+        if not deliverable_id:
+            continue
+        expected_due_raw.append(
+            (
+                str(entry.get("due_date") or ""),
+                deliverable_id,
+                str(entry.get("status") or "unknown"),
+                str(entry.get("workstream_id") or "committee"),
+            )
+        )
+    expected_due_raw.sort(key=lambda item: (item[0], item[1]))
+    expected_due = [
+        {"id": item[1], "status": item[2], "workstream": item[3]}
+        for item in expected_due_raw
+    ]
+
+    for idx, item in enumerate(due):
+        if not isinstance(item, dict):
+            fail(f"glidepath_diagnostics.json deliverables_due_next_gate[{idx}] must be an object")
+        for field in ("id", "status", "workstream"):
+            if not isinstance(item.get(field), str) or not str(item.get(field)).strip():
+                fail(f"glidepath_diagnostics.json deliverables_due_next_gate[{idx}].{field} must be non-empty string")
+    if due != expected_due:
+        fail("glidepath_diagnostics.json deliverables_due_next_gate does not match expected due-before-next-gate ordering")
+
+    project_ingest = diagnostics.get("project_ingest")
+    if project_ingest is not None:
+        if not isinstance(project_ingest, dict):
+            fail("glidepath_diagnostics.json project_ingest must be an object when present")
+        if not isinstance(project_ingest.get("present"), bool):
+            fail("glidepath_diagnostics.json project_ingest.present must be boolean")
+        if not isinstance(project_ingest.get("entries_count"), int) or int(project_ingest.get("entries_count")) < 0:
+            fail("glidepath_diagnostics.json project_ingest.entries_count must be >= 0")
+        categories = project_ingest.get("categories")
+        if not isinstance(categories, list) or any(not isinstance(item, str) for item in categories):
+            fail("glidepath_diagnostics.json project_ingest.categories must be list[str]")
 
 
 def validate_project_ingest_index(payload: dict[str, Any]) -> None:
@@ -564,15 +775,25 @@ def main() -> None:
         fail(f"Schema file not found: {SCHEMA_PATH}")
     if not GLIDEPATH_PATH.exists():
         fail(f"Required artifact not found: {GLIDEPATH_PATH}")
+    if not GLIDEPATH_DIAGNOSTICS_PATH.exists():
+        fail(f"Required artifact not found: {GLIDEPATH_DIAGNOSTICS_PATH}")
+    if not KPIS_PATH.exists() or not KPI_EVIDENCE_PATH.exists() or not SNAPSHOT_PATH.exists():
+        fail("Required artifacts not found: public_snapshot.json, kpis.json, and kpi_evidence.json are required")
 
     _ = load_json(SCHEMA_PATH)
     glidepath = load_json(GLIDEPATH_PATH)
+    diagnostics = load_json(GLIDEPATH_DIAGNOSTICS_PATH)
+    snapshot = load_json(SNAPSHOT_PATH)
+    kpis_payload = load_json(KPIS_PATH)
+    evidence_payload = load_json(KPI_EVIDENCE_PATH)
     validate_glidepath_history(glidepath)
+    validate_glidepath_diagnostics(diagnostics, glidepath, snapshot, kpis_payload, evidence_payload)
     validate_project_ingest()
 
     print("✅ Public artifact validation passed")
     print(f"📄 Validated schema: {SCHEMA_PATH}")
     print(f"📉 Validated artifact: {GLIDEPATH_PATH}")
+    print(f"🧩 Validated diagnostics: {GLIDEPATH_DIAGNOSTICS_PATH}")
     print(f"📥 Validated ingest artifacts under: {PROJECT_INGEST_DIR}")
 
 
