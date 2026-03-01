@@ -1,0 +1,186 @@
+name: Miro Autopilot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 5 * * 2,5"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: miro-autopilot-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ingest_and_autopilot:
+    if: >-
+      github.repository_owner == 'JohnWBlack'
+      && (
+        github.event_name == 'workflow_dispatch'
+        || (github.event_name == 'schedule' && vars.ENABLE_MIRO_AUTOPILOT == 'true')
+      )
+    runs-on: ${{ vars.MIRO_AUTOPILOT_RUNNER == 'self-hosted' && fromJSON('["self-hosted", "Windows"]') || 'windows-latest' }}
+    env:
+      PROJECT_FILES_ROOT: ${{ vars.PROJECT_FILES_ROOT }}
+      ALLOW_PII: ${{ vars.ALLOW_PII }}
+
+    steps:
+      - name: Log trigger context
+        shell: pwsh
+        run: |
+          Write-Host "Event: $env:GITHUB_EVENT_NAME"
+          Write-Host "Repository owner: $env:GITHUB_REPOSITORY_OWNER"
+          Write-Host "Runner environment: $env:RUNNER_ENVIRONMENT"
+
+      - name: Checkout main (full history)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        shell: pwsh
+        run: |
+          py -m pip install --upgrade pip
+          py -m pip install -r requirements.txt
+
+      - name: Decide run mode and guardrails
+        id: guard
+        shell: pwsh
+        run: |
+          $shouldRun = "true"
+          $reason = ""
+
+          if ($shouldRun -eq "true" -and $env:RUNNER_ENVIRONMENT -ne "self-hosted") {
+            $shouldRun = "false"
+            $reason = "Runner is github-hosted; autopilot requires self-hosted Windows access to PROJECT_FILES_ROOT."
+          }
+
+          if ($shouldRun -eq "true" -and [string]::IsNullOrWhiteSpace($env:PROJECT_FILES_ROOT)) {
+            $shouldRun = "false"
+            $reason = "PROJECT_FILES_ROOT repo variable is missing."
+          }
+
+          if ($shouldRun -eq "true" -and -not (Test-Path -Path $env:PROJECT_FILES_ROOT -PathType Container)) {
+            $shouldRun = "false"
+            $reason = "PROJECT_FILES_ROOT does not exist or is not a directory on this runner: $env:PROJECT_FILES_ROOT"
+          }
+
+          if ($shouldRun -eq "true") {
+            Write-Host "✅ Autopilot will run. PROJECT_FILES_ROOT='$env:PROJECT_FILES_ROOT'"
+          } else {
+            Write-Host "⏭️ Skipping autopilot. $reason"
+          }
+
+          "should_run=$shouldRun" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          "reason=$reason" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+
+      - name: Convert Miro CSV to deterministic JSON
+        if: steps.guard.outputs.should_run == 'true'
+        shell: pwsh
+        run: py scripts/convert_miro_csvs.py
+
+      - name: Validate converted Miro artifacts
+        if: steps.guard.outputs.should_run == 'true'
+        shell: pwsh
+        run: py scripts/validate_miro_csv_to_json.py
+
+      - name: Publish project ingest artifacts with PII guardrails
+        if: steps.guard.outputs.should_run == 'true'
+        shell: pwsh
+        run: |
+          if ($env:ALLOW_PII -eq "true") {
+            Write-Host "ALLOW_PII=true: running pii_scan with --allow-pii"
+            py scripts/pii_scan.py --allow-pii
+          }
+          else {
+            Write-Host "ALLOW_PII!=true: running pii_scan without --allow-pii (PII findings will skip publishing affected artifacts)"
+            py scripts/pii_scan.py
+          }
+
+      - name: Validate public outputs after ingest
+        if: steps.guard.outputs.should_run == 'true'
+        shell: pwsh
+        run: py scripts/validate_public.py
+
+      - name: Rebuild standard pipeline outputs
+        if: steps.guard.outputs.should_run == 'true'
+        shell: pwsh
+        run: |
+          py scripts/validate_sor.py
+          py scripts/build_snapshot.py
+          py scripts/build_kpis.py
+          py scripts/quality_checks.py
+          py scripts/build_catalog.py
+          py scripts/build_glidepath_history.py
+          py scripts/validate_public.py
+
+      - name: Write autopilot summary report
+        if: steps.guard.outputs.should_run == 'true'
+        shell: pwsh
+        run: py scripts/write_autopilot_report.py
+
+      - name: Detect staged target path changes
+        if: steps.guard.outputs.should_run == 'true'
+        id: changes
+        shell: pwsh
+        run: |
+          if (git diff --quiet -- `
+            "public/project_ingest" `
+            "public/autopilot_report.json" `
+            "public/public_snapshot.json" `
+            "public/kpis.json" `
+            "public/kpi_evidence.json" `
+            "public/quality_report.json" `
+            "public/file_catalog.json" `
+            "public/glidepath_history.json") {
+            Write-Host "No tracked changes detected in autopilot output paths."
+            "changed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+          else {
+            Write-Host "Detected changes in autopilot output paths."
+            "changed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+
+      - name: Commit and push output updates
+        if: steps.guard.outputs.should_run == 'true' && steps.changes.outputs.changed == 'true'
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- `
+            "public/project_ingest" `
+            "public/autopilot_report.json" `
+            "public/public_snapshot.json" `
+            "public/kpis.json" `
+            "public/kpi_evidence.json" `
+            "public/quality_report.json" `
+            "public/file_catalog.json" `
+            "public/glidepath_history.json"
+
+          if (git diff --cached --quiet) {
+            Write-Host "No staged changes after filtering target paths; nothing to commit."
+            exit 0
+          }
+
+          git commit -m "chore(autopilot): publish ingest + derived artifacts [skip ci]"
+          git push origin HEAD:main
+
+      - name: Log no-op completion
+        if: steps.guard.outputs.should_run != 'true' || steps.changes.outputs.changed != 'true'
+        shell: pwsh
+        run: |
+          if ("${{ steps.guard.outputs.should_run }}" -ne "true") {
+            Write-Host "Workflow completed in skip mode: ${{ steps.guard.outputs.reason }}"
+          }
+          elseif ("${{ steps.changes.outputs.changed }}" -ne "true") {
+            Write-Host "Workflow ran fully; no commit/push needed because no output changes were detected."
+          }
