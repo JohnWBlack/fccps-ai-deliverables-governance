@@ -42,8 +42,11 @@ REQUIRED_DIAGNOSTICS_FIELDS = {
     "now",
     "next_gate",
     "outside_corridor",
+    "balance_target_gate",
+    "balance_required_delta",
     "what_blockers_top",
     "how_drivers_top",
+    "recommended_focus",
     "deliverables_due_next_gate",
 }
 REQUIRED_INDEX_ENTRY_FIELDS = {
@@ -130,6 +133,59 @@ def signed_delta(value: float, min_val: float, max_val: float) -> tuple[bool, fl
     if value > max_val:
         return False, round(value - max_val, 2)
     return True, 0.0
+
+
+def score_to_gate_id(score: float, gates: list[dict[str, Any]], axis_prefix: str) -> str | None:
+    min_key = f"{axis_prefix}_min"
+    max_key = f"{axis_prefix}_max"
+
+    in_range: list[tuple[float, str]] = []
+    closest: list[tuple[float, str]] = []
+    for gate in gates:
+        gate_id = str(gate.get("gate_id") or "")
+        if not gate_id:
+            continue
+        min_val = float(gate.get(min_key, 0.0))
+        max_val = float(gate.get(max_key, 10.0))
+        midpoint = (min_val + max_val) / 2.0
+        distance = abs(score - midpoint)
+        closest.append((distance, gate_id))
+        if min_val <= score <= max_val:
+            in_range.append((distance, gate_id))
+
+    ranked = in_range or closest
+    if not ranked:
+        return None
+    ranked.sort(key=lambda item: (item[0], item[1]))
+    return ranked[0][1]
+
+
+def gate_rank(gate_id: str | None, gates: list[dict[str, Any]]) -> int:
+    target = str(gate_id or "").strip().lower()
+    if not target:
+        return -1
+    for idx, gate in enumerate(gates):
+        if isinstance(gate, dict) and str(gate.get("gate_id") or "").strip().lower() == target:
+            return idx
+    if target.startswith("m") and target[1:].isdigit():
+        return int(target[1:])
+    return -1
+
+
+def normalize_focus_from_ranked(ranked: list[dict[str, Any]], limit: int = 3) -> list[dict[str, Any]]:
+    expected: list[dict[str, Any]] = []
+    for item in ranked[:limit]:
+        kpi_id = str(item.get("kpi_id") or "")
+        if not kpi_id:
+            continue
+        evidence_paths = item.get("evidence_paths")
+        normalized_paths = (
+            sorted({str(path) for path in evidence_paths if isinstance(path, str) and str(path).strip()})
+            if isinstance(evidence_paths, list)
+            else []
+        )
+        expected.append({"kpi_id": kpi_id, "evidence_paths": normalized_paths})
+    return expected
 
 
 def validate_glidepath_history(payload: dict[str, Any]) -> None:
@@ -296,6 +352,10 @@ def validate_ranked_kpis(items: Any, label: str) -> None:
         evidence_paths = item.get("evidence_paths")
         if not isinstance(evidence_paths, list) or any(not isinstance(path, str) for path in evidence_paths):
             fail(f"glidepath_diagnostics.json {label}[{idx}].evidence_paths must be list[str]")
+        if evidence_paths != sorted(evidence_paths):
+            fail(f"glidepath_diagnostics.json {label}[{idx}].evidence_paths must be sorted")
+        if len(evidence_paths) != len(set(evidence_paths)):
+            fail(f"glidepath_diagnostics.json {label}[{idx}].evidence_paths must not contain duplicates")
 
         weight = float(item.get("weight"))
         score = float(item.get("score"))
@@ -366,6 +426,18 @@ def validate_glidepath_diagnostics(
     matches = now.get("corridor_matches")
     if not isinstance(matches, list) or len(matches) != 2 or any(not isinstance(item, str) for item in matches):
         fail("glidepath_diagnostics.json now.corridor_matches must be two strings")
+    expected_what_match_id = score_to_gate_id(expected_what, gates, "what")
+    expected_how_match_id = score_to_gate_id(expected_how, gates, "how")
+    if now.get("what_corridor_id") != expected_what_match_id:
+        fail("glidepath_diagnostics.json now.what_corridor_id must match computed corridor gate")
+    if now.get("how_corridor_id") != expected_how_match_id:
+        fail("glidepath_diagnostics.json now.how_corridor_id must match computed corridor gate")
+    expected_matches = [
+        f"WHAT~{str(expected_what_match_id).upper()}" if expected_what_match_id else "WHAT~UNKNOWN",
+        f"HOW~{str(expected_how_match_id).upper()}" if expected_how_match_id else "HOW~UNKNOWN",
+    ]
+    if matches != expected_matches:
+        fail("glidepath_diagnostics.json now.corridor_matches mismatch")
 
     outside = diagnostics.get("outside_corridor")
     if not isinstance(outside, dict):
@@ -388,8 +460,102 @@ def validate_glidepath_diagnostics(
     if axes_out != expected_axes:
         fail("glidepath_diagnostics.json outside_corridor.axes_out mismatch")
 
+    what_rank = gate_rank(expected_what_match_id, gates)
+    how_rank = gate_rank(expected_how_match_id, gates)
+    if how_rank > what_rank:
+        expected_leading_axis = "how"
+    elif what_rank > how_rank:
+        expected_leading_axis = "what"
+    elif expected_how > expected_what:
+        expected_leading_axis = "how"
+    elif expected_what > expected_how:
+        expected_leading_axis = "what"
+    else:
+        expected_leading_axis = "what"
+    expected_lagging_axis = "what" if expected_leading_axis == "how" else "how"
+
+    gate_by_id = {
+        str(item.get("gate_id")): item
+        for item in gates
+        if isinstance(item, dict) and item.get("gate_id")
+    }
+    expected_leading_gate_id = expected_how_match_id if expected_leading_axis == "how" else expected_what_match_id
+    expected_leading_gate = gate_by_id.get(str(expected_leading_gate_id or ""), gate)
+
+    balance_target_gate = diagnostics.get("balance_target_gate")
+    if not isinstance(balance_target_gate, dict):
+        fail("glidepath_diagnostics.json balance_target_gate must be an object")
+    if balance_target_gate.get("id") != str(expected_leading_gate.get("gate_id") or expected_leading_gate_id or ""):
+        fail("glidepath_diagnostics.json balance_target_gate.id mismatch")
+    if balance_target_gate.get("leading_axis") != expected_leading_axis:
+        fail("glidepath_diagnostics.json balance_target_gate.leading_axis mismatch")
+    if balance_target_gate.get("lagging_axis") != expected_lagging_axis:
+        fail("glidepath_diagnostics.json balance_target_gate.lagging_axis mismatch")
+
+    balance_corridor = balance_target_gate.get("corridor")
+    if not isinstance(balance_corridor, dict):
+        fail("glidepath_diagnostics.json balance_target_gate.corridor must be an object")
+    for field in ("what_min", "what_max", "how_min", "how_max"):
+        if balance_corridor.get(field) != expected_leading_gate.get(field):
+            fail(f"glidepath_diagnostics.json balance_target_gate.corridor.{field} mismatch")
+
+    balance_midpoint = balance_target_gate.get("midpoint")
+    if not isinstance(balance_midpoint, dict):
+        fail("glidepath_diagnostics.json balance_target_gate.midpoint must be an object")
+    expected_balance_what_mid = round((float(expected_leading_gate.get("what_min", 0.0)) + float(expected_leading_gate.get("what_max", 10.0))) / 2.0, 2)
+    expected_balance_how_mid = round((float(expected_leading_gate.get("how_min", 0.0)) + float(expected_leading_gate.get("how_max", 10.0))) / 2.0, 2)
+    if balance_midpoint.get("what") != expected_balance_what_mid:
+        fail("glidepath_diagnostics.json balance_target_gate.midpoint.what mismatch")
+    if balance_midpoint.get("how") != expected_balance_how_mid:
+        fail("glidepath_diagnostics.json balance_target_gate.midpoint.how mismatch")
+
+    balance_required_delta = diagnostics.get("balance_required_delta")
+    if not isinstance(balance_required_delta, dict):
+        fail("glidepath_diagnostics.json balance_required_delta must be an object")
+    if balance_required_delta.get("axis") != expected_lagging_axis:
+        fail("glidepath_diagnostics.json balance_required_delta.axis mismatch")
+    expected_lagging_current = expected_what if expected_lagging_axis == "what" else expected_how
+    expected_target_midpoint = expected_balance_what_mid if expected_lagging_axis == "what" else expected_balance_how_mid
+    expected_delta = round(expected_target_midpoint - expected_lagging_current, 2)
+    if balance_required_delta.get("current") != expected_lagging_current:
+        fail("glidepath_diagnostics.json balance_required_delta.current mismatch")
+    if balance_required_delta.get("target_midpoint") != expected_target_midpoint:
+        fail("glidepath_diagnostics.json balance_required_delta.target_midpoint mismatch")
+    if balance_required_delta.get("delta") != expected_delta:
+        fail("glidepath_diagnostics.json balance_required_delta.delta mismatch")
+
     validate_ranked_kpis(diagnostics.get("what_blockers_top"), "what_blockers_top")
     validate_ranked_kpis(diagnostics.get("how_drivers_top"), "how_drivers_top")
+
+    recommended_focus = diagnostics.get("recommended_focus")
+    if not isinstance(recommended_focus, dict):
+        fail("glidepath_diagnostics.json recommended_focus must be an object")
+    for axis in ("what", "how"):
+        axis_focus = recommended_focus.get(axis)
+        if not isinstance(axis_focus, list):
+            fail(f"glidepath_diagnostics.json recommended_focus.{axis} must be a list")
+        if len(axis_focus) > 3:
+            fail(f"glidepath_diagnostics.json recommended_focus.{axis} must contain at most 3 entries")
+        for idx, item in enumerate(axis_focus):
+            if not isinstance(item, dict):
+                fail(f"glidepath_diagnostics.json recommended_focus.{axis}[{idx}] must be an object")
+            kpi_id = item.get("kpi_id")
+            if not isinstance(kpi_id, str) or not kpi_id.strip():
+                fail(f"glidepath_diagnostics.json recommended_focus.{axis}[{idx}].kpi_id must be non-empty string")
+            evidence_paths = item.get("evidence_paths")
+            if not isinstance(evidence_paths, list) or any(not isinstance(path, str) for path in evidence_paths):
+                fail(f"glidepath_diagnostics.json recommended_focus.{axis}[{idx}].evidence_paths must be list[str]")
+            if evidence_paths != sorted(evidence_paths):
+                fail(f"glidepath_diagnostics.json recommended_focus.{axis}[{idx}].evidence_paths must be sorted")
+            if len(evidence_paths) != len(set(evidence_paths)):
+                fail(f"glidepath_diagnostics.json recommended_focus.{axis}[{idx}].evidence_paths must not contain duplicates")
+
+    expected_focus_what = normalize_focus_from_ranked(diagnostics.get("what_blockers_top", []))
+    expected_focus_how = normalize_focus_from_ranked(diagnostics.get("how_drivers_top", []))
+    if recommended_focus.get("what") != expected_focus_what:
+        fail("glidepath_diagnostics.json recommended_focus.what must match top-3 what_blockers_top")
+    if recommended_focus.get("how") != expected_focus_how:
+        fail("glidepath_diagnostics.json recommended_focus.how must match top-3 how_drivers_top")
 
     known_kpi_ids = {
         str(item.get("id"))

@@ -67,6 +67,18 @@ def score_to_gate_id(score: float, gates: list[dict[str, Any]], axis_prefix: str
     return ranked[0][1]
 
 
+def gate_rank(gate_id: str | None, gates: list[dict[str, Any]]) -> int:
+    target = str(gate_id or "").strip().lower()
+    if not target:
+        return -1
+    for idx, gate in enumerate(gates):
+        if isinstance(gate, dict) and str(gate.get("gate_id") or "").strip().lower() == target:
+            return idx
+    if target.startswith("m") and target[1:].isdigit():
+        return int(target[1:])
+    return -1
+
+
 def signed_out(value: float, low: float, high: float) -> float:
     if value < low:
         return round(value - low, 2)
@@ -126,6 +138,24 @@ def rank_kpis(
     for item in ranked:
         item.pop("_rank_metric", None)
     return ranked
+
+
+def top_focus(ranked_items: list[dict[str, Any]], limit: int = 3) -> list[dict[str, Any]]:
+    focus: list[dict[str, Any]] = []
+    for item in ranked_items[:limit]:
+        if not isinstance(item, dict):
+            continue
+        kpi_id = str(item.get("kpi_id") or "")
+        if not kpi_id:
+            continue
+        evidence_paths = item.get("evidence_paths")
+        normalized_paths = (
+            sorted({str(path) for path in evidence_paths if isinstance(path, str) and str(path).strip()})
+            if isinstance(evidence_paths, list)
+            else []
+        )
+        focus.append({"kpi_id": kpi_id, "evidence_paths": normalized_paths})
+    return focus
 
 
 def due_by_gate(snapshot: dict[str, Any], next_gate_date: str | None) -> list[dict[str, Any]]:
@@ -217,6 +247,21 @@ def build_diagnostics() -> dict[str, Any]:
     what_match_id = score_to_gate_id(what_score, gates, "what")
     how_match_id = score_to_gate_id(how_score, gates, "how")
 
+    what_rank = gate_rank(what_match_id, gates)
+    how_rank = gate_rank(how_match_id, gates)
+    if how_rank > what_rank:
+        leading_axis = "how"
+    elif what_rank > how_rank:
+        leading_axis = "what"
+    elif how_score > what_score:
+        leading_axis = "how"
+    elif what_score > how_score:
+        leading_axis = "what"
+    else:
+        leading_axis = "what"
+
+    lagging_axis = "what" if leading_axis == "how" else "how"
+
     kpi_list = kpis_payload.get("kpis", [])
     kpis_by_id = {
         str(item.get("id")): item
@@ -226,6 +271,22 @@ def build_diagnostics() -> dict[str, Any]:
 
     what_weights = weights.get("what", {}) if isinstance(weights.get("what"), dict) else {}
     how_weights = weights.get("how", {}) if isinstance(weights.get("how"), dict) else {}
+
+    what_blockers_top = rank_kpis(kpis_by_id, evidence_payload, what_weights, mode="blockers")
+    how_drivers_top = rank_kpis(kpis_by_id, evidence_payload, how_weights, mode="drivers")
+
+    leading_gate_id = how_match_id if leading_axis == "how" else what_match_id
+    leading_gate = gate_by_id.get(str(leading_gate_id or ""), next_gate)
+    leading_what_min = float(leading_gate.get("what_min", 0.0))
+    leading_what_max = float(leading_gate.get("what_max", 10.0))
+    leading_how_min = float(leading_gate.get("how_min", 0.0))
+    leading_how_max = float(leading_gate.get("how_max", 10.0))
+    leading_what_mid = round((leading_what_min + leading_what_max) / 2.0, 2)
+    leading_how_mid = round((leading_how_min + leading_how_max) / 2.0, 2)
+
+    lagging_score = what_score if lagging_axis == "what" else how_score
+    lagging_target_midpoint = leading_what_mid if lagging_axis == "what" else leading_how_mid
+    lagging_delta = round(lagging_target_midpoint - lagging_score, 2)
 
     diagnostics = {
         "generated_at": utc_now_iso(),
@@ -258,8 +319,33 @@ def build_diagnostics() -> dict[str, Any]:
             "how_out": how_out,
             "axes_out": axes_out,
         },
-        "what_blockers_top": rank_kpis(kpis_by_id, evidence_payload, what_weights, mode="blockers"),
-        "how_drivers_top": rank_kpis(kpis_by_id, evidence_payload, how_weights, mode="drivers"),
+        "balance_target_gate": {
+            "id": str(leading_gate.get("gate_id") or leading_gate_id or ""),
+            "leading_axis": leading_axis,
+            "lagging_axis": lagging_axis,
+            "corridor": {
+                "what_min": leading_what_min,
+                "what_max": leading_what_max,
+                "how_min": leading_how_min,
+                "how_max": leading_how_max,
+            },
+            "midpoint": {
+                "what": leading_what_mid,
+                "how": leading_how_mid,
+            },
+        },
+        "balance_required_delta": {
+            "axis": lagging_axis,
+            "current": round(lagging_score, 2),
+            "target_midpoint": lagging_target_midpoint,
+            "delta": lagging_delta,
+        },
+        "what_blockers_top": what_blockers_top,
+        "how_drivers_top": how_drivers_top,
+        "recommended_focus": {
+            "what": top_focus(what_blockers_top),
+            "how": top_focus(how_drivers_top),
+        },
         "deliverables_due_next_gate": due_by_gate(snapshot, latest_point.get("next_gate_date")),
         "project_ingest": ingest_summary(ingest_index),
     }
