@@ -1,0 +1,2113 @@
+{
+  "artifact_id": "376abff1fd1791a36628b16a",
+  "doc_type": "docx",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-14T20:16:16Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [],
+      "section_id": "sec_0001",
+      "text": "WS-DPS: DATA PRIVACY / SECURITY / GOVERNANCE"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0002",
+      "text": "Draft Deliverables for Meeting 4 Convergence Gate"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0003",
+      "text": "Prepared by Jillian Burkley for John Black"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0004",
+      "text": "FCCPS AI in Schools Ad Hoc Advisory Committee"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0005",
+      "text": "February 2026 — DRAFT v0.1 for Co-Lead Review"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document"
+      ],
+      "section_id": "sec_0006",
+      "text": "This package includes draft versions of all three WS-DPS deliverables required for the March 6 convergence gate, along with the readiness checklist. It draws on frameworks from my doctoral capstone (AIEIP), adapted for the FCCPS context. Everything here is a starting point for our colead discussion — I want your input on structure, scope, and FCCPS-specific adjustments before we finalize."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document"
+      ],
+      "section_id": "sec_0007",
+      "text": "Deliverable 1: AI Tool / Data Risk Categories"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document"
+      ],
+      "section_id": "sec_0008",
+      "text": "Requirement: \"Tool/data risk categories (plain language) + minimum requirements by category\""
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0009",
+      "text": "Every AI tool used in FCCPS classrooms or operations would be classified into one of three tiers based on how it handles student data. Each tier triggers a different level of review and approval."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0010",
+      "text": "TIER 1 — LOW RISK: No Student Data"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0011",
+      "text": "What this means: The tool does not collect, store, or process any student-identifiable information. Students may or may not interact with it directly, but no personal data flows to the vendor."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0012",
+      "text": "Examples: AI-powered lesson plan generators used only by teachers; AI image generators for creating classroom materials; grammar/style checkers used on teacher-authored content."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0013",
+      "text": "Minimum Requirements:"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0014",
+      "text": "Teacher verifies no student data is entered into the tool"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0015",
+      "text": "Tool is documented in department/school AI tool inventory"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0016",
+      "text": "Basic review by department lead or instructional coach"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0017",
+      "text": "Approval: Department/building-level approval. No DPA required."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0018",
+      "text": "TIER 2 — MODERATE RISK: Anonymized or Aggregated Data"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0019",
+      "text": "What this means: The tool processes student work or interaction data, but in anonymized or aggregated form. No individual student can be identified from the data the vendor receives."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0020",
+      "text": "Examples: Classroom response/polling tools with anonymous mode; AI-assisted formative assessment tools using de-identified data; writing feedback tools where student names are stripped."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0021",
+      "text": "Minimum Requirements:"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0022",
+      "text": "Vendor confirms anonymization/aggregation methodology in writing"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0023",
+      "text": "Data Processing Agreement (DPA) reviewed and signed"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0024",
+      "text": "Data retention policy documented (vendor must specify how long data is held)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0025",
+      "text": "Annual review of vendor compliance"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0026",
+      "text": "FERPA compliance verification"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0027",
+      "text": "Approval: District-level review (IT + curriculum). DPA required."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0028",
+      "text": "TIER 3 — HIGH RISK: Identifiable Student Data"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0029",
+      "text": "What this means: The tool collects, stores, or processes personally identifiable student information (PII). This includes any tool where a student logs in with a school account, where the vendor can link data to a specific student, or where sensitive records are involved."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0030",
+      "text": "Examples: Adaptive learning platforms (e.g., IXL, Khan Academy); AI tutoring systems with student accounts; any tool integrated with the SIS or LMS; AI tools used in IEP/504 planning or progress monitoring."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0031",
+      "text": "Minimum Requirements:"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0032",
+      "text": "Signed DPA with explicit data handling, retention, and deletion terms"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0033",
+      "text": "FERPA, COPPA (if applicable), and Virginia student data privacy law compliance verified"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0034",
+      "text": "For tools touching IEP/504 data: IDEA compliance review + explicit parental/guardian consent"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0035",
+      "text": "Vendor security assessment (encryption, access controls, breach notification procedures)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0036",
+      "text": "Algorithmic bias assessment for any tool making recommendations about students"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0037",
+      "text": "Human-in-the-loop requirement for any consequential decisions (placement, grading, intervention)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0038",
+      "text": "Data deletion confirmation process when tool is discontinued"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0039",
+      "text": "Semi-annual compliance audit"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0040",
+      "text": "Approval: District-level review (IT + curriculum + administration + legal). Full DPA + security review required. Pilot period recommended before broad deployment."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0041",
+      "text": "Special Consideration: Students with Disabilities"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0042",
+      "text": "AI tools used with students receiving SPED services require heightened scrutiny regardless of tier. The following data categories are especially sensitive and trigger additional requirements:"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0043",
+      "text": "IEP/504 plan data: Disability classifications, accommodations, modifications, and progress monitoring data. IDEA requires these records receive protections beyond standard FERPA requirements."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0044",
+      "text": "Adaptive technology usage patterns: Data from assistive tech tools may reveal disability-related information even when not explicitly labeled as such."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0045",
+      "text": "Behavioral data from AI tools: AI-driven behavior monitoring systems may flag behavioral differences in culturally diverse students or students with emotional/behavioral disabilities as problematic (Maslej et al., 2023), creating risk of bias-driven consequences."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0046",
+      "text": "Accommodation records: AI systems that process accommodation data could inadvertently create profiles that follow students beyond intended educational contexts."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Risk Tier Framework"
+      ],
+      "section_id": "sec_0047",
+      "text": "Additional requirement: Any Tier 2 or Tier 3 tool used with SPED populations must include an accessibility review (assistive tech compatibility, UDL alignment) and an algorithmic bias assessment focused on disability-related outcomes."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist"
+      ],
+      "section_id": "sec_0048",
+      "text": "Requirement: \"A short procurement/governance decision checklist (what must be true before adoption)\""
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist"
+      ],
+      "section_id": "sec_0049",
+      "text": "This checklist is designed for any FCCPS staff member, administrator, or department considering adopting a new AI tool. It answers one question: Can we use this tool? Every item must be confirmed before the tool can move forward at its designated tier."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0050",
+      "text": "Question"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0051",
+      "text": "If YES →"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0052",
+      "text": "Does the tool collect, store, or process any studentidentifiable information (names, IDs, login data, work samples linked to students)?"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0053",
+      "text": "Tier 3 — proceed to full review"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0054",
+      "text": "Does the tool process student work or interaction data in anonymized or aggregated form?"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0055",
+      "text": "Tier 2 — proceed to standard review"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0056",
+      "text": "Does the tool have no contact with student data at all?"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0057",
+      "text": "Tier 1 — proceed to basic review"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0058",
+      "text": "Will the tool be used with students receiving SPED services (IEP/504)?"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 1: Classify the Tool"
+      ],
+      "section_id": "sec_0059",
+      "text": "Add SPED review layer (any tier)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0060",
+      "text": "All items must be confirmed for the relevant tier. Items marked with ★ are non-negotiable across all tiers."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0061",
+      "text": "What Must Be True Before Adoption"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0062",
+      "text": "Tier 1"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0063",
+      "text": "Tier 2"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0064",
+      "text": "Tier 3"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0065",
+      "text": "★ Tool is documented in FCCPS AI tool inventory"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0066",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0067",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0068",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0069",
+      "text": "★ Staff member can articulate educational purpose and how the tool supports student learning"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0070",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0071",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0072",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0073",
+      "text": "★ No student data is entered into the tool without appropriate authorization"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0074",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0075",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0076",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0077",
+      "text": "Vendor confirms anonymization methodology in writing"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0078",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0079",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0080",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0081",
+      "text": "Data Processing Agreement (DPA) reviewed and signed"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0082",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0083",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0084",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0085",
+      "text": "Data retention and deletion policy documented"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0086",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0087",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0088",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0089",
+      "text": "FERPA compliance verified"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0090",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0091",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0092",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0093",
+      "text": "Vendor security assessment completed (encryption, access controls, breach notification)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0094",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0095",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0096",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0097",
+      "text": "Algorithmic bias assessment completed for any tool making recommendations about students"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0098",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0099",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0100",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0101",
+      "text": "Human-in-the-loop confirmed for consequential decisions (placement, grading, intervention)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0102",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0103",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0104",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0105",
+      "text": "COPPA compliance verified (if tool is used by students under 13)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0106",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0107",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0108",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0109",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0110",
+      "text": "--"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0111",
+      "text": "✔"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0112",
+      "text": "Pilot period completed with documented outcomes before broad deployment"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0113",
+      "text": "SPED ADD-ON: IDEA compliance review + parental consent for IEP/504 data"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0114",
+      "text": "If SPED"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0115",
+      "text": "If SPED"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0116",
+      "text": "If SPED"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0117",
+      "text": "SPED ADD-ON: Accessibility review (assistive tech compatibility + UDL alignment)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0118",
+      "text": "If SPED"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0119",
+      "text": "If SPED"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 2: Procurement / Governance Decision Checklist",
+        "Step 2: Verify Before Adoption"
+      ],
+      "section_id": "sec_0120",
+      "text": "If SPED"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0121",
+      "text": "Requirement: \"Top risks + mitigations + suggested owners\""
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0122",
+      "text": "RISK 1"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0123",
+      "text": "Severity: HIGH"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0124",
+      "text": "Unvetted AI Tools Processing Student Data Without Governance Without a structured approval process, teachers and staff may adopt AI tools that collect student PII without signed DPAs, creating FERPA violations and data exposure risk. Research shows no standardized regulations currently address AI-specific risks in K-12 education (DOE, 2023; Roschelle et al., 2024)."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0125",
+      "text": "Mitigation"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0126",
+      "text": "Implement the tiered approval process (Deliverable 1). Maintain a district-wide AI tool inventory. Require DPA review for all Tier 2/3 tools. Communicate clear policy that unauthorized tool adoption is prohibited."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0127",
+      "text": "Owner"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0128",
+      "text": "IT Department (tool inventory + DPA management) + Building"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0129",
+      "text": "Administrators (enforcement)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0130",
+      "text": "RISK 2"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0131",
+      "text": "Severity: HIGH"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0132",
+      "text": "IEP/504 Data Exposure Through AI Tools"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0133",
+      "text": "SPED students’ sensitive diagnostic information, behavioral data, and learning accommodations are increasingly processed through AI systems that may lack adequate safeguards (Roschelle et al., 2024). IDEA requires protections beyond standard FERPA, and AI tools were not designed with these requirements in mind (Haque & Li, 2024)."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0134",
+      "text": "Mitigation"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0135",
+      "text": "SPED add-on review layer for any tool used with IEP/504 students. Explicit parental/guardian consent for AI processing of disabilityrelated data. Prohibit sharing IEP/504 data with AI vendors without IDEA compliance review. Regular audits of AI tools used in SPED contexts."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0136",
+      "text": "Owner"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0137",
+      "text": "SPED Director + IT Department (joint oversight) + Legal Counsel"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0138",
+      "text": "(IDEA compliance review)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0139",
+      "text": "RISK 3"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0140",
+      "text": "Severity:"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0141",
+      "text": "MEDIUM"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0142",
+      "text": "Algorithmic Bias in Student Assessment and Intervention AI systems misclassify students with disabilities from marginalized backgrounds at rates up to 32% higher than peers (Nguyen et al., 2023). AI-driven behavior monitoring may flag cultural behavioral differences as problematic (Maslej et al., 2023). This can reinforce historical overrepresentation of students of color in certain disability categories."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0143",
+      "text": "Mitigation"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0144",
+      "text": "Require algorithmic bias assessment for all Tier 3 tools. Establish routine bias audits with specific focus on outcomes for students with intersecting marginalized identities. Human-in-the-loop requirement for all consequential decisions. Review disaggregated outcome data annually."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0145",
+      "text": "Owner"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0146",
+      "text": "Curriculum & Instruction (bias audits) + SPED Director (disabilityspecific review) + Equity Office (intersectionality lens)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0147",
+      "text": "RISK 4"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0148",
+      "text": "Severity:"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0149",
+      "text": "MEDIUM"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0150",
+      "text": "Tool Proliferation Without Central Oversight"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0151",
+      "text": "Without a centralized inventory and approval process, individual teachers and departments may independently adopt AI tools, creating an unmanageable landscape of vendor relationships, inconsistent data practices, and compliance gaps that IT and administration cannot effectively monitor."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0152",
+      "text": "Mitigation"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0153",
+      "text": "Maintain centralized AI tool inventory. Require all AI tool adoptions to go through tiered approval. Conduct annual audit of tools in use across the district. Establish clear communication channels for staff to request new tools."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0154",
+      "text": "Owner"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0155",
+      "text": "IT Department (inventory + technical review) + Curriculum &"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0156",
+      "text": "Instruction (educational value assessment)"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0157",
+      "text": "RISK 5"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0158",
+      "text": "Severity:"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0159",
+      "text": "MEDIUM"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0160",
+      "text": "Vendor Data Practices Beyond District Control"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0161",
+      "text": "AI vendors may change their data practices, terms of service, or AI model training approaches after adoption. Student data used to train commercial AI models without consent represents a significant and evolving privacy concern."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0162",
+      "text": "Mitigation"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0163",
+      "text": "DPAs must include clauses prohibiting use of student data for model training. Require vendor notification of material changes to data practices. Establish annual vendor compliance review. Include data deletion requirements when contracts end."
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0164",
+      "text": "Owner"
+    },
+    {
+      "heading_path": [
+        "Purpose of This Document",
+        "Deliverable 3: Top Risks, Mitigations & Suggested Owners"
+      ],
+      "section_id": "sec_0165",
+      "text": "IT Department + Legal Counsel (DPA management and enforcement)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist"
+      ],
+      "section_id": "sec_0166",
+      "text": "From  John’s orientation email, each workstream needs these items ready for the convergence gate:"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Non-Negotiable Constraints / Guardrails"
+      ],
+      "section_id": "sec_0167",
+      "text": "1"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Non-Negotiable Constraints / Guardrails"
+      ],
+      "section_id": "sec_0168",
+      "text": "No AI tool may process identifiable student data without a signed Data Processing Agreement and completion of the tiered review process."
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Non-Negotiable Constraints / Guardrails"
+      ],
+      "section_id": "sec_0169",
+      "text": "2"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Non-Negotiable Constraints / Guardrails"
+      ],
+      "section_id": "sec_0170",
+      "text": "IEP/504 data must never be shared with AI vendors without explicit IDEA compliance review and parental/guardian consent. This is a federal requirement, not a policy choice."
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Non-Negotiable Constraints / Guardrails"
+      ],
+      "section_id": "sec_0171",
+      "text": "3"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Non-Negotiable Constraints / Guardrails"
+      ],
+      "section_id": "sec_0172",
+      "text": "All AI tools used for consequential decisions about students (placement, grading, intervention, behavioral assessment) must include human-in-the-loop oversight. AI recommendations inform — they do not decide."
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0173",
+      "text": "#"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0174",
+      "text": "Tradeoff"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0175",
+      "text": "Options for Committee Discussion"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0176",
+      "text": "1"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0177",
+      "text": "Approval Speed vs. Thoroughness How strict should the tool approval process be? Faster adoption means teachers get tools sooner; thorough vetting means fewer risks but potential delays."
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0178",
+      "text": "Option A: Streamlined process for"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0179",
+      "text": "Tier 1/2, full review only for Tier 3"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0180",
+      "text": "Option B: Full review for all tiers"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0181",
+      "text": "(slower but more consistent)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0182",
+      "text": "Option C: Pre-approved tool list with expedited review for tools on the list"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0183",
+      "text": "2"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0184",
+      "text": "Approved List vs. Criteria-Based"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0185",
+      "text": "Evaluation"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0186",
+      "text": "Should FCCPS maintain a curated list of pre-approved AI tools, or use criteriabased evaluation to assess any tool on demand?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0187",
+      "text": "Option A: Maintained approved list"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0188",
+      "text": "(clear, but requires ongoing curation)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0189",
+      "text": "Option B: Criteria-based (flexible, but more work per request)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0190",
+      "text": "•"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0191",
+      "text": "Option C: Hybrid — approved list for common tools + criteria pathway for new requests"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0192",
+      "text": "3"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0193",
+      "text": "Compliance Monitoring Ownership Who owns ongoing compliance monitoring after a tool is approved? This has significant resource implications."
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0194",
+      "text": "•"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0195",
+      "text": "•"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0196",
+      "text": "Option A: IT Department (technical focus)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0197",
+      "text": "Option B: Curriculum & Instruction"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0198",
+      "text": "(educational focus)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0199",
+      "text": "•"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "3 Decision Points / Tradeoffs for Committee Resolution"
+      ],
+      "section_id": "sec_0200",
+      "text": "Option C: Shared responsibility with clear RACI matrix"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0201",
+      "text": "What We Need"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0202",
+      "text": "From Whom"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0203",
+      "text": "Status"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0204",
+      "text": "Existing DPA templates and procurement workflows"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0205",
+      "text": "FCCPS IT / Jerrod Anderson or"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0206",
+      "text": "Bethany Henderson"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0207",
+      "text": "Not yet requested"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0208",
+      "text": "Current AI tool inventory"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0209",
+      "text": "(what’s already in use)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0210",
+      "text": "FCCPS IT Department"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0211",
+      "text": "Not yet requested"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0212",
+      "text": "IT capacity for ongoing compliance monitoring"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0213",
+      "text": "FCCPS IT Department"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0214",
+      "text": "Not yet requested"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0215",
+      "text": "Draft policy principles"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0216",
+      "text": "(from Meeting 3)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0217",
+      "text": "Full committee (Feb 20 output)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0218",
+      "text": "Pending Meeting 3"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0219",
+      "text": "Policy language alignment"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0220",
+      "text": "Policy/Recommendation Drafting workstream (David Berol)"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0221",
+      "text": "Not yet started"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0222",
+      "text": "Virginia student data privacy law specifics"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0223",
+      "text": "FCCPS Legal Counsel"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff"
+      ],
+      "section_id": "sec_0224",
+      "text": "Research in progress"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "Discussion Questions for Co-Lead Check-In"
+      ],
+      "section_id": "sec_0225",
+      "text": "These are the key questions I’d like to work through in our first sync:"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On Structure & Scope"
+      ],
+      "section_id": "sec_0226",
+      "text": "Does the 3-tier model feel right for FCCPS, or should we adjust the categories? Are there tool types that don’t fit cleanly?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On Structure & Scope"
+      ],
+      "section_id": "sec_0227",
+      "text": "Is the SPED add-on layer the right approach, or should SPED considerations be embedded directly into the tiers rather than as an overlay?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On Structure & Scope"
+      ],
+      "section_id": "sec_0228",
+      "text": "The governance checklist is designed for staff and administrators. Is that the right audience, or do we also need a version for the procurement/IT team?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On FCCPS-Specific Context"
+      ],
+      "section_id": "sec_0229",
+      "text": "Do you have contacts for FCCPS IT or procurement who can share existing DPA templates and the current tool landscape?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On FCCPS-Specific Context"
+      ],
+      "section_id": "sec_0230",
+      "text": "Are there AI tools FCCPS is already using or evaluating that we should use as test cases for the checklist?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On FCCPS-Specific Context"
+      ],
+      "section_id": "sec_0231",
+      "text": "What’s your sense of the committee’s appetite for the tradeoffs in the decision points? Are there other tradeoffs you think we’re missing?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On Division of Labor"
+      ],
+      "section_id": "sec_0232",
+      "text": "My proposal: I continue drafting the checklist and risk tiers (building from my AIEIP work), and you review for technical accuracy and FCCPS-specific adjustments. Does that division work for you?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On Division of Labor"
+      ],
+      "section_id": "sec_0233",
+      "text": "Can we establish a weekly async rhythm?"
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On Division of Labor"
+      ],
+      "section_id": "sec_0234",
+      "text": "1. My proposal: I plan to continue drafting the checklist and risk tiers (building from my AIEIP work) and would like you to review for technical accuracy and FCCPS-specific adjustments. Are there certain days that work best for you to review or collaborate? Please let me know your preferred days."
+    },
+    {
+      "heading_path": [
+        "Meeting 4 Readiness Checklist",
+        "Dependencies from Other Workstreams & FCCPS Staff",
+        "On Division of Labor"
+      ],
+      "section_id": "sec_0235",
+      "text": "3. Are there specific sections you’d like to own or contribute to directly?"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0236",
+      "text": "The frameworks in this document draw from my doctoral capstone, the Artificial Intelligence Ethical Integration Program (AIEIP), developed at Simmons University. AIEIP establishes a comprehensive ethical and compliant framework for AI in special education settings, grounded in:"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0237",
+      "text": "DEIPAR Framework (Diversity, Equity, Intersectionality, Power, and Anti-Racism) — ensures that social justice remains central to AI governance. I understand we may not be able to display this with our current administration, and it can be adaptable with the FCCPS vision and mission."
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0238",
+      "text": "Diffusion of Innovations Theory — guiding phased implementation and adoption strategies"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0239",
+      "text": "FERPA, IDEA, and Section 504 compliance protocols — translated into actionable guidelines for educators"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0240",
+      "text": "AI Bias Audit methodology — routine assessment processes for identifying disparities in AI-driven decisions"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0241",
+      "text": "| TIER 1 — LOW RISK: No Student Data What this means: The tool does not collect, store, or process any student-identifiable information. Students may or may not interact with it directly, but no personal data flows to the vendor. Examples: AI-powered lesson plan generators used only by teachers; AI image generators for creating classroom materials; grammar/style checkers used on teacher-authored content. Minimum Requirements: Teacher verifies no student data is entered into the tool Tool is documented in department/school AI tool inventory Basic review by department lead or instructional coach Approval: Department/building-level approval. No DPA required. |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0242",
+      "text": "| TIER 2 — MODERATE RISK: Anonymized or Aggregated Data What this means: The tool processes student work or interaction data, but in anonymized or aggregated form. No individual student can be identified from the data the vendor receives. Examples: Classroom response/polling tools with anonymous mode; AI-assisted formative assessment tools using de-identified data; writing feedback tools where student names are stripped. Minimum Requirements: Vendor confirms anonymization/aggregation methodology in writing Data Processing Agreement (DPA) reviewed and signed Data retention policy documented (vendor must specify how long data is held) Annual review of vendor compliance FERPA compliance verification Approval: District-level review (IT + curriculum). DPA required. |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0243",
+      "text": "| TIER 3 — HIGH RISK: Identifiable Student Data What this means: The tool collects, stores, or processes personally identifiable student information (PII). This includes any tool where a student logs in with a school account, where the vendor can link data to a specific student, or where sensitive records are involved. Examples: Adaptive learning platforms (e.g., IXL, Khan Academy); AI tutoring systems with student accounts; any tool integrated with the SIS or LMS; AI tools used in IEP/504 planning or progress monitoring. Minimum Requirements: Signed DPA with explicit data handling, retention, and deletion terms FERPA, COPPA (if applicable), and Virginia student data privacy law compliance verified For tools touching IEP/504 data: IDEA compliance review + explicit parental/guardian consent Vendor security assessment (encryption, access controls, breach notification procedures) Algorithmic bias assessment for any tool making recommendations about students Human-in-the-loop requirement for any consequential decisions (placement, grading, intervention) Data deletion confirmation process when tool is discontinued Semi-annual compliance audit Approval: District-level review (IT + curric"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0244",
+      "text": "ulum + administration + legal). Full DPA + security review required. Pilot period recommended before broad deployment. |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0245",
+      "text": "| Special Consideration: Students with Disabilities AI tools used with students receiving SPED services require heightened scrutiny regardless of tier. The following data categories are especially sensitive and trigger additional requirements: IEP/504 plan data: Disability classifications, accommodations, modifications, and progress monitoring data. IDEA requires these records receive protections beyond standard FERPA requirements. Adaptive technology usage patterns: Data from assistive tech tools may reveal disability-related information even when not explicitly labeled as such. Behavioral data from AI tools: AI-driven behavior monitoring systems may flag behavioral differences in culturally diverse students or students with emotional/behavioral disabilities as problematic (Maslej et al., 2023), creating risk of bias-driven consequences. Accommodation records: AI systems that process accommodation data could inadvertently create profiles that follow students beyond intended educational contexts. Additional requirement: Any Tier 2 or Tier 3 tool used with SPED populations must include an accessibility review (assistive tech compatibility, UDL alignment) and an algorithmic bias asse"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0246",
+      "text": "ssment focused on disability-related outcomes. |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0247",
+      "text": "| Question | If YES → |\n| Does the tool collect, store, or process any studentidentifiable information (names, IDs, login data, work samples linked to students)? | Tier 3 — proceed to full review |\n| Does the tool process student work or interaction data in anonymized or aggregated form? | Tier 2 — proceed to standard review |\n| Does the tool have no contact with student data at all? | Tier 1 — proceed to basic review |\n| Will the tool be used with students receiving SPED services (IEP/504)? | Add SPED review layer (any tier) |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0248",
+      "text": "| What Must Be True Before Adoption | Tier 1 | Tier 2 | Tier 3 |\n| ★ Tool is documented in FCCPS AI tool inventory | ✔ | ✔ | ✔ |\n| ★ Staff member can articulate educational purpose and how the tool supports student learning | ✔ | ✔ | ✔ |\n| ★ No student data is entered into the tool without appropriate authorization | ✔ | ✔ | ✔ |\n| Vendor confirms anonymization methodology in writing | -- | ✔ | ✔ |\n| Data Processing Agreement (DPA) reviewed and signed | -- | ✔ | ✔ |\n| Data retention and deletion policy documented | -- | ✔ | ✔ |\n| FERPA compliance verified | -- | ✔ | ✔ |\n| Vendor security assessment completed (encryption, access controls, breach notification) | -- | -- | ✔ |\n| Algorithmic bias assessment completed for any tool making recommendations about students | -- | -- | ✔ |\n| Human-in-the-loop confirmed for consequential decisions (placement, grading, intervention) | -- | -- | ✔ |\n| COPPA compliance verified (if tool is used by students under 13) | -- | -- | ✔ |\n|  | -- | -- | ✔ |\n| Pilot period completed with documented outcomes before broad deployment |  |  |  |\n| SPED ADD-ON: IDEA compliance review + parental consent for IEP/504 data | If SPED | If SPED | If SPED |\n| SPED AD"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0249",
+      "text": "D-ON: Accessibility review (assistive tech compatibility + UDL alignment) | If SPED | If SPED | If SPED |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0250",
+      "text": "| RISK 1 Severity: HIGH | Unvetted AI Tools Processing Student Data Without Governance Without a structured approval process, teachers and staff may adopt AI tools that collect student PII without signed DPAs, creating FERPA violations and data exposure risk. Research shows no standardized regulations currently address AI-specific risks in K-12 education (DOE, 2023; Roschelle et al., 2024). |\n| Mitigation | Implement the tiered approval process (Deliverable 1). Maintain a district-wide AI tool inventory. Require DPA review for all Tier 2/3 tools. Communicate clear policy that unauthorized tool adoption is prohibited. |\n| Owner | IT Department (tool inventory + DPA management) + Building Administrators (enforcement) |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0251",
+      "text": "| RISK 2 Severity: HIGH | IEP/504 Data Exposure Through AI Tools SPED students’ sensitive diagnostic information, behavioral data, and learning accommodations are increasingly processed through AI systems that may lack adequate safeguards (Roschelle et al., 2024). IDEA requires protections beyond standard FERPA, and AI tools were not designed with these requirements in mind (Haque & Li, 2024). |\n| Mitigation | SPED add-on review layer for any tool used with IEP/504 students. Explicit parental/guardian consent for AI processing of disabilityrelated data. Prohibit sharing IEP/504 data with AI vendors without IDEA compliance review. Regular audits of AI tools used in SPED contexts. |\n| Owner | SPED Director + IT Department (joint oversight) + Legal Counsel (IDEA compliance review) |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0252",
+      "text": "| RISK 3 Severity: MEDIUM | Algorithmic Bias in Student Assessment and Intervention AI systems misclassify students with disabilities from marginalized backgrounds at rates up to 32% higher than peers (Nguyen et al., 2023). AI-driven behavior monitoring may flag cultural behavioral differences as problematic (Maslej et al., 2023). This can reinforce historical overrepresentation of students of color in certain disability categories. |\n| Mitigation | Require algorithmic bias assessment for all Tier 3 tools. Establish routine bias audits with specific focus on outcomes for students with intersecting marginalized identities. Human-in-the-loop requirement for all consequential decisions. Review disaggregated outcome data annually. |\n| Owner | Curriculum & Instruction (bias audits) + SPED Director (disabilityspecific review) + Equity Office (intersectionality lens) |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0253",
+      "text": "| RISK 4 Severity: MEDIUM | Tool Proliferation Without Central Oversight Without a centralized inventory and approval process, individual teachers and departments may independently adopt AI tools, creating an unmanageable landscape of vendor relationships, inconsistent data practices, and compliance gaps that IT and administration cannot effectively monitor. |\n| Mitigation | Maintain centralized AI tool inventory. Require all AI tool adoptions to go through tiered approval. Conduct annual audit of tools in use across the district. Establish clear communication channels for staff to request new tools. |\n| Owner | IT Department (inventory + technical review) + Curriculum & Instruction (educational value assessment) |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0254",
+      "text": "| RISK 5 Severity: MEDIUM | Vendor Data Practices Beyond District Control AI vendors may change their data practices, terms of service, or AI model training approaches after adoption. Student data used to train commercial AI models without consent represents a significant and evolving privacy concern. |\n| Mitigation | DPAs must include clauses prohibiting use of student data for model training. Require vendor notification of material changes to data practices. Establish annual vendor compliance review. Include data deletion requirements when contracts end. |\n| Owner | IT Department + Legal Counsel (DPA management and enforcement) |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0255",
+      "text": "| 1 | No AI tool may process identifiable student data without a signed Data Processing Agreement and completion of the tiered review process. |\n| 2 | IEP/504 data must never be shared with AI vendors without explicit IDEA compliance review and parental/guardian consent. This is a federal requirement, not a policy choice. |\n| 3 | All AI tools used for consequential decisions about students (placement, grading, intervention, behavioral assessment) must include human-in-the-loop oversight. AI recommendations inform — they do not decide. |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0256",
+      "text": "| # | Tradeoff | Options for Committee Discussion |\n| 1 | Approval Speed vs. Thoroughness How strict should the tool approval process be? Faster adoption means teachers get tools sooner; thorough vetting means fewer risks but potential delays. | Option A: Streamlined process for Tier 1/2, full review only for Tier 3 Option B: Full review for all tiers (slower but more consistent) Option C: Pre-approved tool list with expedited review for tools on the list |\n| 2 | Approved List vs. Criteria-Based Evaluation Should FCCPS maintain a curated list of pre-approved AI tools, or use criteriabased evaluation to assess any tool on demand? | Option A: Maintained approved list (clear, but requires ongoing curation) Option B: Criteria-based (flexible, but more work per request) |\n|  |  | • | Option C: Hybrid — approved list for common tools + criteria pathway for new requests |\n| 3 | Compliance Monitoring Ownership Who owns ongoing compliance monitoring after a tool is approved? This has significant resource implications. | • • | Option A: IT Department (technical focus) Option B: Curriculum & Instruction (educational focus) |\n|  |  | • | Option C: Shared responsibility with clear RACI matrix |"
+    },
+    {
+      "heading_path": [
+        "Source: AIEIP Framework"
+      ],
+      "section_id": "sec_0257",
+      "text": "| What We Need | From Whom | Status |\n| Existing DPA templates and procurement workflows | FCCPS IT / Jerrod Anderson or Bethany Henderson | Not yet requested |\n| Current AI tool inventory (what’s already in use) | FCCPS IT Department | Not yet requested |\n| IT capacity for ongoing compliance monitoring | FCCPS IT Department | Not yet requested |\n| Draft policy principles (from Meeting 3) | Full committee (Feb 20 output) | Pending Meeting 3 |\n| Policy language alignment | Policy/Recommendation Drafting workstream (David Berol) | Not yet started |\n| Virginia student data privacy law specifics | FCCPS Legal Counsel | Research in progress |"
+    }
+  ],
+  "source_hash_sha256": "d864048c5d11b5db38e00673611068d59b9826127f0376911f912a4d0235194b",
+  "source_rel_path": "workstreams/dps/DRAFT_WS_DPS_CoLead_Briefing.docx",
+  "title": "Purpose of This Document"
+}

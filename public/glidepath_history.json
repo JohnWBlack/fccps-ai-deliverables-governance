@@ -101,8 +101,8 @@
   },
   "current_eval": {
     "current_gate_id": "m4",
-    "current_point_id": "2026-03-01T03:56:54.056027Z::0dc32cc9ef63",
-    "how_delta": 2.32,
+    "current_point_id": "2026-02-28T02:14:51.152648Z::1a20d662d88a",
+    "how_delta": 2.3,
     "how_in_range": false,
     "status": "one_axis_out",
     "what_delta": 0.0,
@@ -110,7 +110,7 @@
   },
   "meta": {
     "description": "Historical WHAT/HOW glidepath points with gate corridor targets.",
-    "generated_at": "2026-03-01T03:56:55.184512Z",
+    "generated_at": "2026-02-28T02:52:39.125461Z",
     "schema_version": "1.0.0"
   },
   "points": [
@@ -222,7 +222,7 @@
     {
       "coverage_how": 0.9318,
       "coverage_what": 0.95,
-      "generated_at": "2026-02-26T01:23:37.439731Z",
+      "generated_at": "2026-02-28T02:14:51.152648Z",
       "how_score": 7.8,
       "included_kpis": {
         "how": [
@@ -249,185 +249,10 @@
       },
       "next_gate_date": "2026-03-06",
       "next_gate_id": "m4",
-      "point_id": "2026-02-26T01:23:37.439731Z::1a20d662d88a",
+      "point_id": "2026-02-28T02:14:51.152648Z::1a20d662d88a",
       "version_key": "1a20d662d88ac00612b2df2412570ff66d45e01c",
       "version_key_short": "1a20d662d88a",
-      "what_score": 4.87
-    },
-    {
-      "coverage_how": 0.9318,
-      "coverage_what": 0.95,
-      "generated_at": "2026-02-26T03:52:28.701036Z",
-      "how_score": 7.8,
-      "included_kpis": {
-        "how": [
-          "KPI-CONV-01",
-          "KPI-CONV-02",
-          "KPI-CONV-03",
-          "KPI-CONV-04",
-          "KPI-CONV-05",
-          "KPI-CONV-06",
-          "KPI-CONV-07",
-          "KPI-CONV-08",
-          "KPI-CONV-10",
-          "KPI-FRESH-01",
-          "KPI-FRESH-02",
-          "KPI-FRESH-03"
-        ],
-        "what": [
-          "KPI-PUB-01",
-          "KPI-PUB-02",
-          "KPI-SCHED-01",
-          "KPI-SCHED-02",
-          "KPI-SCHED-03"
-        ]
-      },
-      "next_gate_date": "2026-03-06",
-      "next_gate_id": "m4",
-      "point_id": "2026-02-26T03:52:28.701036Z::aab7f4f3b4cc",
-      "version_key": "aab7f4f3b4ccc6781bbd612115c1a749eb897a2e",
-      "version_key_short": "aab7f4f3b4cc",
-      "what_score": 4.87
-    },
-    {
-      "coverage_how": 0.9318,
-      "coverage_what": 0.95,
-      "generated_at": "2026-02-27T03:51:12.041754Z",
-      "how_score": 7.8,
-      "included_kpis": {
-        "how": [
-          "KPI-CONV-01",
-          "KPI-CONV-02",
-          "KPI-CONV-03",
-          "KPI-CONV-04",
-          "KPI-CONV-05",
-          "KPI-CONV-06",
-          "KPI-CONV-07",
-          "KPI-CONV-08",
-          "KPI-CONV-10",
-          "KPI-FRESH-01",
-          "KPI-FRESH-02",
-          "KPI-FRESH-03"
-        ],
-        "what": [
-          "KPI-PUB-01",
-          "KPI-PUB-02",
-          "KPI-SCHED-01",
-          "KPI-SCHED-02",
-          "KPI-SCHED-03"
-        ]
-      },
-      "next_gate_date": "2026-03-06",
-      "next_gate_id": "m4",
-      "point_id": "2026-02-27T03:51:12.041754Z::ba607ce08a83",
-      "version_key": "ba607ce08a8373814e30d5131119acff587fe298",
-      "version_key_short": "ba607ce08a83",
-      "what_score": 4.85
-    },
-    {
-      "coverage_how": 0.9318,
-      "coverage_what": 0.95,
-      "generated_at": "2026-02-28T01:12:21.696914Z",
-      "how_score": 7.82,
-      "included_kpis": {
-        "how": [
-          "KPI-CONV-01",
-          "KPI-CONV-02",
-          "KPI-CONV-03",
-          "KPI-CONV-04",
-          "KPI-CONV-05",
-          "KPI-CONV-06",
-          "KPI-CONV-07",
-          "KPI-CONV-08",
-          "KPI-CONV-10",
-          "KPI-FRESH-01",
-          "KPI-FRESH-02",
-          "KPI-FRESH-03"
-        ],
-        "what": [
-          "KPI-PUB-01",
-          "KPI-PUB-02",
-          "KPI-SCHED-01",
-          "KPI-SCHED-02",
-          "KPI-SCHED-03"
-        ]
-      },
-      "next_gate_date": "2026-03-06",
-      "next_gate_id": "m4",
-      "point_id": "2026-02-28T01:12:21.696914Z::5e6847ca294d",
-      "version_key": "5e6847ca294ddcc379651c18cecabec672103aac",
-      "version_key_short": "5e6847ca294d",
       "what_score": 4.83
-    },
-    {
-      "coverage_how": 0.9318,
-      "coverage_what": 0.95,
-      "generated_at": "2026-02-28T03:41:49.551039Z",
-      "how_score": 7.82,
-      "included_kpis": {
-        "how": [
-          "KPI-CONV-01",
-          "KPI-CONV-02",
-          "KPI-CONV-03",
-          "KPI-CONV-04",
-          "KPI-CONV-05",
-          "KPI-CONV-06",
-          "KPI-CONV-07",
-          "KPI-CONV-08",
-          "KPI-CONV-10",
-          "KPI-FRESH-01",
-          "KPI-FRESH-02",
-          "KPI-FRESH-03"
-        ],
-        "what": [
-          "KPI-PUB-01",
-          "KPI-PUB-02",
-          "KPI-SCHED-01",
-          "KPI-SCHED-02",
-          "KPI-SCHED-03"
-        ]
-      },
-      "next_gate_date": "2026-03-06",
-      "next_gate_id": "m4",
-      "point_id": "2026-02-28T03:41:49.551039Z::dd98bb1e6614",
-      "version_key": "dd98bb1e6614d31af953be35d2d3f42fb74ef29f",
-      "version_key_short": "dd98bb1e6614",
-      "what_score": 4.83
-    },
-    {
-      "coverage_how": 0.9318,
-      "coverage_what": 0.95,
-      "generated_at": "2026-03-01T03:56:54.056027Z",
-      "how_score": 7.82,
-      "included_kpis": {
-        "how": [
-          "KPI-CONV-01",
-          "KPI-CONV-02",
-          "KPI-CONV-03",
-          "KPI-CONV-04",
-          "KPI-CONV-05",
-          "KPI-CONV-06",
-          "KPI-CONV-07",
-          "KPI-CONV-08",
-          "KPI-CONV-10",
-          "KPI-FRESH-01",
-          "KPI-FRESH-02",
-          "KPI-FRESH-03"
-        ],
-        "what": [
-          "KPI-PUB-01",
-          "KPI-PUB-02",
-          "KPI-SCHED-01",
-          "KPI-SCHED-02",
-          "KPI-SCHED-03"
-        ]
-      },
-      "next_gate_date": "2026-03-06",
-      "next_gate_id": "m4",
-      "point_id": "2026-03-01T03:56:54.056027Z::0dc32cc9ef63",
-      "version_key": "0dc32cc9ef635044d12e0cb2d163eb4c65b5a266",
-      "version_key_short": "0dc32cc9ef63",
-      "what_score": 4.81
     }
   ],
   "weights": {

@@ -212,7 +212,7 @@ def enrich_corridor_gates(timeline_events: list[dict[str, Any]]) -> list[dict[st
     for gate in CORRIDOR_GATES:
         gate_id = str(gate.get("gate_id", ""))
         event = by_id.get(gate_id, {})
-        label = event.get("title") or gate_id.upper()
+        label = event.get("label") or event.get("title") or gate_id.upper()
         description = event.get("description") or ""
         gate_copy = dict(gate)
         gate_copy["label"] = str(label)

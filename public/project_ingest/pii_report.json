@@ -1,0 +1,224 @@
+{
+  "allow_pii": false,
+  "findings": [
+    {
+      "artifact_id": "144b4c44fb188fb968d20af6",
+      "field_path": "$.sections[].text",
+      "match_type": "email",
+      "redacted_snippet": "A little bit. Okay, hi, welcome everybody. I am Rebecca Winthrop. I'm a senior fellow here at Brookings, Director of the Center for Universal Education. Than...",
+      "section_id": "sec_0011.2",
+      "source_rel_path": "Members' Corners/John Black/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md"
+    },
+    {
+      "artifact_id": "2fce63f3e9734f048ba38f05",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Photograph the sticky-note boards and post the photos and other meeting materials to the Miro board so the group can access them, then...",
+      "section_id": "sec_0006",
+      "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.docx"
+    },
+    {
+      "artifact_id": "2fce63f3e9734f048ba38f05",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Maintain cadence by sending the follow-up email after meetings that includes next-charge items and deadlines (e.g., request inputs by ...",
+      "section_id": "sec_0007",
+      "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.docx"
+    },
+    {
+      "artifact_id": "51bc90447598753fe0329840",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Send another committee survey to collect feedback on principles and candidate items (notify members and solicit revisions)",
+      "section_id": "sec_0006",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx"
+    },
+    {
+      "artifact_id": "51bc90447598753fe0329840",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Merge workstream deliverables and produce a consolidated 'cut list' / merged draft for the committee to review and circulate it this week",
+      "section_id": "sec_0007",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx"
+    },
+    {
+      "artifact_id": "51bc90447598753fe0329840",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Receive and process written workstream inputs and materials so they can be merged for the next meeting (submit materials by next Frida...",
+      "section_id": "sec_0008",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx"
+    },
+    {
+      "artifact_id": "51bc90447598753fe0329840",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Provide a method to collect public inputs for the upcoming town hall (define collection approach and ensure it is ready by the town-ha...",
+      "section_id": "sec_0009",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx"
+    },
+    {
+      "artifact_id": "5bce1717d00da1019c931d6a",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Create and send an email (or web form) to collect committee members' purpose/vision responses and other inputs, then collect repli...",
+      "section_id": "sec_0004",
+      "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md"
+    },
+    {
+      "artifact_id": "5bce1717d00da1019c931d6a",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Create and send an email (or web form) to collect committee members' purpose/vision responses and other inputs, then collect repli...",
+      "section_id": "sec_0004",
+      "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md"
+    },
+    {
+      "artifact_id": "8b2c4a296ece6f2e77ae8151",
+      "field_path": "$.sections[].text",
+      "match_type": "email",
+      "redacted_snippet": "  \"T5 preferred policy posture\",\n        \"T5 TR codes (select up to 3)\",\n        \"Optional context for your approval/disapproval or tradeoff notes.5\",\n      ...",
+      "section_id": "sec_0011",
+      "source_rel_path": "03 - Values & Principles/Values_Principles_Survey_Part1_Results_v20260227-1035.json"
+    },
+    {
+      "artifact_id": "a163170eab85ff38a4ea9be1",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Compile a list of suggested language insertions/tweaks for the draft policy and email that list to the draft owner and committee\n-...",
+      "section_id": "sec_0005",
+      "source_rel_path": "workstreams/dps/20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md"
+    },
+    {
+      "artifact_id": "a163170eab85ff38a4ea9be1",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Compile a list of suggested language insertions/tweaks for the draft policy and email that list to the draft owner and committee\n-...",
+      "section_id": "sec_0005",
+      "source_rel_path": "workstreams/dps/20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md"
+    },
+    {
+      "artifact_id": "a163170eab85ff38a4ea9be1",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Compile a list of suggested language insertions/tweaks for the draft policy and email that list to the draft owner and committee\n-...",
+      "section_id": "sec_0005",
+      "source_rel_path": "workstreams/dps/20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md"
+    },
+    {
+      "artifact_id": "b88640ee765fcbaaf043b95b",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Compile a list of suggested language insertions/tweaks for the draft policy and email that list to the draft owner and committee",
+      "section_id": "sec_0006",
+      "source_rel_path": "workstreams/dps/AI Policy Development Meeting_otter_ai.docx"
+    },
+    {
+      "artifact_id": "b88640ee765fcbaaf043b95b",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Follow up with outstanding contributors and prod the three missing responses to the risks-and-opportunities assessment so the work str...",
+      "section_id": "sec_0007",
+      "source_rel_path": "workstreams/dps/AI Policy Development Meeting_otter_ai.docx"
+    },
+    {
+      "artifact_id": "b88640ee765fcbaaf043b95b",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Provide clarity/fidelity on the presentation schedule and when the data-privacy work stream lead will need to present at the next meeting",
+      "section_id": "sec_0008",
+      "source_rel_path": "workstreams/dps/AI Policy Development Meeting_otter_ai.docx"
+    },
+    {
+      "artifact_id": "c32712092eb3abbbbcc71f75",
+      "field_path": "$.sections[].text",
+      "match_type": "email",
+      "redacted_snippet": "A little bit. Okay, hi, welcome everybody. I am Rebecca Winthrop. I'm a senior fellow here at Brookings, Director of the Center for Universal Education. Than...",
+      "section_id": "sec_0029",
+      "source_rel_path": "Pre-Read Resources/A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx"
+    },
+    {
+      "artifact_id": "caee2b8ccbfc26725a6ecd07",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Send another committee survey to collect feedback on principles and candidate items (notify members and solicit revisions)\n-   [ ]...",
+      "section_id": "sec_0005",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md"
+    },
+    {
+      "artifact_id": "caee2b8ccbfc26725a6ecd07",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Send another committee survey to collect feedback on principles and candidate items (notify members and solicit revisions)\n-   [ ]...",
+      "section_id": "sec_0005",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md"
+    },
+    {
+      "artifact_id": "caee2b8ccbfc26725a6ecd07",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Send another committee survey to collect feedback on principles and candidate items (notify members and solicit revisions)\n-   [ ]...",
+      "section_id": "sec_0005",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md"
+    },
+    {
+      "artifact_id": "caee2b8ccbfc26725a6ecd07",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Send another committee survey to collect feedback on principles and candidate items (notify members and solicit revisions)\n-   [ ]...",
+      "section_id": "sec_0005",
+      "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md"
+    },
+    {
+      "artifact_id": "cb8ba2bd2bcbe9696bfe77e6",
+      "field_path": "$.sections[].text",
+      "match_type": "email",
+      "redacted_snippet": "A little bit. Okay, hi, welcome everybody. I am Rebecca Winthrop. I'm a senior fellow here at Brookings, Director of the Center for Universal Education. Than...",
+      "section_id": "sec_0029",
+      "source_rel_path": "Pre-Read Resources/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx"
+    },
+    {
+      "artifact_id": "cf8480199fcc97709c14871c",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Create and send an email (or web form) to collect committee members' purpose/vision responses and other inputs, then collect replies f...",
+      "section_id": "sec_0009",
+      "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee_otter_ai.docx"
+    },
+    {
+      "artifact_id": "cf8480199fcc97709c14871c",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "[ ] [REDACTED] Black - Create a web form to collect ideas/resources from committee members (to avoid reply-all email issues) and distribute it to members",
+      "section_id": "sec_0010",
+      "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee_otter_ai.docx"
+    },
+    {
+      "artifact_id": "d134a3d7da825e1ddf618ee9",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "Postsecondary-Ed.pdf))\n    -   This group, [Digital Promise](https://www.youtube.com/[REDACTED]), seems to be behind the materials that were created. A very ...",
+      "section_id": "sec_0049.2",
+      "source_rel_path": "workstreams/rsb/Shared Baseline v01.md"
+    },
+    {
+      "artifact_id": "ff4855ce5c794ce5dc2c9579",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Photograph the sticky-note boards and post the photos and other meeting materials to the Miro board so the group can access them, ...",
+      "section_id": "sec_0005.1",
+      "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md"
+    },
+    {
+      "artifact_id": "ff4855ce5c794ce5dc2c9579",
+      "field_path": "$.sections[].text",
+      "match_type": "handle",
+      "redacted_snippet": "-   [ ] [REDACTED] Black - Photograph the sticky-note boards and post the photos and other meeting materials to the Miro board so the group can access them, ...",
+      "section_id": "sec_0005.1",
+      "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md"
+    }
+  ],
+  "generated_at": "2026-03-01T04:19:51.095626Z",
+  "total_findings": 27,
+  "transform_version": "2.0.0"
+}

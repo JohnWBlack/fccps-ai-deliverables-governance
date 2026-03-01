@@ -1,0 +1,44 @@
+{
+  "artifact_id": "200b0658a22bcbf892cc7f84",
+  "doc_type": "md",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-14T20:13:31.995010Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "WS-DPS Draft — John edits (summary)"
+      ],
+      "section_id": "sec_0001.1",
+      "text": "Key edits applied to Jillian’s v0.1 draft:"
+    },
+    {
+      "heading_path": [
+        "WS-DPS Draft — John edits (summary)"
+      ],
+      "section_id": "sec_0002.2",
+      "text": "- Added **Escalation Rules** (apply to all tiers): (1) identity linkage/integration (SSO/SIS/LMS), (2) consequential-use, (3) student artifacts re-identification caution.\n- Refined Tier descriptions:\n  - Tier 1: clarified **no student artifacts transmitted**; added **Tier 1 affirmation** and usage constraints.\n  - Tier 2: reframed as **de-identified/aggregated**; added **re-identification prohibition**, **no advertising/model-training** clause expectation, and **change-notice** requirement.\n  - Tier 3: expanded to include **identity-linked systems**; added **504/ADA alignment** reference; clarified “right-sized” impact/bias review; strengthened incident/terms-change language.\n- Updated **Step 1 classification** table to include integration and consequential-use triggers and corrected typos.\n- Updated **Step 2 “What must be true”** table:\n  - Added vendor-terms requirement prohibiting advertising/model training (unless authorized).\n  - Added vendor material-change/subprocessor notice requirement.\n  - Restored pilot requirement to Tier 3 only.\n- Rebuilt **Tradeoffs** table into 5 clean decision points (added BYO vs district-provided; minimization vs personalization).\n- Cleaned minor"
+    },
+    {
+      "heading_path": [
+        "WS-DPS Draft — John edits (summary)"
+      ],
+      "section_id": "sec_0003.3",
+      "text": "typos/formatting and clarified co-lead discussion prompts."
+    },
+    {
+      "heading_path": [
+        "WS-DPS Draft — John edits (summary)"
+      ],
+      "section_id": "sec_0004.4",
+      "text": "How to produce Word Track Changes:\n- In Word: **Review → Compare → Compare…**\n- Select *Original*: Jillian’s v0.1 file, and *Revised*: the “JohnEdits_REVISED” file.\n- Word will generate a comparison document with changes shown as tracked insertions/deletions."
+    }
+  ],
+  "source_hash_sha256": "b227fbe2935717c7a2db1df4bf369c201eb849c9c550e9f6247eae435e3929df",
+  "source_rel_path": "workstreams/dps/WS-DPS_JohnEdits_ChangeLog.md",
+  "title": "WS-DPS Draft — John edits (summary)"
+}

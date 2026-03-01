@@ -1,0 +1,1450 @@
+{
+  "artifact_id": "e97241f984a0be845dcfc31b",
+  "doc_type": "docx",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-26T19:33:11Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [],
+      "section_id": "sec_0001",
+      "text": "Lunch Working Session Agenda — Tom Sabo (WS-EQA Equity & Access) + John Black"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0002",
+      "text": "Purpose: Get WS-EQA moving fast toward a reviewable v1 deliverable for Meeting 4 and a crisp 3–5 minute briefing."
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0003",
+      "text": "Context anchors (SoR): WS-EQA lead/co-lead assignments and responsibilities; WS-EQA deliverable D-EQA-1 Equity Impact Checklist v1 due 6 Mar (Meeting 4) ; Meeting 4 focus is constraints + risk register and requires D-EQA-1 as an input ; shared baseline realities (access inevitable; detection weak; risks real) ."
+    },
+    {
+      "heading_path": [
+        "1) Open and align on “what success looks like” (5 min)"
+      ],
+      "section_id": "sec_0004",
+      "text": "Objective: Tom leaves lunch with a simple definition of done and a plan he believes he can execute."
+    },
+    {
+      "heading_path": [
+        "1) Open and align on “what success looks like” (5 min)"
+      ],
+      "section_id": "sec_0005",
+      "text": "Talking points"
+    },
+    {
+      "heading_path": [
+        "1) Open and align on “what success looks like” (5 min)"
+      ],
+      "section_id": "sec_0006",
+      "text": "Meeting 4 is a convergence gate: we need usable drafts more than perfect prose ."
+    },
+    {
+      "heading_path": [
+        "1) Open and align on “what success looks like” (5 min)"
+      ],
+      "section_id": "sec_0007",
+      "text": "WS-EQA output is explicitly: “Equity Impact Checklist v1: accessibility/accommodations + do-no-harm risks + recommended supports + metrics” ."
+    },
+    {
+      "heading_path": [
+        "1) Open and align on “what success looks like” (5 min)"
+      ],
+      "section_id": "sec_0008",
+      "text": "Reinforce partnership: Tom (lead) + Elizabeth Chua (co-lead) are the intended “1:1 synthesis pair.”"
+    },
+    {
+      "heading_path": [
+        "1) Open and align on “what success looks like” (5 min)"
+      ],
+      "section_id": "sec_0009",
+      "text": "Decision: Confirm we’re targeting a reviewable v1 (not polished/final)."
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0010",
+      "text": "Objective: Convert “Equity Impact Checklist v1” into a concrete artifact spec."
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0011",
+      "text": "Deliverable spec (what Tom should ship by Mar 6)"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0012",
+      "text": "Title: D-EQA-1 — Equity Impact Checklist v1"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0013",
+      "text": "Format: 2–4 pages or a structured table (Markdown is fine) with:"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0014",
+      "text": "Screening questions (quick “red/yellow/green” flags)"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0015",
+      "text": "Deep-dive prompts (when flagged)"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0016",
+      "text": "Required mitigations / supports (what we do when risk appears)"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0017",
+      "text": "Metrics & feedback loops (what to watch post-implementation)"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0018",
+      "text": "“Open questions for committee” (3–7 bullets for Meeting 4 decisions)"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0019",
+      "text": "Inputs it must reflect (even if placeholders):"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0020",
+      "text": "Student/staff AI use will happen regardless → plan for disparities, not prevention"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0021",
+      "text": "Integrity enforcement won’t be detector-driven → avoid inequitable false accusations"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0022",
+      "text": "Meeting 4 produces top risks + mitigations; WS-EQA should propose equity-related risks/mitigations ready to drop into that register"
+    },
+    {
+      "heading_path": [
+        "2) Clarify the exact written product due for Meeting 4 (10 min)"
+      ],
+      "section_id": "sec_0023",
+      "text": "Dependency note (important): D-EQA-1 depends on Scenario Bank v1 (D-CPX-1) so the checklist can be tested against real classroom scenarios . If CPX is late, Tom should still ship the checklist and add “to validate against scenario set” as an explicit follow-on task."
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0024",
+      "text": "Objective: Prevent “lead does everything” failure mode."
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0025",
+      "text": "Proposed division of labor (fast, low-friction)"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0026",
+      "text": "Tom (lead):"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0027",
+      "text": "Own the checklist structure + final assembly"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0028",
+      "text": "Draft “do-no-harm risk list” and mitigations (discipline equity, access gaps, language learners, SPED/504 impacts)"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0029",
+      "text": "Elizabeth (co-lead):"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0030",
+      "text": "Draft accommodations/accessibility section and metrics/monitoring section"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0031",
+      "text": "Identify “what we need from the district” (high-level device/connectivity/access landscape; accommodations practices)"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0032",
+      "text": "Joint (30-minute sync):"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0033",
+      "text": "Decide which items are “required” vs “recommended” vs “context-dependent”"
+    },
+    {
+      "heading_path": [
+        "3) Split work cleanly with the co-lead (Elizabeth Chua) (10 min)"
+      ],
+      "section_id": "sec_0034",
+      "text": "Concrete next step: Schedule one 45-minute working session this week and one 30-minute final-pass session early next week."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0035",
+      "text": "Objective: Tom can self-serve the “source of truth” and use AI productively without creating drift."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0036",
+      "text": "A. Replit web app (SoR “dashboard”)"
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0037",
+      "text": "Filter to Meeting 4 and point Tom to his deliverable row: D-EQA-1 due Mar 6 ."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0038",
+      "text": "Use it to track status; treat it as the “what’s due and when” page."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0039",
+      "text": "B. Downloadable JSON (portable context for AI prompting)"
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0040",
+      "text": "Download the deliverables snapshot and use it as a prompt attachment for an LLM:"
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0041",
+      "text": "“Here is our SoR. Generate a checklist structure aligned to D-EQA-1 definition-of-done and Meeting 4 risk register needs.”"
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0042",
+      "text": "Key fields to point to: deliverable ID, due date, dependency on D-CPX-1 ."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0043",
+      "text": "C. GitHub repo (canonical written product)"
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0044",
+      "text": "Keep the checklist in one file with the deliverable ID in the filename (e.g., D-EQA-1_equity_impact_checklist_v1.md)."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0045",
+      "text": "Commit early (even as a skeleton), then iterate. This avoids “lost drafts” and makes integration into Policy Skeleton easier."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0046",
+      "text": "D. Miro (working surface + evidence)"
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0047",
+      "text": "Use Miro to collect: examples, pain points, equity risks, and “what we say instead” language."
+    },
+    {
+      "heading_path": [
+        "4) Walk-through: how to use Replit app + JSON + GitHub + Miro efficiently (15 min)"
+      ],
+      "section_id": "sec_0048",
+      "text": "Export a frame as PDF/image when needed; link the exported artifact inside the GitHub doc so evidence stays attached."
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)"
+      ],
+      "section_id": "sec_0049",
+      "text": "Objective: Tom can deliver a tight update that advances decisions."
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0050",
+      "text": "One sentence purpose: “WS-EQA produced an Equity Impact Checklist to prevent unintended harm and monitor disparities.”"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0051",
+      "text": "What’s in v1 (3 bullets):"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0052",
+      "text": "Screening questions + deep-dive prompts"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0053",
+      "text": "Mitigation/support actions"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0054",
+      "text": "Metrics + feedback loop"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0055",
+      "text": "Top 3 equity risks we want in the Meeting 4 risk register (3 bullets): (examples Tom can tailor)"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0056",
+      "text": "Access gaps (device/connectivity, home support) → mitigation: structured supports + school-provided options"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0057",
+      "text": "Disproportionate discipline / integrity disputes → mitigation: process evidence, human review, consistent procedures"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0058",
+      "text": "Accessibility regressions (ELL/SPED/504) → mitigation: accommodations-aligned guidance and tool criteria"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0059",
+      "text": "Two decisions needed from committee (ask for action):"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0060",
+      "text": "Confirm grade-band structure assumptions (so equity tests align)"
+    },
+    {
+      "heading_path": [
+        "5) Prepare Tom’s 3–5 minute Meeting 4 briefing (10 min)",
+        "Briefing template (scriptable)"
+      ],
+      "section_id": "sec_0061",
+      "text": "Confirm policy posture on tool access/governance direction (impacts equity profoundly)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0062",
+      "text": "Objective: Leave with commitments, dates, and a first draft target."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0063",
+      "text": "Action items (leave lunch with these written down)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0064",
+      "text": "Today: Tom creates GitHub file skeleton with headings (30 minutes)."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0065",
+      "text": "Within 48 hours: Tom + Elizabeth do first working session; produce v0.3 content."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0066",
+      "text": "By early next week: “Reviewable v1” ready for Meeting 4 (even if scenario-validation is pending)."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0067",
+      "text": "One high-leverage “starter prompt” Tom can use with AI (copy/paste)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0068",
+      "text": "“Create a K-12 Equity Impact Checklist for an AI policy and AI tools. It must include: screening questions, deep-dive prompts, mitigations/supports, and metrics/feedback loops. Align to these responsibilities: equity impacts (access gaps, accommodations, language, disability), accessibility standards/supports, and monitoring disparities. Deliverable is D-EQA-1 due Meeting 4 (Mar 6). Output as a 2–4 page Markdown checklist with an ‘Open Questions for Committee’ section and a ‘Top Equity Risks + Mitigations for Risk Register’ section.”"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0069",
+      "text": "(Then attach the JSON export from the Replit app so the model stays grounded.)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0070",
+      "text": "Checklist Skeleton (headings + starter table) for D-EQA-1"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0071",
+      "text": "Paste into GitHub, aligned to the WS-EQA definition-of-done."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0072",
+      "text": "markdown"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0073",
+      "text": "# D-EQA-1 — Equity Impact Checklist v1 (WS-EQA)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0074",
+      "text": "**Workstream:** WS-EQA (Equity & Access)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0075",
+      "text": "**Lead / Co-lead:** Tom Sabo / Elizabeth Chua :contentReference[oaicite:0]{index=0}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0076",
+      "text": "**Due:** Meeting 4 (6 Mar 2026) :contentReference[oaicite:1]{index=1}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0077",
+      "text": "**Definition of done:** Accessibility/accommodations considerations + do-no-harm risks + recommended supports + equity metrics/feedback loops :contentReference[oaicite:2]{index=2}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0078",
+      "text": "**How this is used at Meeting 4:** Apply equity lens to constraints + risk register kickoff :contentReference[oaicite:3]{index=3}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0079",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0080",
+      "text": "## 0) How to use this checklist (1 minute)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0081",
+      "text": "**When:** Apply to (a) draft policy language, (b) classroom guidance, and (c) AI tool proposals/workflows."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0082",
+      "text": "**Output:** Mark items **Green / Yellow / Red**, note mitigations, and capture **risks for the committee risk register**."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0083",
+      "text": "**Baseline realities to design for:** Access is inevitable; detection is weak; risks are real. :contentReference[oaicite:4]{index=4}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0084",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0085",
+      "text": "## 1) Scope of review (fill in)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0086",
+      "text": "| Item | Entry |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0087",
+      "text": "|---|---|"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0088",
+      "text": "| What is being reviewed? (policy section / guidance / tool / workflow) |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0089",
+      "text": "| Target users | Students / Staff / Families / Other: |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0090",
+      "text": "| Grade bands impacted (working) | Elementary / Middle / High (or other) |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0091",
+      "text": "| Setting(s) | In-class / Homework / Assessment / IEP/504 / ELL / Other: |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0092",
+      "text": "| Data touched | Student PII / Student work / Staff data / Vendor data / None |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0093",
+      "text": "| Decision needed by Meeting 4? | Yes / No — If yes, what decision? |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0094",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0095",
+      "text": "## 2) Rapid Equity Screen (triage)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0096",
+      "text": "**Score each as:** ✅ Green (low risk) / ⚠️ Yellow (needs mitigation) / ⛔ Red (high risk)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0097",
+      "text": "| Equity domain | Screen question | Rating | Notes (who is impacted / how) | Mitigation needed (one line) |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0098",
+      "text": "|---|---|---:|---|---|"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0099",
+      "text": "| Access | Does this assume consistent home access to devices/internet? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0100",
+      "text": "| Access | Does it privilege paid tools, premium tiers, or BYO accounts? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0101",
+      "text": "| Disability / accommodations | Does it work with IEP/504 accommodations and assistive tech? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0102",
+      "text": "| Language | Does it support multilingual learners without penalizing language development? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0103",
+      "text": "| Assessment fairness | Could it increase false accusations or uneven enforcement? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0104",
+      "text": "| Safety / harm | Could it expose students to harmful content or risky interactions? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0105",
+      "text": "| Privacy / data | Could data practices disproportionately harm vulnerable students? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0106",
+      "text": "| Teacher workload | Does it shift burden to teachers in ways that reduce equitable supports? |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0107",
+      "text": "**If any ⛔ Red:** add to Section 5 (Risk Register Candidates)."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0108",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0109",
+      "text": "## 3) Deep-dive prompts (complete only where Yellow/Red)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0110",
+      "text": "### 3A) Access & opportunity gaps"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0111",
+      "text": "- What options exist for students with limited home access (time, device, bandwidth)?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0112",
+      "text": "- What “minimum viable access” is required to participate fairly?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0113",
+      "text": "- What school-provided alternatives or offline equivalents exist?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0114",
+      "text": "### 3B) Students with disabilities / accommodations"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0115",
+      "text": "- Which accommodations are relevant (text-to-speech, speech-to-text, extended time, reduced distraction, etc.)?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0116",
+      "text": "- Does the policy/guidance/tool preserve or undermine approved supports?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0117",
+      "text": "- What training is needed so staff implement consistently?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0118",
+      "text": "### 3C) English learners / language supports"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0119",
+      "text": "- Is translation/paraphrase support allowed, conditional, or prohibited by task type?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0120",
+      "text": "- Does the approach penalize students for using supports to access grade-level content?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0121",
+      "text": "- What guardrails preserve learning goals while supporting access?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0122",
+      "text": "### 3D) Fairness in integrity / enforcement"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0123",
+      "text": "- If misuse is suspected, what evidence is expected (process evidence, conferencing, drafts)?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0124",
+      "text": "- How do we avoid “detector-only” reliance and uneven discipline?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0125",
+      "text": "- What consistency mechanisms exist (rubrics, escalation path, documentation)?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0126",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0127",
+      "text": "## 4) Required mitigations & supports (choose and tailor)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0128",
+      "text": "> Convert each Yellow/Red item into one or more concrete mitigations/supports."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0129",
+      "text": "| Risk driver | Mitigation / support | Owner (who implements) | Where it lives (policy / guidance / PD / tool governance) |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0130",
+      "text": "|---|---|---|---|"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0131",
+      "text": "| Access gaps | Provide school-based access windows; device lending; offline alternative |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0132",
+      "text": "| Paid tool advantage | District-provided equivalent; ban paywalls for required work |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0133",
+      "text": "| Accommodations conflict | Explicit accommodation-safe guidance; SPED review step |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0134",
+      "text": "| ELL burden | Approved language supports + examples by grade band |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0135",
+      "text": "| Uneven enforcement | Standard process evidence expectations; educator decision support |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0136",
+      "text": "| Privacy harms | Data minimization; opt-outs; restricted categories |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0137",
+      "text": "| Staff capacity | PD micro-modules; quick-reference cards; exemplars |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0138",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0139",
+      "text": "## 5) Equity risks to add to the Meeting 4 risk register (top candidates)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0140",
+      "text": "Meeting 4 produces “top 10 risks + mitigations + owners.” :contentReference[oaicite:5]{index=5}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0141",
+      "text": "List 3–7 equity-focused risks here in **risk-register-ready** format:"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0142",
+      "text": "| Risk statement (plain) | Who is harmed | Likelihood (L/M/H) | Impact (L/M/H) | Mitigation (one line) | Owner |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0143",
+      "text": "|---|---|---:|---:|---|---|"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0144",
+      "text": "| Example: Policy assumes home GenAI access → widens achievement gaps | Students w/ limited home access |  |  | Provide in-school access + offline alternative |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0145",
+      "text": "|  |  |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0146",
+      "text": "|  |  |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0147",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0148",
+      "text": "## 6) Equity metrics & feedback loops (v1 starter set)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0149",
+      "text": "Per WS-EQA responsibilities, define equity metrics and monitoring loops. :contentReference[oaicite:6]{index=6}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0150",
+      "text": "| Metric | Disaggregate by | Data source | Review cadence | Threshold / trigger | Action when triggered |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0151",
+      "text": "|---|---|---|---|---|---|"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0152",
+      "text": "| Access availability (device/connectivity) | Grade band, school, subgroup |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0153",
+      "text": "| Integrity disputes / referrals | Grade band, subgroup |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0154",
+      "text": "| Accommodation usage barriers | Disability category, school |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0155",
+      "text": "| ELL supports usage / outcomes | ELL level, grade band |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0156",
+      "text": "| Staff training completion | Role, school |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0157",
+      "text": "| Student/parent feedback themes | Subgroup, school |  |  |  |  |"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0158",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0159",
+      "text": "## 7) Open questions for committee (Meeting 4 decision support)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0160",
+      "text": "List 3–7 decisions/questions the committee must resolve to reduce equity risk."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0161",
+      "text": "- Q1:"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0162",
+      "text": "- Q2:"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0163",
+      "text": "- Q3:"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0164",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0165",
+      "text": "## 8) Briefing slide (3–5 minutes) — copy/paste"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0166",
+      "text": "**Purpose:** WS-EQA produced an Equity Impact Checklist to prevent unintended harm and monitor disparities. :contentReference[oaicite:7]{index=7}"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0167",
+      "text": "**What’s in v1:** (1) triage screen, (2) deep-dive prompts, (3) mitigations/supports, (4) metrics & feedback loops."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0168",
+      "text": "**Top equity risks to include in risk register:** (list your top 3)."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0169",
+      "text": "**Decisions needed today:** (list 1–2 committee decisions)."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0170",
+      "text": "---"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0171",
+      "text": "This skeleton is aligned to the WS-EQA responsibilities and “definition of done” for D-EQA-1  and to Meeting 4’s constraint/risk-register gate ."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0172",
+      "text": "D-EQA-1 — Equity Impact Checklist v1 (WS-EQA)Workstream: WS-EQA (Equity & Access)Lead / Co-lead: Tom Sabo / Elizabeth ChuaDue: Meeting 4 (6 Mar 2026)Definition of done: Accessibility/accommodations + do-no-harm risks + recommended supports + equity metrics/feedback loopsUsed at Meeting 4 for: Equity lens on constraints + risk register kickoff"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0173",
+      "text": "──────────────────────────────────────────────────────────────────────────────0) HOW TO USE (FAST)Apply this checklist to: (a) policy language, (b) classroom guidance, (c) AI tools/workflows.For each item: mark ✅ Green / ⚠️ Yellow / ⛔ Red.If Yellow/Red: write a mitigation and decide where it lives (policy, guidance, PD, tool governance).Add any ⛔ risks to the risk register candidates (Section 5).──────────────────────────────────────────────────────────────────────────────"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0174",
+      "text": "1) SCOPE OF REVIEW (FILL IN)What is being reviewed? _________________________________________________Type (circle): Policy section / Guidance / Tool / Workflow / Other: ________Target users: Students / Staff / Families / Other: ______________________Grade bands: Elementary / Middle / High / Other: _______________________Setting(s): In-class / Homework / Assessment / IEP/504 / ELL / Other: __Data touched: Student PII / Student work / Staff data / Vendor data / NoneDecision needed by Meeting 4? Yes / NoIf yes, what decision? _________________________________________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0175",
+      "text": "──────────────────────────────────────────────────────────────────────────────2) RAPID EQUITY SCREEN (TRIAGE)Rating key: ✅ Green (low risk) ⚠️ Yellow (needs mitigation) ⛔ Red (high risk)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0176",
+      "text": "For each row: Rating + Notes + One-line mitigation."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0177",
+      "text": "A) ACCESS & OPPORTUNITY[ ] Assumes consistent home device/internet access? Rating: __ Notes: __________ Mitigation: ______________________[ ] Privileges paid tools/premium tiers/BYO accounts? Rating: __ Notes: __________ Mitigation: ______________________[ ] Requires advanced digital literacy without supports? Rating: __ Notes: __________ Mitigation: ______________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0178",
+      "text": "B) DISABILITY / ACCOMMODATIONS (IEP/504)[ ] Conflicts with accommodations or assistive tech? Rating: __ Notes: __________ Mitigation: ______________________[ ] Adds barriers for sensory/attention/motor needs? Rating: __ Notes: __________ Mitigation: ______________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0179",
+      "text": "C) LANGUAGE (ELL / MULTILINGUAL LEARNERS)[ ] Penalizes translation/paraphrase supports? Rating: __ Notes: __________ Mitigation: ______________________[ ] Creates inequity for students developing English? Rating: __ Notes: __________ Mitigation: ______________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0180",
+      "text": "D) FAIRNESS IN INTEGRITY / ENFORCEMENT[ ] Could increase false accusations or uneven enforcement? Rating: __ Notes: __________ Mitigation: ______________________[ ] Depends on detectors/probability scores to decide? Rating: __ Notes: __________ Mitigation: ______________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0181",
+      "text": "E) SAFETY / WELL-BEING[ ] Exposes students to harmful content or risky contact? Rating: __ Notes: __________ Mitigation: ______________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0182",
+      "text": "F) PRIVACY / DATA / RECORDS[ ] Data practices disproportionately harm vulnerable groups? Rating: __ Notes: ________ Mitigation: ______________________[ ] Unclear retention/training use/parental consent? Rating: __ Notes: __________ Mitigation: ______________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0183",
+      "text": "G) STAFF CAPACITY (EQUITY VIA IMPLEMENTATION)[ ] Shifts workload to teachers in ways that reduce support? Rating: __ Notes: _________ Mitigation: ______________________[ ] Requires training/tools that aren’t universally available? Rating: __ Notes: _______ Mitigation: ______________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0184",
+      "text": "If any ⛔ Red: add to Section 5 (Risk Register Candidates)."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0185",
+      "text": "──────────────────────────────────────────────────────────────────────────────3) DEEP-DIVE PROMPTS (COMPLETE ONLY FOR ⚠️/⛔ ITEMS)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0186",
+      "text": "3A) Access & opportunity gaps• What minimum access is required (time, device, bandwidth, accounts)?• What is the equitable alternative (offline option, school-provided access window, district tool)?• What guidance ensures students aren’t penalized for access limitations?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0187",
+      "text": "3B) Disability & accommodations• Which accommodations apply (TTS/STT, extended time, reduced distraction, etc.)?• Does this preserve or undermine approved supports?• What staff guidance/PD is required for consistent implementation?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0188",
+      "text": "3C) Language supports• Are translation/paraphrase supports allowed, conditional, or prohibited by task type?• How do we preserve learning goals while supporting access?• What examples will prevent inconsistent enforcement?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0189",
+      "text": "3D) Integrity & enforcement fairness• What evidence will staff use (process evidence, drafts, conferencing, reflections)?• What is explicitly prohibited (detector-only decisions)?• What is the escalation path for disputes?"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0190",
+      "text": "──────────────────────────────────────────────────────────────────────────────4) REQUIRED MITIGATIONS & SUPPORTS (CONVERT ⚠️/⛔ INTO ACTION)For each risk driver, state: mitigation + owner + where it lives."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0191",
+      "text": "Risk driver: ______________________Mitigation/support: _______________________________________________________Owner (who implements): _________________________________________________Where it lives (circle): Policy / Guidance / PD / Tool governance / Other: __"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0192",
+      "text": "(Repeat as needed)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0193",
+      "text": "Quick examples (edit to fit):• Access gaps → school access windows + offline equivalents + device lending• Paid advantage → district-provided equivalent or “no paywall for required work”• Accommodations conflict → SPED review step + accommodation-safe guidance• Uneven enforcement → standard process-evidence expectations + documentation"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0194",
+      "text": "──────────────────────────────────────────────────────────────────────────────5) EQUITY RISKS FOR MEETING 4 RISK REGISTER (TOP CANDIDATES)Write 3–7 risks in “register-ready” format."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0195",
+      "text": "Risk statement: __________________________________________________________Who is harmed: ___________________________________________________________Likelihood (L/M/H): __ Impact (L/M/H): __Mitigation (one line): ___________________________________________________Owner: _________________________________________________________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0196",
+      "text": "Risk statement: __________________________________________________________Who is harmed: ___________________________________________________________Likelihood (L/M/H): __ Impact (L/M/H): __Mitigation (one line): ___________________________________________________Owner: _________________________________________________________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0197",
+      "text": "(Repeat as needed)"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0198",
+      "text": "──────────────────────────────────────────────────────────────────────────────6) EQUITY METRICS & FEEDBACK LOOPS (V1 STARTER SET)Metric: __________________________ Disaggregate by: ______________________Data source: ______________________ Review cadence: ______________________Trigger/threshold: ________________________________________________________Action when triggered: ____________________________________________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0199",
+      "text": "Suggested metric starters (pick 3–6):• Access availability (device/connectivity) by grade/school/subgroup• Integrity disputes/referrals by subgroup• Accommodation barriers reported by SPED/504 category• ELL supports usage and outcomes by level/grade• Staff training completion by role/school• Student/family feedback themes by subgroup/school"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0200",
+      "text": "──────────────────────────────────────────────────────────────────────────────7) OPEN QUESTIONS FOR COMMITTEE (MEETING 4 DECISION SUPPORT)Q1: ______________________________________________________________________Q2: ______________________________________________________________________Q3: ______________________________________________________________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0201",
+      "text": "──────────────────────────────────────────────────────────────────────────────8) 3–5 MINUTE BRIEFING (READABLE SCRIPT)Purpose (1 sentence): WS-EQA produced an Equity Impact Checklist to prevent unintended harm and monitor disparities."
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0202",
+      "text": "What’s in v1 (3 bullets):• Rapid triage screen (Green/Yellow/Red)• Mitigations/supports (who does what; where it lives)• Metrics + feedback loop"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0203",
+      "text": "Top 3 equity risks to add to risk register (3 bullets):• ______________________________________• ______________________________________• ______________________________________"
+    },
+    {
+      "heading_path": [
+        "6) Close: lock the plan + immediate action items (5 min)"
+      ],
+      "section_id": "sec_0204",
+      "text": "Decisions needed today (1–2 bullets):• ______________________________________• ______________________________________"
+    }
+  ],
+  "source_hash_sha256": "d5eeb17d645644b5282b75843ea703b27ff3ff0c27d6314c6c5631a1951966c9",
+  "source_rel_path": "workstreams/eqa/20260226_WS-EQA.docx",
+  "title": "1) Open and align on “what success looks like” (5 min)"
+}

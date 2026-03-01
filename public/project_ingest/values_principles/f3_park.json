@@ -1,0 +1,105 @@
+[
+  {
+    "confidence": "high",
+    "group_path": [],
+    "id": "f3_park::0001",
+    "inferred_type": "column_header",
+    "parent_id": null,
+    "raw_fields": [
+      "Park"
+    ],
+    "source_csv_path": "project_files/03 - Values & Principles/F3 Park.csv",
+    "source_row_index": 1,
+    "text": "Park"
+  },
+  {
+    "confidence": "high",
+    "group_path": [
+      "Park"
+    ],
+    "id": "f3_park::0002",
+    "inferred_type": "column_header",
+    "parent_id": null,
+    "raw_fields": [
+      "Teachers should have access to student history of AI use on projects…",
+      "",
+      "Write-in, P-TPC"
+    ],
+    "source_csv_path": "project_files/03 - Values & Principles/F3 Park.csv",
+    "source_row_index": 2,
+    "text": "Teachers should have access to student history of AI use on projects…"
+  },
+  {
+    "confidence": "med",
+    "group_path": [
+      "Park",
+      "Teachers should have access to student history of AI use on projects…"
+    ],
+    "id": "f3_park::0003",
+    "inferred_type": "sticky",
+    "parent_id": "f3_park::0002",
+    "raw_fields": [
+      "AI assessment review to view + know school building climate on use + knowledge.",
+      "",
+      "P-AAI, Write-in"
+    ],
+    "source_csv_path": "project_files/03 - Values & Principles/F3 Park.csv",
+    "source_row_index": 3,
+    "text": "AI assessment review to view + know school building climate on use + knowledge."
+  },
+  {
+    "confidence": "med",
+    "group_path": [
+      "Park",
+      "Teachers should have access to student history of AI use on projects…"
+    ],
+    "id": "f3_park::0004",
+    "inferred_type": "sticky",
+    "parent_id": "f3_park::0002",
+    "raw_fields": [
+      "Ongoing review of evidence-based practice for innovation.",
+      "",
+      "Write-in, P-EAI"
+    ],
+    "source_csv_path": "project_files/03 - Values & Principles/F3 Park.csv",
+    "source_row_index": 4,
+    "text": "Ongoing review of evidence-based practice for innovation."
+  },
+  {
+    "confidence": "high",
+    "group_path": [
+      "Park",
+      "Teachers should have access to student history of AI use on projects…"
+    ],
+    "id": "f3_park::0005",
+    "inferred_type": "column_header",
+    "parent_id": null,
+    "raw_fields": [
+      "Consider use of on-prem AI models to avoid ethical/control issues…",
+      "",
+      "Write-in, P-GGA"
+    ],
+    "source_csv_path": "project_files/03 - Values & Principles/F3 Park.csv",
+    "source_row_index": 5,
+    "text": "Consider use of on-prem AI models to avoid ethical/control issues…"
+  },
+  {
+    "confidence": "high",
+    "group_path": [
+      "Park",
+      "Teachers should have access to student history of AI use on projects…",
+      "Consider use of on-prem AI models to avoid ethical/control issues…"
+    ],
+    "id": "f3_park::0006",
+    "inferred_type": "column_header",
+    "parent_id": null,
+    "raw_fields": [
+      "Allow students to dive deeper into interest areas… love of learning…",
+      "",
+      "P-LSD, Write-in"
+    ],
+    "source_csv_path": "project_files/03 - Values & Principles/F3 Park.csv",
+    "source_row_index": 6,
+    "text": "Allow students to dive deeper into interest areas… love of learning…"
+  }
+]

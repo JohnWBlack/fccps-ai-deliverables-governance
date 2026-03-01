@@ -1,0 +1,142 @@
+{
+  "artifact_id": "1de8e0ce00635775b9f470fa",
+  "doc_type": "json",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-27T16:11:26.467212Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0001",
+      "text": "json_excerpt\ntop_level_keys: cross_links, meta, nodes"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0002",
+      "text": "{\n  \"cross_links\": [\n    {\n      \"key\": \"assessment & academic integrity\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0004\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0006\"\n    },\n    {\n      \"key\": \"learning design & skill development\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0005\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0005\"\n    },\n    {\n      \"key\": \"teacher practice & workload\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0006\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0004\"\n    },\n    {\n      \"key\": \"equity, accessibility & bias protection\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0010\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0014\"\n    },\n    {\n      \"key\": \"safe tooling, privacy & community trust\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0011\",\n      \"target_id\": \"f2_principl"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0003",
+      "text": "e_candidates_ai_seed_drafts::0015\"\n    },\n    {\n      \"key\": \"governance, guardrails & adaptation\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0012\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0013\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0014\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0020\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0029\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0038\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0045\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0014\",\n      \"targ"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0004",
+      "text": "et_id\": \"f3_quality_filter::0020\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0014\",\n      \"target_id\": \"f3_quality_filter::0029\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0014\",\n      \"target_id\": \"f3_quality_filter::0038\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0014\",\n      \"target_id\": \"f3_quality_filter::0045\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0020\",\n      \"target_id\": \"f3_quality_filter::0029\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0020\",\n      \"target_id\": \"f3_quality_filter::0038\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0020\",\n      \"target_id\": \"f3_quality_filter::0045\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0029\",\n      \"target_id\": \"f3_quality_filter::0038\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\""
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0005",
+      "text": ": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0029\",\n      \"target_id\": \"f3_quality_filter::0045\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_text\",\n      \"source_id\": \"f3_quality_filter::0038\",\n      \"target_id\": \"f3_quality_filter::0045\"\n    },\n    {\n      \"key\": \"assessment & academic integrity\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0004\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0006\"\n    },\n    {\n      \"key\": \"learning design & skill development\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0005\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0005\"\n    },\n    {\n      \"key\": \"teacher practice & workload\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0006\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0004\"\n    },\n    {\n      \"key\": \"equity, accessibility & bias protection\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0010\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0006",
+      "text": "\"target_id\": \"f2_principle_candidates_ai_seed_drafts::0014\"\n    },\n    {\n      \"key\": \"safe tooling, privacy & community trust\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0011\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0015\"\n    },\n    {\n      \"key\": \"governance, guardrails & adaptation\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f1_inputs_top_risks_top_opportunities_synthesized_themes::0012\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0013\"\n    },\n    {\n      \"key\": \"data minimization\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0002\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0020\"\n    },\n    {\n      \"key\": \"data minimization\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0002\",\n      \"target_id\": \"f3_quality_filter::0039\"\n    },\n    {\n      \"key\": \"data minimization\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0020\",\n      \"target_id\": \"f3_quality_filter::0039\"\n    },\n    {\n      \"key\": \"plain\",\n      \"method\": \"same_short_label\",\n      \"sourc"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0007",
+      "text": "e_id\": \"f2_pass::0003\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0021\"\n    },\n    {\n      \"key\": \"plain\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0003\",\n      \"target_id\": \"f3_quality_filter::0040\"\n    },\n    {\n      \"key\": \"plain\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0021\",\n      \"target_id\": \"f3_quality_filter::0040\"\n    },\n    {\n      \"key\": \"teacher judgment leads\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0004\",\n      \"target_id\": \"f3_quality_filter::0015\"\n    },\n    {\n      \"key\": \"support before expectation\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0005\",\n      \"target_id\": \"f3_quality_filter::0016\"\n    },\n    {\n      \"key\": \"process evidence\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0006\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0009\"\n    },\n    {\n      \"key\": \"process evidence\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0006\",\n      \"target_id\": \"f3_quality_filter::0021\"\n    },\n    {\n      \"key\": \"process evidence\",\n      \"method\": \"same_short_label\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0008",
+      "text": "\"source_id\": \"f2_principle_candidates_ai_seed_drafts::0009\",\n      \"target_id\": \"f3_quality_filter::0021\"\n    },\n    {\n      \"key\": \"equity by design\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0007\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0018\"\n    },\n    {\n      \"key\": \"equity by design\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0007\",\n      \"target_id\": \"f3_quality_filter::0030\"\n    },\n    {\n      \"key\": \"equity by design\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0018\",\n      \"target_id\": \"f3_quality_filter::0030\"\n    },\n    {\n      \"key\": \"no detector\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0008\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0010\"\n    },\n    {\n      \"key\": \"no detector\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0008\",\n      \"target_id\": \"f3_quality_filter::0022\"\n    },\n    {\n      \"key\": \"no detector\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0010\",\n      \"target_id\": \"f3_quality_filter::0022\"\n    },\n    {\n      \"key\":"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0009",
+      "text": "\"human review for high\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0009\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0019\"\n    },\n    {\n      \"key\": \"human review for high\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0009\",\n      \"target_id\": \"f3_quality_filter::0031\"\n    },\n    {\n      \"key\": \"human review for high\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0019\",\n      \"target_id\": \"f3_quality_filter::0031\"\n    },\n    {\n      \"key\": \"tiered permissioning\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0010\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0016\"\n    },\n    {\n      \"key\": \"tiered permissioning\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0010\",\n      \"target_id\": \"f3_quality_filter::0046\"\n    },\n    {\n      \"key\": \"tiered permissioning\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0016\",\n      \"target_id\": \"f3_quality_filter::0046\"\n    },\n    {\n      \"key\": \"evidence\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0011\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0010",
+      "text": "\"target_id\": \"f2_principle_candidates_ai_seed_drafts::0017\"\n    },\n    {\n      \"key\": \"evidence\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0011\",\n      \"target_id\": \"f3_quality_filter::0047\"\n    },\n    {\n      \"key\": \"evidence\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0017\",\n      \"target_id\": \"f3_quality_filter::0047\"\n    },\n    {\n      \"key\": \"deep skills first\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0012\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0007\"\n    },\n    {\n      \"key\": \"deep skills first\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0012\",\n      \"target_id\": \"f3_quality_filter::0003\"\n    },\n    {\n      \"key\": \"deep skills first\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0007\",\n      \"target_id\": \"f3_quality_filter::0003\"\n    },\n    {\n      \"key\": \"ai as coach\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0013\",\n      \"target_id\": \"f2_principle_candidates_ai_seed_drafts::0008\"\n    },\n    {\n      \"key\": \"ai as coach\",\n      \"method\": \"same_short_label\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0011",
+      "text": "\"source_id\": \"f2_pass::0013\",\n      \"target_id\": \"f3_quality_filter::0004\"\n    },\n    {\n      \"key\": \"ai as coach\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_principle_candidates_ai_seed_drafts::0008\",\n      \"target_id\": \"f3_quality_filter::0004\"\n    },\n    {\n      \"key\": \"build ai literacy in students + staff… skills\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0014\",\n      \"target_id\": \"f3_quality_filter::0008\"\n    },\n    {\n      \"key\": \"prioritize student safety & developmental appropriateness… protected from\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_pass::0015\",\n      \"target_id\": \"f3_quality_filter::0048\"\n    },\n    {\n      \"key\": \"provide easy, open, fast methods of gathering feedback\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0002\",\n      \"target_id\": \"f3_quality_filter::0041\"\n    },\n    {\n      \"key\": \"encourage thoughtful experimentation… monitoring and review systems… responsive\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0003\",\n      \"target_id\": \"f3_quality_filter::0042\"\n    },\n    {\n      \"key\": \"assigned roles on checking + monitoring… leaks, privacy\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0012",
+      "text": "\"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0004\",\n      \"target_id\": \"f3_quality_filter::0043\"\n    },\n    {\n      \"key\": \"pre\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0005\",\n      \"target_id\": \"f3_quality_filter::0023\"\n    },\n    {\n      \"key\": \"rely on design factors + restrict ai\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0006\",\n      \"target_id\": \"f3_quality_filter::0025\"\n    },\n    {\n      \"key\": \"no ai detectors until proven adequate and fair\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0007\",\n      \"target_id\": \"f3_quality_filter::0026\"\n    },\n    {\n      \"key\": \"students will disclose when using ai… to foster\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0008\",\n      \"target_id\": \"f3_quality_filter::0027\"\n    },\n    {\n      \"key\": \"fccps will not require the use of ai\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0009\",\n      \"target_id\": \"f3_quality_filter::0032\"\n    },\n    {\n      \"key\": \"little to no ai in iep process\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0010\",\n      \"target_id\": \"f3_quality_filt"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0013",
+      "text": "er::0033\"\n    },\n    {\n      \"key\": \"provide ai literacy training along w/ access to\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0011\",\n      \"target_id\": \"f3_quality_filter::0034\"\n    },\n    {\n      \"key\": \"protect learning objectives from cognitive offloading\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0012\",\n      \"target_id\": \"f3_quality_filter::0009\"\n    },\n    {\n      \"key\": \"require transparency from students and staff when ai\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0013\",\n      \"target_id\": \"f3_quality_filter::0051\"\n    },\n    {\n      \"key\": \"reasonable ai restrictions\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0014\",\n      \"target_id\": \"f3_quality_filter::0010\"\n    },\n    {\n      \"key\": \"only recommend uses that are evidence\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0015\",\n      \"target_id\": \"f3_quality_filter::0012\"\n    },\n    {\n      \"key\": \"gather before and after data to understand effects\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0016\",\n      \"target_id\": \"f3_quality_filter::0050\"\n    },\n    {\n      \"key\": \"staf"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0014",
+      "text": "f will have a voice / a think\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0017\",\n      \"target_id\": \"f3_quality_filter::0017\"\n    },\n    {\n      \"key\": \"encourage use of ai to create additional materials\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0018\",\n      \"target_id\": \"f3_quality_filter::0036\"\n    },\n    {\n      \"key\": \"keep learning human… hands\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0019\",\n      \"target_id\": \"f3_quality_filter::0006\"\n    },\n    {\n      \"key\": \"educators will design learning experiences that require visible\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0020\",\n      \"target_id\": \"f3_quality_filter::0007\"\n    },\n    {\n      \"key\": \"fccps discourages faculty from outsourcing feedback to ai\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0021\",\n      \"target_id\": \"f3_quality_filter::0011\"\n    },\n    {\n      \"key\": \"school will not change budgets until ai has\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0022\",\n      \"target_id\": \"f3_quality_filter::0052\"\n    },\n    {\n      \"key\": \"all school uses… seek stakeholder perm"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0015",
+      "text": "ission, opt\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0023\",\n      \"target_id\": \"f3_quality_filter::0053\"\n    },\n    {\n      \"key\": \"failure\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f2_revise::0024\",\n      \"target_id\": \"f3_quality_filter::0056\"\n    },\n    {\n      \"key\": \"teachers should have access to student history of\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_park::0002\",\n      \"target_id\": \"f3_quality_filter::0018\"\n    },\n    {\n      \"key\": \"ai assessment review to view + know school\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_park::0003\",\n      \"target_id\": \"f3_quality_filter::0024\"\n    },\n    {\n      \"key\": \"ongoing review of evidence\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_park::0004\",\n      \"target_id\": \"f3_quality_filter::0035\"\n    },\n    {\n      \"key\": \"consider use of on\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_park::0005\",\n      \"target_id\": \"f3_quality_filter::0049\"\n    },\n    {\n      \"key\": \"allow students to dive deeper into interest areas…\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_park::0006\",\n      \"target_id\": \"f3_quality_filte"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0016",
+      "text": "r::0005\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0001\",\n      \"target_id\": \"f3_quality_filter::0013\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0001\",\n      \"target_id\": \"f3_quality_filter::0019\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0001\",\n      \"target_id\": \"f3_quality_filter::0028\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0001\",\n      \"target_id\": \"f3_quality_filter::0037\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0001\",\n      \"target_id\": \"f3_quality_filter::0044\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0013\",\n      \"target_id\": \"f3_quality_filter::0019\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0013\",\n      \"target_id\": \"f3_quality_filter::0028\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_la"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0017",
+      "text": "bel\",\n      \"source_id\": \"f3_quality_filter::0013\",\n      \"target_id\": \"f3_quality_filter::0037\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0013\",\n      \"target_id\": \"f3_quality_filter::0044\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0019\",\n      \"target_id\": \"f3_quality_filter::0028\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0019\",\n      \"target_id\": \"f3_quality_filter::0037\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0019\",\n      \"target_id\": \"f3_quality_filter::0044\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0028\",\n      \"target_id\": \"f3_quality_filter::0037\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0028\",\n      \"target_id\": \"f3_quality_filter::0044\"\n    },\n    {\n      \"key\": \"<p>p\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0037\",\n      \"target_id\": \"f"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0018",
+      "text": "3_quality_filter::0044\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0014\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0020\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0029\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \"f3_quality_filter::0002\",\n      \"target_id\": \"f3_quality_filter::0038\"\n    },\n    {\n      \"key\": \"candidate\",\n      \"method\": \"same_short_label\",\n      \"source_id\": \n... [TRUNCATED]"
+    }
+  ],
+  "source_hash_sha256": "a2551fb1fcfe5fea8a20efdf46acd93ab8e7c09098d9d0f2112f90c18a2e9d03",
+  "source_rel_path": "03 - Values & Principles/derived_json/values_principles_rollup.json",
+  "title": "json_excerpt"
+}

@@ -1,0 +1,93 @@
+{
+  "artifact_id": "c9d800ea3e7d8633aa083431",
+  "doc_type": "json",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-28T02:16:55.775331Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0001",
+      "text": "json_excerpt\ntop_level_keys: design_goals, generated_at, questions, title"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0002",
+      "text": "{\n  \"design_goals\": [\n    \"Decision-ready: forced-choice where possible; minimize open-text required fields.\",\n    \"Resolve only (a) three definition locks and (b) six red-zone F3 items.\",\n    \"Capture dissent without stalling: allow brief guardrail/objection text only when 'cannot support' is selected.\"\n  ],\n  \"generated_at\": \"2026-02-28T01:59:34.505651+00:00\",\n  \"questions\": [\n    {\n      \"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"High-stakes = work used for major summative decisions (final course grade components, graduation/placement decisions, standardized/end-of-course assessments, integrity investigations).\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"High-stakes = any summative graded work above a threshold (e.g., ≥20% of term grade), plus standardized/end-of-course assessments.\"\n        },\n        {\n          \"code\": \"C\",\n          \"label\": \"High-stakes = teacher-designated using a rubric (stakes + authenticity sensitivity + student age), documented in course guidance.\"\n        },\n        {\n          \"code\": \"N\",\n          \"label\": \"Need more info / cannot decide from these options.\"\n        }\n      ],\n      \"id\": \"D1\",\n      \"opt"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0003",
+      "text": "ional_comment\": \"If you chose N, what’s the minimum clarification needed (≤25 words)?\",\n      \"prompt\": \"Pick the definition FCCPS should use for high-stakes AI guidance (used for assessment restrictions, disclosure expectations, and due-process safeguards).\",\n      \"title\": \"Definition lock: “High-stakes work”\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"Only GenAI content generation (drafting/rewriting/summarizing) and open-ended AI chat/tutoring tools.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"GenAI generation + AI-enabled editing (grammar/style/paraphrase) + AI chat/tutoring tools.\"\n        },\n        {\n          \"code\": \"C\",\n          \"label\": \"All of the above PLUS AI features embedded in common platforms (predictive writing, smart compose) unless explicitly exempted.\"\n        },\n        {\n          \"code\": \"N\",\n          \"label\": \"Need more info / cannot decide from these options.\"\n        }\n      ],\n      \"id\": \"D2\",\n      \"optional_comment\": \"If you chose N, name 1 tool category you think must be explicitly included or excluded (≤25 words).\",\n      \"prompt\": \"Choose which categor"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0004",
+      "text": "ies of tools count as “AI assistance” for disclosure and restriction rules (this does NOT limit accessibility accommodations; it only defines what the rules apply to).\",\n      \"title\": \"Definition lock: What counts as “AI assistance” for disclosure/restrictions\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"3-level rubric: Low-risk (practice/brainstorming), Medium-risk (graded formative), High-risk (high-stakes/summative). Apply grade-bands (K–5, 6–8, 9–12) for stricter defaults at younger ages.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"2×2 matrix: Stakes (Low/High) × Autonomy (Independent/Supported). “High-stakes + Independent” gets the strongest limits and strongest process-evidence expectations.\"\n        },\n        {\n          \"code\": \"N\",\n          \"label\": \"Need more info / cannot decide from these options.\"\n        }\n      ],\n      \"id\": \"D3\",\n      \"optional_comment\": \"If you chose N, what’s missing (≤25 words)?\",\n      \"prompt\": \"Select the plain-language rubric FCCPS should adopt for risk-based AI limits (used to set “permitted / conditional / restricted” examples).\",\n      \"title\""
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0005",
+      "text": ": \"Definition lock: “Risk-based” rubric (plain-language)\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"FCCPS will maintain a living, grade-banded AI Use Guidance library for common student and staff tasks, showing permitted/conditional/restricted uses and required disclosure expectations; guidance will be updated when rules or tools change.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"FCCPS will publish grade-banded AI quick guides for common tasks (permitted/conditional/restricted) and update them on a regular cadence (e.g., annually), with school/class-level addenda as needed.\"\n        },\n        {\n          \"code\": \"X\",\n          \"label\": \"Cannot support either option as written.\"\n        }\n      ],\n      \"id\": \"R1\",\n      \"optional_comment\": \"If you chose X, what is the single biggest defect to fix (≤25 words)?\",\n      \"prompt\": \"Choose the clause FCCPS should adopt for publishing clear, usable AI guidance (students + staff).\",\n      \"title\": \"F3-04 — Common use-case language (decision-ready rewrite)\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0006",
+      "text": "\": \"A\",\n          \"label\": \"Hybrid default (recommended): FCCPS will protect high-stakes validity primarily through assessment design and process evidence (drafts/checkpoints/oral defense), applying AI restrictions only when validity cannot be preserved otherwise, using grade-banded rules.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"Restriction-first default: For high-stakes work, default to restricted AI conditions; allow AI only with explicit permission and controlled settings.\"\n        },\n        {\n          \"code\": \"C\",\n          \"label\": \"Design-first default: For high-stakes work, default to robust design/process evidence rather than restrictions (restrictions rare).\"\n        },\n        {\n          \"code\": \"X\",\n          \"label\": \"Cannot support any option as written.\"\n        }\n      ],\n      \"id\": \"R2\",\n      \"optional_comment\": \"If you chose X, name one guardrail or condition that would make an option acceptable (≤25 words).\",\n      \"prompt\": \"Choose the default posture for high-stakes assessment validity in an AI-available world.\",\n      \"title\": \"F3-05 — Assessment validity posture (decision-ready rewrite)\",\n      \"type\": \"single_choice\"\n    },\n    {"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0007",
+      "text": "\"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"Advisory-only with guardrails: Detector outputs may be used only after local validation for accuracy/bias; never sole evidence; must be corroborated by non-detector evidence and due process.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"No detectors in integrity decisions: Do not use detector tools in student integrity determinations (they may be used only for internal research/monitoring, not student-facing decisions).\"\n        },\n        {\n          \"code\": \"X\",\n          \"label\": \"Cannot support either option as written.\"\n        }\n      ],\n      \"id\": \"R3\",\n      \"optional_comment\": \"If you chose X, what minimum constraint is required (≤25 words)?\",\n      \"prompt\": \"Choose the FCCPS posture on AI detection tools for integrity decisions.\",\n      \"title\": \"F3-06 — Detector posture (decision-ready rewrite)\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"Advance notice for all + consent/opt-out where feasible; default to data minimization and approved tools; require vendor terms that prohibit training models on FCCPS studen"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0008",
+      "text": "t data.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"Consent/opt-out required for any AI use involving student data (beyond legal minimums).\"\n        },\n        {\n          \"code\": \"C\",\n          \"label\": \"Notice-only (opt-out only where legally required), with strong data minimization and approved-tool requirements.\"\n        },\n        {\n          \"code\": \"X\",\n          \"label\": \"Cannot support any option as written.\"\n        }\n      ],\n      \"id\": \"R4\",\n      \"optional_comment\": \"If you chose X, what is the one must-have safeguard (≤25 words)?\",\n      \"prompt\": \"Choose the FCCPS posture for notice/consent/opt-out regarding approved AI uses involving student data.\",\n      \"title\": \"F3-15 — Notice / consent / opt-out (decision-ready rewrite)\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"Operational rule: When learning goals require independent practice, hands-on work, collaboration, or oral explanation, FCCPS will design tasks that require those modalities—even if AI is available—so AI supports (not replaces) intended skills.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"Pr"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0009",
+      "text": "inciple-only rule: FCCPS will balance AI use with hands-on, collaborative, and offline learning experiences appropriate to age and purpose (educator judgment determines specifics).\"\n        },\n        {\n          \"code\": \"X\",\n          \"label\": \"Cannot support either option as written.\"\n        }\n      ],\n      \"id\": \"R5\",\n      \"optional_comment\": \"If you chose X, what’s missing (≤25 words)?\",\n      \"prompt\": \"Choose the clause FCCPS should adopt to avoid “mushy balance” and make the rule operational.\",\n      \"title\": \"F3-20 — Human-centered learning (decision-ready rewrite)\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code\": \"A\",\n          \"label\": \"Guardrailed drafting (recommended): Educators may use AI to assist drafting feedback; educators must review, personalize, and own final feedback; AI cannot be the sole source of evaluative feedback or grades.\"\n        },\n        {\n          \"code\": \"B\",\n          \"label\": \"Stronger constraint: Do not allow AI to generate evaluative feedback; AI may assist only with non-evaluative supports (e.g., rubric alignment, suggestion banks) under educator control.\"\n        },\n        {\n          \"code\": \""
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0010",
+      "text": "X\",\n          \"label\": \"Cannot support either option as written.\"\n        }\n      ],\n      \"id\": \"R6\",\n      \"optional_comment\": \"If you chose X, state one acceptable boundary line (≤25 words).\",\n      \"prompt\": \"Choose the FCCPS posture on AI assistance in teacher feedback to students.\",\n      \"title\": \"F3-22 — Teacher-owned feedback (decision-ready rewrite)\",\n      \"type\": \"single_choice\"\n    },\n    {\n      \"choices\": [\n        {\n          \"code\": \"R2\",\n          \"label\": \"Assessment validity posture (R2)\"\n        },\n        {\n          \"code\": \"R3\",\n          \"label\": \"Detector posture (R3)\"\n        },\n        {\n          \"code\": \"R4\",\n          \"label\": \"Notice/consent/opt-out (R4)\"\n        },\n        {\n          \"code\": \"R5\",\n          \"label\": \"Human-centered learning (R5)\"\n        },\n        {\n          \"code\": \"R6\",\n          \"label\": \"Teacher-owned feedback (R6)\"\n        },\n        {\n          \"code\": \"D1\",\n          \"label\": \"High-stakes definition (D1)\"\n        },\n        {\n          \"code\": \"D2\",\n          \"label\": \"AI assistance scope definition (D2)\"\n        },\n        {\n          \"code\": \"D3\",\n          \"label\": \"Risk-based rubric definition (D3)\"\n        }\n      ],"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0011",
+      "text": "\"id\": \"O1\",\n      \"prompt\": \"Select up to TWO items that, if unresolved, would cause you to vote NO at Meeting 4.\",\n      \"title\": \"Optional: Identify your top “must-fix” items (to focus 1:1 follow-up)\",\n      \"type\": \"multi_select\"\n    }\n  ],\n  \"title\": \"Values & Principles — Part 2 (Definition Locks + Red-Zone Resolutions)\"\n}"
+    }
+  ],
+  "source_hash_sha256": "7dfd4312df652102c2d745cab774bb3021e4770f6f5410d0ac50bca3f5d8354d",
+  "source_rel_path": "03 - Values & Principles/vp_part2_question_set_first_pass.json",
+  "title": "json_excerpt"
+}

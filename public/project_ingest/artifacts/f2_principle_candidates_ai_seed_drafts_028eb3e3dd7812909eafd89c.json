@@ -1,0 +1,114 @@
+{
+  "artifact_id": "028eb3e3dd7812909eafd89c",
+  "doc_type": "json",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-27T16:11:26.452689Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0001",
+      "text": "json_excerpt\n[\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0002\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 2,\n    \"text\": \"F2 Principle Candidates (AI Seed Drafts)\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0003\",\n    \"inferred_type\": \"prompt\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Write principles in decision language: “FCCPS will [do / prioritize X] [to achieve Y], so that Z.”.\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 3,\n    \"text\": \"Write principles in decision language: “FCCPS will [do / prioritize X] [to achieve Y], so that Z.”.\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\"\n    ],\n    \"id\": \"f2_principle_ca"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0002",
+      "text": "ndidates_ai_seed_drafts::0004\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Teacher Practice & Workload\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 4,\n    \"text\": \"Teacher Practice & Workload\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0005\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Learning Design & Skill Development\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 5,\n    \"text\": \"Learning Design & Skill Development\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0006\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"A"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0003",
+      "text": "ssessment & Academic Integrity\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 6,\n    \"text\": \"Assessment & Academic Integrity\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0007\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0006\",\n    \"raw_fields\": [\n      \"Deep skills first. FCCPS will design learning that requires student reasoning and reflection, even when AI assistance is available.\",\n      \"\",\n      \"AI seed, P-LSD\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 7,\n    \"text\": \"Deep skills first. FCCPS will design learning that requires student reasoning and reflection, even when AI assistance is available.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\","
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0004",
+      "text": "\"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0008\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0006\",\n    \"raw_fields\": [\n      \"AI as coach.  FCCPS will encourage AI use that supports learning processes, not replacement of student work products.\",\n      \"\",\n      \"AI seed, P-LSD\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 8,\n    \"text\": \"AI as coach.  FCCPS will encourage AI use that supports learning processes, not replacement of student work products.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0009\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0006\",\n    \"raw_fields\": [\n      \"Process evidence.  FCCPS will use assessment desig"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0005",
+      "text": "ns that make student thinking visible for high-stakes work.\",\n      \"\",\n      \"AI seed, P-AAI\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 9,\n    \"text\": \"Process evidence.  FCCPS will use assessment designs that make student thinking visible for high-stakes work.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0010\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0006\",\n    \"raw_fields\": [\n      \"No detector-only decisions. FCCPS will not base integrity determinations solely on AI detection tools or probability scores.\",\n      \"\",\n      \"AI seed, P-AAI\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 10,\n    \"text\": \"No detector-only decisions. FCCPS will not base integrity determinations solely on AI detection tools or"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0006",
+      "text": "probability scores.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0011\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0006\",\n    \"raw_fields\": [\n      \"Teacher judgment leads — FCCPS will treat AI as a support tool; educators remain accountable decision-makers for instruction and evaluation.\",\n      \"\",\n      \"AI seed, P-TPW\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 11,\n    \"text\": \"Teacher judgment leads — FCCPS will treat AI as a support tool; educators remain accountable decision-makers for instruction and evaluation.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0012\""
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0007",
+      "text": ",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0006\",\n    \"raw_fields\": [\n      \"Support before expectation — FCCPS will not expect staff adoption without aligned training, exemplars, and accessible guidance.\",\n      \"\",\n      \"AI seed, P-TPW\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 12,\n    \"text\": \"Support before expectation — FCCPS will not expect staff adoption without aligned training, exemplars, and accessible guidance.\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0013\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Governance, Guardrails & Adaptation\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 13,\n    \"text\": \"Governance, Guardrails & Adaptation\"\n  },\n  {"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0008",
+      "text": "\"confidence\": \"high\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\",\n      \"Governance, Guardrails & Adaptation\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0014\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Equity, Accessibility & Bias Protection\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 14,\n    \"text\": \"Equity, Accessibility & Bias Protection\"\n  },\n  {\n    \"confidence\": \"high\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\",\n      \"Governance, Guardrails & Adaptation\",\n      \"Equity, Accessibility & Bias Protection\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0015\",\n    \"inferred_type\": \"column_header\",\n    \"parent_id\": null,\n    \"raw_fields\": [\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"source_csv_path\": \"pr"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0009",
+      "text": "oject_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 15,\n    \"text\": \"Safe Tooling, Privacy & Community Trust\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\",\n      \"Governance, Guardrails & Adaptation\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0016\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0015\",\n    \"raw_fields\": [\n      \"Tiered permissioning. FCCPS will define AI uses permitted by default, uses requiring review, and uses prohibited due to risk.\",\n      \"\",\n      \"AI seed, P-GGA\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 16,\n    \"text\": \"Tiered permissioning. FCCPS will define AI uses permitted by default, uses requiring review, and uses prohibited due to risk.\"\n  },\n  {\n    \"confidence\": \"med"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0010",
+      "text": "\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\",\n      \"Governance, Guardrails & Adaptation\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0017\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0015\",\n    \"raw_fields\": [\n      \"Evidence-driven updates. FCCPS will revise AI guidance on a defined cadence using evidence of impact and incidents—not anecdotes.\",\n      \"\",\n      \"AI seed, P-GGA\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 17,\n    \"text\": \"Evidence-driven updates. FCCPS will revise AI guidance on a defined cadence using evidence of impact and incidents—not anecdotes.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integ"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0011",
+      "text": "rity\",\n      \"Governance, Guardrails & Adaptation\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0018\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0015\",\n    \"raw_fields\": [\n      \"Equity by design.  FCCPS will ensure access to approved AI tools and supports does not depend on home resources.\",\n      \"\",\n      \"AI seed, P-EAI\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 18,\n    \"text\": \"Equity by design.  FCCPS will ensure access to approved AI tools and supports does not depend on home resources.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\",\n      \"Governance, Guardrails & Adaptation\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0019\",\n    \"infe"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0012",
+      "text": "rred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0015\",\n    \"raw_fields\": [\n      \"Human review for high-stakes.  FCCPS will require human oversight for AI-influenced decisions affecting grades, supports, or accommodations.\",\n      \"\",\n      \"AI seed, P-EAI\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 19,\n    \"text\": \"Human review for high-stakes.  FCCPS will require human oversight for AI-influenced decisions affecting grades, supports, or accommodations.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\",\n      \"Governance, Guardrails & Adaptation\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0020\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0015\",\n    \"raw_fields\": [\n      \"Data minimization.  FCCPS will minimize student data"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0013",
+      "text": "shared with AI systems and use only tools with appropriate protections.\",\n      \"\",\n      \"AI seed, P-TPC\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 20,\n    \"text\": \"Data minimization.  FCCPS will minimize student data shared with AI systems and use only tools with appropriate protections.\"\n  },\n  {\n    \"confidence\": \"med\",\n    \"group_path\": [\n      \"F2 Principle Candidates (AI Seed Drafts)\",\n      \"Teacher Practice & Workload\",\n      \"Learning Design & Skill Development\",\n      \"Assessment & Academic Integrity\",\n      \"Governance, Guardrails & Adaptation\",\n      \"Equity, Accessibility & Bias Protection\",\n      \"Safe Tooling, Privacy & Community Trust\"\n    ],\n    \"id\": \"f2_principle_candidates_ai_seed_drafts::0021\",\n    \"inferred_type\": \"sticky\",\n    \"parent_id\": \"f2_principle_candidates_ai_seed_drafts::0015\",\n    \"raw_fields\": [\n      \"Plain-language transparency  FCCPS will communicate approved uses, expectations, and data practices to students and families clearly.\",\n      \"\",\n      \"AI seed, P-TPC\"\n    ],\n    \"source_csv_path\": \"project_files/03 - Values & Principles/F2 Principle"
+    },
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0014",
+      "text": "Candidates (AI Seed Drafts).csv\",\n    \"source_row_index\": 21,\n    \"text\": \"Plain-language transparency  FCCPS will communicate approved uses, expectations, and data practices to students and families clearly.\"\n  }\n]"
+    }
+  ],
+  "source_hash_sha256": "8ed15b7d06f97e9e3f61360f9c7813e23fce03147d7aaa92fbbe3bc9684dc0f1",
+  "source_rel_path": "03 - Values & Principles/derived_json/F2 Principle Candidates (AI Seed Drafts).json",
+  "title": "json_excerpt"
+}

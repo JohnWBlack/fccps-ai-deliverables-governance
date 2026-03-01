@@ -1,0 +1,63 @@
+{
+  "artifact_id": "faccac3e659a5ceedc396221",
+  "doc_type": "md",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-24T21:05:01.984972Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [],
+      "section_id": "sec_0001",
+      "text": "Stateoftheart AI reasoning systems partially mirror human cognitive science\n\n**Short answer:** *Stateoftheart AI reasoning systems partially mirror human cognitive science in structure (perception, memory, reasoning) but diverge on deeper alignment—especially for concept grounding, metacognition, and social cognition.* **Bridging those gaps is an active research area called cognitive or concept alignment.** 12"
+    },
+    {
+      "heading_path": [
+        "Highlevel comparison"
+      ],
+      "section_id": "sec_0002.1",
+      "text": "| Cognitive domain                  | Human function                               | AI stateoftheart                                                      |\n|-----------------------------------|----------------------------------------------|-----------------------------------------------------------------------|\n| Perception & Attention            | Sensory filtering, salience, selective focus | Strong: deep nets and attention layers handle multimodal input well.  |\n| Memory Activation                 | Episodic recall, context retrieval           | Improving: retrievalaugmented models and episodic buffers exist.      |\n| Comprehension                     | Grounded meaning, world models               | Mixed: large models capture patterns but often lack robust grounding. |\n| Basic Reasoning                   | Logical inference, pattern generalization    | Good at many tasks via chainofthought and hybrid methods.             |\n| Critical Thinking & Metacognition | Selfmonitoring, uncertainty calibration      | Limited: nascent metalearners and confidence calibration research.    |\n| Social Cognition                  | Theory of mind, norms, perspective taking    | Early: multiagen"
+    },
+    {
+      "heading_path": [
+        "Highlevel comparison"
+      ],
+      "section_id": "sec_0003.2",
+      "text": "t sims and persona work exist but are immature.       |\n| Executive Control                 | Planning, inhibition, goal management        | Emerging: hierarchical planners and orchestrators show promise. 3     |"
+    },
+    {
+      "heading_path": [
+        "Why alignment is partial"
+      ],
+      "section_id": "sec_0004",
+      "text": "-   **Architectural parallels exist**: transformers, attention, retrieval modules, and hierarchical planners map to perception, attention, memory, and control in broad strokes. **This gives functional similarity but not conceptual parity.** 1\n-   **Concept grounding remains a core gap.** Humans form concepts through multimodal, embodied interaction and social negotiation; many models learn statistical associations that can drift or misalign with human concepts. Recent work argues for *concept alignment* as a prerequisite to value alignment. 1\n-   **Metacognition and robust critical thinking are nascent.** Research on metalearners, introspection logs, and uncertainty calibration is growing, but these capabilities are not yet as integrated or reliable as human selfmonitoring. 3"
+    },
+    {
+      "heading_path": [
+        "Risks and limitations"
+      ],
+      "section_id": "sec_0005",
+      "text": "-   **Overclaiming parity**: treating AI outputs as humanlike reasoning can mask brittleness and misinterpretation. **Important:** evaluation must test for concept drift, adversarial failure modes, and social-context errors. 13"
+    },
+    {
+      "heading_path": [
+        "Practical steps to improve alignment"
+      ],
+      "section_id": "sec_0006",
+      "text": "-   **Invest in multimodal, embodied training** to better ground concepts.\n-   **Develop conceptalignment benchmarks** that measure shared semantics between humans and models. 1\n-   **Integrate metacontrol layers** (confidence calibration, introspection traces) and multiagent social simulations to mature metacognition and social cognition. 3\n\n**Bottom line:** AI architectures echo many human cognitive components, but *true alignment*—shared concepts, reliable metacognition, and nuanced social reasoning—remains an open research frontier with active work in concept alignment and cognitive alignment science. 12"
+    },
+    {
+      "heading_path": [
+        "References (3)"
+      ],
+      "section_id": "sec_0007",
+      "text": "1*[2401.08672] Concept Alignment -* [*arXiv.org*](https://arXiv.org). <https://arxiv.org/abs/2401.08672>\n\n2*Human-AI Alignment: Foundations of Cognitive Alignment Science™*. <https://cognitivealignmentscience.com/human-ai-alignment/>\n\n3*From prototype to persona: AI agents for decision support and cognitive ...*. <https://iacis.org/iis/2025/1_iis_2025_338-351.pdf>"
+    }
+  ],
+  "source_hash_sha256": "2911071049a7025cc3702e7a139810bfb338aa6a83665af1897b734282352811",
+  "source_rel_path": "Members' Corners/John Black/002_Stateoftheart-AI-reasoning-systems-partially-mirror-human-cognitive-science.md",
+  "title": "Highlevel comparison"
+}

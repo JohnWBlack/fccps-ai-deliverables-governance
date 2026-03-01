@@ -1,0 +1,23 @@
+{
+  "artifact_id": "3bfb44e3ea75bfa40ea878cb",
+  "doc_type": "json",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-27T16:11:26.461183Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "json_excerpt"
+      ],
+      "section_id": "sec_0001",
+      "text": "json_excerpt\ntop_level_keys: object_count, row_count_raw, source_csv_path, source_sha256, transform_version\n\n{\n  \"object_count\": 64,\n  \"row_count_raw\": 64,\n  \"source_csv_path\": \"project_files/03 - Values & Principles/F3 Quality Filter.csv\",\n  \"source_sha256\": \"cbcedf9b37ee9a215204815c4e5a4a157bc9e38ee3102f6350ae2ad3c6e278ce\",\n  \"transform_version\": \"1.1.0\"\n}"
+    }
+  ],
+  "source_hash_sha256": "d070a76cf4d35a46cf6372c4e8510ac46b44bc7af45a07f477bcda0549e19b07",
+  "source_rel_path": "03 - Values & Principles/derived_json/F3 Quality Filter.manifest.json",
+  "title": "json_excerpt"
+}

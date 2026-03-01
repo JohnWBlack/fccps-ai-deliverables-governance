@@ -1,0 +1,56 @@
+{
+  "artifact_id": "8b209b5865e0ee3ecd5bb02a",
+  "doc_type": "md",
+  "extracted_at_utc": "2026-03-01T04:19:51.095626Z",
+  "file_mtime_utc": "2026-02-24T21:05:01.984416Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [],
+      "section_id": "sec_0001",
+      "text": "**Quick answer:** Below is a compact, fourcolumn table that explains each stage’s role for humans, why it matters for reasoning AI, and concrete technologies/approaches to implement it. **Each row is concise** so you can map stages to engineering choices quickly."
+    },
+    {
+      "heading_path": [
+        "Cognitive pipeline table"
+      ],
+      "section_id": "sec_0002.1",
+      "text": "| Stage                                  | Importance for human cognition                                | Importance for reasoning AI agents                                     | Technology / technical approach                                           |\n|----------------------------------------|---------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------|\n| Curiosity / Motivation                 | Drives goal selection and sustained learning.                 | Directs exploration, data sampling, and objective selection.           | Intrinsic rewards; curiositydriven RL; active learning.                   |\n| Perception & Attention                 | Filters sensory input and focuses cognitive resources.        | Prioritizes inputs and reduces noise for downstream reasoning.         | Attention mechanisms; sensor fusion; saliency models.                     |\n| Memory Activation                      | Retrieves relevant prior knowledge and context.               | Supplies context for reasoning and prevents catastrophic forgetting."
+    },
+    {
+      "heading_path": [
+        "Cognitive pipeline table"
+      ],
+      "section_id": "sec_0003.2",
+      "text": "| Retrievalaugmented generation; episodic memory modules; memory buffers.   |\n| Comprehension                          | Builds coherent, grounded representations and meaning.        | Enables semantic grounding and correct interpretation of inputs.       | Contextual embeddings; semantic parsers; knowledge graphs.                |\n| Basic Reasoning                        | Performs simple inferences and pattern detection.             | Provides atomic inference steps used in complex chains of thought.     | Symbolic rules; probabilistic inference; neural reasoning modules.        |\n| Critical Thinking                      | Evaluates evidence, detects bias, and weighs alternatives.    | Improves robustness, reduces hallucination, and supports verification. | Counterfactual analysis; adversarial testing; uncertainty quantification. |\n| SelfReflection                         | Reviews decisions and uncovers personal biases or errors.     | Enables posthoc error analysis and targeted policy updates.            | Introspection logs; trace analysis; automated postmortem modules.         |\n| Metacognition                          | Monitors and regulates strategies, effort, and confid"
+    },
+    {
+      "heading_path": [
+        "Cognitive pipeline table"
+      ],
+      "section_id": "sec_0004.3",
+      "text": "ence.    | Allows dynamic strategy selection and confidence calibration.          | Metalearners; controller networks; confidence scoring/calibration.        |\n| Cognitive Control / Executive Function | Plans, inhibits impulses, and coordinates multistep behavior. | Orchestrates modules, enforces goals, and manages resources.           | Hierarchical RL; symbolic planners; schedulers/orchestrators.             |"
+    },
+    {
+      "heading_path": [
+        "Key implementation notes and tradeoffs (brief):"
+      ],
+      "section_id": "sec_0005",
+      "text": "-   **Modularity vs. latency:** Adding reflection/metacognition improves safety and interpretability but increases compute and response time.\n-   **Hybrid approaches** (neural + symbolic + retrieval) often yield the best balance between flexible pattern recognition and reliable, verifiable reasoning.\n-   **Evaluation** requires taskspecific benchmarks (e.g., adversarial tests for critical thinking, calibration tests for metacognition).\n\n**Sources and grounding:** The human roles and AI mappings above synthesize cognitive science and recent AI practice: reviews of executive function and digital tools, informationprocessing theory, and literature on AI cognitive modules and evaluation. 123\n\nIf you want, I can **convert this table into a colorcoded pipeline diagram** (matching the colors you specified earlier) or expand each “Technology” cell into a short implementation checklist with libraries, evaluation metrics, and example architectures. Which would you prefer next?"
+    },
+    {
+      "heading_path": [
+        "References (3)"
+      ],
+      "section_id": "sec_0006",
+      "text": "1*AI Chatbots and Cognitive Control: Enhancing Executive Functions ...*. <https://www.mdpi.com/2076-3425/15/1/47>\n\n2*Cognitive Development: Information Processing, Memory, Executive ...*. <https://pressbooks.cuny.edu/infantandchilddevelopmentcitytech/chapter/temporary-chapter-7-part-2/>\n\n3*Frontiers \\| The impact of digital technology, social media, and ...*. <https://www.frontiersin.org/journals/cognition/articles/10.3389/fcogn.2023.1203077/full>"
+    }
+  ],
+  "source_hash_sha256": "0c325e27a30327c19a10bd8c7d6cf88ebd1afec14e8b600ff31a79a01f99c9dd",
+  "source_rel_path": "Members' Corners/John Black/001_Cognitive-Pipeline-Table.md",
+  "title": "Cognitive pipeline table"
+}
