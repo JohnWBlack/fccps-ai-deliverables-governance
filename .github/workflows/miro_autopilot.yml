@@ -15,15 +15,11 @@ concurrency:
 
 jobs:
   autopilot_self_hosted:
-    if: >-
-      github.repository_owner == 'JohnWBlack'
-      && (
-        github.event_name == 'workflow_dispatch'
-        || (github.event_name == 'schedule' && vars.ENABLE_MIRO_AUTOPILOT == 'true')
-      )
-      && vars.MIRO_AUTOPILOT_RUNNER == 'self-hosted'
+    if: github.repository_owner == 'JohnWBlack'
     runs-on: [self-hosted, Windows]
     env:
+      ENABLE_MIRO_AUTOPILOT: ${{ vars.ENABLE_MIRO_AUTOPILOT }}
+      MIRO_AUTOPILOT_RUNNER: ${{ vars.MIRO_AUTOPILOT_RUNNER }}
       PROJECT_FILES_ROOT: ${{ vars.PROJECT_FILES_ROOT }}
       ALLOW_PII: ${{ vars.ALLOW_PII }}
 
@@ -58,6 +54,21 @@ jobs:
         run: |
           $shouldRun = "true"
           $reason = ""
+
+          if ($shouldRun -eq "true" -and $env:ENABLE_MIRO_AUTOPILOT -ne "true") {
+            $shouldRun = "false"
+            $reason = "ENABLE_MIRO_AUTOPILOT must be set to 'true'."
+          }
+
+          if ($shouldRun -eq "true" -and $env:MIRO_AUTOPILOT_RUNNER -ne "self-hosted") {
+            $shouldRun = "false"
+            $reason = "MIRO_AUTOPILOT_RUNNER must be 'self-hosted'."
+          }
+
+          if ($shouldRun -eq "true" -and $env:RUNNER_OS -ne "Windows") {
+            $shouldRun = "false"
+            $reason = "Runner OS must be Windows."
+          }
 
           if ($shouldRun -eq "true" -and [string]::IsNullOrWhiteSpace($env:PROJECT_FILES_ROOT)) {
             $shouldRun = "false"
@@ -184,10 +195,7 @@ jobs:
   autopilot_skip_hosted:
     if: >-
       github.repository_owner == 'JohnWBlack'
-      && (
-        github.event_name == 'workflow_dispatch'
-        || (github.event_name == 'schedule' && vars.ENABLE_MIRO_AUTOPILOT == 'true')
-      )
+      && vars.ENABLE_MIRO_AUTOPILOT == 'true'
       && vars.MIRO_AUTOPILOT_RUNNER != 'self-hosted'
     runs-on: windows-latest
     steps:

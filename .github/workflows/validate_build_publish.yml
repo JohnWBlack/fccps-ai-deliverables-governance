@@ -60,30 +60,39 @@ jobs:
         run: python scripts/build_glidepath_history.py
 
       - name: Publish scrubbed project ingest JSON
-        if: ${{ env.PROJECT_FILES_ROOT != '' }}
-        run: python scripts/pii_scan.py
+        if: ${{ runner.environment == 'self-hosted' && env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        run: |
+          if [ -d "$PROJECT_FILES_ROOT" ]; then
+            python scripts/pii_scan.py
+          else
+            echo "PROJECT_FILES_ROOT path not found on this runner; skipping project ingest publish."
+          fi
 
-      - name: Skip project ingest publish (PROJECT_FILES_ROOT not set)
-        if: ${{ env.PROJECT_FILES_ROOT == '' }}
-        run: echo "PROJECT_FILES_ROOT not set; skipping project ingest publish and validating committed public/project_ingest artifacts."
+      - name: Skip project ingest publish (hosted runner, unset root, or missing script)
+        if: ${{ runner.environment != 'self-hosted' || env.PROJECT_FILES_ROOT == '' || hashFiles('scripts/pii_scan.py') == '' }}
+        run: echo "Skipping project ingest publish (requires self-hosted runner + PROJECT_FILES_ROOT + scripts/pii_scan.py)."
 
       - name: Extract reference index
         run: python scripts/extract_refs.py
 
       - name: Build scrubbed survey exports
-        run: |
-          if [ -f scripts/scrub_survey_exports.py ]; then
-            python scripts/scrub_survey_exports.py
-          else
-            echo "scripts/scrub_survey_exports.py not found; skipping scrubbed survey exports step."
-            exit 0
-          fi
+        if: ${{ hashFiles('scripts/scrub_survey_exports.py') != '' }}
+        run: python scripts/scrub_survey_exports.py
+
+      - name: Skip scrubbed survey exports (script not present)
+        if: ${{ hashFiles('scripts/scrub_survey_exports.py') == '' }}
+        run: echo "scripts/scrub_survey_exports.py not found; skipping scrubbed survey exports step."
 
       - name: Validate public artifacts
         run: python scripts/validate_public.py
 
       - name: Validate no PII in tracked public-facing files
+        if: ${{ hashFiles('scripts/validate_no_pii.py') != '' }}
         run: python scripts/validate_no_pii.py
+
+      - name: Skip no-PII validator (script not present)
+        if: ${{ hashFiles('scripts/validate_no_pii.py') == '' }}
+        run: echo "scripts/validate_no_pii.py not found; skipping no-PII validation step."
 
       - name: Detect generated changes
         id: public_changes
