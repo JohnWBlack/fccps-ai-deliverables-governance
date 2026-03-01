@@ -7,7 +7,6 @@ on:
     paths:
       - sor/**
       - governance_docs/**
-      - project_files/**
       - scripts/**
       - CHANGELOG_PUBLIC.md
       - requirements.txt
@@ -20,11 +19,8 @@ permissions:
   contents: write
 
 jobs:
-  validate-build-publish:
+  build_validate:
     runs-on: ubuntu-latest
-    env:
-      PROJECT_FILES_ROOT: ${{ vars.PROJECT_FILES_ROOT }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -62,17 +58,6 @@ jobs:
       - name: Build glidepath diagnostics
         run: python scripts/build_glidepath_diagnostics.py
 
-      - name: Publish scrubbed project ingest JSON
-        if: ${{ runner.os == 'Windows' && vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
-        shell: pwsh
-        run: |
-          $root = $env:PROJECT_FILES_ROOT
-          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
-            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
-            exit 0
-          }
-          python scripts/pii_scan.py
-
       - name: Extract reference index
         run: python scripts/extract_refs.py
 
@@ -98,7 +83,7 @@ jobs:
       - name: Detect generated changes
         id: public_changes
         run: |
-          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/project_ingest public/survey_exports; then
+          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -109,10 +94,83 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/project_ingest public/survey_exports
+          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports
           git commit -m "chore(public): update derived artifacts [skip ci]"
           git push || {
             echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
-            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_kpis.py && python scripts/quality_checks.py && python scripts/build_catalog.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/pii_scan.py && python scripts/extract_refs.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
+            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_kpis.py && python scripts/quality_checks.py && python scripts/build_catalog.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/extract_refs.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
+            exit 1;
+          }
+
+  ingest_publish:
+    runs-on: [self-hosted, Windows]
+    env:
+      PROJECT_FILES_ROOT: ${{ vars.PROJECT_FILES_ROOT }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Skip ingest publish (PROJECT_FILES_ROOT not set)
+        if: ${{ vars.PROJECT_FILES_ROOT == '' }}
+        run: echo "SKIPPED: vars.PROJECT_FILES_ROOT is not set; ingest_publish is a no-op."
+
+      - name: Skip ingest publish (pii_scan.py not present)
+        if: ${{ vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') == '' }}
+        run: echo "SKIPPED: scripts/pii_scan.py not found; ingest_publish is a no-op."
+
+      - name: Publish scrubbed project ingest JSON
+        if: ${{ vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/pii_scan.py
+
+      - name: Validate public artifacts
+        if: ${{ vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/validate_public.py
+
+      - name: Detect ingest generated changes
+        id: ingest_changes
+        run: |
+          if git diff --quiet -- public/project_ingest; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push ingest artifacts
+        if: steps.ingest_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/project_ingest
+          git commit -m "chore(public): update ingest artifacts [skip ci]"
+          git push || {
+            echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
+            echo "Run locally: python scripts/pii_scan.py && python scripts/validate_public.py";
             exit 1;
           }

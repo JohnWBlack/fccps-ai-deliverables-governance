@@ -727,6 +727,12 @@ def resolve_project_files_root() -> Path:
     if not root.exists() or not root.is_dir():
         print(f"❌ PROJECT_FILES_ROOT does not exist or is not a directory: {root}")
         return Path("")
+    try:
+        root.relative_to(REPO_ROOT)
+        print(f"❌ PROJECT_FILES_ROOT must be outside this repository: {root}")
+        return Path("")
+    except ValueError:
+        pass
     return root
 
 
