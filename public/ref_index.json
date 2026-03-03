@@ -1,23 +1,50 @@
 {
   "meta": {
-    "generated_at": "2026-03-03T05:03:22.910527Z",
+    "generated_at": "2026-03-03T06:49:54.363800Z",
     "scanned_files_count": 20,
     "skipped_files_count": 5,
-    "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only"
+    "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
+    "workstream_alias_map": {
+      "WS-001": "WS-RSB",
+      "WS-002": "WS-POL",
+      "WS-003": "WS-CPX",
+      "WS-004": "WS-AIN",
+      "WS-005": "WS-DPS",
+      "WS-006": "WS-EQA",
+      "WS-007": "WS-CCI",
+      "WS-008": "WS-IPC"
+    },
+    "allowed_unresolved_workstream_ids": [
+      "WS-XXX"
+    ]
   },
   "docs": [
     {
       "doc_path": "CHANGELOG_PUBLIC.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-02-24T12:32:44-05:00",
+      "last_modified_iso": "2026-03-03T01:49:27-05:00",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
-        "workstream_ids": [],
+        "workstream_ids": [
+          "WS-CCI",
+          "WS-IPC",
+          "WS-RSB"
+        ],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {
+        "workstream_ids": 21
+      },
+      "normalization": {
+        "workstream_alias_hits": {
+          "WS-001": "WS-RSB",
+          "WS-008": "WS-IPC"
+        },
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "docs/CONVENTIONS.md",
@@ -40,13 +67,18 @@
           "D-AIN-1",
           "D-POL-1"
         ],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
       "anchors": {
         "principle_ids": 9,
         "risk_ids": 10,
         "workstream_ids": 11,
         "deliverable_ids": 12
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
@@ -58,9 +90,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "docs/KPI_TAXONOMY.md",
@@ -71,9 +108,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "docs/WINDOWS_TASKS.md",
@@ -84,9 +126,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "docs/admin_editing.md",
@@ -97,9 +144,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "docs/governance_rule.md",
@@ -110,14 +162,19 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "docs/schema_notes.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-02-24T12:30:47-05:00",
+      "last_modified_iso": "2026-03-03T01:49:27-05:00",
       "extracted": {
         "principle_ids": [
           "P-001",
@@ -127,18 +184,31 @@
           "R-001"
         ],
         "workstream_ids": [
-          "WS-001",
-          "WS-002",
-          "WS-003",
+          "WS-CPX",
+          "WS-IPC",
+          "WS-POL",
+          "WS-RSB",
           "WS-XXX"
         ],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
       "anchors": {
         "workstream_ids": 34,
         "principle_ids": 102,
         "risk_ids": 103
+      },
+      "normalization": {
+        "workstream_alias_hits": {
+          "WS-002": "WS-POL",
+          "WS-003": "WS-CPX",
+          "WS-001": "WS-RSB",
+          "WS-008": "WS-IPC"
+        },
+        "allowed_unresolved_workstream_ids": [
+          "WS-XXX"
+        ]
       }
     },
     {
@@ -150,9 +220,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "governance_docs/FCCPS School Board/FCCPS-Advisory-Board-Agenda-&-Meeting-Minutes-Template.md",
@@ -163,9 +238,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "governance_docs/FCCPS School Board/School-Board-Advisory-_Committee-Training.md",
@@ -176,9 +256,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "governance_docs/FCCPS-AI-Advisory-Committee_Workstream-Development-Summary-and-Assignments.md",
@@ -207,17 +292,22 @@
           "D-POL-1",
           "D-RSB-1"
         ],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
       "anchors": {
         "workstream_ids": 30,
         "deliverable_ids": 47
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
       "doc_path": "governance_docs/FCCPS_AIAC_Decision_Change_Log.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-03-03T00:02:55-05:00",
+      "last_modified_iso": "2026-03-03T05:03:23Z",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
@@ -232,17 +322,31 @@
         "deliverable_ids": [],
         "milestone_ids": [
           "ms_policy_principles"
+        ],
+        "decision_ids": [
+          "DEC-2026-01-23-01",
+          "DEC-2026-02-06-01",
+          "DEC-2026-02-06-02",
+          "DEC-2026-02-20-01",
+          "DEC-2026-02-20-02",
+          "DEC-2026-03-06-01",
+          "DEC-2026-03-20-01"
         ]
       },
       "anchors": {
+        "decision_ids": 13,
         "workstream_ids": 16,
         "milestone_ids": 17
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
       "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-03-03T00:02:55-05:00",
+      "last_modified_iso": "2026-03-03T05:03:23Z",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
@@ -266,17 +370,22 @@
           "D-POL-1",
           "D-RSB-1"
         ],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
       "anchors": {
         "workstream_ids": 11,
         "deliverable_ids": 13
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
       "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-03-03T00:02:55-05:00",
+      "last_modified_iso": "2026-03-03T05:03:23Z",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
@@ -290,17 +399,22 @@
           "ms_draft_sections_complete",
           "ms_final_recs",
           "ms_policy_principles"
-        ]
+        ],
+        "decision_ids": []
       },
       "anchors": {
         "workstream_ids": 11,
         "milestone_ids": 14
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
       "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-03-03T00:02:55-05:00",
+      "last_modified_iso": "2026-03-03T05:03:23Z",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
@@ -323,11 +437,16 @@
           "D-IPC-1",
           "D-RSB-1"
         ],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
       "anchors": {
         "workstream_ids": 9,
         "deliverable_ids": 9
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
@@ -344,10 +463,15 @@
           "ms_draft_sections_complete",
           "ms_final_recs",
           "ms_policy_principles"
-        ]
+        ],
+        "decision_ids": []
       },
       "anchors": {
         "milestone_ids": 79
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
@@ -361,10 +485,15 @@
         "deliverable_ids": [
           "D-IND-"
         ],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
       "anchors": {
         "deliverable_ids": 3435
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
       }
     },
     {
@@ -376,9 +505,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     },
     {
       "doc_path": "governance_docs/Workstream_Assignments_FCCPS_AI_Advisory_Committee.md",
@@ -389,9 +523,14 @@
         "risk_ids": [],
         "workstream_ids": [],
         "deliverable_ids": [],
-        "milestone_ids": []
+        "milestone_ids": [],
+        "decision_ids": []
       },
-      "anchors": {}
+      "anchors": {},
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
     }
   ]
 }

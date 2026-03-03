@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generated_at": "2026-03-03T05:03:21.338316Z",
+    "generated_at": "2026-03-03T06:49:53.236487Z",
     "source_version": "1.1.0",
-    "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925"
+    "version_key": "ba0bf6af26ca0e268bd05fd03c52a318565d9186"
   },
   "metadata": {
-    "generated_at": "2026-03-03T05:03:21.338316Z",
+    "generated_at": "2026-03-03T06:49:53.236487Z",
     "source_version": "1.1.0",
-    "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925",
+    "version_key": "ba0bf6af26ca0e268bd05fd03c52a318565d9186",
     "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
   },
   "workstreams": [
@@ -193,7 +193,9 @@
       "checkpoint_id": "m1",
       "depends_on": [],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "working_agreements",
@@ -211,7 +213,9 @@
         "charter_v0"
       ],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "pre_m3_defs",
@@ -229,7 +233,9 @@
         "working_agreements"
       ],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "pre_m3_risks_ops",
@@ -247,7 +253,9 @@
         "working_agreements"
       ],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "policy_principles",
@@ -264,6 +272,15 @@
       "depends_on": [
         "pre_m3_defs",
         "pre_m3_risks_ops"
+      ],
+      "principle_refs": [
+        "P-001",
+        "P-002",
+        "P-003"
+      ],
+      "risk_refs": [
+        "R-001",
+        "R-004"
       ],
       "committee_only": false,
       "public_url": null
@@ -282,7 +299,9 @@
       "checkpoint_id": "m3",
       "depends_on": [],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "rec_outline_risk_register",
@@ -298,6 +317,17 @@
       "checkpoint_id": "m4",
       "depends_on": [
         "policy_principles"
+      ],
+      "principle_refs": [
+        "P-001",
+        "P-004",
+        "P-006"
+      ],
+      "risk_refs": [
+        "R-001",
+        "R-002",
+        "R-005",
+        "R-006"
       ],
       "committee_only": false,
       "public_url": null
@@ -317,6 +347,17 @@
       "depends_on": [
         "D-RSB-1"
       ],
+      "principle_refs": [
+        "P-001",
+        "P-004",
+        "P-006",
+        "P-007"
+      ],
+      "risk_refs": [
+        "R-001",
+        "R-002",
+        "R-005"
+      ],
       "committee_only": false,
       "public_url": null
     },
@@ -334,6 +375,15 @@
       "checkpoint_id": "m4",
       "depends_on": [
         "D-RSB-1"
+      ],
+      "principle_refs": [
+        "P-002",
+        "P-003",
+        "P-005"
+      ],
+      "risk_refs": [
+        "R-003",
+        "R-006"
       ],
       "committee_only": false,
       "public_url": null
@@ -353,6 +403,16 @@
       "depends_on": [
         "D-CPX-1"
       ],
+      "principle_refs": [
+        "P-003",
+        "P-004",
+        "P-008"
+      ],
+      "risk_refs": [
+        "R-002",
+        "R-004",
+        "R-007"
+      ],
       "committee_only": false,
       "public_url": null
     },
@@ -369,6 +429,16 @@
       "due_date": "2026-03-06",
       "checkpoint_id": "m4",
       "depends_on": [],
+      "principle_refs": [
+        "P-004",
+        "P-006",
+        "P-008"
+      ],
+      "risk_refs": [
+        "R-001",
+        "R-005",
+        "R-008"
+      ],
       "committee_only": false,
       "public_url": null
     },
@@ -386,6 +456,16 @@
       "checkpoint_id": "m4",
       "depends_on": [
         "D-CPX-1"
+      ],
+      "principle_refs": [
+        "P-002",
+        "P-005",
+        "P-007"
+      ],
+      "risk_refs": [
+        "R-003",
+        "R-006",
+        "R-008"
       ],
       "committee_only": false,
       "public_url": null
@@ -406,7 +486,9 @@
         "rec_outline_risk_register"
       ],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "near_final_package",
@@ -424,7 +506,9 @@
         "m5_draft_sections"
       ],
       "committee_only": true,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "D-CCI-1",
@@ -442,7 +526,9 @@
         "D-POL-1"
       ],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "D-IPC-1",
@@ -462,14 +548,16 @@
         "D-EQA-1"
       ],
       "committee_only": false,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "final_talk_track",
       "title": "Final talk track and Q&A prep",
       "status": "not_started",
       "scope": "committee",
-      "workstream_id": null,
+      "workstream_id": "WS-CCI",
       "owner": {
         "name": "John Black",
         "role": "Chair"
@@ -481,7 +569,9 @@
         "D-CCI-1"
       ],
       "committee_only": true,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     },
     {
       "id": "committee_response",
@@ -499,7 +589,9 @@
         "final_talk_track"
       ],
       "committee_only": true,
-      "public_url": null
+      "public_url": null,
+      "principle_refs": [],
+      "risk_refs": []
     }
   ],
   "change_log": [
@@ -526,6 +618,18 @@
       "status": "upcoming",
       "impacted_artifacts": "rec_outline_risk_register; WS-POL; WS-DPS; WS-AIN; WS-EQA; WS-CPX",
       "notes": "Meeting 4 convergence gate; update workstream definitions of done if needed."
+    },
+    {
+      "id": "CHG-2026-03-03-03",
+      "date": "2026-03-03",
+      "type": "change",
+      "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
+      "trigger": "Automated SoR pipeline update",
+      "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:0eb7f279b2f1",
+      "owner": "Automation",
+      "status": "recorded",
+      "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:0eb7f279b2f1",
+      "notes": null
     },
     {
       "id": "CHG-2026-03-03-02",

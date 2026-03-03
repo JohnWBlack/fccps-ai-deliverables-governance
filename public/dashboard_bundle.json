@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-03-03T06:39:06.433403Z",
-    "snapshot_version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925"
+    "generated_at": "2026-03-03T06:49:54.742767Z",
+    "snapshot_version_key": "ba0bf6af26ca0e268bd05fd03c52a318565d9186"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-03-03T06:38:45.824128Z",
+      "generated_at": "2026-03-03T06:49:53.236487Z",
       "source_version": "1.1.0",
-      "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925"
+      "version_key": "ba0bf6af26ca0e268bd05fd03c52a318565d9186"
     },
     "metadata": {
-      "generated_at": "2026-03-03T06:38:45.824128Z",
+      "generated_at": "2026-03-03T06:49:53.236487Z",
       "source_version": "1.1.0",
-      "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925",
+      "version_key": "ba0bf6af26ca0e268bd05fd03c52a318565d9186",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -625,6 +625,30 @@
         "notes": "Meeting 4 convergence gate; update workstream definitions of done if needed."
       },
       {
+        "id": "CHG-2026-03-03-03",
+        "date": "2026-03-03",
+        "type": "change",
+        "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
+        "trigger": "Automated SoR pipeline update",
+        "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:0eb7f279b2f1",
+        "owner": "Automation",
+        "status": "recorded",
+        "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:0eb7f279b2f1",
+        "notes": null
+      },
+      {
+        "id": "CHG-2026-03-03-02",
+        "date": "2026-03-03",
+        "type": "change",
+        "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-02; timeline.yml@2026-03-02; supporting_documents.yml@2026-03-02)",
+        "trigger": "Automated SoR pipeline update",
+        "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:107554f7dc9b",
+        "owner": "Automation",
+        "status": "recorded",
+        "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:107554f7dc9b",
+        "notes": null
+      },
+      {
         "id": "CHG-2026-03-03-01",
         "date": "2026-03-03",
         "type": "change",
@@ -712,7 +736,7 @@
   },
   "kpis": {
     "meta": {
-      "generated_at": "2026-03-03T06:39:06.341309Z",
+      "generated_at": "2026-03-03T06:49:54.682163Z",
       "timezone": "America/New_York",
       "schema_version": "0.2"
     },
@@ -1392,7 +1416,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-03-03T06:39:06.171339Z",
+      "generated_at": "2026-03-03T06:49:54.503755Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1435,7 +1459,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-03-03T06:39:06.013333Z",
+      "generated_at": "2026-03-03T06:49:54.363800Z",
       "scanned_files_count": 20,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -1457,7 +1481,7 @@
       {
         "doc_path": "CHANGELOG_PUBLIC.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-02-24T12:32:44-05:00",
+        "last_modified_iso": "2026-03-03T01:49:27-05:00",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -1609,7 +1633,7 @@
       {
         "doc_path": "docs/schema_notes.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-02-24T12:30:47-05:00",
+        "last_modified_iso": "2026-03-03T01:49:27-05:00",
         "extracted": {
           "principle_ids": [
             "P-001",
@@ -1742,7 +1766,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Decision_Change_Log.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "last_modified_iso": "2026-03-03T05:03:23Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -1781,7 +1805,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "last_modified_iso": "2026-03-03T05:03:23Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -1820,7 +1844,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "last_modified_iso": "2026-03-03T05:03:23Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -1849,7 +1873,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "last_modified_iso": "2026-03-03T05:03:23Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -1971,7 +1995,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-03T06:39:06.432427Z",
+      "generated_at": "2026-03-03T06:49:54.741951Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",

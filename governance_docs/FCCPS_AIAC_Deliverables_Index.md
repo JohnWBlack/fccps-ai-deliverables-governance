@@ -24,5 +24,5 @@
 | 2026-04-10 | D-CCI-1 | Comms Pack v1 | Tina Beaty | WS-CCI | Meeting 6 (2026-04-10) | D-POL-1 | not_started | 0 |
 | 2026-04-10 | D-IPC-1 | Implementation Roadmap v1 | Jillian Marie Burkley | WS-IPC | Meeting 6 (2026-04-10) | D-POL-1; D-DPS-1; D-EQA-1 | not_started | 0 |
 | 2026-04-10 | near_final_package | Near-final recommendation package | John Black | WS-POL | Meeting 6 (2026-04-10) | m5_draft_sections | not_started | 0 |
-| 2026-04-24 | final_talk_track | Final talk track and Q&A prep | John Black |  | Meeting 7 (2026-04-24) | near_final_package; D-CCI-1 | not_started | 0 |
+| 2026-04-24 | final_talk_track | Final talk track and Q&A prep | John Black | WS-CCI | Meeting 7 (2026-04-24) | near_final_package; D-CCI-1 | not_started | 0 |
 | 2026-05-15 | committee_response | Formal committee response package | John Black | WS-POL | Meeting 8 (2026-05-15) | final_talk_track | not_started | 0 |

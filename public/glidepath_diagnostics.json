@@ -82,15 +82,13 @@
       "workstream": "WS-POL"
     }
   ],
-  "generated_at": "2026-03-03T05:03:22.639566Z",
+  "generated_at": "2026-03-03T06:49:54.866849Z",
   "how_drivers_top": [
     {
-      "evidence_count": 1,
-      "evidence_paths": [
-        "public/quality_report.json"
-      ],
+      "evidence_count": 0,
+      "evidence_paths": [],
       "kpi_id": "KPI-CONV-01",
-      "score": 80.0,
+      "score": 100.0,
       "weight": 1.5
     },
     {
@@ -138,17 +136,30 @@
       "weight": 0.75
     },
     {
-      "evidence_count": 0,
-      "evidence_paths": [],
-      "kpi_id": "KPI-CONV-05",
-      "score": 70.0,
+      "evidence_count": 7,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-CONV-09",
+      "score": 100.0,
       "weight": 0.75
     },
     {
-      "evidence_count": 0,
-      "evidence_paths": [],
+      "evidence_count": 7,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-CONV-05",
+      "score": 38.0,
+      "weight": 0.75
+    },
+    {
+      "evidence_count": 7,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
       "kpi_id": "KPI-CONV-06",
-      "score": 70.0,
+      "score": 38.0,
       "weight": 0.75
     },
     {
@@ -199,7 +210,7 @@
       "WHAT~M4",
       "HOW~M7"
     ],
-    "how": 7.88,
+    "how": 7.86,
     "how_corridor_id": "m7",
     "what": 4.77,
     "what_corridor_id": "m4"
@@ -208,7 +219,7 @@
     "axes_out": [
       "how"
     ],
-    "how_out": 2.38,
+    "how_out": 2.36,
     "what_out": 0.0
   },
   "project_ingest": {
@@ -223,9 +234,7 @@
   "recommended_focus": {
     "how": [
       {
-        "evidence_paths": [
-          "public/quality_report.json"
-        ],
+        "evidence_paths": [],
         "kpi_id": "KPI-CONV-01"
       },
       {
@@ -258,7 +267,7 @@
       }
     ]
   },
-  "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925",
+  "version_key": "ba0bf6af26ca0e268bd05fd03c52a318565d9186",
   "what_blockers_top": [
     {
       "evidence_count": 12,

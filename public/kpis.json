@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-03-03T05:03:21.497891Z",
+    "generated_at": "2026-03-03T06:49:54.682163Z",
     "timezone": "America/New_York",
     "schema_version": "0.2"
   },
@@ -36,10 +36,10 @@
   "summary": {
     "overall_status": "red",
     "kpi_counts": {
-      "green": 7,
-      "yellow": 4,
-      "red": 6,
-      "gray": 2
+      "green": 9,
+      "yellow": 1,
+      "red": 8,
+      "gray": 1
     }
   },
   "kpis": [
@@ -204,20 +204,15 @@
       "id": "KPI-CONV-01",
       "category": "convergence",
       "name": "SoR reference integrity",
-      "status": "yellow",
-      "score": 80,
+      "status": "green",
+      "score": 100,
       "description": "No dangling IDs across SoR references.",
       "rules": [
         "ID-* issues from quality report reduce score."
       ],
-      "evidence": [
-        {
-          "type": "issue",
-          "id": "ID-DANGLING-WORKSTREAM"
-        }
-      ],
+      "evidence": [],
       "details": {
-        "id_issue_count": 1
+        "id_issue_count": 0
       }
     },
     {
@@ -274,32 +269,90 @@
       "id": "KPI-CONV-05",
       "category": "convergence",
       "name": "Principle linkage coverage",
-      "status": "yellow",
-      "score": 70,
+      "status": "red",
+      "score": 38,
       "description": "Percent of deliverables with principle_refs.",
       "rules": [
         "Coverage = deliverables with principle_refs / total deliverables."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "policy_principles"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1"
+        }
+      ],
       "details": {
-        "coverage_pct": 0,
-        "authoritative_source": "derived from references"
+        "coverage_pct": 38,
+        "authoritative_source": "sor/principles.yml"
       }
     },
     {
       "id": "KPI-CONV-06",
       "category": "convergence",
       "name": "Risk linkage coverage",
-      "status": "yellow",
-      "score": 70,
+      "status": "red",
+      "score": 38,
       "description": "Percent of deliverables with risk_refs.",
       "rules": [
         "Coverage = deliverables with risk_refs / total deliverables."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "policy_principles"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1"
+        }
+      ],
       "details": {
-        "coverage_pct": 0,
-        "authoritative_source": "derived from references"
+        "coverage_pct": 38,
+        "authoritative_source": "sor/risks.yml"
       }
     },
     {
@@ -356,15 +409,45 @@
       "id": "KPI-CONV-09",
       "category": "convergence",
       "name": "Risk→principle mapping readiness",
-      "status": "gray",
-      "score": null,
+      "status": "green",
+      "score": 100,
       "description": "Coverage of risk IDs linked to principle IDs.",
       "rules": [
-        "No risk register found; KPI not instrumented."
+        "Risk refs are considered mapped when same deliverable has principle_refs."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "type": "deliverable",
+          "id": "policy_principles"
+        },
+        {
+          "type": "deliverable",
+          "id": "rec_outline_risk_register"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-POL-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-CPX-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-AIN-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-DPS-1"
+        },
+        {
+          "type": "deliverable",
+          "id": "D-EQA-1"
+        }
+      ],
       "details": {
-        "instrumented": false
+        "mapped_risks": 20,
+        "total_risks": 20
       }
     },
     {
