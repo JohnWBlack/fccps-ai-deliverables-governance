@@ -28,6 +28,7 @@
 |---|---|---|---|---|---|
 | CHG-2026-02-06-01 | 2026-02-06 | Initial workstream assignments recorded | Workstream alignment activity | Establishes owners for deliverables D-*-1 | John Black |
 | CHG-2026-03-03-01 | 2026-03-03 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-02; timeline.yml@2026-03-02; supporting_documents.yml@2026-03-02) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:9bb996f4d8c7 | Automation |
+| CHG-2026-03-03-02 | 2026-03-03 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-02; timeline.yml@2026-03-02; supporting_documents.yml@2026-03-02) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:107554f7dc9b | Automation |
 
 ---
 

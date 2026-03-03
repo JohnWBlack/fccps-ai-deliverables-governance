@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-03-01T20:28:53.964440Z",
+    "generated_at": "2026-03-03T05:03:22.910527Z",
     "scanned_files_count": 20,
     "skipped_files_count": 5,
     "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only"
@@ -52,7 +52,7 @@
     {
       "doc_path": "docs/INGEST.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-03-01T11:47:39-05:00",
+      "last_modified_iso": "2026-03-03T00:02:55-05:00",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
@@ -217,7 +217,7 @@
     {
       "doc_path": "governance_docs/FCCPS_AIAC_Decision_Change_Log.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-02-23T18:27:06-05:00",
+      "last_modified_iso": "2026-03-03T00:02:55-05:00",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
@@ -242,86 +242,7 @@
     {
       "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
       "doc_type": "md",
-      "last_modified_iso": "2026-02-23T18:27:06-05:00",
-      "extracted": {
-        "principle_ids": [],
-        "risk_ids": [],
-        "workstream_ids": [
-          "WS-AIN",
-          "WS-CCI",
-          "WS-CPX",
-          "WS-DPS",
-          "WS-EQA",
-          "WS-IPC",
-          "WS-POL",
-          "WS-RSB"
-        ],
-        "deliverable_ids": [
-          "D-AIN-1",
-          "D-CCI-1",
-          "D-CPX-1",
-          "D-DPS-1",
-          "D-EQA-1",
-          "D-IPC-1",
-          "D-POL-1",
-          "D-RSB-1"
-        ],
-        "milestone_ids": [
-          "ms_board_ready",
-          "ms_draft_sections_complete",
-          "ms_policy_principles"
-        ]
-      },
-      "anchors": {
-        "workstream_ids": 13,
-        "deliverable_ids": 16,
-        "milestone_ids": 17
-      }
-    },
-    {
-      "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
-      "doc_type": "md",
-      "last_modified_iso": "2026-02-23T18:27:06-05:00",
-      "extracted": {
-        "principle_ids": [],
-        "risk_ids": [],
-        "workstream_ids": [
-          "WS-AIN",
-          "WS-CCI",
-          "WS-CPX",
-          "WS-DPS",
-          "WS-EQA",
-          "WS-IPC",
-          "WS-POL",
-          "WS-RSB"
-        ],
-        "deliverable_ids": [
-          "D-AIN-1",
-          "D-CCI-1",
-          "D-CPX-1",
-          "D-DPS-1",
-          "D-EQA-1",
-          "D-IPC-1",
-          "D-POL-1",
-          "D-RSB-1"
-        ],
-        "milestone_ids": [
-          "ms_board_ready",
-          "ms_draft_sections_complete",
-          "ms_final_recs",
-          "ms_policy_principles"
-        ]
-      },
-      "anchors": {
-        "workstream_ids": 76,
-        "milestone_ids": 96,
-        "deliverable_ids": 125
-      }
-    },
-    {
-      "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
-      "doc_type": "md",
-      "last_modified_iso": "2026-02-23T18:27:06-05:00",
+      "last_modified_iso": "2026-03-03T00:02:55-05:00",
       "extracted": {
         "principle_ids": [],
         "risk_ids": [],
@@ -348,8 +269,65 @@
         "milestone_ids": []
       },
       "anchors": {
-        "workstream_ids": 10,
-        "deliverable_ids": 10
+        "workstream_ids": 11,
+        "deliverable_ids": 13
+      }
+    },
+    {
+      "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
+      "doc_type": "md",
+      "last_modified_iso": "2026-03-03T00:02:55-05:00",
+      "extracted": {
+        "principle_ids": [],
+        "risk_ids": [],
+        "workstream_ids": [
+          "WS-CCI",
+          "WS-POL"
+        ],
+        "deliverable_ids": [],
+        "milestone_ids": [
+          "ms_board_ready",
+          "ms_draft_sections_complete",
+          "ms_final_recs",
+          "ms_policy_principles"
+        ]
+      },
+      "anchors": {
+        "workstream_ids": 11,
+        "milestone_ids": 14
+      }
+    },
+    {
+      "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
+      "doc_type": "md",
+      "last_modified_iso": "2026-03-03T00:02:55-05:00",
+      "extracted": {
+        "principle_ids": [],
+        "risk_ids": [],
+        "workstream_ids": [
+          "WS-AIN",
+          "WS-CCI",
+          "WS-CPX",
+          "WS-DPS",
+          "WS-EQA",
+          "WS-IPC",
+          "WS-POL",
+          "WS-RSB"
+        ],
+        "deliverable_ids": [
+          "D-AIN-1",
+          "D-CCI-1",
+          "D-CPX-1",
+          "D-DPS-1",
+          "D-EQA-1",
+          "D-IPC-1",
+          "D-RSB-1"
+        ],
+        "milestone_ids": []
+      },
+      "anchors": {
+        "workstream_ids": 9,
+        "deliverable_ids": 9
       }
     },
     {

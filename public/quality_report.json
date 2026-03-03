@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-03-01T20:28:52.879222Z",
+    "generated_at": "2026-03-03T05:03:21.629044Z",
     "sources": [
       "sor/workstreams.yml",
       "sor/timeline.yml",
@@ -11,7 +11,7 @@
   "summary_counts": {
     "error": 1,
     "warning": 3,
-    "info": 1
+    "info": 0
   },
   "issues": [
     {
@@ -21,16 +21,6 @@
       "evidence": [
         {
           "deliverable_id": "final_talk_track"
-        }
-      ]
-    },
-    {
-      "severity": "info",
-      "code": "PLACEHOLDER-MARKDOWN",
-      "message": "Markdown supporting docs include TBD/TODO/??? tokens.",
-      "evidence": [
-        {
-          "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md"
         }
       ]
     },
@@ -74,8 +64,8 @@
   "metrics": {
     "deliverable_principle_refs_pct": 0.0,
     "deliverable_risk_refs_pct": 0.0,
-    "docs_with_principles_pct": 8.333333333333332,
-    "docs_with_risks_pct": 8.333333333333332,
+    "docs_with_principles_pct": 10.0,
+    "docs_with_risks_pct": 10.0,
     "sor_vs_docs_workstream_drift": {
       "sor_count": 8,
       "docs_count": 12,

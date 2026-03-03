@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generated_at": "2026-03-03T04:06:33.205906Z",
+    "generated_at": "2026-03-03T05:03:21.338316Z",
     "source_version": "1.1.0",
-    "version_key": "8dc307e122eed28787f8b512b69e4f4cbb81d50e"
+    "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925"
   },
   "metadata": {
-    "generated_at": "2026-03-03T04:06:33.205906Z",
+    "generated_at": "2026-03-03T05:03:21.338316Z",
     "source_version": "1.1.0",
-    "version_key": "8dc307e122eed28787f8b512b69e4f4cbb81d50e",
+    "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925",
     "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
   },
   "workstreams": [
@@ -526,6 +526,18 @@
       "status": "upcoming",
       "impacted_artifacts": "rec_outline_risk_register; WS-POL; WS-DPS; WS-AIN; WS-EQA; WS-CPX",
       "notes": "Meeting 4 convergence gate; update workstream definitions of done if needed."
+    },
+    {
+      "id": "CHG-2026-03-03-02",
+      "date": "2026-03-03",
+      "type": "change",
+      "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-02; timeline.yml@2026-03-02; supporting_documents.yml@2026-03-02)",
+      "trigger": "Automated SoR pipeline update",
+      "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:107554f7dc9b",
+      "owner": "Automation",
+      "status": "recorded",
+      "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:107554f7dc9b",
+      "notes": null
     },
     {
       "id": "CHG-2026-03-03-01",
