@@ -121,9 +121,9 @@
       "category_guess": "data",
       "decision": "ingested",
       "ext": ".json",
-      "mtime_utc": "2026-02-27T16:11:26.467212Z",
+      "mtime_utc": "2026-03-01T04:19:00.894907Z",
       "reason_if_skipped": "",
-      "size_bytes": 194234,
+      "size_bytes": 158,
       "source_rel_path": "03 - Values & Principles/derived_json/values_principles_rollup.json"
     },
     {
@@ -202,10 +202,19 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:33:48.281364Z",
+      "mtime_utc": "2026-02-22T20:43:58Z",
       "reason_if_skipped": "",
       "size_bytes": 965469,
       "source_rel_path": "03 - Values & Principles/FCCPS_AI_Values_and_Principles_Guidance_Packet.docx"
+    },
+    {
+      "category_guess": "other",
+      "decision": "skipped",
+      "ext": ".pdf",
+      "mtime_utc": "2026-02-22T18:04:22.285667Z",
+      "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
+      "size_bytes": 385104,
+      "source_rel_path": "03 - Values & Principles/FCCPS_AI_Values_and_Principles_Guidance_Packet.pdf"
     },
     {
       "category_guess": "spreadsheet",
@@ -224,6 +233,15 @@
       "reason_if_skipped": "",
       "size_bytes": 45348,
       "source_rel_path": "03 - Values & Principles/Values & Principles Survey Part 1 Results v.20260227-1035.xlsx"
+    },
+    {
+      "category_guess": "spreadsheet",
+      "decision": "ingested",
+      "ext": ".xlsx",
+      "mtime_utc": "2026-03-02T16:00:24.209548Z",
+      "reason_if_skipped": "",
+      "size_bytes": 16596,
+      "source_rel_path": "03 - Values & Principles/Values & Principles Survey Part 2 Results v.20260302-1100.xlsx"
     },
     {
       "category_guess": "data",
@@ -355,7 +373,7 @@
       "category_guess": "notes",
       "decision": "skipped",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.895801Z",
+      "mtime_utc": "2026-01-24T01:53:45.211037Z",
       "reason_if_skipped": "skipped_pii_findings",
       "size_bytes": 94056,
       "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md"
@@ -364,7 +382,7 @@
       "category_guess": "document",
       "decision": "skipped",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.897822Z",
+      "mtime_utc": "2026-01-24T01:50:24Z",
       "reason_if_skipped": "skipped_pii_findings",
       "size_bytes": 93792,
       "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee_otter_ai.docx"
@@ -373,7 +391,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.905198Z",
+      "mtime_utc": "2026-02-07T03:19:58Z",
       "reason_if_skipped": "",
       "size_bytes": 915236,
       "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.docx"
@@ -382,7 +400,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.905970Z",
+      "mtime_utc": "2026-01-24T02:20:01.367545Z",
       "reason_if_skipped": "",
       "size_bytes": 9826,
       "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.md"
@@ -391,7 +409,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:00.908485Z",
+      "mtime_utc": "2026-01-24T02:22:11.160064Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 181810,
       "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123_FCCPS_AI_Advisory_Committee_Agenda_and_Minutes.pdf"
@@ -400,7 +418,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.909504Z",
+      "mtime_utc": "2026-02-05T15:20:04.919946Z",
       "reason_if_skipped": "",
       "size_bytes": 7049,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/01 Updated 60-minute agenda (with Team Charter vote).md"
@@ -409,7 +427,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.910517Z",
+      "mtime_utc": "2026-02-05T15:01:38.128134Z",
       "reason_if_skipped": "",
       "size_bytes": 3740,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/06-FEB-26_Run-of-Show.md"
@@ -418,7 +436,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:00.913446Z",
+      "mtime_utc": "2026-02-06T00:55:17.855325Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 96951,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/20260205 Proposed Agenda FCCPS AI Advisory Committee.pdf"
@@ -427,7 +445,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.914447Z",
+      "mtime_utc": "2026-02-05T21:31:51.210263Z",
       "reason_if_skipped": "",
       "size_bytes": 3887,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v0.9 (update to v1.0 for Feb 6 review + in-person vote).md"
@@ -436,16 +454,16 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.915448Z",
+      "mtime_utc": "2026-02-05T21:44:45.139013Z",
       "reason_if_skipped": "",
-      "size_bytes": 5025,
+      "size_bytes": 4978,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md"
     },
     {
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.915448Z",
+      "mtime_utc": "2026-02-06T12:35:56.315729Z",
       "reason_if_skipped": "",
       "size_bytes": 22587,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS-AI-Advisory-Committee_Focus-Block-Worksheet.docx"
@@ -454,7 +472,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.922300Z",
+      "mtime_utc": "2026-02-21T01:30:18Z",
       "reason_if_skipped": "",
       "size_bytes": 908868,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS_AI_Advisory_Committee_Minutes.docx"
@@ -463,7 +481,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.923256Z",
+      "mtime_utc": "2026-02-07T03:16:05.471923Z",
       "reason_if_skipped": "",
       "size_bytes": 17153,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS_AI_Advisory_Committee_Minutes.md"
@@ -472,7 +490,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:00.926233Z",
+      "mtime_utc": "2026-02-08T01:53:00Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 284779,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/20260206_FCCPS_AI_Advisory_Committee_Minutes.pdf"
@@ -481,7 +499,7 @@
       "category_guess": "document",
       "decision": "skipped",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.927301Z",
+      "mtime_utc": "2026-02-06T21:14:51Z",
       "reason_if_skipped": "skipped_pii_findings",
       "size_bytes": 77765,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.docx"
@@ -490,7 +508,7 @@
       "category_guess": "notes",
       "decision": "skipped",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.928227Z",
+      "mtime_utc": "2026-02-06T21:15:17.027731Z",
       "reason_if_skipped": "skipped_pii_findings",
       "size_bytes": 63720,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md"
@@ -499,9 +517,9 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:00.930330Z",
+      "mtime_utc": "2026-02-05T21:44:55.170480Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
-      "size_bytes": 5558,
+      "size_bytes": 5484,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS_AI_Team_Charter_v1_0_one_page.pdf"
     },
     {
@@ -517,7 +535,7 @@
       "category_guess": "document",
       "decision": "skipped",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.931839Z",
+      "mtime_utc": "2026-02-20T22:16:47Z",
       "reason_if_skipped": "skipped_pii_findings",
       "size_bytes": 74568,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx"
@@ -526,7 +544,7 @@
       "category_guess": "notes",
       "decision": "skipped",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.933559Z",
+      "mtime_utc": "2026-02-20T22:17:15.460479Z",
       "reason_if_skipped": "skipped_pii_findings",
       "size_bytes": 63379,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md"
@@ -535,7 +553,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:00.937644Z",
+      "mtime_utc": "2026-02-21T18:24:35.536512Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 569065,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Minutes_Mtg-3.pdf"
@@ -544,7 +562,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.944442Z",
+      "mtime_utc": "2026-02-20T22:18:31Z",
       "reason_if_skipped": "",
       "size_bytes": 904093,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda+Minutes.docx"
@@ -553,7 +571,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:00.949814Z",
+      "mtime_utc": "2026-02-21T18:26:55.670236Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 790264,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda+Minutes.pdf"
@@ -562,7 +580,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:00.956649Z",
+      "mtime_utc": "2026-02-20T22:18:03Z",
       "reason_if_skipped": "",
       "size_bytes": 904141,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.docx"
@@ -571,7 +589,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:00.957581Z",
+      "mtime_utc": "2026-02-20T22:17:48.931350Z",
       "reason_if_skipped": "",
       "size_bytes": 1309,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.md"
@@ -580,7 +598,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:00.960269Z",
+      "mtime_utc": "2026-02-21T18:25:25Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 212535,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS_AI_Advisory_Committee_Mtg-3_Agenda.pdf"
@@ -598,7 +616,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:01.003028Z",
+      "mtime_utc": "2026-02-20T12:35:12Z",
       "reason_if_skipped": "",
       "size_bytes": 27450,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/Facilitator (25 Minute Focus Block Values & Principles).docx"
@@ -607,7 +625,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.003028Z",
+      "mtime_utc": "2026-02-20T02:39:26Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 212748,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/FCCPS AI Advisory Committee Agenda Mtg 3 - 20-FEB-26 .pdf"
@@ -616,7 +634,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:01.005629Z",
+      "mtime_utc": "2026-02-19T02:37:54Z",
       "reason_if_skipped": "",
       "size_bytes": 36915,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/Meeting 3 (20 FEB) Focus Block .docx"
@@ -634,7 +652,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:01.009470Z",
+      "mtime_utc": "2026-02-21T18:25:30Z",
       "reason_if_skipped": "",
       "size_bytes": 40353,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/Shared_Baseline_OnePager_v0.1a.docx"
@@ -643,7 +661,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.010987Z",
+      "mtime_utc": "2026-02-20T12:37:41.804591Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 42902,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/Shared_Baseline_OnePager_v0.1a.pdf"
@@ -652,7 +670,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:01.021423Z",
+      "mtime_utc": "2026-01-23T23:50:13Z",
       "reason_if_skipped": "",
       "size_bytes": 47606,
       "source_rel_path": "Meetings/20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.docx"
@@ -661,7 +679,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:01.022437Z",
+      "mtime_utc": "2026-01-23T23:51:16.553492Z",
       "reason_if_skipped": "",
       "size_bytes": 11477,
       "source_rel_path": "Meetings/20251007 FCCPS School Board Announces Comprehensive AI Policy Development Process (720p60fps)_otter_ai.md"
@@ -670,25 +688,16 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:01.024437Z",
+      "mtime_utc": "2026-01-23T23:49:38.808043Z",
       "reason_if_skipped": "",
       "size_bytes": 1630,
       "source_rel_path": "Meetings/FCCPS Sample Advisory Board Agenda & Minutes.md"
     },
     {
-      "category_guess": "document",
-      "decision": "ingested",
-      "ext": ".docx",
-      "mtime_utc": "2026-02-28T21:29:43.093430Z",
-      "reason_if_skipped": "",
-      "size_bytes": 28231,
-      "source_rel_path": "Members' Corners/David Berol/PolicyOutline.docx"
-    },
-    {
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.132702Z",
+      "mtime_utc": "2026-02-14T13:44:17.435622Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 10024816,
       "source_rel_path": "Members' Corners/Jillian Burkley/Burkley_AI systems can harm students.pdf"
@@ -697,7 +706,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.213624Z",
+      "mtime_utc": "2026-02-14T13:44:31.915412Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 12073923,
       "source_rel_path": "Members' Corners/Jillian Burkley/Burkley_Current Regulatory and Ethical Gaps.pdf"
@@ -706,7 +715,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.232003Z",
+      "mtime_utc": "2026-02-14T13:44:44.226197Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 4214293,
       "source_rel_path": "Members' Corners/Jillian Burkley/Burkley_Equity, Transparency, Accountability.pdf"
@@ -715,7 +724,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.300333Z",
+      "mtime_utc": "2026-02-14T13:44:58.694187Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 14680202,
       "source_rel_path": "Members' Corners/Jillian Burkley/Burkley_Program Services overview.pdf"
@@ -724,7 +733,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.377518Z",
+      "mtime_utc": "2026-02-14T13:45:10.349863Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 11219519,
       "source_rel_path": "Members' Corners/Jillian Burkley/Burkley_The DEIPAR framework Jillians Corner.pdf"
@@ -733,7 +742,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.488552Z",
+      "mtime_utc": "2026-02-14T13:45:22.503139Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 6627942,
       "source_rel_path": "Members' Corners/Jillian Burkley/Burkley_The four program components.pdf"
@@ -742,7 +751,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.443443Z",
+      "mtime_utc": "2026-02-14T13:45:33.841603Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 14084461,
       "source_rel_path": "Members' Corners/Jillian Burkley/Burkley_The Greece case study_Jillians Corner.pdf"
@@ -751,7 +760,7 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-24T21:05:01.543942Z",
+      "mtime_utc": "2026-02-14T14:35:39Z",
       "reason_if_skipped": "",
       "size_bytes": 17156104,
       "source_rel_path": "Members' Corners/Jillian Burkley/Jillians-Corner.docx"
@@ -760,7 +769,7 @@
       "category_guess": "other",
       "decision": "skipped",
       "ext": ".pdf",
-      "mtime_utc": "2026-02-24T21:05:01.976750Z",
+      "mtime_utc": "2026-02-14T14:34:26.617008Z",
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 72926062,
       "source_rel_path": "Members' Corners/Jillian Burkley/Jillians-Corner.pdf"
@@ -769,7 +778,7 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:01.982748Z",
+      "mtime_utc": "2026-02-14T14:48:15.209957Z",
       "reason_if_skipped": "",
       "size_bytes": 17744,
       "source_rel_path": "Members' Corners/Jillian Burkley/Jillians-Corner_concat.md"
@@ -778,9 +787,9 @@
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
-      "mtime_utc": "2026-02-24T21:05:01.983330Z",
+      "mtime_utc": "2026-02-14T15:07:04.293911Z",
       "reason_if_skipped": "",
-      "size_bytes": 7860,
+      "size_bytes": 7678,
       "source_rel_path": "Members' Corners/Jillian Burkley/Jillians_Corner_AIEIP_Reformatted.md"
     },
     {
@@ -836,6 +845,69 @@
       "reason_if_skipped": "",
       "size_bytes": 4359,
       "source_rel_path": "Members' Corners/John Black/006_Approach-to-Policy-Development.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-01-23T03:12:34.203568Z",
+      "reason_if_skipped": "",
+      "size_bytes": 4653,
+      "source_rel_path": "Members' Corners/John Black/Plans/001_Cognitive-Pipeline-Table.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-01-23T03:14:11.218619Z",
+      "reason_if_skipped": "",
+      "size_bytes": 4014,
+      "source_rel_path": "Members' Corners/John Black/Plans/002_Stateoftheart-AI-reasoning-systems-partially-mirror-human-cognitive-science.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-01-23T03:15:58.911988Z",
+      "reason_if_skipped": "",
+      "size_bytes": 3746,
+      "source_rel_path": "Members' Corners/John Black/Plans/003_Human-Machine-Teaming.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-01-23T03:18:48.618613Z",
+      "reason_if_skipped": "",
+      "size_bytes": 7626,
+      "source_rel_path": "Members' Corners/John Black/Plans/004_Cognitive-Pipeline-Applied-as-a-K12-HumanAI-Teaming-Scaffold.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-01-23T03:22:20.656530Z",
+      "reason_if_skipped": "",
+      "size_bytes": 8760,
+      "source_rel_path": "Members' Corners/John Black/Plans/005_AI-Integrated-Ecosystem-Project-for-Grade-7.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-01-23T03:22:58.331949Z",
+      "reason_if_skipped": "",
+      "size_bytes": 4359,
+      "source_rel_path": "Members' Corners/John Black/Plans/006_Approach-to-Policy-Development.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "skipped",
+      "ext": ".md",
+      "mtime_utc": "2026-01-23T03:54:26.839587Z",
+      "reason_if_skipped": "skipped_pii_findings",
+      "size_bytes": 64500,
+      "source_rel_path": "Members' Corners/John Black/Plans/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md"
     },
     {
       "category_guess": "notes",
@@ -964,6 +1036,15 @@
       "source_rel_path": "workstreams/dps/DRAFT_WS_DPS_CoLead_Briefing_JohnEdits_REVISED.docx"
     },
     {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-01T20:10:15.002214Z",
+      "reason_if_skipped": "",
+      "size_bytes": 25370,
+      "source_rel_path": "workstreams/dps/PolicyOutline_v0.docx"
+    },
+    {
       "category_guess": "notes",
       "decision": "ingested",
       "ext": ".md",
@@ -991,12 +1072,21 @@
       "source_rel_path": "workstreams/eqa/20260226_WS-EQA.docx"
     },
     {
-      "category_guess": "text",
+      "category_guess": "document",
       "decision": "ingested",
-      "ext": ".txt",
-      "mtime_utc": "2026-02-27T19:47:55.370315Z",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-01T20:10:15.002214Z",
       "reason_if_skipped": "",
-      "size_bytes": 16918,
+      "size_bytes": 25370,
+      "source_rel_path": "workstreams/pol/PolicyOutline_v0.docx"
+    },
+    {
+      "category_guess": "text",
+      "decision": "skipped",
+      "ext": ".txt",
+      "mtime_utc": "2026-03-01T03:53:32.059727Z",
+      "reason_if_skipped": "skipped_pii_findings",
+      "size_bytes": 16773,
       "source_rel_path": "workstreams/rsb/Re Research  Shared Baseline (WS-RSB) guidance and deliverable for 20 Feb.txt"
     },
     {
@@ -1018,6 +1108,6 @@
       "source_rel_path": "workstreams/rsb/Shared Baseline v01.md"
     }
   ],
-  "generated_at": "2026-03-01T17:05:25.474380Z",
+  "generated_at": "2026-03-02T20:29:45.378014Z",
   "project_files_root": "C:/Users/JohnBlack/OneDrive - OFFSET3/FCCPS AI Committee/project_files"
 }

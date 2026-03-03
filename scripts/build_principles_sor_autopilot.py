@@ -28,6 +28,7 @@ TRANSFORM_VERSION = "1.0.0"
 MAX_CHANGE_RATIO = 0.20
 PIPELINE = [
     "validate_sor.py",
+    "update_change_log.py",
     "build_snapshot.py",
     "build_kpis.py",
     "quality_checks.py",
@@ -64,6 +65,10 @@ class ExistingPrinciple:
 
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
+
+def today_iso() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
 def sha256_file(path: Path) -> str:
@@ -408,6 +413,7 @@ def write_yaml_principles(principles: list[dict[str, Any]], report_hashes: dict[
     payload = {
         "metadata": {
             "version": TRANSFORM_VERSION,
+            "last_updated": today_iso(),
             "generated_at": utc_now_iso(),
             "description": "Canonical principles synthesized from Miro CSV derived graph",
             "input_hashes": report_hashes,

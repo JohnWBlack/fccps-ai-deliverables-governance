@@ -40,6 +40,14 @@ jobs:
       - name: Validate SoR YAML
         run: python scripts/validate_sor.py
 
+      - name: Render governance registry docs from SoR
+        if: ${{ hashFiles('scripts/render_registry_docs.py') != '' }}
+        run: python scripts/render_registry_docs.py
+
+      - name: Update governance decision/change log
+        if: ${{ hashFiles('scripts/update_change_log.py') != '' }}
+        run: python scripts/update_change_log.py
+
       - name: Build public snapshot
         run: python scripts/build_snapshot.py
 
@@ -57,6 +65,9 @@ jobs:
 
       - name: Build glidepath diagnostics
         run: python scripts/build_glidepath_diagnostics.py
+
+      - name: Build cognitive control report
+        run: python scripts/run_cognitive_agent.py
 
       - name: Extract reference index
         run: python scripts/extract_refs.py
@@ -83,7 +94,7 @@ jobs:
       - name: Detect generated changes
         id: public_changes
         run: |
-          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports; then
+          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -94,11 +105,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports
+          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md
           git commit -m "chore(public): update derived artifacts [skip ci]"
           git push || {
             echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
-            echo "Run locally: python scripts/build_snapshot.py && python scripts/build_kpis.py && python scripts/quality_checks.py && python scripts/build_catalog.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/extract_refs.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
+            echo "Run locally: python scripts/update_change_log.py && python scripts/build_snapshot.py && python scripts/build_kpis.py && python scripts/quality_checks.py && python scripts/build_catalog.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/extract_refs.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
             exit 1;
           }
 
@@ -106,6 +117,7 @@ jobs:
     runs-on: [self-hosted, Windows]
     env:
       PROJECT_FILES_ROOT: ${{ vars.PROJECT_FILES_ROOT }}
+      APPLY_COGNITIVE_ACTIONS: ${{ vars.APPLY_COGNITIVE_ACTIONS }}
 
     steps:
       - name: Checkout repository
@@ -124,15 +136,17 @@ jobs:
           pip install -r requirements.txt
 
       - name: Skip ingest publish (PROJECT_FILES_ROOT not set)
-        if: ${{ vars.PROJECT_FILES_ROOT == '' }}
-        run: echo "SKIPPED: vars.PROJECT_FILES_ROOT is not set; ingest_publish is a no-op."
+        if: ${{ env.PROJECT_FILES_ROOT == '' }}
+        run: |
+          echo "SKIPPED: vars.PROJECT_FILES_ROOT is not set; ingest_publish is a no-op."
 
       - name: Skip ingest publish (pii_scan.py not present)
-        if: ${{ vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') == '' }}
-        run: echo "SKIPPED: scripts/pii_scan.py not found; ingest_publish is a no-op."
+        if: ${{ env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') == '' }}
+        run: |
+          echo "SKIPPED: scripts/pii_scan.py not found; ingest_publish is a no-op."
 
       - name: Publish scrubbed project ingest JSON
-        if: ${{ vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        if: ${{ env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
         shell: pwsh
         run: |
           $root = $env:PROJECT_FILES_ROOT
@@ -142,8 +156,74 @@ jobs:
           }
           python scripts/pii_scan.py
 
+      - name: Build cognitive control report
+        if: ${{ env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/run_cognitive_agent.py
+
+      - name: Apply cognitive SoR updates
+        if: ${{ env.PROJECT_FILES_ROOT != '' && env.APPLY_COGNITIVE_ACTIONS == 'true' && hashFiles('scripts/apply_cognitive_actions.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/apply_cognitive_actions.py --min-confidence 0.75
+
+      - name: Propagate supporting links into SoR registries
+        if: ${{ env.PROJECT_FILES_ROOT != '' && env.APPLY_COGNITIVE_ACTIONS == 'true' && hashFiles('scripts/propagate_supporting_to_sor.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/propagate_supporting_to_sor.py
+
+      - name: Validate SoR after propagation
+        if: ${{ env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/propagate_supporting_to_sor.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/validate_sor.py
+
+      - name: Render governance registry docs from SoR
+        if: ${{ env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/render_registry_docs.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/render_registry_docs.py
+
+      - name: Update governance decision/change log
+        if: ${{ env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/update_change_log.py') != '' }}
+        shell: pwsh
+        run: |
+          $root = $env:PROJECT_FILES_ROOT
+          if ([string]::IsNullOrWhiteSpace($root) -or -not (Test-Path -LiteralPath $root)) {
+            Write-Host "SKIPPED: PROJECT_FILES_ROOT is missing or does not exist: $root"
+            exit 0
+          }
+          python scripts/update_change_log.py
+
       - name: Validate public artifacts
-        if: ${{ vars.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
+        if: ${{ env.PROJECT_FILES_ROOT != '' && hashFiles('scripts/pii_scan.py') != '' }}
         shell: pwsh
         run: |
           $root = $env:PROJECT_FILES_ROOT
@@ -156,7 +236,7 @@ jobs:
       - name: Detect ingest generated changes
         id: ingest_changes
         run: |
-          if git diff --quiet -- public/project_ingest; then
+          if git diff --quiet -- public/project_ingest sor/supporting_documents.yml sor/workstreams.yml sor/deliverables.yml sor/timeline.yml governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -167,7 +247,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/project_ingest
+          git add public/project_ingest sor/supporting_documents.yml sor/workstreams.yml sor/deliverables.yml sor/timeline.yml governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md
           git commit -m "chore(public): update ingest artifacts [skip ci]"
           git push || {
             echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";

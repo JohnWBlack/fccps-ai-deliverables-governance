@@ -1,7 +1,7 @@
 # FCCPS AI Advisory Committee — Decision & Change Log
 
 **Version:** v1  
-**Last updated:** 2026-02-07  
+**Last updated:** 2026-03-03  
 **Purpose:** Prevent drift by recording (1) decisions and (2) changes that affect downstream work (scope, grade-band structure, enforcement posture, tool governance, etc.).
 
 ## Decision log
@@ -27,6 +27,7 @@
 | Change ID | Date | What changed | Trigger | Impact | Owner |
 |---|---|---|---|---|---|
 | CHG-2026-02-06-01 | 2026-02-06 | Initial workstream assignments recorded | Workstream alignment activity | Establishes owners for deliverables D-*-1 | John Black |
+| CHG-2026-03-03-01 | 2026-03-03 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-02; timeline.yml@2026-03-02; supporting_documents.yml@2026-03-02) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:9bb996f4d8c7 | Automation |
 
 ---
 

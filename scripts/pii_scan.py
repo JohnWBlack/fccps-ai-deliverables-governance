@@ -8,6 +8,10 @@ import hashlib
 import json
 import os
 import re
+import socket
+import time
+import urllib.error
+import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
 from datetime import date, datetime, time, timezone
@@ -32,6 +36,7 @@ PUBLIC_SPREADSHEETS_DIR = PUBLIC_INGEST_DIR / "spreadsheets"
 DISCOVERY_REPORT_PATH = PUBLIC_INGEST_DIR / "discovery_report.json"
 PII_REPORT_PATH = PUBLIC_INGEST_DIR / "pii_report.json"
 INDEX_PATH = PUBLIC_INGEST_DIR / "index.json"
+INGEST_SUMMARY_PATH = PUBLIC_INGEST_DIR / "ingest_summary.json"
 
 PROJECT_NAME = "FCCPS AI Committee"
 PIPELINE_VERSION = "2.0.0"
@@ -61,6 +66,11 @@ STUDENT_NAME_RE = re.compile(
 REDACTION_TOKEN = "[REDACTED]"
 TRANSFORM_VERSION = "2.0.0"
 DOCX_NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
+DEFAULT_PROMOTION_MODEL = "gpt-4o-mini"
+MAX_PROMOTION_SECTIONS = 24
+MAX_PROMOTION_SECTION_CHARS = 1200
+DEFAULT_OPENAI_TIMEOUT_SEC = 120
+DEFAULT_OPENAI_MAX_RETRIES = 2
 
 
 def utc_now_iso() -> str:
@@ -711,6 +721,261 @@ def build_version_key(source_path: str, source_hash: str) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
+def resolve_openai_settings(enable_llm_promote: bool) -> tuple[str, str, str]:
+    if not enable_llm_promote:
+        return "", "", ""
+
+    api_key = os.environ.get("OPENAI_API_KEY", "").strip() or os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY", "").strip()
+    base_url = (
+        os.environ.get("OPENAI_BASE_URL", "").strip()
+        or os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL", "").strip()
+        or "https://api.openai.com/v1"
+    )
+    model = os.environ.get("PROJECT_INGEST_PROMOTION_MODEL", "").strip() or DEFAULT_PROMOTION_MODEL
+    return api_key, base_url.rstrip("/"), model
+
+
+def env_int(name: str, default: int, min_value: int) -> int:
+    raw = os.environ.get(name, "").strip()
+    if not raw:
+        return default
+    try:
+        parsed = int(raw)
+    except ValueError:
+        return default
+    return max(min_value, parsed)
+
+
+def extract_first_json_object(text: str) -> str:
+    start = text.find("{")
+    if start < 0:
+        raise ValueError("No JSON object start found")
+
+    depth = 0
+    in_string = False
+    escape = False
+    for idx in range(start, len(text)):
+        ch = text[idx]
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+
+        if ch == '"':
+            in_string = True
+            continue
+        if ch == "{":
+            depth += 1
+            continue
+        if ch == "}":
+            depth -= 1
+            if depth == 0:
+                return text[start : idx + 1]
+
+    raise ValueError("No complete JSON object found")
+
+
+def parse_json_object_from_content(content: str) -> dict[str, Any]:
+    trimmed = content.strip()
+    if trimmed.startswith("```"):
+        trimmed = re.sub(r"^```(?:json)?\s*", "", trimmed, flags=re.IGNORECASE)
+        trimmed = re.sub(r"\s*```$", "", trimmed)
+
+    candidates: list[str] = [trimmed]
+    try:
+        candidates.append(extract_first_json_object(trimmed))
+    except ValueError:
+        pass
+
+    for candidate in candidates:
+        if not candidate:
+            continue
+        try:
+            parsed = json.loads(candidate)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(parsed, dict):
+            return parsed
+
+    raise RuntimeError(f"OpenAI content was not valid JSON object: {trimmed[:500]}")
+
+
+def call_openai_json(
+    *,
+    api_key: str,
+    base_url: str,
+    model: str,
+    system_prompt: str,
+    user_prompt: str,
+    max_tokens: int = 2200,
+) -> dict[str, Any]:
+    timeout_sec = env_int("PROJECT_INGEST_OPENAI_TIMEOUT_SEC", DEFAULT_OPENAI_TIMEOUT_SEC, 5)
+    max_retries = env_int("PROJECT_INGEST_OPENAI_MAX_RETRIES", DEFAULT_OPENAI_MAX_RETRIES, 0)
+
+    payload = {
+        "model": model,
+        "temperature": 0,
+        "response_format": {"type": "json_object"},
+        "max_tokens": max_tokens,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+    }
+    request = urllib.request.Request(
+        f"{base_url}/chat/completions",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+
+    last_error: Exception | None = None
+    total_attempts = max_retries + 1
+    for attempt in range(1, total_attempts + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout_sec) as response:
+                body = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="ignore")
+            should_retry = exc.code in {408, 409, 429, 500, 502, 503, 504}
+            last_error = RuntimeError(f"OpenAI API error ({exc.code}): {detail}")
+            if should_retry and attempt < total_attempts:
+                sleep_sec = min(8, attempt * 2)
+                print(f"   ⚠️ OpenAI HTTP {exc.code}; retrying in {sleep_sec}s ({attempt}/{total_attempts})")
+                time.sleep(sleep_sec)
+                continue
+            raise last_error from exc
+        except (urllib.error.URLError, TimeoutError, socket.timeout) as exc:
+            last_error = RuntimeError(f"OpenAI request failed: {exc}")
+            if attempt < total_attempts:
+                sleep_sec = min(8, attempt * 2)
+                print(f"   ⚠️ OpenAI request failed; retrying in {sleep_sec}s ({attempt}/{total_attempts})")
+                time.sleep(sleep_sec)
+                continue
+            raise last_error from exc
+
+        content = body.get("choices", [{}])[0].get("message", {}).get("content", "")
+        if not isinstance(content, str) or not content.strip():
+            last_error = RuntimeError("OpenAI response missing message content")
+        else:
+            try:
+                return parse_json_object_from_content(content)
+            except RuntimeError as exc:
+                last_error = exc
+
+        if attempt < total_attempts:
+            sleep_sec = min(8, attempt * 2)
+            print(f"   ⚠️ OpenAI returned invalid JSON; retrying in {sleep_sec}s ({attempt}/{total_attempts})")
+            time.sleep(sleep_sec)
+
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError("OpenAI request failed with unknown error")
+
+
+def promote_redaction_with_llm(
+    *,
+    source_rel_path: str,
+    doc_type: str,
+    title: str,
+    redacted_sections: list[dict[str, Any]],
+    pii_count: int,
+    api_key: str,
+    base_url: str,
+    model: str,
+) -> dict[str, Any]:
+    section_candidates: list[dict[str, str]] = []
+    for section in redacted_sections[:MAX_PROMOTION_SECTIONS]:
+        section_id = str(section.get("section_id") or "")
+        if not section_id:
+            continue
+        text = str(section.get("text") or "")
+        if len(text) > MAX_PROMOTION_SECTION_CHARS:
+            text = text[: MAX_PROMOTION_SECTION_CHARS - 3] + "..."
+        section_candidates.append({"section_id": section_id, "text": text})
+
+    prompt_payload = {
+        "source_rel_path": source_rel_path,
+        "doc_type": doc_type,
+        "title": title,
+        "pii_findings_count": pii_count,
+        "sections": section_candidates,
+    }
+    system_prompt = (
+        "You evaluate governance working files for publication in a committee evidence repository. "
+        "Your goals are: (1) preserve only policy-relevant content, (2) aggressively remove direct personal identifiers, "
+        "and (3) output strict JSON only."
+    )
+    user_prompt = (
+        "Decide whether this file should be promoted into public ingest after redaction. "
+        "If it is not materially relevant to committee governance work, set promoted=false. "
+        "If promoted=true, return redacted text for each section_id that appears in input.\n\n"
+        "Return JSON with this exact schema:\n"
+        "{\n"
+        '  "promoted": true,\n'
+        '  "relevance_score": 0.0,\n'
+        '  "value_add": "short phrase",\n'
+        '  "rationale": "one or two sentences",\n'
+        '  "redacted_sections": [{"section_id":"sec_0001","text":"..."}]\n'
+        "}\n\n"
+        "Rules:\n"
+        "- relevance_score must be between 0 and 1.\n"
+        "- Never introduce names, emails, phone numbers, social handles, addresses, or student identifiers.\n"
+        "- Keep section ids unchanged; do not emit ids not present in input.\n"
+        "- If promoted=false, redacted_sections may be empty.\n\n"
+        f"Input JSON:\n{json.dumps(prompt_payload, ensure_ascii=False)}"
+    )
+    payload = call_openai_json(
+        api_key=api_key,
+        base_url=base_url,
+        model=model,
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+    )
+
+    promoted = bool(payload.get("promoted"))
+    relevance_raw = payload.get("relevance_score", 0)
+    relevance_score = float(relevance_raw) if isinstance(relevance_raw, (int, float)) else 0.0
+    relevance_score = max(0.0, min(1.0, relevance_score))
+    value_add = str(payload.get("value_add") or "").strip()
+    rationale = str(payload.get("rationale") or "").strip()
+
+    existing_by_id = {str(item.get("section_id")): item for item in redacted_sections if str(item.get("section_id"))}
+    rewritten_sections: list[dict[str, Any]] = []
+    raw_sections = payload.get("redacted_sections")
+    if isinstance(raw_sections, list):
+        for raw in raw_sections:
+            if not isinstance(raw, dict):
+                continue
+            section_id = str(raw.get("section_id") or "")
+            existing = existing_by_id.get(section_id)
+            if not existing:
+                continue
+            rewritten_sections.append(
+                {
+                    "section_id": section_id,
+                    "heading_path": list(existing.get("heading_path") or []),
+                    "text": str(raw.get("text") or "").strip(),
+                }
+            )
+
+    return {
+        "promoted": promoted,
+        "relevance_score": round(relevance_score, 4),
+        "value_add": value_add,
+        "rationale": rationale,
+        "redacted_sections": rewritten_sections,
+        "model": model,
+    }
+
+
 def markdown_with_provenance(markdown_body: str, provenance: dict[str, Any]) -> str:
     provenance_json = json.dumps(provenance, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     body = markdown_body.strip()
@@ -736,7 +1001,14 @@ def resolve_project_files_root() -> Path:
     return root
 
 
-def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
+def publish_artifacts(
+    project_files_root: Path,
+    allow_pii: bool,
+    llm_promote: bool,
+    openai_api_key: str,
+    openai_base_url: str,
+    openai_model: str,
+) -> int:
     generated_at = utc_now_iso()
     candidates = discover_candidate_paths(project_files_root)
 
@@ -749,11 +1021,15 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
     type_counts: dict[str, int] = {"md": 0, "txt": 0, "json": 0, "docx": 0, "xlsx": 0}
     total_sections = 0
     skipped_due_to_pii = 0
+    promoted_due_to_llm = 0
 
     PUBLIC_INGEST_DIR.mkdir(parents=True, exist_ok=True)
 
-    for path in candidates:
+    total_candidates = len(candidates)
+
+    for idx, path in enumerate(candidates, start=1):
         rel_path = source_rel_path(path, project_files_root)
+        print(f"➡️ [{idx}/{total_candidates}] {rel_path}")
         ext = path.suffix.lower()
         include, skip_reason = should_include(path)
 
@@ -844,13 +1120,62 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
 
         pii_count = len(findings) - before_count
         sections_count = len(redacted_sections)
+        promotion_meta: dict[str, Any] | None = None
 
         if pii_count > 0 and not allow_pii:
-            skipped_due_to_pii += 1
-            entry["decision"] = "skipped"
-            entry["reason_if_skipped"] = "skipped_pii_findings"
-            discovery.append(entry)
-            continue
+            if not llm_promote:
+                skipped_due_to_pii += 1
+                entry["decision"] = "skipped"
+                entry["reason_if_skipped"] = "skipped_pii_findings"
+                discovery.append(entry)
+                continue
+            try:
+                print(f"   🤖 LLM promotion check: {rel_path}")
+                promotion_meta = promote_redaction_with_llm(
+                    source_rel_path=rel_path,
+                    doc_type=doc_type,
+                    title=artifact_payload["title"],
+                    redacted_sections=redacted_sections,
+                    pii_count=pii_count,
+                    api_key=openai_api_key,
+                    base_url=openai_base_url,
+                    model=openai_model,
+                )
+            except Exception as exc:
+                skipped_due_to_pii += 1
+                entry["decision"] = "skipped"
+                entry["reason_if_skipped"] = "skipped_pii_findings:llm_error"
+                entry["promotion_error"] = str(exc)
+                discovery.append(entry)
+                continue
+
+            promoted = bool(promotion_meta.get("promoted"))
+            rewritten_sections = promotion_meta.get("redacted_sections")
+            if promoted and isinstance(rewritten_sections, list) and rewritten_sections:
+                redacted_sections = rewritten_sections
+                artifact_payload["sections"] = redacted_sections
+                sections_count = len(redacted_sections)
+                promoted_due_to_llm += 1
+            else:
+                skipped_due_to_pii += 1
+                entry["decision"] = "skipped"
+                entry["reason_if_skipped"] = "skipped_pii_findings:not_promoted"
+                discovery.append(entry)
+                continue
+
+        if promotion_meta is not None:
+            artifact_payload["promotion"] = {
+                "promoted": bool(promotion_meta.get("promoted")),
+                "relevance_score": promotion_meta.get("relevance_score"),
+                "value_add": promotion_meta.get("value_add"),
+                "rationale": promotion_meta.get("rationale"),
+                "model": promotion_meta.get("model"),
+            }
+            entry["promotion"] = {
+                "promoted": bool(promotion_meta.get("promoted")),
+                "relevance_score": promotion_meta.get("relevance_score"),
+                "value_add": promotion_meta.get("value_add"),
+            }
 
         associated_outputs: dict[str, str] = {}
         output_paths = [output_rel]
@@ -931,6 +1256,13 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
         }
         if associated_outputs:
             index_entry["associated_outputs"] = associated_outputs
+        if promotion_meta is not None:
+            index_entry["promotion"] = {
+                "promoted": bool(promotion_meta.get("promoted")),
+                "relevance_score": promotion_meta.get("relevance_score"),
+                "value_add": promotion_meta.get("value_add"),
+                "model": promotion_meta.get("model"),
+            }
         index_entries.append(index_entry)
 
     clean_output_dir(PUBLIC_ARTIFACTS_DIR, expected_output_filenames, "*.json")
@@ -978,6 +1310,61 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
     }
     write_json_if_changed(INDEX_PATH, index_payload)
 
+    promoted_entries: list[dict[str, Any]] = []
+    converted_entries: list[dict[str, Any]] = []
+    for index_entry in index_payload["entries"]:
+        if not isinstance(index_entry, dict):
+            continue
+
+        promotion = index_entry.get("promotion")
+        if isinstance(promotion, dict) and bool(promotion.get("promoted")):
+            promoted_entries.append(
+                {
+                    "source_path": str(index_entry.get("source_path") or ""),
+                    "output_path": str(index_entry.get("output_path") or ""),
+                    "pii_findings_count": int(index_entry.get("pii_findings_count") or 0),
+                    "relevance_score": promotion.get("relevance_score"),
+                    "value_add": str(promotion.get("value_add") or ""),
+                    "model": str(promotion.get("model") or ""),
+                }
+            )
+
+        associated_outputs = index_entry.get("associated_outputs")
+        if not isinstance(associated_outputs, dict):
+            continue
+
+        if isinstance(associated_outputs.get("md_path"), str):
+            converted_entries.append(
+                {
+                    "conversion_type": "docx_to_markdown",
+                    "source_path": str(index_entry.get("source_path") or ""),
+                    "output_path": str(associated_outputs.get("md_path") or ""),
+                }
+            )
+        if isinstance(associated_outputs.get("xlsx_json_path"), str):
+            converted_entries.append(
+                {
+                    "conversion_type": "xlsx_to_json",
+                    "source_path": str(index_entry.get("source_path") or ""),
+                    "output_path": str(associated_outputs.get("xlsx_json_path") or ""),
+                }
+            )
+
+    promoted_entries.sort(key=lambda item: str(item.get("source_path", "")).lower())
+    converted_entries.sort(key=lambda item: (str(item.get("conversion_type", "")).lower(), str(item.get("source_path", "")).lower()))
+
+    ingest_summary_payload = {
+        "generated_at": generated_at,
+        "transform_version": TRANSFORM_VERSION,
+        "counts": {
+            "promoted": len(promoted_entries),
+            "converted": len(converted_entries),
+        },
+        "promoted": promoted_entries,
+        "converted": converted_entries,
+    }
+    write_json_if_changed(INGEST_SUMMARY_PATH, ingest_summary_payload)
+
     print("✅ Project ingest artifact publish complete")
     print(f"📄 Candidates scanned: {len(candidates)}")
     print(
@@ -988,19 +1375,40 @@ def publish_artifacts(project_files_root: Path, allow_pii: bool) -> int:
     print(f"🧱 Total sections: {total_sections}")
     print(f"🕵️ PII findings: {len(findings)}")
     print(f"⏭️ Skipped due to PII: {skipped_due_to_pii}")
+    if llm_promote:
+        print(f"🚀 Promoted via LLM redaction: {promoted_due_to_llm}")
     return 0
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Publish scrubbed project ingest artifacts with PII gating")
     parser.add_argument("--allow-pii", action="store_true", help="Allow publish step to succeed even when PII findings are detected")
+    parser.add_argument(
+        "--llm-promote",
+        action="store_true",
+        help="For PII-flagged files, call OpenAI to decide relevance and produce enhanced redaction for promotion",
+    )
     args = parser.parse_args()
 
     project_files_root = resolve_project_files_root()
     if not project_files_root:
         raise SystemExit(1)
 
-    raise SystemExit(publish_artifacts(project_files_root=project_files_root, allow_pii=args.allow_pii))
+    openai_api_key, openai_base_url, openai_model = resolve_openai_settings(args.llm_promote)
+    if args.llm_promote and not openai_api_key:
+        print("❌ --llm-promote requires OPENAI_API_KEY (or AI_INTEGRATIONS_OPENAI_API_KEY) in your environment.")
+        raise SystemExit(1)
+
+    raise SystemExit(
+        publish_artifacts(
+            project_files_root=project_files_root,
+            allow_pii=args.allow_pii,
+            llm_promote=args.llm_promote,
+            openai_api_key=openai_api_key,
+            openai_base_url=openai_base_url,
+            openai_model=openai_model,
+        )
+    )
 
 
 if __name__ == "__main__":

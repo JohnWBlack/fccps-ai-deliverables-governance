@@ -11,6 +11,7 @@ import json
 import os
 import hashlib
 import subprocess
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, Any
@@ -18,6 +19,7 @@ from typing import Dict, Any
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SOR_DIR = REPO_ROOT / "sor"
 OUTPUT_PATH = REPO_ROOT / "public" / "public_snapshot.json"
+DECISION_CHANGE_LOG_PATH = REPO_ROOT / "governance_docs" / "FCCPS_AIAC_Decision_Change_Log.md"
 
 
 def resolve_version_key() -> str:
@@ -87,6 +89,91 @@ def sanitize_deliverable(deliverable: Dict[str, Any]) -> Dict[str, Any]:
     
     return sanitized
 
+
+def parse_markdown_table_row(line: str) -> list[str] | None:
+    raw = line.strip()
+    if not (raw.startswith("|") and raw.endswith("|")):
+        return None
+    columns = [col.strip() for col in raw.strip("|").split("|")]
+    if not columns:
+        return None
+    return columns
+
+
+def parse_decision_change_log() -> list[Dict[str, Any]]:
+    if not DECISION_CHANGE_LOG_PATH.exists():
+        return []
+
+    text = DECISION_CHANGE_LOG_PATH.read_text(encoding="utf-8", errors="ignore")
+    lines = text.splitlines()
+
+    entries: list[Dict[str, Any]] = []
+    section: str | None = None
+
+    for line in lines:
+        striped = line.strip()
+        lower = striped.lower()
+        if lower == "## decision log":
+            section = "decision"
+            continue
+        if lower == "## change log":
+            section = "change"
+            continue
+        if not section:
+            continue
+
+        row = parse_markdown_table_row(line)
+        if not row:
+            continue
+        if len(row) < 6:
+            continue
+        if all(re.fullmatch(r"-+", col.replace(":", "").replace(" ", "")) for col in row):
+            continue
+
+        if section == "decision":
+            if row[0].lower().startswith("decision id"):
+                continue
+            entry_id, date, decision, status, impacted, notes = row[:6]
+            if not entry_id or not date:
+                continue
+            entries.append(
+                {
+                    "id": entry_id,
+                    "date": date,
+                    "type": "decision",
+                    "description": decision,
+                    "trigger": "Recorded governance decision",
+                    "impact": impacted or None,
+                    "owner": None,
+                    "status": status or None,
+                    "impacted_artifacts": impacted or None,
+                    "notes": notes or None,
+                }
+            )
+        elif section == "change":
+            if row[0].lower().startswith("change id"):
+                continue
+            entry_id, date, changed, trigger, impact, owner = row[:6]
+            if not entry_id or not date:
+                continue
+            entries.append(
+                {
+                    "id": entry_id,
+                    "date": date,
+                    "type": "change",
+                    "description": changed,
+                    "trigger": trigger or None,
+                    "impact": impact or None,
+                    "owner": owner or None,
+                    "status": "recorded",
+                    "impacted_artifacts": impact or None,
+                    "notes": None,
+                }
+            )
+
+    entries.sort(key=lambda item: (str(item.get("date") or ""), str(item.get("id") or "")), reverse=True)
+    return entries
+
 def build_snapshot() -> Dict[str, Any]:
     """Build the public snapshot from source YAML files."""
     # Load source data
@@ -111,7 +198,8 @@ def build_snapshot() -> Dict[str, Any]:
         },
         "workstreams": [],
         "timeline_events": [],
-        "deliverables": []
+        "deliverables": [],
+        "change_log": parse_decision_change_log(),
     }
     
     # Process workstreams

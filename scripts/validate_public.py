@@ -24,6 +24,8 @@ PROJECT_INGEST_SPREADSHEETS_DIR = PROJECT_INGEST_DIR / "spreadsheets"
 PROJECT_INGEST_INDEX_PATH = PROJECT_INGEST_DIR / "index.json"
 PROJECT_INGEST_DISCOVERY_REPORT_PATH = PROJECT_INGEST_DIR / "discovery_report.json"
 PROJECT_INGEST_PII_REPORT_PATH = PROJECT_INGEST_DIR / "pii_report.json"
+PROJECT_INGEST_SUMMARY_PATH = PROJECT_INGEST_DIR / "ingest_summary.json"
+PROJECT_INGEST_COGNITIVE_REPORT_PATH = PROJECT_INGEST_DIR / "cognitive_control_report.json"
 
 REQUIRED_TOP_LEVEL = {"meta", "corridor", "weights", "points"}
 REQUIRED_POINT_FIELDS = {
@@ -61,6 +63,8 @@ REQUIRED_INDEX_ENTRY_FIELDS = {
 }
 REQUIRED_PII_REPORT_FIELDS = {"generated_at", "total_findings", "findings"}
 REQUIRED_DISCOVERY_REPORT_FIELDS = {"generated_at", "entries"}
+REQUIRED_INGEST_SUMMARY_FIELDS = {"generated_at", "counts", "promoted", "converted"}
+REQUIRED_COGNITIVE_REPORT_FIELDS = {"generated_at", "counts", "recommended_actions", "stage_trace", "governance"}
 REQUIRED_DISCOVERY_ENTRY_FIELDS = {
     "source_rel_path",
     "ext",
@@ -764,6 +768,90 @@ def validate_project_ingest_pii_report(payload: dict[str, Any]) -> None:
             fail(f"public/project_ingest/pii_report.json findings[{idx}] missing fields: {missing}")
 
 
+def validate_project_ingest_summary(payload: dict[str, Any]) -> None:
+    if not isinstance(payload, dict):
+        fail("public/project_ingest/ingest_summary.json must be an object")
+    if not REQUIRED_INGEST_SUMMARY_FIELDS.issubset(set(payload.keys())):
+        missing = sorted(REQUIRED_INGEST_SUMMARY_FIELDS - set(payload.keys()))
+        fail(f"public/project_ingest/ingest_summary.json missing fields: {missing}")
+    if parse_iso_datetime(payload.get("generated_at")) is None:
+        fail("public/project_ingest/ingest_summary.json generated_at must be an ISO datetime")
+
+    counts = payload.get("counts")
+    if not isinstance(counts, dict):
+        fail("public/project_ingest/ingest_summary.json counts must be an object")
+    for key in ("promoted", "converted"):
+        value = counts.get(key)
+        if not isinstance(value, int) or value < 0:
+            fail(f"public/project_ingest/ingest_summary.json counts.{key} must be >= 0")
+
+    promoted = payload.get("promoted")
+    if not isinstance(promoted, list):
+        fail("public/project_ingest/ingest_summary.json promoted must be a list")
+    if len(promoted) != counts.get("promoted"):
+        fail("public/project_ingest/ingest_summary.json counts.promoted must equal promoted list length")
+    for idx, item in enumerate(promoted):
+        if not isinstance(item, dict):
+            fail(f"public/project_ingest/ingest_summary.json promoted[{idx}] must be an object")
+        for field in ("source_path", "output_path", "pii_findings_count", "relevance_score", "value_add", "model"):
+            if field not in item:
+                fail(f"public/project_ingest/ingest_summary.json promoted[{idx}] missing field: {field}")
+
+    converted = payload.get("converted")
+    if not isinstance(converted, list):
+        fail("public/project_ingest/ingest_summary.json converted must be a list")
+    if len(converted) != counts.get("converted"):
+        fail("public/project_ingest/ingest_summary.json counts.converted must equal converted list length")
+    for idx, item in enumerate(converted):
+        if not isinstance(item, dict):
+            fail(f"public/project_ingest/ingest_summary.json converted[{idx}] must be an object")
+        for field in ("conversion_type", "source_path", "output_path"):
+            if field not in item:
+                fail(f"public/project_ingest/ingest_summary.json converted[{idx}] missing field: {field}")
+
+
+def validate_project_ingest_cognitive_report(payload: dict[str, Any]) -> None:
+    if not isinstance(payload, dict):
+        fail("public/project_ingest/cognitive_control_report.json must be an object")
+    if not REQUIRED_COGNITIVE_REPORT_FIELDS.issubset(set(payload.keys())):
+        missing = sorted(REQUIRED_COGNITIVE_REPORT_FIELDS - set(payload.keys()))
+        fail(f"public/project_ingest/cognitive_control_report.json missing fields: {missing}")
+    if parse_iso_datetime(payload.get("generated_at")) is None:
+        fail("public/project_ingest/cognitive_control_report.json generated_at must be an ISO datetime")
+
+    counts = payload.get("counts")
+    if not isinstance(counts, dict):
+        fail("public/project_ingest/cognitive_control_report.json counts must be an object")
+    for key in ("ingest_promoted", "ingest_converted", "candidates", "recommended_actions"):
+        value = counts.get(key)
+        if not isinstance(value, int) or value < 0:
+            fail(f"public/project_ingest/cognitive_control_report.json counts.{key} must be >= 0")
+
+    recommended_actions = payload.get("recommended_actions")
+    if not isinstance(recommended_actions, list):
+        fail("public/project_ingest/cognitive_control_report.json recommended_actions must be a list")
+    for idx, item in enumerate(recommended_actions):
+        if not isinstance(item, dict):
+            fail(f"public/project_ingest/cognitive_control_report.json recommended_actions[{idx}] must be an object")
+        for field in ("source_path", "recommended_deliverable_id", "recommended_action", "confidence"):
+            if field not in item:
+                fail(f"public/project_ingest/cognitive_control_report.json recommended_actions[{idx}] missing field: {field}")
+
+    stage_trace = payload.get("stage_trace")
+    if not isinstance(stage_trace, list):
+        fail("public/project_ingest/cognitive_control_report.json stage_trace must be a list")
+    if len(stage_trace) < 9:
+        fail("public/project_ingest/cognitive_control_report.json stage_trace must include at least 9 stages")
+
+    governance = payload.get("governance")
+    if not isinstance(governance, dict):
+        fail("public/project_ingest/cognitive_control_report.json governance must be an object")
+    if not isinstance(governance.get("requires_human_approval"), bool):
+        fail("public/project_ingest/cognitive_control_report.json governance.requires_human_approval must be boolean")
+    if not isinstance(governance.get("auto_apply_sor_changes"), bool):
+        fail("public/project_ingest/cognitive_control_report.json governance.auto_apply_sor_changes must be boolean")
+
+
 def validate_project_ingest_artifact(path: Path, payload: Any) -> None:
     rel = path.relative_to(REPO_ROOT).as_posix()
     if not isinstance(payload, dict):
@@ -869,10 +957,16 @@ def validate_project_ingest() -> None:
         fail(f"Required artifact not found: {PROJECT_INGEST_DISCOVERY_REPORT_PATH}")
     if not PROJECT_INGEST_PII_REPORT_PATH.exists():
         fail(f"Required artifact not found: {PROJECT_INGEST_PII_REPORT_PATH}")
+    if not PROJECT_INGEST_SUMMARY_PATH.exists():
+        fail(f"Required artifact not found: {PROJECT_INGEST_SUMMARY_PATH}")
+    if not PROJECT_INGEST_COGNITIVE_REPORT_PATH.exists():
+        fail(f"Required artifact not found: {PROJECT_INGEST_COGNITIVE_REPORT_PATH}")
 
     validate_project_ingest_index(load_json(PROJECT_INGEST_INDEX_PATH))
     validate_project_ingest_discovery_report(load_json(PROJECT_INGEST_DISCOVERY_REPORT_PATH))
     validate_project_ingest_pii_report(load_json(PROJECT_INGEST_PII_REPORT_PATH))
+    validate_project_ingest_summary(load_json(PROJECT_INGEST_SUMMARY_PATH))
+    validate_project_ingest_cognitive_report(load_json(PROJECT_INGEST_COGNITIVE_REPORT_PATH))
 
     artifact_paths = sorted(
         PROJECT_INGEST_ARTIFACTS_DIR.glob("*.json"),

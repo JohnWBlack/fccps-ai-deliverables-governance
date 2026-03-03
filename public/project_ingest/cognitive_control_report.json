@@ -1,0 +1,629 @@
+{
+  "auto_apply_candidates": [],
+  "counts": {
+    "auto_apply_candidates": 0,
+    "candidates": 23,
+    "ingest_converted": 23,
+    "ingest_promoted": 0,
+    "recommended_actions": 6
+  },
+  "generated_at": "2026-03-02T22:06:25.817067Z",
+  "governance": {
+    "approval_policy": "Auto-apply may proceed for high-confidence, non-sensitive actions; always enforce validate_sor.py and validate_public.py before publish.",
+    "auto_apply_sor_changes": false,
+    "minimum_auto_apply_confidence": 0.75,
+    "requires_human_approval": true
+  },
+  "objective": "Detect ingest impact on SoR/supporting documents and emit deterministic update triggers.",
+  "recommended_actions": [
+    {
+      "candidate_matches": [
+        {
+          "components": {
+            "lexical": 0.044444444444444446,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.45
+          },
+          "deliverable_id": "D-AIN-1",
+          "deliverable_title": "Attribution & Integrity Matrix v1",
+          "reasons": [
+            "same_workstream",
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.7254,
+          "status": "in_progress",
+          "workstream_id": "WS-AIN"
+        },
+        {
+          "components": {
+            "lexical": 0.022222222222222223,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.0
+          },
+          "deliverable_id": "D-DPS-1",
+          "deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
+          "reasons": [
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.2532,
+          "status": "in_progress",
+          "workstream_id": "WS-DPS"
+        },
+        {
+          "components": {
+            "lexical": 0.022222222222222223,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.0
+          },
+          "deliverable_id": "rec_outline_risk_register",
+          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "reasons": [
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.2532,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "confidence": 0.7254,
+      "confidence_adjusted": 0.7254,
+      "confidence_penalty": 0.0,
+      "counterfactual_delta": 0.4722,
+      "inferred_workstream_id": "WS-AIN",
+      "mode": "converted",
+      "recommended_action": "review_and_update_deliverable_evidence",
+      "recommended_deliverable_id": "D-AIN-1",
+      "recommended_deliverable_title": "Attribution & Integrity Matrix v1",
+      "recommended_workstream_id": "WS-AIN",
+      "risk_flags": [],
+      "salience": 0.41,
+      "source_path": "02 Risks & Opportunities/FCCPS AI Advisory CommitteeRisks and Opportunities Assessment Form(1-10).xlsx",
+      "topics": [
+        "risk"
+      ]
+    },
+    {
+      "candidate_matches": [
+        {
+          "components": {
+            "lexical": 0.02857142857142857,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.45
+          },
+          "deliverable_id": "policy_principles",
+          "deliverable_title": "Policy principles set",
+          "reasons": [
+            "same_workstream",
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.7096,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.02857142857142857,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "D-POL-1",
+          "deliverable_title": "Policy Skeleton v0",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.6196,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.02857142857142857,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "rec_outline_risk_register",
+          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.6196,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "confidence": 0.7096,
+      "confidence_adjusted": 0.7096,
+      "confidence_penalty": 0.0,
+      "counterfactual_delta": 0.09,
+      "inferred_workstream_id": "WS-POL",
+      "mode": "converted",
+      "recommended_action": "review_and_update_deliverable_evidence",
+      "recommended_deliverable_id": "policy_principles",
+      "recommended_deliverable_title": "Policy principles set",
+      "recommended_workstream_id": "WS-POL",
+      "risk_flags": [],
+      "salience": 0.41,
+      "source_path": "03 - Values & Principles/FCCPS_AI_Values_and_Principles_Guidance_Packet.docx",
+      "topics": [
+        "principles"
+      ]
+    },
+    {
+      "candidate_matches": [
+        {
+          "components": {
+            "lexical": 0.025,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.45
+          },
+          "deliverable_id": "policy_principles",
+          "deliverable_title": "Policy principles set",
+          "reasons": [
+            "same_workstream",
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.706,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "D-POL-1",
+          "deliverable_title": "Policy Skeleton v0",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.591,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "rec_outline_risk_register",
+          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.591,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "confidence": 0.706,
+      "confidence_adjusted": 0.706,
+      "confidence_penalty": 0.0,
+      "counterfactual_delta": 0.115,
+      "inferred_workstream_id": "WS-POL",
+      "mode": "converted",
+      "recommended_action": "review_and_update_deliverable_evidence",
+      "recommended_deliverable_id": "policy_principles",
+      "recommended_deliverable_title": "Policy principles set",
+      "recommended_workstream_id": "WS-POL",
+      "risk_flags": [],
+      "salience": 0.41,
+      "source_path": "03 - Values & Principles/Values & Principles Survey Part 1 Results v.20260227-1035.xlsx",
+      "topics": [
+        "principles"
+      ]
+    },
+    {
+      "candidate_matches": [
+        {
+          "components": {
+            "lexical": 0.025,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.45
+          },
+          "deliverable_id": "policy_principles",
+          "deliverable_title": "Policy principles set",
+          "reasons": [
+            "same_workstream",
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.706,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "D-POL-1",
+          "deliverable_title": "Policy Skeleton v0",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.591,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "rec_outline_risk_register",
+          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.591,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "confidence": 0.706,
+      "confidence_adjusted": 0.706,
+      "confidence_penalty": 0.0,
+      "counterfactual_delta": 0.115,
+      "inferred_workstream_id": "WS-POL",
+      "mode": "converted",
+      "recommended_action": "review_and_update_deliverable_evidence",
+      "recommended_deliverable_id": "policy_principles",
+      "recommended_deliverable_title": "Policy principles set",
+      "recommended_workstream_id": "WS-POL",
+      "risk_flags": [],
+      "salience": 0.41,
+      "source_path": "03 - Values & Principles/Values & Principles Survey Part 2 Results v.20260302-1100.xlsx",
+      "topics": [
+        "principles"
+      ]
+    },
+    {
+      "candidate_matches": [
+        {
+          "components": {
+            "lexical": 0.05,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.45
+          },
+          "deliverable_id": "policy_principles",
+          "deliverable_title": "Policy principles set",
+          "reasons": [
+            "same_workstream",
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.731,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "D-POL-1",
+          "deliverable_title": "Policy Skeleton v0",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.591,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.041,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "rec_outline_risk_register",
+          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.591,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "confidence": 0.731,
+      "confidence_adjusted": 0.731,
+      "confidence_penalty": 0.0,
+      "counterfactual_delta": 0.14,
+      "inferred_workstream_id": "WS-POL",
+      "mode": "converted",
+      "recommended_action": "review_and_update_deliverable_evidence",
+      "recommended_deliverable_id": "policy_principles",
+      "recommended_deliverable_title": "Policy principles set",
+      "recommended_workstream_id": "WS-POL",
+      "risk_flags": [],
+      "salience": 0.41,
+      "source_path": "03 - Values & Principles/principles_candidates.xlsx",
+      "topics": [
+        "principles"
+      ]
+    },
+    {
+      "candidate_matches": [
+        {
+          "components": {
+            "lexical": 0.020000000000000004,
+            "mode": 0.0,
+            "salience": 0.051000000000000004,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.45
+          },
+          "deliverable_id": "policy_principles",
+          "deliverable_title": "Policy principles set",
+          "reasons": [
+            "same_workstream",
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.711,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.051000000000000004,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "D-POL-1",
+          "deliverable_title": "Policy Skeleton v0",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.601,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.051000000000000004,
+            "status": 0.1,
+            "topic": 0.0,
+            "workstream": 0.45
+          },
+          "deliverable_id": "rec_outline_risk_register",
+          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "reasons": [
+            "same_workstream",
+            "status_in_progress"
+          ],
+          "score": 0.601,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "confidence": 0.711,
+      "confidence_adjusted": 0.711,
+      "confidence_penalty": 0.0,
+      "counterfactual_delta": 0.11,
+      "inferred_workstream_id": "WS-POL",
+      "mode": "converted",
+      "recommended_action": "review_and_update_deliverable_evidence",
+      "recommended_deliverable_id": "policy_principles",
+      "recommended_deliverable_title": "Policy principles set",
+      "recommended_workstream_id": "WS-POL",
+      "risk_flags": [],
+      "salience": 0.51,
+      "source_path": "Meetings/03 - Meeting 20-FEB-26/Facilitator (25 Minute Focus Block Values & Principles).docx",
+      "topics": [
+        "principles"
+      ]
+    }
+  ],
+  "recommended_review_mode": "guided_review",
+  "stage_trace": [
+    {
+      "ai_role": "Propose exploration candidates",
+      "confidence": 1.0,
+      "details": {
+        "converted_count": 23,
+        "priority_policy": [
+          "favor promoted artifacts",
+          "favor in-progress deliverables",
+          "penalize ambiguity"
+        ],
+        "promoted_count": 0
+      },
+      "human_role": "Set goals, priorities",
+      "stage": "Curiosity / Motivation",
+      "stage_id": 1,
+      "summary": "Established autonomous update objective and priorities."
+    },
+    {
+      "ai_role": "Filter, preprocess, detect salience",
+      "confidence": 0.95,
+      "details": {
+        "candidate_count": 23,
+        "salience_bands": {
+          "high": 0,
+          "low": 21,
+          "medium": 2
+        }
+      },
+      "human_role": "Validate inputs, label edge cases",
+      "stage": "Perception & Attention",
+      "stage_id": 2,
+      "summary": "Filtered ingest deltas and computed salience/edge-case perception signals."
+    },
+    {
+      "ai_role": "Retrieve relevant context",
+      "confidence": 0.95,
+      "details": {
+        "deliverable_count": 18,
+        "workstream_count": 8,
+        "workstreams_with_deliverables": 8
+      },
+      "human_role": "Provide domain knowledge, curate corpora",
+      "stage": "Memory Activation",
+      "stage_id": 3,
+      "summary": "Activated SoR memory graph for workstreams, deliverables, and status distributions."
+    },
+    {
+      "ai_role": "Produce grounded representations",
+      "confidence": 0.84,
+      "details": {
+        "with_inferred_workstream": 16,
+        "with_memory_links": 23
+      },
+      "human_role": "Interpret ambiguous cases",
+      "stage": "Comprehension",
+      "stage_id": 4,
+      "summary": "Built grounded candidate representations with memory-backed workstream hypotheses."
+    },
+    {
+      "ai_role": "Execute inference steps",
+      "confidence": 0.86,
+      "details": {
+        "average_top_score": 0.5094,
+        "matched_candidate_count": 23
+      },
+      "human_role": "Define rules, constraints",
+      "stage": "Basic Reasoning",
+      "stage_id": 5,
+      "summary": "Executed weighted reasoning over workstream, topic, status, lexical, and salience signals."
+    },
+    {
+      "ai_role": "Run verification, counterfactuals",
+      "confidence": 0.88,
+      "details": {
+        "critical_flags": {
+          "ambiguous_alternative": 5,
+          "sensitive_source": 0,
+          "workstream_conflict": 0
+        },
+        "validated_actions": 16
+      },
+      "human_role": "Judge tradeoffs, ethical implications",
+      "stage": "Critical Thinking",
+      "stage_id": 6,
+      "summary": "Ran counterfactual and conflict checks to stress-test reasoning hypotheses."
+    },
+    {
+      "ai_role": "Produce introspection logs",
+      "confidence": 0.9,
+      "details": {
+        "ambiguity_rate": 0.3125,
+        "low_confidence_actions": 8,
+        "missing_workstream_rate": 0.0,
+        "unmapped_candidates": 0
+      },
+      "human_role": "Review decisions, update objectives",
+      "stage": "Self-Reflection",
+      "stage_id": 7,
+      "summary": "Generated introspection diagnostics over uncertainty, ambiguity, and mapping gaps."
+    },
+    {
+      "ai_role": "Calibrate confidence, select strategies",
+      "confidence": 0.9,
+      "details": {
+        "auto_apply_candidates": 0,
+        "calibrated_threshold": 0.67,
+        "recommended_review_mode": "guided_review",
+        "retained_actions": 6
+      },
+      "human_role": "Adjust strategy, set thresholds",
+      "stage": "Metacognition",
+      "stage_id": 8,
+      "summary": "Calibrated confidence thresholds and selected execution strategy."
+    },
+    {
+      "ai_role": "Orchestrate workflows, enforce constraints",
+      "confidence": 1.0,
+      "details": {
+        "auto_apply_enabled": false,
+        "recommended_actions": 6,
+        "report_ready": true
+      },
+      "human_role": "Final approval, policy decisions",
+      "stage": "Cognitive Control",
+      "stage_id": 9,
+      "summary": "Produced final cognitive-control policy packet and autonomous execution candidates."
+    }
+  ],
+  "transform_version": "1.1.0"
+}

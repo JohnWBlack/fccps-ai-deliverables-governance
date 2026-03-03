@@ -352,6 +352,92 @@ def validate_deliverables(
     for warning in sorted(set(compatibility_warnings)):
         print(warning)
 
+
+def validate_supporting_documents(
+    data: Dict[str, Any],
+    deliverable_ids: set,
+    workstream_ids: set,
+) -> None:
+    """Validate generated supporting_documents.yml linkage map when present."""
+    if not isinstance(data, dict):
+        print("❌ supporting_documents.yml must be a YAML object")
+        sys.exit(1)
+
+    metadata = data.get("metadata")
+    if not isinstance(metadata, dict):
+        print("❌ supporting_documents.yml metadata must be an object")
+        sys.exit(1)
+    for field in ["version", "last_updated", "description", "generated_at", "min_confidence"]:
+        if field not in metadata:
+            print(f"❌ supporting_documents.yml metadata missing required field '{field}'")
+            sys.exit(1)
+
+    try:
+        datetime.strptime(str(metadata.get("last_updated")), "%Y-%m-%d")
+    except ValueError:
+        print("❌ supporting_documents.yml metadata.last_updated must be YYYY-MM-DD")
+        sys.exit(1)
+
+    links = data.get("links")
+    if not isinstance(links, list):
+        print("❌ supporting_documents.yml links must be a list")
+        sys.exit(1)
+
+    seen_deliverables = set()
+    for idx, link in enumerate(links):
+        if not isinstance(link, dict):
+            print(f"❌ supporting_documents.yml links[{idx}] must be an object")
+            sys.exit(1)
+
+        deliverable_id = link.get("deliverable_id")
+        if not isinstance(deliverable_id, str) or not deliverable_id:
+            print(f"❌ supporting_documents.yml links[{idx}].deliverable_id must be non-empty string")
+            sys.exit(1)
+        if deliverable_id in seen_deliverables:
+            print(f"❌ supporting_documents.yml duplicate deliverable_id: {deliverable_id}")
+            sys.exit(1)
+        seen_deliverables.add(deliverable_id)
+        if deliverable_id not in deliverable_ids:
+            print(f"❌ supporting_documents.yml deliverable_id references unknown deliverable '{deliverable_id}'")
+            sys.exit(1)
+
+        ws_id = link.get("workstream_id")
+        if ws_id is not None and ws_id != "":
+            if not isinstance(ws_id, str) or ws_id not in workstream_ids:
+                print(f"❌ supporting_documents.yml links[{idx}].workstream_id references unknown workstream '{ws_id}'")
+                sys.exit(1)
+
+        action = link.get("action")
+        if not isinstance(action, str) or not action.strip():
+            print(f"❌ supporting_documents.yml links[{idx}].action must be non-empty string")
+            sys.exit(1)
+
+        for field in ["confidence_max", "confidence_mean"]:
+            value = link.get(field)
+            if not isinstance(value, (int, float)):
+                print(f"❌ supporting_documents.yml links[{idx}].{field} must be numeric")
+                sys.exit(1)
+            if float(value) < 0 or float(value) > 1:
+                print(f"❌ supporting_documents.yml links[{idx}].{field} must be between 0 and 1")
+                sys.exit(1)
+
+        sources_count = link.get("sources_count")
+        if not isinstance(sources_count, int) or sources_count < 0:
+            print(f"❌ supporting_documents.yml links[{idx}].sources_count must be integer >= 0")
+            sys.exit(1)
+
+        evidence_paths = link.get("evidence_paths")
+        if not isinstance(evidence_paths, list):
+            print(f"❌ supporting_documents.yml links[{idx}].evidence_paths must be a list")
+            sys.exit(1)
+        if len(evidence_paths) != sources_count:
+            print(f"❌ supporting_documents.yml links[{idx}] sources_count must equal len(evidence_paths)")
+            sys.exit(1)
+        for path in evidence_paths:
+            if not isinstance(path, str) or not path.strip():
+                print(f"❌ supporting_documents.yml links[{idx}].evidence_paths values must be non-empty strings")
+                sys.exit(1)
+
 def main():
     """Main validation function."""
     print("🔍 Validating FCCPS AI Committee Source of Truth...")
@@ -367,6 +453,7 @@ def main():
     deliverables_file = os.path.join(sor_dir, "deliverables.yml")
     principles_file = os.path.join(sor_dir, "principles.yml")
     risks_file = os.path.join(sor_dir, "risks.yml")
+    supporting_documents_file = os.path.join(sor_dir, "supporting_documents.yml")
     
     workstreams_data = load_yaml_file(workstreams_file)
     timeline_data = load_yaml_file(timeline_file)
@@ -397,6 +484,10 @@ def main():
         principle_ids,
         risk_ids,
     )
+
+    if os.path.exists(supporting_documents_file):
+        supporting_data = load_yaml_file(supporting_documents_file)
+        validate_supporting_documents(supporting_data, deliverable_ids, workstream_ids)
     
     print("✅ All validations passed!")
     print(f"📊 Validated {len(workstreams_data.get('workstreams', []))} workstreams")

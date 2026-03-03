@@ -12,6 +12,19 @@ py scripts/pii_scan.py
 py scripts/validate_public.py
 ```
 
+### PowerShell with LLM promotion for PII-flagged files
+
+```powershell
+$env:PROJECT_FILES_ROOT = "C:\path\to\project_files"
+$env:OPENAI_API_KEY = "sk-..."
+# Optional:
+# $env:OPENAI_BASE_URL = "https://api.openai.com/v1"
+# $env:PROJECT_INGEST_PROMOTION_MODEL = "gpt-4o-mini"
+
+py scripts/pii_scan.py --llm-promote
+py scripts/validate_public.py
+```
+
 ### Bash
 
 ```bash
@@ -34,3 +47,13 @@ The ingest scanner excludes:
 - `write_json_if_changed` and `write_text_if_changed` prevent unnecessary file rewrites.
 - `index.json` and discovery output are sorted before write.
 - DOCX sidecar markdown and XLSX sidecar JSON include provenance metadata.
+
+## LLM promotion behavior (optional)
+
+- By default, files with PII findings are skipped unless `--allow-pii` is used.
+- With `--llm-promote`, PII-flagged files are sent to an LLM for a promotion decision:
+  - if relevant and value-add, the file is promoted with strengthened redacted sections.
+  - if not relevant/value-add, it remains skipped.
+- Requires one of:
+  - `OPENAI_API_KEY`
+  - `AI_INTEGRATIONS_OPENAI_API_KEY`
