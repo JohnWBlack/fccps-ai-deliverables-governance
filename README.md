@@ -16,7 +16,9 @@ This repository serves as the single source-of-truth (SoR) for FCCPS AI Committe
 ├── sor/                    # Source of Truth (YAML files)
 │   ├── workstreams.yml
 │   ├── timeline.yml
-│   └── deliverables.yml
+│   ├── deliverables.yml
+│   ├── principles.yml
+│   └── risks.yml
 ├── governance_docs/         # Foundation docs and committee history (md/docx/pdf)
 ├── public/
 │   ├── public_snapshot.json  # Main public data contract
@@ -24,7 +26,10 @@ This repository serves as the single source-of-truth (SoR) for FCCPS AI Committe
 │   ├── ref_index.json        # Extracted principle/risk/workstream/deliverable refs
 │   ├── quality_report.json   # Deterministic issue list for editors
 │   ├── kpis.json             # Deterministic health dashboard KPIs
-│   └── kpi_evidence.json     # Expanded KPI evidence payload
+│   ├── kpi_evidence.json     # Expanded KPI evidence payload
+│   ├── meeting4_readiness.json # Meeting 4 convergence drilldowns
+│   ├── dashboard_bundle.json # Dashboard-focused aggregate payload
+│   └── full_export.json      # Full aggregate export payload
 ├── scripts/
 │   ├── validate_sor.py       # YAML validation
 │   ├── build_snapshot.py     # Snapshot generation
@@ -57,6 +62,7 @@ python scripts/build_catalog.py
 python scripts/extract_refs.py
 python scripts/quality_checks.py
 python scripts/build_kpis.py
+python scripts/build_dashboard_bundle.py
 
 # 4. Commit changes
 git add sor/ public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json CHANGELOG_PUBLIC.md

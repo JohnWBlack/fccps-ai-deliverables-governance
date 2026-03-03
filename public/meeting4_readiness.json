@@ -1,0 +1,449 @@
+{
+  "meta": {
+    "generated_at": "2026-03-03T06:39:06.432427Z",
+    "source": [
+      "public/kpis.json",
+      "public/ref_index.json",
+      "public/public_snapshot.json"
+    ],
+    "label": "Meeting 4 Readiness",
+    "committee_safe": true
+  },
+  "coverage": {
+    "principle_linkage_pct": 38.0,
+    "risk_linkage_pct": 38.0
+  },
+  "missing_refs": [
+    {
+      "deliverable_id": "charter_v0",
+      "title": "Team Charter v0",
+      "checkpoint_id": "m1",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "working_agreements",
+      "title": "Working agreements and collaboration operating rules",
+      "checkpoint_id": "m2",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "D-RSB-1",
+      "title": "Shared Baseline Brief v1",
+      "checkpoint_id": "m3",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "pre_m3_defs",
+      "title": "Definitions and assumptions pre-read",
+      "checkpoint_id": "m3",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "pre_m3_risks_ops",
+      "title": "Meeting 3 risks/opportunities synthesis",
+      "checkpoint_id": "m3",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "m5_draft_sections",
+      "title": "Draft sections for priority recommendation domains",
+      "checkpoint_id": "m5",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "D-CCI-1",
+      "title": "Comms Pack v1",
+      "checkpoint_id": "m6",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "D-IPC-1",
+      "title": "Implementation Roadmap v1",
+      "checkpoint_id": "m6",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "near_final_package",
+      "title": "Near-final recommendation package",
+      "checkpoint_id": "m6",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "final_talk_track",
+      "title": "Final talk track and Q&A prep",
+      "checkpoint_id": "m7",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    },
+    {
+      "deliverable_id": "committee_response",
+      "title": "Formal committee response package",
+      "checkpoint_id": "m8",
+      "missing_principle_refs": true,
+      "missing_risk_refs": true
+    }
+  ],
+  "dependency_fanout": {
+    "principles": [
+      {
+        "id": "P-004",
+        "deliverable_count": 4,
+        "deliverable_ids": [
+          "D-AIN-1",
+          "D-DPS-1",
+          "D-POL-1",
+          "rec_outline_risk_register"
+        ]
+      },
+      {
+        "id": "P-001",
+        "deliverable_count": 3,
+        "deliverable_ids": [
+          "D-POL-1",
+          "policy_principles",
+          "rec_outline_risk_register"
+        ]
+      },
+      {
+        "id": "P-002",
+        "deliverable_count": 3,
+        "deliverable_ids": [
+          "D-CPX-1",
+          "D-EQA-1",
+          "policy_principles"
+        ]
+      },
+      {
+        "id": "P-003",
+        "deliverable_count": 3,
+        "deliverable_ids": [
+          "D-AIN-1",
+          "D-CPX-1",
+          "policy_principles"
+        ]
+      },
+      {
+        "id": "P-006",
+        "deliverable_count": 3,
+        "deliverable_ids": [
+          "D-DPS-1",
+          "D-POL-1",
+          "rec_outline_risk_register"
+        ]
+      },
+      {
+        "id": "P-005",
+        "deliverable_count": 2,
+        "deliverable_ids": [
+          "D-CPX-1",
+          "D-EQA-1"
+        ]
+      },
+      {
+        "id": "P-007",
+        "deliverable_count": 2,
+        "deliverable_ids": [
+          "D-EQA-1",
+          "D-POL-1"
+        ]
+      },
+      {
+        "id": "P-008",
+        "deliverable_count": 2,
+        "deliverable_ids": [
+          "D-AIN-1",
+          "D-DPS-1"
+        ]
+      }
+    ],
+    "decisions": []
+  },
+  "drilldowns": {
+    "by_principle": {
+      "P-004": [
+        "D-AIN-1",
+        "D-DPS-1",
+        "D-POL-1",
+        "rec_outline_risk_register"
+      ],
+      "P-001": [
+        "D-POL-1",
+        "policy_principles",
+        "rec_outline_risk_register"
+      ],
+      "P-002": [
+        "D-CPX-1",
+        "D-EQA-1",
+        "policy_principles"
+      ],
+      "P-003": [
+        "D-AIN-1",
+        "D-CPX-1",
+        "policy_principles"
+      ],
+      "P-006": [
+        "D-DPS-1",
+        "D-POL-1",
+        "rec_outline_risk_register"
+      ],
+      "P-005": [
+        "D-CPX-1",
+        "D-EQA-1"
+      ],
+      "P-007": [
+        "D-EQA-1",
+        "D-POL-1"
+      ],
+      "P-008": [
+        "D-AIN-1",
+        "D-DPS-1"
+      ]
+    },
+    "by_decision": {},
+    "by_deliverable": {
+      "charter_v0": {
+        "title": "Team Charter v0",
+        "checkpoint_id": "m1",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [],
+        "status": "completed"
+      },
+      "working_agreements": {
+        "title": "Working agreements and collaboration operating rules",
+        "checkpoint_id": "m2",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "charter_v0"
+        ],
+        "status": "completed"
+      },
+      "pre_m3_defs": {
+        "title": "Definitions and assumptions pre-read",
+        "checkpoint_id": "m3",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "working_agreements"
+        ],
+        "status": "completed"
+      },
+      "pre_m3_risks_ops": {
+        "title": "Meeting 3 risks/opportunities synthesis",
+        "checkpoint_id": "m3",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "working_agreements"
+        ],
+        "status": "completed"
+      },
+      "policy_principles": {
+        "title": "Policy principles set",
+        "checkpoint_id": "ms_policy_principles",
+        "principle_refs": [
+          "P-001",
+          "P-002",
+          "P-003"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-004"
+        ],
+        "depends_on": [
+          "pre_m3_defs",
+          "pre_m3_risks_ops"
+        ],
+        "status": "in_progress"
+      },
+      "D-RSB-1": {
+        "title": "Shared Baseline Brief v1",
+        "checkpoint_id": "m3",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [],
+        "status": "completed"
+      },
+      "rec_outline_risk_register": {
+        "title": "Recommendations outline and first-pass risk register",
+        "checkpoint_id": "m4",
+        "principle_refs": [
+          "P-001",
+          "P-004",
+          "P-006"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-002",
+          "R-005",
+          "R-006"
+        ],
+        "depends_on": [
+          "policy_principles"
+        ],
+        "status": "in_progress"
+      },
+      "D-POL-1": {
+        "title": "Policy Skeleton v0",
+        "checkpoint_id": "m4",
+        "principle_refs": [
+          "P-001",
+          "P-004",
+          "P-006",
+          "P-007"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-002",
+          "R-005"
+        ],
+        "depends_on": [
+          "D-RSB-1"
+        ],
+        "status": "in_progress"
+      },
+      "D-CPX-1": {
+        "title": "Scenario Bank v1",
+        "checkpoint_id": "m4",
+        "principle_refs": [
+          "P-002",
+          "P-003",
+          "P-005"
+        ],
+        "risk_refs": [
+          "R-003",
+          "R-006"
+        ],
+        "depends_on": [
+          "D-RSB-1"
+        ],
+        "status": "in_progress"
+      },
+      "D-AIN-1": {
+        "title": "Attribution & Integrity Matrix v1",
+        "checkpoint_id": "m4",
+        "principle_refs": [
+          "P-003",
+          "P-004",
+          "P-008"
+        ],
+        "risk_refs": [
+          "R-002",
+          "R-004",
+          "R-007"
+        ],
+        "depends_on": [
+          "D-CPX-1"
+        ],
+        "status": "in_progress"
+      },
+      "D-DPS-1": {
+        "title": "AI Tool Review Checklist v1 + Risk Tiers",
+        "checkpoint_id": "m4",
+        "principle_refs": [
+          "P-004",
+          "P-006",
+          "P-008"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-005",
+          "R-008"
+        ],
+        "depends_on": [],
+        "status": "in_progress"
+      },
+      "D-EQA-1": {
+        "title": "Equity Impact Checklist v1",
+        "checkpoint_id": "m4",
+        "principle_refs": [
+          "P-002",
+          "P-005",
+          "P-007"
+        ],
+        "risk_refs": [
+          "R-003",
+          "R-006",
+          "R-008"
+        ],
+        "depends_on": [
+          "D-CPX-1"
+        ],
+        "status": "in_progress"
+      },
+      "m5_draft_sections": {
+        "title": "Draft sections for priority recommendation domains",
+        "checkpoint_id": "m5",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "rec_outline_risk_register"
+        ],
+        "status": "not_started"
+      },
+      "near_final_package": {
+        "title": "Near-final recommendation package",
+        "checkpoint_id": "m6",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "m5_draft_sections"
+        ],
+        "status": "not_started"
+      },
+      "D-CCI-1": {
+        "title": "Comms Pack v1",
+        "checkpoint_id": "m6",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "D-POL-1"
+        ],
+        "status": "not_started"
+      },
+      "D-IPC-1": {
+        "title": "Implementation Roadmap v1",
+        "checkpoint_id": "m6",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "D-DPS-1",
+          "D-EQA-1",
+          "D-POL-1"
+        ],
+        "status": "not_started"
+      },
+      "final_talk_track": {
+        "title": "Final talk track and Q&A prep",
+        "checkpoint_id": "m7",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "D-CCI-1",
+          "near_final_package"
+        ],
+        "status": "not_started"
+      },
+      "committee_response": {
+        "title": "Formal committee response package",
+        "checkpoint_id": "m8",
+        "principle_refs": [],
+        "risk_refs": [],
+        "depends_on": [
+          "final_talk_track"
+        ],
+        "status": "not_started"
+      }
+    }
+  }
+}

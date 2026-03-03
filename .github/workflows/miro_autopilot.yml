@@ -153,9 +153,11 @@ jobs:
         shell: pwsh
         run: |
           py scripts/build_snapshot.py
-          py scripts/build_kpis.py
-          py scripts/quality_checks.py
           py scripts/build_catalog.py
+          py scripts/extract_refs.py
+          py scripts/quality_checks.py
+          py scripts/build_kpis.py
+          py scripts/build_dashboard_bundle.py
           py scripts/build_glidepath_history.py
           py scripts/validate_public.py
 
@@ -175,8 +177,14 @@ jobs:
             "public/public_snapshot.json" `
             "public/kpis.json" `
             "public/kpi_evidence.json" `
+            "public/meeting4_readiness.json" `
+            "public/dashboard_bundle.json" `
+            "public/dashboard_bundle.zip" `
+            "public/full_export.json" `
+            "public/full_export.zip" `
             "public/quality_report.json" `
             "public/file_catalog.json" `
+            "public/ref_index.json" `
             "public/glidepath_history.json" `
             "sor/supporting_documents.yml" `
             "sor/workstreams.yml" `
@@ -207,8 +215,14 @@ jobs:
             "public/public_snapshot.json" `
             "public/kpis.json" `
             "public/kpi_evidence.json" `
+            "public/meeting4_readiness.json" `
+            "public/dashboard_bundle.json" `
+            "public/dashboard_bundle.zip" `
+            "public/full_export.json" `
+            "public/full_export.zip" `
             "public/quality_report.json" `
             "public/file_catalog.json" `
+            "public/ref_index.json" `
             "public/glidepath_history.json" `
             "sor/supporting_documents.yml" `
             "sor/workstreams.yml" `

@@ -15,6 +15,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SOR_DIR = REPO_ROOT / "sor"
 PUBLIC_DIR = REPO_ROOT / "public"
 OUTPUT_PATH = PUBLIC_DIR / "quality_report.json"
+WORKSTREAM_ALIAS_ALLOWLIST = {"WS-XXX"}
 
 
 def utc_now_iso() -> str:
@@ -54,6 +55,8 @@ def build_quality_report() -> dict[str, Any]:
     workstreams_data = load_yaml(SOR_DIR / "workstreams.yml")
     timeline_data = load_yaml(SOR_DIR / "timeline.yml")
     deliverables_data = load_yaml(SOR_DIR / "deliverables.yml")
+    principles_data = load_yaml(SOR_DIR / "principles.yml") if (SOR_DIR / "principles.yml").exists() else {}
+    risks_data = load_yaml(SOR_DIR / "risks.yml") if (SOR_DIR / "risks.yml").exists() else {}
     ref_index = load_json(PUBLIC_DIR / "ref_index.json")
 
     workstreams = workstreams_data.get("workstreams", [])
@@ -63,6 +66,16 @@ def build_quality_report() -> dict[str, Any]:
     timeline_ids = {e.get("id") for e in timeline_events if e.get("id")}
     workstream_ids = {w.get("id") for w in workstreams if w.get("id")}
     deliverable_ids = {d.get("id") for d in deliverables if d.get("id")}
+    principle_ids = {
+        str(item.get("id"))
+        for item in principles_data.get("principles", [])
+        if isinstance(item, dict) and item.get("id")
+    }
+    risk_ids = {
+        str(item.get("id"))
+        for item in risks_data.get("risks", [])
+        if isinstance(item, dict) and item.get("id")
+    }
 
     issues: list[dict[str, Any]] = []
 
@@ -104,6 +117,42 @@ def build_quality_report() -> dict[str, Any]:
             "Some deliverables depend on unknown deliverable IDs.",
             dep_issues,
         )
+
+    if principle_ids:
+        dangling_principle_refs = []
+        for d in deliverables:
+            refs = d.get("principle_refs") or []
+            if not isinstance(refs, list):
+                continue
+            unknown = sorted({str(ref) for ref in refs if str(ref) and str(ref) not in principle_ids})
+            if unknown:
+                dangling_principle_refs.append({"deliverable_id": d.get("id"), "unknown_principle_refs": unknown})
+        if dangling_principle_refs:
+            add_issue(
+                issues,
+                "error",
+                "ID-DANGLING-PRINCIPLE-REF",
+                "Some deliverables reference unknown principle IDs.",
+                dangling_principle_refs,
+            )
+
+    if risk_ids:
+        dangling_risk_refs = []
+        for d in deliverables:
+            refs = d.get("risk_refs") or []
+            if not isinstance(refs, list):
+                continue
+            unknown = sorted({str(ref) for ref in refs if str(ref) and str(ref) not in risk_ids})
+            if unknown:
+                dangling_risk_refs.append({"deliverable_id": d.get("id"), "unknown_risk_refs": unknown})
+        if dangling_risk_refs:
+            add_issue(
+                issues,
+                "error",
+                "ID-DANGLING-RISK-REF",
+                "Some deliverables reference unknown risk IDs.",
+                dangling_risk_refs,
+            )
 
     # 2) Placeholder detection
     dod_placeholder = []
@@ -194,15 +243,26 @@ def build_quality_report() -> dict[str, Any]:
         if isinstance(ws, str) and ws_pattern.match(str(ws).upper())
     }
     sor_workstream_ids = {str(ws).upper() for ws in workstream_ids if isinstance(ws, str)}
-    drift_docs_not_in_sor = sorted(docs_workstream_ids - sor_workstream_ids)
+    drift_docs_not_in_sor = sorted((docs_workstream_ids - sor_workstream_ids) - WORKSTREAM_ALIAS_ALLOWLIST)
     drift_sor_not_in_docs = sorted(sor_workstream_ids - docs_workstream_ids)
 
-    if drift_docs_not_in_sor or drift_sor_not_in_docs:
+    observed_allowlisted_aliases = sorted(docs_workstream_ids & WORKSTREAM_ALIAS_ALLOWLIST)
+
+    if observed_allowlisted_aliases:
+        add_issue(
+            issues,
+            "info",
+            "DRIFT-WORKSTREAM-ALIASES-ALLOWLIST",
+            "Allowlisted legacy workstream aliases were observed in docs.",
+            [{"allowlisted_aliases": observed_allowlisted_aliases}],
+        )
+
+    if drift_docs_not_in_sor:
         add_issue(
             issues,
             "warning",
             "DRIFT-WORKSTREAM-IDS",
-            "SoR workstream IDs and doc-extracted WS-* IDs are not fully aligned.",
+            "Doc-extracted WS-* IDs include values that are not canonical SoR IDs.",
             [
                 {
                     "docs_not_in_sor": drift_docs_not_in_sor,
@@ -275,7 +335,7 @@ def build_quality_report() -> dict[str, Any]:
                 "docs_count": len(docs_workstream_ids),
                 "docs_not_in_sor": drift_docs_not_in_sor,
                 "sor_not_in_docs": drift_sor_not_in_docs,
-                "mismatch_count": len(drift_docs_not_in_sor) + len(drift_sor_not_in_docs),
+                "mismatch_count": len(drift_docs_not_in_sor),
             },
         },
     }

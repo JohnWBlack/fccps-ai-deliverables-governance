@@ -5,6 +5,10 @@ This changelog tracks changes visible in the public snapshot. Internal changes t
 ## [Unreleased]
 
 ### Added
+- Canonical principle register (`sor/principles.yml`) for convergence linkage IDs (`P-###`)
+- Canonical risk register (`sor/risks.yml`) for convergence linkage IDs (`R-###`)
+- Meeting 4 convergence instrumentation on key deliverables via `principle_refs` and `risk_refs`
+- Decision ID extraction support (`DEC-YYYY-MM-DD-##`) in `public/ref_index.json`
 - Health dashboard pipeline with deterministic KPI generation (`public/kpis.json`)
 - Public file inventory generation (`public/file_catalog.json`)
 - Expanded governance document corpus in `governance_docs/`
@@ -12,6 +16,15 @@ This changelog tracks changes visible in the public snapshot. Internal changes t
 - Source of Truth YAML schema for workstreams, timeline, and deliverables
 - Public snapshot generation system
 - Validation scripts for data integrity
+
+### Changed
+- `final_talk_track` now references canonical workstream `WS-CCI` to remove dangling workstream linkage.
+- Reference extraction now normalizes legacy workstream aliases (`WS-001..WS-008`) to canonical SoR IDs.
+- Quality checks now validate `principle_refs` and `risk_refs` IDs against canonical SoR registers.
+
+### Fixed
+- Meeting 4 convergence instrumentation now supports non-zero KPI linkage coverage metrics.
+- Workstream drift reporting now treats explicit allowlisted aliases as non-blocking.
 
 ## [2026-02-23] - Initial Release
 

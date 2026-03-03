@@ -123,6 +123,33 @@ deliverables:
 - **principle_refs**: Optional list of principle IDs (convergence KPI instrumentation)
 - **risk_refs**: Optional list of risk IDs (convergence KPI instrumentation)
 
+## principles.yml
+
+Canonical principle register used by convergence instrumentation.
+
+### Structure
+```yaml
+metadata: { ... }
+principles:
+  - id: "P-001"
+    short_label: "Principle name"
+    statement: "Policy-level principle statement"
+    status: "active|retired"
+```
+
+## risks.yml
+
+Canonical risk register used by convergence instrumentation.
+
+### Structure
+```yaml
+metadata: { ... }
+risks:
+  - id: "R-001"
+    name: "Risk name"
+    status: "active|retired"
+```
+
 ## Validation Rules
 
 ### Required Fields
@@ -187,3 +214,11 @@ When updating schemas:
 3. Update validation scripts
 4. Update this documentation
 5. Update CHANGELOG_PUBLIC.md
+
+## Reference Extraction Normalization
+
+`scripts/extract_refs.py` extracts references from markdown and applies normalization for legacy workstream aliases.
+
+- `WS-001..WS-008` are normalized to canonical SoR IDs (`WS-RSB..WS-IPC`)
+- Explicit unresolved alias allowlist currently includes `WS-XXX`
+- Decision IDs are extracted with format `DEC-YYYY-MM-DD-##`

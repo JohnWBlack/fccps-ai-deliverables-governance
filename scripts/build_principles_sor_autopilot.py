@@ -30,9 +30,11 @@ PIPELINE = [
     "validate_sor.py",
     "update_change_log.py",
     "build_snapshot.py",
-    "build_kpis.py",
-    "quality_checks.py",
     "build_catalog.py",
+    "extract_refs.py",
+    "quality_checks.py",
+    "build_kpis.py",
+    "build_dashboard_bundle.py",
     "build_glidepath_history.py",
     "pii_scan.py",
     "scrub_survey_exports.py",
@@ -206,9 +208,16 @@ def build_prompt(rollup: dict[str, Any], prior: list[ExistingPrinciple]) -> list
 
 
 def call_openai(messages: list[dict[str, str]]) -> dict[str, Any]:
-    api_key = os.environ.get("OPENAI_API_KEY")
+    api_key = os.environ.get("OPENAI_API_KEY") or os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY")
     if not api_key:
         raise CircuitBreakerError("OPENAI_API_KEY is required for autopilot synthesis")
+
+    base_url = os.environ.get("OPENAI_BASE_URL") or os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL")
+    completions_url = (
+        f"{base_url.rstrip('/')}/chat/completions"
+        if isinstance(base_url, str) and base_url.strip()
+        else "https://api.openai.com/v1/chat/completions"
+    )
 
     payload = {
         "model": os.environ.get("OPENAI_MODEL", "gpt-4o-mini"),
@@ -218,7 +227,7 @@ def call_openai(messages: list[dict[str, str]]) -> dict[str, Any]:
     }
 
     request = urllib.request.Request(
-        "https://api.openai.com/v1/chat/completions",
+        completions_url,
         data=json.dumps(payload).encode("utf-8"),
         headers={
             "Authorization": f"Bearer {api_key}",
@@ -510,6 +519,17 @@ def main() -> None:
             "manifest_hashes": manifest_hashes,
             "existing_principles_count": len(existing),
         }
+
+        require_openai = str(os.environ.get("AUTOPILOT_REQUIRE_OPENAI", "false")).lower() == "true"
+        has_openai_key = bool(os.environ.get("OPENAI_API_KEY") or os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY"))
+        if not has_openai_key and not require_openai:
+            report["status"] = "no_op_missing_openai"
+            report["failure_reason"] = "OpenAI key missing; skipped synthesis and continued deterministic pipeline"
+            report["circuit_breakers"]["openai_key"] = "skipped"
+            run_pipeline()
+            write_report(report)
+            print("⏭️ OpenAI key missing; autopilot synthesis skipped, deterministic pipeline completed")
+            return
 
         synthesized = deterministic_synthesis(rollup, existing)
         low_confidence_count = sum(1 for item in synthesized if item.confidence == "low")

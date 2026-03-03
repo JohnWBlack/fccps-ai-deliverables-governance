@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-02-25T20:57:45Z",
-    "snapshot_version_key": "67e9393c9d9efe24c31d40ad65a33bc379b22633"
+    "generated_at": "2026-03-03T06:39:06.433403Z",
+    "snapshot_version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-02-25T20:57:03.124609Z",
+      "generated_at": "2026-03-03T06:38:45.824128Z",
       "source_version": "1.1.0",
-      "version_key": "67e9393c9d9efe24c31d40ad65a33bc379b22633"
+      "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925"
     },
     "metadata": {
-      "generated_at": "2026-02-25T20:57:03.124609Z",
+      "generated_at": "2026-03-03T06:38:45.824128Z",
       "source_version": "1.1.0",
-      "version_key": "67e9393c9d9efe24c31d40ad65a33bc379b22633",
+      "version_key": "baa28d17ab2d7d29bd96b7761754930edc3c5925",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -198,7 +198,9 @@
         "checkpoint_id": "m1",
         "depends_on": [],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "working_agreements",
@@ -216,7 +218,9 @@
           "charter_v0"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "pre_m3_defs",
@@ -234,7 +238,9 @@
           "working_agreements"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "pre_m3_risks_ops",
@@ -252,7 +258,9 @@
           "working_agreements"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "policy_principles",
@@ -269,6 +277,15 @@
         "depends_on": [
           "pre_m3_defs",
           "pre_m3_risks_ops"
+        ],
+        "principle_refs": [
+          "P-001",
+          "P-002",
+          "P-003"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-004"
         ],
         "committee_only": false,
         "public_url": null
@@ -287,7 +304,9 @@
         "checkpoint_id": "m3",
         "depends_on": [],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "rec_outline_risk_register",
@@ -303,6 +322,17 @@
         "checkpoint_id": "m4",
         "depends_on": [
           "policy_principles"
+        ],
+        "principle_refs": [
+          "P-001",
+          "P-004",
+          "P-006"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-002",
+          "R-005",
+          "R-006"
         ],
         "committee_only": false,
         "public_url": null
@@ -322,6 +352,17 @@
         "depends_on": [
           "D-RSB-1"
         ],
+        "principle_refs": [
+          "P-001",
+          "P-004",
+          "P-006",
+          "P-007"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-002",
+          "R-005"
+        ],
         "committee_only": false,
         "public_url": null
       },
@@ -339,6 +380,15 @@
         "checkpoint_id": "m4",
         "depends_on": [
           "D-RSB-1"
+        ],
+        "principle_refs": [
+          "P-002",
+          "P-003",
+          "P-005"
+        ],
+        "risk_refs": [
+          "R-003",
+          "R-006"
         ],
         "committee_only": false,
         "public_url": null
@@ -358,6 +408,16 @@
         "depends_on": [
           "D-CPX-1"
         ],
+        "principle_refs": [
+          "P-003",
+          "P-004",
+          "P-008"
+        ],
+        "risk_refs": [
+          "R-002",
+          "R-004",
+          "R-007"
+        ],
         "committee_only": false,
         "public_url": null
       },
@@ -374,6 +434,16 @@
         "due_date": "2026-03-06",
         "checkpoint_id": "m4",
         "depends_on": [],
+        "principle_refs": [
+          "P-004",
+          "P-006",
+          "P-008"
+        ],
+        "risk_refs": [
+          "R-001",
+          "R-005",
+          "R-008"
+        ],
         "committee_only": false,
         "public_url": null
       },
@@ -391,6 +461,16 @@
         "checkpoint_id": "m4",
         "depends_on": [
           "D-CPX-1"
+        ],
+        "principle_refs": [
+          "P-002",
+          "P-005",
+          "P-007"
+        ],
+        "risk_refs": [
+          "R-003",
+          "R-006",
+          "R-008"
         ],
         "committee_only": false,
         "public_url": null
@@ -411,7 +491,9 @@
           "rec_outline_risk_register"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "near_final_package",
@@ -429,7 +511,9 @@
           "m5_draft_sections"
         ],
         "committee_only": true,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "D-CCI-1",
@@ -447,7 +531,9 @@
           "D-POL-1"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "D-IPC-1",
@@ -467,14 +553,16 @@
           "D-EQA-1"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "final_talk_track",
         "title": "Final talk track and Q&A prep",
         "status": "not_started",
         "scope": "committee",
-        "workstream_id": null,
+        "workstream_id": "WS-CCI",
         "owner": {
           "name": "John Black",
           "role": "Chair"
@@ -486,7 +574,9 @@
           "D-CCI-1"
         ],
         "committee_only": true,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
       },
       {
         "id": "committee_response",
@@ -504,13 +594,125 @@
           "final_talk_track"
         ],
         "committee_only": true,
-        "public_url": null
+        "public_url": null,
+        "principle_refs": [],
+        "risk_refs": []
+      }
+    ],
+    "change_log": [
+      {
+        "id": "DEC-2026-03-20-01",
+        "date": "2026-03-20",
+        "type": "decision",
+        "description": "Make access/governance direction decision (e.g., tool access model, procurement/governance posture)",
+        "trigger": "Recorded governance decision",
+        "impact": "m5_draft_sections; WS-DPS; WS-POL; WS-IPC",
+        "owner": null,
+        "status": "upcoming",
+        "impacted_artifacts": "m5_draft_sections; WS-DPS; WS-POL; WS-IPC",
+        "notes": "Decision gate explicitly shown in timeline; capture result when made."
+      },
+      {
+        "id": "DEC-2026-03-06-01",
+        "date": "2026-03-06",
+        "type": "decision",
+        "description": "Confirm recommendation domains + outline structure; agree top 10 risks + mitigations + owners",
+        "trigger": "Recorded governance decision",
+        "impact": "rec_outline_risk_register; WS-POL; WS-DPS; WS-AIN; WS-EQA; WS-CPX",
+        "owner": null,
+        "status": "upcoming",
+        "impacted_artifacts": "rec_outline_risk_register; WS-POL; WS-DPS; WS-AIN; WS-EQA; WS-CPX",
+        "notes": "Meeting 4 convergence gate; update workstream definitions of done if needed."
+      },
+      {
+        "id": "CHG-2026-03-03-01",
+        "date": "2026-03-03",
+        "type": "change",
+        "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-02; timeline.yml@2026-03-02; supporting_documents.yml@2026-03-02)",
+        "trigger": "Automated SoR pipeline update",
+        "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:9bb996f4d8c7",
+        "owner": "Automation",
+        "status": "recorded",
+        "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/supporting_documents.yml) auto_ref:9bb996f4d8c7",
+        "notes": null
+      },
+      {
+        "id": "DEC-2026-02-20-02",
+        "date": "2026-02-20",
+        "type": "decision",
+        "description": "Adopt 8–12 Policy Principles + tradeoff statement (board-ready)",
+        "trigger": "Recorded governance decision",
+        "impact": "policy_principles; ms_policy_principles; WS-*",
+        "owner": null,
+        "status": "upcoming",
+        "impacted_artifacts": "policy_principles; ms_policy_principles; WS-*",
+        "notes": "Convergence gate for downstream drafting; capture tradeoffs explicitly."
+      },
+      {
+        "id": "DEC-2026-02-20-01",
+        "date": "2026-02-20",
+        "type": "decision",
+        "description": "Select grade-band structure for recommendations (A/B/C)",
+        "trigger": "Recorded governance decision",
+        "impact": "pre_m3_defs; policy_principles; WS-CPX; WS-AIN",
+        "owner": null,
+        "status": "pending",
+        "impacted_artifacts": "pre_m3_defs; policy_principles; WS-CPX; WS-AIN",
+        "notes": "Preliminary signal from dot-votes suggests Option C; confirm via hands-up vote/decision."
+      },
+      {
+        "id": "DEC-2026-02-06-02",
+        "date": "2026-02-06",
+        "type": "decision",
+        "description": "Establish working agreements + draft timeline/objectives + collaboration rules + action items",
+        "trigger": "Recorded governance decision",
+        "impact": "working_agreements; Master Timeline",
+        "owner": null,
+        "status": "recorded",
+        "impacted_artifacts": "working_agreements; Master Timeline",
+        "notes": "Source of record: Working agreements artifact; align in Master Timeline."
+      },
+      {
+        "id": "DEC-2026-02-06-01",
+        "date": "2026-02-06",
+        "type": "decision",
+        "description": "Confirm workstream lead/co-lead assignments and responsibilities (8 workstreams)",
+        "trigger": "Recorded governance decision",
+        "impact": "WS-*; D-*-1 deliverables",
+        "owner": null,
+        "status": "recorded",
+        "impacted_artifacts": "WS-*; D-*-1 deliverables",
+        "notes": "Source of record: Workstreams Registry / Miro assignments frame."
+      },
+      {
+        "id": "CHG-2026-02-06-01",
+        "date": "2026-02-06",
+        "type": "change",
+        "description": "Initial workstream assignments recorded",
+        "trigger": "Workstream alignment activity",
+        "impact": "Establishes owners for deliverables D-*-1",
+        "owner": "John Black",
+        "status": "recorded",
+        "impacted_artifacts": "Establishes owners for deliverables D-*-1",
+        "notes": null
+      },
+      {
+        "id": "DEC-2026-01-23-01",
+        "date": "2026-01-23",
+        "type": "decision",
+        "description": "Adopt Team Charter v0 (committee working agreements baseline)",
+        "trigger": "Recorded governance decision",
+        "impact": "charter_v0; COMMITTEE",
+        "owner": null,
+        "status": "decided",
+        "impacted_artifacts": "charter_v0; COMMITTEE",
+        "notes": "Captured in timeline as Meeting 1 output."
       }
     ]
   },
   "kpis": {
     "meta": {
-      "generated_at": "2026-02-25T20:57:22.261806Z",
+      "generated_at": "2026-03-03T06:39:06.341309Z",
       "timezone": "America/New_York",
       "schema_version": "0.2"
     },
@@ -546,10 +748,10 @@
     "summary": {
       "overall_status": "red",
       "kpi_counts": {
-        "green": 7,
-        "yellow": 4,
-        "red": 6,
-        "gray": 2
+        "green": 9,
+        "yellow": 1,
+        "red": 8,
+        "gray": 1
       }
     },
     "kpis": [
@@ -626,7 +828,7 @@
         "category": "schedule",
         "name": "Overdue deliverables",
         "status": "yellow",
-        "score": 75,
+        "score": 69,
         "description": "Count and severity of overdue deliverables.",
         "rules": [
           "Penalty combines overdue count and max overdue days."
@@ -639,7 +841,7 @@
         ],
         "details": {
           "overdue_count": 1,
-          "max_days_overdue": 5
+          "max_days_overdue": 11
         }
       },
       {
@@ -714,20 +916,15 @@
         "id": "KPI-CONV-01",
         "category": "convergence",
         "name": "SoR reference integrity",
-        "status": "yellow",
-        "score": 80,
+        "status": "green",
+        "score": 100,
         "description": "No dangling IDs across SoR references.",
         "rules": [
           "ID-* issues from quality report reduce score."
         ],
-        "evidence": [
-          {
-            "type": "issue",
-            "id": "ID-DANGLING-WORKSTREAM"
-          }
-        ],
+        "evidence": [],
         "details": {
-          "id_issue_count": 1
+          "id_issue_count": 0
         }
       },
       {
@@ -784,32 +981,90 @@
         "id": "KPI-CONV-05",
         "category": "convergence",
         "name": "Principle linkage coverage",
-        "status": "yellow",
-        "score": 70,
+        "status": "red",
+        "score": 38,
         "description": "Percent of deliverables with principle_refs.",
         "rules": [
           "Coverage = deliverables with principle_refs / total deliverables."
         ],
-        "evidence": [],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "policy_principles"
+          },
+          {
+            "type": "deliverable",
+            "id": "rec_outline_risk_register"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-POL-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-CPX-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-AIN-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-DPS-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-EQA-1"
+          }
+        ],
         "details": {
-          "coverage_pct": 0,
-          "authoritative_source": "derived from references"
+          "coverage_pct": 38,
+          "authoritative_source": "sor/principles.yml"
         }
       },
       {
         "id": "KPI-CONV-06",
         "category": "convergence",
         "name": "Risk linkage coverage",
-        "status": "yellow",
-        "score": 70,
+        "status": "red",
+        "score": 38,
         "description": "Percent of deliverables with risk_refs.",
         "rules": [
           "Coverage = deliverables with risk_refs / total deliverables."
         ],
-        "evidence": [],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "policy_principles"
+          },
+          {
+            "type": "deliverable",
+            "id": "rec_outline_risk_register"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-POL-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-CPX-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-AIN-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-DPS-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-EQA-1"
+          }
+        ],
         "details": {
-          "coverage_pct": 0,
-          "authoritative_source": "derived from references"
+          "coverage_pct": 38,
+          "authoritative_source": "sor/risks.yml"
         }
       },
       {
@@ -817,7 +1072,7 @@
         "category": "convergence",
         "name": "Cross-doc principle coverage",
         "status": "red",
-        "score": 2,
+        "score": 10,
         "description": "Percent of scanned docs that reference at least one principle ID.",
         "rules": [
           "Green >=70, yellow >=40, red <40."
@@ -833,8 +1088,8 @@
           }
         ],
         "details": {
-          "coverage_pct": 2,
-          "scanned_docs": 75
+          "coverage_pct": 10,
+          "scanned_docs": 20
         }
       },
       {
@@ -842,7 +1097,7 @@
         "category": "convergence",
         "name": "Cross-doc risk coverage",
         "status": "red",
-        "score": 2,
+        "score": 10,
         "description": "Percent of scanned docs that reference at least one risk ID.",
         "rules": [
           "Green >=70, yellow >=40, red <40."
@@ -858,23 +1113,53 @@
           }
         ],
         "details": {
-          "coverage_pct": 2,
-          "scanned_docs": 75
+          "coverage_pct": 10,
+          "scanned_docs": 20
         }
       },
       {
         "id": "KPI-CONV-09",
         "category": "convergence",
         "name": "Risk→principle mapping readiness",
-        "status": "gray",
-        "score": null,
+        "status": "green",
+        "score": 100,
         "description": "Coverage of risk IDs linked to principle IDs.",
         "rules": [
-          "No risk register found; KPI not instrumented."
+          "Risk refs are considered mapped when same deliverable has principle_refs."
         ],
-        "evidence": [],
+        "evidence": [
+          {
+            "type": "deliverable",
+            "id": "policy_principles"
+          },
+          {
+            "type": "deliverable",
+            "id": "rec_outline_risk_register"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-POL-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-CPX-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-AIN-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-DPS-1"
+          },
+          {
+            "type": "deliverable",
+            "id": "D-EQA-1"
+          }
+        ],
         "details": {
-          "instrumented": false
+          "mapped_risks": 20,
+          "total_risks": 20
         }
       },
       {
@@ -947,8 +1232,8 @@
         ],
         "evidence": [],
         "details": {
-          "oldest_age_days": 2,
-          "sample_count": 205
+          "oldest_age_days": 8,
+          "sample_count": 22
         }
       },
       {
@@ -1105,528 +1390,9 @@
       }
     ]
   },
-  "kpi_evidence": {
-    "meta": {
-      "generated_at": "2026-02-25T20:57:22.261827Z",
-      "description": "Expanded evidence payload keyed by KPI id."
-    },
-    "evidence": {
-      "KPI-SCHED-01": [
-        {
-          "type": "deliverable",
-          "id": "charter_v0",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "working_agreements",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_defs",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_risks_ops",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "policy_principles",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-RSB-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "rec_outline_risk_register",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-POL-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CPX-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-AIN-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-DPS-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-EQA-1",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ],
-      "KPI-SCHED-02": [
-        {
-          "type": "deliverable",
-          "id": "policy_principles",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ],
-      "KPI-SCHED-03": [
-        {
-          "type": "deliverable",
-          "id": "rec_outline_risk_register",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-AIN-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-EQA-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "m5_draft_sections",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "near_final_package",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CCI-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-IPC-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "final_talk_track",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "committee_response",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ],
-      "KPI-SCHED-04": [],
-      "KPI-CONV-01": [
-        {
-          "type": "issue",
-          "id": "ID-DANGLING-WORKSTREAM",
-          "doc_path": "public/quality_report.json"
-        }
-      ],
-      "KPI-CONV-02": [],
-      "KPI-CONV-03": [],
-      "KPI-CONV-04": [
-        {
-          "type": "issue",
-          "id": "PLACEHOLDER-DOD",
-          "doc_path": "public/quality_report.json"
-        }
-      ],
-      "KPI-CONV-05": [],
-      "KPI-CONV-06": [],
-      "KPI-CONV-07": [
-        {
-          "type": "doc",
-          "id": "docs/CONVENTIONS.md",
-          "doc_path": "docs/CONVENTIONS.md"
-        },
-        {
-          "type": "doc",
-          "id": "docs/schema_notes.md",
-          "doc_path": "docs/schema_notes.md"
-        }
-      ],
-      "KPI-CONV-08": [
-        {
-          "type": "doc",
-          "id": "docs/CONVENTIONS.md",
-          "doc_path": "docs/CONVENTIONS.md"
-        },
-        {
-          "type": "doc",
-          "id": "docs/schema_notes.md",
-          "doc_path": "docs/schema_notes.md"
-        }
-      ],
-      "KPI-CONV-09": [],
-      "KPI-CONV-10": [
-        {
-          "type": "deliverable",
-          "id": "policy_principles",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ],
-      "KPI-FRESH-01": [],
-      "KPI-FRESH-02": [],
-      "KPI-FRESH-03": [],
-      "KPI-PUB-01": [
-        {
-          "type": "deliverable",
-          "id": "charter_v0",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "working_agreements",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_defs",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_risks_ops",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "policy_principles",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-RSB-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "rec_outline_risk_register",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-POL-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CPX-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-AIN-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-DPS-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-EQA-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "m5_draft_sections",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CCI-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-IPC-1",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ],
-      "KPI-PUB-02": [],
-      "KPI-READY-01": [],
-      "KPI-READY-02": [],
-      "KPI-READY-03": [
-        {
-          "type": "deliverable",
-          "id": "D-AIN-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CCI-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CPX-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-DPS-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-EQA-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-IPC-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-POL-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-RSB-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "charter_v0",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "committee_response",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "final_talk_track",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "m5_draft_sections",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "near_final_package",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "policy_principles",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_defs",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_risks_ops",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "rec_outline_risk_register",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "working_agreements",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ],
-      "KPI-READY-04": [
-        {
-          "type": "deliverable",
-          "id": "D-AIN-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CCI-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CPX-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-DPS-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-EQA-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-IPC-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-POL-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-RSB-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "charter_v0",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "committee_response",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "final_talk_track",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "m5_draft_sections",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "near_final_package",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "policy_principles",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_defs",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_risks_ops",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "rec_outline_risk_register",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "working_agreements",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ],
-      "KPI-READY-05": [
-        {
-          "type": "deliverable",
-          "id": "D-AIN-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CCI-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-CPX-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-DPS-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-EQA-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-IPC-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-POL-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "D-RSB-1",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "charter_v0",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "m5_draft_sections",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "policy_principles",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_defs",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "pre_m3_risks_ops",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "rec_outline_risk_register",
-          "doc_path": "sor/deliverables.yml"
-        },
-        {
-          "type": "deliverable",
-          "id": "working_agreements",
-          "doc_path": "sor/deliverables.yml"
-        }
-      ]
-    }
-  },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-02-25T20:57:22.118205Z",
+      "generated_at": "2026-03-03T06:39:06.171339Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1635,96 +1401,1020 @@
       ]
     },
     "summary_counts": {
-      "error": 1,
-      "warning": 3,
+      "error": 0,
+      "warning": 0,
       "info": 1
     },
     "issues": [
       {
-        "severity": "error",
-        "code": "ID-DANGLING-WORKSTREAM",
-        "message": "Some deliverables reference unknown workstream IDs.",
-        "evidence": [
-          {
-            "deliverable_id": "final_talk_track"
-          }
-        ]
-      },
-      {
         "severity": "info",
-        "code": "PLACEHOLDER-MARKDOWN",
-        "message": "Markdown supporting docs include TBD/TODO/??? tokens.",
+        "code": "DRIFT-WORKSTREAM-ALIASES-ALLOWLIST",
+        "message": "Allowlisted legacy workstream aliases were observed in docs.",
         "evidence": [
           {
-            "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md"
-          },
-          {
-            "doc_path": "governance_docs/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md"
-          },
-          {
-            "doc_path": "governance_docs/Workstreams/rsb/Shared Baseline v01.md"
-          },
-          {
-            "doc_path": "project_files/Meetings/02 - Meeting 06-FEB-26/20260205_One-page-Team-Charter v1.0 (for Feb 6 review + vote).md"
-          },
-          {
-            "doc_path": "project_files/workstreams/rsb/Shared Baseline v01.md"
-          }
-        ]
-      },
-      {
-        "severity": "warning",
-        "code": "DRIFT-WORKSTREAM-IDS",
-        "message": "SoR workstream IDs and doc-extracted WS-* IDs are not fully aligned.",
-        "evidence": [
-          {
-            "docs_not_in_sor": [
-              "WS-001",
-              "WS-002",
-              "WS-003",
+            "allowlisted_aliases": [
               "WS-XXX"
-            ],
-            "sor_not_in_docs": []
-          }
-        ]
-      },
-      {
-        "severity": "warning",
-        "code": "INSTRUMENTATION-PRINCIPLES",
-        "message": "No deliverables currently include principle_refs.",
-        "evidence": [
-          {
-            "deliverable_count": 18
-          }
-        ]
-      },
-      {
-        "severity": "warning",
-        "code": "INSTRUMENTATION-RISKS",
-        "message": "No deliverables currently include risk_refs.",
-        "evidence": [
-          {
-            "deliverable_count": 18
+            ]
           }
         ]
       }
     ],
     "metrics": {
-      "deliverable_principle_refs_pct": 0.0,
-      "deliverable_risk_refs_pct": 0.0,
-      "docs_with_principles_pct": 2.666666666666667,
-      "docs_with_risks_pct": 2.666666666666667,
+      "deliverable_principle_refs_pct": 38.88888888888889,
+      "deliverable_risk_refs_pct": 38.88888888888889,
+      "docs_with_principles_pct": 10.0,
+      "docs_with_risks_pct": 10.0,
       "sor_vs_docs_workstream_drift": {
         "sor_count": 8,
-        "docs_count": 12,
-        "docs_not_in_sor": [
-          "WS-001",
-          "WS-002",
-          "WS-003",
-          "WS-XXX"
-        ],
+        "docs_count": 9,
+        "docs_not_in_sor": [],
         "sor_not_in_docs": [],
-        "mismatch_count": 4
+        "mismatch_count": 0
+      }
+    }
+  },
+  "ref_index": {
+    "meta": {
+      "generated_at": "2026-03-03T06:39:06.013333Z",
+      "scanned_files_count": 20,
+      "skipped_files_count": 5,
+      "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
+      "workstream_alias_map": {
+        "WS-001": "WS-RSB",
+        "WS-002": "WS-POL",
+        "WS-003": "WS-CPX",
+        "WS-004": "WS-AIN",
+        "WS-005": "WS-DPS",
+        "WS-006": "WS-EQA",
+        "WS-007": "WS-CCI",
+        "WS-008": "WS-IPC"
+      },
+      "allowed_unresolved_workstream_ids": [
+        "WS-XXX"
+      ]
+    },
+    "docs": [
+      {
+        "doc_path": "CHANGELOG_PUBLIC.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T12:32:44-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-CCI",
+            "WS-IPC",
+            "WS-RSB"
+          ],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 21
+        },
+        "normalization": {
+          "workstream_alias_hits": {
+            "WS-001": "WS-RSB",
+            "WS-008": "WS-IPC"
+          },
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/CONVENTIONS.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T15:51:29-05:00",
+        "extracted": {
+          "principle_ids": [
+            "P-01",
+            "P-03"
+          ],
+          "risk_ids": [
+            "R-02",
+            "R-09"
+          ],
+          "workstream_ids": [
+            "WS-AIN",
+            "WS-POL"
+          ],
+          "deliverable_ids": [
+            "D-AIN-1",
+            "D-POL-1"
+          ],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "principle_ids": 9,
+          "risk_ids": 10,
+          "workstream_ids": 11,
+          "deliverable_ids": 12
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/INGEST.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/KPI_TAXONOMY.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T15:51:29-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/WINDOWS_TASKS.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T17:01:19-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/admin_editing.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-23T21:38:34-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/governance_rule.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-23T16:35:34-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/schema_notes.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T12:30:47-05:00",
+        "extracted": {
+          "principle_ids": [
+            "P-001",
+            "P-002"
+          ],
+          "risk_ids": [
+            "R-001"
+          ],
+          "workstream_ids": [
+            "WS-CPX",
+            "WS-IPC",
+            "WS-POL",
+            "WS-RSB",
+            "WS-XXX"
+          ],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 34,
+          "principle_ids": 102,
+          "risk_ids": 103
+        },
+        "normalization": {
+          "workstream_alias_hits": {
+            "WS-002": "WS-POL",
+            "WS-003": "WS-CPX",
+            "WS-001": "WS-RSB",
+            "WS-008": "WS-IPC"
+          },
+          "allowed_unresolved_workstream_ids": [
+            "WS-XXX"
+          ]
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS School Board/20250812_Policy-BCF_Advisory-Committees-to-the-School-Board.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T12:30:47-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS School Board/FCCPS-Advisory-Board-Agenda-&-Meeting-Minutes-Template.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T12:30:47-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS School Board/School-Board-Advisory-_Committee-Training.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T12:30:47-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS-AI-Advisory-Committee_Workstream-Development-Summary-and-Assignments.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-23T18:27:06-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-AIN",
+            "WS-CCI",
+            "WS-CPX",
+            "WS-DPS",
+            "WS-EQA",
+            "WS-IPC",
+            "WS-POL",
+            "WS-RSB"
+          ],
+          "deliverable_ids": [
+            "D-AIN-1",
+            "D-CCI-1",
+            "D-CPX-1",
+            "D-DPS-1",
+            "D-EQA-1",
+            "D-IPC-1",
+            "D-POL-1",
+            "D-RSB-1"
+          ],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 30,
+          "deliverable_ids": 47
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS_AIAC_Decision_Change_Log.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-AIN",
+            "WS-CPX",
+            "WS-DPS",
+            "WS-EQA",
+            "WS-IPC",
+            "WS-POL"
+          ],
+          "deliverable_ids": [],
+          "milestone_ids": [
+            "ms_policy_principles"
+          ],
+          "decision_ids": [
+            "DEC-2026-01-23-01",
+            "DEC-2026-02-06-01",
+            "DEC-2026-02-06-02",
+            "DEC-2026-02-20-01",
+            "DEC-2026-02-20-02",
+            "DEC-2026-03-06-01",
+            "DEC-2026-03-20-01"
+          ]
+        },
+        "anchors": {
+          "decision_ids": 13,
+          "workstream_ids": 16,
+          "milestone_ids": 17
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-AIN",
+            "WS-CCI",
+            "WS-CPX",
+            "WS-DPS",
+            "WS-EQA",
+            "WS-IPC",
+            "WS-POL",
+            "WS-RSB"
+          ],
+          "deliverable_ids": [
+            "D-AIN-1",
+            "D-CCI-1",
+            "D-CPX-1",
+            "D-DPS-1",
+            "D-EQA-1",
+            "D-IPC-1",
+            "D-POL-1",
+            "D-RSB-1"
+          ],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 11,
+          "deliverable_ids": 13
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-CCI",
+            "WS-POL"
+          ],
+          "deliverable_ids": [],
+          "milestone_ids": [
+            "ms_board_ready",
+            "ms_draft_sections_complete",
+            "ms_final_recs",
+            "ms_policy_principles"
+          ],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 11,
+          "milestone_ids": 14
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-03T00:02:55-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-AIN",
+            "WS-CCI",
+            "WS-CPX",
+            "WS-DPS",
+            "WS-EQA",
+            "WS-IPC",
+            "WS-POL",
+            "WS-RSB"
+          ],
+          "deliverable_ids": [
+            "D-AIN-1",
+            "D-CCI-1",
+            "D-CPX-1",
+            "D-DPS-1",
+            "D-EQA-1",
+            "D-IPC-1",
+            "D-RSB-1"
+          ],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 9,
+          "deliverable_ids": 9
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/Policy_Recommendations_Process_and_Timeline.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-23T18:27:06-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [
+            "ms_board_ready",
+            "ms_draft_sections_complete",
+            "ms_final_recs",
+            "ms_policy_principles"
+          ],
+          "decision_ids": []
+        },
+        "anchors": {
+          "milestone_ids": 79
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/Pre-Read Resources/A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T12:30:47-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [
+            "D-IND-"
+          ],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "deliverable_ids": 3435
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/Pre-Read Resources/Artificial-Intelligence and-APS.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-24T12:30:47-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "governance_docs/Workstream_Assignments_FCCPS_AI_Advisory_Committee.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-02-23T18:27:06-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      }
+    ]
+  },
+  "meeting4_readiness": {
+    "meta": {
+      "generated_at": "2026-03-03T06:39:06.432427Z",
+      "source": [
+        "public/kpis.json",
+        "public/ref_index.json",
+        "public/public_snapshot.json"
+      ],
+      "label": "Meeting 4 Readiness",
+      "committee_safe": true
+    },
+    "coverage": {
+      "principle_linkage_pct": 38.0,
+      "risk_linkage_pct": 38.0
+    },
+    "missing_refs": [
+      {
+        "deliverable_id": "charter_v0",
+        "title": "Team Charter v0",
+        "checkpoint_id": "m1",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "working_agreements",
+        "title": "Working agreements and collaboration operating rules",
+        "checkpoint_id": "m2",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "D-RSB-1",
+        "title": "Shared Baseline Brief v1",
+        "checkpoint_id": "m3",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "pre_m3_defs",
+        "title": "Definitions and assumptions pre-read",
+        "checkpoint_id": "m3",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "pre_m3_risks_ops",
+        "title": "Meeting 3 risks/opportunities synthesis",
+        "checkpoint_id": "m3",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "m5_draft_sections",
+        "title": "Draft sections for priority recommendation domains",
+        "checkpoint_id": "m5",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "D-CCI-1",
+        "title": "Comms Pack v1",
+        "checkpoint_id": "m6",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "D-IPC-1",
+        "title": "Implementation Roadmap v1",
+        "checkpoint_id": "m6",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "near_final_package",
+        "title": "Near-final recommendation package",
+        "checkpoint_id": "m6",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "final_talk_track",
+        "title": "Final talk track and Q&A prep",
+        "checkpoint_id": "m7",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      },
+      {
+        "deliverable_id": "committee_response",
+        "title": "Formal committee response package",
+        "checkpoint_id": "m8",
+        "missing_principle_refs": true,
+        "missing_risk_refs": true
+      }
+    ],
+    "dependency_fanout": {
+      "principles": [
+        {
+          "id": "P-004",
+          "deliverable_count": 4,
+          "deliverable_ids": [
+            "D-AIN-1",
+            "D-DPS-1",
+            "D-POL-1",
+            "rec_outline_risk_register"
+          ]
+        },
+        {
+          "id": "P-001",
+          "deliverable_count": 3,
+          "deliverable_ids": [
+            "D-POL-1",
+            "policy_principles",
+            "rec_outline_risk_register"
+          ]
+        },
+        {
+          "id": "P-002",
+          "deliverable_count": 3,
+          "deliverable_ids": [
+            "D-CPX-1",
+            "D-EQA-1",
+            "policy_principles"
+          ]
+        },
+        {
+          "id": "P-003",
+          "deliverable_count": 3,
+          "deliverable_ids": [
+            "D-AIN-1",
+            "D-CPX-1",
+            "policy_principles"
+          ]
+        },
+        {
+          "id": "P-006",
+          "deliverable_count": 3,
+          "deliverable_ids": [
+            "D-DPS-1",
+            "D-POL-1",
+            "rec_outline_risk_register"
+          ]
+        },
+        {
+          "id": "P-005",
+          "deliverable_count": 2,
+          "deliverable_ids": [
+            "D-CPX-1",
+            "D-EQA-1"
+          ]
+        },
+        {
+          "id": "P-007",
+          "deliverable_count": 2,
+          "deliverable_ids": [
+            "D-EQA-1",
+            "D-POL-1"
+          ]
+        },
+        {
+          "id": "P-008",
+          "deliverable_count": 2,
+          "deliverable_ids": [
+            "D-AIN-1",
+            "D-DPS-1"
+          ]
+        }
+      ],
+      "decisions": []
+    },
+    "drilldowns": {
+      "by_principle": {
+        "P-004": [
+          "D-AIN-1",
+          "D-DPS-1",
+          "D-POL-1",
+          "rec_outline_risk_register"
+        ],
+        "P-001": [
+          "D-POL-1",
+          "policy_principles",
+          "rec_outline_risk_register"
+        ],
+        "P-002": [
+          "D-CPX-1",
+          "D-EQA-1",
+          "policy_principles"
+        ],
+        "P-003": [
+          "D-AIN-1",
+          "D-CPX-1",
+          "policy_principles"
+        ],
+        "P-006": [
+          "D-DPS-1",
+          "D-POL-1",
+          "rec_outline_risk_register"
+        ],
+        "P-005": [
+          "D-CPX-1",
+          "D-EQA-1"
+        ],
+        "P-007": [
+          "D-EQA-1",
+          "D-POL-1"
+        ],
+        "P-008": [
+          "D-AIN-1",
+          "D-DPS-1"
+        ]
+      },
+      "by_decision": {},
+      "by_deliverable": {
+        "charter_v0": {
+          "title": "Team Charter v0",
+          "checkpoint_id": "m1",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [],
+          "status": "completed"
+        },
+        "working_agreements": {
+          "title": "Working agreements and collaboration operating rules",
+          "checkpoint_id": "m2",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "charter_v0"
+          ],
+          "status": "completed"
+        },
+        "pre_m3_defs": {
+          "title": "Definitions and assumptions pre-read",
+          "checkpoint_id": "m3",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "working_agreements"
+          ],
+          "status": "completed"
+        },
+        "pre_m3_risks_ops": {
+          "title": "Meeting 3 risks/opportunities synthesis",
+          "checkpoint_id": "m3",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "working_agreements"
+          ],
+          "status": "completed"
+        },
+        "policy_principles": {
+          "title": "Policy principles set",
+          "checkpoint_id": "ms_policy_principles",
+          "principle_refs": [
+            "P-001",
+            "P-002",
+            "P-003"
+          ],
+          "risk_refs": [
+            "R-001",
+            "R-004"
+          ],
+          "depends_on": [
+            "pre_m3_defs",
+            "pre_m3_risks_ops"
+          ],
+          "status": "in_progress"
+        },
+        "D-RSB-1": {
+          "title": "Shared Baseline Brief v1",
+          "checkpoint_id": "m3",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [],
+          "status": "completed"
+        },
+        "rec_outline_risk_register": {
+          "title": "Recommendations outline and first-pass risk register",
+          "checkpoint_id": "m4",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006"
+          ],
+          "risk_refs": [
+            "R-001",
+            "R-002",
+            "R-005",
+            "R-006"
+          ],
+          "depends_on": [
+            "policy_principles"
+          ],
+          "status": "in_progress"
+        },
+        "D-POL-1": {
+          "title": "Policy Skeleton v0",
+          "checkpoint_id": "m4",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006",
+            "P-007"
+          ],
+          "risk_refs": [
+            "R-001",
+            "R-002",
+            "R-005"
+          ],
+          "depends_on": [
+            "D-RSB-1"
+          ],
+          "status": "in_progress"
+        },
+        "D-CPX-1": {
+          "title": "Scenario Bank v1",
+          "checkpoint_id": "m4",
+          "principle_refs": [
+            "P-002",
+            "P-003",
+            "P-005"
+          ],
+          "risk_refs": [
+            "R-003",
+            "R-006"
+          ],
+          "depends_on": [
+            "D-RSB-1"
+          ],
+          "status": "in_progress"
+        },
+        "D-AIN-1": {
+          "title": "Attribution & Integrity Matrix v1",
+          "checkpoint_id": "m4",
+          "principle_refs": [
+            "P-003",
+            "P-004",
+            "P-008"
+          ],
+          "risk_refs": [
+            "R-002",
+            "R-004",
+            "R-007"
+          ],
+          "depends_on": [
+            "D-CPX-1"
+          ],
+          "status": "in_progress"
+        },
+        "D-DPS-1": {
+          "title": "AI Tool Review Checklist v1 + Risk Tiers",
+          "checkpoint_id": "m4",
+          "principle_refs": [
+            "P-004",
+            "P-006",
+            "P-008"
+          ],
+          "risk_refs": [
+            "R-001",
+            "R-005",
+            "R-008"
+          ],
+          "depends_on": [],
+          "status": "in_progress"
+        },
+        "D-EQA-1": {
+          "title": "Equity Impact Checklist v1",
+          "checkpoint_id": "m4",
+          "principle_refs": [
+            "P-002",
+            "P-005",
+            "P-007"
+          ],
+          "risk_refs": [
+            "R-003",
+            "R-006",
+            "R-008"
+          ],
+          "depends_on": [
+            "D-CPX-1"
+          ],
+          "status": "in_progress"
+        },
+        "m5_draft_sections": {
+          "title": "Draft sections for priority recommendation domains",
+          "checkpoint_id": "m5",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "rec_outline_risk_register"
+          ],
+          "status": "not_started"
+        },
+        "near_final_package": {
+          "title": "Near-final recommendation package",
+          "checkpoint_id": "m6",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "m5_draft_sections"
+          ],
+          "status": "not_started"
+        },
+        "D-CCI-1": {
+          "title": "Comms Pack v1",
+          "checkpoint_id": "m6",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "D-POL-1"
+          ],
+          "status": "not_started"
+        },
+        "D-IPC-1": {
+          "title": "Implementation Roadmap v1",
+          "checkpoint_id": "m6",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "D-DPS-1",
+            "D-EQA-1",
+            "D-POL-1"
+          ],
+          "status": "not_started"
+        },
+        "final_talk_track": {
+          "title": "Final talk track and Q&A prep",
+          "checkpoint_id": "m7",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "D-CCI-1",
+            "near_final_package"
+          ],
+          "status": "not_started"
+        },
+        "committee_response": {
+          "title": "Formal committee response package",
+          "checkpoint_id": "m8",
+          "principle_refs": [],
+          "risk_refs": [],
+          "depends_on": [
+            "final_talk_track"
+          ],
+          "status": "not_started"
+        }
       }
     }
   }

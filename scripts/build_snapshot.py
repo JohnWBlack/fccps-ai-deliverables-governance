@@ -68,6 +68,8 @@ def sanitize_deliverable(deliverable: Dict[str, Any]) -> Dict[str, Any]:
         "due_date",
         "checkpoint_id",
         "depends_on",
+        "principle_refs",
+        "risk_refs",
         "scope",
         "workstream_id",
         "owner",
@@ -78,6 +80,10 @@ def sanitize_deliverable(deliverable: Dict[str, Any]) -> Dict[str, Any]:
 
     if "depends_on" not in sanitized or sanitized["depends_on"] is None:
         sanitized["depends_on"] = []
+    if "principle_refs" not in sanitized or sanitized["principle_refs"] is None:
+        sanitized["principle_refs"] = []
+    if "risk_refs" not in sanitized or sanitized["risk_refs"] is None:
+        sanitized["risk_refs"] = []
     if "committee_only" not in sanitized or sanitized["committee_only"] is None:
         sanitized["committee_only"] = False
     if "public_url" not in sanitized:
