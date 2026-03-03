@@ -18,7 +18,6 @@ This repository serves as the single source-of-truth (SoR) for FCCPS AI Committe
 │   ├── timeline.yml
 │   └── deliverables.yml
 ├── governance_docs/         # Foundation docs and committee history (md/docx/pdf)
-├── project_files/           # Mirrored committee working corpus (supporting evidence)
 ├── public/
 │   ├── public_snapshot.json  # Main public data contract
 │   ├── file_catalog.json     # Repository file inventory
