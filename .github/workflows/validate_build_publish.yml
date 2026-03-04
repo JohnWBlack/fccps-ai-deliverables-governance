@@ -121,6 +121,7 @@ jobs:
           fi
 
   ingest_publish:
+    if: ${{ vars.ENABLE_VALIDATE_INGEST_PUBLISH == 'true' }}
     runs-on: [self-hosted, Windows]
     env:
       PROJECT_FILES_ROOT: ${{ vars.PROJECT_FILES_ROOT }}
