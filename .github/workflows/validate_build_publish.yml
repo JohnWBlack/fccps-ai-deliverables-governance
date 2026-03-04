@@ -110,8 +110,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/meeting4_readiness.json public/dashboard_bundle.json public/dashboard_bundle.zip public/full_export.json public/full_export.zip public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md
           git commit -m "chore(public): update derived artifacts [skip ci]"
-          git push || {
-            echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
+          git pull --rebase origin main
+          git push origin HEAD:main || {
+            echo "Auto-commit push failed after rebase. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
             echo "Run locally: python scripts/update_change_log.py && python scripts/build_snapshot.py && python scripts/build_catalog.py && python scripts/extract_refs.py && python scripts/quality_checks.py && python scripts/build_kpis.py && python scripts/build_dashboard_bundle.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
             exit 1;
           }
@@ -238,22 +239,27 @@ jobs:
 
       - name: Detect ingest generated changes
         id: ingest_changes
+        shell: pwsh
         run: |
-          if git diff --quiet -- public/project_ingest sor/supporting_documents.yml sor/workstreams.yml sor/deliverables.yml sor/timeline.yml governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
+          if (git diff --quiet -- public/project_ingest sor/supporting_documents.yml sor/workstreams.yml sor/deliverables.yml sor/timeline.yml governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md) {
+            "changed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+          else {
+            "changed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
 
       - name: Commit and push ingest artifacts
         if: steps.ingest_changes.outputs.changed == 'true'
+        shell: pwsh
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/project_ingest sor/supporting_documents.yml sor/workstreams.yml sor/deliverables.yml sor/timeline.yml governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md
           git commit -m "chore(public): update ingest artifacts [skip ci]"
-          git push || {
-            echo "Auto-commit push failed. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main.";
-            echo "Run locally: python scripts/pii_scan.py && python scripts/validate_public.py";
-            exit 1;
+          git pull --rebase origin main
+          git push origin HEAD:main
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "Auto-commit push failed after rebase. Ensure workflow has contents: write and GITHUB_TOKEN push rights on main."
+            Write-Host "Run locally: python scripts/pii_scan.py && python scripts/validate_public.py"
+            exit 1
           }
