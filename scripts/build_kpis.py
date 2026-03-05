@@ -16,8 +16,257 @@ SOR_DIR = REPO_ROOT / "sor"
 PUBLIC_DIR = REPO_ROOT / "public"
 OUTPUT_PATH = PUBLIC_DIR / "kpis.json"
 EVIDENCE_OUTPUT_PATH = PUBLIC_DIR / "kpi_evidence.json"
+EVIDENCE_COVERAGE_OUTPUT_PATH = PUBLIC_DIR / "evidence_coverage.json"
+EVIDENCE_TEMPLATES_OUTPUT_PATH = PUBLIC_DIR / "evidence_templates.json"
+SUPPORTING_DOCS_PATH = SOR_DIR / "supporting_documents.yml"
 TIMEZONE_NAME = "America/New_York"
 FRESHNESS_DAYS = 7
+EVIDENCE_TEMPLATES_VERSION = "evidence_templates_v1"
+EVIDENCE_TEMPLATES_GENERATED_AT = "2026-03-04T00:00:00Z"
+
+
+def write_json_if_changed(path: Path, payload: dict[str, Any]) -> None:
+    rendered = json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    current = path.read_text(encoding="utf-8") if path.exists() else ""
+    if current == rendered:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(rendered, encoding="utf-8")
+
+
+def templates_payload() -> dict[str, Any]:
+    templates = [
+        {
+            "template_id": "derived_from_meetings_v1",
+            "title": "Derived From Meetings",
+            "description": "Document how meeting outputs changed a deliverable.",
+            "body": "\n".join(
+                [
+                    "### Derived from meetings",
+                    "- Meeting ID/date: <MTG-... / YYYY-MM-DD>",
+                    "- Decision or directive: <what was decided>",
+                    "- Deliverable change: <what was updated>",
+                    "- Supporting source path(s): <public/...>",
+                ]
+            ),
+        },
+        {
+            "template_id": "evidence_block_v1",
+            "title": "Evidence Block",
+            "description": "Minimal evidence section for a deliverable update.",
+            "body": "\n".join(
+                [
+                    "### Evidence",
+                    "- Source: <minutes/survey/research/email>",
+                    "- Date: <YYYY-MM-DD>",
+                    "- Claim supported: <what this evidence proves>",
+                    "- Link(s): <repo-relative path(s)>",
+                    "- Notes: <brief relevance summary>",
+                ]
+            ),
+        },
+        {
+            "template_id": "risk_evidence_row_v1",
+            "title": "Risk Register Evidence Row",
+            "description": "Attach evidence to a risk entry.",
+            "body": "\n".join(
+                [
+                    "- Risk ID: <RISK-...>",
+                    "- Evidence path: <public/...>",
+                    "- Observation date: <YYYY-MM-DD>",
+                    "- Impact note: <1-2 sentences>",
+                    "- Mitigation trigger: <what action this evidence triggers>",
+                ]
+            ),
+        },
+        {
+            "template_id": "trace_table_v1",
+            "title": "Evidence Trace Table",
+            "description": "Trace claims to concrete source paths.",
+            "body": "\n".join(
+                [
+                    "| Claim | Source Type | Source Path | Date | Owner |",
+                    "|---|---|---|---|---|",
+                    "| <claim> | <minutes/survey/research/email> | <public/...> | <YYYY-MM-DD> | <name> |",
+                ]
+            ),
+        },
+    ]
+    templates.sort(key=lambda item: str(item.get("template_id", "")))
+    return {
+        "version_key": EVIDENCE_TEMPLATES_VERSION,
+        "generated_at": EVIDENCE_TEMPLATES_GENERATED_AT,
+        "templates": templates,
+    }
+
+
+def infer_source_type(path: str) -> str:
+    normalized = path.lower()
+    if "meeting" in normalized or "minutes" in normalized:
+        return "minutes"
+    if "survey" in normalized:
+        return "survey"
+    if "deliverable" in normalized:
+        return "deliverable"
+    if "email" in normalized:
+        return "email"
+    if "research" in normalized or "baseline" in normalized:
+        return "research"
+    return "other"
+
+
+def collect_recommended_sources(supporting_documents: dict[str, Any]) -> list[dict[str, Any]]:
+    links = supporting_documents.get("links", []) if isinstance(supporting_documents.get("links"), list) else []
+    entries: list[dict[str, Any]] = []
+    for item in links:
+        if not isinstance(item, dict):
+            continue
+        source_path = str(item.get("source_path") or item.get("output_path") or "").strip().replace("\\", "/")
+        if not source_path:
+            continue
+        source_type = infer_source_type(source_path)
+        entries.append(
+            {
+                "id": f"{source_type}:{source_path}".replace(" ", "_"),
+                "title": source_path.split("/")[-1] or source_path,
+                "path": source_path,
+                "source_type": source_type,
+                "date": str(item.get("generated_at") or "") or None,
+            }
+        )
+    entries.sort(key=lambda item: str(item.get("path", "")))
+    return entries
+
+
+def build_evidence_coverage(
+    kpi_payload: dict[str, Any],
+    deliverables: list[dict[str, Any]],
+    supporting_documents: dict[str, Any],
+) -> dict[str, Any]:
+    recommended_sources = collect_recommended_sources(supporting_documents)
+    templates_version = EVIDENCE_TEMPLATES_VERSION
+
+    missing_deliverables: list[dict[str, Any]] = []
+    evidence_link_count = 0
+
+    for deliverable in sorted(deliverables, key=lambda item: str(item.get("id") or "")):
+        deliverable_id = str(deliverable.get("id") or "").strip()
+        if not deliverable_id:
+            continue
+
+        supporting_paths = sorted(
+            {
+                str(path).strip()
+                for path in (deliverable.get("supporting_evidence_paths") or [])
+                if str(path).strip()
+            }
+        )
+        evidence_link_count += len(supporting_paths)
+
+        supporting_count = int(deliverable.get("supporting_evidence_count") or 0)
+        supporting_confidence_max = float(deliverable.get("supporting_confidence_max") or 0.0)
+        description_blob = " ".join(
+            [
+                str(deliverable.get("description") or ""),
+                str(deliverable.get("title") or ""),
+                str(deliverable.get("assigned_to") or ""),
+            ]
+        ).lower()
+
+        missing_fields: list[str] = []
+        if supporting_count <= 0:
+            missing_fields.append("supporting_evidence_count")
+        if not supporting_paths:
+            missing_fields.append("supporting_evidence_paths")
+        if supporting_confidence_max <= 0.0:
+            missing_fields.append("supporting_confidence_max")
+        if "evidence" not in description_blob and "source" not in description_blob:
+            missing_fields.append("evidence_narrative")
+
+        if not missing_fields:
+            continue
+
+        preferred_sources = [
+            item
+            for item in recommended_sources
+            if item.get("source_type") in {"minutes", "survey", "research"}
+        ][:3]
+
+        missing_deliverables.append(
+            {
+                "deliverable_id": deliverable_id,
+                "workstream": str(deliverable.get("workstream_id") or deliverable.get("workstream") or "COMMITTEE"),
+                "path": str(deliverable.get("public_url") or "").strip(),
+                "missing": missing_fields,
+                "suggested_fixes": [
+                    {"type": "add_evidence_section", "template_id": "evidence_block_v1"},
+                    {"type": "add_trace_table", "template_id": "trace_table_v1"},
+                ],
+                "recommended_sources": preferred_sources,
+            }
+        )
+
+    missing_deliverables.sort(key=lambda item: str(item.get("deliverable_id", "")))
+
+    total_deliverables = len([d for d in deliverables if d.get("id")])
+    score_proxy = 0
+    if total_deliverables > 0:
+        score_proxy = max(0, round(((total_deliverables - len(missing_deliverables)) / total_deliverables) * 100))
+
+    top_missing_areas = [
+        {
+            "deliverable_id": item.get("deliverable_id"),
+            "missing_fields": item.get("missing", []),
+            "suggested_evidence_block_template": "trace_table_v1"
+            if "supporting_evidence_paths" in set(item.get("missing", []))
+            else "evidence_block_v1",
+        }
+        for item in missing_deliverables[:5]
+    ]
+
+    version_seed = json.dumps(
+        {
+            "kpi_generated_at": kpi_payload.get("meta", {}).get("generated_at"),
+            "missing": [
+                {
+                    "deliverable_id": item.get("deliverable_id"),
+                    "missing": item.get("missing", []),
+                }
+                for item in missing_deliverables
+            ],
+            "evidence_link_count": evidence_link_count,
+            "templates_version": templates_version,
+        },
+        sort_keys=True,
+    )
+    version_key = re.sub(r"[^0-9a-f]", "", __import__("hashlib").md5(version_seed.encode("utf-8")).hexdigest())[:12]
+
+    generated_at = kpi_payload.get("meta", {}).get("generated_at") or utc_now_iso()
+    if EVIDENCE_COVERAGE_OUTPUT_PATH.exists():
+        existing = load_json(EVIDENCE_COVERAGE_OUTPUT_PATH)
+        if str(existing.get("version_key") or "") == version_key and str(existing.get("generated_at") or ""):
+            generated_at = str(existing.get("generated_at"))
+
+    return {
+        "version_key": version_key,
+        "generated_at": generated_at,
+        "templates_version": templates_version,
+        "kpi": {
+            "KPI-CONV-04": {
+                "score_proxy": score_proxy,
+                "evidence_link_count": evidence_link_count,
+                "deliverables_missing_evidence": missing_deliverables,
+                "gap": {
+                    "kpi_id": "KPI-CONV-04",
+                    "missing_evidence_count": len(missing_deliverables),
+                    "missing_links_count": sum(
+                        1 for item in missing_deliverables if "supporting_evidence_paths" in set(item.get("missing", []))
+                    ),
+                    "top_missing_areas": top_missing_areas,
+                },
+            }
+        },
+    }
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
@@ -696,11 +945,20 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
 
 def main() -> None:
     kpi_payload, evidence_payload = build_kpis()
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(json.dumps(kpi_payload, indent=2, ensure_ascii=False), encoding="utf-8")
-    EVIDENCE_OUTPUT_PATH.write_text(json.dumps(evidence_payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    deliverables_data = load_yaml(SOR_DIR / "deliverables.yml")
+    supporting_documents = load_yaml(SUPPORTING_DOCS_PATH) if SUPPORTING_DOCS_PATH.exists() else {}
+    deliverables = deliverables_data.get("deliverables", []) if isinstance(deliverables_data.get("deliverables"), list) else []
+    evidence_coverage_payload = build_evidence_coverage(kpi_payload, deliverables, supporting_documents)
+    evidence_templates = templates_payload()
+
+    write_json_if_changed(OUTPUT_PATH, kpi_payload)
+    write_json_if_changed(EVIDENCE_OUTPUT_PATH, evidence_payload)
+    write_json_if_changed(EVIDENCE_COVERAGE_OUTPUT_PATH, evidence_coverage_payload)
+    write_json_if_changed(EVIDENCE_TEMPLATES_OUTPUT_PATH, evidence_templates)
     print(f"📈 KPI report written to {OUTPUT_PATH}")
     print(f"🧾 KPI evidence written to {EVIDENCE_OUTPUT_PATH}")
+    print(f"🧩 Evidence coverage written to {EVIDENCE_COVERAGE_OUTPUT_PATH}")
+    print(f"🧱 Evidence templates written to {EVIDENCE_TEMPLATES_OUTPUT_PATH}")
     print(f"🧮 Generated {len(kpi_payload['kpis'])} KPIs")
 
 

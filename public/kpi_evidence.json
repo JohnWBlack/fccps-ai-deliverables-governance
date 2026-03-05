@@ -1,276 +1,155 @@
 {
-  "meta": {
-    "generated_at": "2026-03-04T17:59:56.554690Z",
-    "description": "Expanded evidence payload keyed by KPI id."
-  },
   "evidence": {
-    "KPI-SCHED-01": [
-      {
-        "type": "deliverable",
-        "id": "charter_v0",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "working_agreements",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "pre_m3_defs",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "pre_m3_risks_ops",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-RSB-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "rec_outline_risk_register",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-POL-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-CPX-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-AIN-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-DPS-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-EQA-1",
-        "doc_path": "sor/deliverables.yml"
-      }
-    ],
-    "KPI-SCHED-02": [
-      {
-        "type": "deliverable",
-        "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
-      }
-    ],
-    "KPI-SCHED-03": [
-      {
-        "type": "deliverable",
-        "id": "rec_outline_risk_register",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-AIN-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-EQA-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "m5_draft_sections",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "near_final_package",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-CCI-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "D-IPC-1",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "final_talk_track",
-        "doc_path": "sor/deliverables.yml"
-      },
-      {
-        "type": "deliverable",
-        "id": "committee_response",
-        "doc_path": "sor/deliverables.yml"
-      }
-    ],
-    "KPI-SCHED-04": [],
     "KPI-CONV-01": [],
     "KPI-CONV-02": [],
     "KPI-CONV-03": [],
     "KPI-CONV-04": [
       {
-        "type": "issue",
+        "doc_path": "public/quality_report.json",
         "id": "PLACEHOLDER-DOD",
-        "doc_path": "public/quality_report.json"
+        "type": "issue"
       }
     ],
     "KPI-CONV-05": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "rec_outline_risk_register",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-POL-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CPX-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-AIN-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-DPS-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-EQA-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
     ],
     "KPI-CONV-06": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "rec_outline_risk_register",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-POL-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CPX-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-AIN-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-DPS-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-EQA-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
     ],
     "KPI-CONV-07": [
       {
-        "type": "doc",
+        "doc_path": "docs/CONVENTIONS.md",
         "id": "docs/CONVENTIONS.md",
-        "doc_path": "docs/CONVENTIONS.md"
+        "type": "doc"
       },
       {
-        "type": "doc",
+        "doc_path": "docs/schema_notes.md",
         "id": "docs/schema_notes.md",
-        "doc_path": "docs/schema_notes.md"
+        "type": "doc"
       }
     ],
     "KPI-CONV-08": [
       {
-        "type": "doc",
+        "doc_path": "docs/CONVENTIONS.md",
         "id": "docs/CONVENTIONS.md",
-        "doc_path": "docs/CONVENTIONS.md"
+        "type": "doc"
       },
       {
-        "type": "doc",
+        "doc_path": "docs/schema_notes.md",
         "id": "docs/schema_notes.md",
-        "doc_path": "docs/schema_notes.md"
+        "type": "doc"
       }
     ],
     "KPI-CONV-09": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "rec_outline_risk_register",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-POL-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CPX-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-AIN-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-DPS-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-EQA-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
     ],
     "KPI-CONV-10": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
     ],
     "KPI-FRESH-01": [],
@@ -278,79 +157,79 @@
     "KPI-FRESH-03": [],
     "KPI-PUB-01": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "charter_v0",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "working_agreements",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_defs",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_risks_ops",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-RSB-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "rec_outline_risk_register",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-POL-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CPX-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-AIN-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-DPS-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-EQA-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "m5_draft_sections",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CCI-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-IPC-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
     ],
     "KPI-PUB-02": [],
@@ -358,194 +237,315 @@
     "KPI-READY-02": [],
     "KPI-READY-03": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CCI-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-IPC-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-RSB-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "charter_v0",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "committee_response",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "final_talk_track",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "m5_draft_sections",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "near_final_package",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_defs",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_risks_ops",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "working_agreements",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
     ],
     "KPI-READY-04": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CCI-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-IPC-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-RSB-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "charter_v0",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "committee_response",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "final_talk_track",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "m5_draft_sections",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "near_final_package",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_defs",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_risks_ops",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "working_agreements",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
     ],
     "KPI-READY-05": [
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-AIN-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CCI-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-CPX-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-DPS-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-EQA-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-IPC-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-POL-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "D-RSB-1",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "charter_v0",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "m5_draft_sections",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "policy_principles",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_defs",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "pre_m3_risks_ops",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "rec_outline_risk_register",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       },
       {
-        "type": "deliverable",
+        "doc_path": "sor/deliverables.yml",
         "id": "working_agreements",
-        "doc_path": "sor/deliverables.yml"
+        "type": "deliverable"
       }
-    ]
+    ],
+    "KPI-SCHED-01": [
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "charter_v0",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "working_agreements",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "pre_m3_defs",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "pre_m3_risks_ops",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "policy_principles",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-RSB-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "rec_outline_risk_register",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-POL-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-CPX-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-AIN-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-DPS-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-EQA-1",
+        "type": "deliverable"
+      }
+    ],
+    "KPI-SCHED-02": [
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "policy_principles",
+        "type": "deliverable"
+      }
+    ],
+    "KPI-SCHED-03": [
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "rec_outline_risk_register",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-AIN-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-EQA-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "m5_draft_sections",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "near_final_package",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-CCI-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "D-IPC-1",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "final_talk_track",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "committee_response",
+        "type": "deliverable"
+      }
+    ],
+    "KPI-SCHED-04": []
+  },
+  "meta": {
+    "description": "Expanded evidence payload keyed by KPI id.",
+    "generated_at": "2026-03-04T23:32:10.842611Z"
   }
 }

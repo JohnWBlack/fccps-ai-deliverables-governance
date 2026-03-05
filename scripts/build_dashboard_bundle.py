@@ -19,6 +19,8 @@ REF_INDEX_PATH = PUBLIC_DIR / "ref_index.json"
 QUALITY_PATH = PUBLIC_DIR / "quality_report.json"
 KPIS_PATH = PUBLIC_DIR / "kpis.json"
 KPI_EVIDENCE_PATH = PUBLIC_DIR / "kpi_evidence.json"
+EVIDENCE_COVERAGE_PATH = PUBLIC_DIR / "evidence_coverage.json"
+EVIDENCE_TEMPLATES_PATH = PUBLIC_DIR / "evidence_templates.json"
 GLIDEPATH_HISTORY_PATH = PUBLIC_DIR / "glidepath_history.json"
 GLIDEPATH_DIAG_PATH = PUBLIC_DIR / "glidepath_diagnostics.json"
 AUTOPILOT_REPORT_PATH = PUBLIC_DIR / "autopilot_report.json"
@@ -197,6 +199,8 @@ def build_dashboard_bundle(
     kpis: dict[str, Any],
     quality: dict[str, Any],
     ref_index: dict[str, Any],
+    evidence_coverage: dict[str, Any],
+    evidence_templates: dict[str, Any],
     meeting4_readiness: dict[str, Any],
 ) -> dict[str, Any]:
     return {
@@ -206,6 +210,8 @@ def build_dashboard_bundle(
         },
         "snapshot": snapshot,
         "kpis": kpis,
+        "evidence_coverage": evidence_coverage,
+        "evidence_templates": evidence_templates,
         "quality_report": quality,
         "ref_index": ref_index,
         "meeting4_readiness": meeting4_readiness,
@@ -220,6 +226,8 @@ def build_full_export(artifacts: dict[str, Any]) -> dict[str, Any]:
         "quality_report.json",
         "kpis.json",
         "kpi_evidence.json",
+        "evidence_coverage.json",
+        "evidence_templates.json",
         "glidepath_history.json",
         "glidepath_diagnostics.json",
         "meeting4_readiness.json",
@@ -257,6 +265,8 @@ def main() -> None:
     quality = load_json(QUALITY_PATH)
     kpis = load_json(KPIS_PATH)
     kpi_evidence = load_json(KPI_EVIDENCE_PATH)
+    evidence_coverage = load_json(EVIDENCE_COVERAGE_PATH)
+    evidence_templates = load_json(EVIDENCE_TEMPLATES_PATH)
     glidepath_history = load_json(GLIDEPATH_HISTORY_PATH)
     glidepath_diagnostics = load_json(GLIDEPATH_DIAG_PATH)
     autopilot_report = load_json(AUTOPILOT_REPORT_PATH)
@@ -264,7 +274,15 @@ def main() -> None:
     meeting4_readiness = build_meeting4_readiness(snapshot, kpis, ref_index)
     write_json(MEETING4_PATH, meeting4_readiness)
 
-    dashboard_bundle = build_dashboard_bundle(snapshot, kpis, quality, ref_index, meeting4_readiness)
+    dashboard_bundle = build_dashboard_bundle(
+        snapshot,
+        kpis,
+        quality,
+        ref_index,
+        evidence_coverage,
+        evidence_templates,
+        meeting4_readiness,
+    )
     write_json(DASHBOARD_BUNDLE_PATH, dashboard_bundle)
 
     artifacts = {
@@ -274,6 +292,8 @@ def main() -> None:
         "quality_report.json": quality,
         "kpis.json": kpis,
         "kpi_evidence.json": kpi_evidence,
+        "evidence_coverage.json": evidence_coverage,
+        "evidence_templates.json": evidence_templates,
         "glidepath_history.json": glidepath_history,
         "glidepath_diagnostics.json": glidepath_diagnostics,
         "meeting4_readiness.json": meeting4_readiness,
@@ -297,6 +317,8 @@ def main() -> None:
             QUALITY_PATH,
             REF_INDEX_PATH,
             KPI_EVIDENCE_PATH,
+            EVIDENCE_COVERAGE_PATH,
+            EVIDENCE_TEMPLATES_PATH,
         ],
     )
 

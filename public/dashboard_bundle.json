@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-03-04T17:59:56.619317Z",
+    "generated_at": "2026-03-04T23:34:11.068371Z",
     "snapshot_version_key": "834c398152ce8cfd12cb939b8700cd7f9e53d7f7"
   },
   "snapshot": {
@@ -735,603 +735,491 @@
     ]
   },
   "kpis": {
-    "meta": {
-      "generated_at": "2026-03-04T17:59:56.554671Z",
-      "timezone": "America/New_York",
-      "schema_version": "0.2"
-    },
-    "taxonomy": {
-      "categories": {
-        "schedule": "Timeline and readiness metrics for near-term execution.",
-        "convergence": "Internal consistency and linkage quality across SoR and docs.",
-        "freshness": "How recent SoR and supporting documents are.",
-        "publicability": "Publish-safe artifact hygiene checks."
-      },
-      "kpi_definitions": {
-        "KPI-SCHED-01": "Next gate readiness",
-        "KPI-SCHED-02": "Overdue deliverables",
-        "KPI-SCHED-03": "Blocked dependency rate",
-        "KPI-SCHED-04": "Pre-read readiness",
-        "KPI-CONV-01": "SoR reference integrity",
-        "KPI-CONV-02": "Ownership completeness",
-        "KPI-CONV-03": "Gate mapping completeness",
-        "KPI-CONV-04": "Definition-of-done completeness",
-        "KPI-CONV-05": "Principle linkage coverage",
-        "KPI-CONV-06": "Risk linkage coverage",
-        "KPI-CONV-07": "Cross-doc principle coverage",
-        "KPI-CONV-08": "Cross-doc risk coverage",
-        "KPI-CONV-09": "Risk-to-principle mapping readiness",
-        "KPI-CONV-10": "Milestone gating consistency",
-        "KPI-FRESH-01": "SoR recency",
-        "KPI-FRESH-02": "Public artifacts recency",
-        "KPI-FRESH-03": "Foundation docs recency",
-        "KPI-PUB-01": "Public link hygiene",
-        "KPI-PUB-02": "PII lint on public outputs"
-      }
-    },
-    "summary": {
-      "overall_status": "red",
-      "kpi_counts": {
-        "green": 9,
-        "yellow": 1,
-        "red": 8,
-        "gray": 1
-      }
-    },
     "kpis": [
       {
-        "id": "KPI-SCHED-01",
         "category": "schedule",
-        "name": "Next gate readiness",
-        "status": "red",
-        "score": 41,
         "description": "Share of deliverables due before next gate that are complete.",
+        "details": {
+          "due_before_gate": 12,
+          "instrumented": true,
+          "next_gate_date": "2026-03-06",
+          "next_gate_id": "m4",
+          "ready_count": 5
+        },
+        "evidence": [
+          {
+            "id": "charter_v0",
+            "type": "deliverable"
+          },
+          {
+            "id": "working_agreements",
+            "type": "deliverable"
+          },
+          {
+            "id": "pre_m3_defs",
+            "type": "deliverable"
+          },
+          {
+            "id": "pre_m3_risks_ops",
+            "type": "deliverable"
+          },
+          {
+            "id": "policy_principles",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-RSB-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "rec_outline_risk_register",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-POL-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CPX-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-AIN-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-DPS-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-EQA-1",
+            "type": "deliverable"
+          }
+        ],
+        "id": "KPI-SCHED-01",
+        "name": "Next gate readiness",
         "rules": [
           "Score = completed_due_before_gate / due_before_gate * 100."
         ],
-        "evidence": [
-          {
-            "type": "deliverable",
-            "id": "charter_v0"
-          },
-          {
-            "type": "deliverable",
-            "id": "working_agreements"
-          },
-          {
-            "type": "deliverable",
-            "id": "pre_m3_defs"
-          },
-          {
-            "type": "deliverable",
-            "id": "pre_m3_risks_ops"
-          },
-          {
-            "type": "deliverable",
-            "id": "policy_principles"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-RSB-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "rec_outline_risk_register"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-POL-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-CPX-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-AIN-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-DPS-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-EQA-1"
-          }
-        ],
-        "details": {
-          "instrumented": true,
-          "next_gate_id": "m4",
-          "next_gate_date": "2026-03-06",
-          "due_before_gate": 12,
-          "ready_count": 5
-        }
+        "score": 41,
+        "status": "red"
       },
       {
-        "id": "KPI-SCHED-02",
         "category": "schedule",
-        "name": "Overdue deliverables",
-        "status": "yellow",
-        "score": 68,
         "description": "Count and severity of overdue deliverables.",
+        "details": {
+          "max_days_overdue": 12,
+          "overdue_count": 1
+        },
+        "evidence": [
+          {
+            "id": "policy_principles",
+            "type": "deliverable"
+          }
+        ],
+        "id": "KPI-SCHED-02",
+        "name": "Overdue deliverables",
         "rules": [
           "Penalty combines overdue count and max overdue days."
         ],
-        "evidence": [
-          {
-            "type": "deliverable",
-            "id": "policy_principles"
-          }
-        ],
-        "details": {
-          "overdue_count": 1,
-          "max_days_overdue": 12
-        }
+        "score": 68,
+        "status": "yellow"
       },
       {
-        "id": "KPI-SCHED-03",
         "category": "schedule",
-        "name": "Blocked dependency rate",
-        "status": "red",
-        "score": 40,
         "description": "Deliverables blocked by unmet dependencies.",
+        "details": {
+          "blocked_count": 9,
+          "deliverables_with_dependencies": 15
+        },
+        "evidence": [
+          {
+            "id": "rec_outline_risk_register",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-AIN-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-EQA-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "m5_draft_sections",
+            "type": "deliverable"
+          },
+          {
+            "id": "near_final_package",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CCI-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-IPC-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "final_talk_track",
+            "type": "deliverable"
+          },
+          {
+            "id": "committee_response",
+            "type": "deliverable"
+          }
+        ],
+        "id": "KPI-SCHED-03",
+        "name": "Blocked dependency rate",
         "rules": [
           "Score = (1 - blocked_rate) * 100."
         ],
-        "evidence": [
-          {
-            "type": "deliverable",
-            "id": "rec_outline_risk_register"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-AIN-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-EQA-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "m5_draft_sections"
-          },
-          {
-            "type": "deliverable",
-            "id": "near_final_package"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-CCI-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-IPC-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "final_talk_track"
-          },
-          {
-            "type": "deliverable",
-            "id": "committee_response"
-          }
-        ],
-        "details": {
-          "deliverables_with_dependencies": 15,
-          "blocked_count": 9
-        }
+        "score": 40,
+        "status": "red"
       },
       {
-        "id": "KPI-SCHED-04",
         "category": "schedule",
-        "name": "Pre-read readiness",
-        "status": "gray",
-        "score": null,
         "description": "Readiness of pre-read deliverables for the next gate.",
+        "details": {
+          "instrumented": false
+        },
+        "evidence": [],
+        "id": "KPI-SCHED-04",
+        "name": "Pre-read readiness",
         "rules": [
           "No explicit pre-read fields in timeline; KPI is not instrumented."
         ],
-        "evidence": [],
-        "details": {
-          "instrumented": false
-        }
+        "score": null,
+        "status": "gray"
       },
       {
-        "id": "KPI-CONV-01",
         "category": "convergence",
-        "name": "SoR reference integrity",
-        "status": "green",
-        "score": 100,
         "description": "No dangling IDs across SoR references.",
+        "details": {
+          "id_issue_count": 0
+        },
+        "evidence": [],
+        "id": "KPI-CONV-01",
+        "name": "SoR reference integrity",
         "rules": [
           "ID-* issues from quality report reduce score."
         ],
-        "evidence": [],
-        "details": {
-          "id_issue_count": 0
-        }
+        "score": 100,
+        "status": "green"
       },
       {
-        "id": "KPI-CONV-02",
         "category": "convergence",
-        "name": "Ownership completeness",
-        "status": "green",
-        "score": 100,
         "description": "Deliverables and workstreams have assigned owners/leads.",
+        "details": {
+          "owner_issue_count": 0
+        },
+        "evidence": [],
+        "id": "KPI-CONV-02",
+        "name": "Ownership completeness",
         "rules": [
           "Owner-related quality issues reduce score."
         ],
-        "evidence": [],
-        "details": {
-          "owner_issue_count": 0
-        }
+        "score": 100,
+        "status": "green"
       },
       {
-        "id": "KPI-CONV-03",
         "category": "convergence",
-        "name": "Gate mapping completeness",
-        "status": "green",
-        "score": 100,
         "description": "Deliverables map to valid timeline checkpoints.",
+        "details": {
+          "gate_issue_count": 0
+        },
+        "evidence": [],
+        "id": "KPI-CONV-03",
+        "name": "Gate mapping completeness",
         "rules": [
           "Missing or invalid checkpoint mappings reduce score."
         ],
-        "evidence": [],
-        "details": {
-          "gate_issue_count": 0
-        }
+        "score": 100,
+        "status": "green"
       },
       {
-        "id": "KPI-CONV-04",
         "category": "convergence",
-        "name": "DoD completeness and placeholder-free",
-        "status": "green",
-        "score": 100,
         "description": "Definition-of-done is sufficiently detailed and not placeholder text.",
+        "details": {
+          "placeholder_dod_issues": 0
+        },
+        "evidence": [
+          {
+            "id": "PLACEHOLDER-DOD",
+            "type": "issue"
+          }
+        ],
+        "id": "KPI-CONV-04",
+        "name": "DoD completeness and placeholder-free",
         "rules": [
           "Placeholder DoD bullets reduce score."
         ],
-        "evidence": [
-          {
-            "type": "issue",
-            "id": "PLACEHOLDER-DOD"
-          }
-        ],
-        "details": {
-          "placeholder_dod_issues": 0
-        }
+        "score": 100,
+        "status": "green"
       },
       {
-        "id": "KPI-CONV-05",
         "category": "convergence",
-        "name": "Principle linkage coverage",
-        "status": "red",
-        "score": 38,
         "description": "Percent of deliverables with principle_refs.",
+        "details": {
+          "authoritative_source": "sor/principles.yml",
+          "coverage_pct": 38
+        },
+        "evidence": [
+          {
+            "id": "policy_principles",
+            "type": "deliverable"
+          },
+          {
+            "id": "rec_outline_risk_register",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-POL-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CPX-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-AIN-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-DPS-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-EQA-1",
+            "type": "deliverable"
+          }
+        ],
+        "id": "KPI-CONV-05",
+        "name": "Principle linkage coverage",
         "rules": [
           "Coverage = deliverables with principle_refs / total deliverables."
         ],
-        "evidence": [
-          {
-            "type": "deliverable",
-            "id": "policy_principles"
-          },
-          {
-            "type": "deliverable",
-            "id": "rec_outline_risk_register"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-POL-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-CPX-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-AIN-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-DPS-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-EQA-1"
-          }
-        ],
-        "details": {
-          "coverage_pct": 38,
-          "authoritative_source": "sor/principles.yml"
-        }
+        "score": 38,
+        "status": "red"
       },
       {
-        "id": "KPI-CONV-06",
         "category": "convergence",
-        "name": "Risk linkage coverage",
-        "status": "red",
-        "score": 38,
         "description": "Percent of deliverables with risk_refs.",
+        "details": {
+          "authoritative_source": "sor/risks.yml",
+          "coverage_pct": 38
+        },
+        "evidence": [
+          {
+            "id": "policy_principles",
+            "type": "deliverable"
+          },
+          {
+            "id": "rec_outline_risk_register",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-POL-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CPX-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-AIN-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-DPS-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-EQA-1",
+            "type": "deliverable"
+          }
+        ],
+        "id": "KPI-CONV-06",
+        "name": "Risk linkage coverage",
         "rules": [
           "Coverage = deliverables with risk_refs / total deliverables."
         ],
-        "evidence": [
-          {
-            "type": "deliverable",
-            "id": "policy_principles"
-          },
-          {
-            "type": "deliverable",
-            "id": "rec_outline_risk_register"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-POL-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-CPX-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-AIN-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-DPS-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-EQA-1"
-          }
-        ],
-        "details": {
-          "coverage_pct": 38,
-          "authoritative_source": "sor/risks.yml"
-        }
+        "score": 38,
+        "status": "red"
       },
       {
-        "id": "KPI-CONV-07",
         "category": "convergence",
-        "name": "Cross-doc principle coverage",
-        "status": "red",
-        "score": 10,
         "description": "Percent of scanned docs that reference at least one principle ID.",
-        "rules": [
-          "Green >=70, yellow >=40, red <40."
-        ],
-        "evidence": [
-          {
-            "type": "doc",
-            "id": "docs/CONVENTIONS.md"
-          },
-          {
-            "type": "doc",
-            "id": "docs/schema_notes.md"
-          }
-        ],
         "details": {
           "coverage_pct": 10,
           "scanned_docs": 20
-        }
-      },
-      {
-        "id": "KPI-CONV-08",
-        "category": "convergence",
-        "name": "Cross-doc risk coverage",
-        "status": "red",
+        },
+        "evidence": [
+          {
+            "id": "docs/CONVENTIONS.md",
+            "type": "doc"
+          },
+          {
+            "id": "docs/schema_notes.md",
+            "type": "doc"
+          }
+        ],
+        "id": "KPI-CONV-07",
+        "name": "Cross-doc principle coverage",
+        "rules": [
+          "Green >=70, yellow >=40, red <40."
+        ],
         "score": 10,
+        "status": "red"
+      },
+      {
+        "category": "convergence",
         "description": "Percent of scanned docs that reference at least one risk ID.",
-        "rules": [
-          "Green >=70, yellow >=40, red <40."
-        ],
-        "evidence": [
-          {
-            "type": "doc",
-            "id": "docs/CONVENTIONS.md"
-          },
-          {
-            "type": "doc",
-            "id": "docs/schema_notes.md"
-          }
-        ],
         "details": {
           "coverage_pct": 10,
           "scanned_docs": 20
-        }
-      },
-      {
-        "id": "KPI-CONV-09",
-        "category": "convergence",
-        "name": "Risk→principle mapping readiness",
-        "status": "green",
-        "score": 100,
-        "description": "Coverage of risk IDs linked to principle IDs.",
-        "rules": [
-          "Risk refs are considered mapped when same deliverable has principle_refs."
-        ],
+        },
         "evidence": [
           {
-            "type": "deliverable",
-            "id": "policy_principles"
+            "id": "docs/CONVENTIONS.md",
+            "type": "doc"
           },
           {
-            "type": "deliverable",
-            "id": "rec_outline_risk_register"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-POL-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-CPX-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-AIN-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-DPS-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-EQA-1"
+            "id": "docs/schema_notes.md",
+            "type": "doc"
           }
         ],
+        "id": "KPI-CONV-08",
+        "name": "Cross-doc risk coverage",
+        "rules": [
+          "Green >=70, yellow >=40, red <40."
+        ],
+        "score": 10,
+        "status": "red"
+      },
+      {
+        "category": "convergence",
+        "description": "Coverage of risk IDs linked to principle IDs.",
         "details": {
           "mapped_risks": 20,
           "total_risks": 20
-        }
-      },
-      {
-        "id": "KPI-CONV-10",
-        "category": "convergence",
-        "name": "Milestone gating consistency",
-        "status": "red",
-        "score": 5,
-        "description": "Deliverables are checkpointed against milestone gates.",
-        "rules": [
-          "Deliverables should be mapped to ms_* checkpoint IDs when applicable."
-        ],
+        },
         "evidence": [
           {
-            "type": "deliverable",
-            "id": "policy_principles"
+            "id": "policy_principles",
+            "type": "deliverable"
+          },
+          {
+            "id": "rec_outline_risk_register",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-POL-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CPX-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-AIN-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-DPS-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-EQA-1",
+            "type": "deliverable"
           }
         ],
+        "id": "KPI-CONV-09",
+        "name": "Risk→principle mapping readiness",
+        "rules": [
+          "Risk refs are considered mapped when same deliverable has principle_refs."
+        ],
+        "score": 100,
+        "status": "green"
+      },
+      {
+        "category": "convergence",
+        "description": "Deliverables are checkpointed against milestone gates.",
         "details": {
+          "mapped_deliverables": 1,
           "milestones": [
             "ms_board_ready",
             "ms_draft_sections_complete",
             "ms_final_recs",
             "ms_policy_principles"
           ],
-          "mapped_deliverables": 1,
           "total_deliverables": 18
-        }
+        },
+        "evidence": [
+          {
+            "id": "policy_principles",
+            "type": "deliverable"
+          }
+        ],
+        "id": "KPI-CONV-10",
+        "name": "Milestone gating consistency",
+        "rules": [
+          "Deliverables should be mapped to ms_* checkpoint IDs when applicable."
+        ],
+        "score": 5,
+        "status": "red"
       },
       {
-        "id": "KPI-FRESH-01",
         "category": "freshness",
-        "name": "SoR recency",
-        "status": "green",
-        "score": 100,
         "description": "SoR files updated within freshness window.",
-        "rules": [
-          "Files older than 7 days are stale."
-        ],
-        "evidence": [],
         "details": {
           "stale_sor_files": [],
           "threshold_days": 7
-        }
+        },
+        "evidence": [],
+        "id": "KPI-FRESH-01",
+        "name": "SoR recency",
+        "rules": [
+          "Files older than 7 days are stale."
+        ],
+        "score": 100,
+        "status": "green"
       },
       {
-        "id": "KPI-FRESH-02",
         "category": "freshness",
-        "name": "Public artifacts recency",
-        "status": "green",
-        "score": 100,
         "description": "Derived public artifacts are freshly generated.",
+        "details": {
+          "stale_public_artifacts": []
+        },
+        "evidence": [],
+        "id": "KPI-FRESH-02",
+        "name": "Public artifacts recency",
         "rules": [
           "Public artifacts should be updated within 7 days."
         ],
-        "evidence": [],
-        "details": {
-          "stale_public_artifacts": []
-        }
+        "score": 100,
+        "status": "green"
       },
       {
-        "id": "KPI-FRESH-03",
         "category": "freshness",
-        "name": "Foundation docs recency",
-        "status": "green",
-        "score": 95,
         "description": "Recency profile for governance_docs and project_files updates.",
-        "rules": [
-          "If no foundation docs updated in >14 days => yellow; >30 days => red."
-        ],
-        "evidence": [],
         "details": {
           "oldest_age_days": 9,
           "sample_count": 22
-        }
+        },
+        "evidence": [],
+        "id": "KPI-FRESH-03",
+        "name": "Foundation docs recency",
+        "rules": [
+          "If no foundation docs updated in >14 days => yellow; >30 days => red."
+        ],
+        "score": 95,
+        "status": "green"
       },
       {
-        "id": "KPI-PUB-01",
         "category": "publicability",
-        "name": "Public link hygiene",
-        "status": "red",
-        "score": 16,
         "description": "Deliverables must have public_url or committee_only=true.",
-        "rules": [
-          "Missing visibility metadata reduces score."
-        ],
-        "evidence": [
-          {
-            "type": "deliverable",
-            "id": "charter_v0"
-          },
-          {
-            "type": "deliverable",
-            "id": "working_agreements"
-          },
-          {
-            "type": "deliverable",
-            "id": "pre_m3_defs"
-          },
-          {
-            "type": "deliverable",
-            "id": "pre_m3_risks_ops"
-          },
-          {
-            "type": "deliverable",
-            "id": "policy_principles"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-RSB-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "rec_outline_risk_register"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-POL-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-CPX-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-AIN-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-DPS-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-EQA-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "m5_draft_sections"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-CCI-1"
-          },
-          {
-            "type": "deliverable",
-            "id": "D-IPC-1"
-          }
-        ],
         "details": {
           "non_compliant": [
             {
@@ -1395,24 +1283,632 @@
               "reason": "missing_public_url_or_committee_only"
             }
           ]
-        }
+        },
+        "evidence": [
+          {
+            "id": "charter_v0",
+            "type": "deliverable"
+          },
+          {
+            "id": "working_agreements",
+            "type": "deliverable"
+          },
+          {
+            "id": "pre_m3_defs",
+            "type": "deliverable"
+          },
+          {
+            "id": "pre_m3_risks_ops",
+            "type": "deliverable"
+          },
+          {
+            "id": "policy_principles",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-RSB-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "rec_outline_risk_register",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-POL-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CPX-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-AIN-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-DPS-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-EQA-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "m5_draft_sections",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CCI-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-IPC-1",
+            "type": "deliverable"
+          }
+        ],
+        "id": "KPI-PUB-01",
+        "name": "Public link hygiene",
+        "rules": [
+          "Missing visibility metadata reduces score."
+        ],
+        "score": 16,
+        "status": "red"
       },
       {
-        "id": "KPI-PUB-02",
         "category": "publicability",
-        "name": "PII lint",
-        "status": "green",
-        "score": 100,
         "description": "Public outputs should not include email addresses.",
+        "details": {
+          "pii_files": []
+        },
+        "evidence": [],
+        "id": "KPI-PUB-02",
+        "name": "PII lint",
         "rules": [
           "Any email-like token in public/*.json is red."
         ],
-        "evidence": [],
-        "details": {
-          "pii_files": []
-        }
+        "score": 100,
+        "status": "green"
       }
-    ]
+    ],
+    "meta": {
+      "generated_at": "2026-03-04T23:32:10.842590Z",
+      "schema_version": "0.2",
+      "timezone": "America/New_York"
+    },
+    "summary": {
+      "kpi_counts": {
+        "gray": 1,
+        "green": 9,
+        "red": 8,
+        "yellow": 1
+      },
+      "overall_status": "red"
+    },
+    "taxonomy": {
+      "categories": {
+        "convergence": "Internal consistency and linkage quality across SoR and docs.",
+        "freshness": "How recent SoR and supporting documents are.",
+        "publicability": "Publish-safe artifact hygiene checks.",
+        "schedule": "Timeline and readiness metrics for near-term execution."
+      },
+      "kpi_definitions": {
+        "KPI-CONV-01": "SoR reference integrity",
+        "KPI-CONV-02": "Ownership completeness",
+        "KPI-CONV-03": "Gate mapping completeness",
+        "KPI-CONV-04": "Definition-of-done completeness",
+        "KPI-CONV-05": "Principle linkage coverage",
+        "KPI-CONV-06": "Risk linkage coverage",
+        "KPI-CONV-07": "Cross-doc principle coverage",
+        "KPI-CONV-08": "Cross-doc risk coverage",
+        "KPI-CONV-09": "Risk-to-principle mapping readiness",
+        "KPI-CONV-10": "Milestone gating consistency",
+        "KPI-FRESH-01": "SoR recency",
+        "KPI-FRESH-02": "Public artifacts recency",
+        "KPI-FRESH-03": "Foundation docs recency",
+        "KPI-PUB-01": "Public link hygiene",
+        "KPI-PUB-02": "PII lint on public outputs",
+        "KPI-SCHED-01": "Next gate readiness",
+        "KPI-SCHED-02": "Overdue deliverables",
+        "KPI-SCHED-03": "Blocked dependency rate",
+        "KPI-SCHED-04": "Pre-read readiness"
+      }
+    }
+  },
+  "evidence_coverage": {
+    "generated_at": "2026-03-04T23:32:10.842590Z",
+    "kpi": {
+      "KPI-CONV-04": {
+        "deliverables_missing_evidence": [
+          {
+            "deliverable_id": "D-AIN-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-AIN"
+          },
+          {
+            "deliverable_id": "D-CCI-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-CCI"
+          },
+          {
+            "deliverable_id": "D-CPX-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-CPX"
+          },
+          {
+            "deliverable_id": "D-DPS-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-DPS"
+          },
+          {
+            "deliverable_id": "D-EQA-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-EQA"
+          },
+          {
+            "deliverable_id": "D-IPC-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-IPC"
+          },
+          {
+            "deliverable_id": "D-POL-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "D-RSB-1",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-RSB"
+          },
+          {
+            "deliverable_id": "charter_v0",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "committee_response",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "final_talk_track",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-CCI"
+          },
+          {
+            "deliverable_id": "m5_draft_sections",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "near_final_package",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "policy_principles",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "pre_m3_defs",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-RSB"
+          },
+          {
+            "deliverable_id": "pre_m3_risks_ops",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "rec_outline_risk_register",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          },
+          {
+            "deliverable_id": "working_agreements",
+            "missing": [
+              "supporting_evidence_count",
+              "supporting_evidence_paths",
+              "supporting_confidence_max",
+              "evidence_narrative"
+            ],
+            "path": "",
+            "recommended_sources": [],
+            "suggested_fixes": [
+              {
+                "template_id": "evidence_block_v1",
+                "type": "add_evidence_section"
+              },
+              {
+                "template_id": "trace_table_v1",
+                "type": "add_trace_table"
+              }
+            ],
+            "workstream": "WS-POL"
+          }
+        ],
+        "evidence_link_count": 0,
+        "gap": {
+          "kpi_id": "KPI-CONV-04",
+          "missing_evidence_count": 18,
+          "missing_links_count": 18,
+          "top_missing_areas": [
+            {
+              "deliverable_id": "D-AIN-1",
+              "missing_fields": [
+                "supporting_evidence_count",
+                "supporting_evidence_paths",
+                "supporting_confidence_max",
+                "evidence_narrative"
+              ],
+              "suggested_evidence_block_template": "trace_table_v1"
+            },
+            {
+              "deliverable_id": "D-CCI-1",
+              "missing_fields": [
+                "supporting_evidence_count",
+                "supporting_evidence_paths",
+                "supporting_confidence_max",
+                "evidence_narrative"
+              ],
+              "suggested_evidence_block_template": "trace_table_v1"
+            },
+            {
+              "deliverable_id": "D-CPX-1",
+              "missing_fields": [
+                "supporting_evidence_count",
+                "supporting_evidence_paths",
+                "supporting_confidence_max",
+                "evidence_narrative"
+              ],
+              "suggested_evidence_block_template": "trace_table_v1"
+            },
+            {
+              "deliverable_id": "D-DPS-1",
+              "missing_fields": [
+                "supporting_evidence_count",
+                "supporting_evidence_paths",
+                "supporting_confidence_max",
+                "evidence_narrative"
+              ],
+              "suggested_evidence_block_template": "trace_table_v1"
+            },
+            {
+              "deliverable_id": "D-EQA-1",
+              "missing_fields": [
+                "supporting_evidence_count",
+                "supporting_evidence_paths",
+                "supporting_confidence_max",
+                "evidence_narrative"
+              ],
+              "suggested_evidence_block_template": "trace_table_v1"
+            }
+          ]
+        },
+        "score_proxy": 0
+      }
+    },
+    "templates_version": "evidence_templates_v1",
+    "version_key": "b0dcc6d0f0b9"
+  },
+  "evidence_templates": {
+    "generated_at": "2026-03-04T00:00:00Z",
+    "templates": [
+      {
+        "body": "### Derived from meetings\n- Meeting ID/date: <MTG-... / YYYY-MM-DD>\n- Decision or directive: <what was decided>\n- Deliverable change: <what was updated>\n- Supporting source path(s): <public/...>",
+        "description": "Document how meeting outputs changed a deliverable.",
+        "template_id": "derived_from_meetings_v1",
+        "title": "Derived From Meetings"
+      },
+      {
+        "body": "### Evidence\n- Source: <minutes/survey/research/email>\n- Date: <YYYY-MM-DD>\n- Claim supported: <what this evidence proves>\n- Link(s): <repo-relative path(s)>\n- Notes: <brief relevance summary>",
+        "description": "Minimal evidence section for a deliverable update.",
+        "template_id": "evidence_block_v1",
+        "title": "Evidence Block"
+      },
+      {
+        "body": "- Risk ID: <RISK-...>\n- Evidence path: <public/...>\n- Observation date: <YYYY-MM-DD>\n- Impact note: <1-2 sentences>\n- Mitigation trigger: <what action this evidence triggers>",
+        "description": "Attach evidence to a risk entry.",
+        "template_id": "risk_evidence_row_v1",
+        "title": "Risk Register Evidence Row"
+      },
+      {
+        "body": "| Claim | Source Type | Source Path | Date | Owner |\n|---|---|---|---|---|\n| <claim> | <minutes/survey/research/email> | <public/...> | <YYYY-MM-DD> | <name> |",
+        "description": "Trace claims to concrete source paths.",
+        "template_id": "trace_table_v1",
+        "title": "Evidence Trace Table"
+      }
+    ],
+    "version_key": "evidence_templates_v1"
   },
   "quality_report": {
     "meta": {
@@ -1995,7 +2491,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-04T17:59:56.618678Z",
+      "generated_at": "2026-03-04T23:34:11.067157Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",

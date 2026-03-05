@@ -16,6 +16,8 @@ GLIDEPATH_PATH = PUBLIC_DIR / "glidepath_history.json"
 GLIDEPATH_DIAGNOSTICS_PATH = PUBLIC_DIR / "glidepath_diagnostics.json"
 KPIS_PATH = PUBLIC_DIR / "kpis.json"
 KPI_EVIDENCE_PATH = PUBLIC_DIR / "kpi_evidence.json"
+EVIDENCE_COVERAGE_PATH = PUBLIC_DIR / "evidence_coverage.json"
+EVIDENCE_TEMPLATES_PATH = PUBLIC_DIR / "evidence_templates.json"
 SNAPSHOT_PATH = PUBLIC_DIR / "public_snapshot.json"
 PROJECT_INGEST_DIR = PUBLIC_DIR / "project_ingest"
 PROJECT_INGEST_ARTIFACTS_DIR = PROJECT_INGEST_DIR / "artifacts"
@@ -51,6 +53,9 @@ REQUIRED_DIAGNOSTICS_FIELDS = {
     "recommended_focus",
     "deliverables_due_next_gate",
 }
+REQUIRED_EVIDENCE_COVERAGE_FIELDS = {"version_key", "generated_at", "templates_version", "kpi"}
+REQUIRED_EVIDENCE_TEMPLATES_FIELDS = {"version_key", "generated_at", "templates"}
+REQUIRED_EVIDENCE_TEMPLATE_ENTRY_FIELDS = {"template_id", "title", "description", "body"}
 REQUIRED_INDEX_ENTRY_FIELDS = {
     "category",
     "source_path",
@@ -633,6 +638,135 @@ def validate_glidepath_diagnostics(
             fail("glidepath_diagnostics.json project_ingest.categories must be list[str]")
 
 
+def validate_evidence_templates(payload: dict[str, Any]) -> None:
+    if not isinstance(payload, dict):
+        fail("evidence_templates.json must be an object")
+    if not REQUIRED_EVIDENCE_TEMPLATES_FIELDS.issubset(set(payload.keys())):
+        missing = sorted(REQUIRED_EVIDENCE_TEMPLATES_FIELDS - set(payload.keys()))
+        fail(f"evidence_templates.json missing fields: {missing}")
+    if parse_iso_datetime(payload.get("generated_at")) is None:
+        fail("evidence_templates.json generated_at must be an ISO datetime")
+    if not isinstance(payload.get("version_key"), str) or not str(payload.get("version_key")).strip():
+        fail("evidence_templates.json version_key must be a non-empty string")
+
+    templates = payload.get("templates")
+    if not isinstance(templates, list):
+        fail("evidence_templates.json templates must be a list")
+
+    previous_id = ""
+    seen_ids: set[str] = set()
+    for idx, item in enumerate(templates):
+        if not isinstance(item, dict):
+            fail(f"evidence_templates.json templates[{idx}] must be an object")
+        if not REQUIRED_EVIDENCE_TEMPLATE_ENTRY_FIELDS.issubset(set(item.keys())):
+            missing = sorted(REQUIRED_EVIDENCE_TEMPLATE_ENTRY_FIELDS - set(item.keys()))
+            fail(f"evidence_templates.json templates[{idx}] missing fields: {missing}")
+
+        template_id = str(item.get("template_id") or "")
+        if not template_id:
+            fail(f"evidence_templates.json templates[{idx}].template_id must be non-empty")
+        if template_id in seen_ids:
+            fail(f"evidence_templates.json template_id values must be unique; duplicate: {template_id}")
+        seen_ids.add(template_id)
+        if previous_id and template_id < previous_id:
+            fail("evidence_templates.json templates must be sorted by template_id")
+        previous_id = template_id
+
+        for field in ("title", "description", "body"):
+            value = item.get(field)
+            if not isinstance(value, str) or not value.strip():
+                fail(f"evidence_templates.json templates[{idx}].{field} must be a non-empty string")
+
+
+def validate_evidence_coverage(payload: dict[str, Any], templates_payload: dict[str, Any], snapshot: dict[str, Any]) -> None:
+    if not isinstance(payload, dict):
+        fail("evidence_coverage.json must be an object")
+    if not REQUIRED_EVIDENCE_COVERAGE_FIELDS.issubset(set(payload.keys())):
+        missing = sorted(REQUIRED_EVIDENCE_COVERAGE_FIELDS - set(payload.keys()))
+        fail(f"evidence_coverage.json missing fields: {missing}")
+    if parse_iso_datetime(payload.get("generated_at")) is None:
+        fail("evidence_coverage.json generated_at must be an ISO datetime")
+    if not isinstance(payload.get("version_key"), str) or not str(payload.get("version_key")).strip():
+        fail("evidence_coverage.json version_key must be a non-empty string")
+
+    templates_version = str(templates_payload.get("version_key") or "")
+    if str(payload.get("templates_version") or "") != templates_version:
+        fail("evidence_coverage.json templates_version must equal evidence_templates.json version_key")
+
+    kpi = payload.get("kpi")
+    if not isinstance(kpi, dict):
+        fail("evidence_coverage.json kpi must be an object")
+    conv04 = kpi.get("KPI-CONV-04")
+    if not isinstance(conv04, dict):
+        fail("evidence_coverage.json kpi.KPI-CONV-04 must be an object")
+
+    for field in ("score_proxy", "evidence_link_count"):
+        value = conv04.get(field)
+        if not isinstance(value, int) or value < 0:
+            fail(f"evidence_coverage.json kpi.KPI-CONV-04.{field} must be an integer >= 0")
+
+    deliverables_missing = conv04.get("deliverables_missing_evidence")
+    if not isinstance(deliverables_missing, list):
+        fail("evidence_coverage.json kpi.KPI-CONV-04.deliverables_missing_evidence must be a list")
+
+    snapshot_deliverables = snapshot.get("deliverables", []) if isinstance(snapshot.get("deliverables"), list) else []
+    known_ids = {
+        str(item.get("id"))
+        for item in snapshot_deliverables
+        if isinstance(item, dict) and item.get("id")
+    }
+
+    previous_id = ""
+    missing_links_count_expected = 0
+    for idx, item in enumerate(deliverables_missing):
+        if not isinstance(item, dict):
+            fail(f"evidence_coverage.json deliverables_missing_evidence[{idx}] must be an object")
+        deliverable_id = str(item.get("deliverable_id") or "")
+        if not deliverable_id:
+            fail(f"evidence_coverage.json deliverables_missing_evidence[{idx}].deliverable_id must be non-empty")
+        if previous_id and deliverable_id < previous_id:
+            fail("evidence_coverage.json deliverables_missing_evidence must be sorted by deliverable_id")
+        previous_id = deliverable_id
+        if deliverable_id not in known_ids:
+            fail(f"evidence_coverage.json deliverables_missing_evidence[{idx}] unknown deliverable_id: {deliverable_id}")
+
+        missing_fields = item.get("missing")
+        if not isinstance(missing_fields, list) or any(not isinstance(v, str) for v in missing_fields):
+            fail(f"evidence_coverage.json deliverables_missing_evidence[{idx}].missing must be list[str]")
+        if "supporting_evidence_paths" in set(missing_fields):
+            missing_links_count_expected += 1
+
+        suggested_fixes = item.get("suggested_fixes")
+        if not isinstance(suggested_fixes, list):
+            fail(f"evidence_coverage.json deliverables_missing_evidence[{idx}].suggested_fixes must be a list")
+        for fix_idx, fix in enumerate(suggested_fixes):
+            if not isinstance(fix, dict):
+                fail(
+                    f"evidence_coverage.json deliverables_missing_evidence[{idx}].suggested_fixes[{fix_idx}] must be an object"
+                )
+            template_id = str(fix.get("template_id") or "")
+            if not template_id:
+                fail(
+                    f"evidence_coverage.json deliverables_missing_evidence[{idx}].suggested_fixes[{fix_idx}].template_id must be non-empty"
+                )
+
+    gap = conv04.get("gap")
+    if not isinstance(gap, dict):
+        fail("evidence_coverage.json kpi.KPI-CONV-04.gap must be an object")
+    if gap.get("kpi_id") != "KPI-CONV-04":
+        fail("evidence_coverage.json gap.kpi_id must be KPI-CONV-04")
+    if gap.get("missing_evidence_count") != len(deliverables_missing):
+        fail("evidence_coverage.json gap.missing_evidence_count must equal deliverables_missing_evidence length")
+    if gap.get("missing_links_count") != missing_links_count_expected:
+        fail("evidence_coverage.json gap.missing_links_count mismatch")
+
+    top_missing = gap.get("top_missing_areas")
+    if not isinstance(top_missing, list):
+        fail("evidence_coverage.json gap.top_missing_areas must be a list")
+    if len(top_missing) > 5:
+        fail("evidence_coverage.json gap.top_missing_areas must contain at most 5 entries")
+
+
 def validate_project_ingest_index(payload: dict[str, Any]) -> None:
     if not isinstance(payload, dict):
         fail("public/project_ingest/index.json must be an object")
@@ -1037,8 +1171,16 @@ def main() -> None:
         fail(f"Required artifact not found: {GLIDEPATH_PATH}")
     if not GLIDEPATH_DIAGNOSTICS_PATH.exists():
         fail(f"Required artifact not found: {GLIDEPATH_DIAGNOSTICS_PATH}")
-    if not KPIS_PATH.exists() or not KPI_EVIDENCE_PATH.exists() or not SNAPSHOT_PATH.exists():
-        fail("Required artifacts not found: public_snapshot.json, kpis.json, and kpi_evidence.json are required")
+    if (
+        not KPIS_PATH.exists()
+        or not KPI_EVIDENCE_PATH.exists()
+        or not SNAPSHOT_PATH.exists()
+        or not EVIDENCE_COVERAGE_PATH.exists()
+        or not EVIDENCE_TEMPLATES_PATH.exists()
+    ):
+        fail(
+            "Required artifacts not found: public_snapshot.json, kpis.json, kpi_evidence.json, evidence_coverage.json, and evidence_templates.json are required"
+        )
 
     _ = load_json(SCHEMA_PATH)
     glidepath = load_json(GLIDEPATH_PATH)
@@ -1046,8 +1188,12 @@ def main() -> None:
     snapshot = load_json(SNAPSHOT_PATH)
     kpis_payload = load_json(KPIS_PATH)
     evidence_payload = load_json(KPI_EVIDENCE_PATH)
+    evidence_coverage = load_json(EVIDENCE_COVERAGE_PATH)
+    evidence_templates = load_json(EVIDENCE_TEMPLATES_PATH)
     validate_glidepath_history(glidepath)
     validate_glidepath_diagnostics(diagnostics, glidepath, snapshot, kpis_payload, evidence_payload)
+    validate_evidence_templates(evidence_templates)
+    validate_evidence_coverage(evidence_coverage, evidence_templates, snapshot)
     validate_project_ingest()
 
     print("✅ Public artifact validation passed")

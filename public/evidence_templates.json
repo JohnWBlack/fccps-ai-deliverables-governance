@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-03-04T00:00:00Z",
+  "templates": [
+    {
+      "body": "### Derived from meetings\n- Meeting ID/date: <MTG-... / YYYY-MM-DD>\n- Decision or directive: <what was decided>\n- Deliverable change: <what was updated>\n- Supporting source path(s): <public/...>",
+      "description": "Document how meeting outputs changed a deliverable.",
+      "template_id": "derived_from_meetings_v1",
+      "title": "Derived From Meetings"
+    },
+    {
+      "body": "### Evidence\n- Source: <minutes/survey/research/email>\n- Date: <YYYY-MM-DD>\n- Claim supported: <what this evidence proves>\n- Link(s): <repo-relative path(s)>\n- Notes: <brief relevance summary>",
+      "description": "Minimal evidence section for a deliverable update.",
+      "template_id": "evidence_block_v1",
+      "title": "Evidence Block"
+    },
+    {
+      "body": "- Risk ID: <RISK-...>\n- Evidence path: <public/...>\n- Observation date: <YYYY-MM-DD>\n- Impact note: <1-2 sentences>\n- Mitigation trigger: <what action this evidence triggers>",
+      "description": "Attach evidence to a risk entry.",
+      "template_id": "risk_evidence_row_v1",
+      "title": "Risk Register Evidence Row"
+    },
+    {
+      "body": "| Claim | Source Type | Source Path | Date | Owner |\n|---|---|---|---|---|\n| <claim> | <minutes/survey/research/email> | <public/...> | <YYYY-MM-DD> | <name> |",
+      "description": "Trace claims to concrete source paths.",
+      "template_id": "trace_table_v1",
+      "title": "Evidence Trace Table"
+    }
+  ],
+  "version_key": "evidence_templates_v1"
+}
