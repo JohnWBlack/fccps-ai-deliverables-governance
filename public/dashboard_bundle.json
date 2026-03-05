@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-03-05T00:08:05.435084Z",
-    "snapshot_version_key": "d321f2c87bbcfd9a132ccc6c7bc6baf765170a96"
+    "generated_at": "2026-03-05T03:06:46.411527Z",
+    "snapshot_version_key": "92b15313d920689df06a7e926c6d1d99aea5c5e5"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-03-04T19:12:27.430774Z",
+      "generated_at": "2026-03-05T03:06:14.560199Z",
       "source_version": "1.1.0",
-      "version_key": "d321f2c87bbcfd9a132ccc6c7bc6baf765170a96"
+      "version_key": "92b15313d920689df06a7e926c6d1d99aea5c5e5"
     },
     "metadata": {
-      "generated_at": "2026-03-04T19:12:27.430774Z",
+      "generated_at": "2026-03-05T03:06:14.560199Z",
       "source_version": "1.1.0",
-      "version_key": "d321f2c87bbcfd9a132ccc6c7bc6baf765170a96",
+      "version_key": "92b15313d920689df06a7e926c6d1d99aea5c5e5",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -198,7 +198,7 @@
         "checkpoint_id": "m1",
         "depends_on": [],
         "committee_only": false,
-        "public_url": null,
+        "public_url": "public/project_ingest/artifacts/20260205_one_page_team_charter_v1_0_for_feb_6_review_vote__da08a7051c89.json",
         "principle_refs": [],
         "risk_refs": []
       },
@@ -218,7 +218,7 @@
           "charter_v0"
         ],
         "committee_only": false,
-        "public_url": null,
+        "public_url": "public/project_ingest/markdown/20260206_fccps_ai_advisory_committee_minutes__5dc077b4804c.md",
         "principle_refs": [],
         "risk_refs": []
       },
@@ -238,7 +238,7 @@
           "working_agreements"
         ],
         "committee_only": false,
-        "public_url": null,
+        "public_url": "public/project_ingest/markdown/meeting_3_20_feb_focus_block__3cfbb3ab6bc9.md",
         "principle_refs": [],
         "risk_refs": []
       },
@@ -258,7 +258,7 @@
           "working_agreements"
         ],
         "committee_only": false,
-        "public_url": null,
+        "public_url": "public/project_ingest/artifacts/f1_inputs_top_risks_top_opportunities_synthesized_themes__2034cd4958e8.json",
         "principle_refs": [],
         "risk_refs": []
       },
@@ -304,7 +304,7 @@
         "checkpoint_id": "m3",
         "depends_on": [],
         "committee_only": false,
-        "public_url": null,
+        "public_url": "public/project_ingest/markdown/shared_baseline_v01__2c78c109ba58.md",
         "principle_refs": [],
         "risk_refs": []
       },
@@ -1052,8 +1052,8 @@
         "category": "convergence",
         "description": "Percent of scanned docs that reference at least one principle ID.",
         "details": {
-          "coverage_pct": 10,
-          "scanned_docs": 20
+          "coverage_pct": 9,
+          "scanned_docs": 21
         },
         "evidence": [
           {
@@ -1070,15 +1070,15 @@
         "rules": [
           "Green >=70, yellow >=40, red <40."
         ],
-        "score": 10,
+        "score": 9,
         "status": "red"
       },
       {
         "category": "convergence",
         "description": "Percent of scanned docs that reference at least one risk ID.",
         "details": {
-          "coverage_pct": 10,
-          "scanned_docs": 20
+          "coverage_pct": 9,
+          "scanned_docs": 21
         },
         "evidence": [
           {
@@ -1095,7 +1095,7 @@
         "rules": [
           "Green >=70, yellow >=40, red <40."
         ],
-        "score": 10,
+        "score": 9,
         "status": "red"
       },
       {
@@ -1223,27 +1223,7 @@
         "details": {
           "non_compliant": [
             {
-              "id": "charter_v0",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
-              "id": "working_agreements",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
-              "id": "pre_m3_defs",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
-              "id": "pre_m3_risks_ops",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
               "id": "policy_principles",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
-              "id": "D-RSB-1",
               "reason": "missing_public_url_or_committee_only"
             },
             {
@@ -1286,27 +1266,7 @@
         },
         "evidence": [
           {
-            "id": "charter_v0",
-            "type": "deliverable"
-          },
-          {
-            "id": "working_agreements",
-            "type": "deliverable"
-          },
-          {
-            "id": "pre_m3_defs",
-            "type": "deliverable"
-          },
-          {
-            "id": "pre_m3_risks_ops",
-            "type": "deliverable"
-          },
-          {
             "id": "policy_principles",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-RSB-1",
             "type": "deliverable"
           },
           {
@@ -1351,7 +1311,7 @@
         "rules": [
           "Missing visibility metadata reduces score."
         ],
-        "score": 16,
+        "score": 44,
         "status": "red"
       },
       {
@@ -1371,7 +1331,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-03-05T00:08:05.311631Z",
+      "generated_at": "2026-03-05T03:06:46.301157Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1415,7 +1375,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-03-05T00:08:05.311631Z",
+    "generated_at": "2026-03-05T03:06:46.301157Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1581,7 +1541,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/markdown/shared_baseline_v01__2c78c109ba58.md",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1603,7 +1563,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/20260205_one_page_team_charter_v1_0_for_feb_6_review_vote__da08a7051c89.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1735,7 +1695,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/markdown/meeting_3_20_feb_focus_block__3cfbb3ab6bc9.md",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1757,7 +1717,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/f1_inputs_top_risks_top_opportunities_synthesized_themes__2034cd4958e8.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1801,7 +1761,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/markdown/20260206_fccps_ai_advisory_committee_minutes__5dc077b4804c.md",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1878,7 +1838,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "f77eaea777e8"
+    "version_key": "52a821111b01"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1912,7 +1872,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-03-04T19:12:28.701810Z",
+      "generated_at": "2026-03-05T03:06:46.113435Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1942,8 +1902,8 @@
     "metrics": {
       "deliverable_principle_refs_pct": 38.88888888888889,
       "deliverable_risk_refs_pct": 38.88888888888889,
-      "docs_with_principles_pct": 10.0,
-      "docs_with_risks_pct": 10.0,
+      "docs_with_principles_pct": 9.523809523809524,
+      "docs_with_risks_pct": 9.523809523809524,
       "sor_vs_docs_workstream_drift": {
         "sor_count": 8,
         "docs_count": 9,
@@ -1955,8 +1915,8 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-03-04T19:12:28.566445Z",
-      "scanned_files_count": 20,
+      "generated_at": "2026-03-05T03:06:45.930040Z",
+      "scanned_files_count": 21,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
       "workstream_alias_map": {
@@ -2030,6 +1990,28 @@
           "risk_ids": 10,
           "workstream_ids": 11,
           "deliverable_ids": 12
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/DELIVERABLE_SOURCE_TRIAGE.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-05T02:08:52.535132Z",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [
+            "D-RSB-1"
+          ],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "deliverable_ids": 22
         },
         "normalization": {
           "workstream_alias_hits": {},
@@ -2491,7 +2473,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-05T00:08:05.434176Z",
+      "generated_at": "2026-03-05T03:06:46.410430Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",

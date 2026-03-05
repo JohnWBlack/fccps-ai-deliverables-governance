@@ -316,8 +316,8 @@
       "category": "convergence",
       "description": "Percent of scanned docs that reference at least one principle ID.",
       "details": {
-        "coverage_pct": 10,
-        "scanned_docs": 20
+        "coverage_pct": 9,
+        "scanned_docs": 21
       },
       "evidence": [
         {
@@ -334,15 +334,15 @@
       "rules": [
         "Green >=70, yellow >=40, red <40."
       ],
-      "score": 10,
+      "score": 9,
       "status": "red"
     },
     {
       "category": "convergence",
       "description": "Percent of scanned docs that reference at least one risk ID.",
       "details": {
-        "coverage_pct": 10,
-        "scanned_docs": 20
+        "coverage_pct": 9,
+        "scanned_docs": 21
       },
       "evidence": [
         {
@@ -359,7 +359,7 @@
       "rules": [
         "Green >=70, yellow >=40, red <40."
       ],
-      "score": 10,
+      "score": 9,
       "status": "red"
     },
     {
@@ -487,27 +487,7 @@
       "details": {
         "non_compliant": [
           {
-            "id": "charter_v0",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "working_agreements",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "pre_m3_defs",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "pre_m3_risks_ops",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
             "id": "policy_principles",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "D-RSB-1",
             "reason": "missing_public_url_or_committee_only"
           },
           {
@@ -550,27 +530,7 @@
       },
       "evidence": [
         {
-          "id": "charter_v0",
-          "type": "deliverable"
-        },
-        {
-          "id": "working_agreements",
-          "type": "deliverable"
-        },
-        {
-          "id": "pre_m3_defs",
-          "type": "deliverable"
-        },
-        {
-          "id": "pre_m3_risks_ops",
-          "type": "deliverable"
-        },
-        {
           "id": "policy_principles",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-RSB-1",
           "type": "deliverable"
         },
         {
@@ -615,7 +575,7 @@
       "rules": [
         "Missing visibility metadata reduces score."
       ],
-      "score": 16,
+      "score": 44,
       "status": "red"
     },
     {
@@ -635,7 +595,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-03-05T00:08:05.311631Z",
+    "generated_at": "2026-03-05T03:06:46.301157Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },

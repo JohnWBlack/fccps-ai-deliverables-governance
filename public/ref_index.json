@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-03-04T19:12:28.566445Z",
-    "scanned_files_count": 20,
+    "generated_at": "2026-03-05T03:06:45.930040Z",
+    "scanned_files_count": 21,
     "skipped_files_count": 5,
     "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
     "workstream_alias_map": {
@@ -75,6 +75,28 @@
         "risk_ids": 10,
         "workstream_ids": 11,
         "deliverable_ids": 12
+      },
+      "normalization": {
+        "workstream_alias_hits": {},
+        "allowed_unresolved_workstream_ids": []
+      }
+    },
+    {
+      "doc_path": "docs/DELIVERABLE_SOURCE_TRIAGE.md",
+      "doc_type": "md",
+      "last_modified_iso": "2026-03-05T02:08:52.535132Z",
+      "extracted": {
+        "principle_ids": [],
+        "risk_ids": [],
+        "workstream_ids": [],
+        "deliverable_ids": [
+          "D-RSB-1"
+        ],
+        "milestone_ids": [],
+        "decision_ids": []
+      },
+      "anchors": {
+        "deliverable_ids": 22
       },
       "normalization": {
         "workstream_alias_hits": {},
