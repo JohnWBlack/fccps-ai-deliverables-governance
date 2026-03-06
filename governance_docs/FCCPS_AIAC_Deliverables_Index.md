@@ -1,7 +1,7 @@
 # FCCPS AI Advisory Committee — Deliverables Index
 
 **Version:** auto-generated  
-**Last updated:** 2026-03-05  
+**Last updated:** 2026-03-06  
 **Purpose:** SoR-backed deliverables index with evidence and checkpoint alignment.
 
 ## Deliverables table

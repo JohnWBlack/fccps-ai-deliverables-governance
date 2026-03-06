@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-03-05T03:44:13.120518Z",
-    "snapshot_version_key": "570bbc6aee6b46a9a8a098ad5656e69397ddade5"
+    "generated_at": "2026-03-06T03:43:56.795464Z",
+    "snapshot_version_key": "4b06d282db7cb8a3b8210b30cb555fc966916858"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-03-05T03:44:11.843233Z",
+      "generated_at": "2026-03-06T03:43:55.211981Z",
       "source_version": "1.1.0",
-      "version_key": "570bbc6aee6b46a9a8a098ad5656e69397ddade5"
+      "version_key": "4b06d282db7cb8a3b8210b30cb555fc966916858"
     },
     "metadata": {
-      "generated_at": "2026-03-05T03:44:11.843233Z",
+      "generated_at": "2026-03-06T03:43:55.211981Z",
       "source_version": "1.1.0",
-      "version_key": "570bbc6aee6b46a9a8a098ad5656e69397ddade5",
+      "version_key": "4b06d282db7cb8a3b8210b30cb555fc966916858",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -820,12 +820,36 @@
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 13,
-          "overdue_count": 1
+          "max_days_overdue": 14,
+          "overdue_count": 7
         },
         "evidence": [
           {
             "id": "policy_principles",
+            "type": "deliverable"
+          },
+          {
+            "id": "rec_outline_risk_register",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-POL-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-CPX-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-AIN-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-DPS-1",
+            "type": "deliverable"
+          },
+          {
+            "id": "D-EQA-1",
             "type": "deliverable"
           }
         ],
@@ -834,8 +858,8 @@
         "rules": [
           "Penalty combines overdue count and max overdue days."
         ],
-        "score": 67,
-        "status": "yellow"
+        "score": 0,
+        "status": "red"
       },
       {
         "category": "schedule",
@@ -1217,7 +1241,7 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates.",
         "details": {
-          "oldest_age_days": 10,
+          "oldest_age_days": 11,
           "sample_count": 22
         },
         "evidence": [],
@@ -1343,7 +1367,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-03-05T03:44:13.039692Z",
+      "generated_at": "2026-03-06T03:43:56.699727Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1351,8 +1375,8 @@
       "kpi_counts": {
         "gray": 1,
         "green": 9,
-        "red": 8,
-        "yellow": 1
+        "red": 9,
+        "yellow": 0
       },
       "overall_status": "red"
     },
@@ -1387,7 +1411,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-03-05T03:44:13.039692Z",
+    "generated_at": "2026-03-06T03:43:56.699727Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1850,7 +1874,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "4e2207014060"
+    "version_key": "61b80d35d82e"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1884,7 +1908,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-03-05T03:44:12.882578Z",
+      "generated_at": "2026-03-06T03:43:56.525865Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1927,7 +1951,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-03-05T03:44:12.765289Z",
+      "generated_at": "2026-03-06T03:43:56.394070Z",
       "scanned_files_count": 21,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -2485,7 +2509,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-05T03:44:13.120040Z",
+      "generated_at": "2026-03-06T03:43:56.794918Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",

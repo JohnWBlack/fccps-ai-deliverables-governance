@@ -1,8 +1,8 @@
 {
   "balance_required_delta": {
     "axis": "what",
-    "current": 5.32,
-    "delta": 2.93,
+    "current": 3.91,
+    "delta": 4.34,
     "target_midpoint": 8.25
   },
   "balance_target_gate": {
@@ -82,7 +82,7 @@
       "workstream": "WS-POL"
     }
   ],
-  "generated_at": "2026-03-05T03:44:13.225539Z",
+  "generated_at": "2026-03-06T03:43:56.916134Z",
   "how_drivers_top": [
     {
       "evidence_count": 0,
@@ -207,20 +207,21 @@
   },
   "now": {
     "corridor_matches": [
-      "WHAT~M5",
+      "WHAT~M3",
       "HOW~M7"
     ],
     "how": 7.85,
     "how_corridor_id": "m7",
-    "what": 5.32,
-    "what_corridor_id": "m5"
+    "what": 3.91,
+    "what_corridor_id": "m3"
   },
   "outside_corridor": {
     "axes_out": [
+      "what",
       "how"
     ],
     "how_out": 2.35,
-    "what_out": 0.0
+    "what_out": -0.09
   },
   "project_ingest": {
     "categories": [
@@ -251,6 +252,12 @@
         "evidence_paths": [
           "sor/deliverables.yml"
         ],
+        "kpi_id": "KPI-SCHED-02"
+      },
+      {
+        "evidence_paths": [
+          "sor/deliverables.yml"
+        ],
         "kpi_id": "KPI-SCHED-01"
       },
       {
@@ -258,17 +265,20 @@
           "sor/deliverables.yml"
         ],
         "kpi_id": "KPI-PUB-01"
-      },
-      {
-        "evidence_paths": [
-          "sor/deliverables.yml"
-        ],
-        "kpi_id": "KPI-SCHED-03"
       }
     ]
   },
-  "version_key": "570bbc6aee6b46a9a8a098ad5656e69397ddade5",
+  "version_key": "4b06d282db7cb8a3b8210b30cb555fc966916858",
   "what_blockers_top": [
+    {
+      "evidence_count": 7,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-SCHED-02",
+      "score": 0.0,
+      "weight": 2.0
+    },
     {
       "evidence_count": 12,
       "evidence_paths": [
@@ -295,15 +305,6 @@
       "kpi_id": "KPI-SCHED-03",
       "score": 40.0,
       "weight": 1.5
-    },
-    {
-      "evidence_count": 1,
-      "evidence_paths": [
-        "sor/deliverables.yml"
-      ],
-      "kpi_id": "KPI-SCHED-02",
-      "score": 67.0,
-      "weight": 2.0
     },
     {
       "evidence_count": 0,

@@ -72,12 +72,36 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 13,
-        "overdue_count": 1
+        "max_days_overdue": 14,
+        "overdue_count": 7
       },
       "evidence": [
         {
           "id": "policy_principles",
+          "type": "deliverable"
+        },
+        {
+          "id": "rec_outline_risk_register",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-POL-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-CPX-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-AIN-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-DPS-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-EQA-1",
           "type": "deliverable"
         }
       ],
@@ -86,8 +110,8 @@
       "rules": [
         "Penalty combines overdue count and max overdue days."
       ],
-      "score": 67,
-      "status": "yellow"
+      "score": 0,
+      "status": "red"
     },
     {
       "category": "schedule",
@@ -469,7 +493,7 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates.",
       "details": {
-        "oldest_age_days": 10,
+        "oldest_age_days": 11,
         "sample_count": 22
       },
       "evidence": [],
@@ -595,7 +619,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-03-05T03:44:13.039692Z",
+    "generated_at": "2026-03-06T03:43:56.699727Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
@@ -603,8 +627,8 @@
     "kpi_counts": {
       "gray": 1,
       "green": 9,
-      "red": 8,
-      "yellow": 1
+      "red": 9,
+      "yellow": 0
     },
     "overall_status": "red"
   },
