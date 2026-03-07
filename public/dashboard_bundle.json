@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-03-07T22:55:07.568599Z",
-    "snapshot_version_key": "797a80b43db2794d4a57651a063f2a25aea3fc6a"
+    "generated_at": "2026-03-07T22:56:12.882909Z",
+    "snapshot_version_key": "40644491ec21aff2d262fcbb68fdc79fa5cf63ef"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-03-07T22:54:48.169294Z",
+      "generated_at": "2026-03-07T22:56:11.569468Z",
       "source_version": "1.1.0",
-      "version_key": "797a80b43db2794d4a57651a063f2a25aea3fc6a"
+      "version_key": "40644491ec21aff2d262fcbb68fdc79fa5cf63ef"
     },
     "metadata": {
-      "generated_at": "2026-03-07T22:54:48.169294Z",
+      "generated_at": "2026-03-07T22:56:11.569468Z",
       "source_version": "1.1.0",
-      "version_key": "797a80b43db2794d4a57651a063f2a25aea3fc6a",
+      "version_key": "40644491ec21aff2d262fcbb68fdc79fa5cf63ef",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -611,6 +611,18 @@
         "status": "upcoming",
         "impacted_artifacts": "m5_draft_sections; WS-DPS; WS-POL; WS-IPC",
         "notes": "Decision gate explicitly shown in timeline; capture result when made."
+      },
+      {
+        "id": "CHG-2026-03-07-01",
+        "date": "2026-03-07",
+        "type": "change",
+        "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
+        "trigger": "Automated SoR pipeline update",
+        "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:189b0456a114",
+        "owner": "Automation",
+        "status": "recorded",
+        "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:189b0456a114",
+        "notes": null
       },
       {
         "id": "DEC-2026-03-06-01",
@@ -1327,7 +1339,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-03-07T22:55:07.296624Z",
+      "generated_at": "2026-03-07T22:56:12.804814Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1371,7 +1383,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-03-07T22:55:07.296624Z",
+    "generated_at": "2026-03-07T22:56:12.804814Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1834,7 +1846,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "50a2981fcb01"
+    "version_key": "0bef1fe28e95"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1868,7 +1880,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-03-07T22:55:07.127088Z",
+      "generated_at": "2026-03-07T22:56:12.636508Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1911,7 +1923,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-03-07T22:55:06.996078Z",
+      "generated_at": "2026-03-07T22:56:12.513877Z",
       "scanned_files_count": 21,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -2469,7 +2481,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-07T22:55:07.567571Z",
+      "generated_at": "2026-03-07T22:56:12.882411Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
