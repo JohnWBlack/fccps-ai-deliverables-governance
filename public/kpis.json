@@ -519,31 +519,11 @@
             "reason": "missing_public_url_or_committee_only"
           },
           {
-            "id": "D-POL-1",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "D-CPX-1",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
             "id": "D-AIN-1",
             "reason": "missing_public_url_or_committee_only"
           },
           {
-            "id": "D-DPS-1",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "D-EQA-1",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
             "id": "m5_draft_sections",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "D-CCI-1",
             "reason": "missing_public_url_or_committee_only"
           },
           {
@@ -562,31 +542,11 @@
           "type": "deliverable"
         },
         {
-          "id": "D-POL-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-CPX-1",
-          "type": "deliverable"
-        },
-        {
           "id": "D-AIN-1",
           "type": "deliverable"
         },
         {
-          "id": "D-DPS-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-EQA-1",
-          "type": "deliverable"
-        },
-        {
           "id": "m5_draft_sections",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-CCI-1",
           "type": "deliverable"
         },
         {
@@ -599,8 +559,8 @@
       "rules": [
         "Missing visibility metadata reduces score."
       ],
-      "score": 44,
-      "status": "red"
+      "score": 72,
+      "status": "yellow"
     },
     {
       "category": "publicability",
@@ -619,7 +579,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-03-07T03:36:59.574217Z",
+    "generated_at": "2026-03-07T22:55:07.296624Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
@@ -627,8 +587,8 @@
     "kpi_counts": {
       "gray": 1,
       "green": 9,
-      "red": 9,
-      "yellow": 0
+      "red": 8,
+      "yellow": 1
     },
     "overall_status": "red"
   },

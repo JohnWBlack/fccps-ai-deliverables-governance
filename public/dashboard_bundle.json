@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-03-07T03:36:59.664498Z",
-    "snapshot_version_key": "d7253d0ad624170633081aa0413c2719b9ac30ad"
+    "generated_at": "2026-03-07T22:55:07.568599Z",
+    "snapshot_version_key": "797a80b43db2794d4a57651a063f2a25aea3fc6a"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-03-07T03:36:58.055228Z",
+      "generated_at": "2026-03-07T22:54:48.169294Z",
       "source_version": "1.1.0",
-      "version_key": "d7253d0ad624170633081aa0413c2719b9ac30ad"
+      "version_key": "797a80b43db2794d4a57651a063f2a25aea3fc6a"
     },
     "metadata": {
-      "generated_at": "2026-03-07T03:36:58.055228Z",
+      "generated_at": "2026-03-07T22:54:48.169294Z",
       "source_version": "1.1.0",
-      "version_key": "d7253d0ad624170633081aa0413c2719b9ac30ad",
+      "version_key": "797a80b43db2794d4a57651a063f2a25aea3fc6a",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -364,7 +364,7 @@
           "R-005"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f543a9cb3ecb.json"
       },
       {
         "id": "D-CPX-1",
@@ -391,7 +391,7 @@
           "R-006"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": "public/project_ingest/artifacts/d_cpx_1_scenarios__cff4abea8a5f.json"
       },
       {
         "id": "D-AIN-1",
@@ -445,7 +445,7 @@
           "R-008"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": "public/project_ingest/artifacts/d_dps_1_proposed_revised__b4082fe230d4.json"
       },
       {
         "id": "D-EQA-1",
@@ -473,7 +473,7 @@
           "R-008"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": "public/project_ingest/artifacts/d_eqa_1_equity_impact_checklist_v1_0__e3098af7d643.json"
       },
       {
         "id": "m5_draft_sections",
@@ -531,7 +531,7 @@
           "D-POL-1"
         ],
         "committee_only": false,
-        "public_url": null,
+        "public_url": "public/project_ingest/artifacts/d_cci_1_community_engagement_plan_ai_in_fccps__a25bc6588b7a.json",
         "principle_refs": [],
         "risk_refs": []
       },
@@ -1267,31 +1267,11 @@
               "reason": "missing_public_url_or_committee_only"
             },
             {
-              "id": "D-POL-1",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
-              "id": "D-CPX-1",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
               "id": "D-AIN-1",
               "reason": "missing_public_url_or_committee_only"
             },
             {
-              "id": "D-DPS-1",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
-              "id": "D-EQA-1",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
               "id": "m5_draft_sections",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
-              "id": "D-CCI-1",
               "reason": "missing_public_url_or_committee_only"
             },
             {
@@ -1310,31 +1290,11 @@
             "type": "deliverable"
           },
           {
-            "id": "D-POL-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-CPX-1",
-            "type": "deliverable"
-          },
-          {
             "id": "D-AIN-1",
             "type": "deliverable"
           },
           {
-            "id": "D-DPS-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-EQA-1",
-            "type": "deliverable"
-          },
-          {
             "id": "m5_draft_sections",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-CCI-1",
             "type": "deliverable"
           },
           {
@@ -1347,8 +1307,8 @@
         "rules": [
           "Missing visibility metadata reduces score."
         ],
-        "score": 44,
-        "status": "red"
+        "score": 72,
+        "status": "yellow"
       },
       {
         "category": "publicability",
@@ -1367,7 +1327,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-03-07T03:36:59.574217Z",
+      "generated_at": "2026-03-07T22:55:07.296624Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1375,8 +1335,8 @@
       "kpi_counts": {
         "gray": 1,
         "green": 9,
-        "red": 9,
-        "yellow": 0
+        "red": 8,
+        "yellow": 1
       },
       "overall_status": "red"
     },
@@ -1411,7 +1371,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-03-07T03:36:59.574217Z",
+    "generated_at": "2026-03-07T22:55:07.296624Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1445,7 +1405,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/d_cci_1_community_engagement_plan_ai_in_fccps__a25bc6588b7a.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1467,7 +1427,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/d_cpx_1_scenarios__cff4abea8a5f.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1489,7 +1449,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/d_dps_1_proposed_revised__b4082fe230d4.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1511,7 +1471,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/d_eqa_1_equity_impact_checklist_v1_0__e3098af7d643.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1555,7 +1515,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f543a9cb3ecb.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1874,7 +1834,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "7fd5be1df9e1"
+    "version_key": "50a2981fcb01"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1908,7 +1868,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-03-07T03:36:59.390079Z",
+      "generated_at": "2026-03-07T22:55:07.127088Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1951,7 +1911,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-03-07T03:36:59.245464Z",
+      "generated_at": "2026-03-07T22:55:06.996078Z",
       "scanned_files_count": 21,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -2319,7 +2279,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-03-06T03:43:58Z",
+        "last_modified_iso": "2026-03-07T03:37:01Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2358,7 +2318,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-03-06T03:43:58Z",
+        "last_modified_iso": "2026-03-07T03:37:01Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2387,7 +2347,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-03-06T03:43:58Z",
+        "last_modified_iso": "2026-03-07T03:37:01Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2509,7 +2469,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-07T03:36:59.663957Z",
+      "generated_at": "2026-03-07T22:55:07.567571Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
