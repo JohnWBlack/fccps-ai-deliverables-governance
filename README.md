@@ -62,10 +62,11 @@ python scripts/build_catalog.py
 python scripts/extract_refs.py
 python scripts/quality_checks.py
 python scripts/build_kpis.py
+python scripts/build_advisory_memory.py
 python scripts/build_dashboard_bundle.py
 
 # 4. Commit changes
-git add sor/ public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json CHANGELOG_PUBLIC.md
+git add sor/ public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/advisory_memory.json public/advisory_memory_index.json public/advisory_memory_audit.json CHANGELOG_PUBLIC.md
 git commit -m "Update deliverables: [description]"
 git push
 ```
@@ -86,7 +87,8 @@ GitHub Actions automatically publishes the snapshot when relevant files change.
   4. Extract reference index (`python scripts/extract_refs.py`)
   5. Build quality report (`python scripts/quality_checks.py`)
   6. Build KPIs (`python scripts/build_kpis.py`)
-  7. If public artifacts changed, commit and push them back to `main`
+  7. Build advisory memory artifacts (`python scripts/build_advisory_memory.py`)
+  8. If public artifacts changed, commit and push them back to `main`
 
 ## Public Data Products
 

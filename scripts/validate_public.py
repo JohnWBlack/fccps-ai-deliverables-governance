@@ -18,6 +18,9 @@ KPIS_PATH = PUBLIC_DIR / "kpis.json"
 KPI_EVIDENCE_PATH = PUBLIC_DIR / "kpi_evidence.json"
 EVIDENCE_COVERAGE_PATH = PUBLIC_DIR / "evidence_coverage.json"
 EVIDENCE_TEMPLATES_PATH = PUBLIC_DIR / "evidence_templates.json"
+ADVISORY_MEMORY_PATH = PUBLIC_DIR / "advisory_memory.json"
+ADVISORY_MEMORY_INDEX_PATH = PUBLIC_DIR / "advisory_memory_index.json"
+ADVISORY_MEMORY_AUDIT_PATH = PUBLIC_DIR / "advisory_memory_audit.json"
 SNAPSHOT_PATH = PUBLIC_DIR / "public_snapshot.json"
 PROJECT_INGEST_DIR = PUBLIC_DIR / "project_ingest"
 PROJECT_INGEST_ARTIFACTS_DIR = PROJECT_INGEST_DIR / "artifacts"
@@ -56,6 +59,18 @@ REQUIRED_DIAGNOSTICS_FIELDS = {
 REQUIRED_EVIDENCE_COVERAGE_FIELDS = {"version_key", "generated_at", "templates_version", "kpi"}
 REQUIRED_EVIDENCE_TEMPLATES_FIELDS = {"version_key", "generated_at", "templates"}
 REQUIRED_EVIDENCE_TEMPLATE_ENTRY_FIELDS = {"template_id", "title", "description", "body"}
+REQUIRED_ADVISORY_MEMORY_FIELDS = {"meta", "memory", "citations_catalog"}
+REQUIRED_ADVISORY_MEMORY_META_FIELDS = {
+    "generated_at",
+    "version_key",
+    "transform_version",
+    "advisory",
+    "authoritative",
+    "producer",
+    "policy",
+}
+REQUIRED_ADVISORY_MEMORY_INDEX_FIELDS = {"meta", "counts", "memory_ids", "citation_paths"}
+REQUIRED_ADVISORY_MEMORY_AUDIT_FIELDS = {"meta", "quality"}
 REQUIRED_INDEX_ENTRY_FIELDS = {
     "category",
     "source_path",
@@ -1080,6 +1095,99 @@ def validate_spreadsheet_output(path: Path, payload: Any) -> None:
             fail(f"{rel} sheets[{sheet_idx}].rows must be a list")
 
 
+def validate_advisory_memory(memory_payload: dict[str, Any], index_payload: dict[str, Any], audit_payload: dict[str, Any]) -> None:
+    if not isinstance(memory_payload, dict):
+        fail("advisory_memory.json must be an object")
+    if not REQUIRED_ADVISORY_MEMORY_FIELDS.issubset(set(memory_payload.keys())):
+        missing = sorted(REQUIRED_ADVISORY_MEMORY_FIELDS - set(memory_payload.keys()))
+        fail(f"advisory_memory.json missing fields: {missing}")
+
+    meta = memory_payload.get("meta")
+    if not isinstance(meta, dict):
+        fail("advisory_memory.json meta must be an object")
+    if not REQUIRED_ADVISORY_MEMORY_META_FIELDS.issubset(set(meta.keys())):
+        missing = sorted(REQUIRED_ADVISORY_MEMORY_META_FIELDS - set(meta.keys()))
+        fail(f"advisory_memory.json meta missing fields: {missing}")
+    if parse_iso_datetime(meta.get("generated_at")) is None:
+        fail("advisory_memory.json meta.generated_at must be an ISO datetime")
+    if meta.get("advisory") is not True:
+        fail("advisory_memory.json meta.advisory must be true")
+    if meta.get("authoritative") is not False:
+        fail("advisory_memory.json meta.authoritative must be false")
+
+    policy = meta.get("policy")
+    if not isinstance(policy, dict):
+        fail("advisory_memory.json meta.policy must be an object")
+    if policy.get("memory_outputs_advisory_only") is not True:
+        fail("advisory_memory.json meta.policy.memory_outputs_advisory_only must be true")
+
+    memory = memory_payload.get("memory")
+    if not isinstance(memory, dict):
+        fail("advisory_memory.json memory must be an object")
+    required_sections = {"episodic", "thematic", "open_loops", "action_recommendations"}
+    if not required_sections.issubset(set(memory.keys())):
+        missing = sorted(required_sections - set(memory.keys()))
+        fail(f"advisory_memory.json memory missing sections: {missing}")
+
+    for section in sorted(required_sections):
+        entries = memory.get(section)
+        if not isinstance(entries, list):
+            fail(f"advisory_memory.json memory.{section} must be a list")
+        for idx, entry in enumerate(entries):
+            if not isinstance(entry, dict):
+                fail(f"advisory_memory.json memory.{section}[{idx}] must be an object")
+            for field in ["id", "title", "summary", "confidence", "expires_at", "citations", "details"]:
+                if field not in entry:
+                    fail(f"advisory_memory.json memory.{section}[{idx}] missing field: {field}")
+            if not isinstance(entry.get("id"), str) or not str(entry.get("id") or "").strip():
+                fail(f"advisory_memory.json memory.{section}[{idx}].id must be non-empty string")
+            if not isinstance(entry.get("citations"), list) or not entry.get("citations"):
+                fail(f"advisory_memory.json memory.{section}[{idx}].citations must be non-empty list")
+            if parse_iso_datetime(entry.get("expires_at")) is None:
+                fail(f"advisory_memory.json memory.{section}[{idx}].expires_at must be ISO datetime")
+            for c_idx, citation in enumerate(entry.get("citations", [])):
+                if not isinstance(citation, dict):
+                    fail(f"advisory_memory.json memory.{section}[{idx}].citations[{c_idx}] must be object")
+                path = str(citation.get("path") or "")
+                if not path:
+                    fail(f"advisory_memory.json memory.{section}[{idx}].citations[{c_idx}] path is required")
+
+    catalog = memory_payload.get("citations_catalog")
+    if not isinstance(catalog, list):
+        fail("advisory_memory.json citations_catalog must be a list")
+    for idx, item in enumerate(catalog):
+        if not isinstance(item, str) or not item.strip():
+            fail(f"advisory_memory.json citations_catalog[{idx}] must be non-empty string")
+
+    if not isinstance(index_payload, dict):
+        fail("advisory_memory_index.json must be an object")
+    if not REQUIRED_ADVISORY_MEMORY_INDEX_FIELDS.issubset(set(index_payload.keys())):
+        missing = sorted(REQUIRED_ADVISORY_MEMORY_INDEX_FIELDS - set(index_payload.keys()))
+        fail(f"advisory_memory_index.json missing fields: {missing}")
+
+    counts = index_payload.get("counts")
+    if not isinstance(counts, dict):
+        fail("advisory_memory_index.json counts must be an object")
+    for key in ["episodic", "thematic", "open_loops", "action_recommendations"]:
+        value = counts.get(key)
+        if not isinstance(value, int) or value < 0:
+            fail(f"advisory_memory_index.json counts.{key} must be integer >= 0")
+
+    if not isinstance(audit_payload, dict):
+        fail("advisory_memory_audit.json must be an object")
+    if not REQUIRED_ADVISORY_MEMORY_AUDIT_FIELDS.issubset(set(audit_payload.keys())):
+        missing = sorted(REQUIRED_ADVISORY_MEMORY_AUDIT_FIELDS - set(audit_payload.keys()))
+        fail(f"advisory_memory_audit.json missing fields: {missing}")
+
+    quality = audit_payload.get("quality")
+    if not isinstance(quality, dict):
+        fail("advisory_memory_audit.json quality must be an object")
+    for key in ["total_memory_entries", "entries_with_citations", "citation_path_count"]:
+        value = quality.get(key)
+        if not isinstance(value, int) or value < 0:
+            fail(f"advisory_memory_audit.json quality.{key} must be integer >= 0")
+
+
 def validate_project_ingest() -> None:
     if not PROJECT_INGEST_DIR.exists():
         fail(f"Required folder not found: {PROJECT_INGEST_DIR}")
@@ -1177,9 +1285,12 @@ def main() -> None:
         or not SNAPSHOT_PATH.exists()
         or not EVIDENCE_COVERAGE_PATH.exists()
         or not EVIDENCE_TEMPLATES_PATH.exists()
+        or not ADVISORY_MEMORY_PATH.exists()
+        or not ADVISORY_MEMORY_INDEX_PATH.exists()
+        or not ADVISORY_MEMORY_AUDIT_PATH.exists()
     ):
         fail(
-            "Required artifacts not found: public_snapshot.json, kpis.json, kpi_evidence.json, evidence_coverage.json, and evidence_templates.json are required"
+            "Required artifacts not found: public_snapshot.json, kpis.json, kpi_evidence.json, evidence_coverage.json, evidence_templates.json, advisory_memory.json, advisory_memory_index.json, and advisory_memory_audit.json are required"
         )
 
     _ = load_json(SCHEMA_PATH)
@@ -1190,10 +1301,14 @@ def main() -> None:
     evidence_payload = load_json(KPI_EVIDENCE_PATH)
     evidence_coverage = load_json(EVIDENCE_COVERAGE_PATH)
     evidence_templates = load_json(EVIDENCE_TEMPLATES_PATH)
+    advisory_memory = load_json(ADVISORY_MEMORY_PATH)
+    advisory_memory_index = load_json(ADVISORY_MEMORY_INDEX_PATH)
+    advisory_memory_audit = load_json(ADVISORY_MEMORY_AUDIT_PATH)
     validate_glidepath_history(glidepath)
     validate_glidepath_diagnostics(diagnostics, glidepath, snapshot, kpis_payload, evidence_payload)
     validate_evidence_templates(evidence_templates)
     validate_evidence_coverage(evidence_coverage, evidence_templates, snapshot)
+    validate_advisory_memory(advisory_memory, advisory_memory_index, advisory_memory_audit)
     validate_project_ingest()
 
     print("✅ Public artifact validation passed")

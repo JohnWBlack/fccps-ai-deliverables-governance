@@ -24,6 +24,9 @@ EVIDENCE_TEMPLATES_PATH = PUBLIC_DIR / "evidence_templates.json"
 GLIDEPATH_HISTORY_PATH = PUBLIC_DIR / "glidepath_history.json"
 GLIDEPATH_DIAG_PATH = PUBLIC_DIR / "glidepath_diagnostics.json"
 AUTOPILOT_REPORT_PATH = PUBLIC_DIR / "autopilot_report.json"
+ADVISORY_MEMORY_PATH = PUBLIC_DIR / "advisory_memory.json"
+ADVISORY_MEMORY_INDEX_PATH = PUBLIC_DIR / "advisory_memory_index.json"
+ADVISORY_MEMORY_AUDIT_PATH = PUBLIC_DIR / "advisory_memory_audit.json"
 
 MEETING4_PATH = PUBLIC_DIR / "meeting4_readiness.json"
 DASHBOARD_BUNDLE_PATH = PUBLIC_DIR / "dashboard_bundle.json"
@@ -270,6 +273,9 @@ def main() -> None:
     glidepath_history = load_json(GLIDEPATH_HISTORY_PATH)
     glidepath_diagnostics = load_json(GLIDEPATH_DIAG_PATH)
     autopilot_report = load_json(AUTOPILOT_REPORT_PATH)
+    advisory_memory = load_json(ADVISORY_MEMORY_PATH)
+    advisory_memory_index = load_json(ADVISORY_MEMORY_INDEX_PATH)
+    advisory_memory_audit = load_json(ADVISORY_MEMORY_AUDIT_PATH)
 
     meeting4_readiness = build_meeting4_readiness(snapshot, kpis, ref_index)
     write_json(MEETING4_PATH, meeting4_readiness)
@@ -301,6 +307,12 @@ def main() -> None:
     }
     if autopilot_report:
         artifacts["autopilot_report.json"] = autopilot_report
+    if advisory_memory:
+        artifacts["advisory_memory.json"] = advisory_memory
+    if advisory_memory_index:
+        artifacts["advisory_memory_index.json"] = advisory_memory_index
+    if advisory_memory_audit:
+        artifacts["advisory_memory_audit.json"] = advisory_memory_audit
 
     full_export = build_full_export(artifacts)
     write_json(FULL_EXPORT_PATH, full_export)
@@ -319,6 +331,9 @@ def main() -> None:
             KPI_EVIDENCE_PATH,
             EVIDENCE_COVERAGE_PATH,
             EVIDENCE_TEMPLATES_PATH,
+            ADVISORY_MEMORY_PATH,
+            ADVISORY_MEMORY_INDEX_PATH,
+            ADVISORY_MEMORY_AUDIT_PATH,
         ],
     )
 
