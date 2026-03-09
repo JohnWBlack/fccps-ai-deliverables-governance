@@ -4,21 +4,11 @@ Decision Log
 
 FCCPS AI Policy Outline:
 
-Policy Outline
+# Policy Outline
 
-Guiding Principles and Motivation
+## Guiding Principles and Motivation
 
-Virtues we’re trying to capture:
-
-Informed by evidence
-
-IB-aligned
-
-Tailored to needs off different grade-bands
-
-Sufficiently flexible and evolving to adapt to changing technology
-
-Idealized Goals for Regulating GenAI in FC Schools:
+### Idealized Goals for Regulating GenAI in FC Schools:
 
 Articulate general thinking on how allowing GenAI use supports:
 

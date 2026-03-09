@@ -38,6 +38,9 @@ def main() -> None:
     for path in tracked_files():
         try:
             text = path.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            # Ingest rebuild may remove stale tracked artifacts during the same run.
+            continue
         except UnicodeDecodeError:
             continue
 

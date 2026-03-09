@@ -191,10 +191,10 @@
     },
     {
       "category_guess": "spreadsheet",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".xlsx",
       "mtime_utc": "2026-02-28T01:16:54Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 478247,
       "source_rel_path": "03 - Values & Principles/FCCPS_AI_Survey_Analysis_Workbook_results-imported.xlsx"
     },
@@ -215,6 +215,15 @@
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 385104,
       "source_rel_path": "03 - Values & Principles/FCCPS_AI_Values_and_Principles_Guidance_Packet.pdf"
+    },
+    {
+      "category_guess": "other",
+      "decision": "skipped",
+      "ext": ".pptx",
+      "mtime_utc": "2026-03-02T21:57:59Z",
+      "reason_if_skipped": "skipped_unsupported:pptx_not_ingested",
+      "size_bytes": 73140,
+      "source_rel_path": "03 - Values & Principles/Meeting4_Decision_Packet_Part2_AllZones.pptx"
     },
     {
       "category_guess": "spreadsheet",
@@ -238,19 +247,55 @@
       "category_guess": "spreadsheet",
       "decision": "ingested",
       "ext": ".xlsx",
-      "mtime_utc": "2026-03-02T16:00:24.209548Z",
+      "mtime_utc": "2026-03-03T03:04:22Z",
       "reason_if_skipped": "",
       "size_bytes": 16596,
       "source_rel_path": "03 - Values & Principles/Values & Principles Survey Part 2 Results v.20260302-1100.xlsx"
     },
     {
       "category_guess": "data",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".json",
       "mtime_utc": "2026-02-28T01:21:05.676208Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 132045,
       "source_rel_path": "03 - Values & Principles/Values_Principles_Survey_Part1_Results_v20260227-1035.json"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-03T02:11:55Z",
+      "reason_if_skipped": "",
+      "size_bytes": 37729,
+      "source_rel_path": "03 - Values & Principles/vp_Part-1_Telemetry.docx"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-03-03T02:16:40.014233Z",
+      "reason_if_skipped": "",
+      "size_bytes": 7781,
+      "source_rel_path": "03 - Values & Principles/vp_Part-1_Telemetry.md"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-03T02:29:36Z",
+      "reason_if_skipped": "",
+      "size_bytes": 33089,
+      "source_rel_path": "03 - Values & Principles/vp_Part-2_Telemetry.docx"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-03-03T02:29:55.926544Z",
+      "reason_if_skipped": "",
+      "size_bytes": 6778,
+      "source_rel_path": "03 - Values & Principles/vp_Part-2_Telemetry.md"
     },
     {
       "category_guess": "data",
@@ -371,19 +416,19 @@
     },
     {
       "category_guess": "notes",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".md",
       "mtime_utc": "2026-01-24T01:53:45.211037Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 94056,
       "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee Pre-Meeting and Inauguration Meeting.md"
     },
     {
       "category_guess": "document",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".docx",
       "mtime_utc": "2026-01-24T01:50:24Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 93792,
       "source_rel_path": "Meetings/01 - Meeting 23-JAN-26/20260123 FCCPS AI Advisory Committee_otter_ai.docx"
     },
@@ -497,19 +542,19 @@
     },
     {
       "category_guess": "document",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".docx",
       "mtime_utc": "2026-02-06T21:14:51Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 77765,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.docx"
     },
     {
       "category_guess": "notes",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".md",
       "mtime_utc": "2026-02-06T21:15:17.027731Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 63720,
       "source_rel_path": "Meetings/02 - Meeting 06-FEB-26/FCCPS AI Advisory Committee Meeting - Shared Baseline_otter_ai.md"
     },
@@ -533,19 +578,19 @@
     },
     {
       "category_guess": "document",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".docx",
       "mtime_utc": "2026-02-20T22:16:47Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 74568,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.docx"
     },
     {
       "category_guess": "notes",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".md",
       "mtime_utc": "2026-02-20T22:17:15.460479Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 63379,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/20260220_FCCPS-AI-Advisory-Committee-Meeting-3_Meeting-Transcript_otter_ai.md"
     },
@@ -665,6 +710,24 @@
       "reason_if_skipped": "skipped_unsupported:pdf_not_ingested",
       "size_bytes": 42902,
       "source_rel_path": "Meetings/03 - Meeting 20-FEB-26/Shared_Baseline_OnePager_v0.1a.pdf"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-06T01:45:43Z",
+      "reason_if_skipped": "",
+      "size_bytes": 904837,
+      "source_rel_path": "Meetings/04 - Meeting 06-MAR-26/202602306_FCCPS_AI_Advisory_Committee_Mtg-4_Agenda.docx"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-06T12:05:12Z",
+      "reason_if_skipped": "",
+      "size_bytes": 35650,
+      "source_rel_path": "Meetings/04 - Meeting 06-MAR-26/20260306_Meeting-4_Run-of-Show.docx"
     },
     {
       "category_guess": "document",
@@ -902,19 +965,19 @@
     },
     {
       "category_guess": "notes",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".md",
       "mtime_utc": "2026-01-23T03:54:26.839587Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 64500,
       "source_rel_path": "Members' Corners/John Black/Plans/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md"
     },
     {
       "category_guess": "notes",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".md",
       "mtime_utc": "2026-01-23T03:54:26.839587Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 64500,
       "source_rel_path": "Members' Corners/John Black/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.md"
     },
@@ -929,10 +992,10 @@
     },
     {
       "category_guess": "document",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".docx",
       "mtime_utc": "2026-01-22T22:58:26Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 70836,
       "source_rel_path": "Pre-Read Resources/A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx"
     },
@@ -965,10 +1028,10 @@
     },
     {
       "category_guess": "document",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".docx",
       "mtime_utc": "2026-01-22T22:58:25.449680Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 70836,
       "source_rel_path": "Pre-Read Resources/Webcast- A new direction for AI & students Findings from the Brookings Global Task Force on AI and Education_otter_ai.docx"
     },
@@ -982,11 +1045,56 @@
       "source_rel_path": "README.md"
     },
     {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-07T15:10:32Z",
+      "reason_if_skipped": "",
+      "size_bytes": 1923980,
+      "source_rel_path": "workstreams/ain/D-AIN-1_Academic Integrity and Attribution Document.docx"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-07T16:50:36Z",
+      "reason_if_skipped": "",
+      "size_bytes": 1924315,
+      "source_rel_path": "workstreams/ain/D-AIN-1_Academic-Integrity-and-Attribution-Framework.docx"
+    },
+    {
       "category_guess": "notes",
-      "decision": "skipped",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-03-07T19:57:54.069042Z",
+      "reason_if_skipped": "",
+      "size_bytes": 30896,
+      "source_rel_path": "workstreams/ain/D-AIN-1_Integrity-and-Attribution-Framework_restructured_v2-original-tables.md"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-06T10:40:54Z",
+      "reason_if_skipped": "",
+      "size_bytes": 3750808,
+      "source_rel_path": "workstreams/cci/D-CCI-1_Community-Engagement-Plan_AI-in-FCCPS.docx"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-03T22:13:37.401839Z",
+      "reason_if_skipped": "",
+      "size_bytes": 42648,
+      "source_rel_path": "workstreams/cpx/D-CPX-1_Scenarios.docx"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
       "ext": ".md",
       "mtime_utc": "2026-02-14T20:03:07.822307Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 32090,
       "source_rel_path": "workstreams/dps/20250214_FCCPS-AI_Advisory-Committee-WS-DPS_(Jillian_Burke)_otter_ai.md"
     },
@@ -1001,12 +1109,30 @@
     },
     {
       "category_guess": "document",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".docx",
       "mtime_utc": "2026-02-14T20:01:49Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 58871,
       "source_rel_path": "workstreams/dps/AI Policy Development Meeting_otter_ai.docx"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-03-03T13:45:09.135214Z",
+      "reason_if_skipped": "",
+      "size_bytes": 7120,
+      "source_rel_path": "workstreams/dps/D-DPS-1_draft-1.md"
+    },
+    {
+      "category_guess": "notes",
+      "decision": "ingested",
+      "ext": ".md",
+      "mtime_utc": "2026-03-03T13:42:35.949200Z",
+      "reason_if_skipped": "",
+      "size_bytes": 7125,
+      "source_rel_path": "workstreams/dps/D-DPS-1_proposed-revised.md"
     },
     {
       "category_guess": "document",
@@ -1066,26 +1192,44 @@
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-02-26T19:33:11Z",
+      "mtime_utc": "2026-03-01T15:40:16Z",
       "reason_if_skipped": "",
-      "size_bytes": 48197,
+      "size_bytes": 60471,
       "source_rel_path": "workstreams/eqa/20260226_WS-EQA.docx"
     },
     {
       "category_guess": "document",
       "decision": "ingested",
       "ext": ".docx",
-      "mtime_utc": "2026-03-01T20:10:15.002214Z",
+      "mtime_utc": "2026-03-06T03:34:59.754636Z",
       "reason_if_skipped": "",
-      "size_bytes": 25370,
-      "source_rel_path": "workstreams/pol/PolicyOutline_v0.docx"
+      "size_bytes": 17813,
+      "source_rel_path": "workstreams/eqa/D-EQA-1_Equity-Impact-Checklist-v1.0.docx"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-04T22:45:20Z",
+      "reason_if_skipped": "",
+      "size_bytes": 31704,
+      "source_rel_path": "workstreams/pol/D-POL-1_PolicyOutline_v0.docx"
+    },
+    {
+      "category_guess": "document",
+      "decision": "ingested",
+      "ext": ".docx",
+      "mtime_utc": "2026-03-05T23:40:19Z",
+      "reason_if_skipped": "",
+      "size_bytes": 27740,
+      "source_rel_path": "workstreams/pol/PresentationMarch6.docx"
     },
     {
       "category_guess": "text",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".txt",
       "mtime_utc": "2026-03-01T03:53:32.059727Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 16773,
       "source_rel_path": "workstreams/rsb/Re Research  Shared Baseline (WS-RSB) guidance and deliverable for 20 Feb.txt"
     },
@@ -1100,14 +1244,14 @@
     },
     {
       "category_guess": "notes",
-      "decision": "skipped",
+      "decision": "ingested",
       "ext": ".md",
       "mtime_utc": "2026-02-20T12:05:00.390745Z",
-      "reason_if_skipped": "skipped_pii_findings",
+      "reason_if_skipped": "",
       "size_bytes": 43126,
       "source_rel_path": "workstreams/rsb/Shared Baseline v01.md"
     }
   ],
-  "generated_at": "2026-03-02T20:29:45.378014Z",
+  "generated_at": "2026-03-08T20:36:03.502832Z",
   "project_files_root": "C:/Users/JohnBlack/OneDrive - OFFSET3/FCCPS AI Committee/project_files"
 }
