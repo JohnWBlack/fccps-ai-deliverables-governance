@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-03-09T03:45:51.637179Z",
-    "snapshot_version_key": "589a2b1577a3d4f0a47c39a62d2398e79ab32228"
+    "generated_at": "2026-03-10T03:43:29.161614Z",
+    "snapshot_version_key": "37cfeeff01e1fdf4752c010abd14dbf97d9c658f"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-03-09T03:45:49.537703Z",
+      "generated_at": "2026-03-10T03:43:27.260177Z",
       "source_version": "1.1.0",
-      "version_key": "589a2b1577a3d4f0a47c39a62d2398e79ab32228"
+      "version_key": "37cfeeff01e1fdf4752c010abd14dbf97d9c658f"
     },
     "metadata": {
-      "generated_at": "2026-03-09T03:45:49.537703Z",
+      "generated_at": "2026-03-10T03:43:27.260177Z",
       "source_version": "1.1.0",
-      "version_key": "589a2b1577a3d4f0a47c39a62d2398e79ab32228",
+      "version_key": "37cfeeff01e1fdf4752c010abd14dbf97d9c658f",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -844,7 +844,7 @@
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 17,
+          "max_days_overdue": 18,
           "overdue_count": 7
         },
         "evidence": [
@@ -1265,7 +1265,7 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates.",
         "details": {
-          "oldest_age_days": 14,
+          "oldest_age_days": 15,
           "sample_count": 22
         },
         "evidence": [],
@@ -1274,8 +1274,8 @@
         "rules": [
           "If no foundation docs updated in >14 days => yellow; >30 days => red."
         ],
-        "score": 95,
-        "status": "green"
+        "score": 70,
+        "status": "yellow"
       },
       {
         "category": "publicability",
@@ -1351,16 +1351,16 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-03-09T03:45:51.497079Z",
+      "generated_at": "2026-03-10T03:43:29.011951Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
     "summary": {
       "kpi_counts": {
         "gray": 1,
-        "green": 9,
+        "green": 8,
         "red": 8,
-        "yellow": 1
+        "yellow": 2
       },
       "overall_status": "red"
     },
@@ -1395,7 +1395,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-03-09T03:45:51.497079Z",
+    "generated_at": "2026-03-10T03:43:29.011951Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1858,7 +1858,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "5f17cbe95923"
+    "version_key": "25ac4ed7d4dc"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1892,7 +1892,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-03-09T03:45:51.294358Z",
+      "generated_at": "2026-03-10T03:43:28.808416Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1935,7 +1935,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-03-09T03:45:51.151869Z",
+      "generated_at": "2026-03-10T03:43:28.666258Z",
       "scanned_files_count": 21,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -2493,7 +2493,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-09T03:45:51.636626Z",
+      "generated_at": "2026-03-10T03:43:29.161049Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
