@@ -72,7 +72,7 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 33,
+        "max_days_overdue": 34,
         "overdue_count": 8
       },
       "evidence": [
@@ -497,7 +497,7 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates.",
       "details": {
-        "oldest_age_days": 30,
+        "oldest_age_days": 31,
         "sample_count": 22
       },
       "evidence": [],
@@ -506,8 +506,8 @@
       "rules": [
         "If no foundation docs updated in >14 days => yellow; >30 days => red."
       ],
-      "score": 70,
-      "status": "yellow"
+      "score": 40,
+      "status": "red"
     },
     {
       "category": "publicability",
@@ -583,7 +583,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-03-25T03:47:15.566682Z",
+    "generated_at": "2026-03-26T03:55:23.929641Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
@@ -591,8 +591,8 @@
     "kpi_counts": {
       "gray": 1,
       "green": 8,
-      "red": 8,
-      "yellow": 2
+      "red": 9,
+      "yellow": 1
     },
     "overall_status": "red"
   },

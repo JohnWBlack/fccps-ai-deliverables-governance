@@ -2,22 +2,22 @@
   "balance_required_delta": {
     "axis": "what",
     "current": 4.49,
-    "delta": 3.76,
-    "target_midpoint": 8.25
+    "delta": 2.26,
+    "target_midpoint": 6.75
   },
   "balance_target_gate": {
     "corridor": {
-      "how_max": 9.0,
-      "how_min": 7.5,
-      "what_max": 9.0,
-      "what_min": 7.5
+      "how_max": 7.5,
+      "how_min": 6.0,
+      "what_max": 7.5,
+      "what_min": 6.0
     },
-    "id": "m7",
+    "id": "m6",
     "lagging_axis": "what",
     "leading_axis": "how",
     "midpoint": {
-      "how": 8.25,
-      "what": 8.25
+      "how": 6.75,
+      "what": 6.75
     }
   },
   "deliverables_due_next_gate": [
@@ -82,7 +82,7 @@
       "workstream": "WS-POL"
     }
   ],
-  "generated_at": "2026-03-25T03:47:15.840885Z",
+  "generated_at": "2026-03-26T03:55:24.183322Z",
   "how_drivers_top": [
     {
       "evidence_count": 0,
@@ -141,7 +141,7 @@
       "evidence_count": 0,
       "evidence_paths": [],
       "kpi_id": "KPI-FRESH-03",
-      "score": 70.0,
+      "score": 40.0,
       "weight": 1.0
     },
     {
@@ -208,10 +208,10 @@
   "now": {
     "corridor_matches": [
       "WHAT~M4",
-      "HOW~M7"
+      "HOW~M6"
     ],
-    "how": 7.62,
-    "how_corridor_id": "m7",
+    "how": 7.35,
+    "how_corridor_id": "m6",
     "what": 4.49,
     "what_corridor_id": "m4"
   },
@@ -219,7 +219,7 @@
     "axes_out": [
       "how"
     ],
-    "how_out": 2.12,
+    "how_out": 1.85,
     "what_out": 0.0
   },
   "project_ingest": {
@@ -267,7 +267,7 @@
       }
     ]
   },
-  "version_key": "ccad58cee4b5fa5cc5fa0989e11903eee3baae1e",
+  "version_key": "41cd0f9d900f6beee81c338bb04948883a6e7a9f",
   "what_blockers_top": [
     {
       "evidence_count": 8,
