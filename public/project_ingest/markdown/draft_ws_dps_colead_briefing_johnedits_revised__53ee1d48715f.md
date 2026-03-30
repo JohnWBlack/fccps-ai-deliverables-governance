@@ -12,7 +12,7 @@ February 2026 — DRAFT v0.1 for Co-Lead Review
 
 # Purpose of This Document
 
-This package includes draft versions of all three WS-DPS deliverables required for the March 6 convergence gate, along with the readiness checklist. It draws on frameworks from my doctoral capstone (AIEIP), adapted for the FCCPS context. Everything here is a starting point for our  discussion — I want your input on structure, scope, and FCCPS-specific adjustments before we finalize.
+This package includes draft versions of all three WS-DPS deliverables required for the March 6 convergence gate, along with the readiness checklist. It draws on frameworks from my doctoral capstone (AIEIP), adapted for the FCCPS context. Everything here is a starting point for our colead discussion — I want your input on structure, scope, and FCCPS-specific adjustments before we finalize.
 
 Deliverable 1: AI Tool / Data Risk Categories
 
@@ -21,6 +21,14 @@ Requirement: "Tool/data risk categories (plain language) + minimum requirements 
 ## Risk Tier Framework
 
 Every AI tool used in FCCPS classrooms or operations would be classified into one of three tiers based on how it handles student data. Each tier triggers a different level of review and approval.
+
+### Escalation Rules (applies to all tiers):
+
+Integration / identity linkage escalator: Any tool that requires a student account or connects to FCCPS identity systems (SSO) or core platforms (SIS/LMS) is treated as Tier 3 for review, even if the vendor claims de-identification.
+
+Consequential-use escalator: Any tool used to inform placement, grading, intervention, discipline, or SPED decisions is treated as Tier 3 for review (human-in-the-loop required).
+
+Student artifacts caution: Student work artifacts (free-text writing, images, audio/video) can be identifying even without names. Tools receiving student artifacts should not be classified as Tier 1 unless artifacts are never transmitted to the vendor.
 
 ## Deliverable 2: Procurement / Governance Decision Checklist
 
@@ -68,9 +76,9 @@ My proposal: I continue drafting the checklist and risk tiers (building from my 
 
 Can we establish a weekly async rhythm?
 
-1) Review cadence: Are there certain days that work best for you to review or collaborate
+1) Review cadence: Are there certain days that work best for you to review or collaborate? Please let me know your preferred days.
 
-Are there specific sections you’d like to own or contribute to directly?
+3. Are there specific sections you’d like to own or contribute to directly?
 
 # Source: AIEIP Framework
 
@@ -84,26 +92,26 @@ FERPA, IDEA, and Section 504 compliance protocols — translated into actionable
 
 AI Bias Audit methodology — routine assessment processes for identifying disparities in AI-driven decisions
 
-| TIER 1 — LOW RISK: No Student Data What this means: The tool does not collect, store, or process student-identifiable information not  to the vendor.  Examples: AI-powered lesson plan generators used only by teachers; AI image generators for creating classroom materials; grammar/style checkers used on teacher-authored content. Minimum Requirements: no student  entered Tool is documented in department/school AI tool inventory Basic review by department lead or instructional coach  Approval: Department/building-level approval. No DPA required. |
+| TIER 1 — LOW RISK: No Student Data What this means: The tool does not collect, store, or process student-identifiable information, and FCCPS does not transmit student-generated artifacts (free-text writing, images, audio/video) to the vendor. Typical use is staff-only, or student-facing use that does not require accounts/logins and does not send student content to the vendor. Examples: AI-powered lesson plan generators used only by teachers; AI image generators for creating classroom materials; grammar/style checkers used on teacher-authored content. Minimum Requirements: Staff completes Tier 1 affirmation (no student identifiers or student artifacts entered) Tool is documented in department/school AI tool inventoryBasic review by department lead or instructional coach (purpose, settings, classroom-use constraints)Approval: Department/building-level approval. No DPA required. |
 | --- |
 
-| TIER 2 — MODERATE RISK: Anonymized or Aggregated Data What this means: The tool processes student work or interaction data in  or aggregated form.  individual  be identified from the data the vendor receives Examples: Classroom response/polling tools with anonymous mode; AI-assisted formative assessment tools using de-identified data; writing feedback tools where student names are stripped Minimum Requirements: Vendor confirms /aggregation methodology in writing  Data Processing Agreement (DPA) reviewed and signed  Data retention documented (vendor must specify how long data is held Annual review of vendor compliance FERPA compliance verification Approval: District-level review (IT + curriculum). DPA required. |
+| TIER 2 — MODERATE RISK: De-Identified (Anonymized) or Aggregated Data What this means: The tool processes student work or interaction data in de-identified or aggregated form. FCCPS must be able to reasonably conclude that individual students cannot be identified from the data the vendor receives (including through student work artifacts). Examples: Classroom response/polling tools with anonymous mode; AI-assisted formative assessment tools using de-identified data; writing feedback tools where student names are stripped AND artifacts are handled under an approved de-identification approach. Minimum Requirements:Vendor confirms de-identification/aggregation methodology in writing and contractually prohibits re-identificationData Processing Agreement (DPA) reviewed and signed (including prohibition on advertising and AI model-training use of student data)Data retention, deletion, and change-notice terms documented (vendor must specify how long data is held and notify FCCPS of material changes)Annual review of vendor complianceFERPA compliance verification Approval: District-level review (IT + curriculum). DPA required. |
 | --- |
 
-| TIER 3 — HIGH RISK: Identifiable Student Data  What this means: The tool collects, stores, or processes personally identifiable student information (PII This includes  where a student logs in with a school account,  sensitive records Examples: Adaptive learning platforms AI tutoring systems with student accounts; any tool integrated with the SIS or LMS; AI tools used in IEP/504 planning or progress monitoring. Minimum Requirements: Signed DPA with explicit data handling, retention, deletion FERPA, COPPA (if applicable), and Virginia student data privacy law For tools touching IEP/504 data: IDEA compliance review + explicit parental/guardian consent Vendor security assessment (encryption, access controls, breach notification procedures bias assessment for  making recommendations about students  Human-in-the-loop requirement for any consequential decisions (placement, grading, intervention Data deletion confirmation process when tool is discontinued Semi-annual compliance audit  Approval: District-level review (IT + curriculum + administration + legal). Full DPA + security review required. Pilot period recommended before broad deployment. |
+| TIER 3 — HIGH RISK: Identifiable Student Data (including identity-linked systems)What this means: The tool collects, stores, or processes personally identifiable student information (PII), or can link data to a specific student. This includes tools where a student logs in with a school account, tools integrated with SIS/LMS/SSO, and tools that handle sensitive records.  Examples: Adaptive learning platforms; AI tutoring systems with student accounts; any tool integrated with the SIS or LMS; AI tools used in IEP/504 planning or progress monitoring. Minimum Requirements:Signed DPA with explicit data handling, retention, deletion, subprocessors, and prohibition on AI model-training use of student data (unless expressly authorized) Compliance verified for FERPA, IDEA/Section 504/ADA (as applicable), COPPA (if applicable), and Virginia student data privacy law For tools touching IEP/504 data: IDEA/504 compliance review + explicit parental/guardian consent, as requiredVendor security assessment (encryption, access controls, breach notification procedures, incident response) Right-sized impact/bias assessment for tools making recommendations about students (with disability-focused revie
+
+w when applicable)Human-in-the-loop requirement for any consequential decisions (placement, grading, intervention, discipline)Data deletion confirmation process when tool is discontinuedSemi-annual compliance review/audit for Tier 3 tools (focus on data practices + terms changes + incidents) Approval: District-level review (IT + curriculum + administration + legal). Full DPA + security review required. Pilot period recommended before broad deployment. |
 | --- |
 
-| Special : Students with Disabilities  AI tools used with students receiving SPED services require heightened scrutiny regardless of tier. The following data categories are especially sensitive and trigger additional requirements: IEP/504 plan data: Disability classifications, accommodations, modifications, and progress monitoring data.  technology usage patterns: Data from assistive tech tools may reveal disability-related information even when not explicitly labeled as such. Behavioral databehavior systems may  consequences.  Additional requirement: Any Tier 2 or Tier 3 tool used with SPED populations must include an accessibility review (assistive tech compatibility, UDL alignment) and focused outcomes. |
+| Special Considerations: Students with Disabilities and Other Sensitive ContextsAI tools used with students receiving SPED services require heightened scrutiny regardless of tier. In addition to FERPA, FCCPS must ensure AI practices align with IDEA, Section 504, and ADA expectations (as applicable). The following data categories are especially sensitive and trigger additional requirements: IEP/504 plan data: Disability classifications, accommodations, modifications, and progress monitoring data. Assistive technology usage patterns: Data from assistive tech tools may reveal disability-related information even when not explicitly labeled as such.  Behavioral and counseling-related data: Monitoring/behavior systems may amplify bias and drive high-stakes consequences. Student artifacts: Work samples can reveal disability-related information and can re-identify students. Additional requirement: Any Tier 2 or Tier 3 tool used with SPED populations must include an accessibility review (assistive tech compatibility, UDL alignment) and a disability-focused impact/bias review of outcomes. |
 | --- |
 
 | Question | If YES → |
 | --- | --- |
-|  |  |
-|  |  |
-| Does the tool collect, store, or process any  information (names, IDs, login data, work samples linked to students)? | Tier 3 — proceed to full review |
-| Does the tool process student work or interaction data in anonymized or aggregated form? | Tier 2 — proceed to standard review |
-|  |  |
-|  |  |
+| Does the tool collect, store, or process any student-identifiable information (names, IDs, login data, work samples/student artifacts linked to students)? | Tier 3 — proceed to full review |
+| Does the tool process student work or interaction data in de-identified (anonymized) or aggregated form? | Tier 2 — proceed to standard review |
+| Does the tool have no contact with student data or student-generated artifacts at all? | Tier 1 — proceed to basic review |
+| Will the tool be used with students receiving SPED services (IEP/504) or other sensitive contexts (e.g., counseling/health data)? | Add SPED/sensitive review layer (any tier) |
 |  |  |
 |  |  |
 
@@ -120,14 +128,14 @@ AI Bias Audit methodology — routine assessment processes for identifying dispa
 | Algorithmic bias assessment completed for any tool making recommendations about students | -- | -- | ✔ |
 | Human-in-the-loop confirmed for consequential decisions (placement, grading, intervention) | -- | -- | ✔ |
 | COPPA compliance verified (if tool is used by students under 13) | -- | -- | ✔ |
-|  | -- | -- | ✔ |
-| Pilot period completed with documented outcomes before broad deployment | -- | -- | ✔ |
-| SPED ADD-ON: IDEA compliance review + parental consent for IEP/504 data | If SPED
+| Vendor terms prohibit use of student data for advertising or AI model training (unless expressly authorized) | -- | -- | ✔ |
+| Pilot period completed with documented outcomes before broad dep
 
-| If SPED | If SPED |
+loyment | -- | -- | ✔ |
+| SPED ADD-ON: IDEA compliance review + parental consent for IEP/504 data | If SPED | If SPED | If SPED |
 | SPED ADD-ON: Accessibility review (assistive tech compatibility + UDL alignment) | If SPED | If SPED | If SPED |
-|  |  |  |  |
-|  |  |  |  |
+| Vendor provides notice of material changes to data practices/terms and identifies subprocessors | -- | ✔ | ✔ |
+| Tier 1 affirmation completed (settings + classroom-use constraints documented) | ✔ | -- | -- |
 
 | RISK 1  Severity: HIGH | Unvetted AI Tools Processing Student Data Without Governance Without a structured approval process, teachers and staff may adopt AI tools that collect student PII without signed DPAs, creating FERPA violations and data exposure risk. Research shows no standardized regulations currently address AI-specific risks in K-12 education (DOE, 2023; Roschelle et al., 2024). |
 | --- | --- |
@@ -164,10 +172,10 @@ AI Bias Audit methodology — routine assessment processes for identifying dispa
 | 1 | Approval speed vs. thoroughness | Balance teacher agility with compliance workload. | Balance teacher agility with compliance workload. |
 | 2 | Approved list vs. criteria-based evaluation | Impacts curation effort and clarity for staff. | Impacts curation effort and clarity for staff. |
 | 3 | Compliance monitoring ownership | A) IT owns monitoring (technical focus) B) Curriculum & Instruction owns monitoring (instructional focus) C) Shared responsibility with clear RACI + defined cadence | Resource implications are significant. |
-|  | District-provided tools vs. BYO (bring-your-own) tools | A) District-approved tools only B) Allow BYO for Tier 1 with guardrails + inventory requirement C) BYO allowed only in teacher-mediated mode; student-facing tools must be district-approved | Enforcement vs. innovation tradeoff. |
-|  | Data minimization vs. personalization (instructional value) | A) Default to minimization; limit personalization features B) Allow Tier 3 personalization only with explicit educational rationale + pilot + monitoring C) Case-by-case with strict data elements list + sunset/review dates | Shapes tool capa
+| 4 | District-provided tools vs. BYO (bring-your-own) tools | A) District-approved tools only B) Allow BYO for Tier 1 with guardrails + inventory requirement C) BYO allowed only in teacher-mediated mode; student-facing tools must be district-approved | Enforcement vs. innovation tradeoff. |
+| 5 | Data minimization vs. personalization (instructional value) | A) Default to minimization; limit personalization features B) Allow Tier 3 personalization only with explicit educational rationale + pilot + monitoring C) Case-by-case with strict data elements list + sunset/review dates | Shapes tool ca
 
-bility and risk exposure. |
+pability and risk exposure. |
 
 | What We Need | From Whom | Status |
 | --- | --- | --- |

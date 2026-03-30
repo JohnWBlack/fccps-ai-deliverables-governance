@@ -18,12 +18,12 @@
   ],
   "counts": {
     "auto_apply_candidates": 3,
-    "candidates": 40,
-    "ingest_converted": 40,
+    "candidates": 90,
+    "ingest_converted": 90,
     "ingest_promoted": 0,
-    "recommended_actions": 13
+    "recommended_actions": 14
   },
-  "generated_at": "2026-03-08T20:36:28.768545Z",
+  "generated_at": "2026-03-30T03:30:19.909342Z",
   "governance": {
     "approval_policy": "Auto-apply may proceed for high-confidence, non-sensitive actions; always enforce validate_sor.py and validate_public.py before publish.",
     "auto_apply_sor_changes": true,
@@ -351,6 +351,86 @@
       "source_path": "workstreams/cci/D-CCI-1_Community-Engagement-Plan_AI-in-FCCPS.docx",
       "topics": [
         "communications"
+      ]
+    },
+    {
+      "candidate_matches": [
+        {
+          "components": {
+            "lexical": 0.016666666666666666,
+            "mode": 0.0,
+            "salience": 0.051000000000000004,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.45
+          },
+          "deliverable_id": "D-DPS-1",
+          "deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
+          "reasons": [
+            "same_workstream",
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.7077,
+          "status": "in_progress",
+          "workstream_id": "WS-DPS"
+        },
+        {
+          "components": {
+            "lexical": 0.06666666666666667,
+            "mode": 0.0,
+            "salience": 0.051000000000000004,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.0
+          },
+          "deliverable_id": "rec_outline_risk_register",
+          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "reasons": [
+            "topic_overlap",
+            "status_in_progress",
+            "lexical_overlap"
+          ],
+          "score": 0.3077,
+          "status": "in_progress",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "components": {
+            "lexical": 0.0,
+            "mode": 0.0,
+            "salience": 0.051000000000000004,
+            "status": 0.1,
+            "topic": 0.09,
+            "workstream": 0.0
+          },
+          "deliverable_id": "D-AIN-1",
+          "deliverable_title": "Attribution & Integrity Matrix v1",
+          "reasons": [
+            "topic_overlap",
+            "status_in_progress"
+          ],
+          "score": 0.241,
+          "status": "in_progress",
+          "workstream_id": "WS-AIN"
+        }
+      ],
+      "confidence": 0.7077,
+      "confidence_adjusted": 0.7077,
+      "confidence_penalty": 0.0,
+      "counterfactual_delta": 0.4,
+      "inferred_workstream_id": "WS-DPS",
+      "mode": "converted",
+      "recommended_action": "review_and_update_deliverable_evidence",
+      "recommended_deliverable_id": "D-DPS-1",
+      "recommended_deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
+      "recommended_workstream_id": "WS-DPS",
+      "risk_flags": [],
+      "salience": 0.51,
+      "source_path": "Meetings/05 - Meeting 20-MAR-26/FCCPS_AI_Advisory_Committee_Retrospective_First_Pass_Risk_Register.docx",
+      "topics": [
+        "risk"
       ]
     },
     {
@@ -1072,7 +1152,7 @@
       "ai_role": "Propose exploration candidates",
       "confidence": 1.0,
       "details": {
-        "converted_count": 40,
+        "converted_count": 90,
         "priority_policy": [
           "favor promoted artifacts",
           "favor in-progress deliverables",
@@ -1089,10 +1169,10 @@
       "ai_role": "Filter, preprocess, detect salience",
       "confidence": 0.95,
       "details": {
-        "candidate_count": 40,
+        "candidate_count": 90,
         "salience_bands": {
           "high": 0,
-          "low": 33,
+          "low": 83,
           "medium": 7
         }
       },
@@ -1118,8 +1198,8 @@
       "ai_role": "Produce grounded representations",
       "confidence": 0.84,
       "details": {
-        "with_inferred_workstream": 27,
-        "with_memory_links": 27
+        "with_inferred_workstream": 73,
+        "with_memory_links": 73
       },
       "human_role": "Interpret ambiguous cases",
       "stage": "Comprehension",
@@ -1130,8 +1210,8 @@
       "ai_role": "Execute inference steps",
       "confidence": 0.86,
       "details": {
-        "average_top_score": 0.5085,
-        "matched_candidate_count": 40
+        "average_top_score": 0.537,
+        "matched_candidate_count": 90
       },
       "human_role": "Define rules, constraints",
       "stage": "Basic Reasoning",
@@ -1143,11 +1223,11 @@
       "confidence": 0.88,
       "details": {
         "critical_flags": {
-          "ambiguous_alternative": 7,
+          "ambiguous_alternative": 52,
           "sensitive_source": 0,
           "workstream_conflict": 0
         },
-        "validated_actions": 27
+        "validated_actions": 73
       },
       "human_role": "Judge tradeoffs, ethical implications",
       "stage": "Critical Thinking",
@@ -1158,8 +1238,8 @@
       "ai_role": "Produce introspection logs",
       "confidence": 0.9,
       "details": {
-        "ambiguity_rate": 0.2593,
-        "low_confidence_actions": 12,
+        "ambiguity_rate": 0.7123,
+        "low_confidence_actions": 54,
         "missing_workstream_rate": 0.0,
         "unmapped_candidates": 0
       },
@@ -1175,7 +1255,7 @@
         "auto_apply_candidates": 3,
         "calibrated_threshold": 0.67,
         "recommended_review_mode": "guided_review",
-        "retained_actions": 13
+        "retained_actions": 14
       },
       "human_role": "Adjust strategy, set thresholds",
       "stage": "Metacognition",
@@ -1187,7 +1267,7 @@
       "confidence": 1.0,
       "details": {
         "auto_apply_enabled": true,
-        "recommended_actions": 13,
+        "recommended_actions": 14,
         "report_ready": true
       },
       "human_role": "Final approval, policy decisions",

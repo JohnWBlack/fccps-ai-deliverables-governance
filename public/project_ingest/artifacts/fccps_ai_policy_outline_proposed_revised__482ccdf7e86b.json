@@ -1,0 +1,1628 @@
+{
+  "artifact_id": "482ccdf7e86ba202076696df",
+  "associated_outputs": {
+    "md_path": "public/project_ingest/markdown/fccps_ai_policy_outline_proposed_revised__482ccdf7e86b.md"
+  },
+  "doc_type": "docx",
+  "extracted_at_utc": "2026-03-30T03:39:43.799916Z",
+  "file_mtime_utc": "2026-03-24T19:50:08.887290Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [],
+      "section_id": "sec_0001",
+      "text": "FCCPS AI Advisory Committee Report Outline"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0002",
+      "text": "Proposed Revised Outline"
+    },
+    {
+      "heading_path": [
+        "0. Preface",
+        "0.1 Purpose and Applicability"
+      ],
+      "section_id": "sec_0003",
+      "text": "- This policy establishes FCCPS guidance for the responsible use of artificial intelligence tools in educational and operational contexts."
+    },
+    {
+      "heading_path": [
+        "0. Preface",
+        "0.1 Purpose and Applicability"
+      ],
+      "section_id": "sec_0004",
+      "text": "- It applies to students, staff, contractors, and vendors where relevant to FCCPS functions."
+    },
+    {
+      "heading_path": [
+        "0. Preface",
+        "0.2 Relationship to Existing FCCPS Policy and Regulation"
+      ],
+      "section_id": "sec_0005",
+      "text": "- This policy should be interpreted alongside existing FCCPS policies and regulations."
+    },
+    {
+      "heading_path": [
+        "0. Preface",
+        "0.2 Relationship to Existing FCCPS Policy and Regulation"
+      ],
+      "section_id": "sec_0006",
+      "text": "- It is intended to extend and clarify those policies where AI changes risk, scale, ambiguity, or implementation burden."
+    },
+    {
+      "heading_path": [
+        "0. Preface",
+        "0.3 How to Read This Document"
+      ],
+      "section_id": "sec_0007",
+      "text": "- WS-POL provides the main policy shell."
+    },
+    {
+      "heading_path": [
+        "0. Preface",
+        "0.3 How to Read This Document"
+      ],
+      "section_id": "sec_0008",
+      "text": "- The other workstreams provide cross-cutting inputs, examples, guardrails, implementation considerations, and areas of agreement or disagreement."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Virtues we are trying to capture"
+      ],
+      "section_id": "sec_0009",
+      "text": "- Informed by evidence"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Virtues we are trying to capture"
+      ],
+      "section_id": "sec_0010",
+      "text": "- IB-aligned"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Virtues we are trying to capture"
+      ],
+      "section_id": "sec_0011",
+      "text": "- Tailored to different grade bands and developmental stages"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Virtues we are trying to capture"
+      ],
+      "section_id": "sec_0012",
+      "text": "- Sufficiently flexible and evolving to adapt to changing technology"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Virtues we are trying to capture"
+      ],
+      "section_id": "sec_0013",
+      "text": "- Human-centered in design and implementation"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Virtues we are trying to capture"
+      ],
+      "section_id": "sec_0014",
+      "text": "- Transparent to students, families, and staff"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Virtues we are trying to capture"
+      ],
+      "section_id": "sec_0015",
+      "text": "- Equity-aware from procurement through implementation"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Idealized goals for regulating GenAI in FCCPS"
+      ],
+      "section_id": "sec_0016",
+      "text": "- Articulate general thinking on how allowing GenAI use supports AI literacy and other learning objectives."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Idealized goals for regulating GenAI in FCCPS"
+      ],
+      "section_id": "sec_0017",
+      "text": "- Articulate general thinking on how restricting certain GenAI use protects AI literacy, learning, fairness, and student well-being."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Challenges this policy must address"
+      ],
+      "section_id": "sec_0018",
+      "text": "- Risks of AI adoption are already visible, while benefits are often context-dependent and uncertain."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Challenges this policy must address"
+      ],
+      "section_id": "sec_0019",
+      "text": "- The future development of AI tools is uncertain; capabilities and harms may both increase."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Challenges this policy must address"
+      ],
+      "section_id": "sec_0020",
+      "text": "- Policy must protect learning, fairness, trust, and student well-being under conditions of uncertainty."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Challenges this policy must address"
+      ],
+      "section_id": "sec_0021",
+      "text": "- Policy should avoid both unchecked adoption and impractical overreaction."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Decision 1"
+      ],
+      "section_id": "sec_0022",
+      "text": "- FCCPS sees a lesser and less immediate need to accelerate and promote GenAI adoption."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Decision 1"
+      ],
+      "section_id": "sec_0023",
+      "text": "- FCCPS sees a greater and more immediate need to protect learning, fairness, and student well-being by restricting certain GenAI applications where necessary."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Pragmatic constraints on restriction of GenAI applications"
+      ],
+      "section_id": "sec_0024",
+      "text": "- Limits on the ability to fully enforce GenAI restrictions when work is unproctored."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Pragmatic constraints on restriction of GenAI applications"
+      ],
+      "section_id": "sec_0025",
+      "text": "- Opportunities to move some summative assessments into proctored environments, balanced against practical constraints."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Pragmatic constraints on restriction of GenAI applications"
+      ],
+      "section_id": "sec_0026",
+      "text": "- Importance of preserving trust between students and teachers."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Pragmatic constraints on restriction of GenAI applications"
+      ],
+      "section_id": "sec_0027",
+      "text": "- Need to protect students from patently unfair outcomes, including false accusations of cheating and competing with peers who are in rampant noncompliance with AI restrictions."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "a. Guiding Principles and Motivation",
+        "Decision 2"
+      ],
+      "section_id": "sec_0028",
+      "text": "- FCCPS should steer between two extremes: unchecked adoption and impractical overrestriction."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "b. Scope and Triaging",
+        "Decision 3"
+      ],
+      "section_id": "sec_0029",
+      "text": "- Whether the policy should focus primarily on GenAI and related detectors or speak more broadly to AI-enabled systems used in FCCPS contexts."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "b. Scope and Triaging",
+        "Decision 4"
+      ],
+      "section_id": "sec_0030",
+      "text": "- Whether and how the policy should address non-academic AI risks, including mental health, harassment, manipulative interaction, and quasi-social dependence."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "b. Scope and Triaging",
+        "Relationship to existing FCCPS policy"
+      ],
+      "section_id": "sec_0031",
+      "text": "- Identify where existing policies already govern related conduct."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "b. Scope and Triaging",
+        "Relationship to existing FCCPS policy"
+      ],
+      "section_id": "sec_0032",
+      "text": "- Identify where AI changes scale, ambiguity, evidentiary conditions, or operational burden enough to require additional guidance."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "b. Scope and Triaging",
+        "Relationship to existing FCCPS policy"
+      ],
+      "section_id": "sec_0033",
+      "text": "- Recommend an appendix or crosswalk identifying existing policies that should be reviewed, clarified, or updated."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0034",
+      "text": "- AI"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0035",
+      "text": "- Generative AI"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0036",
+      "text": "- AI detector"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0037",
+      "text": "- Approved tool"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0038",
+      "text": "- High-stakes use"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0039",
+      "text": "- AI assistance"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0040",
+      "text": "- Disclosure / attribution"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0041",
+      "text": "- Human decision-maker"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "c. Definitions"
+      ],
+      "section_id": "sec_0042",
+      "text": "- Vendor / data processor / routine use / consent terms as needed"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Teacher use in planning and instruction"
+      ],
+      "section_id": "sec_0043",
+      "text": "- Permitted assistive uses"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Teacher use in planning and instruction"
+      ],
+      "section_id": "sec_0044",
+      "text": "- Conditions on classroom-facing use"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Teacher use in planning and instruction"
+      ],
+      "section_id": "sec_0045",
+      "text": "- Clear distinction between instructional support and replacement of teacher judgment"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Teacher use in feedback and evaluation"
+      ],
+      "section_id": "sec_0046",
+      "text": "- Decision 5: whether and how teachers may use GenAI in providing feedback and evaluating students"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Teacher use in feedback and evaluation"
+      ],
+      "section_id": "sec_0047",
+      "text": "- Distinction between assistive drafting and delegation of evaluative judgment"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Teacher use in feedback and evaluation"
+      ],
+      "section_id": "sec_0048",
+      "text": "- Requirement that educators remain responsible for final evaluative feedback and grading"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Use of AI detectors"
+      ],
+      "section_id": "sec_0049",
+      "text": "- Decision 6: whether AI detectors are prohibited, advisory only, or otherwise restricted"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Use of AI detectors"
+      ],
+      "section_id": "sec_0050",
+      "text": "- If permitted at all, detectors may not serve as sole evidence and must be subject to human review and due-process safeguards"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Use of GenAI in high-stakes adjudicatory or eligibility contexts"
+      ],
+      "section_id": "sec_0051",
+      "text": "- Decision 7: discipline, IEP/504, and other required determinations remain human-led"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Use of GenAI in high-stakes adjudicatory or eligibility contexts"
+      ],
+      "section_id": "sec_0052",
+      "text": "- AI may assist but not substitute for qualified personnel"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "d. Restrictions on Staff and Teacher Use of AI",
+        "Use of GenAI in high-stakes adjudicatory or eligibility contexts"
+      ],
+      "section_id": "sec_0053",
+      "text": "- Use in these contexts must be documented, supervised, and constrained"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "PreK–5"
+      ],
+      "section_id": "sec_0054",
+      "text": "- Decision 8: teach AI literacy while globally minimizing routine direct student AI use"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "PreK–5"
+      ],
+      "section_id": "sec_0055",
+      "text": "- Emphasize foundational cognitive, social, and developmental learning before routine reliance on AI"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "PreK–5"
+      ],
+      "section_id": "sec_0056",
+      "text": "- Restrict anthropomorphic or quasi-social framing of AI as buddy, coach, or human-like authority"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "PreK–5"
+      ],
+      "section_id": "sec_0057",
+      "text": "- Exercise caution with conversational role-play and historical-figure simulation that may blur the line between human and machine-generated interaction"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Grades 6–12"
+      ],
+      "section_id": "sec_0058",
+      "text": "- Decision 9: establish clearer consensus on use cases and posture by age, subject, and learning goal"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Grades 6–12"
+      ],
+      "section_id": "sec_0059",
+      "text": "- Permit progressively broader categories of use as age, task complexity, and student judgment increase"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Grades 6–12"
+      ],
+      "section_id": "sec_0060",
+      "text": "- Preserve clear expectations that students understand when they are interacting with AI rather than a human"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Categories of anticipated student use"
+      ],
+      "section_id": "sec_0061",
+      "text": "- Prohibited without administrative exception"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Categories of anticipated student use"
+      ],
+      "section_id": "sec_0062",
+      "text": "- Prohibited without teacher allowance"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Categories of anticipated student use"
+      ],
+      "section_id": "sec_0063",
+      "text": "- Allowed unless teacher prohibits"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Interaction and exposure boundaries"
+      ],
+      "section_id": "sec_0064",
+      "text": "- When AI may be used as a task-support tool"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Interaction and exposure boundaries"
+      ],
+      "section_id": "sec_0065",
+      "text": "- When conversational or role-simulating use requires restriction or approval"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Interaction and exposure boundaries"
+      ],
+      "section_id": "sec_0066",
+      "text": "- When teacher or administrator approval is required because of developmental, psychological, or instructional concerns"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Citation and Disclosure Expectations"
+      ],
+      "section_id": "sec_0067",
+      "text": "- Decision 10: whether chat logs, process logs, or comparable evidence are required when using GenAI on school assignments"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "e. Student Use",
+        "Citation and Disclosure Expectations"
+      ],
+      "section_id": "sec_0068",
+      "text": "- Disclosure expectations should define what counts as meaningful AI assistance, when disclosure is required, whether logs are required, and which implementation details belong in policy versus guidance"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "f. Students with Disabilities and Human Decision Safeguards"
+      ],
+      "section_id": "sec_0069",
+      "text": "- IEP/504 and related determinations remain human-led"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "f. Students with Disabilities and Human Decision Safeguards"
+      ],
+      "section_id": "sec_0070",
+      "text": "- AI may assist but not substitute for qualified personnel"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "f. Students with Disabilities and Human Decision Safeguards"
+      ],
+      "section_id": "sec_0071",
+      "text": "- Tools affecting protected groups require pre-adoption bias and accessibility review"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "f. Students with Disabilities and Human Decision Safeguards"
+      ],
+      "section_id": "sec_0072",
+      "text": "- Ongoing monitoring for disparate impact"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "f. Students with Disabilities and Human Decision Safeguards"
+      ],
+      "section_id": "sec_0073",
+      "text": "- Family notification and staff training where applicable"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "f. Students with Disabilities and Human Decision Safeguards"
+      ],
+      "section_id": "sec_0074",
+      "text": "- Accessibility and accommodation requirements must be considered in any student-facing AI use"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Student privacy and data protection"
+      ],
+      "section_id": "sec_0075",
+      "text": "- Data minimization"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Student privacy and data protection"
+      ],
+      "section_id": "sec_0076",
+      "text": "- Retention and deletion expectations"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Student privacy and data protection"
+      ],
+      "section_id": "sec_0077",
+      "text": "- Vendor DPA and related privacy requirements"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Student privacy and data protection"
+      ],
+      "section_id": "sec_0078",
+      "text": "- Notice and consent expectations"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Student privacy and data protection"
+      ],
+      "section_id": "sec_0079",
+      "text": "- Limits on use of student data beyond routine educational purposes"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Vendor and procurement governance"
+      ],
+      "section_id": "sec_0080",
+      "text": "- Tiered tool approval framework based on risk"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Vendor and procurement governance"
+      ],
+      "section_id": "sec_0081",
+      "text": "- Approval criteria for new AI tools"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Vendor and procurement governance"
+      ],
+      "section_id": "sec_0082",
+      "text": "- Governance for adopting, renewing, monitoring, or discontinuing tools"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Vendor and procurement governance"
+      ],
+      "section_id": "sec_0083",
+      "text": "- Vendor accountability and ongoing review"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "g. Protection of Student Privacy",
+        "Vendor and procurement governance"
+      ],
+      "section_id": "sec_0084",
+      "text": "- Relationship between privacy review and procurement decision-making"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Decision 11"
+      ],
+      "section_id": "sec_0085",
+      "text": "- How to scope commitments so that they are implementable"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Commitments to consider"
+      ],
+      "section_id": "sec_0086",
+      "text": "- Public notice"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Commitments to consider"
+      ],
+      "section_id": "sec_0087",
+      "text": "- Consideration of public comment"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Commitments to consider"
+      ],
+      "section_id": "sec_0088",
+      "text": "- Parental opt-out or consent where applicable"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Accountability mechanisms"
+      ],
+      "section_id": "sec_0089",
+      "text": "- Accountable owner(s) for governance and incident response"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Accountability mechanisms"
+      ],
+      "section_id": "sec_0090",
+      "text": "- Public-facing explanation of AI uses and safeguards at an appropriate level"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Accountability mechanisms"
+      ],
+      "section_id": "sec_0091",
+      "text": "- Public feedback channel"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "h. Public Accountability Relating to Use of AI by Students and Staff",
+        "Accountability mechanisms"
+      ],
+      "section_id": "sec_0092",
+      "text": "- Process for review when harms, complaints, or new risks emerge"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "i. Equity in Our Community"
+      ],
+      "section_id": "sec_0093",
+      "text": "- Equity and accessibility considerations apply across procurement, student use, implementation, and monitoring."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "i. Equity in Our Community"
+      ],
+      "section_id": "sec_0094",
+      "text": "- This section identifies key equity questions, but equity should not appear only here."
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "i. Equity in Our Community",
+        "Over-reliance and inequity"
+      ],
+      "section_id": "sec_0095",
+      "text": "- How can FCCPS prevent over-reliance on GenAI in a way that ameliorates existing inequities and avoids creating new inequities?"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "i. Equity in Our Community",
+        "Access and inequity"
+      ],
+      "section_id": "sec_0096",
+      "text": "- How can FCCPS structure access to GenAI tools in a way that ameliorates existing inequities and avoids creating new inequities?"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "i. Equity in Our Community",
+        "Monitoring"
+      ],
+      "section_id": "sec_0097",
+      "text": "- Identify algorithmic bias and disparate-impact risks where relevant"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "i. Equity in Our Community",
+        "Monitoring"
+      ],
+      "section_id": "sec_0098",
+      "text": "- Monitor whether implementation advantages some students, families, or schools over others"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "j. School Budgeting and Workload Implications"
+      ],
+      "section_id": "sec_0099",
+      "text": "- AI impacts on teacher workload"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "j. School Budgeting and Workload Implications"
+      ],
+      "section_id": "sec_0100",
+      "text": "- AI impacts on teacher staffing levels"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "j. School Budgeting and Workload Implications"
+      ],
+      "section_id": "sec_0101",
+      "text": "- Implementation burden on teachers and staff"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "j. School Budgeting and Workload Implications"
+      ],
+      "section_id": "sec_0102",
+      "text": "- Capacity requirements for training, support, review, and compliance"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Pilot and innovation pathway"
+      ],
+      "section_id": "sec_0103",
+      "text": "- When new AI uses should begin as bounded pilots"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Pilot and innovation pathway"
+      ],
+      "section_id": "sec_0104",
+      "text": "- How pilots are evaluated"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Pilot and innovation pathway"
+      ],
+      "section_id": "sec_0105",
+      "text": "- Criteria for expansion, pause, or termination"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Measuring effectiveness"
+      ],
+      "section_id": "sec_0106",
+      "text": "- Define anticipated benefits"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Measuring effectiveness"
+      ],
+      "section_id": "sec_0107",
+      "text": "- Establish baseline measures"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Measuring effectiveness"
+      ],
+      "section_id": "sec_0108",
+      "text": "- Measure impact over time"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Measuring effectiveness"
+      ],
+      "section_id": "sec_0109",
+      "text": "- Monitor for unintended effects"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Incident response"
+      ],
+      "section_id": "sec_0110",
+      "text": "- What happens when an AI tool causes harm"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Incident response"
+      ],
+      "section_id": "sec_0111",
+      "text": "- False accusation or integrity harm"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Incident response"
+      ],
+      "section_id": "sec_0112",
+      "text": "- Privacy or data exposure"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Incident response"
+      ],
+      "section_id": "sec_0113",
+      "text": "- Governance and escalation path"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Phased implementation timeline"
+      ],
+      "section_id": "sec_0114",
+      "text": "- What takes effect immediately"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Phased implementation timeline"
+      ],
+      "section_id": "sec_0115",
+      "text": "- What requires infrastructure, training, or approval processes first"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Phased implementation timeline"
+      ],
+      "section_id": "sec_0116",
+      "text": "- What should be piloted before full adoption"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Review cadence"
+      ],
+      "section_id": "sec_0117",
+      "text": "- Annual administrative review"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Review cadence"
+      ],
+      "section_id": "sec_0118",
+      "text": "- Periodic Board review"
+    },
+    {
+      "heading_path": [
+        "1. WS-POL — Policy/Recommendation Drafting",
+        "k. Reassessment and Updating of Policy",
+        "Review cadence"
+      ],
+      "section_id": "sec_0119",
+      "text": "- Accelerated review when needed due to incidents, technology change, or outcome data"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Purpose"
+      ],
+      "section_id": "sec_0120",
+      "text": "- Shared baseline assumptions"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Purpose"
+      ],
+      "section_id": "sec_0121",
+      "text": "- External scan"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Purpose"
+      ],
+      "section_id": "sec_0122",
+      "text": "- Definitions, misconceptions, and framing"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Best used to support"
+      ],
+      "section_id": "sec_0123",
+      "text": "- 0 Preface"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Best used to support"
+      ],
+      "section_id": "sec_0124",
+      "text": "- 1.a Guiding Principles and Motivation"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Best used to support"
+      ],
+      "section_id": "sec_0125",
+      "text": "- 1.b Scope and Triaging"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Best used to support"
+      ],
+      "section_id": "sec_0126",
+      "text": "- 1.c Definitions"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.1 WS-RSB — Research and Shared Baseline",
+        "Best used to support"
+      ],
+      "section_id": "sec_0127",
+      "text": "- 1.k Reassessment and Updating of Policy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.2 WS-DPS — Data Privacy and Security",
+        "Purpose"
+      ],
+      "section_id": "sec_0128",
+      "text": "- Privacy, data minimization, consent/notice, vendor terms, governance, incident response"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.2 WS-DPS — Data Privacy and Security",
+        "Best used to support"
+      ],
+      "section_id": "sec_0129",
+      "text": "- 1.d Staff and Teacher Use"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.2 WS-DPS — Data Privacy and Security",
+        "Best used to support"
+      ],
+      "section_id": "sec_0130",
+      "text": "- 1.f Students with Disabilities and Human Decision Safeguards"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.2 WS-DPS — Data Privacy and Security",
+        "Best used to support"
+      ],
+      "section_id": "sec_0131",
+      "text": "- 1.g Protection of Student Privacy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.2 WS-DPS — Data Privacy and Security",
+        "Best used to support"
+      ],
+      "section_id": "sec_0132",
+      "text": "- 1.h Public Accountability"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.2 WS-DPS — Data Privacy and Security",
+        "Best used to support"
+      ],
+      "section_id": "sec_0133",
+      "text": "- 1.k Reassessment and Updating of Policy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Purpose"
+      ],
+      "section_id": "sec_0134",
+      "text": "- Attribution expectations"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Purpose"
+      ],
+      "section_id": "sec_0135",
+      "text": "- Assessment validity"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Purpose"
+      ],
+      "section_id": "sec_0136",
+      "text": "- Detector posture"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Purpose"
+      ],
+      "section_id": "sec_0137",
+      "text": "- Integrity safeguards"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Best used to support"
+      ],
+      "section_id": "sec_0138",
+      "text": "- 1.d Staff and Teacher Use"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Best used to support"
+      ],
+      "section_id": "sec_0139",
+      "text": "- 1.e Student Use"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Best used to support"
+      ],
+      "section_id": "sec_0140",
+      "text": "- 1.e Citation and Disclosure Expectations"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Best used to support"
+      ],
+      "section_id": "sec_0141",
+      "text": "- 1.h Public Accountability"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.3 WS-AIN — Academic Integrity and Attribution",
+        "Best used to support"
+      ],
+      "section_id": "sec_0142",
+      "text": "- 1.k Reassessment and Updating of Policy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.4 WS-CPX — Classroom Practice and Experience",
+        "Purpose"
+      ],
+      "section_id": "sec_0143",
+      "text": "- Classroom scenarios"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.4 WS-CPX — Classroom Practice and Experience",
+        "Purpose"
+      ],
+      "section_id": "sec_0144",
+      "text": "- Teacher-facing examples"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.4 WS-CPX — Classroom Practice and Experience",
+        "Purpose"
+      ],
+      "section_id": "sec_0145",
+      "text": "- Practical use cases and constraints"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.4 WS-CPX — Classroom Practice and Experience",
+        "Best used to support"
+      ],
+      "section_id": "sec_0146",
+      "text": "- 1.d Staff and Teacher Use"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.4 WS-CPX — Classroom Practice and Experience",
+        "Best used to support"
+      ],
+      "section_id": "sec_0147",
+      "text": "- 1.e Student Use"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.4 WS-CPX — Classroom Practice and Experience",
+        "Best used to support"
+      ],
+      "section_id": "sec_0148",
+      "text": "- 1.j School Budgeting and Workload Implications"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.4 WS-CPX — Classroom Practice and Experience",
+        "Best used to support"
+      ],
+      "section_id": "sec_0149",
+      "text": "- 1.k Reassessment and Updating of Policy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Purpose"
+      ],
+      "section_id": "sec_0150",
+      "text": "- Family, staff, and student messaging"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Purpose"
+      ],
+      "section_id": "sec_0151",
+      "text": "- Notice language"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Purpose"
+      ],
+      "section_id": "sec_0152",
+      "text": "- Public FAQs"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Purpose"
+      ],
+      "section_id": "sec_0153",
+      "text": "- Community input structures"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Best used to support"
+      ],
+      "section_id": "sec_0154",
+      "text": "- 0 Preface"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Best used to support"
+      ],
+      "section_id": "sec_0155",
+      "text": "- 1.h Public Accountability"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Best used to support"
+      ],
+      "section_id": "sec_0156",
+      "text": "- 1.i Equity in Our Community"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.5 WS-CCI — Communication and Community Input",
+        "Best used to support"
+      ],
+      "section_id": "sec_0157",
+      "text": "- 1.k Reassessment and Updating of Policy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Purpose"
+      ],
+      "section_id": "sec_0158",
+      "text": "- Equity lens across all domains"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Purpose"
+      ],
+      "section_id": "sec_0159",
+      "text": "- Accommodations"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Purpose"
+      ],
+      "section_id": "sec_0160",
+      "text": "- Access gaps"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Purpose"
+      ],
+      "section_id": "sec_0161",
+      "text": "- Disparate impact concerns"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Best used to support"
+      ],
+      "section_id": "sec_0162",
+      "text": "- 1.e Student Use"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Best used to support"
+      ],
+      "section_id": "sec_0163",
+      "text": "- 1.f Students with Disabilities and Human Decision Safeguards"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Best used to support"
+      ],
+      "section_id": "sec_0164",
+      "text": "- 1.g Protection of Student Privacy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Best used to support"
+      ],
+      "section_id": "sec_0165",
+      "text": "- 1.h Public Accountability"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Best used to support"
+      ],
+      "section_id": "sec_0166",
+      "text": "- 1.i Equity in Our Community"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Best used to support"
+      ],
+      "section_id": "sec_0167",
+      "text": "- 1.j School Budgeting and Workload Implications"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.6 WS-EQA — Equity and Access",
+        "Best used to support"
+      ],
+      "section_id": "sec_0168",
+      "text": "- 1.k Reassessment and Updating of Policy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Purpose"
+      ],
+      "section_id": "sec_0169",
+      "text": "- Phased rollout"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Purpose"
+      ],
+      "section_id": "sec_0170",
+      "text": "- PD and training"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Purpose"
+      ],
+      "section_id": "sec_0171",
+      "text": "- Pilot pathway"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Purpose"
+      ],
+      "section_id": "sec_0172",
+      "text": "- Review cadence"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Purpose"
+      ],
+      "section_id": "sec_0173",
+      "text": "- Operational feasibility"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Best used to support"
+      ],
+      "section_id": "sec_0174",
+      "text": "- 1.d Staff and Teacher Use"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Best used to support"
+      ],
+      "section_id": "sec_0175",
+      "text": "- 1.g Protection of Student Privacy"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Best used to support"
+      ],
+      "section_id": "sec_0176",
+      "text": "- 1.h Public Accountability"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Best used to support"
+      ],
+      "section_id": "sec_0177",
+      "text": "- 1.j School Budgeting and Workload Implications"
+    },
+    {
+      "heading_path": [
+        "2. Cross-Cutting Workstream Sections",
+        "2.7 WS-IPC — Implementation, PD, and Change Adoption",
+        "Best used to support"
+      ],
+      "section_id": "sec_0178",
+      "text": "- 1.k Reassessment and Updating of Policy"
+    },
+    {
+      "heading_path": [
+        "Appendix Candidates"
+      ],
+      "section_id": "sec_0179",
+      "text": "- FCCPS policy crosswalk"
+    },
+    {
+      "heading_path": [
+        "Appendix Candidates"
+      ],
+      "section_id": "sec_0180",
+      "text": "- Definitions and examples by grade band"
+    },
+    {
+      "heading_path": [
+        "Appendix Candidates"
+      ],
+      "section_id": "sec_0181",
+      "text": "- Tool approval / risk-tiering criteria"
+    },
+    {
+      "heading_path": [
+        "Appendix Candidates"
+      ],
+      "section_id": "sec_0182",
+      "text": "- Notice and consent templates or guidance"
+    },
+    {
+      "heading_path": [
+        "Appendix Candidates"
+      ],
+      "section_id": "sec_0183",
+      "text": "- Decision log and unresolved tradeoffs for Board review"
+    },
+    {
+      "heading_path": [
+        "Appendix Candidates"
+      ],
+      "section_id": "sec_0184",
+      "text": "| Structure note: This version preserves the original D-POL-1 alphabet shell inside WS-POL, adds a preface, and nests the other workstreams as cross-cutting sections that inform the policy shell. |\n| --- |"
+    }
+  ],
+  "source_hash_sha256": "526742cb2ed558b5ae492d1a11c733c4da2e430d02e625b1e8031f6597ef7674",
+  "source_rel_path": "drafting/FCCPS_AI_Policy_Outline_Proposed_Revised.docx",
+  "title": "0. Preface"
+}

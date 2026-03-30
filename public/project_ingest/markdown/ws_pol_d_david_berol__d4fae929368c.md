@@ -1,0 +1,29 @@
+<!-- provenance:{"extractor_version":"2.0.0","pipeline_version":"2.0.0","project":"FCCPS AI Committee"} -->
+
+WS-POL-D Definitions:
+
+Generative-AI: See the definition provided by the Brookings Institute Report on AI in the schools: “Generative AI, the focus of this report, refers to a class of technologies that generate novel outputs such as text, images, audio, code, or video in response to user prompts. These technologies include LLMs, diffusion models, and other neural network architectures designed for content generation. Generative AI is a form of machine learning that creates new content rather than simply analyzing or classifying existing data. These systems are typically trained on vast datasets composed of publicly available digital content—words, images, and sounds . . . . Contemporary models increasingly incorporate curated, domain specific, and proprietary data tailored to specific applications, including educational ones.”
+
+AI Literacy: AI literacy comes from technical instruction about AI (e.g., training an AI model in computer science class) and from pragmatic instruction on the social, safety, and ethical issues involved in using AI.   The core of AI literacy is understanding where AI use is and is not appropriate. Reasonable restrictions on AI use and encouraging AI literacy are complementary objectives. To the extent AI literacy is a call for students to use AI extensively in school, merely on the grounds that they will eventually need to use AI at work, note the following: When students graduate to the workforce, efficiency demands may very well oblige them to regularly use AI tools as a skill-multiplier. But school is fundamentally a place where students need to develop their innate skills, precisely so that they will have skills capable of being multiplied. It is essential to prioritize the development of students’ innate skills and school is a protected space for learning that need not always conform to the efficiency logic of the workplace.
+
+Constructive feedback: Constructive feedback is information about a student's work-in‑progress that is intended to guide revision and improvement prior to assessment. It focuses on how the work can be developed or corrected, typically by identifying strengths, weaknesses, and concrete possibilities for change, rather than by assigning a grade, score, or other evaluative verdict on the quality of the work at its current stage of development.
+
+Evaluative feedback: Evaluative feedback is an assessment of a student's work treated as a finished product that assigns a judgment of its quality as measured against specified criteria or standards. It typically takes the form of a grade, score, or evaluative judgment that summarizes how well the work meets those criteria or standard, accompanied by additional comments or remarks that serve to justify that evaluation.
+
+Assessment: The activity of reviewing a student's work for the purpose of providing that student with evaluative feedback.
+
+AI Detector: A software tool that uses statistical methods to predict the relative likelihood that a particular block of text was authored by a Generative AI model, typically considering factors such as whether word choice, syntax, and organizational structure are characteristic of Generative AI output. AI detectors are typically trained by exposure to a corpus of texts that were pre-labeled with known authorship status.
+
+Citation fulfils an ethical obligation to not steal ideas from the author’s sources. The author acknowledges the labor of those from whom they inherit the ideas they are working with. In addition, citation often serves to lend authority to claims made in the present and it maintains a traceable genealogy of where human knowledge comes from.
+
+Disclosure, by contrast, aims to fulfill an ethical obligation to the author’s teacher and peers. The point is to allow the teacher to understand what tasks the student off-loaded onto the Generative AI, whether GenAI use was consistent with the assignment guidelines, and thus to fairly assess student achievement. Without disclosure, students can only assume that all their peers are making liberal use of AI assistance. This engenders a demoralizing race-to-the-bottom in which all are ultimately deprived of the educational benefit of learning to read, write, and think for themselves.
+
+In various circumstances, disclosure could consist of:
+
+Informing the instructor that GenAI was somehow used on an assignment
+
+Providing a log of all chat prompts to the GenAI
+
+Providing the full chat log
+
+Providing a narrative description of the general nature of GenAI reliance

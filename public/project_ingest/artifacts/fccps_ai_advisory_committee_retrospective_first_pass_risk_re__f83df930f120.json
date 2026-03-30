@@ -1,0 +1,74 @@
+{
+  "artifact_id": "f83df930f1200773a2fdbbc7",
+  "associated_outputs": {
+    "md_path": "public/project_ingest/markdown/fccps_ai_advisory_committee_retrospective_first_pass_risk_re__f83df930f120.md"
+  },
+  "doc_type": "docx",
+  "extracted_at_utc": "2026-03-30T03:39:43.799916Z",
+  "file_mtime_utc": "2026-03-19T03:50:53Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [],
+      "section_id": "sec_0001",
+      "text": "FCCPS AI Advisory Committee"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0002",
+      "text": "Retrospective First-Pass Risk Register"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0003",
+      "text": "Seed draft for Meeting 5 (20 Mar 2026) | prepared to support Vice Chair facilitation in the Chair's absence"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0004",
+      "text": "Legend: Likelihood / Impact are chair-level provisional judgments for triage only (H = high, M = moderate, L = low)."
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0005",
+      "text": "| What this is: a retrospective, first-pass register reconstructed from Meeting 4 workstream briefings, later written member inputs, and the subsequent chair/liaison reset. It is intended to help structure Meeting 5 discussion, not to imply committee consensus on wording, scoring, or mitigations. How to use it: confirm which risks belong in the Board-facing package; merge duplicates; tighten wording; identify broad alignment vs. trade-off/dissent; and assign provisional mitigation posture / drafting owner where useful. Known gap: this seed does not yet reflect a fully integrated DPS/CCI/IPC discussion in one meeting. Those lenses should be layered in during Meeting 5 review, especially where risks touch privacy/governance, family communication, and implementation cadence. |\n| --- |"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0006",
+      "text": "| ID | Risk | Why it matters / observed concern | Main source(s) | L | I | Initial mitigation posture | Meeting 5 note |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| R1 | Core skill erosion through cognitive offloading | Frequent AI use may weaken reading stamina, writing development, reasoning, and student self-trust if it substitutes for learning rather than supporting it. | WS-AIN; David; Tina; John | H | H | Use grade-banded limits; require visible thinking/process evidence; define tasks where AI may support versus replace work. | Broad concern; disagreement is over how restrictive the limits should be. |\n| R2 | Assessment validity is undermined by hidden or inappropriate AI use | Summative or unproctored work may not reflect student understanding if AI boundaries are unclear or poorly enforced. | WS-AIN; WS-POL; David; John | H | H | Default to design/process evidence first; set task-specific AI-use conditions; use clearer assignment categories and exemplars. | Broad alignment on risk; disagreement on how much to rely on restrictions. |\n| R3 | False accusation or unfair treatment from AI detectors | Detector tools may produce false positives, trigger confirmation bias,"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0007",
+      "text": "and create due-process and reputational harms. | WS-AIN; David; John | M | H | Do not use detector output as sole evidence; require human review, student conversation, and documented process safeguards. | Broad alignment against detector-only decisions; disagreement on any advisory use. |\n| R4 | Disclosure and attribution expectations are unclear or too burdensome | If disclosure rules are vague, hidden AI use persists; if too broad, they become unworkable and unevenly enforced. | WS-AIN; Susan; John; Elizabeth | H | M | Adopt simple, grade-banded disclosure rules focused on material AI use; provide examples and student-facing attribution guidance. | Broad alignment that some disclosure is needed; disagreement on “all use” versus “material use.” |\n| R5 | Student data, staff data, or sensitive records are exposed through non-approved tools | Open or poorly vetted tools can create privacy, retention, security, and procurement risks, especially for minors and sensitive meetings or records. | WS-CPX; Susan; Tina; John | H | H | Use approved tools, data minimization, plain-language notice, vendor review, and bright-line rules for sensitive data. | Broad alignment on privacy risk; disagr"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0008",
+      "text": "eement on breadth of consent/opt-out and operational feasibility. |\n| R6 | Bias, opacity, or inequitable outcomes are discovered too late | If equity/access review happens after adoption, FCCPS may widen gaps for students with disabilities, multilingual learners, or students with uneven home support. | WS-EQA; Elizabeth; Tina; John | H | H | Apply equity/access review from procurement through implementation; require equivalent alternatives, accommodations, and monitoring for bias incidents. | Broad alignment on equity as cross-cutting; disagreement on how detailed first-policy requirements should be. |\n| R7 | Student safety harms from conversational AI, synthetic media, or inappropriate content | Students may encounter manipulative, harmful, or deceptive outputs, including deepfakes, harassment, or age-inappropriate interactions. | WS-CPX; Tina; Susan | M | H | Set age-appropriate tool/access rules; prohibit harmful synthetic media uses; require labeling and adult oversight where warranted. | Growing alignment that safety must be named explicitly; disagreement on how much the first policy should cover beyond academics. |\n| R8 | Teacher use of AI in feedback or grading undermines tr"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0009",
+      "text": "ust | Students and families may lose confidence if evaluative feedback appears automated or if human ownership is unclear. | WS-AIN; David; Susan; John | M | H | Keep educators accountable for evaluative feedback and grading; allow, if at all, only human-reviewed drafting support for limited formative uses. | Broad alignment on human responsibility; disagreement on whether AI drafting for feedback should be allowed at all. |\n| R9 | Policy language is too vague, idealized, or unenforceable | Well-intended but abstract principles can create churn, uneven application, and loss of credibility if staff cannot operationalize them. | WS-POL; David; Tom; Anubav | H | M | Prefer plain-language rules, concrete examples, decision points, and implementation-ready guidance over broad slogans. | Strong alignment that guidance must be practical; disagreement on the proper level of detail and precision. |\n| R10 | Policy becomes so restrictive that FCCPS misses educational upside and future readiness | An overly defensive posture may block beneficial, age-appropriate uses that support differentiation, feedback, curiosity, access, and staff productivity. | Anubav; Susan; John; Tina (in part) | M | M"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0010",
+      "text": "| Use pilot-first adoption, bounded experimentation, and review cadence; allow beneficial uses with guardrails rather than default bans. | Real disagreement: some members view this as a major lost-opportunity risk; others see it as secondary to harm prevention. |\n| R11 | Governance is fragmented: no clear owner, weak monitoring, and no review cadence | Without clear accountability, tool review, incident response, and policy refresh, the system may drift or fail to learn from evidence. | Tom; WS-POL; chair sync; John | M | H | Name accountable owners; require monitoring and review cadence; connect recommendations to a board-level MVP with planned revision. | Broad alignment on need for governance; disagreement on how centralized and formal it must be. |\n| R12 | Implementation burden on teachers and staff is too high | If guidance is complex or unsupported, staff may ignore it, apply it inconsistently, or experience added workload without educational gain. | WS-CPX; Tina; Anubav; John | H | M | Keep first policy simple; pair expectations with exemplars, staff supports, and phased implementation rather than all-at-once mandates. | Broad alignment on feasibility concerns; disagreement"
+    },
+    {
+      "heading_path": [],
+      "section_id": "sec_0011",
+      "text": "on whether stronger restrictions or supports create the greater burden. |"
+    }
+  ],
+  "source_hash_sha256": "bfe66be30be08e3c73caddaa0365145edef40c8ff312e29a26d535c2ff1d3b0f",
+  "source_rel_path": "Meetings/05 - Meeting 20-MAR-26/FCCPS_AI_Advisory_Committee_Retrospective_First_Pass_Risk_Register.docx",
+  "title": "FCCPS AI Advisory Committee Retrospective First Pass Risk Register"
+}

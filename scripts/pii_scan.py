@@ -1047,11 +1047,20 @@ def publish_artifacts(
             discovery.append(entry)
             continue
 
-        doc_type, extracted_sections = extract_sections(path)
-        xlsx_payload: dict[str, Any] | None = None
-        if doc_type == "xlsx":
-            xlsx_payload = extract_xlsx_payload(path)
-        rel_hash = sha256_file(path)
+        try:
+            doc_type, extracted_sections = extract_sections(path)
+            xlsx_payload: dict[str, Any] | None = None
+            if doc_type == "xlsx":
+                xlsx_payload = extract_xlsx_payload(path)
+            rel_hash = sha256_file(path)
+        except Exception as exc:
+            entry["decision"] = "skipped"
+            entry["reason_if_skipped"] = "skipped_unreadable_or_malformed"
+            entry["ingest_error"] = str(exc)
+            discovery.append(entry)
+            print(f"   ⚠️ Skipping unreadable/malformed file: {exc}")
+            continue
+
         artifact_id = artifact_id_for(rel_path)
         output_name = artifact_output_name(rel_path, artifact_id)
         output_stem = artifact_output_stem(rel_path, artifact_id)

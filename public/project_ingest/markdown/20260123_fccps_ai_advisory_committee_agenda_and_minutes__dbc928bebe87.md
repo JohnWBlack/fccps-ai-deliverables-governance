@@ -36,7 +36,7 @@ Date of Meeting: Friday, January 23, 2026
 
 Location of Meeting: FCCPS School Board Office (Multi-Purpose Room)
 
-Time of Meeting: 8:30–~9:36 AM (in-person). Pre-meeting level-set recorded starting 8:05 AM.
+Time of Meeting: 8:30–~9:36 AM (in-person).
 
 Action Items (captured from discussion)
 
