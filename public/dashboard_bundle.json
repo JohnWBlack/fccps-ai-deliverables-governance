@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-03-30T03:58:53.905905Z",
-    "snapshot_version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff"
+    "generated_at": "2026-03-31T03:55:55.348130Z",
+    "snapshot_version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-03-30T03:58:51.641603Z",
+      "generated_at": "2026-03-31T03:55:52.546210Z",
       "source_version": "1.1.0",
-      "version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff"
+      "version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b"
     },
     "metadata": {
-      "generated_at": "2026-03-30T03:58:51.641603Z",
+      "generated_at": "2026-03-31T03:55:52.546210Z",
       "source_version": "1.1.0",
-      "version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff",
+      "version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -844,7 +844,7 @@
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 38,
+          "max_days_overdue": 39,
           "overdue_count": 8
         },
         "evidence": [
@@ -1116,8 +1116,8 @@
         "category": "convergence",
         "description": "Percent of scanned docs that reference at least one principle ID.",
         "details": {
-          "coverage_pct": 9,
-          "scanned_docs": 21
+          "coverage_pct": 8,
+          "scanned_docs": 25
         },
         "evidence": [
           {
@@ -1134,15 +1134,15 @@
         "rules": [
           "Green >=70, yellow >=40, red <40."
         ],
-        "score": 9,
+        "score": 8,
         "status": "red"
       },
       {
         "category": "convergence",
         "description": "Percent of scanned docs that reference at least one risk ID.",
         "details": {
-          "coverage_pct": 9,
-          "scanned_docs": 21
+          "coverage_pct": 8,
+          "scanned_docs": 25
         },
         "evidence": [
           {
@@ -1159,7 +1159,7 @@
         "rules": [
           "Green >=70, yellow >=40, red <40."
         ],
-        "score": 9,
+        "score": 8,
         "status": "red"
       },
       {
@@ -1269,7 +1269,7 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates.",
         "details": {
-          "oldest_age_days": 35,
+          "oldest_age_days": 36,
           "sample_count": 22
         },
         "evidence": [],
@@ -1355,7 +1355,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-03-30T03:58:53.760411Z",
+      "generated_at": "2026-03-31T03:55:54.906739Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1399,7 +1399,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-03-30T03:58:53.760411Z",
+    "generated_at": "2026-03-31T03:55:54.906739Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1862,7 +1862,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "8df5d8671331"
+    "version_key": "f10c9579b801"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1896,7 +1896,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-03-30T03:58:53.545174Z",
+      "generated_at": "2026-03-31T03:55:54.488783Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1906,7 +1906,7 @@
     },
     "summary_counts": {
       "error": 0,
-      "warning": 0,
+      "warning": 1,
       "info": 1
     },
     "issues": [
@@ -1921,26 +1921,71 @@
             ]
           }
         ]
+      },
+      {
+        "severity": "warning",
+        "code": "DRIFT-WORKSTREAM-IDS",
+        "message": "Doc-extracted WS-* IDs include values that are not canonical SoR IDs.",
+        "evidence": [
+          {
+            "docs_not_in_sor": [
+              "WS-POL-",
+              "WS-POL-A",
+              "WS-POL-B",
+              "WS-POL-C",
+              "WS-POL-D",
+              "WS-POL-E",
+              "WS-POL-F",
+              "WS-POL-G",
+              "WS-POL-H",
+              "WS-POL-I",
+              "WS-POL-J",
+              "WS-POL-K",
+              "WS-POL-L",
+              "WS-POL-M",
+              "WS-POL-N",
+              "WS-POL-O"
+            ],
+            "sor_not_in_docs": []
+          }
+        ]
       }
     ],
     "metrics": {
       "deliverable_principle_refs_pct": 38.88888888888889,
       "deliverable_risk_refs_pct": 38.88888888888889,
-      "docs_with_principles_pct": 9.523809523809524,
-      "docs_with_risks_pct": 9.523809523809524,
+      "docs_with_principles_pct": 8.0,
+      "docs_with_risks_pct": 8.0,
       "sor_vs_docs_workstream_drift": {
         "sor_count": 8,
-        "docs_count": 9,
-        "docs_not_in_sor": [],
+        "docs_count": 25,
+        "docs_not_in_sor": [
+          "WS-POL-",
+          "WS-POL-A",
+          "WS-POL-B",
+          "WS-POL-C",
+          "WS-POL-D",
+          "WS-POL-E",
+          "WS-POL-F",
+          "WS-POL-G",
+          "WS-POL-H",
+          "WS-POL-I",
+          "WS-POL-J",
+          "WS-POL-K",
+          "WS-POL-L",
+          "WS-POL-M",
+          "WS-POL-N",
+          "WS-POL-O"
+        ],
         "sor_not_in_docs": [],
-        "mismatch_count": 0
+        "mismatch_count": 16
       }
     }
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-03-30T03:58:53.411207Z",
-      "scanned_files_count": 21,
+      "generated_at": "2026-03-31T03:55:54.312406Z",
+      "scanned_files_count": 25,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
       "workstream_alias_map": {
@@ -2043,6 +2088,80 @@
         }
       },
       {
+        "doc_path": "docs/DRAFTING_OUTPUT_MAP.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-30T22:12:43-04:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-POL-",
+            "WS-POL-A",
+            "WS-POL-B",
+            "WS-POL-C",
+            "WS-POL-D",
+            "WS-POL-E",
+            "WS-POL-F",
+            "WS-POL-G",
+            "WS-POL-H",
+            "WS-POL-I",
+            "WS-POL-J",
+            "WS-POL-K",
+            "WS-POL-L",
+            "WS-POL-M",
+            "WS-POL-N",
+            "WS-POL-O"
+          ],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 11
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/DRAFTING_OUTPUT_MAP_GITHUB_LINKS.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-30T22:12:43-04:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [
+            "WS-POL-",
+            "WS-POL-A",
+            "WS-POL-B",
+            "WS-POL-C",
+            "WS-POL-D",
+            "WS-POL-E",
+            "WS-POL-F",
+            "WS-POL-G",
+            "WS-POL-H",
+            "WS-POL-I",
+            "WS-POL-J",
+            "WS-POL-K",
+            "WS-POL-L",
+            "WS-POL-M",
+            "WS-POL-N",
+            "WS-POL-O"
+          ],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {
+          "workstream_ids": 11
+        },
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
         "doc_path": "docs/INGEST.md",
         "doc_type": "md",
         "last_modified_iso": "2026-03-03T00:02:55-05:00",
@@ -2064,6 +2183,42 @@
         "doc_path": "docs/KPI_TAXONOMY.md",
         "doc_type": "md",
         "last_modified_iso": "2026-02-24T15:51:29-05:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/MEETING5_OUTPUT_MAP_GITHUB_LINKS.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-30T22:12:43-04:00",
+        "extracted": {
+          "principle_ids": [],
+          "risk_ids": [],
+          "workstream_ids": [],
+          "deliverable_ids": [],
+          "milestone_ids": [],
+          "decision_ids": []
+        },
+        "anchors": {},
+        "normalization": {
+          "workstream_alias_hits": {},
+          "allowed_unresolved_workstream_ids": []
+        }
+      },
+      {
+        "doc_path": "docs/PIPELINE_AND_ANALYSIS_GUIDE.md",
+        "doc_type": "md",
+        "last_modified_iso": "2026-03-30T22:12:43-04:00",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2497,7 +2652,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-03-30T03:58:53.905301Z",
+      "generated_at": "2026-03-31T03:55:55.347604Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-03-30T03:58:53.545174Z",
+    "generated_at": "2026-03-31T03:55:54.488783Z",
     "sources": [
       "sor/workstreams.yml",
       "sor/timeline.yml",
@@ -10,7 +10,7 @@
   },
   "summary_counts": {
     "error": 0,
-    "warning": 0,
+    "warning": 1,
     "info": 1
   },
   "issues": [
@@ -25,19 +25,64 @@
           ]
         }
       ]
+    },
+    {
+      "severity": "warning",
+      "code": "DRIFT-WORKSTREAM-IDS",
+      "message": "Doc-extracted WS-* IDs include values that are not canonical SoR IDs.",
+      "evidence": [
+        {
+          "docs_not_in_sor": [
+            "WS-POL-",
+            "WS-POL-A",
+            "WS-POL-B",
+            "WS-POL-C",
+            "WS-POL-D",
+            "WS-POL-E",
+            "WS-POL-F",
+            "WS-POL-G",
+            "WS-POL-H",
+            "WS-POL-I",
+            "WS-POL-J",
+            "WS-POL-K",
+            "WS-POL-L",
+            "WS-POL-M",
+            "WS-POL-N",
+            "WS-POL-O"
+          ],
+          "sor_not_in_docs": []
+        }
+      ]
     }
   ],
   "metrics": {
     "deliverable_principle_refs_pct": 38.88888888888889,
     "deliverable_risk_refs_pct": 38.88888888888889,
-    "docs_with_principles_pct": 9.523809523809524,
-    "docs_with_risks_pct": 9.523809523809524,
+    "docs_with_principles_pct": 8.0,
+    "docs_with_risks_pct": 8.0,
     "sor_vs_docs_workstream_drift": {
       "sor_count": 8,
-      "docs_count": 9,
-      "docs_not_in_sor": [],
+      "docs_count": 25,
+      "docs_not_in_sor": [
+        "WS-POL-",
+        "WS-POL-A",
+        "WS-POL-B",
+        "WS-POL-C",
+        "WS-POL-D",
+        "WS-POL-E",
+        "WS-POL-F",
+        "WS-POL-G",
+        "WS-POL-H",
+        "WS-POL-I",
+        "WS-POL-J",
+        "WS-POL-K",
+        "WS-POL-L",
+        "WS-POL-M",
+        "WS-POL-N",
+        "WS-POL-O"
+      ],
       "sor_not_in_docs": [],
-      "mismatch_count": 0
+      "mismatch_count": 16
     }
   }
 }

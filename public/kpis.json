@@ -72,7 +72,7 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 38,
+        "max_days_overdue": 39,
         "overdue_count": 8
       },
       "evidence": [
@@ -344,8 +344,8 @@
       "category": "convergence",
       "description": "Percent of scanned docs that reference at least one principle ID.",
       "details": {
-        "coverage_pct": 9,
-        "scanned_docs": 21
+        "coverage_pct": 8,
+        "scanned_docs": 25
       },
       "evidence": [
         {
@@ -362,15 +362,15 @@
       "rules": [
         "Green >=70, yellow >=40, red <40."
       ],
-      "score": 9,
+      "score": 8,
       "status": "red"
     },
     {
       "category": "convergence",
       "description": "Percent of scanned docs that reference at least one risk ID.",
       "details": {
-        "coverage_pct": 9,
-        "scanned_docs": 21
+        "coverage_pct": 8,
+        "scanned_docs": 25
       },
       "evidence": [
         {
@@ -387,7 +387,7 @@
       "rules": [
         "Green >=70, yellow >=40, red <40."
       ],
-      "score": 9,
+      "score": 8,
       "status": "red"
     },
     {
@@ -497,7 +497,7 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates.",
       "details": {
-        "oldest_age_days": 35,
+        "oldest_age_days": 36,
         "sample_count": 22
       },
       "evidence": [],
@@ -583,7 +583,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-03-30T03:58:53.760411Z",
+    "generated_at": "2026-03-31T03:55:54.906739Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },

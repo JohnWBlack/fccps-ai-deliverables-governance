@@ -27,12 +27,12 @@
             {
               "kpi_id": "KPI-CONV-07",
               "name": "Cross-doc principle coverage",
-              "score": 9
+              "score": 8
             },
             {
               "kpi_id": "KPI-CONV-08",
               "name": "Cross-doc risk coverage",
-              "score": 9
+              "score": 8
             },
             {
               "kpi_id": "KPI-SCHED-02",
@@ -53,7 +53,7 @@
             }
           ]
         },
-        "expires_at": "2026-04-20T03:58:53.842606Z",
+        "expires_at": "2026-04-21T03:55:55.229442Z",
         "id": "ac_top_risk_kpis",
         "summary": "Prioritized KPI set for next-cycle intervention planning.",
         "title": "Action memory: prioritize red/yellow KPI drivers"
@@ -157,7 +157,7 @@
           ],
           "recommended_review_mode": "guided_review"
         },
-        "expires_at": "2026-04-13T03:58:53.842618Z",
+        "expires_at": "2026-04-14T03:55:55.229452Z",
         "id": "ac_supporting_linkage_candidates",
         "summary": "Candidate deliverable/source link updates from cognitive control report for human review.",
         "title": "Action memory: supporting evidence linkage candidates"
@@ -172,7 +172,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff",
+        "derived_from_version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b",
         "details": {
           "deliverable_total": 18,
           "status_counts": {
@@ -181,7 +181,7 @@
             "not_started": 6
           }
         },
-        "expires_at": "2026-04-29T03:58:53.842129Z",
+        "expires_at": "2026-04-30T03:55:55.228946Z",
         "id": "ep_status_distribution",
         "summary": "Current distribution of public deliverable statuses in the deterministic snapshot.",
         "title": "Deliverable status distribution"
@@ -194,7 +194,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff",
+        "derived_from_version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b",
         "details": {
           "latest_change_log_entries": [
             {
@@ -247,7 +247,7 @@
             }
           ]
         },
-        "expires_at": "2026-04-29T03:58:53.842162Z",
+        "expires_at": "2026-04-30T03:55:55.228974Z",
         "id": "ep_recent_changes",
         "summary": "Recent change_log entries from the authoritative snapshot.",
         "title": "Recent decision/change log activity"
@@ -262,7 +262,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff",
+        "derived_from_version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b",
         "details": {
           "count": 8,
           "items": [
@@ -316,7 +316,7 @@
             }
           ]
         },
-        "expires_at": "2026-05-14T03:58:53.842576Z",
+        "expires_at": "2026-05-15T03:55:55.229406Z",
         "id": "ol_missing_public_links",
         "summary": "In-progress or not-started deliverables that do not yet have public_url linkage.",
         "title": "Open loop: deliverables without public source links"
@@ -329,9 +329,9 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff",
+        "derived_from_version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b",
         "details": {
-          "issue_count": 1,
+          "issue_count": 2,
           "issues": [
             {
               "code": "DRIFT-WORKSTREAM-ALIASES-ALLOWLIST",
@@ -344,10 +344,38 @@
               ],
               "message": "Allowlisted legacy workstream aliases were observed in docs.",
               "severity": "info"
+            },
+            {
+              "code": "DRIFT-WORKSTREAM-IDS",
+              "evidence": [
+                {
+                  "docs_not_in_sor": [
+                    "WS-POL-",
+                    "WS-POL-A",
+                    "WS-POL-B",
+                    "WS-POL-C",
+                    "WS-POL-D",
+                    "WS-POL-E",
+                    "WS-POL-F",
+                    "WS-POL-G",
+                    "WS-POL-H",
+                    "WS-POL-I",
+                    "WS-POL-J",
+                    "WS-POL-K",
+                    "WS-POL-L",
+                    "WS-POL-M",
+                    "WS-POL-N",
+                    "WS-POL-O"
+                  ],
+                  "sor_not_in_docs": []
+                }
+              ],
+              "message": "Doc-extracted WS-* IDs include values that are not canonical SoR IDs.",
+              "severity": "warning"
             }
           ]
         },
-        "expires_at": "2026-04-29T03:58:53.842582Z",
+        "expires_at": "2026-04-30T03:55:55.229415Z",
         "id": "ol_quality_flags",
         "summary": "Outstanding quality issues reported by deterministic quality checks.",
         "title": "Open loop: quality check flags"
@@ -362,7 +390,7 @@
           }
         ],
         "confidence": 0.98,
-        "derived_from_version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff",
+        "derived_from_version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b",
         "details": {
           "top_principles": [
             {
@@ -433,7 +461,7 @@
             }
           ]
         },
-        "expires_at": "2026-09-26T03:58:53.842202Z",
+        "expires_at": "2026-09-27T03:55:55.229017Z",
         "id": "th_principle_risk_fanout",
         "summary": "Most frequently referenced principles and risks across deliverables.",
         "title": "Principle/risk linkage fanout"
@@ -446,9 +474,9 @@
           }
         ],
         "confidence": 0.9,
-        "derived_from_version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff",
+        "derived_from_version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b",
         "details": {
-          "indexed_docs": 21,
+          "indexed_docs": 25,
           "top_decisions": [
             {
               "count": 1,
@@ -480,7 +508,7 @@
             }
           ]
         },
-        "expires_at": "2026-07-28T03:58:53.842544Z",
+        "expires_at": "2026-07-29T03:55:55.229379Z",
         "id": "th_decision_density",
         "summary": "Decision IDs most frequently extracted from indexed public documents.",
         "title": "Decision reference density"
@@ -490,7 +518,7 @@
   "meta": {
     "advisory": true,
     "authoritative": false,
-    "generated_at": "2026-03-30T03:58:53.842643Z",
+    "generated_at": "2026-03-31T03:55:55.229471Z",
     "policy": {
       "conflict_rule": "SoR and deterministic KPIs always override memory statements.",
       "deterministic_artifacts_authoritative": true,
@@ -499,6 +527,6 @@
     },
     "producer": "fccps-memory-poc",
     "transform_version": "0.1.0",
-    "version_key": "ffe8e85aecf2433f6fafd5f45c538b3e34fdd9ff"
+    "version_key": "0a6d237d258229e8bd5e709ef87485ab6b8a319b"
   }
 }
