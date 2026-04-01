@@ -18,12 +18,12 @@
   ],
   "counts": {
     "auto_apply_candidates": 3,
-    "candidates": 90,
-    "ingest_converted": 90,
+    "candidates": 100,
+    "ingest_converted": 100,
     "ingest_promoted": 0,
     "recommended_actions": 14
   },
-  "generated_at": "2026-03-30T03:30:19.909342Z",
+  "generated_at": "2026-04-01T04:20:42.951588Z",
   "governance": {
     "approval_policy": "Auto-apply may proceed for high-confidence, non-sensitive actions; always enforce validate_sor.py and validate_public.py before publish.",
     "auto_apply_sor_changes": true,
@@ -1152,7 +1152,7 @@
       "ai_role": "Propose exploration candidates",
       "confidence": 1.0,
       "details": {
-        "converted_count": 90,
+        "converted_count": 100,
         "priority_policy": [
           "favor promoted artifacts",
           "favor in-progress deliverables",
@@ -1169,10 +1169,10 @@
       "ai_role": "Filter, preprocess, detect salience",
       "confidence": 0.95,
       "details": {
-        "candidate_count": 90,
+        "candidate_count": 100,
         "salience_bands": {
           "high": 0,
-          "low": 83,
+          "low": 93,
           "medium": 7
         }
       },
@@ -1198,8 +1198,8 @@
       "ai_role": "Produce grounded representations",
       "confidence": 0.84,
       "details": {
-        "with_inferred_workstream": 73,
-        "with_memory_links": 73
+        "with_inferred_workstream": 83,
+        "with_memory_links": 83
       },
       "human_role": "Interpret ambiguous cases",
       "stage": "Comprehension",
@@ -1210,8 +1210,8 @@
       "ai_role": "Execute inference steps",
       "confidence": 0.86,
       "details": {
-        "average_top_score": 0.537,
-        "matched_candidate_count": 90
+        "average_top_score": 0.5418,
+        "matched_candidate_count": 100
       },
       "human_role": "Define rules, constraints",
       "stage": "Basic Reasoning",
@@ -1223,11 +1223,11 @@
       "confidence": 0.88,
       "details": {
         "critical_flags": {
-          "ambiguous_alternative": 52,
+          "ambiguous_alternative": 62,
           "sensitive_source": 0,
           "workstream_conflict": 0
         },
-        "validated_actions": 73
+        "validated_actions": 83
       },
       "human_role": "Judge tradeoffs, ethical implications",
       "stage": "Critical Thinking",
@@ -1238,8 +1238,8 @@
       "ai_role": "Produce introspection logs",
       "confidence": 0.9,
       "details": {
-        "ambiguity_rate": 0.7123,
-        "low_confidence_actions": 54,
+        "ambiguity_rate": 0.747,
+        "low_confidence_actions": 64,
         "missing_workstream_rate": 0.0,
         "unmapped_candidates": 0
       },

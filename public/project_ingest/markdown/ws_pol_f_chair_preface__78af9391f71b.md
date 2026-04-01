@@ -1,27 +1,13 @@
 <!-- provenance:{"extractor_version":"2.0.0","pipeline_version":"2.0.0","project":"FCCPS AI Committee"} -->
 
-# WS-POL-F chair preface
+# Neutral narrative paragraph
 
-## Neutral narrative paragraph
+This section reflects one of the Committee’s strongest areas of shared caution. Members broadly agree that AI use for younger students must be developmentally appropriate, that foundational cognitive, social, and relational learning should remain primary, and that routine direct student use in PreK–5 should be limited and educator-mediated. The Committee also broadly agrees that FCCPS should emphasize AI literacy in this band while maintaining stronger boundaries around conversational, anthropomorphic, or role-simulating AI uses that may blur the distinction between human and machine interaction or encourage younger students to treat AI as a buddy, coach, co-teacher, or authority. Meeting 5 reinforced this general posture by emphasizing more restricted exposure for younger students, developmentally appropriate framing, and a policy-level recommendation structure rather than operational detail in the report itself.
 
-This section reflects one of the areas of strongest shared caution within the Committee. Members broadly agree that AI use for younger students must be developmentally appropriate, that foundational cognitive, social, and relational learning should remain primary, and that routine direct student use in the early grades should be limited and educator-mediated. The Committee also broadly agrees that younger students require stronger boundaries around conversational and role-simulating AI, particularly where such tools may blur the distinction between human and machine interaction or encourage students to treat AI as a companion, coach, or authority. (eScholarship)
+# Range of positions paragraph
 
-## Range of positions paragraph
+Within that shared foundation, members differ on how much room FCCPS should leave for school-sponsored applied uses of AI in PreK–5. One position favors a strongly protective posture in which GenAI use in this band is oriented primarily toward AI literacy, demonstration, and very limited supervised exposure, with no independent student use and little or no routine applied use in traditional subject learning. Another position remains highly protective but preserves narrow room for carefully bounded, educator-directed uses when they are developmentally appropriate, tied to a clear instructional purpose, subject to close adult supervision and approved-tool governance, and do not displace foundational skill-building or invite anthropomorphic dependence. These positions do not mainly reflect disagreement about whether younger children need protection; they reflect different judgments about whether limited, highly governed applied use is ever educationally justified in the elementary years.
 
-Within that shared foundation, members differ on how much room FCCPS should leave for school-sponsored applied uses of AI in PreK–5. One position favors a strongly protective posture in which GenAI use in this band is oriented primarily toward AI literacy, demonstration, and very limited supervised exposure, with little or no routine applied use. Another position leaves room for narrow, carefully bounded uses when they are educator-directed, developmentally appropriate, clearly tied to learning goals, and subject to close adult supervision and tool governance. These positions do not primarily reflect disagreement about whether younger children need protection; they reflect different judgments about how much structured exposure is educationally justified in the elementary years. (Brookings)
+# Short dissent-friendly formulation
 
-## Short dissent-friendly formulation
-
-The Committee agrees that FCCPS should be especially cautious with AI in PreK–5. The remaining disagreement is whether that caution should be expressed mainly as near-minimization of applied student use, or as limited, tightly governed opportunities for educator-directed exposure and selected instructional uses.
-
-# References
-
-Burns, M., Winthrop, R., Luther, N., Venetis, E., & Karim, R. (2026, January 14). A new direction for students in an AI world: Prosper, prepare, protect. Brookings Institution. (Brookings)
-
-Children’s Hospital of Philadelphia. (2026, March 4). Children’s Hospital of Philadelphia researchers emphasize benefits and risks of generative AI at different stages of childhood development. (Children's Hospital of Philadelphia)
-
-Dietz, G., Outa, J., Lowe, L., Landay, J. A., & Gweon, H. (2023). Theory of AI mind: How adults and children reason about the “mental states” of conversational AI. Proceedings of the Annual Meeting of the Cognitive Science Society, 45(45). (eScholarship)
-
-Virginia Secretary of Education. (2025). Guidelines for AI integration throughout education in the Commonwealth of Virginia. Commonwealth of Virginia. (Virginia Department of Education)
-
-If you want, I can also produce a matching in-text citation map showing exactly where each source was used in the WS-POL-F preface and member contribution.
+The Committee agrees that FCCPS should be especially cautious with AI in PreK–5 and that younger students should not be treated as routine direct users of generative AI. The remaining disagreement is whether that caution should be expressed mainly as near-minimization of applied student use, or as a narrow, tightly governed pathway for educator-directed exposure and selected instructional uses under strong developmental guardrails.
