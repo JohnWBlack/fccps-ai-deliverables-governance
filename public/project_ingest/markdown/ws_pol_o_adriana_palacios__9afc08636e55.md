@@ -1,6 +1,6 @@
 <!-- provenance:{"extractor_version":"2.0.0","pipeline_version":"2.0.0","project":"FCCPS AI Committee"} -->
 
-# WS-POL-K — Reassessment and Updating of Policy
+# WS-POL-O — Reassessment and Updating of Policy
 
 ## Decision — Committee Perspective (No Full Consensus)
 
