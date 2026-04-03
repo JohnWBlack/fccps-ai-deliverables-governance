@@ -53,7 +53,7 @@
             }
           ]
         },
-        "expires_at": "2026-04-23T03:53:08.997396Z",
+        "expires_at": "2026-04-24T01:12:04.728132Z",
         "id": "ac_top_risk_kpis",
         "summary": "Prioritized KPI set for next-cycle intervention planning.",
         "title": "Action memory: prioritize red/yellow KPI drivers"
@@ -68,7 +68,7 @@
         "confidence": 0.8,
         "derived_from_version_key": "1.1.0",
         "details": {
-          "candidate_count": 14,
+          "candidate_count": 13,
           "candidates": [
             {
               "confidence_adjusted": 0.7254,
@@ -105,12 +105,6 @@
               "recommended_deliverable_id": "D-EQA-1",
               "risk_flags": [],
               "source_path": "workstreams/eqa/D-EQA-1_Equity-Impact-Checklist-v1.0.docx"
-            },
-            {
-              "confidence_adjusted": 0.7032,
-              "recommended_deliverable_id": "policy_principles",
-              "risk_flags": [],
-              "source_path": "03 - Values & Principles/FCCPS_AI_Survey_Analysis_Workbook_results-imported.xlsx"
             },
             {
               "confidence_adjusted": 0.7096,
@@ -157,7 +151,7 @@
           ],
           "recommended_review_mode": "guided_review"
         },
-        "expires_at": "2026-04-16T03:53:08.997406Z",
+        "expires_at": "2026-04-17T01:12:04.728139Z",
         "id": "ac_supporting_linkage_candidates",
         "summary": "Candidate deliverable/source link updates from cognitive control report for human review.",
         "title": "Action memory: supporting evidence linkage candidates"
@@ -172,7 +166,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "0d35fbc0549e2585fc1d513fdd4fe9f5be9f0594",
+        "derived_from_version_key": "907486fb76e963b602a74392a701595f311919cf",
         "details": {
           "deliverable_total": 18,
           "status_counts": {
@@ -181,7 +175,7 @@
             "not_started": 6
           }
         },
-        "expires_at": "2026-05-02T03:53:08.996933Z",
+        "expires_at": "2026-05-03T01:12:04.727650Z",
         "id": "ep_status_distribution",
         "summary": "Current distribution of public deliverable statuses in the deterministic snapshot.",
         "title": "Deliverable status distribution"
@@ -194,7 +188,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "0d35fbc0549e2585fc1d513fdd4fe9f5be9f0594",
+        "derived_from_version_key": "907486fb76e963b602a74392a701595f311919cf",
         "details": {
           "latest_change_log_entries": [
             {
@@ -247,7 +241,7 @@
             }
           ]
         },
-        "expires_at": "2026-05-02T03:53:08.996965Z",
+        "expires_at": "2026-05-03T01:12:04.727676Z",
         "id": "ep_recent_changes",
         "summary": "Recent change_log entries from the authoritative snapshot.",
         "title": "Recent decision/change log activity"
@@ -262,7 +256,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "0d35fbc0549e2585fc1d513fdd4fe9f5be9f0594",
+        "derived_from_version_key": "907486fb76e963b602a74392a701595f311919cf",
         "details": {
           "count": 8,
           "items": [
@@ -316,7 +310,7 @@
             }
           ]
         },
-        "expires_at": "2026-05-17T03:53:08.997365Z",
+        "expires_at": "2026-05-18T01:12:04.728102Z",
         "id": "ol_missing_public_links",
         "summary": "In-progress or not-started deliverables that do not yet have public_url linkage.",
         "title": "Open loop: deliverables without public source links"
@@ -329,7 +323,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "0d35fbc0549e2585fc1d513fdd4fe9f5be9f0594",
+        "derived_from_version_key": "907486fb76e963b602a74392a701595f311919cf",
         "details": {
           "issue_count": 2,
           "issues": [
@@ -375,7 +369,7 @@
             }
           ]
         },
-        "expires_at": "2026-05-02T03:53:08.997373Z",
+        "expires_at": "2026-05-03T01:12:04.728110Z",
         "id": "ol_quality_flags",
         "summary": "Outstanding quality issues reported by deterministic quality checks.",
         "title": "Open loop: quality check flags"
@@ -390,7 +384,7 @@
           }
         ],
         "confidence": 0.98,
-        "derived_from_version_key": "0d35fbc0549e2585fc1d513fdd4fe9f5be9f0594",
+        "derived_from_version_key": "907486fb76e963b602a74392a701595f311919cf",
         "details": {
           "top_principles": [
             {
@@ -461,7 +455,7 @@
             }
           ]
         },
-        "expires_at": "2026-09-29T03:53:08.997006Z",
+        "expires_at": "2026-09-30T01:12:04.727715Z",
         "id": "th_principle_risk_fanout",
         "summary": "Most frequently referenced principles and risks across deliverables.",
         "title": "Principle/risk linkage fanout"
@@ -474,7 +468,7 @@
           }
         ],
         "confidence": 0.9,
-        "derived_from_version_key": "0d35fbc0549e2585fc1d513fdd4fe9f5be9f0594",
+        "derived_from_version_key": "907486fb76e963b602a74392a701595f311919cf",
         "details": {
           "indexed_docs": 25,
           "top_decisions": [
@@ -508,7 +502,7 @@
             }
           ]
         },
-        "expires_at": "2026-07-31T03:53:08.997338Z",
+        "expires_at": "2026-08-01T01:12:04.728072Z",
         "id": "th_decision_density",
         "summary": "Decision IDs most frequently extracted from indexed public documents.",
         "title": "Decision reference density"
@@ -518,7 +512,7 @@
   "meta": {
     "advisory": true,
     "authoritative": false,
-    "generated_at": "2026-04-02T03:53:08.997424Z",
+    "generated_at": "2026-04-03T01:12:04.728157Z",
     "policy": {
       "conflict_rule": "SoR and deterministic KPIs always override memory statements.",
       "deterministic_artifacts_authoritative": true,
@@ -527,6 +521,6 @@
     },
     "producer": "fccps-memory-poc",
     "transform_version": "0.1.0",
-    "version_key": "0d35fbc0549e2585fc1d513fdd4fe9f5be9f0594"
+    "version_key": "907486fb76e963b602a74392a701595f311919cf"
   }
 }
