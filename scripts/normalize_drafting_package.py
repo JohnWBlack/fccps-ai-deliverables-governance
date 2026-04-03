@@ -6,6 +6,7 @@ Behavior:
 - Inserts a divider page for each section A-O.
 - Places the section chair preface immediately after the divider page.
 - Places contribution drafts after the chair preface.
+- Appends a workstream preface section and workstream sections (WS-XXX) from D-XXX-1 docs.
 - Applies a consistent heading/body style heuristic while copying source content.
 """
 
@@ -23,11 +24,17 @@ from docx.text.paragraph import Paragraph
 
 LETTERS = [chr(code) for code in range(ord("A"), ord("O") + 1)]
 LETTERED_HEADING_RE = re.compile(r"^[a-o]\.\s+", flags=re.IGNORECASE)
+WORKSTREAM_DELIVERABLE_RE = re.compile(r"^D-([A-Za-z]{3})-1(?:$|[^0-9A-Za-z])", flags=re.IGNORECASE)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Normalize drafting DOCX files and assemble section package")
     parser.add_argument("--drafting-root", required=True, help="Absolute path to drafting folder")
+    parser.add_argument(
+        "--workstreams-root",
+        required=False,
+        help="Absolute path to workstreams folder (defaults to sibling project_files/workstreams)",
+    )
     parser.add_argument("--outline", required=True, help="Absolute path to outline DOCX (v3)")
     parser.add_argument("--template", required=True, help="Absolute path to Normal.dotm (presence check)")
     parser.add_argument(
@@ -174,9 +181,50 @@ def add_section_divider(doc: DocxDocument, letter: str) -> None:
     doc.add_page_break()
 
 
+def discover_workstream_deliverables(workstreams_root: Path) -> list[tuple[str, Path]]:
+    found: dict[str, Path] = {}
+    for docx_path in sorted(workstreams_root.rglob("*.docx"), key=lambda path: str(path).lower()):
+        match = WORKSTREAM_DELIVERABLE_RE.match(docx_path.stem)
+        if not match:
+            continue
+        code = match.group(1).upper()
+        if code not in found:
+            found[code] = docx_path
+    return sorted(found.items(), key=lambda item: item[0])
+
+
+def append_workstream_sections(
+    assembled: DocxDocument,
+    workstream_deliverables: list[tuple[str, Path]],
+    normalized_dir: Path,
+) -> int:
+    if not workstream_deliverables:
+        return 0
+
+    assembled.add_page_break()
+    append_paragraph(assembled, "Workstream Sections Preface", "Heading 1")
+    append_paragraph(assembled, "[Preface placeholder for workstream sections]", "Normal")
+
+    appended = 0
+    for code, source_doc in workstream_deliverables:
+        assembled.add_page_break()
+        append_paragraph(assembled, f"WS-{code}", "Heading 1")
+        append_doc_content(source_doc, assembled)
+        output_doc = normalized_dir / "workstreams" / f"WS-{code}" / source_doc.name
+        write_normalized_source_copy(source_doc, output_doc)
+        appended += 1
+
+    return appended
+
+
 def main() -> int:
     args = parse_args()
     drafting_root = Path(args.drafting_root).resolve()
+    workstreams_root = (
+        Path(args.workstreams_root).resolve()
+        if args.workstreams_root
+        else (drafting_root.parent / "workstreams").resolve()
+    )
     outline_path = Path(args.outline).resolve()
     template_path = Path(args.template).resolve()
     output_docx = Path(args.output_docx).resolve()
@@ -184,6 +232,8 @@ def main() -> int:
 
     if not drafting_root.exists():
         raise SystemExit(f"drafting root not found: {drafting_root}")
+    if not workstreams_root.exists():
+        raise SystemExit(f"workstreams root not found: {workstreams_root}")
     if not outline_path.exists():
         raise SystemExit(f"outline docx not found: {outline_path}")
     if not template_path.exists():
@@ -226,10 +276,15 @@ def main() -> int:
             write_normalized_source_copy(contribution, contribution_output)
             normalized_count += 1
 
+    workstream_deliverables = discover_workstream_deliverables(workstreams_root)
+    appended_workstreams = append_workstream_sections(assembled, workstream_deliverables, normalized_dir)
+    normalized_count += appended_workstreams
+
     assembled.save(str(output_docx))
     print(f"✅ Assembled drafting package: {output_docx}")
     print(f"📁 Normalized source docs: {normalized_count} files under {normalized_dir}")
     print(f"🧩 Included sections: {included_sections}/{len(LETTERS)} (A-O)")
+    print(f"🗂️ Included workstreams: {appended_workstreams}")
     print(f"📝 Template path verified: {template_path}")
     return 0
 
