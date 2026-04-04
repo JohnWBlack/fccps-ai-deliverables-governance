@@ -72,7 +72,7 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 42,
+        "max_days_overdue": 43,
         "overdue_count": 8
       },
       "evidence": [
@@ -497,7 +497,7 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates.",
       "details": {
-        "oldest_age_days": 39,
+        "oldest_age_days": 40,
         "sample_count": 22
       },
       "evidence": [],
@@ -583,7 +583,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-04-03T03:53:49.727277Z",
+    "generated_at": "2026-04-04T03:46:00.036680Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
