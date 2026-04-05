@@ -1,6 +1,6 @@
 metadata:
   version: 1.3.0
-  last_updated: '2026-03-03'
+  last_updated: '2026-04-05'
   description: FCCPS AI Committee deliverables and committee artifacts
 deliverables:
 - id: charter_v0
@@ -199,7 +199,7 @@ deliverables:
 - id: D-POL-1
   title: Policy Skeleton v0
   description: Policy draft scaffold with sections, decisions, and version log.
-  status: in_progress
+  status: completed
   scope: workstream
   workstream_id: WS-POL
   owner:
@@ -233,7 +233,7 @@ deliverables:
 - id: D-CPX-1
   title: Scenario Bank v1
   description: Grade-banded classroom scenarios with implementation exemplars.
-  status: in_progress
+  status: completed
   scope: workstream
   workstream_id: WS-CPX
   owner:
@@ -266,7 +266,7 @@ deliverables:
   title: Attribution & Integrity Matrix v1
   description: Grade-band and assessment-type matrix for attribution and integrity
     practices.
-  status: in_progress
+  status: completed
   scope: workstream
   workstream_id: WS-AIN
   owner:
@@ -290,7 +290,7 @@ deliverables:
   - R-007
   public_facing: true
   committee_only: false
-  public_url: null
+  public_url: public/project_ingest/artifacts/d_ain_1_integrity_and_attribution_framework_restructured_v2___49dfbd7cf021.json
   supporting_evidence_paths: []
   supporting_evidence_count: 0
   supporting_confidence_max: 0.0
@@ -299,7 +299,7 @@ deliverables:
 - id: D-DPS-1
   title: AI Tool Review Checklist v1 + Risk Tiers
   description: Privacy/security checklist and risk-tiering model for tool governance.
-  status: in_progress
+  status: completed
   scope: workstream
   workstream_id: WS-DPS
   owner:
@@ -332,7 +332,7 @@ deliverables:
   title: Equity Impact Checklist v1
   description: Equity and accessibility lens checklist for policy and implementation
     decisions.
-  status: in_progress
+  status: completed
   scope: workstream
   workstream_id: WS-EQA
   owner:
@@ -366,7 +366,7 @@ deliverables:
   title: Draft sections for priority recommendation domains
   description: Drafted recommendation sections for selected domains and governance
     direction.
-  status: not_started
+  status: completed
   scope: committee
   workstream_id: WS-POL
   owner:
@@ -391,7 +391,7 @@ deliverables:
 - id: near_final_package
   title: Near-final recommendation package
   description: Integrated recommendation package, slide narrative, and gap-owner list.
-  status: not_started
+  status: in_progress
   scope: committee
   workstream_id: WS-POL
   owner:
@@ -416,7 +416,7 @@ deliverables:
 - id: D-CCI-1
   title: Comms Pack v1
   description: Stakeholder messaging, FAQ draft, and community input plan.
-  status: not_started
+  status: completed
   scope: workstream
   workstream_id: WS-CCI
   owner:
@@ -442,7 +442,7 @@ deliverables:
   title: Implementation Roadmap v1
   description: Implementation and PD roadmap with milestones, cadence, and success
     measures.
-  status: not_started
+  status: in_progress
   scope: workstream
   workstream_id: WS-IPC
   owner:
