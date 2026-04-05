@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-04-04T03:46:00.171572Z",
+    "generated_at": "2026-04-05T03:09:16.652701Z",
     "source": [
       "public/kpis.json",
       "public/ref_index.json",
@@ -310,7 +310,7 @@
         "depends_on": [
           "D-RSB-1"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "D-CPX-1": {
         "title": "Scenario Bank v1",
@@ -327,7 +327,7 @@
         "depends_on": [
           "D-RSB-1"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "D-AIN-1": {
         "title": "Attribution & Integrity Matrix v1",
@@ -345,7 +345,7 @@
         "depends_on": [
           "D-CPX-1"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "D-DPS-1": {
         "title": "AI Tool Review Checklist v1 + Risk Tiers",
@@ -361,7 +361,7 @@
           "R-008"
         ],
         "depends_on": [],
-        "status": "in_progress"
+        "status": "completed"
       },
       "D-EQA-1": {
         "title": "Equity Impact Checklist v1",
@@ -379,7 +379,7 @@
         "depends_on": [
           "D-CPX-1"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "m5_draft_sections": {
         "title": "Draft sections for priority recommendation domains",
@@ -389,7 +389,7 @@
         "depends_on": [
           "rec_outline_risk_register"
         ],
-        "status": "not_started"
+        "status": "completed"
       },
       "near_final_package": {
         "title": "Near-final recommendation package",
@@ -399,7 +399,7 @@
         "depends_on": [
           "m5_draft_sections"
         ],
-        "status": "not_started"
+        "status": "in_progress"
       },
       "D-CCI-1": {
         "title": "Comms Pack v1",
@@ -409,7 +409,7 @@
         "depends_on": [
           "D-POL-1"
         ],
-        "status": "not_started"
+        "status": "completed"
       },
       "D-IPC-1": {
         "title": "Implementation Roadmap v1",
@@ -421,7 +421,7 @@
           "D-EQA-1",
           "D-POL-1"
         ],
-        "status": "not_started"
+        "status": "in_progress"
       },
       "final_talk_track": {
         "title": "Final talk track and Q&A prep",

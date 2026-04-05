@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-04-04T03:46:00.172168Z",
-    "snapshot_version_key": "03a6a2f2f0529ade76ac7cdc7d2a10d1dc8d4207"
+    "generated_at": "2026-04-05T03:09:16.653347Z",
+    "snapshot_version_key": "c0ebe4137c99f9fa23b31bab2bc00faa28abbd89"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-04-04T03:45:57.872122Z",
+      "generated_at": "2026-04-05T03:09:14.369213Z",
       "source_version": "1.1.0",
-      "version_key": "03a6a2f2f0529ade76ac7cdc7d2a10d1dc8d4207"
+      "version_key": "c0ebe4137c99f9fa23b31bab2bc00faa28abbd89"
     },
     "metadata": {
-      "generated_at": "2026-04-04T03:45:57.872122Z",
+      "generated_at": "2026-04-05T03:09:14.369213Z",
       "source_version": "1.1.0",
-      "version_key": "03a6a2f2f0529ade76ac7cdc7d2a10d1dc8d4207",
+      "version_key": "c0ebe4137c99f9fa23b31bab2bc00faa28abbd89",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -340,7 +340,7 @@
       {
         "id": "D-POL-1",
         "title": "Policy Skeleton v0",
-        "status": "in_progress",
+        "status": "completed",
         "scope": "workstream",
         "workstream_id": "WS-POL",
         "owner": {
@@ -369,7 +369,7 @@
       {
         "id": "D-CPX-1",
         "title": "Scenario Bank v1",
-        "status": "in_progress",
+        "status": "completed",
         "scope": "workstream",
         "workstream_id": "WS-CPX",
         "owner": {
@@ -396,7 +396,7 @@
       {
         "id": "D-AIN-1",
         "title": "Attribution & Integrity Matrix v1",
-        "status": "in_progress",
+        "status": "completed",
         "scope": "workstream",
         "workstream_id": "WS-AIN",
         "owner": {
@@ -419,12 +419,12 @@
           "R-007"
         ],
         "committee_only": false,
-        "public_url": null
+        "public_url": "public/project_ingest/artifacts/d_ain_1_integrity_and_attribution_framework_restructured_v2___49dfbd7cf021.json"
       },
       {
         "id": "D-DPS-1",
         "title": "AI Tool Review Checklist v1 + Risk Tiers",
-        "status": "in_progress",
+        "status": "completed",
         "scope": "workstream",
         "workstream_id": "WS-DPS",
         "owner": {
@@ -450,7 +450,7 @@
       {
         "id": "D-EQA-1",
         "title": "Equity Impact Checklist v1",
-        "status": "in_progress",
+        "status": "completed",
         "scope": "workstream",
         "workstream_id": "WS-EQA",
         "owner": {
@@ -478,7 +478,7 @@
       {
         "id": "m5_draft_sections",
         "title": "Draft sections for priority recommendation domains",
-        "status": "not_started",
+        "status": "completed",
         "scope": "committee",
         "workstream_id": "WS-POL",
         "owner": {
@@ -498,7 +498,7 @@
       {
         "id": "near_final_package",
         "title": "Near-final recommendation package",
-        "status": "not_started",
+        "status": "in_progress",
         "scope": "committee",
         "workstream_id": "WS-POL",
         "owner": {
@@ -518,7 +518,7 @@
       {
         "id": "D-CCI-1",
         "title": "Comms Pack v1",
-        "status": "not_started",
+        "status": "completed",
         "scope": "workstream",
         "workstream_id": "WS-CCI",
         "owner": {
@@ -538,7 +538,7 @@
       {
         "id": "D-IPC-1",
         "title": "Implementation Roadmap v1",
-        "status": "not_started",
+        "status": "in_progress",
         "scope": "workstream",
         "workstream_id": "WS-IPC",
         "owner": {
@@ -600,6 +600,18 @@
       }
     ],
     "change_log": [
+      {
+        "id": "CHG-2026-04-05-01",
+        "date": "2026-04-05",
+        "type": "change",
+        "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-05; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
+        "trigger": "Automated SoR pipeline update",
+        "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:a6e946627aaf",
+        "owner": "Automation",
+        "status": "recorded",
+        "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:a6e946627aaf",
+        "notes": null
+      },
       {
         "id": "DEC-2026-03-20-01",
         "date": "2026-03-20",
@@ -780,7 +792,7 @@
           "instrumented": true,
           "next_gate_date": "2026-03-06",
           "next_gate_id": "m4",
-          "ready_count": 5
+          "ready_count": 10
         },
         "evidence": [
           {
@@ -837,15 +849,15 @@
         "rules": [
           "Score = completed_due_before_gate / due_before_gate * 100."
         ],
-        "score": 41,
-        "status": "red"
+        "score": 83,
+        "status": "yellow"
       },
       {
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 43,
-          "overdue_count": 8
+          "max_days_overdue": 44,
+          "overdue_count": 2
         },
         "evidence": [
           {
@@ -855,30 +867,6 @@
           {
             "id": "rec_outline_risk_register",
             "type": "deliverable"
-          },
-          {
-            "id": "D-POL-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-CPX-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-AIN-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-DPS-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-EQA-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "m5_draft_sections",
-            "type": "deliverable"
           }
         ],
         "id": "KPI-SCHED-02",
@@ -886,14 +874,14 @@
         "rules": [
           "Penalty combines overdue count and max overdue days."
         ],
-        "score": 0,
+        "score": 16,
         "status": "red"
       },
       {
         "category": "schedule",
         "description": "Deliverables blocked by unmet dependencies.",
         "details": {
-          "blocked_count": 9,
+          "blocked_count": 4,
           "deliverables_with_dependencies": 15
         },
         "evidence": [
@@ -902,27 +890,7 @@
             "type": "deliverable"
           },
           {
-            "id": "D-AIN-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-EQA-1",
-            "type": "deliverable"
-          },
-          {
             "id": "m5_draft_sections",
-            "type": "deliverable"
-          },
-          {
-            "id": "near_final_package",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-CCI-1",
-            "type": "deliverable"
-          },
-          {
-            "id": "D-IPC-1",
             "type": "deliverable"
           },
           {
@@ -939,8 +907,8 @@
         "rules": [
           "Score = (1 - blocked_rate) * 100."
         ],
-        "score": 40,
-        "status": "red"
+        "score": 73,
+        "status": "yellow"
       },
       {
         "category": "schedule",
@@ -1269,7 +1237,7 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates.",
         "details": {
-          "oldest_age_days": 40,
+          "oldest_age_days": 41,
           "sample_count": 22
         },
         "evidence": [],
@@ -1295,10 +1263,6 @@
               "reason": "missing_public_url_or_committee_only"
             },
             {
-              "id": "D-AIN-1",
-              "reason": "missing_public_url_or_committee_only"
-            },
-            {
               "id": "m5_draft_sections",
               "reason": "missing_public_url_or_committee_only"
             },
@@ -1318,10 +1282,6 @@
             "type": "deliverable"
           },
           {
-            "id": "D-AIN-1",
-            "type": "deliverable"
-          },
-          {
             "id": "m5_draft_sections",
             "type": "deliverable"
           },
@@ -1335,7 +1295,7 @@
         "rules": [
           "Missing visibility metadata reduces score."
         ],
-        "score": 72,
+        "score": 77,
         "status": "yellow"
       },
       {
@@ -1355,7 +1315,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-04-04T03:46:00.036680Z",
+      "generated_at": "2026-04-05T03:09:16.518447Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1363,8 +1323,8 @@
       "kpi_counts": {
         "gray": 1,
         "green": 8,
-        "red": 9,
-        "yellow": 1
+        "red": 7,
+        "yellow": 3
       },
       "overall_status": "red"
     },
@@ -1399,7 +1359,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-04-04T03:46:00.036680Z",
+    "generated_at": "2026-04-05T03:09:16.518447Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1411,7 +1371,7 @@
               "supporting_confidence_max",
               "evidence_narrative"
             ],
-            "path": "",
+            "path": "public/project_ingest/artifacts/d_ain_1_integrity_and_attribution_framework_restructured_v2___49dfbd7cf021.json",
             "recommended_sources": [],
             "suggested_fixes": [
               {
@@ -1862,7 +1822,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "dfa304f169bf"
+    "version_key": "5c97c0eaa2fb"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1896,7 +1856,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-04-04T03:45:59.830775Z",
+      "generated_at": "2026-04-05T03:09:16.302906Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1984,7 +1944,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-04-04T03:45:59.696929Z",
+      "generated_at": "2026-04-05T03:09:16.166744Z",
       "scanned_files_count": 25,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -2462,7 +2422,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-03T01:12:06Z",
+        "last_modified_iso": "2026-04-04T03:46:01Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2501,7 +2461,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-03T01:12:06Z",
+        "last_modified_iso": "2026-04-04T03:46:01Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2530,7 +2490,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-03T01:12:06Z",
+        "last_modified_iso": "2026-04-04T03:46:01Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2652,7 +2612,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-04-04T03:46:00.171572Z",
+      "generated_at": "2026-04-05T03:09:16.652701Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
@@ -2962,7 +2922,7 @@
           "depends_on": [
             "D-RSB-1"
           ],
-          "status": "in_progress"
+          "status": "completed"
         },
         "D-CPX-1": {
           "title": "Scenario Bank v1",
@@ -2979,7 +2939,7 @@
           "depends_on": [
             "D-RSB-1"
           ],
-          "status": "in_progress"
+          "status": "completed"
         },
         "D-AIN-1": {
           "title": "Attribution & Integrity Matrix v1",
@@ -2997,7 +2957,7 @@
           "depends_on": [
             "D-CPX-1"
           ],
-          "status": "in_progress"
+          "status": "completed"
         },
         "D-DPS-1": {
           "title": "AI Tool Review Checklist v1 + Risk Tiers",
@@ -3013,7 +2973,7 @@
             "R-008"
           ],
           "depends_on": [],
-          "status": "in_progress"
+          "status": "completed"
         },
         "D-EQA-1": {
           "title": "Equity Impact Checklist v1",
@@ -3031,7 +2991,7 @@
           "depends_on": [
             "D-CPX-1"
           ],
-          "status": "in_progress"
+          "status": "completed"
         },
         "m5_draft_sections": {
           "title": "Draft sections for priority recommendation domains",
@@ -3041,7 +3001,7 @@
           "depends_on": [
             "rec_outline_risk_register"
           ],
-          "status": "not_started"
+          "status": "completed"
         },
         "near_final_package": {
           "title": "Near-final recommendation package",
@@ -3051,7 +3011,7 @@
           "depends_on": [
             "m5_draft_sections"
           ],
-          "status": "not_started"
+          "status": "in_progress"
         },
         "D-CCI-1": {
           "title": "Comms Pack v1",
@@ -3061,7 +3021,7 @@
           "depends_on": [
             "D-POL-1"
           ],
-          "status": "not_started"
+          "status": "completed"
         },
         "D-IPC-1": {
           "title": "Implementation Roadmap v1",
@@ -3073,7 +3033,7 @@
             "D-EQA-1",
             "D-POL-1"
           ],
-          "status": "not_started"
+          "status": "in_progress"
         },
         "final_talk_track": {
           "title": "Final talk track and Q&A prep",

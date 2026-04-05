@@ -8,7 +8,7 @@
         "instrumented": true,
         "next_gate_date": "2026-03-06",
         "next_gate_id": "m4",
-        "ready_count": 5
+        "ready_count": 10
       },
       "evidence": [
         {
@@ -65,15 +65,15 @@
       "rules": [
         "Score = completed_due_before_gate / due_before_gate * 100."
       ],
-      "score": 41,
-      "status": "red"
+      "score": 83,
+      "status": "yellow"
     },
     {
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 43,
-        "overdue_count": 8
+        "max_days_overdue": 44,
+        "overdue_count": 2
       },
       "evidence": [
         {
@@ -83,30 +83,6 @@
         {
           "id": "rec_outline_risk_register",
           "type": "deliverable"
-        },
-        {
-          "id": "D-POL-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-CPX-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-AIN-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-DPS-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-EQA-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "m5_draft_sections",
-          "type": "deliverable"
         }
       ],
       "id": "KPI-SCHED-02",
@@ -114,14 +90,14 @@
       "rules": [
         "Penalty combines overdue count and max overdue days."
       ],
-      "score": 0,
+      "score": 16,
       "status": "red"
     },
     {
       "category": "schedule",
       "description": "Deliverables blocked by unmet dependencies.",
       "details": {
-        "blocked_count": 9,
+        "blocked_count": 4,
         "deliverables_with_dependencies": 15
       },
       "evidence": [
@@ -130,27 +106,7 @@
           "type": "deliverable"
         },
         {
-          "id": "D-AIN-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-EQA-1",
-          "type": "deliverable"
-        },
-        {
           "id": "m5_draft_sections",
-          "type": "deliverable"
-        },
-        {
-          "id": "near_final_package",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-CCI-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-IPC-1",
           "type": "deliverable"
         },
         {
@@ -167,8 +123,8 @@
       "rules": [
         "Score = (1 - blocked_rate) * 100."
       ],
-      "score": 40,
-      "status": "red"
+      "score": 73,
+      "status": "yellow"
     },
     {
       "category": "schedule",
@@ -497,7 +453,7 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates.",
       "details": {
-        "oldest_age_days": 40,
+        "oldest_age_days": 41,
         "sample_count": 22
       },
       "evidence": [],
@@ -523,10 +479,6 @@
             "reason": "missing_public_url_or_committee_only"
           },
           {
-            "id": "D-AIN-1",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
             "id": "m5_draft_sections",
             "reason": "missing_public_url_or_committee_only"
           },
@@ -546,10 +498,6 @@
           "type": "deliverable"
         },
         {
-          "id": "D-AIN-1",
-          "type": "deliverable"
-        },
-        {
           "id": "m5_draft_sections",
           "type": "deliverable"
         },
@@ -563,7 +511,7 @@
       "rules": [
         "Missing visibility metadata reduces score."
       ],
-      "score": 72,
+      "score": 77,
       "status": "yellow"
     },
     {
@@ -583,7 +531,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-04-04T03:46:00.036680Z",
+    "generated_at": "2026-04-05T03:09:16.518447Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
@@ -591,8 +539,8 @@
     "kpi_counts": {
       "gray": 1,
       "green": 8,
-      "red": 9,
-      "yellow": 1
+      "red": 7,
+      "yellow": 3
     },
     "overall_status": "red"
   },

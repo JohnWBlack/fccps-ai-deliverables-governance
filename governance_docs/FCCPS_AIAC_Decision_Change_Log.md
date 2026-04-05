@@ -1,7 +1,7 @@
 # FCCPS AI Advisory Committee — Decision & Change Log
 
 **Version:** v1  
-**Last updated:** 2026-03-08  
+**Last updated:** 2026-04-05  
 **Purpose:** Prevent drift by recording (1) decisions and (2) changes that affect downstream work (scope, grade-band structure, enforcement posture, tool governance, etc.).
 
 ## Decision log
@@ -33,6 +33,7 @@
 | CHG-2026-03-05-01 | 2026-03-05 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:2073386ab6a0 | Automation |
 | CHG-2026-03-07-01 | 2026-03-07 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:189b0456a114 | Automation |
 | CHG-2026-03-08-01 | 2026-03-08 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:1b9ab3615f8b | Automation |
+| CHG-2026-04-05-01 | 2026-04-05 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-05; timeline.yml@2026-03-02; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:a6e946627aaf | Automation |
 
 ---
 

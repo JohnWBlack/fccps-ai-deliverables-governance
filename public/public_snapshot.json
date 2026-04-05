@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generated_at": "2026-04-04T03:45:57.872122Z",
+    "generated_at": "2026-04-05T03:09:14.369213Z",
     "source_version": "1.1.0",
-    "version_key": "03a6a2f2f0529ade76ac7cdc7d2a10d1dc8d4207"
+    "version_key": "c0ebe4137c99f9fa23b31bab2bc00faa28abbd89"
   },
   "metadata": {
-    "generated_at": "2026-04-04T03:45:57.872122Z",
+    "generated_at": "2026-04-05T03:09:14.369213Z",
     "source_version": "1.1.0",
-    "version_key": "03a6a2f2f0529ade76ac7cdc7d2a10d1dc8d4207",
+    "version_key": "c0ebe4137c99f9fa23b31bab2bc00faa28abbd89",
     "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
   },
   "workstreams": [
@@ -335,7 +335,7 @@
     {
       "id": "D-POL-1",
       "title": "Policy Skeleton v0",
-      "status": "in_progress",
+      "status": "completed",
       "scope": "workstream",
       "workstream_id": "WS-POL",
       "owner": {
@@ -364,7 +364,7 @@
     {
       "id": "D-CPX-1",
       "title": "Scenario Bank v1",
-      "status": "in_progress",
+      "status": "completed",
       "scope": "workstream",
       "workstream_id": "WS-CPX",
       "owner": {
@@ -391,7 +391,7 @@
     {
       "id": "D-AIN-1",
       "title": "Attribution & Integrity Matrix v1",
-      "status": "in_progress",
+      "status": "completed",
       "scope": "workstream",
       "workstream_id": "WS-AIN",
       "owner": {
@@ -414,12 +414,12 @@
         "R-007"
       ],
       "committee_only": false,
-      "public_url": null
+      "public_url": "public/project_ingest/artifacts/d_ain_1_integrity_and_attribution_framework_restructured_v2___49dfbd7cf021.json"
     },
     {
       "id": "D-DPS-1",
       "title": "AI Tool Review Checklist v1 + Risk Tiers",
-      "status": "in_progress",
+      "status": "completed",
       "scope": "workstream",
       "workstream_id": "WS-DPS",
       "owner": {
@@ -445,7 +445,7 @@
     {
       "id": "D-EQA-1",
       "title": "Equity Impact Checklist v1",
-      "status": "in_progress",
+      "status": "completed",
       "scope": "workstream",
       "workstream_id": "WS-EQA",
       "owner": {
@@ -473,7 +473,7 @@
     {
       "id": "m5_draft_sections",
       "title": "Draft sections for priority recommendation domains",
-      "status": "not_started",
+      "status": "completed",
       "scope": "committee",
       "workstream_id": "WS-POL",
       "owner": {
@@ -493,7 +493,7 @@
     {
       "id": "near_final_package",
       "title": "Near-final recommendation package",
-      "status": "not_started",
+      "status": "in_progress",
       "scope": "committee",
       "workstream_id": "WS-POL",
       "owner": {
@@ -513,7 +513,7 @@
     {
       "id": "D-CCI-1",
       "title": "Comms Pack v1",
-      "status": "not_started",
+      "status": "completed",
       "scope": "workstream",
       "workstream_id": "WS-CCI",
       "owner": {
@@ -533,7 +533,7 @@
     {
       "id": "D-IPC-1",
       "title": "Implementation Roadmap v1",
-      "status": "not_started",
+      "status": "in_progress",
       "scope": "workstream",
       "workstream_id": "WS-IPC",
       "owner": {
@@ -595,6 +595,18 @@
     }
   ],
   "change_log": [
+    {
+      "id": "CHG-2026-04-05-01",
+      "date": "2026-04-05",
+      "type": "change",
+      "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-05; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
+      "trigger": "Automated SoR pipeline update",
+      "impact": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:a6e946627aaf",
+      "owner": "Automation",
+      "status": "recorded",
+      "impacted_artifacts": "Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:a6e946627aaf",
+      "notes": null
+    },
     {
       "id": "DEC-2026-03-20-01",
       "date": "2026-03-20",
