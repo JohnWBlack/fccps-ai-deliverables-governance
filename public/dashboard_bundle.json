@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-04-06T03:59:03.108529Z",
-    "snapshot_version_key": "43a60f78e86aa14b1e319c8c77dc1956a74e873b"
+    "generated_at": "2026-04-07T03:55:50.002519Z",
+    "snapshot_version_key": "841d40886b6f817a3c38d443ed62a0c557561744"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-04-06T03:59:00.647676Z",
+      "generated_at": "2026-04-07T03:55:48.076257Z",
       "source_version": "1.1.0",
-      "version_key": "43a60f78e86aa14b1e319c8c77dc1956a74e873b"
+      "version_key": "841d40886b6f817a3c38d443ed62a0c557561744"
     },
     "metadata": {
-      "generated_at": "2026-04-06T03:59:00.647676Z",
+      "generated_at": "2026-04-07T03:55:48.076257Z",
       "source_version": "1.1.0",
-      "version_key": "43a60f78e86aa14b1e319c8c77dc1956a74e873b",
+      "version_key": "841d40886b6f817a3c38d443ed62a0c557561744",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -856,7 +856,7 @@
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 45,
+          "max_days_overdue": 46,
           "overdue_count": 2
         },
         "evidence": [
@@ -874,7 +874,7 @@
         "rules": [
           "Penalty combines overdue count and max overdue days."
         ],
-        "score": 15,
+        "score": 14,
         "status": "red"
       },
       {
@@ -1237,7 +1237,7 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates.",
         "details": {
-          "oldest_age_days": 42,
+          "oldest_age_days": 43,
           "sample_count": 22
         },
         "evidence": [],
@@ -1315,7 +1315,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-04-06T03:59:02.965438Z",
+      "generated_at": "2026-04-07T03:55:49.897355Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1359,7 +1359,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-04-06T03:59:02.965438Z",
+    "generated_at": "2026-04-07T03:55:49.897355Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1822,7 +1822,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "0b02fe28386e"
+    "version_key": "c3548c79cd6f"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1856,7 +1856,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-04-06T03:59:02.754659Z",
+      "generated_at": "2026-04-07T03:55:49.738070Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1944,7 +1944,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-04-06T03:59:02.607671Z",
+      "generated_at": "2026-04-07T03:55:49.607904Z",
       "scanned_files_count": 25,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -2422,7 +2422,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-05T03:09:18Z",
+        "last_modified_iso": "2026-04-06T03:59:04Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2461,7 +2461,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-05T03:09:18Z",
+        "last_modified_iso": "2026-04-06T03:59:04Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2490,7 +2490,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-05T03:09:18Z",
+        "last_modified_iso": "2026-04-06T03:59:04Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2612,7 +2612,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-04-06T03:59:03.107957Z",
+      "generated_at": "2026-04-07T03:55:50.002058Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
