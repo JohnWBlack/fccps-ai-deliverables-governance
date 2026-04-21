@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-04-20T04:04:03.589275Z",
-    "snapshot_version_key": "25881091bd939507eefddcba2a6e6d2b95e16bc2"
+    "generated_at": "2026-04-21T04:00:21.675618Z",
+    "snapshot_version_key": "2037e40e784bbd6712fe29905d12761923cefd3b"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-04-20T04:04:01.157481Z",
+      "generated_at": "2026-04-21T04:00:19.631737Z",
       "source_version": "1.1.0",
-      "version_key": "25881091bd939507eefddcba2a6e6d2b95e16bc2"
+      "version_key": "2037e40e784bbd6712fe29905d12761923cefd3b"
     },
     "metadata": {
-      "generated_at": "2026-04-20T04:04:01.157481Z",
+      "generated_at": "2026-04-21T04:00:19.631737Z",
       "source_version": "1.1.0",
-      "version_key": "25881091bd939507eefddcba2a6e6d2b95e16bc2",
+      "version_key": "2037e40e784bbd6712fe29905d12761923cefd3b",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -856,7 +856,7 @@
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 59,
+          "max_days_overdue": 60,
           "overdue_count": 4
         },
         "evidence": [
@@ -1245,7 +1245,7 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates.",
         "details": {
-          "oldest_age_days": 56,
+          "oldest_age_days": 57,
           "sample_count": 22
         },
         "evidence": [],
@@ -1323,7 +1323,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-04-20T04:04:03.455621Z",
+      "generated_at": "2026-04-21T04:00:21.560691Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -1367,7 +1367,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-04-20T04:04:03.455621Z",
+    "generated_at": "2026-04-21T04:00:21.560691Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -1830,7 +1830,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "fc766c176bd7"
+    "version_key": "dc7c7108cafb"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -1864,7 +1864,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-04-20T04:04:03.244946Z",
+      "generated_at": "2026-04-21T04:00:21.374222Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -1952,7 +1952,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-04-20T04:04:03.107433Z",
+      "generated_at": "2026-04-21T04:00:21.258415Z",
       "scanned_files_count": 25,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -2430,7 +2430,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-19T04:01:19Z",
+        "last_modified_iso": "2026-04-20T04:04:05Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2469,7 +2469,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-19T04:01:19Z",
+        "last_modified_iso": "2026-04-20T04:04:05Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2498,7 +2498,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-19T04:01:19Z",
+        "last_modified_iso": "2026-04-20T04:04:05Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -2620,7 +2620,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-04-20T04:04:03.588721Z",
+      "generated_at": "2026-04-21T04:00:21.675135Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
