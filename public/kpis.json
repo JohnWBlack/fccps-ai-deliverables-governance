@@ -72,8 +72,8 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 62,
-        "overdue_count": 4
+        "max_days_overdue": 63,
+        "overdue_count": 5
       },
       "evidence": [
         {
@@ -90,6 +90,10 @@
         },
         {
           "id": "D-IPC-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "final_talk_track",
           "type": "deliverable"
         }
       ],
@@ -461,7 +465,7 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates.",
       "details": {
-        "oldest_age_days": 59,
+        "oldest_age_days": 60,
         "sample_count": 22
       },
       "evidence": [],
@@ -539,7 +543,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-04-23T04:00:54.904406Z",
+    "generated_at": "2026-04-24T04:03:14.863819Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
