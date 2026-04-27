@@ -4,6 +4,8 @@ WS-POL-H Student Use Categories & Controls
 
 The Board should direct the schools to develop a scheme for categorizing generative AI use cases for the purpose of regulating what counts as permissible and impermissible student use. The adopted scheme should reflect a human-centered approach to AI. The use of AI technologies may be permitted and even encouraged where it supports learning and productivity, but the people involved in ensuring the responsible use of such technologies must remain accountable to existing standards of sound pedagogical decision-making, evaluative accuracy, and equity and fairness.
 
+The Board should also emphasize to the schools that all responsible parties must make every effort to communicate expectations around the student use of AI in ways that are understandable and accessible to families. Overly complex rules or documentation requirements may reduce clarity, create unnecessary obstacles to compliance and limit meaningful engagement.
+
 There are many dimensions along which a particular AI student use case may be characterized for the purpose of responsible regulation. These include, for example:
 
 A specification of the generative AI technology or technologies that will be used.

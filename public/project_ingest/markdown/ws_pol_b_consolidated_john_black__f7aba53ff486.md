@@ -1,0 +1,15 @@
+<!-- provenance:{"extractor_version":"2.0.0","pipeline_version":"2.0.0","project":"FCCPS AI Committee"} -->
+
+# WS-POL-B — Adoption and Restriction Posture
+
+FCCPS should take a bounded, developmentally sensitive approach to AI. The committee does not support a blanket ban, and it does not support AI adoption for its own sake. AI should be allowed where it supports learning or operations under clear guardrails. Restrictions should be used where age, risk, assessment validity, privacy, safety, or decisions that must stay with people require them.
+
+This means FCCPS should start with educational purpose. AI use should be judged by whether it helps learning, protects student rights, preserves human judgment, and can be implemented responsibly by staff. In many cases, learning and integrity can be protected through assignment design, drafts, conferencing, process checks, or other ways of making student thinking visible. In other cases, stronger limits are appropriate, especially when validity cannot otherwise be protected, when tools are unvetted, or when students are too young for direct or unsupervised use.
+
+The committee also supports stronger protection in higher-risk settings. Younger students need tighter safeguards around direct exposure and use. FCCPS should be especially careful with student-facing conversational AI and with uses that raise concerns about harmful content, manipulation, over-reliance, data extraction, or reduced human interaction. These concerns narrow the district’s posture in some settings even within a broader bounded-use approach.
+
+The committee also supports an iterative governance model. New or higher-risk uses should be introduced carefully, with clear success measures, monitoring, review points, and off-ramps if harms rise or benefits do not materialize. FCCPS should emphasize disciplined monitoring and the ability to pause, revise, or discontinue uses rather than expansion for its own sake.
+
+Broadly, the committee agrees that AI use must be governed, that learning goals and human judgment should remain central, that developmental appropriateness matters, and that the policy should be reviewed as evidence and district experience evolve. A remaining difference is whether the policy should present this as design/process first with restrictions as needed, or whether that framing understates the need for stronger front-end restraint in some domains.
+
+A documented alternative view in the committee favors a more protective default posture. This view holds that design and restriction should not be treated as opposites, because assessment design, age-based limits, and use conditions are themselves forms of restriction. From this perspective, FCCPS should use stronger front-end restraint in at least some domains, especially where student development, evaluative integrity, direct student exposure, or trust in human judgment is at stake. This view also supports a firmer stance against reliance on AI-detection tools, a stronger non-AI path where AI use is optional, and clearer proof of educational benefit before student-facing AI use is expanded.

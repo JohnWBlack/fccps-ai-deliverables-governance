@@ -105,8 +105,16 @@ jobs:
       - name: Extract reference index
         run: python scripts/extract_refs.py
 
-      - name: Build quality report
+      - name: Run quality checks
         run: python scripts/quality_checks.py
+
+      - name: Build risk register
+        if: ${{ hashFiles('scripts/build_risk_register.py') != '' }}
+        run: python scripts/build_risk_register.py
+
+      - name: Skip risk register build (script missing)
+        if: ${{ hashFiles('scripts/build_risk_register.py') == '' }}
+        run: echo "scripts/build_risk_register.py not found; skipping risk register build step."
 
       - name: Build public KPIs
         run: python scripts/build_kpis.py
@@ -148,7 +156,7 @@ jobs:
       - name: Detect generated changes
         id: public_changes
         run: |
-          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/advisory_memory.json public/advisory_memory_index.json public/advisory_memory_audit.json public/meeting4_readiness.json public/dashboard_bundle.json public/dashboard_bundle.zip public/full_export.json public/full_export.zip public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md; then
+          if git diff --quiet -- public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/risk_register.json public/kpis.json public/kpi_evidence.json public/advisory_memory.json public/advisory_memory_index.json public/advisory_memory_audit.json public/meeting4_readiness.json public/dashboard_bundle.json public/dashboard_bundle.zip public/full_export.json public/full_export.zip public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -159,7 +167,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/kpis.json public/kpi_evidence.json public/advisory_memory.json public/advisory_memory_index.json public/advisory_memory_audit.json public/meeting4_readiness.json public/dashboard_bundle.json public/dashboard_bundle.zip public/full_export.json public/full_export.zip public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md
+          git add public/public_snapshot.json public/file_catalog.json public/ref_index.json public/quality_report.json public/risk_register.json public/kpis.json public/kpi_evidence.json public/advisory_memory.json public/advisory_memory_index.json public/advisory_memory_audit.json public/meeting4_readiness.json public/dashboard_bundle.json public/dashboard_bundle.zip public/full_export.json public/full_export.zip public/glidepath_history.json public/glidepath_diagnostics.json public/survey_exports governance_docs/FCCPS_AIAC_Workstreams_Registry.md governance_docs/FCCPS_AIAC_Deliverables_Index.md governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md governance_docs/FCCPS_AIAC_Decision_Change_Log.md
           if git diff --cached --quiet; then
             echo "No staged changes; nothing to commit."
             exit 0
@@ -167,7 +175,7 @@ jobs:
           git commit -m "chore(public): update derived artifacts [skip ci]"
           if ! git push origin HEAD:main; then
             echo "WARNING: auto-commit push failed (likely concurrent update). Proceeding without failing workflow.";
-            echo "Run locally if needed: python scripts/update_change_log.py && python scripts/build_snapshot.py && python scripts/build_catalog.py && python scripts/extract_refs.py && python scripts/quality_checks.py && python scripts/build_kpis.py && python scripts/build_advisory_memory.py && python scripts/build_dashboard_bundle.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
+            echo "Run locally if needed: python scripts/update_change_log.py && python scripts/build_snapshot.py && python scripts/build_catalog.py && python scripts/extract_refs.py && python scripts/quality_checks.py && python scripts/build_risk_register.py && python scripts/build_kpis.py && python scripts/build_advisory_memory.py && python scripts/build_dashboard_bundle.py && python scripts/build_glidepath_history.py && python scripts/build_glidepath_diagnostics.py && python scripts/scrub_survey_exports.py && python scripts/validate_public.py && python scripts/validate_no_pii.py";
             exit 0;
           fi
 

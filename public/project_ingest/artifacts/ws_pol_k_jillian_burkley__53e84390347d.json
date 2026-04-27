@@ -1,0 +1,250 @@
+{
+  "artifact_id": "53e84390347d87a3d7e899ba",
+  "associated_outputs": {
+    "md_path": "public/project_ingest/markdown/ws_pol_k_jillian_burkley__53e84390347d.md"
+  },
+  "doc_type": "docx",
+  "extracted_at_utc": "2026-04-27T14:29:11.176131Z",
+  "file_mtime_utc": "2026-04-16T02:35:16.528814Z",
+  "provenance": {
+    "extractor_version": "2.0.0",
+    "pipeline_version": "2.0.0",
+    "project": "FCCPS AI Committee"
+  },
+  "sections": [
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance"
+      ],
+      "section_id": "sec_0001",
+      "text": "The committee recommends that FCCPS establish a structured governance framework for AI tools that protects student privacy, ensures responsible data practices, and creates clear accountability for vendors and staff. This section draws on WS-DPS workstream deliverables, Virginia HB1186/SB394 (enrolled March 2026), FERPA, COPPA, IDEA, Section 504, and VDOE AI Guidelines (2024)."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "1. Guiding Principles"
+      ],
+      "section_id": "sec_0002",
+      "text": "The committee believes that student data protections for AI should meet or exceed existing FERPA and state-law requirements. The following principles should guide all AI-related data practices in FCCPS:"
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "1. Guiding Principles"
+      ],
+      "section_id": "sec_0003",
+      "text": "All AI tools processing student data must comply with FERPA, COPPA, IDEA, Section 504, and Virginia student data privacy statutes."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "1. Guiding Principles"
+      ],
+      "section_id": "sec_0004",
+      "text": "Data minimization: AI tools should collect only the data necessary for their approved educational function and retain it no longer than required."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "1. Guiding Principles"
+      ],
+      "section_id": "sec_0005",
+      "text": "No student data collected through AI tools may be used for non-educational purposes, including advertising, profiling, or sale to third parties."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "1. Guiding Principles"
+      ],
+      "section_id": "sec_0006",
+      "text": "FCCPS must maintain transparency with families about which AI tools are in use, what data they collect, and how that data is protected."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "1. Guiding Principles"
+      ],
+      "section_id": "sec_0007",
+      "text": "Vendor compliance is a condition of continued use, not a one-time checkpoint."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "2. Tiered Risk Model for AI Tool Approval"
+      ],
+      "section_id": "sec_0008",
+      "text": "The committee recommends a three-tier classification framework, consistent with VDOE tiered approval guidance, to match governance requirements to risk level:"
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "2. Tiered Risk Model for AI Tool Approval"
+      ],
+      "section_id": "sec_0009",
+      "text": "Tier 1 — Low Risk: Tools that do not collect, store, or process any student-identifiable information. Require department-level approval and basic instructional-use documentation."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "2. Tiered Risk Model for AI Tool Approval"
+      ],
+      "section_id": "sec_0010",
+      "text": "Tier 2 — Moderate Risk: Tools that process de-identified or aggregated student data, or that receive student work artifacts. Require IT review, a signed Data Processing Agreement (DPA), and annual recertification."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "2. Tiered Risk Model for AI Tool Approval"
+      ],
+      "section_id": "sec_0011",
+      "text": "Tier 3 — High Risk: Tools that collect, store, or process personally identifiable student information, connect to FCCPS identity systems, or inform consequential decisions. Require full privacy impact review, executed DPA with sub-processor restrictions, parental notice, and governance-office approval."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "3. Escalation Rules"
+      ],
+      "section_id": "sec_0012",
+      "text": "The following conditions automatically escalate a tool to Tier 3 review regardless of vendor assurances:"
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "3. Escalation Rules"
+      ],
+      "section_id": "sec_0013",
+      "text": "Identity linkage: Any tool requiring student accounts or connecting to FCCPS identity systems (SSO, SIS, LMS)."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "3. Escalation Rules"
+      ],
+      "section_id": "sec_0014",
+      "text": "Consequential use: Any tool used to inform placement, grading, intervention, discipline, or special education decisions."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "3. Escalation Rules"
+      ],
+      "section_id": "sec_0015",
+      "text": "Third-party data sharing: Any tool whose vendor shares student data with sub-processors or downstream analytics providers, unless all sub-processors are contractually bound to equivalent protections."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "3. Escalation Rules"
+      ],
+      "section_id": "sec_0016",
+      "text": "Embedded AI features: When an already-approved platform introduces new AI capabilities (e.g., generative AI, predictive analytics), those features must be reviewed independently. Existing platform approval does not extend to new AI functionality."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "3. Escalation Rules"
+      ],
+      "section_id": "sec_0017",
+      "text": "Consumer-grade tools: AI applications not reviewed through the FCCPS governance process are prohibited for use with student data. This is both a governance and equity issue—consumer-grade tools lack the privacy protections, accessibility standards, and bias review that FCCPS requires."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "4. Vendor and Procurement Requirements"
+      ],
+      "section_id": "sec_0018",
+      "text": "The committee recommends that FCCPS require the following as conditions of AI tool approval for Tier 2 and Tier 3 tools:"
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "4. Vendor and Procurement Requirements"
+      ],
+      "section_id": "sec_0019",
+      "text": "Executed Data Processing Agreement specifying data use limitations, retention and deletion schedules, breach notification procedures, and sub-processor restrictions."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "4. Vendor and Procurement Requirements"
+      ],
+      "section_id": "sec_0020",
+      "text": "Vendor commitment that student data will not be used for model training, advertising, or any purpose beyond the contracted educational function."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "4. Vendor and Procurement Requirements"
+      ],
+      "section_id": "sec_0021",
+      "text": "Annual vendor recertification confirming continued compliance, with provision for accelerated review if the vendor’s data practices, ownership, or product capabilities materially change."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "4. Vendor and Procurement Requirements"
+      ],
+      "section_id": "sec_0022",
+      "text": "Documented accessibility review for tools used with students with disabilities, ensuring alignment with IDEA and Section 504 (see Section J)."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "5. Non-Negotiable Constraints"
+      ],
+      "section_id": "sec_0023",
+      "text": "The committee identifies the following as non-negotiable:"
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "5. Non-Negotiable Constraints"
+      ],
+      "section_id": "sec_0024",
+      "text": "No AI tool may process student-identifiable data without an executed DPA on file with FCCPS."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "5. Non-Negotiable Constraints"
+      ],
+      "section_id": "sec_0025",
+      "text": "No vendor may use student data for model training, product development, or any purpose outside the contracted educational function."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "5. Non-Negotiable Constraints"
+      ],
+      "section_id": "sec_0026",
+      "text": "No AI-generated output may serve as the sole or primary basis for consequential decisions about a student (see Section J)."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "5. Non-Negotiable Constraints"
+      ],
+      "section_id": "sec_0027",
+      "text": "Tools used in special education contexts require additional review—including clearance by qualified professionals (school psychologists, SLPs, OTs, social workers, counselors), bias assessment, and family notification specific to AI use in the student’s program."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "6. Decisions for Board Consideration"
+      ],
+      "section_id": "sec_0028",
+      "text": "The committee identifies three tradeoffs for Board resolution: (1) whether FCCPS should adopt a proactive annual notice to families identifying all AI tools and their data practices, or affirm that existing FERPA compliance is sufficient; (2) what the consequence should be when staff use a consumer-grade or unapproved AI tool with student data; and (3) who within FCCPS is responsible for ongoing governance, vendor review, and compliance monitoring—and what capacity is needed to sustain this work."
+    },
+    {
+      "heading_path": [
+        "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance",
+        "6. Decisions for Board Consideration"
+      ],
+      "section_id": "sec_0029",
+      "text": "Cross-References: Section D (Definitions); Section J (Students with Disabilities and Human Decision Safeguards); Section M (Equity in Our Community); Section O (Reassessment and Updating of Policy); WS-DPS workstream deliverables (tiered risk model, procurement checklist, top risks); Virginia HB1186/SB394 (2026)."
+    }
+  ],
+  "source_hash_sha256": "dc92a51adc8c2c3139318f0714b8cca458fc2627b9f1f3389883d0034efc9e9c",
+  "source_rel_path": "drafting/_consolidated/WS-POL-K_Jillian-Burkley.docx",
+  "title": "WS-POL-K: Protection of Student Privacy, Data Governance, and Vendor/Procurement Governance"
+}

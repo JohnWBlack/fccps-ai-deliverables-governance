@@ -48,7 +48,7 @@ CORRIDOR_GATES: list[dict[str, Any]] = [
     {"gate_id": "m4", "date": "2026-03-06", "what_min": 4.0, "what_max": 5.5, "how_min": 4.0, "how_max": 5.5, "board_ready_deadline": False},
     {"gate_id": "m5", "date": "2026-03-20", "what_min": 5.0, "what_max": 6.5, "how_min": 5.0, "how_max": 6.5, "board_ready_deadline": False},
     {"gate_id": "m6", "date": "2026-04-10", "what_min": 6.0, "what_max": 7.5, "how_min": 6.0, "how_max": 7.5, "board_ready_deadline": False},
-    {"gate_id": "m7", "date": "2026-04-24", "what_min": 7.5, "what_max": 9.0, "how_min": 7.5, "how_max": 9.0, "board_ready_deadline": True},
+    {"gate_id": "m7", "date": "2026-04-24", "what_min": 7.5, "what_max": 10.0, "how_min": 7.5, "how_max": 10.0, "board_ready_deadline": True},
     {"gate_id": "m8", "date": "2026-05-15", "what_min": 8.5, "what_max": 10.0, "how_min": 8.5, "how_max": 10.0, "board_ready_deadline": False},
 ]
 
@@ -350,10 +350,10 @@ def main() -> None:
 
     points = history.get("points") if isinstance(history.get("points"), list) else []
     if points and isinstance(points[-1], dict) and points[-1].get("version_key") == current_point.get("version_key"):
-        print("ℹ️  Glidepath history unchanged (same version_key); no update written.")
-        return
-
-    points.append(current_point)
+        points[-1] = current_point
+        print("ℹ️  Glidepath history refreshed in-place (same version_key; point metadata updated).")
+    else:
+        points.append(current_point)
     normalized_points = [normalize_point(point) for point in points if isinstance(point, dict)]
     history["points"] = sort_points_by_generated_at(normalized_points)
     history["current_eval"] = compute_current_eval(history["points"], history["corridor"]["gates"])

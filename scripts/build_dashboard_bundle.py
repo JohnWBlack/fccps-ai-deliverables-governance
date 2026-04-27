@@ -17,6 +17,7 @@ SNAPSHOT_PATH = PUBLIC_DIR / "public_snapshot.json"
 FILE_CATALOG_PATH = PUBLIC_DIR / "file_catalog.json"
 REF_INDEX_PATH = PUBLIC_DIR / "ref_index.json"
 QUALITY_PATH = PUBLIC_DIR / "quality_report.json"
+RISK_REGISTER_PATH = PUBLIC_DIR / "risk_register.json"
 KPIS_PATH = PUBLIC_DIR / "kpis.json"
 KPI_EVIDENCE_PATH = PUBLIC_DIR / "kpi_evidence.json"
 EVIDENCE_COVERAGE_PATH = PUBLIC_DIR / "evidence_coverage.json"
@@ -201,6 +202,7 @@ def build_dashboard_bundle(
     snapshot: dict[str, Any],
     kpis: dict[str, Any],
     quality: dict[str, Any],
+    risk_register: dict[str, Any],
     ref_index: dict[str, Any],
     evidence_coverage: dict[str, Any],
     evidence_templates: dict[str, Any],
@@ -216,6 +218,7 @@ def build_dashboard_bundle(
         "evidence_coverage": evidence_coverage,
         "evidence_templates": evidence_templates,
         "quality_report": quality,
+        "risk_register": risk_register,
         "ref_index": ref_index,
         "meeting4_readiness": meeting4_readiness,
     }
@@ -227,6 +230,7 @@ def build_full_export(artifacts: dict[str, Any]) -> dict[str, Any]:
         "file_catalog.json",
         "ref_index.json",
         "quality_report.json",
+        "risk_register.json",
         "kpis.json",
         "kpi_evidence.json",
         "evidence_coverage.json",
@@ -266,6 +270,7 @@ def main() -> None:
     file_catalog = load_json(FILE_CATALOG_PATH)
     ref_index = load_json(REF_INDEX_PATH)
     quality = load_json(QUALITY_PATH)
+    risk_register = load_json(RISK_REGISTER_PATH)
     kpis = load_json(KPIS_PATH)
     kpi_evidence = load_json(KPI_EVIDENCE_PATH)
     evidence_coverage = load_json(EVIDENCE_COVERAGE_PATH)
@@ -284,6 +289,7 @@ def main() -> None:
         snapshot,
         kpis,
         quality,
+        risk_register,
         ref_index,
         evidence_coverage,
         evidence_templates,
@@ -296,6 +302,7 @@ def main() -> None:
         "file_catalog.json": file_catalog,
         "ref_index.json": ref_index,
         "quality_report.json": quality,
+        "risk_register.json": risk_register,
         "kpis.json": kpis,
         "kpi_evidence.json": kpi_evidence,
         "evidence_coverage.json": evidence_coverage,
@@ -327,6 +334,7 @@ def main() -> None:
             SNAPSHOT_PATH,
             KPIS_PATH,
             QUALITY_PATH,
+            RISK_REGISTER_PATH,
             REF_INDEX_PATH,
             KPI_EVIDENCE_PATH,
             EVIDENCE_COVERAGE_PATH,

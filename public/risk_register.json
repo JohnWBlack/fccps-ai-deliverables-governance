@@ -1,0 +1,459 @@
+{
+  "meta": {
+    "deliverables_sor_last_updated": "2026-04-27",
+    "generated_at": "2026-04-27T15:32:23.594322Z",
+    "risk_sor_last_updated": "2026-03-03",
+    "risk_sor_version": "1.0.0",
+    "schema_version": "1.0.0",
+    "source": {
+      "deliverables": "sor/deliverables.yml",
+      "risks": "sor/risks.yml"
+    }
+  },
+  "risks": [
+    {
+      "description": null,
+      "id": "R-001",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-DPS-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-004",
+            "P-006",
+            "P-008"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_dps_1_proposed_revised__b4082fe230d4.json",
+          "status": "completed",
+          "title": "AI Tool Review Checklist v1 + Risk Tiers",
+          "workstream_id": "WS-DPS"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-POL-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006",
+            "P-007"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f543a9cb3ecb.json",
+          "status": "completed",
+          "title": "Policy Skeleton v0",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "rec_outline_risk_register",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006"
+          ],
+          "public_url": "public/project_ingest/artifacts/fccps_ai_advisory_committee_retrospective_first_pass_risk_re__f83df930f120.json",
+          "status": "completed",
+          "title": "Recommendations outline and first-pass risk register",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "checkpoint_id": "ms_policy_principles",
+          "deliverable_id": "policy_principles",
+          "due_date": "2026-02-20",
+          "principle_refs": [
+            "P-001",
+            "P-002",
+            "P-003"
+          ],
+          "public_url": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+          "status": "completed",
+          "title": "Policy principles set",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "linked_deliverables_count": 4,
+      "linked_principle_refs": [
+        "P-001",
+        "P-002",
+        "P-003",
+        "P-004",
+        "P-006",
+        "P-007",
+        "P-008"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Data privacy non-compliance",
+      "status": "active"
+    },
+    {
+      "description": null,
+      "id": "R-002",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-AIN-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-003",
+            "P-004",
+            "P-008"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_ain_1_integrity_and_attribution_framework_restructured_v2___49dfbd7cf021.json",
+          "status": "completed",
+          "title": "Attribution & Integrity Matrix v1",
+          "workstream_id": "WS-AIN"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-POL-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006",
+            "P-007"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f543a9cb3ecb.json",
+          "status": "completed",
+          "title": "Policy Skeleton v0",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "rec_outline_risk_register",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006"
+          ],
+          "public_url": "public/project_ingest/artifacts/fccps_ai_advisory_committee_retrospective_first_pass_risk_re__f83df930f120.json",
+          "status": "completed",
+          "title": "Recommendations outline and first-pass risk register",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "linked_deliverables_count": 3,
+      "linked_principle_refs": [
+        "P-001",
+        "P-003",
+        "P-004",
+        "P-006",
+        "P-007",
+        "P-008"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Assessment integrity gaps",
+      "status": "active"
+    },
+    {
+      "description": null,
+      "id": "R-003",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-CPX-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-002",
+            "P-003",
+            "P-005"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_cpx_1_scenarios__cff4abea8a5f.json",
+          "status": "completed",
+          "title": "Scenario Bank v1",
+          "workstream_id": "WS-CPX"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-EQA-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-002",
+            "P-005",
+            "P-007"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_eqa_1_equity_impact_checklist_v1_0__e3098af7d643.json",
+          "status": "completed",
+          "title": "Equity Impact Checklist v1",
+          "workstream_id": "WS-EQA"
+        }
+      ],
+      "linked_deliverables_count": 2,
+      "linked_principle_refs": [
+        "P-002",
+        "P-003",
+        "P-005",
+        "P-007"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Equity impact blind spots",
+      "status": "active"
+    },
+    {
+      "description": null,
+      "id": "R-004",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-AIN-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-003",
+            "P-004",
+            "P-008"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_ain_1_integrity_and_attribution_framework_restructured_v2___49dfbd7cf021.json",
+          "status": "completed",
+          "title": "Attribution & Integrity Matrix v1",
+          "workstream_id": "WS-AIN"
+        },
+        {
+          "checkpoint_id": "ms_policy_principles",
+          "deliverable_id": "policy_principles",
+          "due_date": "2026-02-20",
+          "principle_refs": [
+            "P-001",
+            "P-002",
+            "P-003"
+          ],
+          "public_url": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+          "status": "completed",
+          "title": "Policy principles set",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "linked_deliverables_count": 2,
+      "linked_principle_refs": [
+        "P-001",
+        "P-002",
+        "P-003",
+        "P-004",
+        "P-008"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Insufficient transparency to stakeholders",
+      "status": "active"
+    },
+    {
+      "description": null,
+      "id": "R-005",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-DPS-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-004",
+            "P-006",
+            "P-008"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_dps_1_proposed_revised__b4082fe230d4.json",
+          "status": "completed",
+          "title": "AI Tool Review Checklist v1 + Risk Tiers",
+          "workstream_id": "WS-DPS"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-POL-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006",
+            "P-007"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f543a9cb3ecb.json",
+          "status": "completed",
+          "title": "Policy Skeleton v0",
+          "workstream_id": "WS-POL"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "rec_outline_risk_register",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006"
+          ],
+          "public_url": "public/project_ingest/artifacts/fccps_ai_advisory_committee_retrospective_first_pass_risk_re__f83df930f120.json",
+          "status": "completed",
+          "title": "Recommendations outline and first-pass risk register",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "linked_deliverables_count": 3,
+      "linked_principle_refs": [
+        "P-001",
+        "P-004",
+        "P-006",
+        "P-007",
+        "P-008"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Weak governance controls",
+      "status": "active"
+    },
+    {
+      "description": null,
+      "id": "R-006",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-CPX-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-002",
+            "P-003",
+            "P-005"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_cpx_1_scenarios__cff4abea8a5f.json",
+          "status": "completed",
+          "title": "Scenario Bank v1",
+          "workstream_id": "WS-CPX"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-EQA-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-002",
+            "P-005",
+            "P-007"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_eqa_1_equity_impact_checklist_v1_0__e3098af7d643.json",
+          "status": "completed",
+          "title": "Equity Impact Checklist v1",
+          "workstream_id": "WS-EQA"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "rec_outline_risk_register",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-001",
+            "P-004",
+            "P-006"
+          ],
+          "public_url": "public/project_ingest/artifacts/fccps_ai_advisory_committee_retrospective_first_pass_risk_re__f83df930f120.json",
+          "status": "completed",
+          "title": "Recommendations outline and first-pass risk register",
+          "workstream_id": "WS-POL"
+        }
+      ],
+      "linked_deliverables_count": 3,
+      "linked_principle_refs": [
+        "P-001",
+        "P-002",
+        "P-003",
+        "P-004",
+        "P-005",
+        "P-006",
+        "P-007"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Cross-workstream dependency slippage",
+      "status": "active"
+    },
+    {
+      "description": null,
+      "id": "R-007",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-AIN-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-003",
+            "P-004",
+            "P-008"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_ain_1_integrity_and_attribution_framework_restructured_v2___49dfbd7cf021.json",
+          "status": "completed",
+          "title": "Attribution & Integrity Matrix v1",
+          "workstream_id": "WS-AIN"
+        }
+      ],
+      "linked_deliverables_count": 1,
+      "linked_principle_refs": [
+        "P-003",
+        "P-004",
+        "P-008"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Policy-language ambiguity",
+      "status": "active"
+    },
+    {
+      "description": null,
+      "id": "R-008",
+      "linked_deliverables": [
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-DPS-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-004",
+            "P-006",
+            "P-008"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_dps_1_proposed_revised__b4082fe230d4.json",
+          "status": "completed",
+          "title": "AI Tool Review Checklist v1 + Risk Tiers",
+          "workstream_id": "WS-DPS"
+        },
+        {
+          "checkpoint_id": "m4",
+          "deliverable_id": "D-EQA-1",
+          "due_date": "2026-03-06",
+          "principle_refs": [
+            "P-002",
+            "P-005",
+            "P-007"
+          ],
+          "public_url": "public/project_ingest/artifacts/d_eqa_1_equity_impact_checklist_v1_0__e3098af7d643.json",
+          "status": "completed",
+          "title": "Equity Impact Checklist v1",
+          "workstream_id": "WS-EQA"
+        }
+      ],
+      "linked_deliverables_count": 2,
+      "linked_principle_refs": [
+        "P-002",
+        "P-004",
+        "P-005",
+        "P-006",
+        "P-007",
+        "P-008"
+      ],
+      "linked_statuses": [
+        "completed"
+      ],
+      "name": "Implementation readiness mismatch",
+      "status": "active"
+    }
+  ],
+  "summary": {
+    "risks_with_linked_deliverables": 8,
+    "risks_without_linked_deliverables": 0,
+    "total_risks": 8,
+    "unknown_risk_refs_in_deliverables": []
+  }
+}

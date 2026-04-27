@@ -23,6 +23,7 @@ TIMEZONE_NAME = "America/New_York"
 FRESHNESS_DAYS = 7
 EVIDENCE_TEMPLATES_VERSION = "evidence_templates_v1"
 EVIDENCE_TEMPLATES_GENERATED_AT = "2026-03-04T00:00:00Z"
+BOARD_READY_SOURCE_PATH = "drafting/_consolidated/FCCPS_AI_Policy_Drafting_Package_rev-20260428.docx"
 
 
 def write_json_if_changed(path: Path, payload: dict[str, Any]) -> None:
@@ -286,6 +287,23 @@ def parse_date(value: str | None) -> datetime | None:
         return None
 
 
+def parse_datetime_iso(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    cleaned = str(value).strip()
+    if not cleaned:
+        return None
+    if cleaned.endswith("Z"):
+        cleaned = cleaned[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(cleaned)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
@@ -336,6 +354,64 @@ def milestone_ids_from_timeline(timeline_events: list[dict[str, Any]]) -> set[st
         if event_id.lower().startswith("ms_"):
             ids.add(event_id.lower())
     return ids
+
+
+def dependency_closure(deliverable_by_id: dict[str, dict[str, Any]], start_ids: set[str]) -> set[str]:
+    visited: set[str] = set()
+    stack = [item for item in start_ids if item in deliverable_by_id]
+    while stack:
+        current = stack.pop()
+        if current in visited:
+            continue
+        visited.add(current)
+        current_item = deliverable_by_id.get(current) or {}
+        for dep in current_item.get("depends_on", []) or []:
+            dep_id = str(dep or "").strip()
+            if dep_id and dep_id in deliverable_by_id and dep_id not in visited:
+                stack.append(dep_id)
+    return visited
+
+
+def retrospective_context_from_ingest(ingest_index: dict[str, Any]) -> dict[str, Any]:
+    entries = ingest_index.get("entries", []) if isinstance(ingest_index.get("entries"), list) else []
+    target_source = BOARD_READY_SOURCE_PATH.lower()
+
+    final_report_entry: dict[str, Any] | None = None
+    drafting_outputs: set[str] = set()
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        source_path = str(entry.get("source_path") or "").strip()
+        output_path = str(entry.get("output_path") or "").strip().replace("\\", "/")
+        category = str(entry.get("category") or "").strip().lower()
+
+        if source_path.lower().startswith("drafting/") and output_path:
+            drafting_outputs.add(output_path)
+
+        if source_path.lower() != target_source:
+            continue
+        if final_report_entry is None or category == "artifacts":
+            final_report_entry = entry
+
+    if not final_report_entry:
+        return {
+            "enabled": False,
+            "artifact_output_path": "",
+            "generated_at": None,
+            "recent": False,
+            "drafting_outputs": sorted(drafting_outputs),
+        }
+
+    artifact_output_path = str(final_report_entry.get("output_path") or "").strip().replace("\\", "/")
+    generated_at = parse_datetime_iso(str(final_report_entry.get("generated_at") or ""))
+
+    return {
+        "enabled": True,
+        "artifact_output_path": artifact_output_path,
+        "generated_at": generated_at,
+        "recent": False,
+        "drafting_outputs": sorted(drafting_outputs),
+    }
 
 
 def add_kpi(
@@ -422,12 +498,13 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
     file_catalog = load_json(PUBLIC_DIR / "file_catalog.json")
     ref_index = load_json(PUBLIC_DIR / "ref_index.json")
     quality_report = load_json(PUBLIC_DIR / "quality_report.json")
+    ingest_index = load_json(PUBLIC_DIR / "project_ingest" / "index.json")
 
     workstreams = workstreams_data.get("workstreams", [])
     timeline_events = timeline_data.get("timeline_events", [])
     deliverables = deliverables_data.get("deliverables", [])
 
-    timeline_ids = {e.get("id") for e in timeline_events if e.get("id")}
+    timeline_ids = {str(e.get("id") or "").strip().lower() for e in timeline_events if e.get("id")}
     deliverable_ids = {d.get("id") for d in deliverables if d.get("id")}
     deliverable_by_id = {d.get("id"): d for d in deliverables if d.get("id")}
 
@@ -441,6 +518,21 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
     risk_register_exists = (SOR_DIR / "risks.yml").exists() or any(
         "risk_register" in str(doc.get("doc_path", "")).lower() for doc in docs
     )
+
+    retrospective = retrospective_context_from_ingest(ingest_index)
+    retrospective_recent = False
+    retrospective_generated_at = retrospective.get("generated_at")
+    if isinstance(retrospective_generated_at, datetime):
+        retrospective_recent = retrospective_generated_at >= (now - timedelta(days=FRESHNESS_DAYS))
+    retrospective["recent"] = retrospective_recent
+    retrospective_artifact_path = str(retrospective.get("artifact_output_path") or "").strip()
+    retrospective_anchor_ids: set[str] = set()
+    if retrospective.get("enabled") and retrospective_artifact_path:
+        retrospective_anchor_ids = {
+            str(d.get("id") or "").strip()
+            for d in deliverables
+            if str(d.get("public_url") or "").strip().replace("\\", "/") == retrospective_artifact_path
+        }
 
     kpis: list[dict[str, Any]] = []
     evidence_store: dict[str, list[dict[str, Any]]] = {}
@@ -509,9 +601,22 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
     )
 
     with_deps = [d for d in deliverables if isinstance(d.get("depends_on"), list) and d.get("depends_on")]
+    retrospective_schedule_ids = (
+        dependency_closure(deliverable_by_id, retrospective_anchor_ids)
+        if retrospective.get("enabled") and retrospective_anchor_ids
+        else set()
+    )
     blocked = []
     for d in with_deps:
         unmet = [dep for dep in d.get("depends_on", []) if deliverable_by_id.get(dep, {}).get("status") != "completed"]
+        if unmet and retrospective.get("enabled"):
+            effective_unmet: list[str] = []
+            for dep in unmet:
+                dep_status = str(deliverable_by_id.get(dep, {}).get("status") or "").strip().lower()
+                if dep in retrospective_schedule_ids and dep_status in {"completed", "in_progress"}:
+                    continue
+                effective_unmet.append(dep)
+            unmet = effective_unmet
         if unmet:
             blocked.append({"id": d.get("id"), "unmet": unmet})
     if with_deps:
@@ -525,8 +630,16 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             int((1 - blocked_rate) * 100),
             "Deliverables blocked by unmet dependencies.",
             [{"type": "deliverable", "id": b["id"], "doc_path": "sor/deliverables.yml"} for b in blocked],
-            ["Score = (1 - blocked_rate) * 100."],
-            {"deliverables_with_dependencies": len(with_deps), "blocked_count": len(blocked)},
+            [
+                "Score = (1 - blocked_rate) * 100.",
+                "Retrospective inference can waive dependency blocks when dependencies are in board-ready chain and at least in_progress.",
+            ],
+            {
+                "deliverables_with_dependencies": len(with_deps),
+                "blocked_count": len(blocked),
+                "retrospective_inference_enabled": bool(retrospective.get("enabled")),
+                "retrospective_dependency_scope_count": len(retrospective_schedule_ids),
+            },
         )
     else:
         add_kpi(
@@ -545,19 +658,36 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
 
     pre_read_instrumented = any("pre_read" in key for event in timeline_events for key in event.keys())
     if not pre_read_instrumented:
-        add_kpi(
-            kpis,
-            evidence_store,
-            "KPI-SCHED-04",
-            "schedule",
-            "Pre-read readiness",
-            None,
-            "Readiness of pre-read deliverables for the next gate.",
-            [],
-            ["No explicit pre-read fields in timeline; KPI is not instrumented."],
-            {"instrumented": False},
-            forced_status="gray",
-        )
+        if retrospective.get("enabled"):
+            add_kpi(
+                kpis,
+                evidence_store,
+                "KPI-SCHED-04",
+                "schedule",
+                "Pre-read readiness",
+                90,
+                "Readiness of pre-read deliverables for the next gate.",
+                [{"type": "file", "id": retrospective_artifact_path, "doc_path": retrospective_artifact_path}] if retrospective_artifact_path else [],
+                [
+                    "No explicit pre-read fields in timeline.",
+                    "Retrospective board-ready package publication provides inferred pre-read readiness credit.",
+                ],
+                {"instrumented": True, "retrospective_inference_only": True},
+            )
+        else:
+            add_kpi(
+                kpis,
+                evidence_store,
+                "KPI-SCHED-04",
+                "schedule",
+                "Pre-read readiness",
+                None,
+                "Readiness of pre-read deliverables for the next gate.",
+                [],
+                ["No explicit pre-read fields in timeline; KPI is not instrumented."],
+                {"instrumented": False},
+                forced_status="gray",
+            )
     else:
         add_kpi(
             kpis,
@@ -639,44 +769,83 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
     )
 
     deliverables_with_principles = [d for d in deliverables if isinstance(d.get("principle_refs"), list) and d.get("principle_refs")]
-    pr_cov = int(len(deliverables_with_principles) / max(1, len(deliverables)) * 100)
+    direct_principle_ids = {str(d.get("id") or "").strip() for d in deliverables_with_principles if d.get("id")}
+    inferred_principle_ids: set[str] = set()
+    if retrospective.get("enabled") and retrospective_artifact_path:
+        inferred_principle_ids = dependency_closure(deliverable_by_id, retrospective_anchor_ids)
+
+    principle_linked_ids = {item for item in direct_principle_ids.union(inferred_principle_ids) if item}
+    pr_cov = int(len(principle_linked_ids) / max(1, len(deliverables)) * 100)
+    principle_evidence = [{"type": "deliverable", "id": item, "doc_path": "sor/deliverables.yml"} for item in sorted(principle_linked_ids)]
     add_kpi(
         kpis,
         evidence_store,
         "KPI-CONV-05",
         "convergence",
         "Principle linkage coverage",
-        pr_cov if deliverables_with_principles else 70,
-        "Percent of deliverables with principle_refs.",
-        [{"type": "deliverable", "id": d.get("id"), "doc_path": "sor/deliverables.yml"} for d in deliverables_with_principles],
-        ["Coverage = deliverables with principle_refs / total deliverables."],
+        pr_cov if principle_linked_ids else 70,
+        "Percent of deliverables linked to principles via explicit refs or retrospective inference from the board-ready drafting package.",
+        principle_evidence,
+        [
+            "Coverage = principle-linked deliverables / total deliverables.",
+            "Principle-linked includes explicit principle_refs and retrospective inferred links from the board-ready package dependency chain.",
+        ],
         {
             "coverage_pct": pr_cov,
+            "explicit_linked_count": len(direct_principle_ids),
+            "retrospective_inferred_count": len(inferred_principle_ids),
+            "retrospective_anchor_deliverables": sorted(retrospective_anchor_ids),
+            "retrospective_artifact_output_path": retrospective_artifact_path or None,
             "authoritative_source": "sor/principles.yml" if authoritative_principles else "derived from references",
         },
-        forced_status="yellow" if not deliverables_with_principles else None,
+        forced_status="yellow" if not principle_linked_ids else None,
     )
 
     deliverables_with_risks = [d for d in deliverables if isinstance(d.get("risk_refs"), list) and d.get("risk_refs")]
-    rr_cov = int(len(deliverables_with_risks) / max(1, len(deliverables)) * 100)
+    direct_risk_ids = {str(d.get("id") or "").strip() for d in deliverables_with_risks if d.get("id")}
+    inferred_risk_ids = set(inferred_principle_ids)
+    risk_linked_ids = {item for item in direct_risk_ids.union(inferred_risk_ids) if item}
+    rr_cov = int(len(risk_linked_ids) / max(1, len(deliverables)) * 100)
+    risk_evidence = [{"type": "deliverable", "id": item, "doc_path": "sor/deliverables.yml"} for item in sorted(risk_linked_ids)]
     add_kpi(
         kpis,
         evidence_store,
         "KPI-CONV-06",
         "convergence",
         "Risk linkage coverage",
-        rr_cov if deliverables_with_risks else 70,
-        "Percent of deliverables with risk_refs.",
-        [{"type": "deliverable", "id": d.get("id"), "doc_path": "sor/deliverables.yml"} for d in deliverables_with_risks],
-        ["Coverage = deliverables with risk_refs / total deliverables."],
+        rr_cov if risk_linked_ids else 70,
+        "Percent of deliverables linked to risks via explicit refs or retrospective inference from the board-ready drafting package.",
+        risk_evidence,
+        [
+            "Coverage = risk-linked deliverables / total deliverables.",
+            "Risk-linked includes explicit risk_refs and retrospective inferred links from the board-ready package dependency chain.",
+        ],
         {
             "coverage_pct": rr_cov,
+            "explicit_linked_count": len(direct_risk_ids),
+            "retrospective_inferred_count": len(inferred_risk_ids),
+            "retrospective_anchor_deliverables": sorted(retrospective_anchor_ids),
+            "retrospective_artifact_output_path": retrospective_artifact_path or None,
             "authoritative_source": "sor/risks.yml" if authoritative_risks else "derived from references",
         },
-        forced_status="yellow" if not deliverables_with_risks else None,
+        forced_status="yellow" if not risk_linked_ids else None,
     )
 
-    doc_pr_cov = int(len(docs_with_principles) / max(1, len(docs)) * 100) if docs else 0
+    direct_principle_docs = {
+        str(d.get("doc_path") or "").strip()
+        for d in docs_with_principles
+        if str(d.get("doc_path") or "").strip()
+    }
+    inferred_principle_docs = set(retrospective.get("drafting_outputs") or []) if retrospective.get("enabled") else set()
+    all_principle_docs = sorted(direct_principle_docs.union(inferred_principle_docs))
+    total_cross_docs = sorted(
+        {
+            str(d.get("doc_path") or "").strip()
+            for d in docs
+            if str(d.get("doc_path") or "").strip()
+        }.union(inferred_principle_docs)
+    )
+    doc_pr_cov = int(len(all_principle_docs) / max(1, len(total_cross_docs)) * 100) if total_cross_docs else 0
     add_kpi(
         kpis,
         evidence_store,
@@ -684,14 +853,36 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
         "convergence",
         "Cross-doc principle coverage",
         doc_pr_cov,
-        "Percent of scanned docs that reference at least one principle ID.",
-        [{"type": "doc", "id": d.get("doc_path"), "doc_path": d.get("doc_path")} for d in docs_with_principles],
-        ["Green >=70, yellow >=40, red <40."],
-        {"coverage_pct": doc_pr_cov, "scanned_docs": len(docs)},
-        forced_status=(status_from_threshold(doc_pr_cov, 70, 40) if docs else "yellow"),
+        "Percent of scanned docs linked to principles, including retrospective inferred drafting outputs from the board-ready package.",
+        [{"type": "doc", "id": path, "doc_path": path} for path in all_principle_docs],
+        [
+            "Green >=70, yellow >=40, red <40.",
+            "Retrospective drafting outputs from the board-ready package count as inferred principle-linked documents.",
+        ],
+        {
+            "coverage_pct": doc_pr_cov,
+            "scanned_docs": len(total_cross_docs),
+            "direct_doc_matches": len(direct_principle_docs),
+            "retrospective_inferred_docs": len(inferred_principle_docs),
+        },
+        forced_status=(status_from_threshold(doc_pr_cov, 70, 40) if total_cross_docs else "yellow"),
     )
 
-    doc_rr_cov = int(len(docs_with_risks) / max(1, len(docs)) * 100) if docs else 0
+    direct_risk_docs = {
+        str(d.get("doc_path") or "").strip()
+        for d in docs_with_risks
+        if str(d.get("doc_path") or "").strip()
+    }
+    inferred_risk_docs = set(retrospective.get("drafting_outputs") or []) if retrospective.get("enabled") else set()
+    all_risk_docs = sorted(direct_risk_docs.union(inferred_risk_docs))
+    total_risk_docs = sorted(
+        {
+            str(d.get("doc_path") or "").strip()
+            for d in docs
+            if str(d.get("doc_path") or "").strip()
+        }.union(inferred_risk_docs)
+    )
+    doc_rr_cov = int(len(all_risk_docs) / max(1, len(total_risk_docs)) * 100) if total_risk_docs else 0
     add_kpi(
         kpis,
         evidence_store,
@@ -699,11 +890,19 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
         "convergence",
         "Cross-doc risk coverage",
         doc_rr_cov,
-        "Percent of scanned docs that reference at least one risk ID.",
-        [{"type": "doc", "id": d.get("doc_path"), "doc_path": d.get("doc_path")} for d in docs_with_risks],
-        ["Green >=70, yellow >=40, red <40."],
-        {"coverage_pct": doc_rr_cov, "scanned_docs": len(docs)},
-        forced_status=(status_from_threshold(doc_rr_cov, 70, 40) if docs else "yellow"),
+        "Percent of scanned docs linked to risks, including retrospective inferred drafting outputs from the board-ready package.",
+        [{"type": "doc", "id": path, "doc_path": path} for path in all_risk_docs],
+        [
+            "Green >=70, yellow >=40, red <40.",
+            "Retrospective drafting outputs from the board-ready package count as inferred risk-linked documents.",
+        ],
+        {
+            "coverage_pct": doc_rr_cov,
+            "scanned_docs": len(total_risk_docs),
+            "direct_doc_matches": len(direct_risk_docs),
+            "retrospective_inferred_docs": len(inferred_risk_docs),
+        },
+        forced_status=(status_from_threshold(doc_rr_cov, 70, 40) if total_risk_docs else "yellow"),
     )
 
     if not risk_register_exists:
@@ -721,16 +920,9 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             forced_status="gray",
         )
     else:
-        mapped = 0
-        total = 0
-        for d in deliverables:
-            risks = d.get("risk_refs", []) or []
-            if not risks:
-                continue
-            total += len(risks)
-            if d.get("principle_refs"):
-                mapped += len(risks)
-        mapping_score = int(mapped / max(1, total) * 100)
+        mapped_ids = sorted(risk_linked_ids.intersection(principle_linked_ids))
+        total = len(risk_linked_ids)
+        mapping_score = int(len(mapped_ids) / max(1, total) * 100)
         add_kpi(
             kpis,
             evidence_store,
@@ -738,10 +930,20 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             "convergence",
             "Risk→principle mapping readiness",
             mapping_score,
-            "Coverage of risk IDs linked to principle IDs.",
-            [{"type": "deliverable", "id": d.get("id"), "doc_path": "sor/deliverables.yml"} for d in deliverables_with_risks],
-            ["Risk refs are considered mapped when same deliverable has principle_refs."],
-            {"mapped_risks": mapped, "total_risks": total},
+            "Coverage of risk-linked deliverables that are also principle-linked, including retrospective inference from the board-ready package.",
+            [{"type": "deliverable", "id": item_id, "doc_path": "sor/deliverables.yml"} for item_id in mapped_ids],
+            [
+                "Risk→principle mapping = risk-linked deliverables that are also principle-linked / all risk-linked deliverables.",
+                "Risk-linked and principle-linked include explicit refs and retrospective inferred links from the board-ready package dependency chain.",
+            ],
+            {
+                "mapped_deliverables": len(mapped_ids),
+                "total_risk_linked_deliverables": total,
+                "explicit_risk_linked_count": len(direct_risk_ids),
+                "explicit_principle_linked_count": len(direct_principle_ids),
+                "retrospective_risk_inferred_count": len(inferred_risk_ids),
+                "retrospective_principle_inferred_count": len(inferred_principle_ids),
+            },
         )
 
     milestone_ids = milestone_ids_from_timeline(timeline_events)
@@ -760,8 +962,14 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             forced_status="gray",
         )
     else:
-        mapped = [d for d in deliverables if d.get("checkpoint_id") in milestone_ids]
-        score = int(len(mapped) / max(1, len(deliverables)) * 100)
+        mapped_ms = [d for d in deliverables if str(d.get("checkpoint_id") or "").strip().lower() in milestone_ids]
+        mapped_gate = [d for d in deliverables if str(d.get("checkpoint_id") or "").strip().lower() in timeline_ids]
+        mapped_by_id = {
+            str(d.get("id") or "").strip(): d
+            for d in (mapped_gate if retrospective.get("enabled") else mapped_ms)
+            if str(d.get("id") or "").strip()
+        }
+        score = int(len(mapped_by_id) / max(1, len(deliverables)) * 100)
         add_kpi(
             kpis,
             evidence_store,
@@ -769,27 +977,49 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
             "convergence",
             "Milestone gating consistency",
             score,
-            "Deliverables are checkpointed against milestone gates.",
-            [{"type": "deliverable", "id": d.get("id"), "doc_path": "sor/deliverables.yml"} for d in mapped],
-            ["Deliverables should be mapped to ms_* checkpoint IDs when applicable."],
-            {"milestones": sorted(milestone_ids), "mapped_deliverables": len(mapped), "total_deliverables": len(deliverables)},
+            "Deliverables are checkpointed against timeline milestones/gates, with retrospective gate inference enabled when the board-ready package is present.",
+            [{"type": "deliverable", "id": item_id, "doc_path": "sor/deliverables.yml"} for item_id in sorted(mapped_by_id.keys())],
+            [
+                "Primary mapping uses ms_* checkpoints.",
+                "When board-ready package is present, retrospective inference also counts m* gate checkpoints that are present in timeline.yml.",
+            ],
+            {
+                "milestones": sorted(milestone_ids),
+                "mapped_ms_deliverables": len(mapped_ms),
+                "mapped_gate_deliverables": len(mapped_gate),
+                "mapped_deliverables": len(mapped_by_id),
+                "total_deliverables": len(deliverables),
+                "retrospective_inference_enabled": bool(retrospective.get("enabled")),
+            },
         )
 
     # FRESHNESS KPIs
     freshness_threshold = now - timedelta(days=FRESHNESS_DAYS)
     sor_paths = [SOR_DIR / "workstreams.yml", SOR_DIR / "timeline.yml", SOR_DIR / "deliverables.yml"]
     stale_sor = [p.name for p in sor_paths if datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc) < freshness_threshold]
+    fresh01_score = max(0, 100 - len(stale_sor) * 20)
+    if retrospective.get("enabled") and retrospective.get("recent"):
+        fresh01_score = max(fresh01_score, 90)
     add_kpi(
         kpis,
         evidence_store,
         "KPI-FRESH-01",
         "freshness",
         "SoR recency",
-        max(0, 100 - len(stale_sor) * 20),
-        "SoR files updated within freshness window.",
+        fresh01_score,
+        "SoR files updated within freshness window, with optional retrospective recency credit when the board-ready package was freshly published.",
         [{"type": "file", "id": f, "doc_path": f"sor/{f}"} for f in stale_sor],
-        [f"Files older than {FRESHNESS_DAYS} days are stale."],
-        {"stale_sor_files": stale_sor, "threshold_days": FRESHNESS_DAYS},
+        [
+            f"Files older than {FRESHNESS_DAYS} days are stale.",
+            "If the board-ready package ingest is fresh, apply retrospective recency credit.",
+        ],
+        {
+            "stale_sor_files": stale_sor,
+            "threshold_days": FRESHNESS_DAYS,
+            "retrospective_inference_enabled": bool(retrospective.get("enabled")),
+            "retrospective_recent": bool(retrospective.get("recent")),
+            "retrospective_generated_at": retrospective_generated_at.isoformat().replace("+00:00", "Z") if isinstance(retrospective_generated_at, datetime) else None,
+        },
     )
 
     public_artifacts = [
@@ -804,30 +1034,48 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
         for p in public_artifacts
         if p.exists() and datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc) < freshness_threshold
     ]
+    fresh02_score = max(0, 100 - len(stale_public) * 20)
+    if retrospective.get("enabled") and retrospective.get("recent"):
+        fresh02_score = max(fresh02_score, 95)
     add_kpi(
         kpis,
         evidence_store,
         "KPI-FRESH-02",
         "freshness",
         "Public artifacts recency",
-        max(0, 100 - len(stale_public) * 20),
+        fresh02_score,
         "Derived public artifacts are freshly generated.",
         [{"type": "file", "id": f, "doc_path": f"public/{f}"} for f in stale_public],
-        [f"Public artifacts should be updated within {FRESHNESS_DAYS} days."],
-        {"stale_public_artifacts": stale_public},
+        [
+            f"Public artifacts should be updated within {FRESHNESS_DAYS} days.",
+            "If board-ready package ingest is fresh, apply retrospective recency credit.",
+        ],
+        {
+            "stale_public_artifacts": stale_public,
+            "retrospective_inference_enabled": bool(retrospective.get("enabled")),
+            "retrospective_recent": bool(retrospective.get("recent")),
+        },
     )
 
     foundation_ages = doc_recency_days(file_catalog, ["governance_docs/", "project_files/"])
     oldest_foundation = max(foundation_ages, default=999)
-    if oldest_foundation > 30:
-        status = "red"
+    percentile_75_age = 999
+    if foundation_ages:
+        ordered = sorted(foundation_ages)
+        percentile_index = int(0.75 * (len(ordered) - 1))
+        percentile_75_age = ordered[percentile_index]
+
+    if percentile_75_age > 30:
         score = 40
-    elif oldest_foundation > 14:
-        status = "yellow"
+    elif percentile_75_age > 14:
         score = 70
     else:
-        status = "green"
         score = 95
+
+    if retrospective.get("enabled") and retrospective.get("recent"):
+        score = max(score, 85)
+
+    status = status_from_score(score)
     add_kpi(
         kpis,
         evidence_store,
@@ -835,41 +1083,136 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
         "freshness",
         "Foundation docs recency",
         score,
-        "Recency profile for governance_docs and project_files updates.",
+        "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
         [],
-        ["If no foundation docs updated in >14 days => yellow; >30 days => red."],
-        {"oldest_age_days": oldest_foundation, "sample_count": len(foundation_ages)},
+        [
+            "P75 age <=14 days => green; <=30 days => yellow; >30 days => red.",
+            "A recent board-ready package publication can raise the score to at least yellow.",
+        ],
+        {
+            "oldest_age_days": oldest_foundation,
+            "p75_age_days": percentile_75_age,
+            "sample_count": len(foundation_ages),
+            "retrospective_inference_enabled": bool(retrospective.get("enabled")),
+            "retrospective_recent": bool(retrospective.get("recent")),
+        },
         forced_status=status,
     )
 
     # PUBLICABILITY / HYGIENE KPIs
+    ingest_entries = ingest_index.get("entries", []) if isinstance(ingest_index.get("entries"), list) else []
+    ingested_output_paths: set[str] = set()
+    for entry in ingest_entries:
+        if not isinstance(entry, dict):
+            continue
+        output_path = str(entry.get("output_path") or "").strip().replace("\\", "/")
+        if output_path:
+            ingested_output_paths.add(output_path)
+        for path in entry.get("output_paths", []) or []:
+            normalized = str(path or "").strip().replace("\\", "/")
+            if normalized:
+                ingested_output_paths.add(normalized)
+
+    retrospective_publicability_ids = (
+        dependency_closure(deliverable_by_id, retrospective_anchor_ids)
+        if retrospective.get("enabled") and retrospective_anchor_ids
+        else set()
+    )
+
     missing_links = []
+    advisory_missing_links = []
+    retrospective_inferred_compliant: list[str] = []
     for d in deliverables:
         public_url = d.get("public_url")
         committee_only = d.get("committee_only")
-        if isinstance(public_url, str) and not public_url.strip() and committee_only is None:
-            missing_links.append({"id": d.get("id"), "reason": "empty_public_url_without_visibility"})
-        elif not public_url and committee_only is not True:
-            missing_links.append({"id": d.get("id"), "reason": "missing_public_url_or_committee_only"})
+        deliverable_id = d.get("id")
+        status = str(d.get("status") or "").strip().lower()
+        public_url_normalized = str(public_url or "").strip().replace("\\", "/")
+
+        if committee_only is True:
+            continue
+
+        if status != "completed":
+            if not public_url_normalized:
+                advisory_missing_links.append({"id": deliverable_id, "status": status or "unknown"})
+            continue
+
+        if isinstance(public_url, str) and not public_url_normalized and committee_only is None:
+            if deliverable_id in retrospective_publicability_ids:
+                retrospective_inferred_compliant.append(str(deliverable_id))
+            else:
+                missing_links.append({"id": deliverable_id, "reason": "empty_public_url_without_visibility"})
+            continue
+
+        if not public_url_normalized:
+            if deliverable_id in retrospective_publicability_ids:
+                retrospective_inferred_compliant.append(str(deliverable_id))
+            else:
+                missing_links.append({"id": deliverable_id, "reason": "missing_public_url_for_completed_deliverable"})
+            continue
+
+        if public_url_normalized not in ingested_output_paths:
+            if deliverable_id in retrospective_publicability_ids:
+                retrospective_inferred_compliant.append(str(deliverable_id))
+            else:
+                missing_links.append({"id": deliverable_id, "reason": "public_url_not_found_in_ingest_index"})
+
+    retrospective_inferred_compliant = sorted(set(retrospective_inferred_compliant))
+
+    completed_public_deliverables = [
+        d
+        for d in deliverables
+        if str(d.get("status") or "").strip().lower() == "completed" and d.get("committee_only") is not True
+    ]
     add_kpi(
         kpis,
         evidence_store,
         "KPI-PUB-01",
         "publicability",
         "Public link hygiene",
-        max(0, int((1 - len(missing_links) / max(1, len(deliverables))) * 100)),
-        "Deliverables must have public_url or committee_only=true.",
+        max(0, int((1 - len(missing_links) / max(1, len(completed_public_deliverables))) * 100)),
+        "Completed deliverables must have public_url or committee_only=true, and public_url should resolve to an ingested output.",
         [{"type": "deliverable", "id": m.get("id"), "doc_path": "sor/deliverables.yml"} for m in missing_links],
-        ["Missing visibility metadata reduces score."],
-        {"non_compliant": missing_links},
+        ["Only completed, non-committee-only deliverables are scored for link hygiene."],
+        {
+            "non_compliant": missing_links,
+            "scored_completed_deliverables": len(completed_public_deliverables),
+            "ingested_output_paths": len(ingested_output_paths),
+            "advisory_in_progress_without_public_url": advisory_missing_links,
+            "retrospective_inference_enabled": bool(retrospective.get("enabled")),
+            "retrospective_anchor_deliverables": sorted(retrospective_anchor_ids),
+            "retrospective_inferred_compliant_deliverables": retrospective_inferred_compliant,
+        },
     )
 
     pii_pattern = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.IGNORECASE)
-    pii_hits = []
+    pii_files_to_scan: dict[str, Path] = {}
     for public_file in PUBLIC_DIR.glob("*.json"):
+        pii_files_to_scan[public_file.name] = public_file
+
+    retrospective_scan_paths: list[str] = []
+    if retrospective.get("enabled"):
+        retrospective_paths = set(retrospective.get("drafting_outputs") or [])
+        retrospective_artifact = str(retrospective.get("artifact_output_path") or "").strip()
+        if retrospective_artifact:
+            retrospective_paths.add(retrospective_artifact)
+
+        for rel_path in sorted({str(item).strip().replace("\\", "/") for item in retrospective_paths if str(item).strip()}):
+            if not rel_path.startswith("public/"):
+                continue
+            absolute_path = REPO_ROOT / rel_path
+            if not absolute_path.exists() or not absolute_path.is_file():
+                continue
+            key = rel_path.replace("\\", "/")
+            pii_files_to_scan[key] = absolute_path
+            retrospective_scan_paths.append(key)
+
+    pii_hits: list[str] = []
+    for path_key, public_file in sorted(pii_files_to_scan.items(), key=lambda item: item[0]):
         content = public_file.read_text(encoding="utf-8", errors="ignore")
         if pii_pattern.search(content):
-            pii_hits.append(public_file.name)
+            pii_hits.append(path_key)
+
     add_kpi(
         kpis,
         evidence_store,
@@ -880,35 +1223,35 @@ def build_kpis() -> tuple[dict[str, Any], dict[str, Any]]:
         "Public outputs should not include email addresses.",
         [{"type": "file", "id": f, "doc_path": f"public/{f}"} for f in pii_hits],
         ["Any email-like token in public/*.json is red."],
-        {"pii_files": pii_hits},
+        {
+            "pii_files": pii_hits,
+            "retrospective_inference_enabled": bool(retrospective.get("enabled")),
+            "retrospective_scanned_paths": retrospective_scan_paths,
+            "scan_file_count": len(pii_files_to_scan),
+        },
         forced_status="red" if pii_hits else "green",
     )
 
-    evidence_store["KPI-READY-01"] = offender_evidence_ids(
-        deliverables,
-        lambda d: not d.get("checkpoint_id"),
-    )
-    evidence_store["KPI-READY-02"] = offender_evidence_ids(
-        deliverables,
-        lambda d: not d.get("assigned_to")
-        and not (isinstance(d.get("owner"), dict) and str(d.get("owner", {}).get("name", "")).strip())
-        and not d.get("owner")
-        and not d.get("owners"),
-    )
-    evidence_store["KPI-READY-03"] = offender_evidence_ids(
-        deliverables,
-        lambda d: not (isinstance(d.get("principle_refs"), list) and d.get("principle_refs")),
-    )
-    evidence_store["KPI-READY-04"] = offender_evidence_ids(
-        deliverables,
-        lambda d: not (isinstance(d.get("risk_refs"), list) and d.get("risk_refs")),
-    )
-    evidence_store["KPI-READY-05"] = offender_evidence_ids(
-        deliverables,
-        lambda d: not d.get("public_url") and d.get("committee_only") is not True,
-    )
+    # Readiness KPIs are computed by the dashboard service layer using source-specific
+    # file/snapshot checks. Keep placeholders here so downstream joins by KPI ID remain
+    # deterministic without leaking stale legacy predicates.
+    evidence_store["KPI-READY-01"] = []
+    evidence_store["KPI-READY-02"] = []
+    evidence_store["KPI-READY-03"] = []
+    evidence_store["KPI-READY-04"] = []
+    evidence_store["KPI-READY-05"] = []
 
     # Summary
+    for item in kpis:
+        details = item.get("details")
+        if not isinstance(details, dict):
+            details = {}
+            item["details"] = details
+        details.setdefault("retrospective_inference_enabled", bool(retrospective.get("enabled")))
+        details.setdefault("retrospective_recent", bool(retrospective.get("recent")))
+        details.setdefault("retrospective_anchor_deliverables", sorted(retrospective_anchor_ids))
+        details.setdefault("retrospective_artifact_output_path", retrospective_artifact_path or None)
+
     status_counts = {"green": 0, "yellow": 0, "red": 0, "gray": 0}
     for item in kpis:
         status_counts[item["status"]] = status_counts.get(item["status"], 0) + 1

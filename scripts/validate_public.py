@@ -21,6 +21,7 @@ EVIDENCE_TEMPLATES_PATH = PUBLIC_DIR / "evidence_templates.json"
 ADVISORY_MEMORY_PATH = PUBLIC_DIR / "advisory_memory.json"
 ADVISORY_MEMORY_INDEX_PATH = PUBLIC_DIR / "advisory_memory_index.json"
 ADVISORY_MEMORY_AUDIT_PATH = PUBLIC_DIR / "advisory_memory_audit.json"
+RISK_REGISTER_PATH = PUBLIC_DIR / "risk_register.json"
 SNAPSHOT_PATH = PUBLIC_DIR / "public_snapshot.json"
 PROJECT_INGEST_DIR = PUBLIC_DIR / "project_ingest"
 PROJECT_INGEST_ARTIFACTS_DIR = PROJECT_INGEST_DIR / "artifacts"
@@ -71,6 +72,33 @@ REQUIRED_ADVISORY_MEMORY_META_FIELDS = {
 }
 REQUIRED_ADVISORY_MEMORY_INDEX_FIELDS = {"meta", "counts", "memory_ids", "citation_paths"}
 REQUIRED_ADVISORY_MEMORY_AUDIT_FIELDS = {"meta", "quality"}
+REQUIRED_RISK_REGISTER_TOP_LEVEL_FIELDS = {"meta", "summary", "risks"}
+REQUIRED_RISK_REGISTER_META_FIELDS = {"generated_at", "schema_version", "source"}
+REQUIRED_RISK_REGISTER_SUMMARY_FIELDS = {
+    "total_risks",
+    "risks_with_linked_deliverables",
+    "risks_without_linked_deliverables",
+    "unknown_risk_refs_in_deliverables",
+}
+REQUIRED_RISK_ENTRY_FIELDS = {
+    "id",
+    "name",
+    "status",
+    "linked_deliverables_count",
+    "linked_statuses",
+    "linked_principle_refs",
+    "linked_deliverables",
+}
+REQUIRED_RISK_LINKED_DELIVERABLE_FIELDS = {
+    "deliverable_id",
+    "title",
+    "status",
+    "checkpoint_id",
+    "workstream_id",
+    "due_date",
+    "public_url",
+    "principle_refs",
+}
 REQUIRED_INDEX_ENTRY_FIELDS = {
     "category",
     "source_path",
@@ -1188,6 +1216,95 @@ def validate_advisory_memory(memory_payload: dict[str, Any], index_payload: dict
             fail(f"advisory_memory_audit.json quality.{key} must be integer >= 0")
 
 
+def validate_risk_register(payload: dict[str, Any]) -> None:
+    if not isinstance(payload, dict):
+        fail("risk_register.json must be an object")
+    if not REQUIRED_RISK_REGISTER_TOP_LEVEL_FIELDS.issubset(set(payload.keys())):
+        missing = sorted(REQUIRED_RISK_REGISTER_TOP_LEVEL_FIELDS - set(payload.keys()))
+        fail(f"risk_register.json missing top-level fields: {missing}")
+
+    meta = payload.get("meta")
+    if not isinstance(meta, dict):
+        fail("risk_register.json meta must be an object")
+    if not REQUIRED_RISK_REGISTER_META_FIELDS.issubset(set(meta.keys())):
+        missing = sorted(REQUIRED_RISK_REGISTER_META_FIELDS - set(meta.keys()))
+        fail(f"risk_register.json meta missing fields: {missing}")
+    if parse_iso_datetime(meta.get("generated_at")) is None:
+        fail("risk_register.json meta.generated_at must be ISO datetime")
+
+    source = meta.get("source")
+    if not isinstance(source, dict):
+        fail("risk_register.json meta.source must be an object")
+    for field in ("risks", "deliverables"):
+        value = source.get(field)
+        if not isinstance(value, str) or not value.strip():
+            fail(f"risk_register.json meta.source.{field} must be non-empty string")
+
+    summary = payload.get("summary")
+    if not isinstance(summary, dict):
+        fail("risk_register.json summary must be an object")
+    if not REQUIRED_RISK_REGISTER_SUMMARY_FIELDS.issubset(set(summary.keys())):
+        missing = sorted(REQUIRED_RISK_REGISTER_SUMMARY_FIELDS - set(summary.keys()))
+        fail(f"risk_register.json summary missing fields: {missing}")
+
+    for field in ("total_risks", "risks_with_linked_deliverables", "risks_without_linked_deliverables"):
+        value = summary.get(field)
+        if not isinstance(value, int) or value < 0:
+            fail(f"risk_register.json summary.{field} must be integer >= 0")
+
+    unknown_refs = summary.get("unknown_risk_refs_in_deliverables")
+    if not isinstance(unknown_refs, list) or any(not isinstance(item, str) for item in unknown_refs):
+        fail("risk_register.json summary.unknown_risk_refs_in_deliverables must be list[str]")
+
+    risks = payload.get("risks")
+    if not isinstance(risks, list):
+        fail("risk_register.json risks must be a list")
+    if len(risks) != int(summary.get("total_risks") or 0):
+        fail("risk_register.json summary.total_risks must equal len(risks)")
+
+    for idx, risk in enumerate(risks):
+        if not isinstance(risk, dict):
+            fail(f"risk_register.json risks[{idx}] must be an object")
+        if not REQUIRED_RISK_ENTRY_FIELDS.issubset(set(risk.keys())):
+            missing = sorted(REQUIRED_RISK_ENTRY_FIELDS - set(risk.keys()))
+            fail(f"risk_register.json risks[{idx}] missing fields: {missing}")
+
+        risk_id = risk.get("id")
+        if not isinstance(risk_id, str) or not risk_id.strip():
+            fail(f"risk_register.json risks[{idx}].id must be non-empty string")
+
+        linked_deliverables = risk.get("linked_deliverables")
+        if not isinstance(linked_deliverables, list):
+            fail(f"risk_register.json risks[{idx}].linked_deliverables must be a list")
+        if int(risk.get("linked_deliverables_count") or 0) != len(linked_deliverables):
+            fail(f"risk_register.json risks[{idx}] linked_deliverables_count mismatch")
+
+        linked_statuses = risk.get("linked_statuses")
+        if not isinstance(linked_statuses, list) or any(not isinstance(item, str) for item in linked_statuses):
+            fail(f"risk_register.json risks[{idx}].linked_statuses must be list[str]")
+        if linked_statuses != sorted(set(linked_statuses)):
+            fail(f"risk_register.json risks[{idx}].linked_statuses must be sorted unique strings")
+
+        linked_principles = risk.get("linked_principle_refs")
+        if not isinstance(linked_principles, list) or any(not isinstance(item, str) for item in linked_principles):
+            fail(f"risk_register.json risks[{idx}].linked_principle_refs must be list[str]")
+        if linked_principles != sorted(set(linked_principles)):
+            fail(f"risk_register.json risks[{idx}].linked_principle_refs must be sorted unique strings")
+
+        for d_idx, linked in enumerate(linked_deliverables):
+            if not isinstance(linked, dict):
+                fail(f"risk_register.json risks[{idx}].linked_deliverables[{d_idx}] must be an object")
+            if not REQUIRED_RISK_LINKED_DELIVERABLE_FIELDS.issubset(set(linked.keys())):
+                missing = sorted(REQUIRED_RISK_LINKED_DELIVERABLE_FIELDS - set(linked.keys()))
+                fail(f"risk_register.json risks[{idx}].linked_deliverables[{d_idx}] missing fields: {missing}")
+            deliverable_id = linked.get("deliverable_id")
+            if not isinstance(deliverable_id, str) or not deliverable_id.strip():
+                fail(f"risk_register.json risks[{idx}].linked_deliverables[{d_idx}].deliverable_id must be non-empty string")
+            principles = linked.get("principle_refs")
+            if not isinstance(principles, list) or any(not isinstance(item, str) for item in principles):
+                fail(f"risk_register.json risks[{idx}].linked_deliverables[{d_idx}].principle_refs must be list[str]")
+
+
 def validate_project_ingest() -> None:
     if not PROJECT_INGEST_DIR.exists():
         fail(f"Required folder not found: {PROJECT_INGEST_DIR}")
@@ -1282,6 +1399,7 @@ def main() -> None:
     if (
         not KPIS_PATH.exists()
         or not KPI_EVIDENCE_PATH.exists()
+        or not RISK_REGISTER_PATH.exists()
         or not SNAPSHOT_PATH.exists()
         or not EVIDENCE_COVERAGE_PATH.exists()
         or not EVIDENCE_TEMPLATES_PATH.exists()
@@ -1290,7 +1408,7 @@ def main() -> None:
         or not ADVISORY_MEMORY_AUDIT_PATH.exists()
     ):
         fail(
-            "Required artifacts not found: public_snapshot.json, kpis.json, kpi_evidence.json, evidence_coverage.json, evidence_templates.json, advisory_memory.json, advisory_memory_index.json, and advisory_memory_audit.json are required"
+            "Required artifacts not found: public_snapshot.json, risk_register.json, kpis.json, kpi_evidence.json, evidence_coverage.json, evidence_templates.json, advisory_memory.json, advisory_memory_index.json, and advisory_memory_audit.json are required"
         )
 
     _ = load_json(SCHEMA_PATH)
@@ -1304,11 +1422,13 @@ def main() -> None:
     advisory_memory = load_json(ADVISORY_MEMORY_PATH)
     advisory_memory_index = load_json(ADVISORY_MEMORY_INDEX_PATH)
     advisory_memory_audit = load_json(ADVISORY_MEMORY_AUDIT_PATH)
+    risk_register = load_json(RISK_REGISTER_PATH)
     validate_glidepath_history(glidepath)
     validate_glidepath_diagnostics(diagnostics, glidepath, snapshot, kpis_payload, evidence_payload)
     validate_evidence_templates(evidence_templates)
     validate_evidence_coverage(evidence_coverage, evidence_templates, snapshot)
     validate_advisory_memory(advisory_memory, advisory_memory_index, advisory_memory_audit)
+    validate_risk_register(risk_register)
     validate_project_ingest()
 
     print("✅ Public artifact validation passed")

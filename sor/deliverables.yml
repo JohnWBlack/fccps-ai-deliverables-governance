@@ -1,6 +1,6 @@
 metadata:
   version: 1.3.0
-  last_updated: '2026-04-05'
+  last_updated: '2026-04-27'
   description: FCCPS AI Committee deliverables and committee artifacts
 deliverables:
 - id: charter_v0
@@ -107,7 +107,7 @@ deliverables:
 - id: policy_principles
   title: Policy principles set
   description: Board-ready policy principles with tradeoff framing.
-  status: in_progress
+  status: completed
   scope: committee
   workstream_id: WS-POL
   owner:
@@ -131,7 +131,7 @@ deliverables:
   - R-004
   public_facing: true
   committee_only: false
-  public_url: null
+  public_url: public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json
   supporting_evidence_paths: []
   supporting_evidence_count: 0
   supporting_confidence_max: 0.0
@@ -165,7 +165,7 @@ deliverables:
   title: Recommendations outline and first-pass risk register
   description: Integrated recommendations structure and initial top-risk mitigation
     register.
-  status: in_progress
+  status: completed
   scope: committee
   workstream_id: WS-POL
   owner:
@@ -190,7 +190,7 @@ deliverables:
   - R-006
   public_facing: true
   committee_only: false
-  public_url: null
+  public_url: public/project_ingest/artifacts/fccps_ai_advisory_committee_retrospective_first_pass_risk_re__f83df930f120.json
   supporting_evidence_paths: []
   supporting_evidence_count: 0
   supporting_confidence_max: 0.0
@@ -391,7 +391,7 @@ deliverables:
 - id: near_final_package
   title: Near-final recommendation package
   description: Integrated recommendation package, slide narrative, and gap-owner list.
-  status: in_progress
+  status: completed
   scope: committee
   workstream_id: WS-POL
   owner:
@@ -399,15 +399,15 @@ deliverables:
     role: Chair
   workstream: COMMITTEE/WS-POL
   assigned_to: WS-POL + workstream leads
-  due_date: '2026-04-10'
+  due_date: '2026-04-24'
   checkpoint_id: m6
   priority: high
   deliverable_type: presentation
   depends_on:
   - m5_draft_sections
   public_facing: true
-  committee_only: true
-  public_url: null
+  committee_only: false
+  public_url: public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json
   supporting_evidence_paths: []
   supporting_evidence_count: 0
   supporting_confidence_max: 0.0
@@ -442,7 +442,7 @@ deliverables:
   title: Implementation Roadmap v1
   description: Implementation and PD roadmap with milestones, cadence, and success
     measures.
-  status: in_progress
+  status: completed
   scope: workstream
   workstream_id: WS-IPC
   owner:
@@ -450,7 +450,7 @@ deliverables:
     role: Workstream Lead
   workstream: WS-IPC
   assigned_to: Jillian Marie Burkley
-  due_date: '2026-04-10'
+  due_date: '2026-04-01'
   checkpoint_id: m6
   priority: medium
   deliverable_type: document
@@ -460,7 +460,7 @@ deliverables:
   - D-EQA-1
   public_facing: true
   committee_only: false
-  public_url: null
+  public_url: public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json
   supporting_evidence_paths: []
   supporting_evidence_count: 0
   supporting_confidence_max: 0.0
@@ -469,7 +469,7 @@ deliverables:
 - id: final_talk_track
   title: Final talk track and Q&A prep
   description: Final presentation talk track and supporting Q&A sheet for review cycle.
-  status: not_started
+  status: in_progress
   scope: committee
   workstream_id: WS-CCI
   owner:
@@ -477,7 +477,7 @@ deliverables:
     role: Chair
   workstream: COMMITTEE/WS-CCI
   assigned_to: John Black (Chair) + WS-CCI
-  due_date: '2026-04-24'
+  due_date: '2026-05-01'
   checkpoint_id: m7
   priority: medium
   deliverable_type: presentation

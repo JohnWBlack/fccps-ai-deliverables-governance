@@ -15,6 +15,7 @@ $PublicFiles = @(
     "public/file_catalog.json",
     "public/ref_index.json",
     "public/quality_report.json",
+    "public/risk_register.json",
     "public/kpis.json",
     "public/kpi_evidence.json",
     "public/glidepath_history.json"
@@ -104,6 +105,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "extract_refs.py failed" }
     & $PythonExe "scripts/quality_checks.py"
     if ($LASTEXITCODE -ne 0) { throw "quality_checks.py failed" }
+    & $PythonExe "scripts/build_risk_register.py"
+    if ($LASTEXITCODE -ne 0) { throw "build_risk_register.py failed" }
     & $PythonExe "scripts/build_kpis.py"
     if ($LASTEXITCODE -ne 0) { throw "build_kpis.py failed" }
     & $PythonExe "scripts/build_glidepath_history.py"

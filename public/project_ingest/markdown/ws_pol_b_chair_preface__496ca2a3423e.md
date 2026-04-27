@@ -1,7 +1,5 @@
 <!-- provenance:{"extractor_version":"2.0.0","pipeline_version":"2.0.0","project":"FCCPS AI Committee"} -->
 
-Here is a draft WS-POL-B chair preface in the same form we used for WS-POL-A.
-
 Neutral narrative paragraph
 
 This section addresses one of the clearest policy tradeoffs identified by the Committee: how FCCPS should balance protecting student learning and assessment integrity against enabling thoughtful, developmentally appropriate integration of AI to support student preparation and AI literacy. The Committee broadly agrees that policy must protect learning, fairness, trust, and student well-being, and that FCCPS should avoid both unchecked adoption and impractical overrestriction. The Committee also agrees that any policy in this area must account for the practical difficulty of enforcing AI restrictions in unproctored settings, the importance of preserving trust between students and teachers, and the risk of unfair outcomes, including false accusations and uneven compliance.

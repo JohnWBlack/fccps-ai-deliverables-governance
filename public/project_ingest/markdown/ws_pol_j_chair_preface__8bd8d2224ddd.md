@@ -1,0 +1,17 @@
+<!-- provenance:{"extractor_version":"2.0.0","pipeline_version":"2.0.0","project":"FCCPS AI Committee"} -->
+
+# WS POL J Chair Preface
+
+WS-POL-J chair preface
+
+Neutral narrative paragraph
+
+This section addresses how FCCPS should protect students with disabilities and preserve human judgment in decisions that materially affect student rights, access, accommodations, placement, and support. The Committee broadly agrees that IEP/504 and related determinations must remain human-led, that AI may assist but not substitute for qualified personnel, and that any such use must be supervised, documented, and constrained. The Committee also broadly agrees that accessibility and accommodation requirements must be considered explicitly in student-facing AI use, and that uses affecting protected groups or legally consequential educational decisions warrant stronger review for bias, accessibility, privacy, and disparate impact. Meeting 5 reinforces that this section should state clear policy guardrails while leaving operational detail to later implementation and regulation.
+
+Range of positions paragraph
+
+Within that shared foundation, members differ on how much assistive AI use should be permitted in disability-related or otherwise consequential contexts. One position favors a narrower posture, limiting AI use as much as possible where accommodations, eligibility, placement, discipline, or other sensitive determinations are involved, emphasizing that qualified professionals must create and customize IEP/504 plans and that generative AI should not receive student information or function as more than a tightly bounded starting point. Another position allows limited assistive use under strict safeguards, emphasizing that human leadership, documentation, accessibility review, and bias-aware oversight can preserve student protections while still permitting carefully bounded support functions such as brainstorming, document support, or creation of accessible materials subject to human review. Members may also differ on whether this section should remain tightly focused on students with disabilities or speak more broadly to protected-group safeguards and civil-rights implications across FCCPS AI use.
+
+Short dissent-friendly formulation
+
+The Committee agrees that FCCPS should not delegate consequential disability-related or similar determinations to AI and that stronger safeguards are required where student rights, accommodations, and access are at stake. The remaining disagreement is mainly about how narrow the assistive-use pathway should be, whether documentation alone is sufficient or stronger procedural protections are warranted in some cases, and how broadly this section should frame protected-group safeguards beyond disability-specific contexts.

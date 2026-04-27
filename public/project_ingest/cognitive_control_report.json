@@ -1,32 +1,16 @@
 {
-  "auto_apply_candidates": [
-    {
-      "confidence_adjusted": 0.796,
-      "recommended_deliverable_id": "D-EQA-1",
-      "source_path": "workstreams/eqa/D-EQA-1_Equity-Impact-Checklist-v1.0.docx"
-    },
-    {
-      "confidence_adjusted": 0.771,
-      "recommended_deliverable_id": "D-AIN-1",
-      "source_path": "workstreams/ain/D-AIN-1_Academic Integrity and Attribution Document.docx"
-    },
-    {
-      "confidence_adjusted": 0.771,
-      "recommended_deliverable_id": "D-AIN-1",
-      "source_path": "workstreams/ain/D-AIN-1_Academic-Integrity-and-Attribution-Framework.docx"
-    }
-  ],
+  "auto_apply_candidates": [],
   "counts": {
-    "auto_apply_candidates": 3,
-    "candidates": 96,
-    "ingest_converted": 96,
+    "auto_apply_candidates": 0,
+    "candidates": 200,
+    "ingest_converted": 200,
     "ingest_promoted": 0,
-    "recommended_actions": 13
+    "recommended_actions": 8
   },
-  "generated_at": "2026-04-02T22:48:25.281053Z",
+  "generated_at": "2026-04-27T14:29:36.376625Z",
   "governance": {
     "approval_policy": "Auto-apply may proceed for high-confidence, non-sensitive actions; always enforce validate_sor.py and validate_public.py before publish.",
-    "auto_apply_sor_changes": true,
+    "auto_apply_sor_changes": false,
     "minimum_auto_apply_confidence": 0.75,
     "requires_human_approval": true
   },
@@ -36,91 +20,10 @@
       "candidate_matches": [
         {
           "components": {
-            "lexical": 0.044444444444444446,
-            "mode": 0.0,
-            "salience": 0.041,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.45
-          },
-          "deliverable_id": "D-AIN-1",
-          "deliverable_title": "Attribution & Integrity Matrix v1",
-          "reasons": [
-            "same_workstream",
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.7254,
-          "status": "in_progress",
-          "workstream_id": "WS-AIN"
-        },
-        {
-          "components": {
-            "lexical": 0.022222222222222223,
-            "mode": 0.0,
-            "salience": 0.041,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.0
-          },
-          "deliverable_id": "D-DPS-1",
-          "deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
-          "reasons": [
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.2532,
-          "status": "in_progress",
-          "workstream_id": "WS-DPS"
-        },
-        {
-          "components": {
-            "lexical": 0.022222222222222223,
-            "mode": 0.0,
-            "salience": 0.041,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.0
-          },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
-          "reasons": [
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.2532,
-          "status": "in_progress",
-          "workstream_id": "WS-POL"
-        }
-      ],
-      "confidence": 0.7254,
-      "confidence_adjusted": 0.7254,
-      "confidence_penalty": 0.0,
-      "counterfactual_delta": 0.4722,
-      "inferred_workstream_id": "WS-AIN",
-      "mode": "converted",
-      "recommended_action": "review_and_update_deliverable_evidence",
-      "recommended_deliverable_id": "D-AIN-1",
-      "recommended_deliverable_title": "Attribution & Integrity Matrix v1",
-      "recommended_workstream_id": "WS-AIN",
-      "risk_flags": [],
-      "salience": 0.41,
-      "source_path": "02 Risks & Opportunities/FCCPS AI Advisory CommitteeRisks and Opportunities Assessment Form(1-10).xlsx",
-      "topics": [
-        "risk"
-      ]
-    },
-    {
-      "candidate_matches": [
-        {
-          "components": {
             "lexical": 0.07500000000000001,
             "mode": 0.0,
             "salience": 0.05600000000000001,
-            "status": 0.1,
+            "status": 0.03,
             "topic": 0.09,
             "workstream": 0.45
           },
@@ -129,11 +32,11 @@
           "reasons": [
             "same_workstream",
             "topic_overlap",
-            "status_in_progress",
+            "status_completed",
             "lexical_overlap"
           ],
-          "score": 0.771,
-          "status": "in_progress",
+          "score": 0.701,
+          "status": "completed",
           "workstream_id": "WS-AIN"
         },
         {
@@ -141,7 +44,7 @@
             "lexical": 0.025,
             "mode": 0.0,
             "salience": 0.05600000000000001,
-            "status": 0.1,
+            "status": 0.03,
             "topic": 0.09,
             "workstream": 0.0
           },
@@ -149,11 +52,11 @@
           "deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
           "reasons": [
             "topic_overlap",
-            "status_in_progress",
+            "status_completed",
             "lexical_overlap"
           ],
-          "score": 0.271,
-          "status": "in_progress",
+          "score": 0.201,
+          "status": "completed",
           "workstream_id": "WS-DPS"
         },
         {
@@ -161,24 +64,24 @@
             "lexical": 0.025,
             "mode": 0.0,
             "salience": 0.05600000000000001,
-            "status": 0.1,
+            "status": 0.03,
             "topic": 0.09,
             "workstream": 0.0
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "pre_m3_risks_ops",
+          "deliverable_title": "Meeting 3 risks/opportunities synthesis",
           "reasons": [
             "topic_overlap",
-            "status_in_progress",
+            "status_completed",
             "lexical_overlap"
           ],
-          "score": 0.271,
-          "status": "in_progress",
+          "score": 0.201,
+          "status": "completed",
           "workstream_id": "WS-POL"
         }
       ],
-      "confidence": 0.771,
-      "confidence_adjusted": 0.771,
+      "confidence": 0.701,
+      "confidence_adjusted": 0.701,
       "confidence_penalty": 0.0,
       "counterfactual_delta": 0.5,
       "inferred_workstream_id": "WS-AIN",
@@ -189,326 +92,9 @@
       "recommended_workstream_id": "WS-AIN",
       "risk_flags": [],
       "salience": 0.56,
-      "source_path": "workstreams/ain/D-AIN-1_Academic Integrity and Attribution Document.docx",
+      "source_path": "workstreams/ain/Academic-Integrity-and-Attribution-Framework.docx",
       "topics": [
         "risk"
-      ]
-    },
-    {
-      "candidate_matches": [
-        {
-          "components": {
-            "lexical": 0.07500000000000001,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.45
-          },
-          "deliverable_id": "D-AIN-1",
-          "deliverable_title": "Attribution & Integrity Matrix v1",
-          "reasons": [
-            "same_workstream",
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.771,
-          "status": "in_progress",
-          "workstream_id": "WS-AIN"
-        },
-        {
-          "components": {
-            "lexical": 0.025,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.0
-          },
-          "deliverable_id": "D-DPS-1",
-          "deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
-          "reasons": [
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.271,
-          "status": "in_progress",
-          "workstream_id": "WS-DPS"
-        },
-        {
-          "components": {
-            "lexical": 0.025,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.0
-          },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
-          "reasons": [
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.271,
-          "status": "in_progress",
-          "workstream_id": "WS-POL"
-        }
-      ],
-      "confidence": 0.771,
-      "confidence_adjusted": 0.771,
-      "confidence_penalty": 0.0,
-      "counterfactual_delta": 0.5,
-      "inferred_workstream_id": "WS-AIN",
-      "mode": "converted",
-      "recommended_action": "review_and_update_deliverable_evidence",
-      "recommended_deliverable_id": "D-AIN-1",
-      "recommended_deliverable_title": "Attribution & Integrity Matrix v1",
-      "recommended_workstream_id": "WS-AIN",
-      "risk_flags": [],
-      "salience": 0.56,
-      "source_path": "workstreams/ain/D-AIN-1_Academic-Integrity-and-Attribution-Framework.docx",
-      "topics": [
-        "risk"
-      ]
-    },
-    {
-      "candidate_matches": [
-        {
-          "components": {
-            "lexical": 0.05714285714285714,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.07,
-            "topic": 0.09,
-            "workstream": 0.45
-          },
-          "deliverable_id": "D-CCI-1",
-          "deliverable_title": "Comms Pack v1",
-          "reasons": [
-            "same_workstream",
-            "topic_overlap",
-            "status_not_started",
-            "lexical_overlap"
-          ],
-          "score": 0.7231,
-          "status": "not_started",
-          "workstream_id": "WS-CCI"
-        },
-        {
-          "components": {
-            "lexical": 0.0,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.07,
-            "topic": 0.0,
-            "workstream": 0.45
-          },
-          "deliverable_id": "final_talk_track",
-          "deliverable_title": "Final talk track and Q&A prep",
-          "reasons": [
-            "same_workstream",
-            "status_not_started"
-          ],
-          "score": 0.576,
-          "status": "not_started",
-          "workstream_id": "WS-CCI"
-        },
-        {
-          "components": {
-            "lexical": 0.0,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.1,
-            "topic": 0.0,
-            "workstream": 0.0
-          },
-          "deliverable_id": "D-AIN-1",
-          "deliverable_title": "Attribution & Integrity Matrix v1",
-          "reasons": [
-            "status_in_progress"
-          ],
-          "score": 0.156,
-          "status": "in_progress",
-          "workstream_id": "WS-AIN"
-        }
-      ],
-      "confidence": 0.7231,
-      "confidence_adjusted": 0.7231,
-      "confidence_penalty": 0.0,
-      "counterfactual_delta": 0.1471,
-      "inferred_workstream_id": "WS-CCI",
-      "mode": "converted",
-      "recommended_action": "review_and_update_deliverable_evidence",
-      "recommended_deliverable_id": "D-CCI-1",
-      "recommended_deliverable_title": "Comms Pack v1",
-      "recommended_workstream_id": "WS-CCI",
-      "risk_flags": [],
-      "salience": 0.56,
-      "source_path": "workstreams/cci/D-CCI-1_Community-Engagement-Plan_AI-in-FCCPS.docx",
-      "topics": [
-        "communications"
-      ]
-    },
-    {
-      "candidate_matches": [
-        {
-          "components": {
-            "lexical": 0.016666666666666666,
-            "mode": 0.0,
-            "salience": 0.051000000000000004,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.45
-          },
-          "deliverable_id": "D-DPS-1",
-          "deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
-          "reasons": [
-            "same_workstream",
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.7077,
-          "status": "in_progress",
-          "workstream_id": "WS-DPS"
-        },
-        {
-          "components": {
-            "lexical": 0.06666666666666667,
-            "mode": 0.0,
-            "salience": 0.051000000000000004,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.0
-          },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
-          "reasons": [
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.3077,
-          "status": "in_progress",
-          "workstream_id": "WS-POL"
-        },
-        {
-          "components": {
-            "lexical": 0.0,
-            "mode": 0.0,
-            "salience": 0.051000000000000004,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.0
-          },
-          "deliverable_id": "D-AIN-1",
-          "deliverable_title": "Attribution & Integrity Matrix v1",
-          "reasons": [
-            "topic_overlap",
-            "status_in_progress"
-          ],
-          "score": 0.241,
-          "status": "in_progress",
-          "workstream_id": "WS-AIN"
-        }
-      ],
-      "confidence": 0.7077,
-      "confidence_adjusted": 0.7077,
-      "confidence_penalty": 0.0,
-      "counterfactual_delta": 0.4,
-      "inferred_workstream_id": "WS-DPS",
-      "mode": "converted",
-      "recommended_action": "review_and_update_deliverable_evidence",
-      "recommended_deliverable_id": "D-DPS-1",
-      "recommended_deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
-      "recommended_workstream_id": "WS-DPS",
-      "risk_flags": [],
-      "salience": 0.51,
-      "source_path": "Meetings/05 - Meeting 20-MAR-26/FCCPS_AI_Advisory_Committee_Retrospective_First_Pass_Risk_Register.docx",
-      "topics": [
-        "risk"
-      ]
-    },
-    {
-      "candidate_matches": [
-        {
-          "components": {
-            "lexical": 0.1,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.1,
-            "topic": 0.09,
-            "workstream": 0.45
-          },
-          "deliverable_id": "D-EQA-1",
-          "deliverable_title": "Equity Impact Checklist v1",
-          "reasons": [
-            "same_workstream",
-            "topic_overlap",
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.796,
-          "status": "in_progress",
-          "workstream_id": "WS-EQA"
-        },
-        {
-          "components": {
-            "lexical": 0.03333333333333333,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.1,
-            "topic": 0.0,
-            "workstream": 0.0
-          },
-          "deliverable_id": "D-DPS-1",
-          "deliverable_title": "AI Tool Review Checklist v1 + Risk Tiers",
-          "reasons": [
-            "status_in_progress",
-            "lexical_overlap"
-          ],
-          "score": 0.1893,
-          "status": "in_progress",
-          "workstream_id": "WS-DPS"
-        },
-        {
-          "components": {
-            "lexical": 0.0,
-            "mode": 0.0,
-            "salience": 0.05600000000000001,
-            "status": 0.1,
-            "topic": 0.0,
-            "workstream": 0.0
-          },
-          "deliverable_id": "D-AIN-1",
-          "deliverable_title": "Attribution & Integrity Matrix v1",
-          "reasons": [
-            "status_in_progress"
-          ],
-          "score": 0.156,
-          "status": "in_progress",
-          "workstream_id": "WS-AIN"
-        }
-      ],
-      "confidence": 0.796,
-      "confidence_adjusted": 0.796,
-      "confidence_penalty": 0.0,
-      "counterfactual_delta": 0.6067,
-      "inferred_workstream_id": "WS-EQA",
-      "mode": "converted",
-      "recommended_action": "review_and_update_deliverable_evidence",
-      "recommended_deliverable_id": "D-EQA-1",
-      "recommended_deliverable_title": "Equity Impact Checklist v1",
-      "recommended_workstream_id": "WS-EQA",
-      "risk_flags": [],
-      "salience": 0.56,
-      "source_path": "workstreams/eqa/D-EQA-1_Equity-Impact-Checklist-v1.0.docx",
-      "topics": [
-        "equity"
       ]
     },
     {
@@ -543,8 +129,8 @@
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "D-POL-1",
-          "deliverable_title": "Policy Skeleton v0",
+          "deliverable_id": "near_final_package",
+          "deliverable_title": "Near-final recommendation package",
           "reasons": [
             "same_workstream",
             "status_in_progress",
@@ -559,19 +145,19 @@
             "lexical": 0.02857142857142857,
             "mode": 0.0,
             "salience": 0.041,
-            "status": 0.1,
+            "status": 0.07,
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "committee_response",
+          "deliverable_title": "Formal committee response package",
           "reasons": [
             "same_workstream",
-            "status_in_progress",
+            "status_not_started",
             "lexical_overlap"
           ],
-          "score": 0.6196,
-          "status": "in_progress",
+          "score": 0.5896,
+          "status": "not_started",
           "workstream_id": "WS-POL"
         }
       ],
@@ -624,8 +210,8 @@
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "D-POL-1",
-          "deliverable_title": "Policy Skeleton v0",
+          "deliverable_id": "near_final_package",
+          "deliverable_title": "Near-final recommendation package",
           "reasons": [
             "same_workstream",
             "status_in_progress"
@@ -639,18 +225,18 @@
             "lexical": 0.0,
             "mode": 0.0,
             "salience": 0.041,
-            "status": 0.1,
+            "status": 0.07,
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "committee_response",
+          "deliverable_title": "Formal committee response package",
           "reasons": [
             "same_workstream",
-            "status_in_progress"
+            "status_not_started"
           ],
-          "score": 0.591,
-          "status": "in_progress",
+          "score": 0.561,
+          "status": "not_started",
           "workstream_id": "WS-POL"
         }
       ],
@@ -703,8 +289,8 @@
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "D-POL-1",
-          "deliverable_title": "Policy Skeleton v0",
+          "deliverable_id": "near_final_package",
+          "deliverable_title": "Near-final recommendation package",
           "reasons": [
             "same_workstream",
             "status_in_progress"
@@ -718,18 +304,18 @@
             "lexical": 0.0,
             "mode": 0.0,
             "salience": 0.041,
-            "status": 0.1,
+            "status": 0.07,
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "committee_response",
+          "deliverable_title": "Formal committee response package",
           "reasons": [
             "same_workstream",
-            "status_in_progress"
+            "status_not_started"
           ],
-          "score": 0.591,
-          "status": "in_progress",
+          "score": 0.561,
+          "status": "not_started",
           "workstream_id": "WS-POL"
         }
       ],
@@ -782,8 +368,8 @@
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "D-POL-1",
-          "deliverable_title": "Policy Skeleton v0",
+          "deliverable_id": "near_final_package",
+          "deliverable_title": "Near-final recommendation package",
           "reasons": [
             "same_workstream",
             "status_in_progress"
@@ -797,18 +383,18 @@
             "lexical": 0.0,
             "mode": 0.0,
             "salience": 0.041,
-            "status": 0.1,
+            "status": 0.07,
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "committee_response",
+          "deliverable_title": "Formal committee response package",
           "reasons": [
             "same_workstream",
-            "status_in_progress"
+            "status_not_started"
           ],
-          "score": 0.591,
-          "status": "in_progress",
+          "score": 0.561,
+          "status": "not_started",
           "workstream_id": "WS-POL"
         }
       ],
@@ -861,8 +447,8 @@
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "D-POL-1",
-          "deliverable_title": "Policy Skeleton v0",
+          "deliverable_id": "near_final_package",
+          "deliverable_title": "Near-final recommendation package",
           "reasons": [
             "same_workstream",
             "status_in_progress"
@@ -876,18 +462,18 @@
             "lexical": 0.0,
             "mode": 0.0,
             "salience": 0.041,
-            "status": 0.1,
+            "status": 0.07,
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "committee_response",
+          "deliverable_title": "Formal committee response package",
           "reasons": [
             "same_workstream",
-            "status_in_progress"
+            "status_not_started"
           ],
-          "score": 0.591,
-          "status": "in_progress",
+          "score": 0.561,
+          "status": "not_started",
           "workstream_id": "WS-POL"
         }
       ],
@@ -940,8 +526,8 @@
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "D-POL-1",
-          "deliverable_title": "Policy Skeleton v0",
+          "deliverable_id": "near_final_package",
+          "deliverable_title": "Near-final recommendation package",
           "reasons": [
             "same_workstream",
             "status_in_progress"
@@ -955,18 +541,18 @@
             "lexical": 0.0,
             "mode": 0.0,
             "salience": 0.041,
-            "status": 0.1,
+            "status": 0.07,
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "committee_response",
+          "deliverable_title": "Formal committee response package",
           "reasons": [
             "same_workstream",
-            "status_in_progress"
+            "status_not_started"
           ],
-          "score": 0.591,
-          "status": "in_progress",
+          "score": 0.561,
+          "status": "not_started",
           "workstream_id": "WS-POL"
         }
       ],
@@ -1019,8 +605,8 @@
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "D-POL-1",
-          "deliverable_title": "Policy Skeleton v0",
+          "deliverable_id": "near_final_package",
+          "deliverable_title": "Near-final recommendation package",
           "reasons": [
             "same_workstream",
             "status_in_progress"
@@ -1034,18 +620,18 @@
             "lexical": 0.0,
             "mode": 0.0,
             "salience": 0.051000000000000004,
-            "status": 0.1,
+            "status": 0.07,
             "topic": 0.0,
             "workstream": 0.45
           },
-          "deliverable_id": "rec_outline_risk_register",
-          "deliverable_title": "Recommendations outline and first-pass risk register",
+          "deliverable_id": "committee_response",
+          "deliverable_title": "Formal committee response package",
           "reasons": [
             "same_workstream",
-            "status_in_progress"
+            "status_not_started"
           ],
-          "score": 0.601,
-          "status": "in_progress",
+          "score": 0.571,
+          "status": "not_started",
           "workstream_id": "WS-POL"
         }
       ],
@@ -1073,7 +659,7 @@
       "ai_role": "Propose exploration candidates",
       "confidence": 1.0,
       "details": {
-        "converted_count": 96,
+        "converted_count": 200,
         "priority_policy": [
           "favor promoted artifacts",
           "favor in-progress deliverables",
@@ -1090,11 +676,11 @@
       "ai_role": "Filter, preprocess, detect salience",
       "confidence": 0.95,
       "details": {
-        "candidate_count": 96,
+        "candidate_count": 200,
         "salience_bands": {
           "high": 0,
-          "low": 90,
-          "medium": 6
+          "low": 197,
+          "medium": 3
         }
       },
       "human_role": "Validate inputs, label edge cases",
@@ -1119,8 +705,8 @@
       "ai_role": "Produce grounded representations",
       "confidence": 0.84,
       "details": {
-        "with_inferred_workstream": 84,
-        "with_memory_links": 84
+        "with_inferred_workstream": 176,
+        "with_memory_links": 176
       },
       "human_role": "Interpret ambiguous cases",
       "stage": "Comprehension",
@@ -1131,8 +717,8 @@
       "ai_role": "Execute inference steps",
       "confidence": 0.86,
       "details": {
-        "average_top_score": 0.5599,
-        "matched_candidate_count": 96
+        "average_top_score": 0.5463,
+        "matched_candidate_count": 200
       },
       "human_role": "Define rules, constraints",
       "stage": "Basic Reasoning",
@@ -1144,11 +730,11 @@
       "confidence": 0.88,
       "details": {
         "critical_flags": {
-          "ambiguous_alternative": 63,
+          "ambiguous_alternative": 151,
           "sensitive_source": 0,
           "workstream_conflict": 0
         },
-        "validated_actions": 83
+        "validated_actions": 162
       },
       "human_role": "Judge tradeoffs, ethical implications",
       "stage": "Critical Thinking",
@@ -1159,8 +745,8 @@
       "ai_role": "Produce introspection logs",
       "confidence": 0.9,
       "details": {
-        "ambiguity_rate": 0.759,
-        "low_confidence_actions": 65,
+        "ambiguity_rate": 0.9321,
+        "low_confidence_actions": 137,
         "missing_workstream_rate": 0.0,
         "unmapped_candidates": 0
       },
@@ -1173,10 +759,10 @@
       "ai_role": "Calibrate confidence, select strategies",
       "confidence": 0.9,
       "details": {
-        "auto_apply_candidates": 3,
+        "auto_apply_candidates": 0,
         "calibrated_threshold": 0.67,
         "recommended_review_mode": "guided_review",
-        "retained_actions": 13
+        "retained_actions": 8
       },
       "human_role": "Adjust strategy, set thresholds",
       "stage": "Metacognition",
@@ -1187,8 +773,8 @@
       "ai_role": "Orchestrate workflows, enforce constraints",
       "confidence": 1.0,
       "details": {
-        "auto_apply_enabled": true,
-        "recommended_actions": 13,
+        "auto_apply_enabled": false,
+        "recommended_actions": 8,
         "report_ready": true
       },
       "human_role": "Final approval, policy decisions",

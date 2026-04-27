@@ -19,7 +19,7 @@
 | 2026-03-06 | D-DPS-1 | AI Tool Review Checklist v1 + Risk Tiers | Jillian Marie Burkley | WS-DPS | Meeting 4 (2026-03-06) |  | completed | 0 |
 | 2026-03-06 | D-EQA-1 | Equity Impact Checklist v1 | Tom Sabo | WS-EQA | Meeting 4 (2026-03-06) | D-CPX-1 | completed | 0 |
 | 2026-03-06 | D-POL-1 | Policy Skeleton v0 | David N. Berol | WS-POL | Meeting 4 (2026-03-06) | D-RSB-1 | completed | 0 |
-| 2026-03-06 | rec_outline_risk_register | Recommendations outline and first-pass risk register | David N. Berol | WS-POL | Meeting 4 (2026-03-06) | policy_principles | in_progress | 0 |
+| 2026-03-06 | rec_outline_risk_register | Recommendations outline and first-pass risk register | David N. Berol | WS-POL | Meeting 4 (2026-03-06) | policy_principles | completed | 0 |
 | 2026-03-20 | m5_draft_sections | Draft sections for priority recommendation domains | David N. Berol | WS-POL | Meeting 5 (2026-03-20) | rec_outline_risk_register | completed | 0 |
 | 2026-04-10 | D-CCI-1 | Comms Pack v1 | Tina Beaty | WS-CCI | Meeting 6 (2026-04-10) | D-POL-1 | completed | 0 |
 | 2026-04-10 | D-IPC-1 | Implementation Roadmap v1 | Jillian Marie Burkley | WS-IPC | Meeting 6 (2026-04-10) | D-POL-1; D-DPS-1; D-EQA-1 | in_progress | 0 |

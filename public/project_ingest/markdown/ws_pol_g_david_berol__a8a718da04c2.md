@@ -1,0 +1,29 @@
+<!-- provenance:{"extractor_version":"2.0.0","pipeline_version":"2.0.0","project":"FCCPS AI Committee"} -->
+
+# WS POL G David Berol
+
+WS-POL-G Student Use – Grades 6-12
+
+Within this grade band, it is appropriate to expect that students will start using GenAI tools to obtain assistance in learning and completing their schoolwork.  Teachers need to impose pragmatic and nuanced restrictions on GenAI uses so that they function solely as scaffolding for the desired learning goals. Note a critical feature of scaffolding: it is intended to be eventually removed. By contrast, certain GenAI use cases seem likely to train students to have life-long tool dependency.
+
+This concern is particularly pronounced with respect to at-home student writing in the humanities. There is evidence that writing done in “collaboration” with AI is analytically passive and less rewarding to students.
+
+Furthermore, there is no analogy from the impact of calculators on mathematics instruction to the impact of Generative AI on writing instruction. De-centering the skill of performing rapid mental calculations is appropriate to conserve time and energy for learning more abstract mathematical concepts.  But Generative AI can now de-center the abstract work of figuring out what one wishes to say in an essay, finding evidence to support one’s views, and arguing persuasively from evidence to conclusion.  To what supposedly more important end are we relieving students from this labor?
+
+The following corrective measures are recommended:
+
+Teachers should recognize that they are de-centering whatever aspect of the writing process they allow to be AI-assisted. Depending on the learning goals of the assignment, teachers should establish precise restrictions on GenAI usage. These restrictions should vary from assignment to assignment to avoid training students into long-term habits of AI-dependency for any given step of the writing process.
+
+Teachers should be particularly sparing in allowing GenAI at the initial stages of the writing process (i.e., brainstorming, suggesting organization, suggesting argumentation strategies). At this stage, students using AI are missing out on the most fundamental thinking processes that writing is intended to develop.
+
+Develop GenAI disclosure policy and regulations that will motivate students to comply with the teacher’s restrictions on usage. Most students in this grade band are not so intent on cheating that they would stoop to developing falsified chat logs for purposes of deceiving their teachers about their use of GenAI.
+
+Increase the amount of writing work that occurs in-class, where it can be directly proctored.
+
+Introduce additional in-class components to writing assignments. See discussion under WS-POL-H (“Control Strategies”).
+
+Other subjects and learning scenarios may be especially well suited to assistance from GenAI. There, student usage ought to be less restricted. The Board should direct the schools to identify these learning scenarios in detail. Here are two illustrative examples:
+
+Formative assignments in STEM and Foreign Language: For most students in this grade band, it will be clear that summative assessment will eventually occur in a proctored environment without the use of GenAI (i.e., a paper and pencil exam). Thus, savvy students have an intrinsic motivation to avoid becoming dependent on tools that will be unavailable to them in the actual summative. Furthermore, it is common for students to discover that they are confused about math and science concepts (or foreign language grammar/vocabulary) as they are working through their homework. Gen AI holds promise as a tool for providing on-the-spot clarification and tutoring in these circumstances. Teachers should support students in how to craft GenAI queries that are less likely to “spoil” the homework problems and should rely on AI-free summatives as the principal integrity control measure.
+
+Computer science assignments: To a certain extent, learning to write computer code could be analogized to writing essays in the humanities.  But in recent years the practice of writing computer programs has become pervasively and permanently AI-integrated. Therefore, there is less reason to be concerned about fostering AI-dependency here than in the case of an English or History essay.
