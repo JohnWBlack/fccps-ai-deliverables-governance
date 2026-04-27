@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-04-27T04:10:44.497397Z",
+    "generated_at": "2026-04-27T16:11:54.037846Z",
     "source": [
       "public/kpis.json",
       "public/ref_index.json",
@@ -10,8 +10,8 @@
     "committee_safe": true
   },
   "coverage": {
-    "principle_linkage_pct": 38.0,
-    "risk_linkage_pct": 38.0
+    "principle_linkage_pct": 83.0,
+    "risk_linkage_pct": 83.0
   },
   "missing_refs": [
     {
@@ -264,7 +264,7 @@
           "pre_m3_defs",
           "pre_m3_risks_ops"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "D-RSB-1": {
         "title": "Shared Baseline Brief v1",
@@ -291,7 +291,7 @@
         "depends_on": [
           "policy_principles"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "D-POL-1": {
         "title": "Policy Skeleton v0",
@@ -399,7 +399,7 @@
         "depends_on": [
           "m5_draft_sections"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "D-CCI-1": {
         "title": "Comms Pack v1",
@@ -421,7 +421,7 @@
           "D-EQA-1",
           "D-POL-1"
         ],
-        "status": "in_progress"
+        "status": "completed"
       },
       "final_talk_track": {
         "title": "Final talk track and Q&A prep",
@@ -432,7 +432,7 @@
           "D-CCI-1",
           "near_final_package"
         ],
-        "status": "not_started"
+        "status": "in_progress"
       },
       "committee_response": {
         "title": "Formal committee response package",

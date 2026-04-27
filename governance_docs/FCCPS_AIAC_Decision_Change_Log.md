@@ -35,6 +35,7 @@
 | CHG-2026-03-08-01 | 2026-03-08 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:1b9ab3615f8b | Automation |
 | CHG-2026-04-05-01 | 2026-04-05 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-05; timeline.yml@2026-03-02; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:a6e946627aaf | Automation |
 | CHG-2026-04-27-01 | 2026-04-27 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-05; timeline.yml@2026-03-02; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:fa3625dd7639 | Automation |
+| CHG-2026-04-27-02 | 2026-04-27 | Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-27; timeline.yml@2026-04-27; principles.yml@2026-03-03) | Automated SoR pipeline update | Impacts snapshot + governance docs (sor/workstreams.yml; sor/deliverables.yml; sor/timeline.yml; sor/principles.yml; ...) auto_ref:5fab6a62a3d9 | Automation |
 
 ---
 

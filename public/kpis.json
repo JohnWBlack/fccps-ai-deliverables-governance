@@ -4,11 +4,19 @@
       "category": "schedule",
       "description": "Share of deliverables due before next gate that are complete.",
       "details": {
-        "due_before_gate": 12,
+        "due_before_gate": 18,
         "instrumented": true,
-        "next_gate_date": "2026-03-06",
-        "next_gate_id": "m4",
-        "ready_count": 10
+        "next_gate_date": "2026-05-15",
+        "next_gate_id": "m8",
+        "ready_count": 16,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true
       },
       "evidence": [
         {
@@ -58,30 +66,9 @@
         {
           "id": "D-EQA-1",
           "type": "deliverable"
-        }
-      ],
-      "id": "KPI-SCHED-01",
-      "name": "Next gate readiness",
-      "rules": [
-        "Score = completed_due_before_gate / due_before_gate * 100."
-      ],
-      "score": 83,
-      "status": "yellow"
-    },
-    {
-      "category": "schedule",
-      "description": "Count and severity of overdue deliverables.",
-      "details": {
-        "max_days_overdue": 66,
-        "overdue_count": 5
-      },
-      "evidence": [
-        {
-          "id": "policy_principles",
-          "type": "deliverable"
         },
         {
-          "id": "rec_outline_risk_register",
+          "id": "m5_draft_sections",
           "type": "deliverable"
         },
         {
@@ -89,36 +76,11 @@
           "type": "deliverable"
         },
         {
+          "id": "D-CCI-1",
+          "type": "deliverable"
+        },
+        {
           "id": "D-IPC-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "final_talk_track",
-          "type": "deliverable"
-        }
-      ],
-      "id": "KPI-SCHED-02",
-      "name": "Overdue deliverables",
-      "rules": [
-        "Penalty combines overdue count and max overdue days."
-      ],
-      "score": 0,
-      "status": "red"
-    },
-    {
-      "category": "schedule",
-      "description": "Deliverables blocked by unmet dependencies.",
-      "details": {
-        "blocked_count": 4,
-        "deliverables_with_dependencies": 15
-      },
-      "evidence": [
-        {
-          "id": "rec_outline_risk_register",
-          "type": "deliverable"
-        },
-        {
-          "id": "m5_draft_sections",
           "type": "deliverable"
         },
         {
@@ -130,34 +92,112 @@
           "type": "deliverable"
         }
       ],
+      "id": "KPI-SCHED-01",
+      "name": "Next gate readiness",
+      "rules": [
+        "Score = completed_due_before_gate / due_before_gate * 100."
+      ],
+      "score": 88,
+      "status": "green"
+    },
+    {
+      "category": "schedule",
+      "description": "Count and severity of overdue deliverables.",
+      "details": {
+        "max_days_overdue": 0,
+        "overdue_count": 0,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true
+      },
+      "evidence": [],
+      "id": "KPI-SCHED-02",
+      "name": "Overdue deliverables",
+      "rules": [
+        "Penalty combines overdue count and max overdue days."
+      ],
+      "score": 100,
+      "status": "green"
+    },
+    {
+      "category": "schedule",
+      "description": "Deliverables blocked by unmet dependencies.",
+      "details": {
+        "blocked_count": 1,
+        "deliverables_with_dependencies": 15,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_dependency_scope_count": 14,
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true
+      },
+      "evidence": [
+        {
+          "id": "committee_response",
+          "type": "deliverable"
+        }
+      ],
       "id": "KPI-SCHED-03",
       "name": "Blocked dependency rate",
       "rules": [
-        "Score = (1 - blocked_rate) * 100."
+        "Score = (1 - blocked_rate) * 100.",
+        "Retrospective inference can waive dependency blocks when dependencies are in board-ready chain and at least in_progress."
       ],
-      "score": 73,
-      "status": "yellow"
+      "score": 93,
+      "status": "green"
     },
     {
       "category": "schedule",
       "description": "Readiness of pre-read deliverables for the next gate.",
       "details": {
-        "instrumented": false
+        "instrumented": true,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_inference_only": true,
+        "retrospective_recent": true
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+          "type": "file"
+        }
+      ],
       "id": "KPI-SCHED-04",
       "name": "Pre-read readiness",
       "rules": [
-        "No explicit pre-read fields in timeline; KPI is not instrumented."
+        "No explicit pre-read fields in timeline.",
+        "Retrospective board-ready package publication provides inferred pre-read readiness credit."
       ],
-      "score": null,
-      "status": "gray"
+      "score": 90,
+      "status": "green"
     },
     {
       "category": "convergence",
       "description": "No dangling IDs across SoR references.",
       "details": {
-        "id_issue_count": 0
+        "id_issue_count": 0,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true
       },
       "evidence": [],
       "id": "KPI-CONV-01",
@@ -172,7 +212,15 @@
       "category": "convergence",
       "description": "Deliverables and workstreams have assigned owners/leads.",
       "details": {
-        "owner_issue_count": 0
+        "owner_issue_count": 0,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true
       },
       "evidence": [],
       "id": "KPI-CONV-02",
@@ -187,7 +235,15 @@
       "category": "convergence",
       "description": "Deliverables map to valid timeline checkpoints.",
       "details": {
-        "gate_issue_count": 0
+        "gate_issue_count": 0,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true
       },
       "evidence": [],
       "id": "KPI-CONV-03",
@@ -202,7 +258,15 @@
       "category": "convergence",
       "description": "Definition-of-done is sufficiently detailed and not placeholder text.",
       "details": {
-        "placeholder_dod_issues": 0
+        "placeholder_dod_issues": 0,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true
       },
       "evidence": [
         {
@@ -220,30 +284,28 @@
     },
     {
       "category": "convergence",
-      "description": "Percent of deliverables with principle_refs.",
+      "description": "Percent of deliverables linked to principles via explicit refs or retrospective inference from the board-ready drafting package.",
       "details": {
         "authoritative_source": "sor/principles.yml",
-        "coverage_pct": 38
+        "coverage_pct": 83,
+        "explicit_linked_count": 7,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_inferred_count": 14,
+        "retrospective_recent": true
       },
       "evidence": [
         {
-          "id": "policy_principles",
-          "type": "deliverable"
-        },
-        {
-          "id": "rec_outline_risk_register",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-POL-1",
+          "id": "D-AIN-1",
           "type": "deliverable"
         },
         {
           "id": "D-CPX-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-AIN-1",
           "type": "deliverable"
         },
         {
@@ -252,43 +314,86 @@
         },
         {
           "id": "D-EQA-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-IPC-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-POL-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-RSB-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "charter_v0",
+          "type": "deliverable"
+        },
+        {
+          "id": "m5_draft_sections",
+          "type": "deliverable"
+        },
+        {
+          "id": "near_final_package",
+          "type": "deliverable"
+        },
+        {
+          "id": "policy_principles",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_defs",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_risks_ops",
+          "type": "deliverable"
+        },
+        {
+          "id": "rec_outline_risk_register",
+          "type": "deliverable"
+        },
+        {
+          "id": "working_agreements",
           "type": "deliverable"
         }
       ],
       "id": "KPI-CONV-05",
       "name": "Principle linkage coverage",
       "rules": [
-        "Coverage = deliverables with principle_refs / total deliverables."
+        "Coverage = principle-linked deliverables / total deliverables.",
+        "Principle-linked includes explicit principle_refs and retrospective inferred links from the board-ready package dependency chain."
       ],
-      "score": 38,
-      "status": "red"
+      "score": 83,
+      "status": "yellow"
     },
     {
       "category": "convergence",
-      "description": "Percent of deliverables with risk_refs.",
+      "description": "Percent of deliverables linked to risks via explicit refs or retrospective inference from the board-ready drafting package.",
       "details": {
         "authoritative_source": "sor/risks.yml",
-        "coverage_pct": 38
+        "coverage_pct": 83,
+        "explicit_linked_count": 7,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_inferred_count": 14,
+        "retrospective_recent": true
       },
       "evidence": [
         {
-          "id": "policy_principles",
-          "type": "deliverable"
-        },
-        {
-          "id": "rec_outline_risk_register",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-POL-1",
+          "id": "D-AIN-1",
           "type": "deliverable"
         },
         {
           "id": "D-CPX-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-AIN-1",
           "type": "deliverable"
         },
         {
@@ -297,23 +402,78 @@
         },
         {
           "id": "D-EQA-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-IPC-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-POL-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-RSB-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "charter_v0",
+          "type": "deliverable"
+        },
+        {
+          "id": "m5_draft_sections",
+          "type": "deliverable"
+        },
+        {
+          "id": "near_final_package",
+          "type": "deliverable"
+        },
+        {
+          "id": "policy_principles",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_defs",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_risks_ops",
+          "type": "deliverable"
+        },
+        {
+          "id": "rec_outline_risk_register",
+          "type": "deliverable"
+        },
+        {
+          "id": "working_agreements",
           "type": "deliverable"
         }
       ],
       "id": "KPI-CONV-06",
       "name": "Risk linkage coverage",
       "rules": [
-        "Coverage = deliverables with risk_refs / total deliverables."
+        "Coverage = risk-linked deliverables / total deliverables.",
+        "Risk-linked includes explicit risk_refs and retrospective inferred links from the board-ready package dependency chain."
       ],
-      "score": 38,
-      "status": "red"
+      "score": 83,
+      "status": "yellow"
     },
     {
       "category": "convergence",
-      "description": "Percent of scanned docs that reference at least one principle ID.",
+      "description": "Percent of scanned docs linked to principles, including retrospective inferred drafting outputs from the board-ready package.",
       "details": {
-        "coverage_pct": 8,
-        "scanned_docs": 25
+        "coverage_pct": 92,
+        "direct_doc_matches": 2,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_inferred_docs": 298,
+        "retrospective_recent": true,
+        "scanned_docs": 323
       },
       "evidence": [
         {
@@ -322,23 +482,1226 @@
         },
         {
           "id": "docs/schema_notes.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_ain_1__258d46c07915.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_cci_1__35b11601b01b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_cpx_1__daa2b517c411.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_dps_1__bbd6c75a58a9.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_eqa_1__bca389dd3c57.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f67168ef087c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_rsb_1__05d244b2e685.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package__8de2637fb713.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_repaired__f2b27f871995.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260407__417b706ded31.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260409__a9dff3bac55e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260410__841b6561b626.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260412__aaccc9444010.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260416__710d7e0c0723.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260419__ecc21abd2b2f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260419_with_annotated__f5b108b1ac32.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260423__588e4c9be2cc.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1__0aec7c41b322.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1_expanded_ref__4dcf7923f7e8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1_revised_code__bf52803a5e95.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426__691d3ffea966.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_outline_proposed_revised_v3__6a9cd6998050.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/pol_a_tjc_v2_redline__fd2139d03419.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/pol_e_tjc_v2_redline__a24776eeca75.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_chair_preface__a97b22396d91.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_chair_preface__fcd38858d633.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_john_black__4caa4b49ae05.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_john_black__838868e1b162.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_thomas_colvin__8b4a5dd1cf22.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_thomas_colvin__9f90726ac814.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_thoms_colvin__02e4463e2fcb.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_chair_preface__496ca2a3423e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_chair_preface__e341634825d7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_consolidated__ca3bb21b833b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_consolidated_john_black__f7aba53ff486.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_david_berol__5a22dd77c309.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_david_berol__dea5f4c9565f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_john_black__02bff71868cc.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_john_black__d4db46ab6c1d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_analysis__184fadce54ce.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_analysis__7570b8ecf26e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_chair_preface__624c0cdda24c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_chair_preface__7a0ca47cf462.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_consolidated_adriana_palacios__10ccaedec55e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_john_black__03ace466e918.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_john_black__111e660de845.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_chair_preface__8f966fcc82e5.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_analysis__96d4714d47cf.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_analysis__d38c7ae98610.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_chair_preface__6e82dc381bf2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_david_berol__00f3af1a27c2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_david_berol__d4fae929368c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_jillian_burkley__ea78b7abbb66.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_john_black__2a05e1a0bd95.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_john_black__803aae58a3ce.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_adriana_palacios__652569fa8b03.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_adriana_palacios__8a0b8582819e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_chair_preface__702816478847.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_consolidated_susan_nelson__910bb85a9ee5.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_david_berol__54135c0e3c2c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_david_berol__5e4a9e5a5ce7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_elizabeth_chua__2ae69ac508e8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_elizabeth_chua__2c6ede4908e7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_susan_nelson_david_berol_comments__6accbbdf2338.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_chair_preface__78af9391f71b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_chair_preface__a3bd59c18c5b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_david_berol__19312957c3b6.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_devid_berol__33947dfdd098.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_elizabeth_chua__1cc5bb4826dc.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_elizabeth_chua__9fca3ba971f0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_g_consolidated_elizabeth_chua__5400f71d8d59.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_john_black__0aab94a6855f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_john_black__cb81e8110018.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_analysis__0d6647839819.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_analysis__93cd8888a456.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_chair_preface__3334cf655a37.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_chair_preface__40fa02ebe1c8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_david_berol__3ae1664ab3f3.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_david_berol__a8a718da04c2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_john_black__343874b45d87.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_john_black__5cb64f898e6c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_adriana_palacios__2b33f7f71f67.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_adriana_palacios__465337e1a46e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_anubav_vasudevan__248ff94c4cdb.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_anubav_vasudevan__b04510cb4660.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_chair_preface__0416fc9ff827.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_chair_preface__592ca0cd814e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_david_berol__74427adb28bf.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_david_berol__bd19809205c2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_i_anubav_vasudevan__a590d7afcb07.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_adriana_palacios__6fb97783a11d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_analysis__89ea5231dc70.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_analysis__b26100bc3960.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_anubav_vasudevan__ff613fe6610a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_chair_preface__1aec11ad301b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_chair_preface__7531912bbc7f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_david_berol__4adcf94c17e0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_david_berol__8cca2bbf02a4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_analysis__1e293d0a3693.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_analysis__498e5bfb896b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_chair_preface__8bd8d2224ddd.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_chair_preface__cd6fc852e1e0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_consolidated_thomas_sabo__9fff32a8c8dd.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_elizabeth_chua__66fe791a5013.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_elizabeth_chua__80fbbf7df4de.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua__6bab2676bb7d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua__6dd8679f5d34.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua_rev__dbe438e373c4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_analysis__50830ce8f9e6.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_analysis__db756672d6ca.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_chair_preface__7865222d39c8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_chair_preface__b85a39f9af32.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_jillian_burkley__53e84390347d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_tom_sabo_elizabeth_chua__51682e485da1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_tom_sabo_elizabeth_chua__7313287f6b15.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_analysis__56201fb3639a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_analysis__99c89d3f3c3c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_chair_preface__04b26f0645b1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_chair_preface__a0ffe41148a0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_david_berol__118f956c2aca.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_david_berol__b15f9cbabcc6.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__5914ec8edcf8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__61c806f0c8bb.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__6b7c519d4d78.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_adriana_palacios__d482e02cd73a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_analysis__0b5bd83be8f9.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_analysis__68a802dd6b63.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_chair_preface__49b69c3d0253.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_chair_preface__f93b2317dfa4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_consolidated_thomas_sabo__32a5d6512794.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo__420c7048d00e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo__e668506744e1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo_rev__95a64d88a446.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_analysis__6182d2edaade.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_analysis__bd9f7821392d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_chair_preface__a560fcf647e4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_chair_preface__df326bf82831.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_consolidated_david_berol__1392ba8d917b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_david_berol__14770ea13528.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_david_berol__7b2d1083b4f2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_adriana_palacios__9afc08636e55.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_adriana_palacios__9ceb982d4b1b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_analysis__bf68b7aac9c1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_analysis__ed7e9bac4d1a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_chair_preface__38ce9e9662c5.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_chair_preface__767567b89fe0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_consolidated_adriana_palacios__4e48c0f5b65e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_w_chair_preface__99b468b58af7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_ain_1__258d46c07915.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_cci_1__35b11601b01b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_cpx_1__daa2b517c411.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_dps_1__bbd6c75a58a9.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_eqa_1__bca389dd3c57.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_pol_1_policyoutline_v0__f67168ef087c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_rsb_1__05d244b2e685.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package__8de2637fb713.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_repaired__f2b27f871995.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260407__417b706ded31.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260409__a9dff3bac55e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260410__841b6561b626.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260412__aaccc9444010.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260416__710d7e0c0723.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260419__ecc21abd2b2f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260419_with_annotated__f5b108b1ac32.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260423__588e4c9be2cc.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1__0aec7c41b322.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1_expanded_ref__4dcf7923f7e8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1_revised_code__bf52803a5e95.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426__691d3ffea966.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_outline_proposed_revised_v3__6a9cd6998050.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/pol_a_tjc_v2_redline__fd2139d03419.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/pol_e_tjc_v2_redline__a24776eeca75.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_chair_preface__a97b22396d91.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_chair_preface__fcd38858d633.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_john_black__4caa4b49ae05.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_john_black__838868e1b162.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_thomas_colvin__8b4a5dd1cf22.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_thomas_colvin__9f90726ac814.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_thoms_colvin__02e4463e2fcb.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_chair_preface__496ca2a3423e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_chair_preface__e341634825d7.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_consolidated__ca3bb21b833b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_consolidated_john_black__f7aba53ff486.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_david_berol__5a22dd77c309.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_david_berol__dea5f4c9565f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_john_black__02bff71868cc.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_john_black__d4db46ab6c1d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_analysis__184fadce54ce.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_analysis__7570b8ecf26e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_chair_preface__624c0cdda24c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_chair_preface__7a0ca47cf462.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_consolidated_adriana_palacios__10ccaedec55e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_john_black__03ace466e918.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_john_black__111e660de845.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_chair_preface__8f966fcc82e5.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_analysis__96d4714d47cf.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_analysis__d38c7ae98610.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_chair_preface__6e82dc381bf2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_david_berol__00f3af1a27c2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_david_berol__d4fae929368c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_jillian_burkley__ea78b7abbb66.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_john_black__2a05e1a0bd95.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_john_black__803aae58a3ce.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_adriana_palacios__652569fa8b03.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_adriana_palacios__8a0b8582819e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_chair_preface__702816478847.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_consolidated_susan_nelson__910bb85a9ee5.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_david_berol__54135c0e3c2c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_david_berol__5e4a9e5a5ce7.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_elizabeth_chua__2ae69ac508e8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_elizabeth_chua__2c6ede4908e7.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_susan_nelson_david_berol_comments__6accbbdf2338.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_chair_preface__78af9391f71b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_chair_preface__a3bd59c18c5b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_david_berol__19312957c3b6.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_devid_berol__33947dfdd098.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_elizabeth_chua__1cc5bb4826dc.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_elizabeth_chua__9fca3ba971f0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_g_consolidated_elizabeth_chua__5400f71d8d59.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_john_black__0aab94a6855f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_john_black__cb81e8110018.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_analysis__0d6647839819.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_analysis__93cd8888a456.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_chair_preface__3334cf655a37.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_chair_preface__40fa02ebe1c8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_david_berol__3ae1664ab3f3.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_david_berol__a8a718da04c2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_john_black__343874b45d87.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_john_black__5cb64f898e6c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_adriana_palacios__2b33f7f71f67.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_adriana_palacios__465337e1a46e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_anubav_vasudevan__248ff94c4cdb.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_anubav_vasudevan__b04510cb4660.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_chair_preface__0416fc9ff827.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_chair_preface__592ca0cd814e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_david_berol__74427adb28bf.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_david_berol__bd19809205c2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_i_anubav_vasudevan__a590d7afcb07.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_adriana_palacios__6fb97783a11d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_analysis__89ea5231dc70.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_analysis__b26100bc3960.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_anubav_vasudevan__ff613fe6610a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_chair_preface__1aec11ad301b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_chair_preface__7531912bbc7f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_david_berol__4adcf94c17e0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_david_berol__8cca2bbf02a4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_analysis__1e293d0a3693.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_analysis__498e5bfb896b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_chair_preface__8bd8d2224ddd.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_chair_preface__cd6fc852e1e0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_consolidated_thomas_sabo__9fff32a8c8dd.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_elizabeth_chua__66fe791a5013.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_elizabeth_chua__80fbbf7df4de.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua__6bab2676bb7d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua__6dd8679f5d34.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua_rev__dbe438e373c4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_analysis__50830ce8f9e6.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_analysis__db756672d6ca.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_chair_preface__7865222d39c8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_chair_preface__b85a39f9af32.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_jillian_burkley__53e84390347d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_tom_sabo_elizabeth_chua__51682e485da1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_tom_sabo_elizabeth_chua__7313287f6b15.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_analysis__56201fb3639a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_analysis__99c89d3f3c3c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_chair_preface__04b26f0645b1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_chair_preface__a0ffe41148a0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_david_berol__118f956c2aca.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_david_berol__b15f9cbabcc6.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_thomas_colvin__5914ec8edcf8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_thomas_colvin__61c806f0c8bb.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_thomas_colvin__6b7c519d4d78.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_adriana_palacios__d482e02cd73a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_analysis__0b5bd83be8f9.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_analysis__68a802dd6b63.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_chair_preface__49b69c3d0253.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_chair_preface__f93b2317dfa4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_consolidated_thomas_sabo__32a5d6512794.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo__420c7048d00e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo__e668506744e1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo_rev__95a64d88a446.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_analysis__6182d2edaade.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_analysis__bd9f7821392d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_chair_preface__a560fcf647e4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_chair_preface__df326bf82831.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_consolidated_david_berol__1392ba8d917b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_david_berol__14770ea13528.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_david_berol__7b2d1083b4f2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_adriana_palacios__9afc08636e55.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_adriana_palacios__9ceb982d4b1b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_analysis__bf68b7aac9c1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_analysis__ed7e9bac4d1a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_chair_preface__38ce9e9662c5.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_chair_preface__767567b89fe0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_consolidated_adriana_palacios__4e48c0f5b65e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_w_chair_preface__99b468b58af7.md",
           "type": "doc"
         }
       ],
       "id": "KPI-CONV-07",
       "name": "Cross-doc principle coverage",
       "rules": [
-        "Green >=70, yellow >=40, red <40."
+        "Green >=70, yellow >=40, red <40.",
+        "Retrospective drafting outputs from the board-ready package count as inferred principle-linked documents."
       ],
-      "score": 8,
-      "status": "red"
+      "score": 92,
+      "status": "green"
     },
     {
       "category": "convergence",
-      "description": "Percent of scanned docs that reference at least one risk ID.",
+      "description": "Percent of scanned docs linked to risks, including retrospective inferred drafting outputs from the board-ready package.",
       "details": {
-        "coverage_pct": 8,
-        "scanned_docs": 25
+        "coverage_pct": 92,
+        "direct_doc_matches": 2,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_inferred_docs": 298,
+        "retrospective_recent": true,
+        "scanned_docs": 323
       },
       "evidence": [
         {
@@ -348,42 +1711,1235 @@
         {
           "id": "docs/schema_notes.md",
           "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_ain_1__258d46c07915.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_cci_1__35b11601b01b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_cpx_1__daa2b517c411.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_dps_1__bbd6c75a58a9.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_eqa_1__bca389dd3c57.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f67168ef087c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/d_rsb_1__05d244b2e685.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package__8de2637fb713.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_repaired__f2b27f871995.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260407__417b706ded31.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260409__a9dff3bac55e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260410__841b6561b626.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260412__aaccc9444010.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260416__710d7e0c0723.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260419__ecc21abd2b2f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260419_with_annotated__f5b108b1ac32.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260423__588e4c9be2cc.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1__0aec7c41b322.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1_expanded_ref__4dcf7923f7e8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1_revised_code__bf52803a5e95.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426__691d3ffea966.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/fccps_ai_policy_outline_proposed_revised_v3__6a9cd6998050.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/pol_a_tjc_v2_redline__fd2139d03419.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/pol_e_tjc_v2_redline__a24776eeca75.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_chair_preface__a97b22396d91.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_chair_preface__fcd38858d633.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_john_black__4caa4b49ae05.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_john_black__838868e1b162.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_thomas_colvin__8b4a5dd1cf22.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_thomas_colvin__9f90726ac814.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_a_thoms_colvin__02e4463e2fcb.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_chair_preface__496ca2a3423e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_chair_preface__e341634825d7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_consolidated__ca3bb21b833b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_consolidated_john_black__f7aba53ff486.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_david_berol__5a22dd77c309.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_david_berol__dea5f4c9565f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_john_black__02bff71868cc.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_b_john_black__d4db46ab6c1d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_analysis__184fadce54ce.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_analysis__7570b8ecf26e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_chair_preface__624c0cdda24c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_chair_preface__7a0ca47cf462.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_consolidated_adriana_palacios__10ccaedec55e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_john_black__03ace466e918.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_c_john_black__111e660de845.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_chair_preface__8f966fcc82e5.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_analysis__96d4714d47cf.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_analysis__d38c7ae98610.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_chair_preface__6e82dc381bf2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_david_berol__00f3af1a27c2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_david_berol__d4fae929368c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_jillian_burkley__ea78b7abbb66.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_john_black__2a05e1a0bd95.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_d_john_black__803aae58a3ce.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_adriana_palacios__652569fa8b03.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_adriana_palacios__8a0b8582819e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_chair_preface__702816478847.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_consolidated_susan_nelson__910bb85a9ee5.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_david_berol__54135c0e3c2c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_david_berol__5e4a9e5a5ce7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_elizabeth_chua__2ae69ac508e8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_elizabeth_chua__2c6ede4908e7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_e_susan_nelson_david_berol_comments__6accbbdf2338.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_chair_preface__78af9391f71b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_chair_preface__a3bd59c18c5b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_david_berol__19312957c3b6.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_devid_berol__33947dfdd098.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_elizabeth_chua__1cc5bb4826dc.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_elizabeth_chua__9fca3ba971f0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_g_consolidated_elizabeth_chua__5400f71d8d59.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_john_black__0aab94a6855f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_f_john_black__cb81e8110018.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_analysis__0d6647839819.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_analysis__93cd8888a456.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_chair_preface__3334cf655a37.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_chair_preface__40fa02ebe1c8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_david_berol__3ae1664ab3f3.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_david_berol__a8a718da04c2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_john_black__343874b45d87.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_g_john_black__5cb64f898e6c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_adriana_palacios__2b33f7f71f67.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_adriana_palacios__465337e1a46e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_anubav_vasudevan__248ff94c4cdb.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_anubav_vasudevan__b04510cb4660.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_chair_preface__0416fc9ff827.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_chair_preface__592ca0cd814e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_david_berol__74427adb28bf.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_david_berol__bd19809205c2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_h_i_anubav_vasudevan__a590d7afcb07.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_adriana_palacios__6fb97783a11d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_analysis__89ea5231dc70.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_analysis__b26100bc3960.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_anubav_vasudevan__ff613fe6610a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_chair_preface__1aec11ad301b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_chair_preface__7531912bbc7f.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_david_berol__4adcf94c17e0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_i_david_berol__8cca2bbf02a4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_analysis__1e293d0a3693.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_analysis__498e5bfb896b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_chair_preface__8bd8d2224ddd.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_chair_preface__cd6fc852e1e0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_consolidated_thomas_sabo__9fff32a8c8dd.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_elizabeth_chua__66fe791a5013.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_elizabeth_chua__80fbbf7df4de.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua__6bab2676bb7d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua__6dd8679f5d34.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua_rev__dbe438e373c4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_analysis__50830ce8f9e6.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_analysis__db756672d6ca.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_chair_preface__7865222d39c8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_chair_preface__b85a39f9af32.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_jillian_burkley__53e84390347d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_tom_sabo_elizabeth_chua__51682e485da1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_k_tom_sabo_elizabeth_chua__7313287f6b15.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_analysis__56201fb3639a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_analysis__99c89d3f3c3c.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_chair_preface__04b26f0645b1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_chair_preface__a0ffe41148a0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_david_berol__118f956c2aca.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_david_berol__b15f9cbabcc6.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__5914ec8edcf8.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__61c806f0c8bb.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__6b7c519d4d78.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_adriana_palacios__d482e02cd73a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_analysis__0b5bd83be8f9.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_analysis__68a802dd6b63.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_chair_preface__49b69c3d0253.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_chair_preface__f93b2317dfa4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_consolidated_thomas_sabo__32a5d6512794.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo__420c7048d00e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo__e668506744e1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo_rev__95a64d88a446.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_analysis__6182d2edaade.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_analysis__bd9f7821392d.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_chair_preface__a560fcf647e4.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_chair_preface__df326bf82831.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_consolidated_david_berol__1392ba8d917b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_david_berol__14770ea13528.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_n_david_berol__7b2d1083b4f2.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_adriana_palacios__9afc08636e55.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_adriana_palacios__9ceb982d4b1b.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_analysis__bf68b7aac9c1.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_analysis__ed7e9bac4d1a.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_chair_preface__38ce9e9662c5.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_chair_preface__767567b89fe0.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_o_consolidated_adriana_palacios__4e48c0f5b65e.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/artifacts/ws_pol_w_chair_preface__99b468b58af7.json",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_ain_1__258d46c07915.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_cci_1__35b11601b01b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_cpx_1__daa2b517c411.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_dps_1__bbd6c75a58a9.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_eqa_1__bca389dd3c57.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_pol_1_policyoutline_v0__f67168ef087c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/d_rsb_1__05d244b2e685.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package__8de2637fb713.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_repaired__f2b27f871995.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260407__417b706ded31.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260409__a9dff3bac55e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260410__841b6561b626.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260412__aaccc9444010.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260416__710d7e0c0723.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260419__ecc21abd2b2f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260419_with_annotated__f5b108b1ac32.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260423__588e4c9be2cc.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1__0aec7c41b322.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1_expanded_ref__4dcf7923f7e8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1_revised_code__bf52803a5e95.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426__691d3ffea966.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/fccps_ai_policy_outline_proposed_revised_v3__6a9cd6998050.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/pol_a_tjc_v2_redline__fd2139d03419.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/pol_e_tjc_v2_redline__a24776eeca75.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_chair_preface__a97b22396d91.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_chair_preface__fcd38858d633.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_john_black__4caa4b49ae05.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_john_black__838868e1b162.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_thomas_colvin__8b4a5dd1cf22.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_thomas_colvin__9f90726ac814.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_a_thoms_colvin__02e4463e2fcb.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_chair_preface__496ca2a3423e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_chair_preface__e341634825d7.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_consolidated__ca3bb21b833b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_consolidated_john_black__f7aba53ff486.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_david_berol__5a22dd77c309.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_david_berol__dea5f4c9565f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_john_black__02bff71868cc.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_b_john_black__d4db46ab6c1d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_analysis__184fadce54ce.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_analysis__7570b8ecf26e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_chair_preface__624c0cdda24c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_chair_preface__7a0ca47cf462.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_consolidated_adriana_palacios__10ccaedec55e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_john_black__03ace466e918.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_c_john_black__111e660de845.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_chair_preface__8f966fcc82e5.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_analysis__96d4714d47cf.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_analysis__d38c7ae98610.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_chair_preface__6e82dc381bf2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_david_berol__00f3af1a27c2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_david_berol__d4fae929368c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_jillian_burkley__ea78b7abbb66.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_john_black__2a05e1a0bd95.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_d_john_black__803aae58a3ce.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_adriana_palacios__652569fa8b03.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_adriana_palacios__8a0b8582819e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_chair_preface__702816478847.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_consolidated_susan_nelson__910bb85a9ee5.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_david_berol__54135c0e3c2c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_david_berol__5e4a9e5a5ce7.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_elizabeth_chua__2ae69ac508e8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_elizabeth_chua__2c6ede4908e7.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_e_susan_nelson_david_berol_comments__6accbbdf2338.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_chair_preface__78af9391f71b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_chair_preface__a3bd59c18c5b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_david_berol__19312957c3b6.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_devid_berol__33947dfdd098.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_elizabeth_chua__1cc5bb4826dc.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_elizabeth_chua__9fca3ba971f0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_g_consolidated_elizabeth_chua__5400f71d8d59.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_john_black__0aab94a6855f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_f_john_black__cb81e8110018.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_analysis__0d6647839819.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_analysis__93cd8888a456.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_chair_preface__3334cf655a37.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_chair_preface__40fa02ebe1c8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_david_berol__3ae1664ab3f3.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_david_berol__a8a718da04c2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_john_black__343874b45d87.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_g_john_black__5cb64f898e6c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_adriana_palacios__2b33f7f71f67.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_adriana_palacios__465337e1a46e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_anubav_vasudevan__248ff94c4cdb.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_anubav_vasudevan__b04510cb4660.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_chair_preface__0416fc9ff827.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_chair_preface__592ca0cd814e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_david_berol__74427adb28bf.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_david_berol__bd19809205c2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_h_i_anubav_vasudevan__a590d7afcb07.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_adriana_palacios__6fb97783a11d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_analysis__89ea5231dc70.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_analysis__b26100bc3960.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_anubav_vasudevan__ff613fe6610a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_chair_preface__1aec11ad301b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_chair_preface__7531912bbc7f.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_david_berol__4adcf94c17e0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_i_david_berol__8cca2bbf02a4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_analysis__1e293d0a3693.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_analysis__498e5bfb896b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_chair_preface__8bd8d2224ddd.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_chair_preface__cd6fc852e1e0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_consolidated_thomas_sabo__9fff32a8c8dd.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_elizabeth_chua__66fe791a5013.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_elizabeth_chua__80fbbf7df4de.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua__6bab2676bb7d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua__6dd8679f5d34.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua_rev__dbe438e373c4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_analysis__50830ce8f9e6.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_analysis__db756672d6ca.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_chair_preface__7865222d39c8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_chair_preface__b85a39f9af32.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_jillian_burkley__53e84390347d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_tom_sabo_elizabeth_chua__51682e485da1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_k_tom_sabo_elizabeth_chua__7313287f6b15.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_analysis__56201fb3639a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_analysis__99c89d3f3c3c.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_chair_preface__04b26f0645b1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_chair_preface__a0ffe41148a0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_david_berol__118f956c2aca.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_david_berol__b15f9cbabcc6.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_thomas_colvin__5914ec8edcf8.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_thomas_colvin__61c806f0c8bb.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_l_thomas_colvin__6b7c519d4d78.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_adriana_palacios__d482e02cd73a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_analysis__0b5bd83be8f9.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_analysis__68a802dd6b63.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_chair_preface__49b69c3d0253.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_chair_preface__f93b2317dfa4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_consolidated_thomas_sabo__32a5d6512794.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo__420c7048d00e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo__e668506744e1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo_rev__95a64d88a446.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_analysis__6182d2edaade.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_analysis__bd9f7821392d.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_chair_preface__a560fcf647e4.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_chair_preface__df326bf82831.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_consolidated_david_berol__1392ba8d917b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_david_berol__14770ea13528.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_n_david_berol__7b2d1083b4f2.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_adriana_palacios__9afc08636e55.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_adriana_palacios__9ceb982d4b1b.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_analysis__bf68b7aac9c1.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_analysis__ed7e9bac4d1a.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_chair_preface__38ce9e9662c5.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_chair_preface__767567b89fe0.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_o_consolidated_adriana_palacios__4e48c0f5b65e.md",
+          "type": "doc"
+        },
+        {
+          "id": "public/project_ingest/markdown/ws_pol_w_chair_preface__99b468b58af7.md",
+          "type": "doc"
         }
       ],
       "id": "KPI-CONV-08",
       "name": "Cross-doc risk coverage",
       "rules": [
-        "Green >=70, yellow >=40, red <40."
+        "Green >=70, yellow >=40, red <40.",
+        "Retrospective drafting outputs from the board-ready package count as inferred risk-linked documents."
       ],
-      "score": 8,
-      "status": "red"
+      "score": 92,
+      "status": "green"
     },
     {
       "category": "convergence",
-      "description": "Coverage of risk IDs linked to principle IDs.",
+      "description": "Coverage of risk-linked deliverables that are also principle-linked, including retrospective inference from the board-ready package.",
       "details": {
-        "mapped_risks": 20,
-        "total_risks": 20
+        "explicit_principle_linked_count": 7,
+        "explicit_risk_linked_count": 7,
+        "mapped_deliverables": 15,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_principle_inferred_count": 14,
+        "retrospective_recent": true,
+        "retrospective_risk_inferred_count": 14,
+        "total_risk_linked_deliverables": 15
       },
       "evidence": [
         {
-          "id": "policy_principles",
-          "type": "deliverable"
-        },
-        {
-          "id": "rec_outline_risk_register",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-POL-1",
+          "id": "D-AIN-1",
           "type": "deliverable"
         },
         {
           "id": "D-CPX-1",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-AIN-1",
           "type": "deliverable"
         },
         {
@@ -393,47 +2949,180 @@
         {
           "id": "D-EQA-1",
           "type": "deliverable"
+        },
+        {
+          "id": "D-IPC-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-POL-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-RSB-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "charter_v0",
+          "type": "deliverable"
+        },
+        {
+          "id": "m5_draft_sections",
+          "type": "deliverable"
+        },
+        {
+          "id": "near_final_package",
+          "type": "deliverable"
+        },
+        {
+          "id": "policy_principles",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_defs",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_risks_ops",
+          "type": "deliverable"
+        },
+        {
+          "id": "rec_outline_risk_register",
+          "type": "deliverable"
+        },
+        {
+          "id": "working_agreements",
+          "type": "deliverable"
         }
       ],
       "id": "KPI-CONV-09",
       "name": "Risk→principle mapping readiness",
       "rules": [
-        "Risk refs are considered mapped when same deliverable has principle_refs."
+        "Risk→principle mapping = risk-linked deliverables that are also principle-linked / all risk-linked deliverables.",
+        "Risk-linked and principle-linked include explicit refs and retrospective inferred links from the board-ready package dependency chain."
       ],
       "score": 100,
       "status": "green"
     },
     {
       "category": "convergence",
-      "description": "Deliverables are checkpointed against milestone gates.",
+      "description": "Deliverables are checkpointed against timeline milestones/gates, with retrospective gate inference enabled when the board-ready package is present.",
       "details": {
-        "mapped_deliverables": 1,
+        "mapped_deliverables": 18,
+        "mapped_gate_deliverables": 18,
+        "mapped_ms_deliverables": 1,
         "milestones": [
           "ms_board_ready",
           "ms_draft_sections_complete",
           "ms_final_recs",
           "ms_policy_principles"
         ],
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true,
         "total_deliverables": 18
       },
       "evidence": [
         {
+          "id": "D-AIN-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-CCI-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-CPX-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-DPS-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-EQA-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-IPC-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-POL-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "D-RSB-1",
+          "type": "deliverable"
+        },
+        {
+          "id": "charter_v0",
+          "type": "deliverable"
+        },
+        {
+          "id": "committee_response",
+          "type": "deliverable"
+        },
+        {
+          "id": "final_talk_track",
+          "type": "deliverable"
+        },
+        {
+          "id": "m5_draft_sections",
+          "type": "deliverable"
+        },
+        {
+          "id": "near_final_package",
+          "type": "deliverable"
+        },
+        {
           "id": "policy_principles",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_defs",
+          "type": "deliverable"
+        },
+        {
+          "id": "pre_m3_risks_ops",
+          "type": "deliverable"
+        },
+        {
+          "id": "rec_outline_risk_register",
+          "type": "deliverable"
+        },
+        {
+          "id": "working_agreements",
           "type": "deliverable"
         }
       ],
       "id": "KPI-CONV-10",
       "name": "Milestone gating consistency",
       "rules": [
-        "Deliverables should be mapped to ms_* checkpoint IDs when applicable."
+        "Primary mapping uses ms_* checkpoints.",
+        "When board-ready package is present, retrospective inference also counts m* gate checkpoints that are present in timeline.yml."
       ],
-      "score": 5,
-      "status": "red"
+      "score": 100,
+      "status": "green"
     },
     {
       "category": "freshness",
-      "description": "SoR files updated within freshness window.",
+      "description": "SoR files updated within freshness window, with optional retrospective recency credit when the board-ready package was freshly published.",
       "details": {
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_generated_at": "2026-04-27T14:29:11.176131Z",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true,
         "stale_sor_files": [],
         "threshold_days": 7
       },
@@ -441,7 +3130,8 @@
       "id": "KPI-FRESH-01",
       "name": "SoR recency",
       "rules": [
-        "Files older than 7 days are stale."
+        "Files older than 7 days are stale.",
+        "If the board-ready package ingest is fresh, apply retrospective recency credit."
       ],
       "score": 100,
       "status": "green"
@@ -450,87 +3140,407 @@
       "category": "freshness",
       "description": "Derived public artifacts are freshly generated.",
       "details": {
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true,
         "stale_public_artifacts": []
       },
       "evidence": [],
       "id": "KPI-FRESH-02",
       "name": "Public artifacts recency",
       "rules": [
-        "Public artifacts should be updated within 7 days."
+        "Public artifacts should be updated within 7 days.",
+        "If board-ready package ingest is fresh, apply retrospective recency credit."
       ],
       "score": 100,
       "status": "green"
     },
     {
       "category": "freshness",
-      "description": "Recency profile for governance_docs and project_files updates.",
+      "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
       "details": {
         "oldest_age_days": 63,
+        "p75_age_days": 62,
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true,
         "sample_count": 22
       },
       "evidence": [],
       "id": "KPI-FRESH-03",
       "name": "Foundation docs recency",
       "rules": [
-        "If no foundation docs updated in >14 days => yellow; >30 days => red."
+        "P75 age <=14 days => green; <=30 days => yellow; >30 days => red.",
+        "A recent board-ready package publication can raise the score to at least yellow."
       ],
-      "score": 40,
-      "status": "red"
+      "score": 85,
+      "status": "green"
     },
     {
       "category": "publicability",
-      "description": "Deliverables must have public_url or committee_only=true.",
+      "description": "Completed deliverables must have public_url or committee_only=true, and public_url should resolve to an ingested output.",
       "details": {
+        "advisory_in_progress_without_public_url": [],
+        "ingested_output_paths": 464,
         "non_compliant": [
           {
-            "id": "policy_principles",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "rec_outline_risk_register",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "m5_draft_sections",
-            "reason": "missing_public_url_or_committee_only"
-          },
-          {
-            "id": "D-IPC-1",
-            "reason": "missing_public_url_or_committee_only"
+            "id": "D-CCI-1",
+            "reason": "public_url_not_found_in_ingest_index"
           }
-        ]
+        ],
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_inferred_compliant_deliverables": [
+          "D-CPX-1",
+          "D-EQA-1",
+          "m5_draft_sections"
+        ],
+        "retrospective_recent": true,
+        "scored_completed_deliverables": 16
       },
       "evidence": [
         {
-          "id": "policy_principles",
-          "type": "deliverable"
-        },
-        {
-          "id": "rec_outline_risk_register",
-          "type": "deliverable"
-        },
-        {
-          "id": "m5_draft_sections",
-          "type": "deliverable"
-        },
-        {
-          "id": "D-IPC-1",
+          "id": "D-CCI-1",
           "type": "deliverable"
         }
       ],
       "id": "KPI-PUB-01",
       "name": "Public link hygiene",
       "rules": [
-        "Missing visibility metadata reduces score."
+        "Only completed, non-committee-only deliverables are scored for link hygiene."
       ],
-      "score": 77,
-      "status": "yellow"
+      "score": 93,
+      "status": "green"
     },
     {
       "category": "publicability",
       "description": "Public outputs should not include email addresses.",
       "details": {
-        "pii_files": []
+        "pii_files": [],
+        "retrospective_anchor_deliverables": [
+          "D-IPC-1",
+          "near_final_package",
+          "policy_principles"
+        ],
+        "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+        "retrospective_inference_enabled": true,
+        "retrospective_recent": true,
+        "retrospective_scanned_paths": [
+          "public/project_ingest/artifacts/d_ain_1__258d46c07915.json",
+          "public/project_ingest/artifacts/d_cci_1__35b11601b01b.json",
+          "public/project_ingest/artifacts/d_cpx_1__daa2b517c411.json",
+          "public/project_ingest/artifacts/d_dps_1__bbd6c75a58a9.json",
+          "public/project_ingest/artifacts/d_eqa_1__bca389dd3c57.json",
+          "public/project_ingest/artifacts/d_pol_1_policyoutline_v0__f67168ef087c.json",
+          "public/project_ingest/artifacts/d_rsb_1__05d244b2e685.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package__8de2637fb713.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_repaired__f2b27f871995.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260407__417b706ded31.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260409__a9dff3bac55e.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260410__841b6561b626.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260412__aaccc9444010.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260416__710d7e0c0723.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260419__ecc21abd2b2f.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260419_with_annotated__f5b108b1ac32.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260423__588e4c9be2cc.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1__0aec7c41b322.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1_expanded_ref__4dcf7923f7e8.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426_1_revised_code__bf52803a5e95.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260426__691d3ffea966.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
+          "public/project_ingest/artifacts/fccps_ai_policy_outline_proposed_revised_v3__6a9cd6998050.json",
+          "public/project_ingest/artifacts/pol_a_tjc_v2_redline__fd2139d03419.json",
+          "public/project_ingest/artifacts/pol_e_tjc_v2_redline__a24776eeca75.json",
+          "public/project_ingest/artifacts/ws_pol_a_chair_preface__a97b22396d91.json",
+          "public/project_ingest/artifacts/ws_pol_a_chair_preface__fcd38858d633.json",
+          "public/project_ingest/artifacts/ws_pol_a_john_black__4caa4b49ae05.json",
+          "public/project_ingest/artifacts/ws_pol_a_john_black__838868e1b162.json",
+          "public/project_ingest/artifacts/ws_pol_a_thomas_colvin__8b4a5dd1cf22.json",
+          "public/project_ingest/artifacts/ws_pol_a_thomas_colvin__9f90726ac814.json",
+          "public/project_ingest/artifacts/ws_pol_a_thoms_colvin__02e4463e2fcb.json",
+          "public/project_ingest/artifacts/ws_pol_b_chair_preface__496ca2a3423e.json",
+          "public/project_ingest/artifacts/ws_pol_b_chair_preface__e341634825d7.json",
+          "public/project_ingest/artifacts/ws_pol_b_consolidated__ca3bb21b833b.json",
+          "public/project_ingest/artifacts/ws_pol_b_consolidated_john_black__f7aba53ff486.json",
+          "public/project_ingest/artifacts/ws_pol_b_david_berol__5a22dd77c309.json",
+          "public/project_ingest/artifacts/ws_pol_b_david_berol__dea5f4c9565f.json",
+          "public/project_ingest/artifacts/ws_pol_b_john_black__02bff71868cc.json",
+          "public/project_ingest/artifacts/ws_pol_b_john_black__d4db46ab6c1d.json",
+          "public/project_ingest/artifacts/ws_pol_c_analysis__184fadce54ce.json",
+          "public/project_ingest/artifacts/ws_pol_c_analysis__7570b8ecf26e.json",
+          "public/project_ingest/artifacts/ws_pol_c_chair_preface__624c0cdda24c.json",
+          "public/project_ingest/artifacts/ws_pol_c_chair_preface__7a0ca47cf462.json",
+          "public/project_ingest/artifacts/ws_pol_c_consolidated_adriana_palacios__10ccaedec55e.json",
+          "public/project_ingest/artifacts/ws_pol_c_john_black__03ace466e918.json",
+          "public/project_ingest/artifacts/ws_pol_c_john_black__111e660de845.json",
+          "public/project_ingest/artifacts/ws_pol_chair_preface__8f966fcc82e5.json",
+          "public/project_ingest/artifacts/ws_pol_d_analysis__96d4714d47cf.json",
+          "public/project_ingest/artifacts/ws_pol_d_analysis__d38c7ae98610.json",
+          "public/project_ingest/artifacts/ws_pol_d_chair_preface__6e82dc381bf2.json",
+          "public/project_ingest/artifacts/ws_pol_d_david_berol__00f3af1a27c2.json",
+          "public/project_ingest/artifacts/ws_pol_d_david_berol__d4fae929368c.json",
+          "public/project_ingest/artifacts/ws_pol_d_jillian_burkley__ea78b7abbb66.json",
+          "public/project_ingest/artifacts/ws_pol_d_john_black__2a05e1a0bd95.json",
+          "public/project_ingest/artifacts/ws_pol_d_john_black__803aae58a3ce.json",
+          "public/project_ingest/artifacts/ws_pol_e_adriana_palacios__652569fa8b03.json",
+          "public/project_ingest/artifacts/ws_pol_e_adriana_palacios__8a0b8582819e.json",
+          "public/project_ingest/artifacts/ws_pol_e_chair_preface__702816478847.json",
+          "public/project_ingest/artifacts/ws_pol_e_consolidated_susan_nelson__910bb85a9ee5.json",
+          "public/project_ingest/artifacts/ws_pol_e_david_berol__54135c0e3c2c.json",
+          "public/project_ingest/artifacts/ws_pol_e_david_berol__5e4a9e5a5ce7.json",
+          "public/project_ingest/artifacts/ws_pol_e_elizabeth_chua__2ae69ac508e8.json",
+          "public/project_ingest/artifacts/ws_pol_e_elizabeth_chua__2c6ede4908e7.json",
+          "public/project_ingest/artifacts/ws_pol_e_susan_nelson_david_berol_comments__6accbbdf2338.json",
+          "public/project_ingest/artifacts/ws_pol_f_chair_preface__78af9391f71b.json",
+          "public/project_ingest/artifacts/ws_pol_f_chair_preface__a3bd59c18c5b.json",
+          "public/project_ingest/artifacts/ws_pol_f_david_berol__19312957c3b6.json",
+          "public/project_ingest/artifacts/ws_pol_f_devid_berol__33947dfdd098.json",
+          "public/project_ingest/artifacts/ws_pol_f_elizabeth_chua__1cc5bb4826dc.json",
+          "public/project_ingest/artifacts/ws_pol_f_elizabeth_chua__9fca3ba971f0.json",
+          "public/project_ingest/artifacts/ws_pol_f_g_consolidated_elizabeth_chua__5400f71d8d59.json",
+          "public/project_ingest/artifacts/ws_pol_f_john_black__0aab94a6855f.json",
+          "public/project_ingest/artifacts/ws_pol_f_john_black__cb81e8110018.json",
+          "public/project_ingest/artifacts/ws_pol_g_analysis__0d6647839819.json",
+          "public/project_ingest/artifacts/ws_pol_g_analysis__93cd8888a456.json",
+          "public/project_ingest/artifacts/ws_pol_g_chair_preface__3334cf655a37.json",
+          "public/project_ingest/artifacts/ws_pol_g_chair_preface__40fa02ebe1c8.json",
+          "public/project_ingest/artifacts/ws_pol_g_david_berol__3ae1664ab3f3.json",
+          "public/project_ingest/artifacts/ws_pol_g_david_berol__a8a718da04c2.json",
+          "public/project_ingest/artifacts/ws_pol_g_john_black__343874b45d87.json",
+          "public/project_ingest/artifacts/ws_pol_g_john_black__5cb64f898e6c.json",
+          "public/project_ingest/artifacts/ws_pol_h_adriana_palacios__2b33f7f71f67.json",
+          "public/project_ingest/artifacts/ws_pol_h_adriana_palacios__465337e1a46e.json",
+          "public/project_ingest/artifacts/ws_pol_h_anubav_vasudevan__248ff94c4cdb.json",
+          "public/project_ingest/artifacts/ws_pol_h_anubav_vasudevan__b04510cb4660.json",
+          "public/project_ingest/artifacts/ws_pol_h_chair_preface__0416fc9ff827.json",
+          "public/project_ingest/artifacts/ws_pol_h_chair_preface__592ca0cd814e.json",
+          "public/project_ingest/artifacts/ws_pol_h_david_berol__74427adb28bf.json",
+          "public/project_ingest/artifacts/ws_pol_h_david_berol__bd19809205c2.json",
+          "public/project_ingest/artifacts/ws_pol_h_i_anubav_vasudevan__a590d7afcb07.json",
+          "public/project_ingest/artifacts/ws_pol_i_adriana_palacios__6fb97783a11d.json",
+          "public/project_ingest/artifacts/ws_pol_i_analysis__89ea5231dc70.json",
+          "public/project_ingest/artifacts/ws_pol_i_analysis__b26100bc3960.json",
+          "public/project_ingest/artifacts/ws_pol_i_anubav_vasudevan__ff613fe6610a.json",
+          "public/project_ingest/artifacts/ws_pol_i_chair_preface__1aec11ad301b.json",
+          "public/project_ingest/artifacts/ws_pol_i_chair_preface__7531912bbc7f.json",
+          "public/project_ingest/artifacts/ws_pol_i_david_berol__4adcf94c17e0.json",
+          "public/project_ingest/artifacts/ws_pol_i_david_berol__8cca2bbf02a4.json",
+          "public/project_ingest/artifacts/ws_pol_j_analysis__1e293d0a3693.json",
+          "public/project_ingest/artifacts/ws_pol_j_analysis__498e5bfb896b.json",
+          "public/project_ingest/artifacts/ws_pol_j_chair_preface__8bd8d2224ddd.json",
+          "public/project_ingest/artifacts/ws_pol_j_chair_preface__cd6fc852e1e0.json",
+          "public/project_ingest/artifacts/ws_pol_j_consolidated_thomas_sabo__9fff32a8c8dd.json",
+          "public/project_ingest/artifacts/ws_pol_j_elizabeth_chua__66fe791a5013.json",
+          "public/project_ingest/artifacts/ws_pol_j_elizabeth_chua__80fbbf7df4de.json",
+          "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua__6bab2676bb7d.json",
+          "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua__6dd8679f5d34.json",
+          "public/project_ingest/artifacts/ws_pol_j_tom_sabo_elizabeth_chua_rev__dbe438e373c4.json",
+          "public/project_ingest/artifacts/ws_pol_k_analysis__50830ce8f9e6.json",
+          "public/project_ingest/artifacts/ws_pol_k_analysis__db756672d6ca.json",
+          "public/project_ingest/artifacts/ws_pol_k_chair_preface__7865222d39c8.json",
+          "public/project_ingest/artifacts/ws_pol_k_chair_preface__b85a39f9af32.json",
+          "public/project_ingest/artifacts/ws_pol_k_jillian_burkley__53e84390347d.json",
+          "public/project_ingest/artifacts/ws_pol_k_tom_sabo_elizabeth_chua__51682e485da1.json",
+          "public/project_ingest/artifacts/ws_pol_k_tom_sabo_elizabeth_chua__7313287f6b15.json",
+          "public/project_ingest/artifacts/ws_pol_l_analysis__56201fb3639a.json",
+          "public/project_ingest/artifacts/ws_pol_l_analysis__99c89d3f3c3c.json",
+          "public/project_ingest/artifacts/ws_pol_l_chair_preface__04b26f0645b1.json",
+          "public/project_ingest/artifacts/ws_pol_l_chair_preface__a0ffe41148a0.json",
+          "public/project_ingest/artifacts/ws_pol_l_david_berol__118f956c2aca.json",
+          "public/project_ingest/artifacts/ws_pol_l_david_berol__b15f9cbabcc6.json",
+          "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__5914ec8edcf8.json",
+          "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__61c806f0c8bb.json",
+          "public/project_ingest/artifacts/ws_pol_l_thomas_colvin__6b7c519d4d78.json",
+          "public/project_ingest/artifacts/ws_pol_m_adriana_palacios__d482e02cd73a.json",
+          "public/project_ingest/artifacts/ws_pol_m_analysis__0b5bd83be8f9.json",
+          "public/project_ingest/artifacts/ws_pol_m_analysis__68a802dd6b63.json",
+          "public/project_ingest/artifacts/ws_pol_m_chair_preface__49b69c3d0253.json",
+          "public/project_ingest/artifacts/ws_pol_m_chair_preface__f93b2317dfa4.json",
+          "public/project_ingest/artifacts/ws_pol_m_consolidated_thomas_sabo__32a5d6512794.json",
+          "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo__420c7048d00e.json",
+          "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo__e668506744e1.json",
+          "public/project_ingest/artifacts/ws_pol_m_elizabeth_chua_tom_sabo_rev__95a64d88a446.json",
+          "public/project_ingest/artifacts/ws_pol_n_analysis__6182d2edaade.json",
+          "public/project_ingest/artifacts/ws_pol_n_analysis__bd9f7821392d.json",
+          "public/project_ingest/artifacts/ws_pol_n_chair_preface__a560fcf647e4.json",
+          "public/project_ingest/artifacts/ws_pol_n_chair_preface__df326bf82831.json",
+          "public/project_ingest/artifacts/ws_pol_n_consolidated_david_berol__1392ba8d917b.json",
+          "public/project_ingest/artifacts/ws_pol_n_david_berol__14770ea13528.json",
+          "public/project_ingest/artifacts/ws_pol_n_david_berol__7b2d1083b4f2.json",
+          "public/project_ingest/artifacts/ws_pol_o_adriana_palacios__9afc08636e55.json",
+          "public/project_ingest/artifacts/ws_pol_o_adriana_palacios__9ceb982d4b1b.json",
+          "public/project_ingest/artifacts/ws_pol_o_analysis__bf68b7aac9c1.json",
+          "public/project_ingest/artifacts/ws_pol_o_analysis__ed7e9bac4d1a.json",
+          "public/project_ingest/artifacts/ws_pol_o_chair_preface__38ce9e9662c5.json",
+          "public/project_ingest/artifacts/ws_pol_o_chair_preface__767567b89fe0.json",
+          "public/project_ingest/artifacts/ws_pol_o_consolidated_adriana_palacios__4e48c0f5b65e.json",
+          "public/project_ingest/artifacts/ws_pol_w_chair_preface__99b468b58af7.json",
+          "public/project_ingest/markdown/d_ain_1__258d46c07915.md",
+          "public/project_ingest/markdown/d_cci_1__35b11601b01b.md",
+          "public/project_ingest/markdown/d_cpx_1__daa2b517c411.md",
+          "public/project_ingest/markdown/d_dps_1__bbd6c75a58a9.md",
+          "public/project_ingest/markdown/d_eqa_1__bca389dd3c57.md",
+          "public/project_ingest/markdown/d_pol_1_policyoutline_v0__f67168ef087c.md",
+          "public/project_ingest/markdown/d_rsb_1__05d244b2e685.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package__8de2637fb713.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_repaired__f2b27f871995.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260407__417b706ded31.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260409__a9dff3bac55e.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260410__841b6561b626.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260412__aaccc9444010.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260416__710d7e0c0723.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260419__ecc21abd2b2f.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260419_with_annotated__f5b108b1ac32.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260423__588e4c9be2cc.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1__0aec7c41b322.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1_expanded_ref__4dcf7923f7e8.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426_1_revised_code__bf52803a5e95.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260426__691d3ffea966.md",
+          "public/project_ingest/markdown/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.md",
+          "public/project_ingest/markdown/fccps_ai_policy_outline_proposed_revised_v3__6a9cd6998050.md",
+          "public/project_ingest/markdown/pol_a_tjc_v2_redline__fd2139d03419.md",
+          "public/project_ingest/markdown/pol_e_tjc_v2_redline__a24776eeca75.md",
+          "public/project_ingest/markdown/ws_pol_a_chair_preface__a97b22396d91.md",
+          "public/project_ingest/markdown/ws_pol_a_chair_preface__fcd38858d633.md",
+          "public/project_ingest/markdown/ws_pol_a_john_black__4caa4b49ae05.md",
+          "public/project_ingest/markdown/ws_pol_a_john_black__838868e1b162.md",
+          "public/project_ingest/markdown/ws_pol_a_thomas_colvin__8b4a5dd1cf22.md",
+          "public/project_ingest/markdown/ws_pol_a_thomas_colvin__9f90726ac814.md",
+          "public/project_ingest/markdown/ws_pol_a_thoms_colvin__02e4463e2fcb.md",
+          "public/project_ingest/markdown/ws_pol_b_chair_preface__496ca2a3423e.md",
+          "public/project_ingest/markdown/ws_pol_b_chair_preface__e341634825d7.md",
+          "public/project_ingest/markdown/ws_pol_b_consolidated__ca3bb21b833b.md",
+          "public/project_ingest/markdown/ws_pol_b_consolidated_john_black__f7aba53ff486.md",
+          "public/project_ingest/markdown/ws_pol_b_david_berol__5a22dd77c309.md",
+          "public/project_ingest/markdown/ws_pol_b_david_berol__dea5f4c9565f.md",
+          "public/project_ingest/markdown/ws_pol_b_john_black__02bff71868cc.md",
+          "public/project_ingest/markdown/ws_pol_b_john_black__d4db46ab6c1d.md",
+          "public/project_ingest/markdown/ws_pol_c_analysis__184fadce54ce.md",
+          "public/project_ingest/markdown/ws_pol_c_analysis__7570b8ecf26e.md",
+          "public/project_ingest/markdown/ws_pol_c_chair_preface__624c0cdda24c.md",
+          "public/project_ingest/markdown/ws_pol_c_chair_preface__7a0ca47cf462.md",
+          "public/project_ingest/markdown/ws_pol_c_consolidated_adriana_palacios__10ccaedec55e.md",
+          "public/project_ingest/markdown/ws_pol_c_john_black__03ace466e918.md",
+          "public/project_ingest/markdown/ws_pol_c_john_black__111e660de845.md",
+          "public/project_ingest/markdown/ws_pol_chair_preface__8f966fcc82e5.md",
+          "public/project_ingest/markdown/ws_pol_d_analysis__96d4714d47cf.md",
+          "public/project_ingest/markdown/ws_pol_d_analysis__d38c7ae98610.md",
+          "public/project_ingest/markdown/ws_pol_d_chair_preface__6e82dc381bf2.md",
+          "public/project_ingest/markdown/ws_pol_d_david_berol__00f3af1a27c2.md",
+          "public/project_ingest/markdown/ws_pol_d_david_berol__d4fae929368c.md",
+          "public/project_ingest/markdown/ws_pol_d_jillian_burkley__ea78b7abbb66.md",
+          "public/project_ingest/markdown/ws_pol_d_john_black__2a05e1a0bd95.md",
+          "public/project_ingest/markdown/ws_pol_d_john_black__803aae58a3ce.md",
+          "public/project_ingest/markdown/ws_pol_e_adriana_palacios__652569fa8b03.md",
+          "public/project_ingest/markdown/ws_pol_e_adriana_palacios__8a0b8582819e.md",
+          "public/project_ingest/markdown/ws_pol_e_chair_preface__702816478847.md",
+          "public/project_ingest/markdown/ws_pol_e_consolidated_susan_nelson__910bb85a9ee5.md",
+          "public/project_ingest/markdown/ws_pol_e_david_berol__54135c0e3c2c.md",
+          "public/project_ingest/markdown/ws_pol_e_david_berol__5e4a9e5a5ce7.md",
+          "public/project_ingest/markdown/ws_pol_e_elizabeth_chua__2ae69ac508e8.md",
+          "public/project_ingest/markdown/ws_pol_e_elizabeth_chua__2c6ede4908e7.md",
+          "public/project_ingest/markdown/ws_pol_e_susan_nelson_david_berol_comments__6accbbdf2338.md",
+          "public/project_ingest/markdown/ws_pol_f_chair_preface__78af9391f71b.md",
+          "public/project_ingest/markdown/ws_pol_f_chair_preface__a3bd59c18c5b.md",
+          "public/project_ingest/markdown/ws_pol_f_david_berol__19312957c3b6.md",
+          "public/project_ingest/markdown/ws_pol_f_devid_berol__33947dfdd098.md",
+          "public/project_ingest/markdown/ws_pol_f_elizabeth_chua__1cc5bb4826dc.md",
+          "public/project_ingest/markdown/ws_pol_f_elizabeth_chua__9fca3ba971f0.md",
+          "public/project_ingest/markdown/ws_pol_f_g_consolidated_elizabeth_chua__5400f71d8d59.md",
+          "public/project_ingest/markdown/ws_pol_f_john_black__0aab94a6855f.md",
+          "public/project_ingest/markdown/ws_pol_f_john_black__cb81e8110018.md",
+          "public/project_ingest/markdown/ws_pol_g_analysis__0d6647839819.md",
+          "public/project_ingest/markdown/ws_pol_g_analysis__93cd8888a456.md",
+          "public/project_ingest/markdown/ws_pol_g_chair_preface__3334cf655a37.md",
+          "public/project_ingest/markdown/ws_pol_g_chair_preface__40fa02ebe1c8.md",
+          "public/project_ingest/markdown/ws_pol_g_david_berol__3ae1664ab3f3.md",
+          "public/project_ingest/markdown/ws_pol_g_david_berol__a8a718da04c2.md",
+          "public/project_ingest/markdown/ws_pol_g_john_black__343874b45d87.md",
+          "public/project_ingest/markdown/ws_pol_g_john_black__5cb64f898e6c.md",
+          "public/project_ingest/markdown/ws_pol_h_adriana_palacios__2b33f7f71f67.md",
+          "public/project_ingest/markdown/ws_pol_h_adriana_palacios__465337e1a46e.md",
+          "public/project_ingest/markdown/ws_pol_h_anubav_vasudevan__248ff94c4cdb.md",
+          "public/project_ingest/markdown/ws_pol_h_anubav_vasudevan__b04510cb4660.md",
+          "public/project_ingest/markdown/ws_pol_h_chair_preface__0416fc9ff827.md",
+          "public/project_ingest/markdown/ws_pol_h_chair_preface__592ca0cd814e.md",
+          "public/project_ingest/markdown/ws_pol_h_david_berol__74427adb28bf.md",
+          "public/project_ingest/markdown/ws_pol_h_david_berol__bd19809205c2.md",
+          "public/project_ingest/markdown/ws_pol_h_i_anubav_vasudevan__a590d7afcb07.md",
+          "public/project_ingest/markdown/ws_pol_i_adriana_palacios__6fb97783a11d.md",
+          "public/project_ingest/markdown/ws_pol_i_analysis__89ea5231dc70.md",
+          "public/project_ingest/markdown/ws_pol_i_analysis__b26100bc3960.md",
+          "public/project_ingest/markdown/ws_pol_i_anubav_vasudevan__ff613fe6610a.md",
+          "public/project_ingest/markdown/ws_pol_i_chair_preface__1aec11ad301b.md",
+          "public/project_ingest/markdown/ws_pol_i_chair_preface__7531912bbc7f.md",
+          "public/project_ingest/markdown/ws_pol_i_david_berol__4adcf94c17e0.md",
+          "public/project_ingest/markdown/ws_pol_i_david_berol__8cca2bbf02a4.md",
+          "public/project_ingest/markdown/ws_pol_j_analysis__1e293d0a3693.md",
+          "public/project_ingest/markdown/ws_pol_j_analysis__498e5bfb896b.md",
+          "public/project_ingest/markdown/ws_pol_j_chair_preface__8bd8d2224ddd.md",
+          "public/project_ingest/markdown/ws_pol_j_chair_preface__cd6fc852e1e0.md",
+          "public/project_ingest/markdown/ws_pol_j_consolidated_thomas_sabo__9fff32a8c8dd.md",
+          "public/project_ingest/markdown/ws_pol_j_elizabeth_chua__66fe791a5013.md",
+          "public/project_ingest/markdown/ws_pol_j_elizabeth_chua__80fbbf7df4de.md",
+          "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua__6bab2676bb7d.md",
+          "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua__6dd8679f5d34.md",
+          "public/project_ingest/markdown/ws_pol_j_tom_sabo_elizabeth_chua_rev__dbe438e373c4.md",
+          "public/project_ingest/markdown/ws_pol_k_analysis__50830ce8f9e6.md",
+          "public/project_ingest/markdown/ws_pol_k_analysis__db756672d6ca.md",
+          "public/project_ingest/markdown/ws_pol_k_chair_preface__7865222d39c8.md",
+          "public/project_ingest/markdown/ws_pol_k_chair_preface__b85a39f9af32.md",
+          "public/project_ingest/markdown/ws_pol_k_jillian_burkley__53e84390347d.md",
+          "public/project_ingest/markdown/ws_pol_k_tom_sabo_elizabeth_chua__51682e485da1.md",
+          "public/project_ingest/markdown/ws_pol_k_tom_sabo_elizabeth_chua__7313287f6b15.md",
+          "public/project_ingest/markdown/ws_pol_l_analysis__56201fb3639a.md",
+          "public/project_ingest/markdown/ws_pol_l_analysis__99c89d3f3c3c.md",
+          "public/project_ingest/markdown/ws_pol_l_chair_preface__04b26f0645b1.md",
+          "public/project_ingest/markdown/ws_pol_l_chair_preface__a0ffe41148a0.md",
+          "public/project_ingest/markdown/ws_pol_l_david_berol__118f956c2aca.md",
+          "public/project_ingest/markdown/ws_pol_l_david_berol__b15f9cbabcc6.md",
+          "public/project_ingest/markdown/ws_pol_l_thomas_colvin__5914ec8edcf8.md",
+          "public/project_ingest/markdown/ws_pol_l_thomas_colvin__61c806f0c8bb.md",
+          "public/project_ingest/markdown/ws_pol_l_thomas_colvin__6b7c519d4d78.md",
+          "public/project_ingest/markdown/ws_pol_m_adriana_palacios__d482e02cd73a.md",
+          "public/project_ingest/markdown/ws_pol_m_analysis__0b5bd83be8f9.md",
+          "public/project_ingest/markdown/ws_pol_m_analysis__68a802dd6b63.md",
+          "public/project_ingest/markdown/ws_pol_m_chair_preface__49b69c3d0253.md",
+          "public/project_ingest/markdown/ws_pol_m_chair_preface__f93b2317dfa4.md",
+          "public/project_ingest/markdown/ws_pol_m_consolidated_thomas_sabo__32a5d6512794.md",
+          "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo__420c7048d00e.md",
+          "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo__e668506744e1.md",
+          "public/project_ingest/markdown/ws_pol_m_elizabeth_chua_tom_sabo_rev__95a64d88a446.md",
+          "public/project_ingest/markdown/ws_pol_n_analysis__6182d2edaade.md",
+          "public/project_ingest/markdown/ws_pol_n_analysis__bd9f7821392d.md",
+          "public/project_ingest/markdown/ws_pol_n_chair_preface__a560fcf647e4.md",
+          "public/project_ingest/markdown/ws_pol_n_chair_preface__df326bf82831.md",
+          "public/project_ingest/markdown/ws_pol_n_consolidated_david_berol__1392ba8d917b.md",
+          "public/project_ingest/markdown/ws_pol_n_david_berol__14770ea13528.md",
+          "public/project_ingest/markdown/ws_pol_n_david_berol__7b2d1083b4f2.md",
+          "public/project_ingest/markdown/ws_pol_o_adriana_palacios__9afc08636e55.md",
+          "public/project_ingest/markdown/ws_pol_o_adriana_palacios__9ceb982d4b1b.md",
+          "public/project_ingest/markdown/ws_pol_o_analysis__bf68b7aac9c1.md",
+          "public/project_ingest/markdown/ws_pol_o_analysis__ed7e9bac4d1a.md",
+          "public/project_ingest/markdown/ws_pol_o_chair_preface__38ce9e9662c5.md",
+          "public/project_ingest/markdown/ws_pol_o_chair_preface__767567b89fe0.md",
+          "public/project_ingest/markdown/ws_pol_o_consolidated_adriana_palacios__4e48c0f5b65e.md",
+          "public/project_ingest/markdown/ws_pol_w_chair_preface__99b468b58af7.md"
+        ],
+        "scan_file_count": 316
       },
       "evidence": [],
       "id": "KPI-PUB-02",
@@ -543,18 +3553,18 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-04-27T04:10:44.365790Z",
+    "generated_at": "2026-04-27T16:11:53.884646Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
   "summary": {
     "kpi_counts": {
-      "gray": 1,
-      "green": 8,
-      "red": 7,
-      "yellow": 3
+      "gray": 0,
+      "green": 17,
+      "red": 0,
+      "yellow": 2
     },
-    "overall_status": "red"
+    "overall_status": "yellow"
   },
   "taxonomy": {
     "categories": {

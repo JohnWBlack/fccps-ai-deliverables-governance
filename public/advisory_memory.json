@@ -18,52 +18,21 @@
         "confidence": 0.95,
         "derived_from_version_key": "",
         "details": {
-          "red_kpis": [
-            {
-              "kpi_id": "KPI-CONV-10",
-              "name": "Milestone gating consistency",
-              "score": 5
-            },
-            {
-              "kpi_id": "KPI-CONV-07",
-              "name": "Cross-doc principle coverage",
-              "score": 8
-            },
-            {
-              "kpi_id": "KPI-CONV-08",
-              "name": "Cross-doc risk coverage",
-              "score": 8
-            },
-            {
-              "kpi_id": "KPI-SCHED-02",
-              "name": "Overdue deliverables",
-              "score": 0
-            },
+          "red_kpis": [],
+          "yellow_kpis": [
             {
               "kpi_id": "KPI-CONV-05",
               "name": "Principle linkage coverage",
-              "score": 38
-            }
-          ],
-          "yellow_kpis": [
-            {
-              "kpi_id": "KPI-SCHED-03",
-              "name": "Blocked dependency rate",
-              "score": 73
+              "score": 83
             },
             {
-              "kpi_id": "KPI-PUB-01",
-              "name": "Public link hygiene",
-              "score": 77
-            },
-            {
-              "kpi_id": "KPI-SCHED-01",
-              "name": "Next gate readiness",
+              "kpi_id": "KPI-CONV-06",
+              "name": "Risk linkage coverage",
               "score": 83
             }
           ]
         },
-        "expires_at": "2026-05-18T04:10:44.445156Z",
+        "expires_at": "2026-05-18T16:11:53.976495Z",
         "id": "ac_top_risk_kpis",
         "summary": "Prioritized KPI set for next-cycle intervention planning.",
         "title": "Action memory: prioritize red/yellow KPI drivers"
@@ -78,43 +47,13 @@
         "confidence": 0.8,
         "derived_from_version_key": "1.1.0",
         "details": {
-          "candidate_count": 13,
+          "candidate_count": 8,
           "candidates": [
             {
-              "confidence_adjusted": 0.7254,
+              "confidence_adjusted": 0.701,
               "recommended_deliverable_id": "D-AIN-1",
               "risk_flags": [],
-              "source_path": "02 Risks & Opportunities/FCCPS AI Advisory CommitteeRisks and Opportunities Assessment Form(1-10).xlsx"
-            },
-            {
-              "confidence_adjusted": 0.771,
-              "recommended_deliverable_id": "D-AIN-1",
-              "risk_flags": [],
-              "source_path": "workstreams/ain/D-AIN-1_Academic Integrity and Attribution Document.docx"
-            },
-            {
-              "confidence_adjusted": 0.771,
-              "recommended_deliverable_id": "D-AIN-1",
-              "risk_flags": [],
-              "source_path": "workstreams/ain/D-AIN-1_Academic-Integrity-and-Attribution-Framework.docx"
-            },
-            {
-              "confidence_adjusted": 0.7231,
-              "recommended_deliverable_id": "D-CCI-1",
-              "risk_flags": [],
-              "source_path": "workstreams/cci/D-CCI-1_Community-Engagement-Plan_AI-in-FCCPS.docx"
-            },
-            {
-              "confidence_adjusted": 0.7077,
-              "recommended_deliverable_id": "D-DPS-1",
-              "risk_flags": [],
-              "source_path": "Meetings/05 - Meeting 20-MAR-26/FCCPS_AI_Advisory_Committee_Retrospective_First_Pass_Risk_Register.docx"
-            },
-            {
-              "confidence_adjusted": 0.796,
-              "recommended_deliverable_id": "D-EQA-1",
-              "risk_flags": [],
-              "source_path": "workstreams/eqa/D-EQA-1_Equity-Impact-Checklist-v1.0.docx"
+              "source_path": "workstreams/ain/Academic-Integrity-and-Attribution-Framework.docx"
             },
             {
               "confidence_adjusted": 0.7096,
@@ -161,7 +100,7 @@
           ],
           "recommended_review_mode": "guided_review"
         },
-        "expires_at": "2026-05-11T04:10:44.445165Z",
+        "expires_at": "2026-05-11T16:11:53.976505Z",
         "id": "ac_supporting_linkage_candidates",
         "summary": "Candidate deliverable/source link updates from cognitive control report for human review.",
         "title": "Action memory: supporting evidence linkage candidates"
@@ -176,16 +115,16 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2ea6c8207f265bc243c22c89f28e3c1016a224c8",
+        "derived_from_version_key": "92f97cb9731f900be5e31406b21138a3e3b0badf",
         "details": {
           "deliverable_total": 18,
           "status_counts": {
-            "completed": 12,
-            "in_progress": 4,
-            "not_started": 2
+            "completed": 16,
+            "in_progress": 1,
+            "not_started": 1
           }
         },
-        "expires_at": "2026-05-27T04:10:44.444662Z",
+        "expires_at": "2026-05-27T16:11:53.975959Z",
         "id": "ep_status_distribution",
         "summary": "Current distribution of public deliverable statuses in the deterministic snapshot.",
         "title": "Deliverable status distribution"
@@ -198,9 +137,21 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2ea6c8207f265bc243c22c89f28e3c1016a224c8",
+        "derived_from_version_key": "92f97cb9731f900be5e31406b21138a3e3b0badf",
         "details": {
           "latest_change_log_entries": [
+            {
+              "date": "2026-04-27",
+              "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-27; timeline.yml@2026-04-27; principles.yml@2026-03-03)",
+              "id": "CHG-2026-04-27-02",
+              "type": "change"
+            },
+            {
+              "date": "2026-04-27",
+              "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-05; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
+              "id": "CHG-2026-04-27-01",
+              "type": "change"
+            },
             {
               "date": "2026-04-05",
               "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-04-05; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
@@ -236,22 +187,10 @@
               "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
               "id": "CHG-2026-03-05-01",
               "type": "change"
-            },
-            {
-              "date": "2026-03-03",
-              "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-03; timeline.yml@2026-03-02; principles.yml@2026-03-03)",
-              "id": "CHG-2026-03-03-03",
-              "type": "change"
-            },
-            {
-              "date": "2026-03-03",
-              "description": "Automated SoR refresh captured (workstreams.yml@2026-03-02; deliverables.yml@2026-03-02; timeline.yml@2026-03-02; supporting_documents.yml@2026-03-02)",
-              "id": "CHG-2026-03-03-02",
-              "type": "change"
             }
           ]
         },
-        "expires_at": "2026-05-27T04:10:44.444696Z",
+        "expires_at": "2026-05-27T16:11:53.975994Z",
         "id": "ep_recent_changes",
         "summary": "Recent change_log entries from the authoritative snapshot.",
         "title": "Recent decision/change log activity"
@@ -266,38 +205,14 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2ea6c8207f265bc243c22c89f28e3c1016a224c8",
+        "derived_from_version_key": "92f97cb9731f900be5e31406b21138a3e3b0badf",
         "details": {
-          "count": 6,
+          "count": 2,
           "items": [
-            {
-              "checkpoint_id": "ms_policy_principles",
-              "deliverable_id": "policy_principles",
-              "status": "in_progress",
-              "title": "Policy principles set"
-            },
-            {
-              "checkpoint_id": "m4",
-              "deliverable_id": "rec_outline_risk_register",
-              "status": "in_progress",
-              "title": "Recommendations outline and first-pass risk register"
-            },
-            {
-              "checkpoint_id": "m6",
-              "deliverable_id": "near_final_package",
-              "status": "in_progress",
-              "title": "Near-final recommendation package"
-            },
-            {
-              "checkpoint_id": "m6",
-              "deliverable_id": "D-IPC-1",
-              "status": "in_progress",
-              "title": "Implementation Roadmap v1"
-            },
             {
               "checkpoint_id": "m7",
               "deliverable_id": "final_talk_track",
-              "status": "not_started",
+              "status": "in_progress",
               "title": "Final talk track and Q&A prep"
             },
             {
@@ -308,7 +223,7 @@
             }
           ]
         },
-        "expires_at": "2026-06-11T04:10:44.445128Z",
+        "expires_at": "2026-06-11T16:11:53.976471Z",
         "id": "ol_missing_public_links",
         "summary": "In-progress or not-started deliverables that do not yet have public_url linkage.",
         "title": "Open loop: deliverables without public source links"
@@ -321,7 +236,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2ea6c8207f265bc243c22c89f28e3c1016a224c8",
+        "derived_from_version_key": "92f97cb9731f900be5e31406b21138a3e3b0badf",
         "details": {
           "issue_count": 2,
           "issues": [
@@ -367,7 +282,7 @@
             }
           ]
         },
-        "expires_at": "2026-05-27T04:10:44.445133Z",
+        "expires_at": "2026-05-27T16:11:53.976476Z",
         "id": "ol_quality_flags",
         "summary": "Outstanding quality issues reported by deterministic quality checks.",
         "title": "Open loop: quality check flags"
@@ -382,7 +297,7 @@
           }
         ],
         "confidence": 0.98,
-        "derived_from_version_key": "2ea6c8207f265bc243c22c89f28e3c1016a224c8",
+        "derived_from_version_key": "92f97cb9731f900be5e31406b21138a3e3b0badf",
         "details": {
           "top_principles": [
             {
@@ -453,7 +368,7 @@
             }
           ]
         },
-        "expires_at": "2026-10-24T04:10:44.444734Z",
+        "expires_at": "2026-10-24T16:11:53.976038Z",
         "id": "th_principle_risk_fanout",
         "summary": "Most frequently referenced principles and risks across deliverables.",
         "title": "Principle/risk linkage fanout"
@@ -466,7 +381,7 @@
           }
         ],
         "confidence": 0.9,
-        "derived_from_version_key": "2ea6c8207f265bc243c22c89f28e3c1016a224c8",
+        "derived_from_version_key": "92f97cb9731f900be5e31406b21138a3e3b0badf",
         "details": {
           "indexed_docs": 25,
           "top_decisions": [
@@ -500,7 +415,7 @@
             }
           ]
         },
-        "expires_at": "2026-08-25T04:10:44.445095Z",
+        "expires_at": "2026-08-25T16:11:53.976446Z",
         "id": "th_decision_density",
         "summary": "Decision IDs most frequently extracted from indexed public documents.",
         "title": "Decision reference density"
@@ -510,7 +425,7 @@
   "meta": {
     "advisory": true,
     "authoritative": false,
-    "generated_at": "2026-04-27T04:10:44.445185Z",
+    "generated_at": "2026-04-27T16:11:53.976526Z",
     "policy": {
       "conflict_rule": "SoR and deterministic KPIs always override memory statements.",
       "deterministic_artifacts_authoritative": true,
@@ -519,6 +434,6 @@
     },
     "producer": "fccps-memory-poc",
     "transform_version": "0.1.0",
-    "version_key": "2ea6c8207f265bc243c22c89f28e3c1016a224c8"
+    "version_key": "92f97cb9731f900be5e31406b21138a3e3b0badf"
   }
 }
