@@ -65,7 +65,8 @@ try {
 
     $currentBranch = (Get-GitOutput -GitArgs @("rev-parse", "--abbrev-ref", "HEAD")).Trim()
     if ($currentBranch -ne $Branch) {
-        throw "Current branch is '$currentBranch'; expected '$Branch'."
+        Write-Log "Current branch is '$currentBranch'; expected '$Branch'. Skipping run."
+        exit 0
     }
 
     $dirty = (Get-GitOutput -GitArgs @("status", "--porcelain")).Count -gt 0

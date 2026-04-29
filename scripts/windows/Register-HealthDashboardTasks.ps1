@@ -1,6 +1,7 @@
 param(
     [string]$TaskPrefix = "FCCPS-HealthDashboard",
     [string]$RepoRoot = "c:\Users\JohnBlack\OneDrive - OFFSET3\FCCPS AI Committee\fccps-ai-deliverables-governance",
+    [string]$Branch = "main",
     [string]$PythonExe = "python",
     [string]$RunAsUser = "$env:USERDOMAIN\$env:USERNAME"
 )
@@ -22,10 +23,10 @@ $principal = New-ScheduledTaskPrincipal -UserId $RunAsUser -LogonType Interactiv
 $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 2)
 $detectStart = (Get-Date).Date.AddMinutes(1)
 
-$detectAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$RunnerScript`" -Mode DetectChanges -Branch main -PythonExe `"$PythonExe`""
+$detectAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$RunnerScript`" -Mode DetectChanges -Branch $Branch -PythonExe `"$PythonExe`""
 $detectTrigger = New-ScheduledTaskTrigger -Once -At $detectStart -RepetitionInterval (New-TimeSpan -Minutes 15) -RepetitionDuration (New-TimeSpan -Days 1)
 
-$dailyAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$RunnerScript`" -Mode FullRebuild -Branch main -PythonExe `"$PythonExe`""
+$dailyAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$RunnerScript`" -Mode FullRebuild -Branch $Branch -PythonExe `"$PythonExe`""
 $dailyTrigger = New-ScheduledTaskTrigger -Daily -At 2:30AM
 
 Register-ScheduledTask -TaskName $detectTaskName -Action $detectAction -Trigger $detectTrigger -Principal $principal -Settings $settings -Force | Out-Null
