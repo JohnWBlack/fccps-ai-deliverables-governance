@@ -69,7 +69,7 @@ try {
         exit 0
     }
 
-    $dirty = (Get-GitOutput -GitArgs @("status", "--porcelain")).Count -gt 0
+    $dirty = @(Get-GitOutput -GitArgs @("status", "--porcelain")).Count -gt 0
     if ($dirty) {
         Write-Log "Working tree is dirty; skipping to avoid committing unintended files."
         exit 0
