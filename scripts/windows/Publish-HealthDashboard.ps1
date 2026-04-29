@@ -18,6 +18,9 @@ $PublicFiles = @(
     "public/risk_register.json",
     "public/kpis.json",
     "public/kpi_evidence.json",
+    "public/evidence_coverage.json",
+    "public/evidence_templates.json",
+    "public/glidepath_diagnostics.json",
     "public/glidepath_history.json"
 )
 $WatchPathspec = @("sor", "governance_docs", "project_files", "scripts", "requirements.txt", "CHANGELOG_PUBLIC.md")
@@ -126,6 +129,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "build_kpis.py failed" }
     & $PythonExe "scripts/build_glidepath_history.py"
     if ($LASTEXITCODE -ne 0) { throw "build_glidepath_history.py failed" }
+    & $PythonExe "scripts/build_glidepath_diagnostics.py"
+    if ($LASTEXITCODE -ne 0) { throw "build_glidepath_diagnostics.py failed" }
     & $PythonExe "scripts/validate_public.py"
     if ($LASTEXITCODE -ne 0) { throw "validate_public.py failed" }
 
