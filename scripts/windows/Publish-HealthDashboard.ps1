@@ -52,6 +52,12 @@ function Get-GitOutput {
     return $output
 }
 
+function Test-GitRefExists {
+    param([string]$RefName)
+    & git show-ref --verify --quiet $RefName
+    return $LASTEXITCODE -eq 0
+}
+
 if (Test-Path -LiteralPath $LockFile) {
     Write-Log "Lock file present; skipping run to avoid overlap."
     exit 0
@@ -75,11 +81,19 @@ try {
         exit 0
     }
 
-    Invoke-Git -GitArgs @("fetch", "origin", $Branch)
+    Invoke-Git -GitArgs @("fetch", "origin")
 
-    $remoteDiffArgs = @("diff", "--name-only", "HEAD..origin/$Branch", "--") + $WatchPathspec
-    $remoteRelevant = @(Get-GitOutput -GitArgs $remoteDiffArgs)
-    $hasRemoteRelevantChanges = $remoteRelevant.Count -gt 0
+    $remoteBranchExists = Test-GitRefExists -RefName "refs/remotes/origin/$Branch"
+    $remoteRelevant = @()
+    $hasRemoteRelevantChanges = $false
+    if ($remoteBranchExists) {
+        $remoteDiffArgs = @("diff", "--name-only", "HEAD..origin/$Branch", "--") + $WatchPathspec
+        $remoteRelevant = @(Get-GitOutput -GitArgs $remoteDiffArgs)
+        $hasRemoteRelevantChanges = $remoteRelevant.Count -gt 0
+    }
+    else {
+        Write-Log "Remote branch 'origin/$Branch' not found; continuing with local branch only."
+    }
 
     $localStatusArgs = @("status", "--porcelain", "--") + $WatchPathspec
     $localRelevant = @(Get-GitOutput -GitArgs $localStatusArgs)
