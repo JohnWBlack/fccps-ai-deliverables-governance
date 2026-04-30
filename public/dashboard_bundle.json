@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-04-29T04:10:55.795323Z",
-    "snapshot_version_key": "3bbeaeab32cefa76a41e8750452a5b685cf35247"
+    "generated_at": "2026-04-30T04:12:32.147372Z",
+    "snapshot_version_key": "fd477ec9c45da981dd032a17a5f093b101709050"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-04-29T04:10:51.134348Z",
+      "generated_at": "2026-04-30T04:12:27.432413Z",
       "source_version": "1.1.0",
-      "version_key": "3bbeaeab32cefa76a41e8750452a5b685cf35247"
+      "version_key": "fd477ec9c45da981dd032a17a5f093b101709050"
     },
     "metadata": {
-      "generated_at": "2026-04-29T04:10:51.134348Z",
+      "generated_at": "2026-04-30T04:12:27.432413Z",
       "source_version": "1.1.0",
-      "version_key": "3bbeaeab32cefa76a41e8750452a5b685cf35247",
+      "version_key": "fd477ec9c45da981dd032a17a5f093b101709050",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -3972,8 +3972,8 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
         "details": {
-          "oldest_age_days": 65,
-          "p75_age_days": 64,
+          "oldest_age_days": 66,
+          "p75_age_days": 65,
           "retrospective_anchor_deliverables": [
             "D-IPC-1",
             "near_final_package",
@@ -4361,7 +4361,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-04-29T04:10:55.509112Z",
+      "generated_at": "2026-04-30T04:12:32.004275Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -4405,7 +4405,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-04-29T04:10:55.509112Z",
+    "generated_at": "2026-04-30T04:12:32.004275Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -4868,7 +4868,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "6388ea67c9ea"
+    "version_key": "c5c9663395eb"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -4902,7 +4902,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-04-29T04:10:54.079052Z",
+      "generated_at": "2026-04-30T04:12:30.558961Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -4991,7 +4991,7 @@
   "risk_register": {
     "meta": {
       "deliverables_sor_last_updated": "2026-04-27",
-      "generated_at": "2026-04-29T04:10:54.225273Z",
+      "generated_at": "2026-04-30T04:12:30.699605Z",
       "risk_sor_last_updated": "2026-03-03",
       "risk_sor_version": "1.0.0",
       "schema_version": "1.0.0",
@@ -5449,7 +5449,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-04-29T04:10:53.944689Z",
+      "generated_at": "2026-04-30T04:12:30.428831Z",
       "scanned_files_count": 25,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -5927,7 +5927,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-28T04:13:26Z",
+        "last_modified_iso": "2026-04-29T04:10:58Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -5966,7 +5966,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-28T04:13:26Z",
+        "last_modified_iso": "2026-04-29T04:10:58Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -5995,7 +5995,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-04-28T04:13:26Z",
+        "last_modified_iso": "2026-04-29T04:10:58Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -6116,7 +6116,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-04-29T04:10:55.786260Z",
+      "generated_at": "2026-04-30T04:12:32.146810Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
