@@ -1,8 +1,8 @@
 {
   "balance_required_delta": {
     "axis": "what",
-    "current": 9.35,
-    "delta": -0.1,
+    "current": 8.95,
+    "delta": 0.3,
     "target_midpoint": 9.25
   },
   "balance_target_gate": {
@@ -112,7 +112,7 @@
       "workstream": "WS-POL"
     }
   ],
-  "generated_at": "2026-04-30T04:12:32.312585Z",
+  "generated_at": "2026-05-01T04:20:09.198307Z",
   "how_drivers_top": [
     {
       "evidence_count": 0,
@@ -833,13 +833,13 @@
   },
   "now": {
     "corridor_matches": [
-      "WHAT~M8",
+      "WHAT~M7",
       "HOW~M8"
     ],
     "how": 9.56,
     "how_corridor_id": "m8",
-    "what": 9.35,
-    "what_corridor_id": "m8"
+    "what": 8.95,
+    "what_corridor_id": "m7"
   },
   "outside_corridor": {
     "axes_out": [],
@@ -875,6 +875,12 @@
         "evidence_paths": [
           "sor/deliverables.yml"
         ],
+        "kpi_id": "KPI-SCHED-02"
+      },
+      {
+        "evidence_paths": [
+          "sor/deliverables.yml"
+        ],
         "kpi_id": "KPI-SCHED-01"
       },
       {
@@ -882,17 +888,20 @@
           "sor/deliverables.yml"
         ],
         "kpi_id": "KPI-PUB-01"
-      },
-      {
-        "evidence_paths": [
-          "sor/deliverables.yml"
-        ],
-        "kpi_id": "KPI-SCHED-03"
       }
     ]
   },
-  "version_key": "fd477ec9c45da981dd032a17a5f093b101709050",
+  "version_key": "bf6dac1ae04e9dabb81efd220c00880ccd5a66b4",
   "what_blockers_top": [
+    {
+      "evidence_count": 1,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-SCHED-02",
+      "score": 80.0,
+      "weight": 2.0
+    },
     {
       "evidence_count": 18,
       "evidence_paths": [
@@ -935,13 +944,6 @@
       "kpi_id": "KPI-PUB-02",
       "score": 100.0,
       "weight": 1.0
-    },
-    {
-      "evidence_count": 0,
-      "evidence_paths": [],
-      "kpi_id": "KPI-SCHED-02",
-      "score": 100.0,
-      "weight": 2.0
     }
   ]
 }

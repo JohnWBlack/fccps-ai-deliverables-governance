@@ -105,7 +105,7 @@
       "description": "Count and severity of overdue deliverables.",
       "details": {
         "max_days_overdue": 0,
-        "overdue_count": 0,
+        "overdue_count": 1,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
           "near_final_package",
@@ -115,14 +115,19 @@
         "retrospective_inference_enabled": true,
         "retrospective_recent": true
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "final_talk_track",
+          "type": "deliverable"
+        }
+      ],
       "id": "KPI-SCHED-02",
       "name": "Overdue deliverables",
       "rules": [
         "Penalty combines overdue count and max overdue days."
       ],
-      "score": 100,
-      "status": "green"
+      "score": 80,
+      "status": "yellow"
     },
     {
       "category": "schedule",
@@ -3164,8 +3169,8 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
       "details": {
-        "oldest_age_days": 66,
-        "p75_age_days": 65,
+        "oldest_age_days": 67,
+        "p75_age_days": 66,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
           "near_final_package",
@@ -3553,16 +3558,16 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-04-30T04:12:32.004275Z",
+    "generated_at": "2026-05-01T04:20:08.936156Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
   "summary": {
     "kpi_counts": {
       "gray": 0,
-      "green": 17,
+      "green": 16,
       "red": 0,
-      "yellow": 2
+      "yellow": 3
     },
     "overall_status": "yellow"
   },
