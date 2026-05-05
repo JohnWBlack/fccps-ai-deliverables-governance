@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-05-04T04:15:42.002840Z",
-    "snapshot_version_key": "812133b79c11bf2bbca82819c06c41fdc7239d81"
+    "generated_at": "2026-05-05T04:01:47.386191Z",
+    "snapshot_version_key": "e1c07d1ec8072d8394edd8d1f7854c83f0d30485"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-05-04T04:15:37.488541Z",
+      "generated_at": "2026-05-05T04:01:42.805876Z",
       "source_version": "1.1.0",
-      "version_key": "812133b79c11bf2bbca82819c06c41fdc7239d81"
+      "version_key": "e1c07d1ec8072d8394edd8d1f7854c83f0d30485"
     },
     "metadata": {
-      "generated_at": "2026-05-04T04:15:37.488541Z",
+      "generated_at": "2026-05-05T04:01:42.805876Z",
       "source_version": "1.1.0",
-      "version_key": "812133b79c11bf2bbca82819c06c41fdc7239d81",
+      "version_key": "e1c07d1ec8072d8394edd8d1f7854c83f0d30485",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -824,7 +824,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [
           {
@@ -912,7 +912,7 @@
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 3,
+          "max_days_overdue": 4,
           "overdue_count": 1,
           "retrospective_anchor_deliverables": [
             "D-IPC-1",
@@ -921,7 +921,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [
           {
@@ -934,7 +934,7 @@
         "rules": [
           "Penalty combines overdue count and max overdue days."
         ],
-        "score": 77,
+        "score": 76,
         "status": "yellow"
       },
       {
@@ -951,7 +951,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_dependency_scope_count": 14,
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [
           {
@@ -981,7 +981,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
           "retrospective_inference_only": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [
           {
@@ -1010,7 +1010,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [],
         "id": "KPI-CONV-01",
@@ -1033,7 +1033,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [],
         "id": "KPI-CONV-02",
@@ -1056,7 +1056,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [],
         "id": "KPI-CONV-03",
@@ -1079,7 +1079,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [
           {
@@ -1110,7 +1110,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
           "retrospective_inferred_count": 14,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [
           {
@@ -1198,7 +1198,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
           "retrospective_inferred_count": 14,
-          "retrospective_recent": true
+          "retrospective_recent": false
         },
         "evidence": [
           {
@@ -1285,7 +1285,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
           "retrospective_inferred_docs": 298,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "scanned_docs": 323
         },
         "evidence": [
@@ -2513,7 +2513,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
           "retrospective_inferred_docs": 298,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "scanned_docs": 323
         },
         "evidence": [
@@ -3742,7 +3742,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
           "retrospective_principle_inferred_count": 14,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "retrospective_risk_inferred_count": 14,
           "total_risk_linked_deliverables": 15
         },
@@ -3837,7 +3837,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "total_deliverables": 18
         },
         "evidence": [
@@ -3935,7 +3935,7 @@
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_generated_at": "2026-04-27T14:29:11.176131Z",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "stale_sor_files": [],
           "threshold_days": 7
         },
@@ -3960,7 +3960,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "stale_public_artifacts": []
         },
         "evidence": [],
@@ -3977,8 +3977,8 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
         "details": {
-          "oldest_age_days": 70,
-          "p75_age_days": 69,
+          "oldest_age_days": 71,
+          "p75_age_days": 70,
           "retrospective_anchor_deliverables": [
             "D-IPC-1",
             "near_final_package",
@@ -3986,7 +3986,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "sample_count": 22
         },
         "evidence": [],
@@ -3996,8 +3996,8 @@
           "P75 age <=14 days => green; <=30 days => yellow; >30 days => red.",
           "A recent board-ready package publication can raise the score to at least yellow."
         ],
-        "score": 85,
-        "status": "green"
+        "score": 40,
+        "status": "red"
       },
       {
         "category": "publicability",
@@ -4023,7 +4023,7 @@
             "D-EQA-1",
             "m5_draft_sections"
           ],
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "scored_completed_deliverables": 16
         },
         "evidence": [
@@ -4052,7 +4052,7 @@
           ],
           "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
           "retrospective_inference_enabled": true,
-          "retrospective_recent": true,
+          "retrospective_recent": false,
           "retrospective_scanned_paths": [
             "public/project_ingest/artifacts/d_ain_1__258d46c07915.json",
             "public/project_ingest/artifacts/d_cci_1__35b11601b01b.json",
@@ -4366,18 +4366,18 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-05-04T04:15:41.862215Z",
+      "generated_at": "2026-05-05T04:01:47.241353Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
     "summary": {
       "kpi_counts": {
         "gray": 0,
-        "green": 16,
-        "red": 0,
+        "green": 15,
+        "red": 1,
         "yellow": 3
       },
-      "overall_status": "yellow"
+      "overall_status": "red"
     },
     "taxonomy": {
       "categories": {
@@ -4410,7 +4410,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-05-04T04:15:41.862215Z",
+    "generated_at": "2026-05-05T04:01:47.241353Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -4873,7 +4873,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "a75632f0d453"
+    "version_key": "b7810eab4d97"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -4907,7 +4907,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-05-04T04:15:40.473309Z",
+      "generated_at": "2026-05-05T04:01:45.840006Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -4996,7 +4996,7 @@
   "risk_register": {
     "meta": {
       "deliverables_sor_last_updated": "2026-04-27",
-      "generated_at": "2026-05-04T04:15:40.613083Z",
+      "generated_at": "2026-05-05T04:01:45.986729Z",
       "risk_sor_last_updated": "2026-03-03",
       "risk_sor_version": "1.0.0",
       "schema_version": "1.0.0",
@@ -5454,7 +5454,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-05-04T04:15:40.341707Z",
+      "generated_at": "2026-05-05T04:01:45.704821Z",
       "scanned_files_count": 25,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -5932,7 +5932,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-05-03T04:16:01Z",
+        "last_modified_iso": "2026-05-04T04:15:44Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -5971,7 +5971,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-05-03T04:16:01Z",
+        "last_modified_iso": "2026-05-04T04:15:44Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -6000,7 +6000,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-05-03T04:16:01Z",
+        "last_modified_iso": "2026-05-04T04:15:44Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -6121,7 +6121,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-05-04T04:15:42.002293Z",
+      "generated_at": "2026-05-05T04:01:47.385617Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
