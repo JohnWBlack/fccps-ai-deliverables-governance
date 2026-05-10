@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-05-09T04:06:50.725918Z",
-    "snapshot_version_key": "86978564a6a7248c48dc0091b4d1c29521985f7e"
+    "generated_at": "2026-05-10T04:19:07.512902Z",
+    "snapshot_version_key": "c573f2bafd35e8e22b773a0d30b300a38ca4a3fc"
   },
   "snapshot": {
     "meta": {
-      "generated_at": "2026-05-09T04:06:45.835179Z",
+      "generated_at": "2026-05-10T04:19:02.759607Z",
       "source_version": "1.1.0",
-      "version_key": "86978564a6a7248c48dc0091b4d1c29521985f7e"
+      "version_key": "c573f2bafd35e8e22b773a0d30b300a38ca4a3fc"
     },
     "metadata": {
-      "generated_at": "2026-05-09T04:06:45.835179Z",
+      "generated_at": "2026-05-10T04:19:02.759607Z",
       "source_version": "1.1.0",
-      "version_key": "86978564a6a7248c48dc0091b4d1c29521985f7e",
+      "version_key": "c573f2bafd35e8e22b773a0d30b300a38ca4a3fc",
       "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
     },
     "workstreams": [
@@ -912,7 +912,7 @@
         "category": "schedule",
         "description": "Count and severity of overdue deliverables.",
         "details": {
-          "max_days_overdue": 8,
+          "max_days_overdue": 9,
           "overdue_count": 1,
           "retrospective_anchor_deliverables": [
             "D-IPC-1",
@@ -934,7 +934,7 @@
         "rules": [
           "Penalty combines overdue count and max overdue days."
         ],
-        "score": 72,
+        "score": 71,
         "status": "yellow"
       },
       {
@@ -3977,8 +3977,8 @@
         "category": "freshness",
         "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
         "details": {
-          "oldest_age_days": 75,
-          "p75_age_days": 74,
+          "oldest_age_days": 76,
+          "p75_age_days": 75,
           "retrospective_anchor_deliverables": [
             "D-IPC-1",
             "near_final_package",
@@ -4366,7 +4366,7 @@
       }
     ],
     "meta": {
-      "generated_at": "2026-05-09T04:06:50.581259Z",
+      "generated_at": "2026-05-10T04:19:07.365897Z",
       "schema_version": "0.2",
       "timezone": "America/New_York"
     },
@@ -4410,7 +4410,7 @@
     }
   },
   "evidence_coverage": {
-    "generated_at": "2026-05-09T04:06:50.581259Z",
+    "generated_at": "2026-05-10T04:19:07.365897Z",
     "kpi": {
       "KPI-CONV-04": {
         "deliverables_missing_evidence": [
@@ -4873,7 +4873,7 @@
       }
     },
     "templates_version": "evidence_templates_v1",
-    "version_key": "178c49c4fef6"
+    "version_key": "760f0aeb1a90"
   },
   "evidence_templates": {
     "generated_at": "2026-03-04T00:00:00Z",
@@ -4907,7 +4907,7 @@
   },
   "quality_report": {
     "meta": {
-      "generated_at": "2026-05-09T04:06:49.139838Z",
+      "generated_at": "2026-05-10T04:19:05.962715Z",
       "sources": [
         "sor/workstreams.yml",
         "sor/timeline.yml",
@@ -4996,7 +4996,7 @@
   "risk_register": {
     "meta": {
       "deliverables_sor_last_updated": "2026-04-27",
-      "generated_at": "2026-05-09T04:06:49.282228Z",
+      "generated_at": "2026-05-10T04:19:06.106026Z",
       "risk_sor_last_updated": "2026-03-03",
       "risk_sor_version": "1.0.0",
       "schema_version": "1.0.0",
@@ -5454,7 +5454,7 @@
   },
   "ref_index": {
     "meta": {
-      "generated_at": "2026-05-09T04:06:49.008826Z",
+      "generated_at": "2026-05-10T04:19:05.827092Z",
       "scanned_files_count": 25,
       "skipped_files_count": 5,
       "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -5932,7 +5932,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-05-08T04:02:56Z",
+        "last_modified_iso": "2026-05-09T04:06:53Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -5971,7 +5971,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-05-08T04:02:56Z",
+        "last_modified_iso": "2026-05-09T04:06:53Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -6000,7 +6000,7 @@
       {
         "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
         "doc_type": "md",
-        "last_modified_iso": "2026-05-08T04:02:56Z",
+        "last_modified_iso": "2026-05-09T04:06:53Z",
         "extracted": {
           "principle_ids": [],
           "risk_ids": [],
@@ -6121,7 +6121,7 @@
   },
   "meeting4_readiness": {
     "meta": {
-      "generated_at": "2026-05-09T04:06:50.725342Z",
+      "generated_at": "2026-05-10T04:19:07.512381Z",
       "source": [
         "public/kpis.json",
         "public/ref_index.json",
