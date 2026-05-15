@@ -16,7 +16,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [
         {
@@ -104,8 +104,8 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 0,
-        "overdue_count": 0,
+        "max_days_overdue": 14,
+        "overdue_count": 2,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
           "near_final_package",
@@ -113,16 +113,25 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "final_talk_track",
+          "type": "deliverable"
+        },
+        {
+          "id": "committee_response",
+          "type": "deliverable"
+        }
+      ],
       "id": "KPI-SCHED-02",
       "name": "Overdue deliverables",
       "rules": [
         "Penalty combines overdue count and max overdue days."
       ],
-      "score": 100,
-      "status": "green"
+      "score": 46,
+      "status": "red"
     },
     {
       "category": "schedule",
@@ -138,7 +147,7 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_dependency_scope_count": 14,
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [
         {
@@ -168,7 +177,7 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
         "retrospective_inference_only": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [
         {
@@ -197,7 +206,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [],
       "id": "KPI-CONV-01",
@@ -220,7 +229,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [],
       "id": "KPI-CONV-02",
@@ -243,7 +252,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [],
       "id": "KPI-CONV-03",
@@ -266,7 +275,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [
         {
@@ -297,7 +306,7 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
         "retrospective_inferred_count": 14,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [
         {
@@ -385,7 +394,7 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
         "retrospective_inferred_count": 14,
-        "retrospective_recent": true
+        "retrospective_recent": false
       },
       "evidence": [
         {
@@ -472,7 +481,7 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
         "retrospective_inferred_docs": 298,
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "scanned_docs": 323
       },
       "evidence": [
@@ -1700,7 +1709,7 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
         "retrospective_inferred_docs": 298,
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "scanned_docs": 323
       },
       "evidence": [
@@ -2929,7 +2938,7 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
         "retrospective_principle_inferred_count": 14,
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "retrospective_risk_inferred_count": 14,
         "total_risk_linked_deliverables": 15
       },
@@ -3024,7 +3033,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "total_deliverables": 18
       },
       "evidence": [
@@ -3122,15 +3131,25 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_generated_at": "2026-04-27T14:29:11.176131Z",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "stale_sor_files": [
-          "workstreams.yml"
+          "workstreams.yml",
+          "timeline.yml",
+          "deliverables.yml"
         ],
         "threshold_days": 7
       },
       "evidence": [
         {
           "id": "workstreams.yml",
+          "type": "file"
+        },
+        {
+          "id": "timeline.yml",
+          "type": "file"
+        },
+        {
+          "id": "deliverables.yml",
           "type": "file"
         }
       ],
@@ -3140,8 +3159,8 @@
         "Files older than 7 days are stale.",
         "If the board-ready package ingest is fresh, apply retrospective recency credit."
       ],
-      "score": 90,
-      "status": "green"
+      "score": 40,
+      "status": "red"
     },
     {
       "category": "freshness",
@@ -3154,25 +3173,32 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true,
-        "stale_public_artifacts": []
+        "retrospective_recent": false,
+        "stale_public_artifacts": [
+          "kpis.json"
+        ]
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "kpis.json",
+          "type": "file"
+        }
+      ],
       "id": "KPI-FRESH-02",
       "name": "Public artifacts recency",
       "rules": [
         "Public artifacts should be updated within 7 days.",
         "If board-ready package ingest is fresh, apply retrospective recency credit."
       ],
-      "score": 100,
-      "status": "green"
+      "score": 80,
+      "status": "yellow"
     },
     {
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
       "details": {
-        "oldest_age_days": 65,
-        "p75_age_days": 64,
+        "oldest_age_days": 81,
+        "p75_age_days": 80,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
           "near_final_package",
@@ -3180,7 +3206,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "sample_count": 22
       },
       "evidence": [],
@@ -3190,8 +3216,8 @@
         "P75 age <=14 days => green; <=30 days => yellow; >30 days => red.",
         "A recent board-ready package publication can raise the score to at least yellow."
       ],
-      "score": 85,
-      "status": "green"
+      "score": 40,
+      "status": "red"
     },
     {
       "category": "publicability",
@@ -3217,7 +3243,7 @@
           "D-EQA-1",
           "m5_draft_sections"
         ],
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "scored_completed_deliverables": 16
       },
       "evidence": [
@@ -3246,7 +3272,7 @@
         ],
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
-        "retrospective_recent": true,
+        "retrospective_recent": false,
         "retrospective_scanned_paths": [
           "public/project_ingest/artifacts/d_ain_1__258d46c07915.json",
           "public/project_ingest/artifacts/d_cci_1__35b11601b01b.json",
@@ -3560,18 +3586,18 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-04-29T16:41:38.796289Z",
+    "generated_at": "2026-05-15T06:32:38.215952Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
   "summary": {
     "kpi_counts": {
       "gray": 0,
-      "green": 17,
-      "red": 0,
-      "yellow": 2
+      "green": 13,
+      "red": 3,
+      "yellow": 3
     },
-    "overall_status": "yellow"
+    "overall_status": "red"
   },
   "taxonomy": {
     "categories": {

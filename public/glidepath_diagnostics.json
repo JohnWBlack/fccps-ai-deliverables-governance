@@ -1,23 +1,23 @@
 {
   "balance_required_delta": {
     "axis": "what",
-    "current": 9.35,
-    "delta": -0.1,
-    "target_midpoint": 9.25
+    "current": 8.27,
+    "delta": 0.48,
+    "target_midpoint": 8.75
   },
   "balance_target_gate": {
     "corridor": {
       "how_max": 10.0,
-      "how_min": 8.5,
+      "how_min": 7.5,
       "what_max": 10.0,
-      "what_min": 8.5
+      "what_min": 7.5
     },
-    "id": "m8",
+    "id": "m7",
     "lagging_axis": "what",
     "leading_axis": "how",
     "midpoint": {
-      "how": 9.25,
-      "what": 9.25
+      "how": 8.75,
+      "what": 8.75
     }
   },
   "deliverables_due_next_gate": [
@@ -112,7 +112,7 @@
       "workstream": "WS-POL"
     }
   ],
-  "generated_at": "2026-04-29T16:41:38.991259Z",
+  "generated_at": "2026-05-15T06:32:38.531160Z",
   "how_drivers_top": [
     {
       "evidence_count": 0,
@@ -136,26 +136,12 @@
       "weight": 1.0
     },
     {
-      "evidence_count": 0,
-      "evidence_paths": [],
-      "kpi_id": "KPI-FRESH-02",
-      "score": 100.0,
-      "weight": 1.0
-    },
-    {
       "evidence_count": 1,
       "evidence_paths": [
-        "sor/workstreams.yml"
+        "public/kpis.json"
       ],
-      "kpi_id": "KPI-FRESH-01",
-      "score": 90.0,
-      "weight": 1.0
-    },
-    {
-      "evidence_count": 0,
-      "evidence_paths": [],
-      "kpi_id": "KPI-FRESH-03",
-      "score": 85.0,
+      "kpi_id": "KPI-FRESH-02",
+      "score": 80.0,
       "weight": 1.0
     },
     {
@@ -818,6 +804,24 @@
       "kpi_id": "KPI-CONV-08",
       "score": 92.0,
       "weight": 0.5
+    },
+    {
+      "evidence_count": 3,
+      "evidence_paths": [
+        "sor/deliverables.yml",
+        "sor/timeline.yml",
+        "sor/workstreams.yml"
+      ],
+      "kpi_id": "KPI-FRESH-01",
+      "score": 40.0,
+      "weight": 1.0
+    },
+    {
+      "evidence_count": 0,
+      "evidence_paths": [],
+      "kpi_id": "KPI-FRESH-03",
+      "score": 40.0,
+      "weight": 1.0
     }
   ],
   "next_gate": {
@@ -835,18 +839,21 @@
   },
   "now": {
     "corridor_matches": [
-      "WHAT~M8",
-      "HOW~M8"
+      "WHAT~M7",
+      "HOW~M7"
     ],
-    "how": 9.47,
-    "how_corridor_id": "m8",
-    "what": 9.35,
-    "what_corridor_id": "m8"
+    "how": 8.42,
+    "how_corridor_id": "m7",
+    "what": 8.27,
+    "what_corridor_id": "m7"
   },
   "outside_corridor": {
-    "axes_out": [],
-    "how_out": 0.0,
-    "what_out": 0.0
+    "axes_out": [
+      "what",
+      "how"
+    ],
+    "how_out": -0.08,
+    "what_out": -0.23
   },
   "project_ingest": {
     "categories": [
@@ -877,6 +884,12 @@
         "evidence_paths": [
           "sor/deliverables.yml"
         ],
+        "kpi_id": "KPI-SCHED-02"
+      },
+      {
+        "evidence_paths": [
+          "sor/deliverables.yml"
+        ],
         "kpi_id": "KPI-SCHED-01"
       },
       {
@@ -884,17 +897,20 @@
           "sor/deliverables.yml"
         ],
         "kpi_id": "KPI-PUB-01"
-      },
-      {
-        "evidence_paths": [
-          "sor/deliverables.yml"
-        ],
-        "kpi_id": "KPI-SCHED-03"
       }
     ]
   },
-  "version_key": "443aad929fb31ad56dcf36993a826fee52219f82",
+  "version_key": "07e81943395b378e226e25d8192483ac872293b8",
   "what_blockers_top": [
+    {
+      "evidence_count": 2,
+      "evidence_paths": [
+        "sor/deliverables.yml"
+      ],
+      "kpi_id": "KPI-SCHED-02",
+      "score": 46.0,
+      "weight": 2.0
+    },
     {
       "evidence_count": 18,
       "evidence_paths": [
@@ -937,13 +953,6 @@
       "kpi_id": "KPI-PUB-02",
       "score": 100.0,
       "weight": 1.0
-    },
-    {
-      "evidence_count": 0,
-      "evidence_paths": [],
-      "kpi_id": "KPI-SCHED-02",
-      "score": 100.0,
-      "weight": 2.0
     }
   ]
 }

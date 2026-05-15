@@ -3342,9 +3342,25 @@
         "doc_path": "sor/workstreams.yml",
         "id": "workstreams.yml",
         "type": "file"
+      },
+      {
+        "doc_path": "sor/timeline.yml",
+        "id": "timeline.yml",
+        "type": "file"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "deliverables.yml",
+        "type": "file"
       }
     ],
-    "KPI-FRESH-02": [],
+    "KPI-FRESH-02": [
+      {
+        "doc_path": "public/kpis.json",
+        "id": "kpis.json",
+        "type": "file"
+      }
+    ],
     "KPI-FRESH-03": [],
     "KPI-PUB-01": [
       {
@@ -3451,7 +3467,18 @@
         "type": "deliverable"
       }
     ],
-    "KPI-SCHED-02": [],
+    "KPI-SCHED-02": [
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "final_talk_track",
+        "type": "deliverable"
+      },
+      {
+        "doc_path": "sor/deliverables.yml",
+        "id": "committee_response",
+        "type": "deliverable"
+      }
+    ],
     "KPI-SCHED-03": [
       {
         "doc_path": "sor/deliverables.yml",
@@ -3469,6 +3496,6 @@
   },
   "meta": {
     "description": "Expanded evidence payload keyed by KPI id.",
-    "generated_at": "2026-04-29T16:41:38.796310Z"
+    "generated_at": "2026-05-15T06:32:38.215979Z"
   }
 }
