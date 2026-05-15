@@ -23,14 +23,14 @@
               "kpi_id": "KPI-FRESH-03",
               "name": "Foundation docs recency",
               "score": 40
-            }
-          ],
-          "yellow_kpis": [
+            },
             {
               "kpi_id": "KPI-SCHED-02",
               "name": "Overdue deliverables",
-              "score": 67
-            },
+              "score": 46
+            }
+          ],
+          "yellow_kpis": [
             {
               "kpi_id": "KPI-CONV-05",
               "name": "Principle linkage coverage",
@@ -43,7 +43,7 @@
             }
           ]
         },
-        "expires_at": "2026-06-04T04:17:19.693166Z",
+        "expires_at": "2026-06-05T04:20:21.645103Z",
         "id": "ac_top_risk_kpis",
         "summary": "Prioritized KPI set for next-cycle intervention planning.",
         "title": "Action memory: prioritize red/yellow KPI drivers"
@@ -111,7 +111,7 @@
           ],
           "recommended_review_mode": "guided_review"
         },
-        "expires_at": "2026-05-28T04:17:19.693173Z",
+        "expires_at": "2026-05-29T04:20:21.645113Z",
         "id": "ac_supporting_linkage_candidates",
         "summary": "Candidate deliverable/source link updates from cognitive control report for human review.",
         "title": "Action memory: supporting evidence linkage candidates"
@@ -126,7 +126,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2bb76014f6b96a3cdd6b1bce5ba455acc9de9e5e",
+        "derived_from_version_key": "9990aecbb08be793ae2416b3b179874811c37659",
         "details": {
           "deliverable_total": 18,
           "status_counts": {
@@ -135,7 +135,7 @@
             "not_started": 1
           }
         },
-        "expires_at": "2026-06-13T04:17:19.692647Z",
+        "expires_at": "2026-06-14T04:20:21.644592Z",
         "id": "ep_status_distribution",
         "summary": "Current distribution of public deliverable statuses in the deterministic snapshot.",
         "title": "Deliverable status distribution"
@@ -148,7 +148,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2bb76014f6b96a3cdd6b1bce5ba455acc9de9e5e",
+        "derived_from_version_key": "9990aecbb08be793ae2416b3b179874811c37659",
         "details": {
           "latest_change_log_entries": [
             {
@@ -201,7 +201,7 @@
             }
           ]
         },
-        "expires_at": "2026-06-13T04:17:19.692678Z",
+        "expires_at": "2026-06-14T04:20:21.644620Z",
         "id": "ep_recent_changes",
         "summary": "Recent change_log entries from the authoritative snapshot.",
         "title": "Recent decision/change log activity"
@@ -216,7 +216,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2bb76014f6b96a3cdd6b1bce5ba455acc9de9e5e",
+        "derived_from_version_key": "9990aecbb08be793ae2416b3b179874811c37659",
         "details": {
           "count": 2,
           "items": [
@@ -234,7 +234,7 @@
             }
           ]
         },
-        "expires_at": "2026-06-28T04:17:19.693139Z",
+        "expires_at": "2026-06-29T04:20:21.645076Z",
         "id": "ol_missing_public_links",
         "summary": "In-progress or not-started deliverables that do not yet have public_url linkage.",
         "title": "Open loop: deliverables without public source links"
@@ -247,7 +247,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "2bb76014f6b96a3cdd6b1bce5ba455acc9de9e5e",
+        "derived_from_version_key": "9990aecbb08be793ae2416b3b179874811c37659",
         "details": {
           "issue_count": 2,
           "issues": [
@@ -293,7 +293,7 @@
             }
           ]
         },
-        "expires_at": "2026-06-13T04:17:19.693145Z",
+        "expires_at": "2026-06-14T04:20:21.645085Z",
         "id": "ol_quality_flags",
         "summary": "Outstanding quality issues reported by deterministic quality checks.",
         "title": "Open loop: quality check flags"
@@ -308,7 +308,7 @@
           }
         ],
         "confidence": 0.98,
-        "derived_from_version_key": "2bb76014f6b96a3cdd6b1bce5ba455acc9de9e5e",
+        "derived_from_version_key": "9990aecbb08be793ae2416b3b179874811c37659",
         "details": {
           "top_principles": [
             {
@@ -379,7 +379,7 @@
             }
           ]
         },
-        "expires_at": "2026-11-10T04:17:19.692720Z",
+        "expires_at": "2026-11-11T04:20:21.644665Z",
         "id": "th_principle_risk_fanout",
         "summary": "Most frequently referenced principles and risks across deliverables.",
         "title": "Principle/risk linkage fanout"
@@ -392,7 +392,7 @@
           }
         ],
         "confidence": 0.9,
-        "derived_from_version_key": "2bb76014f6b96a3cdd6b1bce5ba455acc9de9e5e",
+        "derived_from_version_key": "9990aecbb08be793ae2416b3b179874811c37659",
         "details": {
           "indexed_docs": 25,
           "top_decisions": [
@@ -426,7 +426,7 @@
             }
           ]
         },
-        "expires_at": "2026-09-11T04:17:19.693115Z",
+        "expires_at": "2026-09-12T04:20:21.645053Z",
         "id": "th_decision_density",
         "summary": "Decision IDs most frequently extracted from indexed public documents.",
         "title": "Decision reference density"
@@ -436,7 +436,7 @@
   "meta": {
     "advisory": true,
     "authoritative": false,
-    "generated_at": "2026-05-14T04:17:19.693192Z",
+    "generated_at": "2026-05-15T04:20:21.645129Z",
     "policy": {
       "conflict_rule": "SoR and deterministic KPIs always override memory statements.",
       "deterministic_artifacts_authoritative": true,
@@ -445,6 +445,6 @@
     },
     "producer": "fccps-memory-poc",
     "transform_version": "0.1.0",
-    "version_key": "2bb76014f6b96a3cdd6b1bce5ba455acc9de9e5e"
+    "version_key": "9990aecbb08be793ae2416b3b179874811c37659"
   }
 }
