@@ -104,7 +104,7 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 14,
+        "max_days_overdue": 15,
         "overdue_count": 2,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
@@ -130,7 +130,7 @@
       "rules": [
         "Penalty combines overdue count and max overdue days."
       ],
-      "score": 46,
+      "score": 45,
       "status": "red"
     },
     {
@@ -3174,31 +3174,24 @@
         "retrospective_artifact_output_path": "public/project_ingest/artifacts/fccps_ai_policy_drafting_package_rev_20260428__e421397a3e01.json",
         "retrospective_inference_enabled": true,
         "retrospective_recent": false,
-        "stale_public_artifacts": [
-          "kpis.json"
-        ]
+        "stale_public_artifacts": []
       },
-      "evidence": [
-        {
-          "id": "kpis.json",
-          "type": "file"
-        }
-      ],
+      "evidence": [],
       "id": "KPI-FRESH-02",
       "name": "Public artifacts recency",
       "rules": [
         "Public artifacts should be updated within 7 days.",
         "If board-ready package ingest is fresh, apply retrospective recency credit."
       ],
-      "score": 80,
-      "status": "yellow"
+      "score": 100,
+      "status": "green"
     },
     {
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
       "details": {
-        "oldest_age_days": 81,
-        "p75_age_days": 80,
+        "oldest_age_days": 82,
+        "p75_age_days": 81,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
           "near_final_package",
@@ -3586,16 +3579,16 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-05-15T06:32:38.215952Z",
+    "generated_at": "2026-05-16T06:32:41.851496Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
   "summary": {
     "kpi_counts": {
       "gray": 0,
-      "green": 13,
+      "green": 14,
       "red": 3,
-      "yellow": 3
+      "yellow": 2
     },
     "overall_status": "red"
   },
