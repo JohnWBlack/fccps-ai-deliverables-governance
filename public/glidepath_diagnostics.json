@@ -1,8 +1,8 @@
 {
   "balance_required_delta": {
     "axis": "what",
-    "current": 8.07,
-    "delta": 0.68,
+    "current": 8.04,
+    "delta": 0.71,
     "target_midpoint": 8.75
   },
   "balance_target_gate": {
@@ -112,7 +112,7 @@
       "workstream": "WS-POL"
     }
   ],
-  "generated_at": "2026-05-25T23:01:47.534138Z",
+  "generated_at": "2026-05-26T06:31:59.868115Z",
   "how_drivers_top": [
     {
       "evidence_count": 0,
@@ -842,7 +842,7 @@
     ],
     "how": 8.6,
     "how_corridor_id": "m7",
-    "what": 8.07,
+    "what": 8.04,
     "what_corridor_id": "m7"
   },
   "outside_corridor": {
@@ -850,7 +850,7 @@
       "what"
     ],
     "how_out": 0.0,
-    "what_out": -0.43
+    "what_out": -0.46
   },
   "project_ingest": {
     "categories": [
@@ -897,7 +897,7 @@
       }
     ]
   },
-  "version_key": "cf79d7562656ed1cf8fcd38fc40a83b1f32d6144",
+  "version_key": "c8d3ae2fe67f328a05d2f645bacbb183267a1539",
   "what_blockers_top": [
     {
       "evidence_count": 2,
@@ -905,7 +905,7 @@
         "sor/deliverables.yml"
       ],
       "kpi_id": "KPI-SCHED-02",
-      "score": 36.0,
+      "score": 35.0,
       "weight": 2.0
     },
     {
