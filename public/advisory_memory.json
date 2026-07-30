@@ -43,7 +43,7 @@
             }
           ]
         },
-        "expires_at": "2026-08-19T05:39:51.541569Z",
+        "expires_at": "2026-08-20T05:28:31.159540Z",
         "id": "ac_top_risk_kpis",
         "summary": "Prioritized KPI set for next-cycle intervention planning.",
         "title": "Action memory: prioritize red/yellow KPI drivers"
@@ -111,7 +111,7 @@
           ],
           "recommended_review_mode": "guided_review"
         },
-        "expires_at": "2026-08-12T05:39:51.541579Z",
+        "expires_at": "2026-08-13T05:28:31.159552Z",
         "id": "ac_supporting_linkage_candidates",
         "summary": "Candidate deliverable/source link updates from cognitive control report for human review.",
         "title": "Action memory: supporting evidence linkage candidates"
@@ -126,7 +126,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "69c2cbf820a2464b3f2ba65e6ebf0f96cb76d02b",
+        "derived_from_version_key": "9bddc1b0b04a4143bb503af06c60d46bda3b6f98",
         "details": {
           "deliverable_total": 18,
           "status_counts": {
@@ -135,7 +135,7 @@
             "not_started": 1
           }
         },
-        "expires_at": "2026-08-28T05:39:51.541069Z",
+        "expires_at": "2026-08-29T05:28:31.158956Z",
         "id": "ep_status_distribution",
         "summary": "Current distribution of public deliverable statuses in the deterministic snapshot.",
         "title": "Deliverable status distribution"
@@ -148,7 +148,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "69c2cbf820a2464b3f2ba65e6ebf0f96cb76d02b",
+        "derived_from_version_key": "9bddc1b0b04a4143bb503af06c60d46bda3b6f98",
         "details": {
           "latest_change_log_entries": [
             {
@@ -201,7 +201,7 @@
             }
           ]
         },
-        "expires_at": "2026-08-28T05:39:51.541098Z",
+        "expires_at": "2026-08-29T05:28:31.158998Z",
         "id": "ep_recent_changes",
         "summary": "Recent change_log entries from the authoritative snapshot.",
         "title": "Recent decision/change log activity"
@@ -216,7 +216,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "69c2cbf820a2464b3f2ba65e6ebf0f96cb76d02b",
+        "derived_from_version_key": "9bddc1b0b04a4143bb503af06c60d46bda3b6f98",
         "details": {
           "count": 2,
           "items": [
@@ -234,7 +234,7 @@
             }
           ]
         },
-        "expires_at": "2026-09-12T05:39:51.541543Z",
+        "expires_at": "2026-09-13T05:28:31.159511Z",
         "id": "ol_missing_public_links",
         "summary": "In-progress or not-started deliverables that do not yet have public_url linkage.",
         "title": "Open loop: deliverables without public source links"
@@ -247,7 +247,7 @@
           }
         ],
         "confidence": 1.0,
-        "derived_from_version_key": "69c2cbf820a2464b3f2ba65e6ebf0f96cb76d02b",
+        "derived_from_version_key": "9bddc1b0b04a4143bb503af06c60d46bda3b6f98",
         "details": {
           "issue_count": 2,
           "issues": [
@@ -293,7 +293,7 @@
             }
           ]
         },
-        "expires_at": "2026-08-28T05:39:51.541551Z",
+        "expires_at": "2026-08-29T05:28:31.159519Z",
         "id": "ol_quality_flags",
         "summary": "Outstanding quality issues reported by deterministic quality checks.",
         "title": "Open loop: quality check flags"
@@ -308,7 +308,7 @@
           }
         ],
         "confidence": 0.98,
-        "derived_from_version_key": "69c2cbf820a2464b3f2ba65e6ebf0f96cb76d02b",
+        "derived_from_version_key": "9bddc1b0b04a4143bb503af06c60d46bda3b6f98",
         "details": {
           "top_principles": [
             {
@@ -379,7 +379,7 @@
             }
           ]
         },
-        "expires_at": "2027-01-25T05:39:51.541148Z",
+        "expires_at": "2027-01-26T05:28:31.159048Z",
         "id": "th_principle_risk_fanout",
         "summary": "Most frequently referenced principles and risks across deliverables.",
         "title": "Principle/risk linkage fanout"
@@ -392,7 +392,7 @@
           }
         ],
         "confidence": 0.9,
-        "derived_from_version_key": "69c2cbf820a2464b3f2ba65e6ebf0f96cb76d02b",
+        "derived_from_version_key": "9bddc1b0b04a4143bb503af06c60d46bda3b6f98",
         "details": {
           "indexed_docs": 25,
           "top_decisions": [
@@ -426,7 +426,7 @@
             }
           ]
         },
-        "expires_at": "2026-11-26T05:39:51.541519Z",
+        "expires_at": "2026-11-27T05:28:31.159485Z",
         "id": "th_decision_density",
         "summary": "Decision IDs most frequently extracted from indexed public documents.",
         "title": "Decision reference density"
@@ -436,7 +436,7 @@
   "meta": {
     "advisory": true,
     "authoritative": false,
-    "generated_at": "2026-07-29T05:39:51.541595Z",
+    "generated_at": "2026-07-30T05:28:31.159571Z",
     "policy": {
       "conflict_rule": "SoR and deterministic KPIs always override memory statements.",
       "deterministic_artifacts_authoritative": true,
@@ -445,6 +445,6 @@
     },
     "producer": "fccps-memory-poc",
     "transform_version": "0.1.0",
-    "version_key": "69c2cbf820a2464b3f2ba65e6ebf0f96cb76d02b"
+    "version_key": "9bddc1b0b04a4143bb503af06c60d46bda3b6f98"
   }
 }
