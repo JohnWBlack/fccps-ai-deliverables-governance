@@ -104,7 +104,7 @@
       "category": "schedule",
       "description": "Count and severity of overdue deliverables.",
       "details": {
-        "max_days_overdue": 90,
+        "max_days_overdue": 91,
         "overdue_count": 2,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
@@ -3173,8 +3173,8 @@
       "category": "freshness",
       "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
       "details": {
-        "oldest_age_days": 157,
-        "p75_age_days": 156,
+        "oldest_age_days": 158,
+        "p75_age_days": 157,
         "retrospective_anchor_deliverables": [
           "D-IPC-1",
           "near_final_package",
@@ -3562,7 +3562,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-07-30T05:28:31.063135Z",
+    "generated_at": "2026-07-31T05:53:13.927946Z",
     "schema_version": "0.2",
     "timezone": "America/New_York"
   },
