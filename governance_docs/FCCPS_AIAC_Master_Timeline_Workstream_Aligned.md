@@ -1,7 +1,7 @@
 # FCCPS AI Advisory Committee — Master Timeline (Workstream-aligned)
 
 **Version:** auto-generated  
-**Last updated:** 2026-07-31  
+**Last updated:** 2026-08-01  
 **Purpose:** SoR-backed timeline of meetings/milestones with evidence progress.
 
 ## Timeline
