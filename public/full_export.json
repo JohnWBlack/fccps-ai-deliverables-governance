@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "generated_at": "2026-08-06T03:59:55.833043Z",
+    "generated_at": "2026-08-07T03:56:05.115128Z",
     "files": [
       "public_snapshot.json",
       "file_catalog.json",
@@ -17,32 +17,32 @@
       "dashboard_bundle.json"
     ],
     "sha256": {
-      "public_snapshot.json": "ace960c6952ee71a630e5ee505781938a032153a0995e2a2ca4c3df94bc6003e",
-      "file_catalog.json": "57bffadaf3a9348204a7c764f9722f6a25d0a60eafb348a54745414b5c70557a",
-      "ref_index.json": "f474935bbe2a8dfff104b898ff007ea58915cbbbcda4f41d8df5d904a1013ed8",
-      "quality_report.json": "2fb86d1eecdf1698b8c87ed2657c2b4615868d06b0f283439747cfc85cb64b02",
-      "risk_register.json": "0fc910b2ef7b1ab4d2d9e42fb95c17cb66872c3f570e57210b99d9628441b0bf",
-      "kpis.json": "1846e0f2a703a32b89cd00d032993e9016b78d0a7aa119953593db2049796555",
-      "kpi_evidence.json": "63caa0a076858b412239cdcb2b37fdb4bae3a3bf7ec8f32db26642a20c1bec11",
-      "evidence_coverage.json": "e53ee9bd82fe3ab1f8a612783403ffa527c09421added7dc3fa5f64d90fbbfc8",
+      "public_snapshot.json": "2b85010522ac37bb296089b23b9a78047ef11798fd317bbe5dc16c15d770623b",
+      "file_catalog.json": "94f85c02931d9cae460b60daf4f05547c4dcfc8567a4f89f8e0b307e3f636449",
+      "ref_index.json": "95d791ea1a7d031076b4853db69d3fc3cf20df804e789f4db03051fcb869690b",
+      "quality_report.json": "de81969c55f81d719d8d629afd28f56dd0b9b01bcf96191a66881b60e85fc549",
+      "risk_register.json": "36a63eada5ba07a8bfe79e1a5fd8c206e9633c7e8d60b9e085d20a5973483e16",
+      "kpis.json": "f0dd1f248e508ee536212bada85cf56f8ebaa8ff6d77a633f3473b2c6586cf2c",
+      "kpi_evidence.json": "fcfcabcc41693a0aa3e094cbfd67b24efcbda844181d7efa04b9269bf139b52e",
+      "evidence_coverage.json": "0e90e649fba75766cb499907db6576e0af619928fd0b6e07919bf8d07922fdad",
       "evidence_templates.json": "765c600c2004105e066d6a6e07fba3b2576b45bc5237449ba02ad1ed745218fe",
-      "glidepath_history.json": "68f6dee1527c21471fd6b0a17890a793839e3cad28255b46a190d14798c428f8",
-      "glidepath_diagnostics.json": "cdb8925c9fc4cda640e467026570e4adc2dbc46aa066d63e12253812ba79a22f",
-      "meeting4_readiness.json": "a89619003715b7b95828fc6c00142bbda503128e39d738918b393102be2b50a4",
-      "dashboard_bundle.json": "bddc2a696da6b4ac2a1330dee0321f1f1c4599d3da094d304f71a0a1ed54d247"
+      "glidepath_history.json": "b142f9067b7acef0c69a2367b2ec326f7f3af944a7eb1e065a7914428edf9123",
+      "glidepath_diagnostics.json": "ada8e53155a22a36b79edce307087f78cd839a0dceaffde1128111108afbae8e",
+      "meeting4_readiness.json": "68b541d130889d5b384d0010d7ba99cee8885f41b54d15f0b6c1db78e99a9d04",
+      "dashboard_bundle.json": "b25a7b921f3bb94ab9d907ca1b59116c53c90a1475d630c4826b7508769b7391"
     }
   },
   "artifacts": {
     "public_snapshot.json": {
       "meta": {
-        "generated_at": "2026-08-06T03:59:49.498253Z",
+        "generated_at": "2026-08-07T03:55:59.300548Z",
         "source_version": "1.1.0",
-        "version_key": "f9970c328c4038b405479731db5bacffbe20ab38"
+        "version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3"
       },
       "metadata": {
-        "generated_at": "2026-08-06T03:59:49.498253Z",
+        "generated_at": "2026-08-07T03:55:59.300548Z",
         "source_version": "1.1.0",
-        "version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+        "version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
         "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
       },
       "workstreams": [
@@ -838,7 +838,7 @@
     },
     "file_catalog.json": {
       "meta": {
-        "generated_at": "2026-08-06T03:59:53.947933Z",
+        "generated_at": "2026-08-07T03:56:03.315072Z",
         "repo_owner": "JohnWBlack",
         "repo_name": "fccps-ai-deliverables-governance",
         "repo_root_name": "fccps-ai-deliverables-governance",
@@ -1314,8 +1314,8 @@
           "extension": "md",
           "type": "md",
           "size_bytes": 3016,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "governance_docs",
             "category:governance_docs",
@@ -1328,8 +1328,8 @@
           "extension": "md",
           "type": "md",
           "size_bytes": 1310,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "governance_docs",
             "category:governance_docs",
@@ -1342,8 +1342,8 @@
           "extension": "md",
           "type": "md",
           "size_bytes": 1396,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "governance_docs",
             "category:governance_docs",
@@ -1474,8 +1474,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 14637,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1488,8 +1488,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 366,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1502,8 +1502,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 917,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1530,8 +1530,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 236752,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1543,9 +1543,9 @@
           "filename": "dashboard_bundle.zip",
           "extension": "zip",
           "type": "zip",
-          "size_bytes": 22262,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "size_bytes": 22263,
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1586,8 +1586,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 289170,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1599,9 +1599,9 @@
           "filename": "full_export.json",
           "extension": "json",
           "type": "json",
-          "size_bytes": 1286741,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "size_bytes": 1287865,
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1613,9 +1613,9 @@
           "filename": "full_export.zip",
           "extension": "zip",
           "type": "zip",
-          "size_bytes": 150991,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "size_bytes": 151059,
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1628,8 +1628,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 58328,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1641,9 +1641,9 @@
           "filename": "glidepath_history.json",
           "extension": "json",
           "type": "json",
-          "size_bytes": 177294,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "size_bytes": 178270,
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1656,8 +1656,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 148554,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1670,8 +1670,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 137279,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -1684,8 +1684,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 10545,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -9372,8 +9372,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 26652,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -9386,8 +9386,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 1963,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -9400,8 +9400,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 16989,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -9414,8 +9414,8 @@
           "extension": "json",
           "type": "json",
           "size_bytes": 13427,
-          "last_modified_iso": "2026-08-05T05:34:11Z",
-          "last_commit_sha": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
+          "last_commit_sha": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "tags": [
             "public",
             "category:public",
@@ -10016,7 +10016,7 @@
     },
     "ref_index.json": {
       "meta": {
-        "generated_at": "2026-08-06T03:59:54.120873Z",
+        "generated_at": "2026-08-07T03:56:03.623575Z",
         "scanned_files_count": 25,
         "skipped_files_count": 5,
         "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -10494,7 +10494,7 @@
         {
           "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
           "doc_type": "md",
-          "last_modified_iso": "2026-08-05T05:34:11Z",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
           "extracted": {
             "principle_ids": [],
             "risk_ids": [],
@@ -10533,7 +10533,7 @@
         {
           "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
           "doc_type": "md",
-          "last_modified_iso": "2026-08-05T05:34:11Z",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
           "extracted": {
             "principle_ids": [],
             "risk_ids": [],
@@ -10562,7 +10562,7 @@
         {
           "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
           "doc_type": "md",
-          "last_modified_iso": "2026-08-05T05:34:11Z",
+          "last_modified_iso": "2026-08-06T03:59:58Z",
           "extracted": {
             "principle_ids": [],
             "risk_ids": [],
@@ -10683,7 +10683,7 @@
     },
     "quality_report.json": {
       "meta": {
-        "generated_at": "2026-08-06T03:59:54.259192Z",
+        "generated_at": "2026-08-07T03:56:03.740944Z",
         "sources": [
           "sor/workstreams.yml",
           "sor/timeline.yml",
@@ -10772,7 +10772,7 @@
     "risk_register.json": {
       "meta": {
         "deliverables_sor_last_updated": "2026-04-27",
-        "generated_at": "2026-08-06T03:59:54.405356Z",
+        "generated_at": "2026-08-07T03:56:03.869990Z",
         "risk_sor_last_updated": "2026-03-03",
         "risk_sor_version": "1.0.0",
         "schema_version": "1.0.0",
@@ -11334,7 +11334,7 @@
           "category": "schedule",
           "description": "Count and severity of overdue deliverables.",
           "details": {
-            "max_days_overdue": 97,
+            "max_days_overdue": 98,
             "overdue_count": 2,
             "retrospective_anchor_deliverables": [
               "D-IPC-1",
@@ -14403,8 +14403,8 @@
           "category": "freshness",
           "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
           "details": {
-            "oldest_age_days": 164,
-            "p75_age_days": 163,
+            "oldest_age_days": 165,
+            "p75_age_days": 164,
             "retrospective_anchor_deliverables": [
               "D-IPC-1",
               "near_final_package",
@@ -14792,7 +14792,7 @@
         }
       ],
       "meta": {
-        "generated_at": "2026-08-06T03:59:55.667904Z",
+        "generated_at": "2026-08-07T03:56:04.964796Z",
         "schema_version": "0.2",
         "timezone": "America/New_York"
       },
@@ -18311,11 +18311,11 @@
       },
       "meta": {
         "description": "Expanded evidence payload keyed by KPI id.",
-        "generated_at": "2026-08-06T03:59:55.667923Z"
+        "generated_at": "2026-08-07T03:56:04.964821Z"
       }
     },
     "evidence_coverage.json": {
-      "generated_at": "2026-08-06T03:59:55.667904Z",
+      "generated_at": "2026-08-07T03:56:04.964796Z",
       "kpi": {
         "KPI-CONV-04": {
           "deliverables_missing_evidence": [
@@ -18778,7 +18778,7 @@
         }
       },
       "templates_version": "evidence_templates_v1",
-      "version_key": "42d314260b29"
+      "version_key": "a0573c70322d"
     },
     "evidence_templates.json": {
       "generated_at": "2026-03-04T00:00:00Z",
@@ -18913,7 +18913,7 @@
       },
       "current_eval": {
         "current_gate_id": "m8",
-        "current_point_id": "2026-08-05T05:34:01.818297Z::bc951d9042f7",
+        "current_point_id": "2026-08-06T03:59:49.498253Z::f9970c328c40",
         "how_delta": 0.0,
         "how_in_range": true,
         "status": "one_axis_out",
@@ -18922,7 +18922,7 @@
       },
       "meta": {
         "description": "Historical WHAT/HOW glidepath points with gate corridor targets.",
-        "generated_at": "2026-08-05T05:34:08.257798Z",
+        "generated_at": "2026-08-06T03:59:55.946664Z",
         "schema_version": "1.0.0"
       },
       "points": [
@@ -25495,6 +25495,43 @@
           "version_key": "bc951d9042f7105677a6d440ccc84e9248d45ee0",
           "version_key_short": "bc951d9042f7",
           "what_score": 7.35
+        },
+        {
+          "coverage_how": 1.0,
+          "coverage_what": 1.0,
+          "generated_at": "2026-08-06T03:59:49.498253Z",
+          "how_score": 9.15,
+          "included_kpis": {
+            "how": [
+              "KPI-CONV-01",
+              "KPI-CONV-02",
+              "KPI-CONV-03",
+              "KPI-CONV-04",
+              "KPI-CONV-05",
+              "KPI-CONV-06",
+              "KPI-CONV-07",
+              "KPI-CONV-08",
+              "KPI-CONV-09",
+              "KPI-CONV-10",
+              "KPI-FRESH-01",
+              "KPI-FRESH-02",
+              "KPI-FRESH-03"
+            ],
+            "what": [
+              "KPI-PUB-01",
+              "KPI-PUB-02",
+              "KPI-SCHED-01",
+              "KPI-SCHED-02",
+              "KPI-SCHED-03",
+              "KPI-SCHED-04"
+            ]
+          },
+          "next_gate_date": "2026-05-15",
+          "next_gate_id": "m8",
+          "point_id": "2026-08-06T03:59:49.498253Z::f9970c328c40",
+          "version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "version_key_short": "f9970c328c40",
+          "what_score": 7.35
         }
       ],
       "weights": {
@@ -25637,7 +25674,7 @@
           "workstream": "WS-POL"
         }
       ],
-      "generated_at": "2026-08-05T05:34:08.316485Z",
+      "generated_at": "2026-08-06T03:59:56.002305Z",
       "how_drivers_top": [
         {
           "evidence_count": 0,
@@ -26418,7 +26455,7 @@
           }
         ]
       },
-      "version_key": "bc951d9042f7105677a6d440ccc84e9248d45ee0",
+      "version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
       "what_blockers_top": [
         {
           "evidence_count": 2,
@@ -26476,7 +26513,7 @@
     },
     "meeting4_readiness.json": {
       "meta": {
-        "generated_at": "2026-08-06T03:59:55.824536Z",
+        "generated_at": "2026-08-07T03:56:05.107403Z",
         "source": [
           "public/kpis.json",
           "public/ref_index.json",
@@ -26925,19 +26962,19 @@
     },
     "dashboard_bundle.json": {
       "meta": {
-        "generated_at": "2026-08-06T03:59:55.825103Z",
-        "snapshot_version_key": "f9970c328c4038b405479731db5bacffbe20ab38"
+        "generated_at": "2026-08-07T03:56:05.107921Z",
+        "snapshot_version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3"
       },
       "snapshot": {
         "meta": {
-          "generated_at": "2026-08-06T03:59:49.498253Z",
+          "generated_at": "2026-08-07T03:55:59.300548Z",
           "source_version": "1.1.0",
-          "version_key": "f9970c328c4038b405479731db5bacffbe20ab38"
+          "version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3"
         },
         "metadata": {
-          "generated_at": "2026-08-06T03:59:49.498253Z",
+          "generated_at": "2026-08-07T03:55:59.300548Z",
           "source_version": "1.1.0",
-          "version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+          "version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
           "description": "FCCPS AI Committee public snapshot - derived from Source of Truth"
         },
         "workstreams": [
@@ -27837,7 +27874,7 @@
             "category": "schedule",
             "description": "Count and severity of overdue deliverables.",
             "details": {
-              "max_days_overdue": 97,
+              "max_days_overdue": 98,
               "overdue_count": 2,
               "retrospective_anchor_deliverables": [
                 "D-IPC-1",
@@ -30906,8 +30943,8 @@
             "category": "freshness",
             "description": "Recency profile for governance_docs and project_files updates, with retrospective board-ready publication credit.",
             "details": {
-              "oldest_age_days": 164,
-              "p75_age_days": 163,
+              "oldest_age_days": 165,
+              "p75_age_days": 164,
               "retrospective_anchor_deliverables": [
                 "D-IPC-1",
                 "near_final_package",
@@ -31295,7 +31332,7 @@
           }
         ],
         "meta": {
-          "generated_at": "2026-08-06T03:59:55.667904Z",
+          "generated_at": "2026-08-07T03:56:04.964796Z",
           "schema_version": "0.2",
           "timezone": "America/New_York"
         },
@@ -31339,7 +31376,7 @@
         }
       },
       "evidence_coverage": {
-        "generated_at": "2026-08-06T03:59:55.667904Z",
+        "generated_at": "2026-08-07T03:56:04.964796Z",
         "kpi": {
           "KPI-CONV-04": {
             "deliverables_missing_evidence": [
@@ -31802,7 +31839,7 @@
           }
         },
         "templates_version": "evidence_templates_v1",
-        "version_key": "42d314260b29"
+        "version_key": "a0573c70322d"
       },
       "evidence_templates": {
         "generated_at": "2026-03-04T00:00:00Z",
@@ -31836,7 +31873,7 @@
       },
       "quality_report": {
         "meta": {
-          "generated_at": "2026-08-06T03:59:54.259192Z",
+          "generated_at": "2026-08-07T03:56:03.740944Z",
           "sources": [
             "sor/workstreams.yml",
             "sor/timeline.yml",
@@ -31925,7 +31962,7 @@
       "risk_register": {
         "meta": {
           "deliverables_sor_last_updated": "2026-04-27",
-          "generated_at": "2026-08-06T03:59:54.405356Z",
+          "generated_at": "2026-08-07T03:56:03.869990Z",
           "risk_sor_last_updated": "2026-03-03",
           "risk_sor_version": "1.0.0",
           "schema_version": "1.0.0",
@@ -32383,7 +32420,7 @@
       },
       "ref_index": {
         "meta": {
-          "generated_at": "2026-08-06T03:59:54.120873Z",
+          "generated_at": "2026-08-07T03:56:03.623575Z",
           "scanned_files_count": 25,
           "skipped_files_count": 5,
           "note_if_docx_skipped": "docx parsing skipped in v1; markdown corpus only",
@@ -32861,7 +32898,7 @@
           {
             "doc_path": "governance_docs/FCCPS_AIAC_Deliverables_Index.md",
             "doc_type": "md",
-            "last_modified_iso": "2026-08-05T05:34:11Z",
+            "last_modified_iso": "2026-08-06T03:59:58Z",
             "extracted": {
               "principle_ids": [],
               "risk_ids": [],
@@ -32900,7 +32937,7 @@
           {
             "doc_path": "governance_docs/FCCPS_AIAC_Master_Timeline_Workstream_Aligned.md",
             "doc_type": "md",
-            "last_modified_iso": "2026-08-05T05:34:11Z",
+            "last_modified_iso": "2026-08-06T03:59:58Z",
             "extracted": {
               "principle_ids": [],
               "risk_ids": [],
@@ -32929,7 +32966,7 @@
           {
             "doc_path": "governance_docs/FCCPS_AIAC_Workstreams_Registry.md",
             "doc_type": "md",
-            "last_modified_iso": "2026-08-05T05:34:11Z",
+            "last_modified_iso": "2026-08-06T03:59:58Z",
             "extracted": {
               "principle_ids": [],
               "risk_ids": [],
@@ -33050,7 +33087,7 @@
       },
       "meeting4_readiness": {
         "meta": {
-          "generated_at": "2026-08-06T03:59:55.824536Z",
+          "generated_at": "2026-08-07T03:56:05.107403Z",
           "source": [
             "public/kpis.json",
             "public/ref_index.json",
@@ -33552,7 +33589,7 @@
                 }
               ]
             },
-            "expires_at": "2026-08-27T03:59:55.761403Z",
+            "expires_at": "2026-08-28T03:56:05.054491Z",
             "id": "ac_top_risk_kpis",
             "summary": "Prioritized KPI set for next-cycle intervention planning.",
             "title": "Action memory: prioritize red/yellow KPI drivers"
@@ -33620,7 +33657,7 @@
               ],
               "recommended_review_mode": "guided_review"
             },
-            "expires_at": "2026-08-20T03:59:55.761413Z",
+            "expires_at": "2026-08-21T03:56:05.054500Z",
             "id": "ac_supporting_linkage_candidates",
             "summary": "Candidate deliverable/source link updates from cognitive control report for human review.",
             "title": "Action memory: supporting evidence linkage candidates"
@@ -33635,7 +33672,7 @@
               }
             ],
             "confidence": 1.0,
-            "derived_from_version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+            "derived_from_version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
             "details": {
               "deliverable_total": 18,
               "status_counts": {
@@ -33644,7 +33681,7 @@
                 "not_started": 1
               }
             },
-            "expires_at": "2026-09-05T03:59:55.760914Z",
+            "expires_at": "2026-09-06T03:56:05.054012Z",
             "id": "ep_status_distribution",
             "summary": "Current distribution of public deliverable statuses in the deterministic snapshot.",
             "title": "Deliverable status distribution"
@@ -33657,7 +33694,7 @@
               }
             ],
             "confidence": 1.0,
-            "derived_from_version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+            "derived_from_version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
             "details": {
               "latest_change_log_entries": [
                 {
@@ -33710,7 +33747,7 @@
                 }
               ]
             },
-            "expires_at": "2026-09-05T03:59:55.760942Z",
+            "expires_at": "2026-09-06T03:56:05.054053Z",
             "id": "ep_recent_changes",
             "summary": "Recent change_log entries from the authoritative snapshot.",
             "title": "Recent decision/change log activity"
@@ -33725,7 +33762,7 @@
               }
             ],
             "confidence": 1.0,
-            "derived_from_version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+            "derived_from_version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
             "details": {
               "count": 2,
               "items": [
@@ -33743,7 +33780,7 @@
                 }
               ]
             },
-            "expires_at": "2026-09-20T03:59:55.761376Z",
+            "expires_at": "2026-09-21T03:56:05.054465Z",
             "id": "ol_missing_public_links",
             "summary": "In-progress or not-started deliverables that do not yet have public_url linkage.",
             "title": "Open loop: deliverables without public source links"
@@ -33756,7 +33793,7 @@
               }
             ],
             "confidence": 1.0,
-            "derived_from_version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+            "derived_from_version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
             "details": {
               "issue_count": 2,
               "issues": [
@@ -33802,7 +33839,7 @@
                 }
               ]
             },
-            "expires_at": "2026-09-05T03:59:55.761385Z",
+            "expires_at": "2026-09-06T03:56:05.054471Z",
             "id": "ol_quality_flags",
             "summary": "Outstanding quality issues reported by deterministic quality checks.",
             "title": "Open loop: quality check flags"
@@ -33817,7 +33854,7 @@
               }
             ],
             "confidence": 0.98,
-            "derived_from_version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+            "derived_from_version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
             "details": {
               "top_principles": [
                 {
@@ -33888,7 +33925,7 @@
                 }
               ]
             },
-            "expires_at": "2027-02-02T03:59:55.760987Z",
+            "expires_at": "2027-02-03T03:56:05.054099Z",
             "id": "th_principle_risk_fanout",
             "summary": "Most frequently referenced principles and risks across deliverables.",
             "title": "Principle/risk linkage fanout"
@@ -33901,7 +33938,7 @@
               }
             ],
             "confidence": 0.9,
-            "derived_from_version_key": "f9970c328c4038b405479731db5bacffbe20ab38",
+            "derived_from_version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3",
             "details": {
               "indexed_docs": 25,
               "top_decisions": [
@@ -33935,7 +33972,7 @@
                 }
               ]
             },
-            "expires_at": "2026-12-04T03:59:55.761353Z",
+            "expires_at": "2026-12-05T03:56:05.054445Z",
             "id": "th_decision_density",
             "summary": "Decision IDs most frequently extracted from indexed public documents.",
             "title": "Decision reference density"
@@ -33945,7 +33982,7 @@
       "meta": {
         "advisory": true,
         "authoritative": false,
-        "generated_at": "2026-08-06T03:59:55.761429Z",
+        "generated_at": "2026-08-07T03:56:05.054516Z",
         "policy": {
           "conflict_rule": "SoR and deterministic KPIs always override memory statements.",
           "deterministic_artifacts_authoritative": true,
@@ -33954,7 +33991,7 @@
         },
         "producer": "fccps-memory-poc",
         "transform_version": "0.1.0",
-        "version_key": "f9970c328c4038b405479731db5bacffbe20ab38"
+        "version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3"
       }
     },
     "advisory_memory_index.json": {
@@ -33992,18 +34029,18 @@
       "meta": {
         "advisory": true,
         "authoritative": false,
-        "generated_at": "2026-08-06T03:59:55.761429Z",
+        "generated_at": "2026-08-07T03:56:05.054516Z",
         "transform_version": "0.1.0",
-        "version_key": "f9970c328c4038b405479731db5bacffbe20ab38"
+        "version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3"
       }
     },
     "advisory_memory_audit.json": {
       "meta": {
         "advisory": true,
         "authoritative": false,
-        "generated_at": "2026-08-06T03:59:55.761429Z",
+        "generated_at": "2026-08-07T03:56:05.054516Z",
         "transform_version": "0.1.0",
-        "version_key": "f9970c328c4038b405479731db5bacffbe20ab38"
+        "version_key": "606b79f3f69cb8299c87a52e320de1e9839501f3"
       },
       "quality": {
         "citation_path_count": 5,
