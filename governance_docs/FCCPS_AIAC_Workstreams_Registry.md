@@ -1,6 +1,6 @@
 # FCCPS AI Advisory Committee — Workstreams Registry (System of Record)
 **Version:** auto-generated  
-**Last updated:** 2026-08-15  
+**Last updated:** 2026-08-16  
 **Purpose:** Canonical list of workstreams and current delivery signal from SoR YAML.
 
 ## Workstreams at a glance
