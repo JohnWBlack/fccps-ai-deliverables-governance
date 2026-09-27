@@ -101,7 +101,7 @@
   },
   "current_eval": {
     "current_gate_id": "m8",
-    "current_point_id": "2026-09-26T03:01:08.986446Z::ecca128bac43",
+    "current_point_id": "2026-09-27T03:01:17.756954Z::b9c05e7fe7cf",
     "how_delta": 0.0,
     "how_in_range": true,
     "status": "one_axis_out",
@@ -110,7 +110,7 @@
   },
   "meta": {
     "description": "Historical WHAT/HOW glidepath points with gate corridor targets.",
-    "generated_at": "2026-09-26T03:01:15.221632Z",
+    "generated_at": "2026-09-27T03:01:25.777380Z",
     "schema_version": "1.0.0"
   },
   "points": [
@@ -8606,6 +8606,43 @@
       "point_id": "2026-09-26T03:01:08.986446Z::ecca128bac43",
       "version_key": "ecca128bac43a0a3ac7f637ba1b4f156880d87d4",
       "version_key_short": "ecca128bac43",
+      "what_score": 7.35
+    },
+    {
+      "coverage_how": 1.0,
+      "coverage_what": 1.0,
+      "generated_at": "2026-09-27T03:01:17.756954Z",
+      "how_score": 9.15,
+      "included_kpis": {
+        "how": [
+          "KPI-CONV-01",
+          "KPI-CONV-02",
+          "KPI-CONV-03",
+          "KPI-CONV-04",
+          "KPI-CONV-05",
+          "KPI-CONV-06",
+          "KPI-CONV-07",
+          "KPI-CONV-08",
+          "KPI-CONV-09",
+          "KPI-CONV-10",
+          "KPI-FRESH-01",
+          "KPI-FRESH-02",
+          "KPI-FRESH-03"
+        ],
+        "what": [
+          "KPI-PUB-01",
+          "KPI-PUB-02",
+          "KPI-SCHED-01",
+          "KPI-SCHED-02",
+          "KPI-SCHED-03",
+          "KPI-SCHED-04"
+        ]
+      },
+      "next_gate_date": "2026-05-15",
+      "next_gate_id": "m8",
+      "point_id": "2026-09-27T03:01:17.756954Z::b9c05e7fe7cf",
+      "version_key": "b9c05e7fe7cfaee7617160e06e0c118031193d6b",
+      "version_key_short": "b9c05e7fe7cf",
       "what_score": 7.35
     }
   ],
